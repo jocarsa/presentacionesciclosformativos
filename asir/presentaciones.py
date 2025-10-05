@@ -2,12 +2,19 @@
 # -*- coding: utf-8 -*-
 """
 presentaciones.py
-— Genera presentaciones HTML por subunidad (nivel 2: lista bajo cada título), con 15–20 slides ricas
-— Streaming real desde Ollama (/api/chat o fallback /api/generate)
-— Limpia fences ``` y rótulos de lenguaje (html, markdown, etc.)
-— Zoom tipo navegador (CSS zoom + fallback Firefox), barra de progreso, controles de zoom
-— Índice jerárquico: global + uno dentro de cada carpeta de documento
-— Assets (present.css y present.js) incrustados y reescritos en cada ejecución
+— Genera presentaciones HTML por subunidad (nivel 2), 15–20 slides
+— Streaming desde Ollama
+— Limpieza de fences
+— Zoom reflow (cambia font-size raíz) + Fullscreen (FS)
+— Progreso fijo independiente del zoom
+— Índices global y por documento
+— Assets CSS/JS incrustados (se reescriben), HTMLs existentes NO se sobrescriben
+
+NUEVO:
+— Zoom reflow (textos envuelven líneas correctamente).
+— Progreso visible en fullscreen + zoom.
+— Evita overflow lateral (sin 100vw/100dvh).
+— Todo via CSS/JS: no hace falta regenerar HTMLs.
 """
 
 import os
@@ -38,13 +45,23 @@ OLLAMA_HOST = os.environ.get("OLLAMA_HOST", "http://localhost:11434")
 TEMPERATURE = float(os.environ.get("OLLAMA_TEMPERATURE", "0.2"))
 TIMEOUT = int(os.environ.get("OLLAMA_TIMEOUT", "600"))
 
-MAX_FILES = None              # None = todos
-MAX_BYTES_PER_FILE = None     # Sin límite: usa el archivo completo en el contexto global
-
+MAX_FILES = None
+MAX_BYTES_PER_FILE = None
 EXCLUDE_PATTERNS = [r"\.doc\.md$", r"^README\.md$"]
 
-FORCE_ASSET_OVERWRITE = True
+FORCE_ASSET_OVERWRITE = True  # reescribe present.css y present.js
 # ==========================================================
+
+# ========================= BRAND =========================
+BRAND_NAME = ""
+BRAND_PRIMARY = "#003B8E"
+BRAND_ACCENT  = "#00A0E6"
+BRAND_TEXT    = "#0A0A0A"
+BRAND_MUTED   = "#4B5563"
+BRAND_BG      = "#FFFFFF"
+BRAND_FONT_STACK = "Calibri, 'Segoe UI', Roboto, Ubuntu, Cantarell, Arial, sans-serif"
+BRAND_LOGO_FILENAME = "logo_ceacfp.svg"
+# =========================================================
 
 # -------------------- utilidades modelos --------------------
 def list_models_http(host: str = OLLAMA_HOST) -> List[str]:
@@ -109,7 +126,7 @@ def safe_read_text(path: Path, max_bytes: Optional[int] = None) -> str:
 def build_project_context(md_files: List[Path]) -> str:
     parts = ["Contexto del proyecto (estructura y extractos):"]
     for p in md_files:
-        snippet = safe_read_text(p, MAX_BYTES_PER_FILE)  # sin recorte
+        snippet = safe_read_text(p, MAX_BYTES_PER_FILE)
         snippet = re.sub(r"\n{3,}", "\n\n", snippet).strip()
         parts.append(f"\n=== Archivo: {p.name} ===\n{snippet}\n")
     return "\n".join(parts)
@@ -123,35 +140,32 @@ def slugify(s: str) -> str:
     return s or "presentacion"
 
 # -------------------- parsing de líneas y estructura --------------------
-# Acepta:
-#  - Nivel 1: cualquier línea no vacía que no sea bullet (títulos/categorías)
-#  - Nivel 2: bullets con -, − (U+2212), – (U+2013), — (U+2014), *, • (U+2022)
-#  - Nivel 3: sub-bullets con · (U+00B7), *, •
 BULLET_L2 = r"^[\-\u2212\u2013\u2014\*\u2022]\s+"
 BULLET_L3 = r"^[\u00B7\*\u2022]\s+"
+UNIT_NUM_RE = re.compile(r"^\s*(\d{1,3})\.\s+(.+?)(?::\s*)?$")
+SUBUNIT_NUM_RE = re.compile(r"^\s*(\d{1,3})\.(\d{1,3})\.\s+(.+?)\s*$")
+
+def _strip_trailing_punct(s: str) -> str:
+    return re.sub(r"[\.:]\s*$", "", s).strip()
 
 def detect_level(raw_line: str) -> Tuple[int, str]:
     line = raw_line.rstrip("\n").strip()
     if not line:
         return 0, ""
-    # Cabeceras Markdown opcionales
-    if line.startswith("### "):  # nivel 3
-        return 3, line[4:].strip()
-    if line.startswith("## "):   # nivel 2
-        return 2, line[3:].strip()
-    if line.startswith("# "):    # nivel 1
-        return 1, line[2:].strip()
-    # Bullets
-    if re.match(BULLET_L3, line):
-        clean = re.sub(BULLET_L3, "", line).strip()
-        return 3, clean
-    if re.match(BULLET_L2, line):
-        clean = re.sub(BULLET_L2, "", line).strip()
-        return 2, clean
-    # Punto centrado clásico
-    if line.startswith("·"):
-        return 3, line.lstrip("·").strip()
-    # Fallback: título de unidad
+    m_sub = SUBUNIT_NUM_RE.match(line)
+    if m_sub:
+        text = _strip_trailing_punct(m_sub.group(3))
+        return 2, text
+    m_unit = UNIT_NUM_RE.match(line)
+    if m_unit:
+        text = _strip_trailing_punct(m_unit.group(2))
+        return 1, text
+    if line.startswith("### "): return 3, line[4:].strip()
+    if line.startswith("## "):  return 2, line[3:].strip()
+    if line.startswith("# "):   return 1, line[2:].strip()
+    if re.match(BULLET_L3, line): return 3, re.sub(BULLET_L3, "", line).strip()
+    if re.match(BULLET_L2, line): return 2, re.sub(BULLET_L2, "", line).strip()
+    if line.startswith("·"):     return 3, line.lstrip("·").strip()
     return 1, line
 
 def parse_units_and_subunits(lines: List[str]) -> List[Dict]:
@@ -182,7 +196,7 @@ def parse_units_and_subunits(lines: List[str]) -> List[Dict]:
             current_subunit["subtopics"].append(text)
     return units
 
-# -------------------- prompts para presentaciones --------------------
+# -------------------- prompts --------------------
 def make_subunit_prompt(doc_name: str, unit_title: str, subunit_title: str, subtopics: List[str]) -> str:
     bullet_block = "\n".join([f"- {t}" for t in subtopics]) if subtopics else "- (sin subtemas explícitos)"
     return textwrap.dedent(f"""\
@@ -235,26 +249,20 @@ def ollama_chat_stream(messages, model: str):
                 raise requests.HTTPError("404 chat", response=r)
             r.raise_for_status()
             for line in r.iter_lines(decode_unicode=True):
-                if not line:
-                    continue
+                if not line: continue
                 try:
                     obj = json.loads(line)
                 except json.JSONDecodeError:
                     m = re.match(r"^data:\s*(\{.*\})\s*$", line)
-                    if not m:
-                        continue
-                    try:
-                        obj = json.loads(m.group(1))
-                    except Exception:
-                        continue
+                    if not m: continue
+                    try: obj = json.loads(m.group(1))
+                    except Exception: continue
                 if "message" in obj and "content" in obj["message"]:
                     yield sanitize_stream_chunk(obj["message"]["content"])
-                if obj.get("done"):
-                    break
+                if obj.get("done"): break
             return
     except requests.HTTPError as e:
-        if e.response is None or e.response.status_code != 404:
-            raise
+        if e.response is None or e.response.status_code != 404: raise
 
     # Fallback /api/generate
     def join_messages(msgs):
@@ -272,19 +280,16 @@ def ollama_chat_stream(messages, model: str):
     with requests.post(url_gen, json=payload_gen, stream=True, timeout=TIMEOUT) as r:
         r.raise_for_status()
         for line in r.iter_lines(decode_unicode=True):
-            if not line:
-                continue
+            if not line: continue
             try:
                 obj = json.loads(line)
             except json.JSONDecodeError:
                 continue
             piece = obj.get("response")
-            if piece:
-                yield sanitize_stream_chunk(piece)
-            if obj.get("done"):
-                break
+            if piece: yield sanitize_stream_chunk(piece)
+            if obj.get("done"): break
 
-# -------------------- HTML helpers --------------------
+# -------------------- HTML helpers (no necesitamos regenerar) --------------------
 HTML_HEAD_TEMPLATE = """<!DOCTYPE html>
 <html lang="es">
 <head>
@@ -293,25 +298,21 @@ HTML_HEAD_TEMPLATE = """<!DOCTYPE html>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="{assets_rel}/present.css" rel="stylesheet">
 </head>
-<body>
+<body class="brand ceacfp">
   <main id="deck" tabindex="0" aria-live="polite">
 """
 
 HTML_FOOT_TEMPLATE = """
   </main>
   <footer class="footer">
-    <div class="meta">
-      <span class="where">{doc_name} · {unit_title} → {subunit_title}</span>
-      <span> · </span>
-      <span>Modelo: {model}</span>
-      <span> · </span>
-      <span>{timestamp}</span>
-    </div>
+    <div class="meta"></div>
     <div class="controls" aria-label="Controles de zoom">
       <button id="zoomOut" title="Zoom - (tecla -)">−</button>
       <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
       <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+      <!-- FS button se inyecta por JS si falta -->
     </div>
+    <!-- Progreso será movido fuera por JS si está aquí -->
     <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
       <div class="bar" id="progressBar" style="width:0%"></div>
     </div>
@@ -325,96 +326,268 @@ def write_html_header(fh, title: str, assets_rel: str):
     write_stream(fh, HTML_HEAD_TEMPLATE.format(title=title, assets_rel=assets_rel))
 
 def write_html_footer(fh, doc_name: str, unit_title: str, subunit_title: str, model: str, assets_rel: str):
-    write_stream(fh, HTML_FOOT_TEMPLATE.format(
-        doc_name=doc_name,
-        unit_title=unit_title,
-        subunit_title=subunit_title,
-        model=model,
-        timestamp=time.strftime('%Y-%m-%d %H:%M:%S'),
-        assets_rel=assets_rel
-    ))
+    # metadata se imprime en consola/JS; el HTML puede ser antiguo
+    write_stream(fh, HTML_FOOT_TEMPLATE)
 
 def open_slide(fh, data_id: str):
     write_stream(fh, f'\n<section class="slide" data-id="{data_id}">\n')
+    write_stream(fh, '<div class="fp-badge">FP OFICIAL</div>\n')
 
 def close_slide(fh):
     write_stream(fh, "\n</section>\n")
 
-# -------------------- Assets incrustados --------------------
+# -------------------- Assets (CSS/JS) --------------------
 def ensure_assets(base_outdir: Path):
     assets = base_outdir / "present-assets"
     assets.mkdir(parents=True, exist_ok=True)
     css = assets / "present.css"
     js = assets / "present.js"
+    logo = assets / BRAND_LOGO_FILENAME
 
-    css_content = """/* present.css — estilos y UI (zoom real + progreso) */
-:root{
-  --bg:#0f172a; --fg:#e5e7eb; --muted:#94a3b8; --accent:#38bdf8; --card:#111827; --maxw:1100px;
-  --zf:1;
-}
-*{box-sizing:border-box}
-html,body{height:100%}
-body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Arial,sans-serif}
-main#deck{display:block;width:100%;height:100vh;overflow:hidden;max-width:var(--maxw);margin:0 auto;padding:2rem}
-.slide{display:none;width:100%;height:100%;border-radius:16px;padding:3rem;background:linear-gradient(180deg,var(--card),#0b1220);box-shadow:0 10px 30px rgba(0,0,0,.35)}
-.slide.active{display:block}
-h1,h2,h3{margin:0 0 1rem 0;line-height:1.2}
-h1{font-size:2.4rem}
-h2{font-size:1.8rem}
-h3{font-size:1.4rem}
-p{margin:.5rem 0 1rem 0}
-ul{padding-left:1.2rem}
-li{margin:.4rem 0}
-.footer{position:fixed;left:0;right:0;bottom:0;display:flex;align-items:center;gap:.75rem;flex-wrap:wrap;padding:.5rem 1rem;color:var(--muted);font-size:.9rem;background:rgba(0,0,0,.25);backdrop-filter:saturate(120%) blur(6px);border-top:1px solid rgba(255,255,255,.06)}
-.footer .meta{flex:1 1 auto;min-width:250px}
-.footer .controls{display:flex;gap:.5rem;align-items:center}
-.footer .controls button{appearance:none;border:1px solid rgba(255,255,255,.15);background:#0b1220;color:var(--fg);border-radius:10px;padding:.25rem .6rem;font-weight:600;cursor:pointer}
-.footer .controls button:hover{border-color:rgba(255,255,255,.3)}
-.footer .controls #zoomPct{display:inline-block;min-width:3.5ch;text-align:center}
-.progress{position:relative;flex:1 1 100%;height:6px;background:rgba(255,255,255,.1);border-radius:999px;overflow:hidden}
-.progress .bar{height:100%;width:0%;background:var(--accent);transition:width .2s ease}
-code, pre{background:#0b1220;padding:.2rem .4rem;border-radius:6px}
-section.slide > *:last-child{margin-bottom:0}
-html.zoom-fb{transform:scale(var(--zf));transform-origin:0 0;width:calc(100% / var(--zf));height:calc(100% / var(--zf))}
+    if not logo.exists():
+        logo.write_text(
+            f"""<svg xmlns='http://www.w3.org/2000/svg' width='320' height='80' viewBox='0 0 320 80'>
+  <rect width='320' height='80' fill='{BRAND_PRIMARY}'/>
+  <text x='24' y='52' font-family='Segoe UI, Calibri, Arial, sans-serif' font-size='34' fill='white' font-weight='700'>{BRAND_NAME}</text>
+</svg>""",
+            encoding="utf-8"
+        )
+
+    css_content = f"""/* present.css — Reflow zoom + FS, compatible con HTML antiguo */
+:root {{
+  --bg: {BRAND_BG};
+  --fg: {BRAND_TEXT};
+  --muted: {BRAND_MUTED};
+  --primary: {BRAND_PRIMARY};
+  --accent: {BRAND_ACCENT};
+  --card: #FAFAFA;
+  --fs: 16px;               /* << base font-size para zoom reflow */
+  --logo-url: url('{BRAND_LOGO_FILENAME}');
+}}
+*{{box-sizing:border-box}}
+html {{ height:100%; font-size: var(--fs); }}  /* << rem se basa en esto */
+body {{
+  height:100%;
+  margin:0; background:var(--bg); color:var(--fg);
+  font-family:{BRAND_FONT_STACK};
+  line-height:1.5;
+  overflow:hidden;  /* pantalla completa sin scroll de página */
+}}
+main#deck {{
+  width:100%; height:100%; overflow:hidden; margin:0; padding:0;
+}}
+.slide {{
+  display:none; width:100%; height:100%; position:relative;
+  padding: 4.5rem 3rem 3rem;  /* usa rems => reflow al hacer zoom */
+  background:linear-gradient(180deg, #FFFFFF, var(--card));
+  border:0; box-shadow:none; border-radius:0;
+}}
+.slide.active{{display:block}}
+.slide::before {{
+  content:""; position:absolute; left:0; top:0; right:0; height:3.5rem;
+  background:linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
+}}
+.slide::after {{
+  content:""; position:absolute; left:1.2rem; top:.6rem; width:12.5rem; height:2.3rem;
+  background-image:var(--logo-url); background-repeat:no-repeat; background-size:contain; background-position:left center;
+}}
+.slide .fp-badge {{
+  position:absolute; right:1.2rem; top:.8rem;
+  background:rgba(255,255,255,.92); color:#111827; border:1px solid rgba(0,0,0,.08);
+  padding:.25rem .5rem; border-radius:999px; font-weight:700; font-size:.8rem;
+}}
+h1,h2,h3{{ margin:0 0 .75rem; line-height:1.2; font-weight:700; color:#0B1220 }}
+h1{{ font-size:2.4rem }} h2{{ font-size:1.6rem }} h3{{ font-size:1.2rem; color:#111827 }}
+p{{ margin:.5rem 0 1rem; font-size:1.08rem; word-wrap:break-word; overflow-wrap:break-word; }}
+ul{{ padding-left:1.2rem }} li{{ margin:.4rem 0; font-size:1.08rem }}
+a{{ color:var(--primary); text-decoration:none }} a:hover{{ text-decoration:underline }}
+code,pre{{ background:#F3F4F6; border:1px solid #E5E7EB; padding:.2rem .4rem; border-radius:6px }}
+section.slide > *:last-child{{ margin-bottom:0 }}
+
+/* Footer existente (HTML viejo) */
+.footer {{
+  position:fixed; left:0; right:0; bottom:.5rem;
+  display:flex; align-items:center; gap:.75rem; flex-wrap:wrap;
+  padding:.6rem 1rem; color:#374151; font-size:.92rem;
+  background:rgba(255,255,255,.95); border-top:1px solid #E5E7EB; backdrop-filter:saturate(120%) blur(6px);
+  z-index: 9998; /* por encima de progreso */
+}}
+.footer .meta{{ flex:1 1 auto; min-width:260px }}
+.footer .controls{{ display:flex; gap:.5rem; align-items:center }}
+.footer .controls button{{
+  appearance:none; border:1px solid #D1D5DB; background:#FFFFFF; color:#111827;
+  border-radius:10px; padding:.25rem .6rem; font-weight:600; cursor:pointer;
+}}
+.footer .controls button:hover{{ border-color:#9CA3AF }}
+#zoomPct{{ display:inline-block; min-width:3.5ch; text-align:center }}
+
+/* Progreso fijo, independiente del zoom (si no existe, JS lo crea) */
+.progress {{
+  position:fixed; left:0; right:0; bottom:3.5rem;
+  height:.38rem; background:#E5E7EB; overflow:hidden;
+  z-index: 9999;  /* por encima de todo */
+}}
+.progress .bar{{ height:100%; width:0%; background:var(--accent); transition:width .2s ease; }}
+
+/* Fullscreen: oculta footer; progreso pegado a abajo */
+.is-fullscreen .footer{{ display:none !important; }}
+.is-fullscreen .progress{{ bottom:0; }}
+
+/* Impresión A4 apaisado con reflow */
+@media print{{
+  @page{{ size:A4 landscape; margin:10mm; }}
+  html, body{{ height:auto; overflow:visible; background:#fff !important; color:#000 !important; }}
+  main#deck{{ width:100%; height:auto !important; overflow:visible !important; padding:0; margin:0; }}
+  .slide{{
+    display:block !important; width:100%;
+    height:auto !important; background:#fff !important; color:#000 !important;
+    border:0 !important; border-radius:0 !important; box-shadow:none !important;
+    padding:28pt 22pt 16pt 22pt !important; page-break-after:always; break-after:page;
+  }}
+  .slide::before{{ height:28pt; background:linear-gradient(90deg, {BRAND_PRIMARY} 0%, {BRAND_ACCENT} 100%); }}
+  .slide::after{{ top:6pt; left:10pt; width:120pt; height:20pt; background-image:var(--logo-url); }}
+  .slide .fp-badge{{
+    right:10pt; top:8pt; border:1px solid #e5e7eb; background:#fff; color:#000;
+    -webkit-print-color-adjust:exact; print-color-adjust:exact;
+  }}
+  h1{{ font-size:18pt !important; margin:6pt 0 8pt !important }}
+  h2{{ font-size:14pt !important; margin:4pt 0 6pt !important }}
+  h3{{ font-size:12pt !important; margin:2pt 0 4pt !important }}
+  p, li{{ font-size:11pt !important; color:#000 !important }}
+  ul{{ padding-left:18pt !important }}
+  .footer, .progress{{ display:none !important }}
+}}
 """
+
     js_content = r"""(function(){
   const deck = document.getElementById('deck');
   if(!deck) return;
   const slides = Array.from(deck.querySelectorAll('.slide'));
   let idx = 0;
+
+  /* Ensure PROGRESS exists & is OUTSIDE the footer */
+  let progress = document.querySelector('.progress');
+  const footer = document.querySelector('.footer');
+
+  if(!progress){
+    progress = document.createElement('div');
+    progress.className = 'progress';
+    const bar = document.createElement('div');
+    bar.className = 'bar'; bar.id = 'progressBar';
+    progress.appendChild(bar);
+    (footer ? document.body.insertBefore(progress, footer) : document.body.appendChild(progress));
+  }else{
+    if(footer && progress.parentElement === footer){
+      document.body.insertBefore(progress, footer);
+    }
+    if(!progress.querySelector('#progressBar')){
+      const bar = document.createElement('div');
+      bar.className = 'bar'; bar.id = 'progressBar';
+      progress.appendChild(bar);
+    }
+  }
   const bar = document.getElementById('progressBar');
-  function updateProgress(){ if(!bar||slides.length===0) return; const pct = Math.round(((idx+1)/slides.length)*100); bar.style.width = pct+'%'; }
-  const supportsZoom = ('zoom' in document.documentElement.style) || (typeof CSS!=='undefined' && CSS.supports && CSS.supports('zoom','1'));
-  const ZMIN=0.5, ZMAX=2.0, ZSTEP=0.1; let zoom=1.0;
-  const zoomPctEl=document.getElementById('zoomPct'), btnIn=document.getElementById('zoomIn'), btnOut=document.getElementById('zoomOut'), btnReset=document.getElementById('zoomReset');
+
+  function updateProgress(){
+    if(!bar||slides.length===0) return;
+    const pct = Math.round(((idx+1)/slides.length)*100);
+    bar.style.width = pct+'%';
+  }
+
+  /* === ZOOM (reflow): cambia font-size raíz mediante --fs === */
+  const BASE_FS = 16;                 // px
+  const ZMIN=0.5, ZMAX=2.0, ZSTEP=0.1;
+  let zoom = 1.0;
+
+  const zoomPctEl = document.getElementById('zoomPct');
+  const btnIn = document.getElementById('zoomIn');
+  const btnOut = document.getElementById('zoomOut');
+  const btnReset = document.getElementById('zoomReset');
+
   function clamp(n,a,b){return Math.min(b,Math.max(a,n));}
-  function setZoomValue(z){
-    zoom = clamp(+z.toFixed(2), ZMIN, ZMAX);
-    if(supportsZoom){ document.documentElement.style.zoom=String(zoom); document.body.style.zoom=''; document.documentElement.classList.remove('zoom-fb'); }
-    else{ document.documentElement.style.zoom=''; document.documentElement.classList.add('zoom-fb'); document.documentElement.style.setProperty('--zf', String(zoom)); }
+  function applyZoom(){
+    const px = Math.max(10, Math.round(BASE_FS * zoom));
+    document.documentElement.style.setProperty('--fs', px + 'px'); // reflow!
     if(zoomPctEl) zoomPctEl.textContent = Math.round(zoom*100)+'%';
   }
-  function zoomIn(){ setZoomValue(zoom+ZSTEP); } function zoomOut(){ setZoomValue(zoom-ZSTEP); } function zoomReset(){ setZoomValue(1.0); }
-  if(btnIn) btnIn.addEventListener('click', zoomIn); if(btnOut) btnOut.addEventListener('click', zoomOut); if(btnReset) btnReset.addEventListener('click', zoomReset);
-  function show(i){ if(slides.length===0) return; idx=(i+slides.length)%slides.length; slides.forEach((s,k)=>s.classList.toggle('active',k===idx)); const id=slides[idx].getAttribute('data-id')||String(idx+1); history.replaceState(null,'','#'+encodeURIComponent(id)); deck.focus({preventScroll:true}); updateProgress(); }
+  function setZoomValue(z){ zoom = clamp(+z.toFixed(2), ZMIN, ZMAX); applyZoom(); }
+  function zoomIn(){ setZoomValue(zoom+ZSTEP); }
+  function zoomOut(){ setZoomValue(zoom-ZSTEP); }
+  function zoomReset(){ setZoomValue(1.0); }
+
+  if(btnIn) btnIn.addEventListener('click', zoomIn);
+  if(btnOut) btnOut.addEventListener('click', zoomOut);
+  if(btnReset) btnReset.addEventListener('click', zoomReset);
+
+  /* === NAVIGATION === */
+  function show(i){
+    if(slides.length===0) return;
+    idx=(i+slides.length)%slides.length;
+    slides.forEach((s,k)=>s.classList.toggle('active',k===idx));
+    const id=slides[idx].getAttribute('data-id')||String(idx+1);
+    history.replaceState(null,'','#'+encodeURIComponent(id));
+    deck.focus({preventScroll:true});
+    updateProgress();
+  }
   const initialHash=decodeURIComponent((location.hash||'').replace(/^#/,''));
   const initialIndex=slides.findIndex(s=>(s.getAttribute('data-id')||'')===initialHash);
   show(initialIndex>=0?initialIndex:0);
-  setZoomValue(1.0);
+  applyZoom(); // set initial --fs
+
   function next(){ show(idx+1); } function prev(){ show(idx-1); }
-  window.addEventListener('keydown', (e)=>{ if(e.key==='ArrowRight'||e.key==='PageDown'||e.key===' '){e.preventDefault();next();} if(e.key==='ArrowLeft'||e.key==='PageUp'||e.key==='Backspace'){e.preventDefault();prev();} if(e.key==='Home'){e.preventDefault();show(0);} if(e.key==='End'){e.preventDefault();show(slides.length-1);} if(e.key==='+'||e.key==='='){e.preventDefault();zoomIn();} if(e.key==='-'){e.preventDefault();zoomOut();} if(e.key==='0'){e.preventDefault();zoomReset();} });
-  deck.addEventListener('click',(e)=>{ const rect=deck.getBoundingClientRect(); const x=e.clientX-rect.left; if(x>rect.width/2) next(); else prev(); },false);
+  window.addEventListener('keydown', (e)=>{
+    if(e.key==='ArrowRight'||e.key==='PageDown'||e.key===' '){ e.preventDefault(); next(); }
+    if(e.key==='ArrowLeft'||e.key==='PageUp'||e.key==='Backspace'){ e.preventDefault(); prev(); }
+    if(e.key==='Home'){ e.preventDefault(); show(0); }
+    if(e.key==='End'){ e.preventDefault(); show(slides.length-1); }
+    if(e.key==='+'||e.key==='='){ e.preventDefault(); zoomIn(); }
+    if(e.key==='-'){ e.preventDefault(); zoomOut(); }
+    if(e.key==='0'){ e.preventDefault(); zoomReset(); }
+    if(e.key.toLowerCase()==='f'){ e.preventDefault(); toggleFullscreen(); }
+  });
+
+  deck.addEventListener('click',(e)=>{
+    const rect=deck.getBoundingClientRect();
+    const x=e.clientX-rect.left;
+    if(x>rect.width/2) next(); else prev();
+  },false);
   let sx=null; deck.addEventListener('touchstart', e=>{ sx=e.touches[0].clientX; }, {passive:true});
   deck.addEventListener('touchend', e=>{ if(sx==null) return; const dx=(e.changedTouches[0].clientX - sx); if(Math.abs(dx)>40){ if(dx<0) next(); else prev(); } sx=null; }, {passive:true});
+
+  /* === FULLSCREEN: inyecta botón si falta, y alterna clase para CSS === */
+  const controls = footer ? footer.querySelector('.controls') : null;
+  let fsBtn = document.getElementById('fsToggle');
+  if(!fsBtn && controls){
+    fsBtn = document.createElement('button');
+    fsBtn.id = 'fsToggle';
+    fsBtn.title = 'Pantalla completa (tecla F)';
+    fsBtn.textContent = '⛶';
+    controls.appendChild(fsBtn);
+  }
+  function isFs(){ return document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement; }
+  function reqFs(el){ if(el.requestFullscreen) return el.requestFullscreen(); if(el.webkitRequestFullscreen) return el.webkitRequestFullscreen(); if(el.mozRequestFullScreen) return el.mozRequestFullScreen(); if(el.msRequestFullscreen) return el.msRequestFullscreen(); }
+  function exitFs(){ if(document.exitFullscreen) return document.exitFullscreen(); if(document.webkitExitFullscreen) return document.webkitExitFullscreen(); if(document.mozCancelFullScreen) return document.mozCancelFullScreen(); if(document.msExitFullscreen) return document.msExitFullscreen(); }
+  function toggleFullscreen(){ if(isFs()) exitFs(); else reqFs(document.documentElement); }
+  function onFsChange(){
+    const fs = !!isFs();
+    document.body.classList.toggle('is-fullscreen', fs);
+    if(fsBtn) fsBtn.textContent = fs ? '⤢' : '⛶';
+  }
+  if(fsBtn) fsBtn.addEventListener('click', toggleFullscreen);
+  document.addEventListener('fullscreenchange', onFsChange);
+  document.addEventListener('webkitfullscreenchange', onFsChange);
+  document.addEventListener('mozfullscreenchange', onFsChange);
+  document.addEventListener('MSFullscreenChange', onFsChange);
 })();"""
 
-    def write(path: Path, content: str):
-        if FORCE_ASSET_OVERWRITE or not path.exists():
-            path.write_text(content, encoding="utf-8")
-    write(css, css_content); write(js, js_content)
+    if FORCE_ASSET_OVERWRITE or not css.exists():
+        css.write_text(css_content, encoding="utf-8")
+    if FORCE_ASSET_OVERWRITE or not js.exists():
+        js.write_text(js_content, encoding="utf-8")
+
     return assets
 
-# -------------------- Slides extra locales si faltan --------------------
+# -------------------- Slides extra --------------------
 EXTRA_TEMPLATES = [
     ("Conceptos clave (ampliación)", lambda t: f"<p>Profundiza en los fundamentos de <strong>{t}</strong> con definiciones operativas y límites de aplicación.</p><ul><li>Concepto A vs B</li><li>Variables implicadas</li><li>Supuestos habituales</li><li>Cuándo NO aplicar</li></ul>"),
     ("Ejemplo aplicado",            lambda t: f"<p>Ejemplo paso a paso de <strong>{t}</strong> en un escenario realista.</p><ol><li>Contexto</li><li>Decisiones clave</li><li>Resultado</li><li>Métricas</li><li>Mejoras</li></ol>"),
@@ -444,8 +617,13 @@ def write_extra_slides(out, needed: int, subunit_title: str, subtopics: List[str
 def process_subunit_to_html(out_html: Path, assets_rel: str, doc_name: str,
                             unit_title: str, subunit_title: str, subtopics: List[str],
                             model: str, base_messages: List[Dict]):
+    if out_html.exists():
+        print(f"    [SKIP] Ya existe: {out_html.name} (no se sobrescribe)")
+        return
+
     title = f"{subunit_title} — {unit_title} — {doc_name}"
     with out_html.open("w", encoding="utf-8") as out:
+        # header mínimo (viejos HTML seguirán funcionando con assets nuevos)
         write_html_header(out, title, assets_rel)
         open_slide(out, data_id=slugify(subunit_title) or "portada")
         write_stream(out, f"<h1>{subunit_title}</h1>\n")
@@ -462,17 +640,9 @@ def process_subunit_to_html(out_html: Path, assets_rel: str, doc_name: str,
                 if not chunk: continue
                 slide_count += len(re.findall(r"<\s*section\b", chunk, flags=re.IGNORECASE))
                 write_stream(out, chunk)
-        except requests.HTTPError as e:
-            open_slide(out, data_id="error-http")
-            write_stream(out, f"<h2>Error HTTP con Ollama</h2><p>{e}</p>")
-            close_slide(out)
-        except requests.RequestException as e:
-            open_slide(out, data_id="error-red")
-            write_stream(out, f"<h2>Error de red con Ollama</h2><p>{e}</p>")
-            close_slide(out)
         except Exception as e:
             open_slide(out, data_id="error")
-            write_stream(out, f"<h2>Error inesperado</h2><p>{e}</p>")
+            write_stream(out, f"<h2>Error</h2><p>{e}</p>")
             close_slide(out)
 
         if slide_count == 1:
@@ -499,17 +669,18 @@ def write_index(outdir: Path, index_data: List[Dict]):
 <html lang="es"><head><meta charset="utf-8"><title>Índice de presentaciones</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-:root{--bg:#0f172a;--fg:#e5e7eb;--muted:#94a3b8;--card:#0b1220;--accent:#38bdf8}
-*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Arial,sans-serif}
+:root{--bg:#fff;--fg:#111827;--muted:#6b7280;--accent:%s}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 %s}
 .wrap{max-width:1100px;margin:0 auto;padding:2rem} h1{font-size:2rem;margin:0 0 1rem}
 h2{font-size:1.2rem;margin:1.5rem 0 .5rem;color:var(--accent)}
-details{background:linear-gradient(180deg,var(--card),#0b1220);margin:.5rem 0;border-radius:12px;padding:1rem;border:1px solid rgba(255,255,255,.06)}
-summary{cursor:pointer;font-weight:600} ul{margin:.5rem 0 0 1rem}
-a{color:#93c5fd;text-decoration:none} a:hover{text-decoration:underline}
+details{background:#fff;margin:.5rem 0;border-radius:12px;padding:1rem;border:1px solid #e5e7eb;box-shadow:0 4px 14px rgba(0,0,0,.04)}
+summary{cursor:pointer;font-weight:700} ul{margin:.5rem 0 0 1rem}
+a{color:#1d4ed8;text-decoration:none} a:hover{text-decoration:underline}
 .doc{margin:1rem 0 2rem} .meta{color:var(--muted);font-size:.9rem;margin:.5rem 0 1rem}
+@media print{ body{background:#fff;color:#000} .wrap{max-width:100%;padding:0} a{color:#000;text-decoration:underline} }
 </style></head><body><div class="wrap">
 <h1>Índice de presentaciones (global)</h1>
-<p class="meta">Generado: """ + time.strftime('%Y-%m-%d %H:%M:%S') + """</p>
+<p class="meta">Generado: """ % (BRAND_ACCENT, BRAND_FONT_STACK) + time.strftime('%Y-%m-%d %H:%M:%S') + """</p>
 """
     foot = "</div></body></html>"
     with index_path.open("w", encoding="utf-8") as f:
@@ -534,14 +705,15 @@ def write_doc_index(doc_outdir: Path, doc_name: str, units: List[Dict], root_out
 <html lang="es"><head><meta charset="utf-8"><title>Índice — {doc_name}</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-:root{{--bg:#0f172a;--fg:#e5e7eb;--muted:#94a3b8;--card:#0b1220;--accent:#38bdf8}}
-*{{box-sizing:border-box}} body{{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Arial,sans-serif}}
+:root{{--bg:#fff;--fg:#111827;--muted:#6b7280;--accent:{BRAND_ACCENT}}}
+*{{box-sizing:border-box}} body{{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 {BRAND_FONT_STACK}}}
 .wrap{{max-width:1100px;margin:0 auto;padding:2rem}} h1{{font-size:2rem;margin:0 0 1rem}}
 h2{{font-size:1.2rem;margin:1.5rem 0 .5rem;color:var(--accent)}}
-details{{background:linear-gradient(180deg,var(--card),#0b1220);margin:.5rem 0;border-radius:12px;padding:1rem;border:1px solid rgba(255,255,255,.06)}}
-summary{{cursor:pointer;font-weight:600}} ul{{margin:.5rem 0 0 1rem}}
-a{{color:#93c5fd;text-decoration:none}} a:hover{{text-decoration:underline}}
+details{{background:#fff;margin:.5rem 0;border-radius:12px;padding:1rem;border:1px solid #e5e7eb;box-shadow:0 4px 14px rgba(0,0,0,.04)}}
+summary{{cursor:pointer;font-weight:700}} ul{{margin:.5rem 0 0 1rem}}
+a{{color:#1d4ed8;text-decoration:none}} a:hover{{text-decoration:underline}}
 .meta{{color:var(--muted);font-size:.9rem;margin:.25rem 0 1rem}}
+@media print{{ body{{background:#fff;color:#000}} .wrap{{max-width:100%;padding:0}} a{{color:#000;text-decoration:underline}} }}
 </style></head><body><div class="wrap">
 <div class="breadcrumb"><a href="{rel_root_index}">← Volver al índice global</a></div>
 <h1>Índice — {doc_name}</h1>
@@ -551,7 +723,8 @@ a{{color:#93c5fd;text-decoration:none}} a:hover{{text-decoration:underline}}
     with index_path.open("w", encoding="utf-8") as f:
         f.write(head)
         for unit in units:
-            f.write('<details open>\n  <summary>' + unit["unit_title"] + '</summary>\n  <ul>\n')
+            f.write('<details open>\n  <summary>' + unit["unit_title"] + '</summary>\n')
+            f.write('  <ul>\n')
             for it in unit["items"]:
                 href = it["html_name"]
                 f.write(f'    <li><a href="{href}">{it["subunit_title"]}</a></li>\n')
@@ -562,9 +735,9 @@ a{{color:#93c5fd;text-decoration:none}} a:hover{{text-decoration:underline}}
 def main():
     parser = argparse.ArgumentParser(description="Generador de presentaciones HTML por subunidad desde .md usando Ollama")
     parser.add_argument("--list-models", action="store_true", help="Lista los modelos disponibles y sale")
-    parser.add_argument("--model", help="Nombre exacto del modelo Ollama a usar (p.ej. 'llama3.1:8b-instruct')")
-    parser.add_argument("--dir", default=".", help="Directorio con los .md (por defecto, el actual)")
-    parser.add_argument("--outdir", default="./presentations", help="Directorio de salida para las HTML y assets")
+    parser.add_argument("--model", help="Nombre exacto del modelo Ollama a usar")
+    parser.add_argument("--dir", default=".", help="Directorio con los .md")
+    parser.add_argument("--outdir", default="./presentations", help="Directorio de salida")
     args = parser.parse_args()
 
     try:
@@ -641,25 +814,27 @@ def main():
                 sub_slug  = f"{s_idx:02d}-{slugify(subunit_title)}"
                 out_html = doc_outdir / f"{unit_slug}__{sub_slug}.{model.replace(':','_')}.html"
 
-                print(f"  - Generando presentación: {out_html.name}")
-                process_subunit_to_html(
-                    out_html=out_html,
-                    assets_rel=assets_rel,
-                    doc_name=doc_name,
-                    unit_title=unit_title,
-                    subunit_title=subunit_title,
-                    subtopics=subtopics,
-                    model=model,
-                    base_messages=base_messages
-                )
+                if out_html.exists():
+                    print(f"  - Saltando (ya existe): {out_html.name}")
+                else:
+                    print(f"  - Generando presentación: {out_html.name}")
+                    process_subunit_to_html(
+                        out_html=out_html,
+                        assets_rel=assets_rel,
+                        doc_name=doc_name,
+                        unit_title=unit_title,
+                        subunit_title=subunit_title,
+                        subtopics=subtopics,
+                        model=model,
+                        base_messages=base_messages
+                    )
                 unit_items.append({"subunit_title": subunit_title, "html_name": out_html.name})
 
             index_doc["units"].append({"unit_title": unit_title, "items": unit_items})
 
         index_data.append(index_doc)
-        print(f"[DONE] {doc_name}: {total_subunits} presentaciones generadas en {doc_outdir}")
+        print(f"[DONE] {doc_name}: {total_subunits} presentaciones (nuevas o existentes) en {doc_outdir}")
 
-        # Índice por documento
         write_doc_index(doc_outdir=doc_outdir, doc_name=doc_name,
                         units=index_doc["units"], root_outdir=outdir)
 

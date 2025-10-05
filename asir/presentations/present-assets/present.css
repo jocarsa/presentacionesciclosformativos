@@ -1,29 +1,104 @@
-/* present.css — estilos y UI (zoom real + progreso) */
-:root{
-  --bg:#0f172a; --fg:#e5e7eb; --muted:#94a3b8; --accent:#38bdf8; --card:#111827; --maxw:1100px;
-  --zf:1;
+/* present.css — Reflow zoom + FS, compatible con HTML antiguo */
+:root {
+  --bg: #FFFFFF;
+  --fg: #0A0A0A;
+  --muted: #4B5563;
+  --primary: #003B8E;
+  --accent: #00A0E6;
+  --card: #FAFAFA;
+  --fs: 16px;               /* << base font-size para zoom reflow */
+  --logo-url: url('logo_ceacfp.svg');
 }
 *{box-sizing:border-box}
-html,body{height:100%}
-body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Arial,sans-serif}
-main#deck{display:block;width:100%;height:100vh;overflow:hidden;max-width:var(--maxw);margin:0 auto;padding:2rem}
-.slide{display:none;width:100%;height:100%;border-radius:16px;padding:3rem;background:linear-gradient(180deg,var(--card),#0b1220);box-shadow:0 10px 30px rgba(0,0,0,.35)}
+html { height:100%; font-size: var(--fs); }  /* << rem se basa en esto */
+body {
+  height:100%;
+  margin:0; background:var(--bg); color:var(--fg);
+  font-family:Calibri, 'Segoe UI', Roboto, Ubuntu, Cantarell, Arial, sans-serif;
+  line-height:1.5;
+  overflow:hidden;  /* pantalla completa sin scroll de página */
+}
+main#deck {
+  width:100%; height:100%; overflow:hidden; margin:0; padding:0;
+}
+.slide {
+  display:none; width:100%; height:100%; position:relative;
+  padding: 4.5rem 3rem 3rem;  /* usa rems => reflow al hacer zoom */
+  background:linear-gradient(180deg, #FFFFFF, var(--card));
+  border:0; box-shadow:none; border-radius:0;
+}
 .slide.active{display:block}
-h1,h2,h3{margin:0 0 1rem 0;line-height:1.2}
-h1{font-size:2.4rem}
-h2{font-size:1.8rem}
-h3{font-size:1.4rem}
-p{margin:.5rem 0 1rem 0}
-ul{padding-left:1.2rem}
-li{margin:.4rem 0}
-.footer{position:fixed;left:0;right:0;bottom:0;display:flex;align-items:center;gap:.75rem;flex-wrap:wrap;padding:.5rem 1rem;color:var(--muted);font-size:.9rem;background:rgba(0,0,0,.25);backdrop-filter:saturate(120%) blur(6px);border-top:1px solid rgba(255,255,255,.06)}
-.footer .meta{flex:1 1 auto;min-width:250px}
-.footer .controls{display:flex;gap:.5rem;align-items:center}
-.footer .controls button{appearance:none;border:1px solid rgba(255,255,255,.15);background:#0b1220;color:var(--fg);border-radius:10px;padding:.25rem .6rem;font-weight:600;cursor:pointer}
-.footer .controls button:hover{border-color:rgba(255,255,255,.3)}
-.footer .controls #zoomPct{display:inline-block;min-width:3.5ch;text-align:center}
-.progress{position:relative;flex:1 1 100%;height:6px;background:rgba(255,255,255,.1);border-radius:999px;overflow:hidden}
-.progress .bar{height:100%;width:0%;background:var(--accent);transition:width .2s ease}
-code, pre{background:#0b1220;padding:.2rem .4rem;border-radius:6px}
-section.slide > *:last-child{margin-bottom:0}
-html.zoom-fb{transform:scale(var(--zf));transform-origin:0 0;width:calc(100% / var(--zf));height:calc(100% / var(--zf))}
+.slide::before {
+  content:""; position:absolute; left:0; top:0; right:0; height:3.5rem;
+  background:linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
+}
+.slide::after {
+  content:""; position:absolute; left:1.2rem; top:.6rem; width:12.5rem; height:2.3rem;
+  background-image:var(--logo-url); background-repeat:no-repeat; background-size:contain; background-position:left center;
+}
+.slide .fp-badge {
+  position:absolute; right:1.2rem; top:.8rem;
+  background:rgba(255,255,255,.92); color:#111827; border:1px solid rgba(0,0,0,.08);
+  padding:.25rem .5rem; border-radius:999px; font-weight:700; font-size:.8rem;
+}
+h1,h2,h3{ margin:0 0 .75rem; line-height:1.2; font-weight:700; color:#0B1220 }
+h1{ font-size:2.4rem } h2{ font-size:1.6rem } h3{ font-size:1.2rem; color:#111827 }
+p{ margin:.5rem 0 1rem; font-size:1.08rem; word-wrap:break-word; overflow-wrap:break-word; }
+ul{ padding-left:1.2rem } li{ margin:.4rem 0; font-size:1.08rem }
+a{ color:var(--primary); text-decoration:none } a:hover{ text-decoration:underline }
+code,pre{ background:#F3F4F6; border:1px solid #E5E7EB; padding:.2rem .4rem; border-radius:6px }
+section.slide > *:last-child{ margin-bottom:0 }
+
+/* Footer existente (HTML viejo) */
+.footer {
+  position:fixed; left:0; right:0; bottom:.5rem;
+  display:flex; align-items:center; gap:.75rem; flex-wrap:wrap;
+  padding:.6rem 1rem; color:#374151; font-size:.92rem;
+  background:rgba(255,255,255,.95); border-top:1px solid #E5E7EB; backdrop-filter:saturate(120%) blur(6px);
+  z-index: 9998; /* por encima de progreso */
+}
+.footer .meta{ flex:1 1 auto; min-width:260px }
+.footer .controls{ display:flex; gap:.5rem; align-items:center }
+.footer .controls button{
+  appearance:none; border:1px solid #D1D5DB; background:#FFFFFF; color:#111827;
+  border-radius:10px; padding:.25rem .6rem; font-weight:600; cursor:pointer;
+}
+.footer .controls button:hover{ border-color:#9CA3AF }
+#zoomPct{ display:inline-block; min-width:3.5ch; text-align:center }
+
+/* Progreso fijo, independiente del zoom (si no existe, JS lo crea) */
+.progress {
+  position:fixed; left:0; right:0; bottom:3.5rem;
+  height:.38rem; background:#E5E7EB; overflow:hidden;
+  z-index: 9999;  /* por encima de todo */
+}
+.progress .bar{ height:100%; width:0%; background:var(--accent); transition:width .2s ease; }
+
+/* Fullscreen: oculta footer; progreso pegado a abajo */
+.is-fullscreen .footer{ display:none !important; }
+.is-fullscreen .progress{ bottom:0; }
+
+/* Impresión A4 apaisado con reflow */
+@media print{
+  @page{ size:A4 landscape; margin:10mm; }
+  html, body{ height:auto; overflow:visible; background:#fff !important; color:#000 !important; }
+  main#deck{ width:100%; height:auto !important; overflow:visible !important; padding:0; margin:0; }
+  .slide{
+    display:block !important; width:100%;
+    height:auto !important; background:#fff !important; color:#000 !important;
+    border:0 !important; border-radius:0 !important; box-shadow:none !important;
+    padding:28pt 22pt 16pt 22pt !important; page-break-after:always; break-after:page;
+  }
+  .slide::before{ height:28pt; background:linear-gradient(90deg, #003B8E 0%, #00A0E6 100%); }
+  .slide::after{ top:6pt; left:10pt; width:120pt; height:20pt; background-image:var(--logo-url); }
+  .slide .fp-badge{
+    right:10pt; top:8pt; border:1px solid #e5e7eb; background:#fff; color:#000;
+    -webkit-print-color-adjust:exact; print-color-adjust:exact;
+  }
+  h1{ font-size:18pt !important; margin:6pt 0 8pt !important }
+  h2{ font-size:14pt !important; margin:4pt 0 6pt !important }
+  h3{ font-size:12pt !important; margin:2pt 0 4pt !important }
+  p, li{ font-size:11pt !important; color:#000 !important }
+  ul{ padding-left:18pt !important }
+  .footer, .progress{ display:none !important }
+}
