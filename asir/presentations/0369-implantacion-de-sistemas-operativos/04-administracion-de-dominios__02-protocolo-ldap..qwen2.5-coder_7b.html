@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Protocolo LDAP. — Administración de dominios: — 0369 Implantación de sistemas operativos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="protocolo-ldap.">
+<h1>Protocolo LDAP.</h1>
+<p><strong>Unidad:</strong> Administración de dominios:<br><strong>Documento:</strong> 0369 Implantación de sistemas operativos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Implantación de sistemas operativos</h1>
+    <p><strong>Objetivo:</strong> Comprender los protocolos utilizados en la administración de dominios, con énfasis en LDAP.</p>
+</section>
+
+<section class="slide">
+    <h2>Protocolo LDAP: Introducción</h2>
+    <ul>
+        <li><strong>LDAP (Lightweight Directory Access Protocol):</strong> Protocolo de acceso a directorios ligero y eficiente.</li>
+        <li>Utilizado para almacenar, buscar y gestionar información en una estructura jerárquica.</li>
+        <li>Origen: Desarrollado por la X.500 (ahora ISO/IE 9546).</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Estructura de un Directorio LDAP</h2>
+    <ul>
+        <li><strong>Base DN (Distinguished Name):</strong> Raíz del árbol de directorios.</li>
+        <li><strong>OU (Organizational Unit):</strong> Unidades organizativas dentro del dominio.</li>
+        <li><strong>CN (Common Name):</strong> Nombre común del objeto.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Características de LDAP</h2>
+    <ul>
+        <li>Búsqueda rápida y eficiente de información.</li>
+        <li>Soporte para consultas complejas.</li>
+        <li>Acceso controlado basado en roles.</li>
+        <li>Escalabilidad horizontal.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Instalación de LDAP en Linux</h2>
+    <p><strong>Paso 1:</strong> Instalar el servidor LDAP (ej. OpenLDAP).</p>
+    <pre>sudo apt-get install slapd ldap-utils</pre>
+    <p><strong>Paso 2:</strong> Configurar el servidor con los detalles del dominio.</p>
+</section>
+
+<section class="slide">
+    <h2>Configuración Básica de LDAP</h2>
+    <ul>
+        <li><strong>Base DN:</strong> Definir la raíz del árbol de directorios.</li>
+        <li><strong>Administrador (Root):</strong> Crear el usuario administrador del dominio.</li>
+        <li><strong>Unidades Organizativas (OU):</strong> Crear estructuras organizativas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Añadir Usuarios a LDAP</h2>
+    <p><strong>Paso 1:</strong> Crear un nuevo usuario en el directorio.</p>
+    <pre>sudo ldapadd -x -D "cn=admin,dc=ejemplo,dc=com" -W -f /ruta/al/archivo.ldif</pre>
+    <p><strong>Paso 2:</strong> Verificar la creación del usuario.</p>
+    <pre>ldapsearch -x -b "ou=People,dc=ejemplo,dc=com" "(uid=nuevo_usuario)"</pre>
+</section>
+
+<section class="slide">
+    <h2>Búsqueda de Usuarios en LDAP</h2>
+    <ul>
+        <li><strong>Sintaxis básica:</strong> ldapsearch -x -b "base_dn" "filter"</li>
+        <li>Ejemplo: Buscar todos los usuarios en la OU 'People'.</li>
+        <pre>ldapsearch -x -b "ou=People,dc=ejemplo,dc=com" "(objectClass=person)"</pre>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actualización de Usuarios en LDAP</h2>
+    <p><strong>Paso 1:</strong> Crear un archivo LDIF con los cambios.</p>
+    <pre>dn: uid=nuevo_usuario,ou=People,dc=ejemplo,dc=com
+changetype: modify
+replace: mail
+mail: nuevo_email@example.com</pre>
+    <p><strong>Paso 2:</strong> Aplicar los cambios.</p>
+    <pre>sudo ldapmodify -x -D "cn=admin,dc=ejemplo,dc=com" -W -f /ruta/al/archivo.ldif</pre>
+</section>
+
+<section class="slide">
+    <h2>Baja de Usuarios en LDAP</h2>
+    <p><strong>Paso 1:</strong> Crear un archivo LDIF con la operación delete.</p>
+    <pre>dn: uid=nuevo_usuario,ou=People,dc=ejemplo,dc=com
+changetype: delete</pre>
+    <p><strong>Paso 2:</strong> Aplicar los cambios.</p>
+    <pre>sudo ldapmodify -x -D "cn=admin,dc=ejemplo,dc=com" -W -f /ruta/al/archivo.ldif</pre>
+</section>
+
+<section class="slide">
+    <h2>Seguridad en LDAP</h2>
+    <ul>
+        <li><strong>Cifrado SSL/TLS:</strong> Usar LDAPS para cifrar las comunicaciones.</li>
+        <li><strong>Autenticación de usuarios:</strong> Utilizar SASL (Simple Authentication and Security Layer).</li>
+        <li><strong>Control de acceso:</strong> Implementar ACLs (Access Control Lists).</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas en LDAP</h2>
+    <ul>
+        <li>Mantener la estructura jerárquica clara y organizada.</li>
+        <li>Usar nombres de atributos estándar cuando sea posible.</li>
+        <li>Regularmente realizar copias de seguridad del directorio.</li>
+        <li>Monitorear el rendimiento y escalar según sea necesario.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en LDAP</h2>
+    <ul>
+        <li><strong>Error 34 (Invalid DN syntax):</strong> Verificar la sintaxis del DN.</li>
+        <li><strong>Error 50 (Insufficient access rights):</strong> Asegurarse de tener los permisos adecuados.</li>
+        <li><strong>Error 68 (Object class violation):</strong> Comprobar que el objeto cumple con la definición de clase.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo Práctico: Configuración LDAP en Windows Server</h2>
+    <p><strong>Paso 1:</strong> Instalar el rol de Servidor LDAP.</p>
+    <p><strong>Paso 2:</strong> Crear un nuevo árbol de directorios.</p>
+    <p><strong>Paso 3:</strong> Configurar usuarios y grupos.</p>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico: Integración LDAP con Sistemas de Autenticación</h2>
+    <ul>
+        <li>Integrar LDAP con sistemas como Active Directory o FreeIPA.</li>
+        <li>Beneficios: Centralización de gestión de usuarios y autenticación segura.</li>
+        <li>Dificultades: Configuración compleja, compatibilidad entre sistemas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Conceptos Básicos de LDAP</h2>
+    <p>¿Cuál es el propósito principal del protocolo LDAP?</p>
+    <ol>
+        <li>Transferir archivos entre servidores.</li>
+        <li>Gestionar y buscar información en un directorio jerárquico.</li>
+        <li>Realizarálculos complejos.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Implementación de LDAP</h2>
+    <ul>
+        <li>Instalar y configurar el servidor LDAP.</li>
+        <li>Crear estructura jerárquica de directorios.</li>
+        <li>Añadir, modificar y eliminar usuarios.</li>
+        <li>Implementar seguridad SSL/TLS.</li>
+        <li>Mantener copias de seguridad periódicas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Creación de un Servidor LDAP Local</h2>
+    <p>Configurar un servidor LDAP local en una máquina virtual o servidor dedicado.</p>
+    <ol>
+        <li>Instalar el software necesario.</li>
+        <li>Crear la estructura jerárquica del directorio.</li>
+        <li>Añadir al menos 5 usuarios y grupos.</li>
+        <li>Probar las operaciones básicas de búsqueda, creación y modificación.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Resumen: Administración de Dominios con LDAP</h2>
+    <ul>
+        <li>LDAP es un protocolo eficiente para gestionar información en directorios jerárquicos.</li>
+        <li>Incluye instalación, configuración, gestión de usuarios y seguridad.</li>
+        <li>Es fundamental para la administración centralizada de sistemas y recursos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa Relacionada con LDAP</h2>
+    <ul>
+        <li><strong>ISO/IE 9546:</strong> Norma internacional para el protocolo LDAP.</li>
+        <li><strong>NIST SP 800-63B:</strong> Guía sobre autenticación de usuarios en sistemas digitales.</li>
+        <li><strong>GDPR (Reglamento General de Protección de Datos):</strong> Consideraciones sobre la privacidad y seguridad de los datos en LDAP.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Preguntas Finales</h2>
+    <p>¿Tienes alguna pregunta o duda sobre la implantación de sistemas operativos?</p>
+    <p><strong>Contacto:</strong> [Información de contacto]</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0369 Implantación de sistemas operativos.md · Administración de dominios: → Protocolo LDAP.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-04 22:10:58</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

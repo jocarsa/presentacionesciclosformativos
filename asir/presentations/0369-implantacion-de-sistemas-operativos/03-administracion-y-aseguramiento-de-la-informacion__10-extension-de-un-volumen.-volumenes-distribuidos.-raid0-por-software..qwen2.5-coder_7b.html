@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Extensión de un volumen. Volúmenes distribuidos. RAID0 por software. — Administración y aseguramiento de la información: — 0369 Implantación de sistemas operativos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="extension-de-un-volumen.-volumenes-distribuidos.-raid0-por-software.">
+<h1>Extensión de un volumen. Volúmenes distribuidos. RAID0 por software.</h1>
+<p><strong>Unidad:</strong> Administración y aseguramiento de la información:<br><strong>Documento:</strong> 0369 Implantación de sistemas operativos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Extensión de un volumen. Volúmenes distribuidos. RAID0 por software.</h1>
+    <p>Objetivo: Comprender los conceptos y técnicas para extender volúmenes y configurar RAID0 por software.</p>
+</section>
+
+<section class="slide">
+    <h2>Extensión de un volumen</h2>
+    <ul>
+        <li>Definición: Aumentar el tamaño de un volumen existente.</li>
+        <li>Métodos: Extendiendo un partición o creando una nueva partición adicional.</li>
+        <li>Consideraciones: Respaldo de datos, tiempo de inactividad.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Volúmenes distribuidos</h2>
+    <p>Definición: Conjunto de discos físicos o lógicos que se presentan como un solo volumen al sistema operativo.</p>
+</section>
+
+<section class="slide">
+    <h2>RAID0 por software</h2>
+    <ul>
+        <li>Definición: Configuración RAID0 implementada en el software del sistema operativo.</li>
+        <li>Ventajas: Alta velocidad de lectura y escritura, redundancia mínima.</li>
+        <li>Inconvenientes: Fallo total si se dañan todos los discos involucrados.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración RAID0 por software</h2>
+    <p>Pasos básicos para configurar RAID0 en sistemas Linux:</p>
+    <ol>
+        <li>Instalar el paqueteadm.</li>
+        <li>Crear un array RAID0 con los discos deseados.</li>
+        <li>Formatear el nuevo volumen RAID.</li>
+        <li>Montar el volumen en el sistema de archivos.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo práctico</h2>
+    <p>Configuración de RAID0 con tres discos:</p>
+    <pre><code>sudoadm --create /dev/md0 --level=0 --raid-devices=3 /dev/sdb /dev/sdc /dev/sdd
+sudo mkfs.ext4 /dev/md0
+sudo mount /dev/md0 /mnt</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Caso de estudio</h2>
+    <p>Una empresa necesita aumentar el espacio de almacenamiento para sus bases de datos.</p>
+    <ul>
+        <li>Se decide implementar RAID0 por software con tres discos adicionales.</li>
+        <li>El tiempo de inactividad es mínimo gracias a la configuración rápida del RAID.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas</h2>
+    <ul>
+        <li>No usar RAID0 en entornos críticos sin respaldo regular.</li>
+        <li>Monitorear el rendimiento y la salud del array RAID.</li>
+        <li>Realizar pruebas periódicas de recuperación ante fallo.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes</h2>
+    <ul>
+        <li>No realizar un respaldo adecuado antes de la configuración del RAID.</li>
+        <li>Usar discos con errores físicos sin repararlos primero.</li>
+        <li>No monitorizar el rendimiento y la salud del array RAID.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa con otros niveles de RAID</h2>
+    <table>
+        <tr>
+            <th>Nivel</th>
+            <th>Rendimiento</th>
+            <th>Redundancia</th>
+            <th>Fallo total</th>
+        </tr>
+        <tr>
+            <td>RAID0</td>
+            <td>Alto</td>
+            <td>Ninguna</td>
+            <td>Sí, si se dañan todos los discos</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz</h2>
+    <p>¿Cuál es el principal beneficio de configurar RAID0 por software?</p>
+    <ul>
+        <li>a) Reducción del tiempo de inactividad.</li>
+        <li>b) Aumento de la capacidad de almacenamiento.</li>
+        <li>c) Mejora de la seguridad de los datos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist</h2>
+    <ul>
+        <li>Verificar el estado de salud de los discos.</li>
+        <li>Realizar un respaldo completo del sistema antes de la configuración.</li>
+        <li>Monitorear el rendimiento y la salud del array RAID periódicamente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad práctica</h2>
+    <p>Configurar un array RAID0 por software en un sistema Linux utilizando tres discos adicionales.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Extensión de volúmenes: Aumentar el tamaño de un volumen existente.</li>
+        <li>Volúmenes distribuidos: Conjunto de discos presentados como un solo volumen.</li>
+        <li>RAID0 por software: Configuración RAID0 implementada en el software del sistema operativo.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa general</h2>
+    <p>Seguridad de la información y protección contra fallos:</p>
+    <ul>
+        <li>Realizar respaldos periódicos.</li>
+        <li>Monitorear el rendimiento y la salud del sistema.</li>
+        <li>Implementar políticas de recuperación ante desastres.</li>
+    </ul>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0369 Implantación de sistemas operativos.md · Administración y aseguramiento de la información: → Extensión de un volumen. Volúmenes distribuidos. RAID0 por software.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-04 21:59:27</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

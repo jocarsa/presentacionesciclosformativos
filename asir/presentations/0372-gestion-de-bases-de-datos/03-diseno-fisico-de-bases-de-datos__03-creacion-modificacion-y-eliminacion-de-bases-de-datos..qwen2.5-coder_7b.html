@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Creación, modificación y eliminación de bases de datos. — Diseño físico de bases de datos: — 0372 Gestión de bases de datos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="creacion-modificacion-y-eliminacion-de-bases-de-datos.">
+<h1>Creación, modificación y eliminación de bases de datos.</h1>
+<p><strong>Unidad:</strong> Diseño físico de bases de datos:<br><strong>Documento:</strong> 0372 Gestión de bases de datos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Diseño físico de bases de datos</h1>
+    <p><strong>Objetivo:</strong> Comprender los procesos de creación, modificación y eliminación de bases de datos.</p>
+</section>
+
+<section class="slide">
+    <h2>Creación de Bases de Datos</h2>
+    <ul>
+        <li>Especificar el nombre de la base de datos.</li>
+        <li>Definir las características del motor de base de datos (SQL, NoSQL, etc.).</li>
+        <li>Establecer los permisos y usuarios.</li>
+        <li>Cargar datos iniciales si es necesario.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Creación de Base de Datos</h2>
+    <pre><code>
+CREATE DATABASE MiBaseDeDatos;
+USE MiBaseDeDatos;
+CREATE TABLE Usuarios (
+    ID INT PRIMARY KEY,
+    Nombre VARCHAR(100),
+    Email VARCHAR(100)
+);
+INSERT INTO Usuarios (ID, Nombre, Email) VALUES (1, 'Juan', 'juan@example.com');
+    </code></pre>
+</section>
+
+<section class="slide">
+    <h2>Modificación de Bases de Datos</h2>
+    <ul>
+        <li>Añadir nuevas tablas.</li>
+        <li>Modificar estructura existente (campos, índices).</li>
+        <li>Agregar o eliminar usuarios y permisos.</li>
+        <li>Realizar copias de seguridad periódicas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Modificación de Base de Datos</h2>
+    <pre><code>
+ALTER TABLE Usuarios ADD COLUMN Edad INT;
+CREATE INDEX idx_email ON Usuarios(Email);
+GRANT SELECT, INSERT ON MiBaseDeDatos TO 'usuario'@'localhost';
+    </code></pre>
+</section>
+
+<section class="slide">
+    <h2>Eliminación de Bases de Datos</h2>
+    <ul>
+        <li>Eliminar tablas.</li>
+        <li>Borrar completamente la base de datos.</li>
+        <li>Revertir cambios en caso de error.</li>
+        <li>Documentar todos los cambios realizados.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Eliminación de Base de Datos</h2>
+    <pre><code>
+DROP TABLE Usuarios;
+DROP DATABASE MiBaseDeDatos;
+    </code></pre>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas en la Gestión de Bases de Datos</h2>
+    <ul>
+        <li>Seguridad: Proteger contra accesos no autorizados.</li>
+        <li>Mantenimiento: Realizar actualizaciones y optimizaciones periódicas.</li>
+        <li>Backup: Mantener copias de seguridad regulares.</li>
+        <li>Documentación: Registrar todos los cambios y procedimientos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en la Gestión de Bases de Datos</h2>
+    <ul>
+        <li>No realizar copias de seguridad.</li>
+        <li>No documentar cambios importantes.</li>
+        <li>No tener permisos adecuados.</li>
+        <li>No optimizar regularmente las bases de datos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: SQL vs NoSQL</h2>
+    <table>
+        <tr>
+            <th></th>
+            <th>SQL</th>
+            <th>NoSQL</th>
+        </tr>
+        <tr>
+            <td>Estructura de datos</td>
+            <td>Relacional (tablas)</td>
+            <td>No relacional (colecciones, documentos)</td>
+        </tr>
+        <tr>
+            <td>Escalabilidad</td>
+            <td>Vertical (hardware)</td>
+            <td>Horizontal (nodos adicionales)</td>
+        </tr>
+        <tr>
+            <td>Consistencia</td>
+            <td>ACID</td>
+            <td>CAP (Consistencia, Disponibilidad, Partición)</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Gestión de Bases de Datos</h2>
+    <p>¿Cuál es el comando SQL para eliminar una base de datos?</p>
+    <ol>
+        <li>DROP DATABASE MiBaseDeDatos;</li>
+        <li>DELETE DATABASE MiBaseDeDatos;</li>
+        <li>REMOVE DATABASE MiBaseDeDatos;</li>
+        <li>BORRAR DATABASE MiBaseDeDatos;</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Gestión de Bases de Datos</h2>
+    <ul>
+        <li>Crear base de datos con nombre y motor adecuado.</li>
+        <li>Añadir tablas y definir sus campos.</li>
+        <li>Establecer permisos y usuarios seguros.</li>
+        <li>Realizar copias de seguridad periódicas.</li>
+        <li>Mantener documentación actualizada.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Crear una Base de Datos Simples</h2>
+    <p>Crea una base de datos llamada "TiendaOnline" con las siguientes tablas:</p>
+    <ul>
+        <li>Productos (ID, Nombre, Precio)</li>
+        <li>Clientes (ID, Nombre, Email)</li>
+        <li>Ventas (ID, Fecha, Cliente_ID, Producto_ID)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Resumen: Creación, Modificación y Eliminación de Bases de Datos</h2>
+    <p>Se han aprendido los procesos básicos para gestionar una base de datos:</p>
+    <ul>
+        <li>Creación: Nombre, motor, usuarios.</li>
+        <li>Modificación: Añadir tablas, modificar estructura, permisos.</li>
+        <li>Eliminación: Tablas, base de datos completa.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa en la Gestión de Bases de Datos</h2>
+    <p>Es importante cumplir con las leyes de protección de datos (GDPR, CCPA, etc.) al gestionar bases de datos.</p>
+    <ul>
+        <li>Consentimiento explícito de los usuarios.</li>
+        <li>Seguridad de la información personal.</li>
+        <li>Acceso limitado a los datos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Preguntas y Respuestas</h2>
+    <p>¿Tienes alguna pregunta sobre la gestión de bases de datos?</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0372 Gestión de bases de datos.md · Diseño físico de bases de datos: → Creación, modificación y eliminación de bases de datos.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 02:22:48</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

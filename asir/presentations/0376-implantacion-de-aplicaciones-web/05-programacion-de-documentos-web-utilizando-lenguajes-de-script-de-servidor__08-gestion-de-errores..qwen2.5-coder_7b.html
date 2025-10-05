@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Gestión de errores. — Programación de documentos Web utilizando lenguajes de «script» de servidor: — 0376 Implantación de aplicaciones web.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="gestion-de-errores.">
+<h1>Gestión de errores.</h1>
+<p><strong>Unidad:</strong> Programación de documentos Web utilizando lenguajes de «script» de servidor:<br><strong>Documento:</strong> 0376 Implantación de aplicaciones web.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Gestión de errores en aplicaciones web</h1>
+    <p>Objetivo: Aprender a manejar y gestionar los errores que pueden surgir en las aplicaciones web.</p>
+</section>
+
+<section class="slide">
+    <h2>Definición de errores en aplicaciones web</h2>
+    <ul>
+        <li>Error 404: Página no encontrada</li>
+        <li>Error 500: Error interno del servidor</li>
+        <li>Error 403: Acceso denegado</li>
+        <li>Error 401: No autorizado</li>
+        <li>Error 408: Tiempo de espera excedido</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Tipos de errores comunes en aplicaciones web</h2>
+    <ul>
+        <li>Sintaxis incorrecta en el código</li>
+        <li>Bugs o fallos en la lógica del programa</li>
+        <li>Problemas de conexión a bases de datos</li>
+        <li>Errores relacionados con las solicitudes HTTP</li>
+        <li>Problemas de rendimiento y carga</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Manejo de errores en aplicaciones web</h2>
+    <p>Es crucial implementar un sistema robusto para detectar, diagnosticar y resolver los errores que pueden surgir en las aplicaciones web.</p>
+</section>
+
+<section class="slide">
+    <h2>Estrategias para gestionar errores</h2>
+    <ul>
+        <li>Implementación de logs detallados</li>
+        <li>Captura y registro de errores</li>
+        <li>Notificación automática a los equipos de desarrollo</li>
+        <li>Presentación amigable al usuario</li>
+        <li>Pruebas exhaustivas antes del lanzamiento</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de gestión de errores en</h2>
+    <pre><code>&lt;?
+try {
+    // Código que puede generar un error
+} catch (Exception $e) {
+    echo 'Error: ',  $e->getMessage(), "\n";
+}
+?&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Manejo de errores en</h2>
+    <p> ofrece la estructura `try...catch` para manejar errores.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de gestión de errores en</h2>
+    <pre><code>&lt;script&gt;
+try {
+    // Código que puede generar un error
+} catch (error) {
+    console.error('Error: ', error.message);
+}
+&lt;/script&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Pruebas de errores en aplicaciones web</h2>
+    <p>Es esencial realizar pruebas exhaustivas para identificar y resolver los errores antes del lanzamiento.</p>
+</section>
+
+<section class="slide">
+    <h2>Técnicas de prueba de errores</h2>
+    <ul>
+        <li>Pruebas unitarias</li>
+        <li>Pruebas de integración</li>
+        <li>Pruebas funcionales</li>
+        <li>Pruebas de carga y rendimiento</li>
+        <li>Pruebas de seguridad</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas para gestionar errores</h2>
+    <ul>
+        <li>Proporcionar mensajes de error claros y amigables</li>
+        <li>No exponer detalles técnicos del sistema en los mensajes de error</li>
+        <li>Implementar un sistema de monitoreo continuo</li>
+        <li>Documentar todos los errores y soluciones implementadas</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Caso práctico: Gestión de errores en una aplicación web</h2>
+    <p>Supongamos que tenemos una aplicación web que muestra un error 404 cuando se intenta acceder a una página inexistente.</p>
+</section>
+
+<section class="slide">
+    <h2>Caso práctico: Gestión de errores en una aplicación web</h2>
+    <ul>
+        <li>Implementamos logs detallados para identificar el origen del error</li>
+        <li>Notificamos automáticamente a los equipos de desarrollo sobre el error</li>
+        <li>Mostramos un mensaje amigable al usuario indicando que la página no existe</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: Gestión de errores en aplicaciones web</h2>
+    <p>¿Cuál es el propósito del manejo de errores en las aplicaciones web?</p>
+    <ol>
+        <li>Detectar y resolver problemas técnicos</li>
+        <li>Proporcionar una experiencia de usuario mejorada</li>
+        <li>Aumentar la velocidad de carga de la aplicación</li>
+        <li>Todas las anteriores</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: Gestión de errores en aplicaciones web</h2>
+    <p>¿Cuál es una buena práctica para gestionar errores en?</p>
+    <ol>
+        <li>Capturar y registrar los errores</li>
+        <li>No hacer nada si ocurre un error</li>
+        <li>Mostrar el mensaje de error completo al usuario</li>
+        <li>Ignorar los errores</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist para gestionar errores en aplicaciones web</h2>
+    <ul>
+        <li>Implementar logs detallados</li>
+        <li>Capturar y registrar errores</li>
+        <li>Notificar automáticamente a los equipos de desarrollo</li>
+        <li>Presentar mensajes amigables al usuario</li>
+        <li>Realizar pruebas exhaustivas</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Identificación y gestión de errores en una aplicación web</h2>
+    <p>Analiza el siguiente código y corrige los posibles errores.</p>
+    <pre><code>&lt;?
+$numero = 10;
+echo $numero / 0;
+?&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Identificación y gestión de errores en una aplicación web</h2>
+    <p>Corrección del código:</p>
+    <pre><code>&lt;?
+$numero = 10;
+if ($numero != 0) {
+    echo $numero / 0;
+} else {
+    echo 'Error: División porero';
+}
+?&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <p>La gestión de errores es un aspecto crucial en el desarrollo de aplicaciones web. Es importante implementar estrategias efectivas para detectar, diagnosticar y resolver los errores que pueden surgir.</p>
+</section>
+
+<section class="slide">
+    <h2>Normativa general sobre gestión de errores en aplicaciones web</h2>
+    <ul>
+        <li>Reglamento General de Protección de Datos (RGPD)</li>
+        <li>Leyes de privacidad y seguridad de la información</li>
+        <li>Normativas específicas del sector (por ejemplo, PCI DSS para aplicaciones financieras)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Preguntas frecuentes sobre gestión de errores en aplicaciones web</h2>
+    <ol>
+        <li><strong>¿Qué es el manejo de errores en las aplicaciones web?</strong></li>
+        <li><strong>¿Cuáles son los tipos comunes de errores en aplicaciones web?</strong></li>
+        <li><strong>¿Cómo se puede gestionar un error 404 en una aplicación web?</strong></li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Preguntas frecuentes sobre gestión de errores en aplicaciones web</h2>
+    <ol start="4">
+        <li><strong>¿Qué son las pruebas de errores en aplicaciones web?</strong></li>
+        <li><strong>¿Cuáles son las mejores prácticas para gestionar errores en?</strong></li>
+        <li><strong>¿Cómo se puede implementar un sistema de monitoreo continuo para la gestión de errores?</strong></li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Recursos adicionales</h2>
+    <ul>
+        <li><a href="https://developer.mozilla.org/es/docs/Web//Guide/Manejo_de_errores">N Web Docs - Manejo de errores en</a></li>
+        <li><a href="https://www.w3schools.com/php/php_errors.asp">W3Schools - Errors</a></li>
+        <li><a href="https://docs.microsoft.com/es-es/aspnet/core/fundamentals/error-handling?view=aspnetcore-6.0">Microsoft Docs - Manejo de errores en ASP.NET Core</a></li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Gracias por su atención</h2>
+    <p>Preguntas o comentarios?</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0376 Implantación de aplicaciones web.md · Programación de documentos Web utilizando lenguajes de «script» de servidor: → Gestión de errores.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 08:22:50</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

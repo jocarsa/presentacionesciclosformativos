@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Inserción y extracción de información en XML. — Almacenamiento de información: — 0373 Lenguajes de marcas y sistemas de gestión de información.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="insercion-y-extraccion-de-informacion-en-xml.">
+<h1>Inserción y extracción de información en XML.</h1>
+<p><strong>Unidad:</strong> Almacenamiento de información:<br><strong>Documento:</strong> 0373 Lenguajes de marcas y sistemas de gestión de información.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+  <h2>Portada</h2>
+  <h1>Inserción y Extracción de Información en</h1>
+  <p>Objetivo: Comprender los métodos para insertar y extraer información en formatos.</p>
+</section>
+
+<section class="slide">
+  <h2>Introducción a</h2>
+  <ul>
+    <li> (eXtensible Markup Language) es un formato de texto que se utiliza para almacenar e interambiar datos.</li>
+    <li>Características: extensibilidad, independencia de software y plataforma, legibilidad humana.</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Estructura Básica de</h2>
+  <pre><code>&lt;? version="1.0" encoding="UTF-8"?&gt;
+&lt;libro&gt;
+  &lt;título&gt;El Quijote&lt;/título&gt;
+  &lt;autor&gt;Miguel deervantes&lt;/autor&gt;
+  &lt;año&gt;1605&lt;/año&gt;
+&lt;/libro&gt;</code></pre>
+</section>
+
+<section class="slide">
+  <h2>Inserción de Información en</h2>
+  <ul>
+    <li>Se puede insertar información utilizando lenguajes de programación como, o#.</li>
+    <li>Ejemplo con:</li>
+  </ul>
+  <pre><code>import.etree.ElementTree as ET
+
+root = ET.Element("libro")
+title = ET.SubElement(root, "título")
+title.text = "El Quijote"
+author = ET.SubElement(root, "autor")
+author.text = "Miguel deervantes"
+year = ET.SubElement(root, "año")
+year.text = "1605"
+
+tree = ET.ElementTree(root)
+tree.write("libro.xml")</code></pre>
+</section>
+
+<section class="slide">
+  <h2>Extracción de Información en</h2>
+  <ul>
+    <li>Se puede extraer información utilizando lenguajes como XPath o XSLT.</li>
+    <li>Ejemplo con XPath:</li>
+  </ul>
+  <pre><code>import.etree.ElementTree as ET
+
+tree = ET.parse("libro.xml")
+root = tree.getroot()
+
+title = root.find("título").text
+author = root.find("autor").text
+year = root.find("año").text
+
+print(f"Título: {title}, Autor: {author}, Año: {year}")</code></pre>
+</section>
+
+<section class="slide">
+  <h2>Tipos de Datos en</h2>
+  <ul>
+    <li>String (texto)</li>
+    <li>Integer (número entero)</li>
+    <li>Float (número decimal)</li>
+    <li>Date (fecha)</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Validación de</h2>
+  <ul>
+    <li>Se puede validar el contenido de un archivo utilizando DTD (Document Type Definition) o XSD ( Schema Definition).</li>
+    <li>Ejemplo con DTD:</li>
+  </ul>
+  <pre><code>&lt;!ELEMENT libro (título, autor, año)&gt;
+&lt;!ELEMENT título (#PCDATA)&gt;
+&lt;!ELEMENT autor (#PCDATA)&gt;
+&lt;!ELEMENT año (#PCDATA)&gt;</code></pre>
+</section>
+
+<section class="slide">
+  <h2>Mini-Quiz</h2>
+  <p>¿Cuál de los siguientes no es un tipo de dato en?</p>
+  <ul>
+    <li>a) String</li>
+    <li>b) Integer</li>
+    <li>c) Boolean</li>
+    <li>d) Float</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Checklist de Buenas Prácticas</h2>
+  <ul>
+    <li>Usar etiquetas descriptivas y significativas.</li>
+    <li>Mantener una estructura jerárquica clara.</li>
+    <li>Validar el contenido del archivo.</li>
+    <li>Comentar el código cuando sea necesario.</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Ejemplos de Errores Comunes</h2>
+  <ul>
+    <li>No cerrar correctamente las etiquetas.</li>
+    <li>Uso incorrecto de caracteres especiales.</li>
+    <li>Falta de validación del contenido.</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Comparativa con otros formatos</h2>
+  <table>
+    <tr>
+      <th>Formato</th>
+      <th>Características</th>
+    </tr>
+    <tr>
+      <td></td>
+      <td>Formato ligero, fácil de leer y escribir.</td>
+    </tr>
+    <tr>
+      <td>CSV</td>
+      <td>Formato simple para tablas de datos.</td>
+    </tr>
+  </table>
+</section>
+
+<section class="slide">
+  <h2>Normativa Relacionada</h2>
+  <ul>
+    <li>W3 Schema (XSD)</li>
+    <li>DTD (Document Type Definition)</li>
+    <li> Namespaces</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Actividad Práctica</h2>
+  <p>Crea un archivo con información sobre tu libro favorito y realiza una consulta para extraer el título y el autor.</p>
+</section>
+
+<section class="slide">
+  <h2>Resumen</h2>
+  <ul>
+    <li> es un formato de texto utilizado para almacenar e interambiar datos.</li>
+    <li>Inserción y extracción de información se pueden realizar utilizando lenguajes como o XPath.</li>
+    <li>Buenas prácticas incluyen la utilización de etiquetas descriptivas, validación del contenido y comentarios en el código.</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Preguntas Finales</h2>
+  <p>¿Tienes alguna pregunta sobre inserción y extracción de información en?</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0373 Lenguajes de marcas y sistemas de gestión de información.md · Almacenamiento de información: → Inserción y extracción de información en XML.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 04:29:30</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

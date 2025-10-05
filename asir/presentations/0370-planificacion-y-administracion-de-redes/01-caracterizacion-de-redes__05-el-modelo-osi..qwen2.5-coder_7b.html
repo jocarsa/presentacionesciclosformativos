@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>El modelo OSI. — Caracterización de redes: — 0370 Planificación y administración de redes.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="el-modelo-osi.">
+<h1>El modelo OSI.</h1>
+<p><strong>Unidad:</strong> Caracterización de redes:<br><strong>Documento:</strong> 0370 Planificación y administración de redes.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>El modelo OSI: Caracterización de redes</h1>
+    <p>Objetivo: Comprender la estructura y funcionalidades del modelo OSI en el diseño de redes.</p>
+</section>
+
+<section class="slide">
+    <h2>Introducción al Modelo OSI</h2>
+    <ul>
+        <li>Modelo OSI (Open Systems Interconnection) es un estándar para la comunicación entre sistemas informáticos.</li>
+        <li>Fue propuesto por la Agencia Internacional de Normalización (ISO) en 1984.</li>
+        <li>Define una arquitectura de red que divide las funciones del sistema en siete capas interconectadas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Estructura del Modelo OSI</h2>
+    <img src="modelosi.png" alt="Modelo OSI">
+    <p>Las capas son: Aplicación, Presentación, Sesión, Transporte, Red, Enlace de datos y Física.</p>
+</section>
+
+<section class="slide">
+    <h2>Capa 1: Aplicación</h2>
+    <ul>
+        <li>Interfaz directa con los usuarios finales.</li>
+        <li>Ejemplos: Protocolos de correo electrónico, FTP, HTTP.</li>
+        <li>Proporciona servicios como la autenticación y el control de acceso.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Capa 2: Presentación</h2>
+    <ul>
+        <li>Formato, encriptación y compresión de datos.</li>
+        <li>Ejemplos: SSL/TLS para la seguridad web, JPEG para imágenes.</li>
+        <li>Se encarga de convertir los datos entre el formato interno del sistema y el formato que se enviará a través de la red.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Capa 3: Sesión</h2>
+    <ul>
+        <li>Establece, mantiene y termina las sesiones entre los sistemas.</li>
+        <li>Ejemplos: SSH para la conexión segura, FTP para el interambio de archivos.</li>
+        <li>Gestiona la autenticación, autorización y sincronización de datos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Capa 4: Transporte</h2>
+    <ul>
+        <li>Especifica cómo se envían los datos de una capa a otra.</li>
+        <li>Ejemplos: TCP para transferencias confiables, UDP para transmisiones rápidas.</li>
+        <li>Gestiona la segmentación y reconstrucción de paquetes, así como el control de flujo y errores.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Capa 5: Red</h2>
+    <ul>
+        <li>Encapsula los datos en paquetes y los envía a través de la red.</li>
+        <li>Ejemplos: IP para ruteo, ICMP para errores.</li>
+        <li>Gestiona el enrutamiento de paquetes entre diferentes redes.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Capa 6: Enlace de datos</h2>
+    <ul>
+        <li>Especifica cómo se envían los bits a través del medio físico.</li>
+        <li>Ejemplos: Ethernet, Wi-Fi.</li>
+        <li>Gestiona la transmisión de bits y la detección de errores.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Capa 7: Física</h2>
+    <ul>
+        <li>Especifica los medios físicos y las señales que se utilizan para la transmisión de datos.</li>
+        <li>Ejemplos:ables Ethernet, señales radiofrecuencia.</li>
+        <li>Gestiona el hardware y las interfaces de red.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparación de Protocolos</h2>
+    <table>
+        <tr>
+            <th>Capa OSI</th>
+            <th>TCP/IP</th>
+        </tr>
+        <tr>
+            <td>Aplicación</td>
+            <td>HTTP, FTP, SMTP</td>
+        </tr>
+        <tr>
+            <td>Presentación</td>
+            <td>SSL/TLS, JPEG</td>
+        </tr>
+        <tr>
+            <td>Sesión</td>
+            <td>SSH, FTP</td>
+        </tr>
+        <tr>
+            <td>Transporte</td>
+            <td>TCP, UDP</td>
+        </tr>
+        <tr>
+            <td>Red</td>
+            <td>IP, ICMP</td>
+        </tr>
+        <tr>
+            <td>Enlace de datos</td>
+            <td>Ethernet, Wi-Fi</td>
+        </tr>
+        <tr>
+            <td>Física</td>
+            <td>Cables Ethernet, señales radiofrecuencia</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz</h2>
+    <p>¿Cuál es la principal función de la capa de Aplicación?</p>
+    <ul>
+        <li>a) Enviar y recibir datos a través del medio físico.</li>
+        <li>b) Formatear, encriptar y compresionar los datos.</li>
+        <li>c) Establecer, mantener y terminar las sesiones entre sistemas.</li>
+        <li>d) Segmentar y reconstruir paquetes de datos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist</h2>
+    <ul>
+        <li>Comprender la estructura del Modelo OSI.</li>
+        <li>Distinguir las funciones principales de cada capa.</li>
+        <li>Comparar el Modelo OSI con otros modelos como TCP/IP.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad Práctica</h2>
+    <p>Realizar un diagrama del Modelo OSI y explicar la función de cada capa en una red local.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>El Modelo OSI es una estructura estándar para la comunicación entre sistemas informáticos.</li>
+        <li>Define siete capas interconectadas que realizan funciones específicas en el proceso de transmisión de datos.</li>
+        <li>Cada capa tiene un rol crucial en el funcionamiento de una red.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa y Reglamentos</h2>
+    <p>ISO/IE 7498-1:2015 es la norma internacional que define el Modelo OSI.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0370 Planificación y administración de redes.md · Caracterización de redes: → El modelo OSI.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-04 23:34:11</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

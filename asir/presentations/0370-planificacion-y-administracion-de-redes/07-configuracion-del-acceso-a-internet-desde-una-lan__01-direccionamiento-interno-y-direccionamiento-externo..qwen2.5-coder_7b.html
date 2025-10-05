@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Direccionamiento interno y direccionamiento externo. — Configuración del acceso a Internet desde una LAN: — 0370 Planificación y administración de redes.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="direccionamiento-interno-y-direccionamiento-externo.">
+<h1>Direccionamiento interno y direccionamiento externo.</h1>
+<p><strong>Unidad:</strong> Configuración del acceso a Internet desde una LAN:<br><strong>Documento:</strong> 0370 Planificación y administración de redes.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Dirección Interna y Externa</h2>
+    <p>La dirección interna se refiere a la asignación de direcciones IP dentro de una red local (LAN). La dirección externa, por otro lado, se refiere a la asignación de direcciones IP para el acceso a Internet.</p>
+</section>
+
+<section class="slide">
+    <h3>Dirección Interna</h3>
+    <ul>
+        <li>Usada dentro de una red local (LAN)</li>
+        <li>Ejemplos: 192.168.1.0/24, 172.16.0.0/12, 10.0.0.0/8</li>
+        <li>Proporciona identidad única dentro de la red local</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Dirección Externa</h3>
+    <ul>
+        <li>Usada para el acceso a Internet desde la LAN</li>
+        <li>Ejemplos: 203.0.113.1, 2001:db8::/32</li>
+        <li>Proporciona identidad única en la red global</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Diferencias Clave</h3>
+    <ul>
+        <li><strong>Dirección Interna:</strong> Única dentro de una LAN, no accesible desde Internet.</li>
+        <li><strong>Dirección Externa:</strong> Única en la red global, accesible desde Internet.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Ejemplo Práctico</h3>
+    <p>Una empresa tiene una LAN con IP 192.168.1.0/24 y desea acceder a Internet. Se asigna la dirección externa 203.0.113.1.</p>
+</section>
+
+<section class="slide">
+    <h3>Caso Real</h3>
+    <p>Una institución educativa utiliza direcciones internas como 172.16.0.0/12 para su red local y asigna la dirección externa 2001:db8::/32 para el acceso a Internet.</p>
+</section>
+
+<section class="slide">
+    <h3>Proceso de Asignación</h3>
+    <ol>
+        <li>Determinar la clase de red interna (A, B,)</li>
+        <li>Asignar una dirección IP dentro de esa clase</li>
+        <li>Obtener una dirección IP pública para el acceso a Internet</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h3>Buenas Prácticas</h3>
+    <ul>
+        <li>Usar direcciones privadas para la LAN (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16)</li>
+        <li>Obtener una dirección IP pública de un proveedor de servicios</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Errores Comunes</h3>
+    <ul>
+        <li>Usar direcciones públicas para la LAN interna</li>
+        <li>No obtener una dirección IP pública para el acceso a Internet</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Comparativa</h3>
+    <table>
+        <tr>
+            <th>Dirección Interna</th>
+            <th>Dirección Externa</th>
+        </tr>
+        <tr>
+            <td>Única dentro de la LAN</td>
+            <td>Única en la red global</td>
+        </tr>
+        <tr>
+            <td>No accesible desde Internet</td>
+            <td>Accesible desde Internet</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h3>Mini-Quiz</h3>
+    <p>¿Cuál es la dirección interna más común para una LAN de tamaño pequeño?</p>
+    <ul>
+        <li>A) 192.168.1.0/24</li>
+        <li>B) 172.16.0.0/12</li>
+        <li>C) 10.0.0.0/8</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Checklist</h3>
+    <ul>
+        <li>Determinar la clase de red interna</li>
+        <li>Asignar una dirección IP dentro de esa clase</li>
+        <li>Obtener una dirección IP pública para el acceso a Internet</li>
+        <li>Usar direcciones privadas para la LAN interna</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Actividad</h3>
+    <p>Asigne direcciones internas y externas a las siguientes redes:</p>
+    <ol>
+        <li>Una pequeña empresa con 20 usuarios</li>
+        <li>Un institución educativa con 500 estudiantes</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h3>Resumen</h3>
+    <ul>
+        <li>Dirección Interna: Única dentro de la LAN, no accesible desde Internet.</li>
+        <li>Dirección Externa: Única en la red global, accesible desde Internet.</li>
+        <li>Usar direcciones privadas para la LAN interna y obtener una dirección IP pública para el acceso a Internet.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Normativa General</h3>
+    <p>La normativa general establece que todas las redes deben utilizar direcciones IP válidas según los estándares IANA y que se debe obtener una dirección IP pública para el acceso a Internet.</p>
+</section>
+
+<section class="slide">
+    <h1>Dirección Interna y Externa</h1>
+    <p>Objetivo: Comprender la diferencia entre la dirección interna y la dirección externa en redes locales.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0370 Planificación y administración de redes.md · Configuración del acceso a Internet desde una LAN: → Direccionamiento interno y direccionamiento externo.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 01:27:58</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

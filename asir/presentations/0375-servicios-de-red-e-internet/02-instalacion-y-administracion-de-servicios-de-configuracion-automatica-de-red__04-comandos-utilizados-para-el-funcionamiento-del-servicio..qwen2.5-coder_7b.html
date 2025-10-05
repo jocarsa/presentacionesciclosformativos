@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Comandos utilizados para el funcionamiento del servicio. — Instalación y administración de servicios de configuración automática de red: — 0375 Servicios de red e Internet.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="comandos-utilizados-para-el-funcionamiento-del-servicio.">
+<h1>Comandos utilizados para el funcionamiento del servicio.</h1>
+<p><strong>Unidad:</strong> Instalación y administración de servicios de configuración automática de red:<br><strong>Documento:</strong> 0375 Servicios de red e Internet.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Instalación y administración de servicios de configuración automática de red</h1>
+    <p><strong>Objetivo:</strong> Comprender los comandos utilizados para el funcionamiento del servicio de configuración automática de red.</p>
+</section>
+
+<section class="slide">
+    <h2>Introducción a la Configuración Automática de Red</h2>
+    <p>La configuración automática de red permite que dispositivos se conecten y configuren automáticamente en una red, reduciendo el tiempo y los errores humanos.</p>
+</section>
+
+<section class="slide">
+    <h2>Comandos Básicos para la Configuración Automática de Red</h2>
+    <ul>
+        <li><code>ipconfig /all</code>: Muestra información detallada sobre todas las interfaces de red del sistema.</li>
+        <li><code>ping [dirección IP o nombre]</code>: Prueba la conectividad con otro dispositivo en la red.</li>
+        <li><code>tracert [dirección IP o nombre]</code>: Muestra el camino que un paquete de datos toma para llegar a su destino.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comandos Avanzados para la Configuración Automática de Red</h2>
+    <ul>
+        <li><code>net interface ipv4 set address name="[nombre interfaz]" static [dirección IP] [máscara subred] [puerta de enlace]</code>: Configura una dirección IP estática.</li>
+        <li><code>net interface ipv4 set dns name="[nombre interfaz]" static [dirección DNS]</code>: Configura un servidor DNS estático.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Configuración Automática de Red</h2>
+    <p>Para configurar una dirección IP estática en Windows:</p>
+    <pre><code>net interface ipv4 set address name="Ethernet" static 192.168.1.100 255.255.255.0 192.168.1.1</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico: Solución de Problemas de Conexión Red</h2>
+    <p>Si un dispositivo no puede conectarse a la red, se pueden usar comandos como <code>ping</code> y <code>tracert</code> para diagnosticar el problema.</p>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas en Configuración Automática de Red</h2>
+    <ul>
+        <li>Usar direcciones IP estáticas solo si es necesario.</li>
+        <li>Mantener actualizados los servidores DNS.</li>
+        <li>Verificar la configuración de puertas de enlace y máscaras subred.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en Configuración Automática de Red</h2>
+    <ul>
+        <li>Dirección IP incorrecta o fuera de rango.</li>
+        <li>Máscara subred incompatibles con la red.</li>
+        <li>Servidor DNS no accesible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa entre Configuración Automática y Manual</h2>
+    <table>
+        <tr>
+            <th>Configuración Automática</th>
+            <th>Configuración Manual</th>
+        </tr>
+        <tr>
+            <td>Rápida y eficiente.</td>
+            <td>Más detallada pero más lenta.</td>
+        </tr>
+        <tr>
+            <td>Potencialmente menos personalizable.</td>
+            <td>Permite configuraciones muy específicas.</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Comandos de Configuración Automática de Red</h2>
+    <p>¿Cuál comando se usa para establecer una dirección IP estática en Windows?</p>
+    <ol>
+        <li><code>ipconfig /all</code></li>
+        <li><code>net interface ipv4 set address name="[nombre interfaz]" static [dirección IP] [máscara subred] [puerta de enlace]</code></li>
+        <li><code>ping [dirección IP o nombre]</code></li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist para la Configuración Automática de Red</h2>
+    <ul>
+        <li>Verificar la conectividad con el servidor DNS.</li>
+        <li>Asegurar que la dirección IP está dentro del rango correcto.</li>
+        <li>Comprobar que la máscara subred es compatible con la red.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Práctica de Configuración Automática de Red</h2>
+    <p>Configura una dirección IP estática en tu dispositivo y verifica su configuración usando los comandos aprendidos.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Los comandos como <code>ipconfig</code>, <code>ping</code>, y <code>tracert</code> son esenciales para la configuración automática de red.</li>
+        <li>Se pueden usar tanto configuraciones automáticas como manuales, dependiendo del caso.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa y Reglamentos Relevantes</h2>
+    <p>La normativa sobre seguridad en redes debe ser cumplida al realizar cualquier configuración automática de red.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0375 Servicios de red e Internet.md · Instalación y administración de servicios de configuración automática de red: → Comandos utilizados para el funcionamiento del servicio.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 06:01:16</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

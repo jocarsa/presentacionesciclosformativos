@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>La subdivisión de redes y el uso de máscaras de longitud variable (VLMs). — Configuración y administración de protocolos dinámicos: — 0370 Planificación y administración de redes.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="la-subdivision-de-redes-y-el-uso-de-mascaras-de-longitud-variable-vlms-.">
+<h1>La subdivisión de redes y el uso de máscaras de longitud variable (VLMs).</h1>
+<p><strong>Unidad:</strong> Configuración y administración de protocolos dinámicos:<br><strong>Documento:</strong> 0370 Planificación y administración de redes.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Configuración y administración de protocolos dinámicos</h1>
+    <p><strong>Objetivo:</strong> Comprender la subdivisión de redes y el uso de máscaras de longitud variable (VLMs).</p>
+</section>
+
+<section class="slide">
+    <h2>Subdivisión de Redes</h2>
+    <p>La subdivisión de redes permite organizar una red en segmentos más pequeños, mejorando la gestión y el rendimiento.</p>
+</section>
+
+<section class="slide">
+    <h2>Máscaras de Longitud Variable (VLMs)</h2>
+    <p>VLMs son máscaras de subred que permiten asignar diferentes tamaños a las redes, mejorando la eficiencia en el uso de direcciones IP.</p>
+</section>
+
+<section class="slide">
+    <h2>Beneficios de VLMs</h2>
+    <ul>
+        <li>Eficiencia en el uso de IPs</li>
+        <li>Mejor gestión de la red</li>
+        <li>Facilita la escalabilidad</li>
+        <li>Reducción del desperdicio de direcciones IP</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo Práctico</h2>
+    <p><strong>Red principal:</strong> 192.168.0.0/16</p>
+    <p><strong>Subredes secundarias:</strong> 192.168.1.0/24, 192.168.2.0/25, 192.168.3.0/26</p>
+</section>
+
+<section class="slide">
+    <h2>Cálculo de Subredes</h2>
+    <p>Para calcular subredes VLMs, se utilizan máscaras binarias y operaciones bit a bit.</p>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas</h2>
+    <ul>
+        <li>Asignar suficientemente grandes máscaras para evitar subredes muy pequeñas</li>
+        <li>No asignar subredes demasiado grandes que puedan no ser utilizadas completamente</li>
+        <li>Mantener una jerarquía clara de redes y subredes</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes</h2>
+    <ul>
+        <li>Asignar máscaras demasiado pequeñas, lo que limita la capacidad de la red</li>
+        <li>No asignar suficientemente grandes máscaras, desperdiciando direcciones IP</li>
+        <li>Mixtar máscaras fijas y variables sin planificación adecuada</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa con Máscaras Fijas</h2>
+    <p>VLMs ofrecen más flexibilidad que las máscaras fijas, pero requieren un conocimiento adicional para su configuración.</p>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz</h2>
+    <p><strong>Pregunta:</strong> ¿Cuál es la ventaja principal de usar máscaras de longitud variable en lugar de máscaras fijas?</p>
+    <ul>
+        <li>Aumentar el rendimiento de la red</li>
+        <li>Eficiencia en el uso de direcciones IP</li>
+        <li>Mejor gestión de la red</li>
+        <li>Facilitar la escalabilidad</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist</h2>
+    <ul>
+        <li>Identificar el tamaño necesario para cada subred</li>
+        <li>Calcular las máscaras binarias y sus representaciones en notación CIDR</li>
+        <li>Asignar direcciones IP a los dispositivos de la red</li>
+        <li>Verificar que todas las direcciones estén dentro del rango correcto</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad Práctica</h2>
+    <p>Diseña una red VLM con las siguientes subredes: 10.0.0.0/16, 10.0.1.0/24, 10.0.2.0/25.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <p>La subdivisión de redes y el uso de máscaras de longitud variable (VLMs) son herramientas esenciales para la administración eficiente de las redes modernas.</p>
+</section>
+
+<section class="slide">
+    <h2>Normativa General</h2>
+    <p>Seguir normativas como RFC 1918 y RFC 3018 para asignar direcciones IP en redes privadas.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0370 Planificación y administración de redes.md · Configuración y administración de protocolos dinámicos: → La subdivisión de redes y el uso de máscaras de longitud variable (VLMs).</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 00:47:57</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Herramientas de tratamiento y almacenamiento de información en formato XML. — Almacenamiento de información: — 0373 Lenguajes de marcas y sistemas de gestión de información.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="herramientas-de-tratamiento-y-almacenamiento-de-informacion-en-formato-xml.">
+<h1>Herramientas de tratamiento y almacenamiento de información en formato XML.</h1>
+<p><strong>Unidad:</strong> Almacenamiento de información:<br><strong>Documento:</strong> 0373 Lenguajes de marcas y sistemas de gestión de información.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Herramientas de tratamiento y almacenamiento de información en formato</h2>
+    <p>Objetivo: Comprender los principios básicos de la representación, procesamiento y almacenamiento de datos en formato.</p>
+</section>
+
+<section class="slide">
+    <h3>¿Qué es?</h3>
+    <ul>
+        <li>Lenguaje de marcado extensible (eXtensible Markup Language)</li>
+        <li>Formato de texto que permite la codificación de datos estructurados</li>
+        <li>Independiente del software o hardware utilizado para su creación</li>
+        <li>Facilita el interambio de datos entre sistemas diferentes</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Estructura básica de un documento</h3>
+    <pre><code>&lt;? version="1.0" encoding="UTF-8"?&gt;
+&lt;libro&gt;
+    &lt;título&gt;El Quijote&lt;/título&gt;
+    &lt;autor&gt;Miguel deervantes Saavedra&lt;/autor&gt;
+    &lt;año&gt;1605&lt;/año&gt;
+&lt;/libro&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h3>Características principales de</h3>
+    <ul>
+        <li>Estructurado: datos organizados en una jerarquía</li>
+        <li>Auto-descriptivo: etiquetas que describen el contenido</li>
+        <li>Heredable: permite la creación de subconjuntos de datos</li>
+        <li>Extensible: se pueden definir nuevos elementos y atributos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Tipos de procesamiento</h3>
+    <ul>
+        <li>Análisis sintáctico: verificación de la estructura del documento</li>
+        <li>Procesamiento semántico: interpretación del contenido</li>
+        <li>XSLT (Extensible Stylesheet Language Transformations): transformación de documentos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Herramientas populares para el procesamiento de</h3>
+    <ul>
+        <li>Apache Xerces: biblioteca para análisis y generación de</li>
+        <li>SAX (Simple API for): modelo de análisis basado en eventos</li>
+        <li>DOM (Document Object Model): representación del documento como un árbol</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Ejemplo práctico: Procesamiento de datos con</h3>
+    <pre><code>import.etree.ElementTree as ET
+
+tree = ET.parse('libros.xml')
+root = tree.getroot()
+
+for libro in root.findall('libro'):
+    titulo = libro.find('título').text
+    autor = libro.find('autor').text
+    año = libro.find('año').text
+    print(f'Título: {titulo}, Autor: {autor}, Año: {año}')</code></pre>
+</section>
+
+<section class="slide">
+    <h3>Almacenamiento de en bases de datos</h3>
+    <ul>
+        <li>Relacionales: almacenamiento en tablas con columnas y filas</li>
+        <li>No relacionales: almacenamiento en documentos o BSON</li>
+        <li>Bases de datos orientadas a documentos: MongoDB, CouchDB</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Normativa y estándares</h3>
+    <ul>
+        <li>DTD (Document Type Definition): definición de la estructura del documento</li>
+        <li>XSD ( Schema Definition): definición formal de los tipos de datos y la estructura del documento</li>
+        <li>Schematron: lenguaje para validar el contenido del documento</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Mini-quiz: ¿Qué es?</h3>
+    <p>¿Cuál de las siguientes opciones no es una característica principal de?</p>
+    <ol>
+        <li>Estructurado</li>
+        <li>Auto-descriptivo</li>
+        <li>Heredable</li>
+        <li>Dependiente del software utilizado para su creación</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h3>Checklist: Consideraciones al trabajar con</h3>
+    <ul>
+        <li>Definir una estructura clara y coherente</li>
+        <li>Validar el contenido contra un esquema o DTD</li>
+        <li>Utilizar herramientas de procesamiento adecuadas</li>
+        <li>Considerar la seguridad al almacenar datos sensibles</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Actividad: Creación de un documento</h3>
+    <p>Crea un documento que represente una lista de contactos con los siguientes campos: nombre, apellido y teléfono.</p>
+</section>
+
+<section class="slide">
+    <h3>Resumen: Herramientas de tratamiento y almacenamiento de información en formato</h3>
+    <ul>
+        <li> es un lenguaje de marcado extensible para representar datos estructurados</li>
+        <li>Características principales: estructurado, auto-descriptivo, heredable, extensible</li>
+        <li>Herramientas populares: Xerces, SAX, DOM</li>
+        <li>Almacenamiento en bases de datos relacionales o no relacionales</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Errores comunes al trabajar con</h3>
+    <ul>
+        <li>Omisión de etiquetas deierre</li>
+        <li>Uso incorrecto de caracteres especiales</li>
+        <li>No validación del contenido contra un esquema o DTD</li>
+        <li>Procesamiento incorrecto con herramientas inadecuadas</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Comparativa: vs.</h3>
+    <table>
+        <tr>
+            <th>Característica</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <td>Estructura</td>
+            <td>Etiquetas anidadas y atributos</td>
+            <td>Objetos y arrays</td>
+        </tr>
+        <tr>
+            <td>Legibilidad</td>
+            <td>Buena legibilidad humana</td>
+            <td>Más compacto, menos legible para humanos</td>
+        </tr>
+        <tr>
+            <td>Validación</td>
+            <td>Sí (con DTD o XSD)</td>
+            <td>No (sin validación adicional)</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h3>Recursos adicionales</h3>
+    <ul>
+        <li><a href="https://www.w3schools.com/xml/">W3Schools Tutorial</a></li>
+        <li><a href="https://docs.python.org/3/library/xml.etree.ElementTree.html"> ElementTree Documentation</a></li>
+        <li><a href="https://www.mongodb.com/json-schema-validation">MongoDB Schema Validation</a></li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h1>Almacenamiento de información</h1>
+    <p>Objetivo: Comprender los métodos y herramientas utilizados para almacenar y gestionar la información en sistemas digitales.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0373 Lenguajes de marcas y sistemas de gestión de información.md · Almacenamiento de información: → Herramientas de tratamiento y almacenamiento de información en formato XML.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 04:34:08</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Utilización de espacios de nombres en XML. — Reconocimiento de las características de lenguajes de marcas: — 0373 Lenguajes de marcas y sistemas de gestión de información.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="utilizacion-de-espacios-de-nombres-en-xml.">
+<h1>Utilización de espacios de nombres en XML.</h1>
+<p><strong>Unidad:</strong> Reconocimiento de las características de lenguajes de marcas:<br><strong>Documento:</strong> 0373 Lenguajes de marcas y sistemas de gestión de información.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Reconocimiento de las características de lenguajes de marcas</h1>
+    <p>Objetivo: Comprender la utilización de espacios de nombres en.</p>
+</section>
+
+<section class="slide">
+    <h2>¿Qué son los espacios de nombres?</h2>
+    <p>Los espacios de nombres (namespaces) en permiten evitar conflictos entre elementos y atributos con el mismo nombre pero definidos en diferentes partes del documento.</p>
+</section>
+
+<section class="slide">
+    <h2>Estructura básica de un espacio de nombres</h2>
+    <ul>
+        <li>URI (Uniform Resource Identifier): Identifica de manera única el espacio de nombres.</li>
+        <li>Prefijo: Nombre corto que se usa para referirse al espacio de nombres en el documento.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de declaración de un espacio de nombres</h2>
+    <pre><code>&lt;? version="1.0" encoding="UTF-8"?&gt;
+&lt;libro xmlns:dc="http://purl.org/dc/elements/1.1/"&gt;
+    &lt;dc:title&gt;El Quijote&lt;/dc:title&gt;
+    &lt;dc:author&gt;Miguel deervantes&lt;/dc:author&gt;
+&lt;/libro&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Uso de espacios de nombres en elementos y atributos</h2>
+    <ul>
+        <li>Elementos: &lt;dc:title&gt;</li>
+        <li>Atributos: dc:type="libro"</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Caso práctico: Documento con espacios de nombres</h2>
+    <pre><code>&lt;? version="1.0" encoding="UTF-8"?&gt;
+&lt;biblioteca xmlns:bib="http://www.example.com/biblioteca"&gt;
+    &lt;bib:libro&gt;
+        &lt;bib:título&gt;El Quijote&lt;/bib:título&gt;
+        &lt;bib:autores&gt;
+            &lt;bib:autor&gt;Miguel deervantes&lt;/bib:autor&gt;
+        &lt;/bib:autores&gt;
+    &lt;/bib:libro&gt;
+&lt;/biblioteca&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Beneficios del uso de espacios de nombres</h2>
+    <ul>
+        <li>Evita conflictos entre elementos y atributos.</li>
+        <li>Mantiene la claridad y estructura del documento.</li>
+        <li>Facilita la interoperabilidad entre diferentes sistemas y aplicaciones.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de conflicto sin espacios de nombres</h2>
+    <pre><code>&lt;? version="1.0" encoding="UTF-8"?&gt;
+&lt;libro&gt;
+    &lt;título&gt;El Quijote&lt;/título&gt;
+    &lt;autor&gt;Miguel deervantes&lt;/autor&gt;
+&lt;/libro&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de conflicto con espacios de nombres</h2>
+    <pre><code>&lt;? version="1.0" encoding="UTF-8"?&gt;
+&lt;biblioteca&gt;
+    &lt;libro&gt;
+        &lt;título&gt;El Quijote&lt;/título&gt;
+        &lt;autor&gt;Miguel deervantes&lt;/autor&gt;
+    &lt;/libro&gt;
+    &lt;libro&gt;
+        &lt;título&gt;Don Quijote&lt;/título&gt;
+        &lt;autor&gt;Miguel deervantes&lt;/autor&gt;
+    &lt;/libro&gt;
+&lt;/biblioteca&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: Identificación de espacios de nombres</h2>
+    <p>¿Cuál es el espacio de nombres utilizado en el siguiente fragmento?</p>
+    <pre><code>&lt;? version="1.0" encoding="UTF-8"?&gt;
+&lt;biblioteca xmlns:bib="http://www.example.com/biblioteca"&gt;
+    &lt;bib:libro&gt;
+        &lt;bib:título&gt;El Quijote&lt;/bib:título&gt;
+        &lt;bib:autores&gt;
+            &lt;bib:autor&gt;Miguel deervantes&lt;/bib:autor&gt;
+        &lt;/bib:autores&gt;
+    &lt;/bib:libro&gt;
+&lt;/biblioteca&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Respuesta del mini-quiz</h2>
+    <p>El espacio de nombres utilizado es "http://www.example.com/biblioteca".</p>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas en el uso de espacios de nombres</h2>
+    <ul>
+        <li>Usar URIs que sean únicas y persistentes.</li>
+        <li>Elegir prefijos cortos y descriptivos.</li>
+        <li>Mantener la consistencia en la declaración de espacios de nombres.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes al usar espacios de nombres</h2>
+    <ul>
+        <li>No declarar el espacio de nombres correctamente.</li>
+        <li>Usar prefijos incorrectamente o repetirlos innecesariamente.</li>
+        <li>No distinguir entre elementos y atributos del mismo nombre pero en diferentes espacios de nombres.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: Espacios de nombres vs. Prefijos sin espacios de nombres</h2>
+    <table>
+        <tr>
+            <th>Espacios de nombres</th>
+            <th>Prefijos sin espacios de nombres</th>
+        </tr>
+        <tr>
+            <td>Evita conflictos entre elementos y atributos.</td>
+            <td>Puede causar conflictos si hay elementos o atributos con el mismo nombre.</td>
+        </tr>
+        <tr>
+            <td>Mantiene la claridad y estructura del documento.</td>
+            <td>Puede hacer que el documento sea más confuso sin espacios de nombres.</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Verificación de los espacios de nombres en un documento</h2>
+    <ul>
+        <li>Verificar la declaración del espacio de nombres en la raíz del documento.</li>
+        <li>Asegurarse de que todos los elementos y atributos usen el prefijo correcto.</li>
+        <li>Comprobar que no haya conflictos entre elementos o atributos del mismo nombre pero en diferentes espacios de nombres.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Crear un documento con espacios de nombres</h2>
+    <p>Crea un documento que represente una biblioteca, utilizando espacios de nombres para distinguir entre diferentes tipos de elementos (libros, autores, títulos, etc.).</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Los espacios de nombres en ayudan a evitar conflictos y mejorar la claridad del documento.</li>
+        <li>Son declarados con una URI y un prefijo.</li>
+        <li>Se utilizan para distinguir elementos y atributos del mismo nombre pero definidos en diferentes partes del documento.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa</h2>
+    <p>La normativa ( 1.0, Schema) establece las reglas para el uso de espacios de nombres y su declaración en documentos.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0373 Lenguajes de marcas y sistemas de gestión de información.md · Reconocimiento de las características de lenguajes de marcas: → Utilización de espacios de nombres en XML.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 02:51:44</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

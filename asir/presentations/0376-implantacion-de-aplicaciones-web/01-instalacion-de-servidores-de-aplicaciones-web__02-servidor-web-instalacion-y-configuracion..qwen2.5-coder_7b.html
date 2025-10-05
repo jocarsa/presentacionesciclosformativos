@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Servidor Web: instalación y configuración. — Instalación de servidores de aplicaciones Web: — 0376 Implantación de aplicaciones web.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="servidor-web-instalacion-y-configuracion.">
+<h1>Servidor Web: instalación y configuración.</h1>
+<p><strong>Unidad:</strong> Instalación de servidores de aplicaciones Web:<br><strong>Documento:</strong> 0376 Implantación de aplicaciones web.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Instalación y Configuración de Servidores Web</h1>
+    <p>Objetivo: Aprender los pasos para instalar y configurar servidores web como Apache, Nginx y IIS.</p>
+</section>
+
+<section class="slide">
+    <h2>¿Qué es un Servidor Web?</h2>
+    <p>Un servidor web es software que sirve páginas web a través de Internet o una red local.</p>
+</section>
+
+<section class="slide">
+    <h2>Tipos de Servidores Web</h2>
+    <ul>
+        <li>Apache: Popular y gratuito.</li>
+        <li>Nginx: Eficiente y ligero.</li>
+        <li>IIS (Internet Information Services): Para Windows Server.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Requisitos Previos</h2>
+    <ul>
+        <li>Sistema operativo compatible (Windows, Linux).</li>
+        <li>Acceso administrador al servidor.</li>
+        <li>Conocimientos básicos de red y seguridad.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Instalación de Apache en Ubuntu</h2>
+    <p>Paso 1: Actualizar el sistema<br>Paso 2: Instalar Apache con `sudo apt update && sudo apt install apache2`<br>Paso 3: Verificar la instalación con `sudo systemctl status apache2`</p>
+</section>
+
+<section class="slide">
+    <h2>Instalación de Nginx en Ubuntu</h2>
+    <p>Paso 1: Actualizar el sistema<br>Paso 2: Instalar Nginx con `sudo apt update && sudo apt install nginx`<br>Paso 3: Verificar la instalación con `sudo systemctl status nginx`</p>
+</section>
+
+<section class="slide">
+    <h2>Instalación de IIS en Windows Server</h2>
+    <p>Paso 1: Instalar el rol Web Server (IIS)<br>Paso 2: Configurar sitios web y aplicaciones<br>Paso 3: Verificar la instalación desde un navegador</p>
+</section>
+
+<section class="slide">
+    <h2>Configuración Básica de Apache</h2>
+    <ul>
+        <li>Edición del archivo `httpd.conf` o `apache2.conf`.</li>
+        <li>Configuración de directorios y permisos.</li>
+        <li>Habilitación de módulos necesarios con `a2enmod`.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración Básica de Nginx</h2>
+    <ul>
+        <li>Edición del archivo `nginx.conf`.</li>
+        <li>Configuración de sitios web en directorios separados.</li>
+        <li>Habilitación de módulos con `sudo apt install nginx-module-<module_name>`.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración Básica de IIS</h2>
+    <ul>
+        <li>Abrir el Administrador de Servidores Web.</li>
+        <li>Configurar sitios web y aplicaciones.</li>
+        <li>Habilitar protocolos y módulos necesarios.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Pruebas Iniciales</h2>
+    <p>Acceder a la IP del servidor desde un navegador para verificar que el servidor web esté funcionando correctamente.</p>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas de Seguridad</h2>
+    <ul>
+        <li>Actualizaciones regulares.</li>
+        <li>Cambiar contraseñas predeterminadas.</li>
+        <li>Habilitar HTTPS.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes</h2>
+    <ul>
+        <li>No se encuentra el archivo (404).</li>
+        <li>No se tiene permiso para acceder (403).</li>
+        <li>Servidor no responde.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comprobación de Logs</h2>
+    <p>Verificar los archivos de log del servidor web (`/var/log/apache2/error.log` o `/var/log/nginx/error.log`) para diagnóstico.</p>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico: Implementar una Aplicación Web</h2>
+    <p>Desplegar una aplicación simple en el servidor web instalado y configurado.</p>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz</h2>
+    <ol>
+        <li>¿Qué es un servidor web?</li>
+        <li>Cual es la diferencia entre Apache, Nginx y IIS?</li>
+        <li>¿Cuáles son los pasos básicos para instalar Apache en Ubuntu?</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist de Instalación y Configuración</h2>
+    <ul>
+        <li>Requisitos previos cumplidos.</li>
+        <li>Servidor web instalado correctamente.</li>
+        <li>Configuraciones básicas realizadas.</li>
+        <li>Pruebas iniciales exitosas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Configurar SSL/TLS</h2>
+    <p>Configurar un certificado SSL/TLS para el servidor web instalado.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Instalación y configuración de servidores web.</li>
+        <li>Tipos populares: Apache, Nginx, IIS.</li>
+        <li>Buenas prácticas de seguridad.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa General</h2>
+    <p>Seguir las normativas de seguridad y cumplimiento regulatorio al desplegar aplicaciones web en servidores.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0376 Implantación de aplicaciones web.md · Instalación de servidores de aplicaciones Web: → Servidor Web: instalación y configuración.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 07:45:18</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

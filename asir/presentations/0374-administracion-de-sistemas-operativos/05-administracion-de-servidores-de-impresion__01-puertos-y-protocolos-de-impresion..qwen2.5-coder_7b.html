@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Puertos y protocolos de impresión. — Administración de servidores de impresión: — 0374 Administración de sistemas operativos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="puertos-y-protocolos-de-impresion.">
+<h1>Puertos y protocolos de impresión.</h1>
+<p><strong>Unidad:</strong> Administración de servidores de impresión:<br><strong>Documento:</strong> 0374 Administración de sistemas operativos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Puertos y protocolos de impresión</h2>
+    <p>Objetivo: Comprender los puertos y protocolos utilizados en el sistema de impresión.</p>
+</section>
+
+<section class="slide">
+    <h3>Puertos comunes para impresión</h3>
+    <ul>
+        <li><strong>9100 (RAW)</strong>: Protocolo sin formato para enviar datos directamente al controlador de impresión.</li>
+        <li><strong>631 (IPP)</strong>: Protocolo de impresión y procesamiento de documentos (Internet Printing Protocol).</li>
+        <li><strong>515 (LPD)</strong>: Protocolo de impresión distribuida (Line Printer Daemon).</li>
+        <li><strong>443 (HTTPS)</strong>: Aunque no es específico para impresión, permite la comunicación segura con servidores de impresión.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Protocolos de impresión</h3>
+    <ul>
+        <li><strong>IPP (Internet Printing Protocol)</strong>: Protocolo estándar para el control remoto de impresoras en red.</li>
+        <li><strong>CUPS (Common Unix Printing System)</strong>: Sistema de impresión multiplataforma basado en IPP.</li>
+        <li><strong>PCL (Printer Command Language)</strong>: Lenguaje específico del fabricante para HP.</li>
+        <li><strong>PostScript</strong>: Lenguaje vectorial utilizado por muchas impresoras y sistemas de gestión de impresión.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Ejemplo práctico: Configuración de una impresora en Windows</h3>
+    <p>1. Abre "Configuración" > "Dispositivos y impresoras".</p>
+    <p>2. Haz clic en "Añadir dispositivo o impresora".</p>
+    <p>3. Selecciona la opción de conexión a una red.</p>
+    <p>4. Elige el protocolo (por ejemplo, IPP) y proporciona los detalles del servidor de impresión.</p>
+</section>
+
+<section class="slide">
+    <h3>Caso práctico: Problema de impresión en red</h3>
+    <p>Síntoma: Impresoras no responden a comandos.</p>
+    <p>Posible causa: Configuración incorrecta del puerto o protocolo.</p>
+    <p>Solución: Verifica la configuración de red y el protocolo seleccionado en los ajustes de impresora.</p>
+</section>
+
+<section class="slide">
+    <h3>Proceso de instalación de una impresora</h3>
+    <ol>
+        <li>Conecta la impresora a la red o al ordenador.</li>
+        <li>Abre el administrador de dispositivos y busca la opción de añadir un nuevo dispositivo.</li>
+        <li>Elige la opción de conexión por red e introduce los detalles del servidor de impresión.</li>
+        <li>Selecciona el protocolo adecuado (por ejemplo, IPP).</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h3>Buenas prácticas para la gestión de puertos y protocolos de impresión</h3>
+    <ul>
+        <li>Usar protocolos seguros como HTTPS.</li>
+        <li>Configurar puertos específicos para cada tipo de impresora.</li>
+        <li>Mantener actualizados los sistemas operativos y controladores de impresión.</li>
+        <li>Implementar políticas de acceso controlado a las impresoras.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Errores comunes en la configuración de puertos y protocolos de impresión</h3>
+    <ul>
+        <li>Usar el puerto incorrecto para el tipo de impresora.</li>
+        <li>No seleccionar el protocolo adecuado.</li>
+        <li>No configurar correctamente los detalles del servidor de impresión.</li>
+        <li>No aplicar políticas de seguridad adecuadas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Comparativa entre puertos y protocolos</h3>
+    <table>
+        <tr>
+            <th>Puerto</th>
+            <th>Protocolo</th>
+        </tr>
+        <tr>
+            <td>9100 (RAW)</td>
+            <td>No estándar, sin formato.</td>
+        </tr>
+        <tr>
+            <td>631 (IPP)</td>
+            <td>Estándar, seguro y flexible.</td>
+        </tr>
+        <tr>
+            <td>515 (LPD)</td>
+            <td>Antiguo, estándar Unix.</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h3>Mini-quiz: Identifica el puerto y protocolo correctos</h3>
+    <p>¿Qué puerto y protocolo usarías para una impresora HP que se conecta a través de la red?</p>
+    <ol type="A">
+        <li>Puerto 9100, Protocolo PCL</li>
+        <li>Puerto 631, Protocolo IPP</li>
+        <li>Puerto 515, Protocolo LPD</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h3>Checklist de configuración de impresoras</h3>
+    <ul>
+        <li>Verifica la conexión física.</li>
+        <li>Configura el puerto y protocolo correctos.</li>
+        <li>Asegúrate de que los detalles del servidor son correctos.</li>
+        <li>Aplica políticas de seguridad necesarias.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Actividad: Configura una impresora en un entorno virtual</h3>
+    <p>1.rea una máquina virtual con Windows.</p>
+    <p>2. Conecta la impresora a la red de la máquina virtual.</p>
+    <p>3. Configura la impresora usando los pasos descritos anteriormente.</p>
+</section>
+
+<section class="slide">
+    <h3>Resumen: Puertos y protocolos de impresión</h3>
+    <ul>
+        <li>Puertos comunes: 9100, 631, 515.</li>
+        <li>Protocolos principales: IPP,UPS, PCL, PostScript.</li>
+        <li>Buenas prácticas: seguridad, configuración correcta, políticas de acceso.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Normativa relevante para la gestión de impresoras</h3>
+    <p><strong>NIST SP 800-57 Revision 4:</strong> Seguridad en el uso de dispositivos físicos y virtuales.</p>
+    <p><strong>CIS Benchmark for Windows Servers:</strong> Guía para mejorar la seguridad de los servidores Windows.</p>
+</section>
+
+<section class="slide">
+    <h3>Preguntas frecuentes sobre puertos y protocolos de impresión</h3>
+    <ol type="A">
+        <li>¿Qué es el puerto 9100? ¿Para qué se usa?</li>
+        <li>¿Cuáles son los principales protocolos de impresión?</li>
+        <li>¿Cómo puedo asegurar la seguridad de mis impresoras en red?</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h3>Contacto</h3>
+    <p>Pregunta cualquier duda o aclaración.</p>
+    <p>Email: administracion.sistemas.operativos@example.com</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0374 Administración de sistemas operativos.md · Administración de servidores de impresión: → Puertos y protocolos de impresión.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 05:03:36</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

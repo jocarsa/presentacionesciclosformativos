@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Hilos de ejecución. — Administración de procesos del sistema: — 0374 Administración de sistemas operativos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="hilos-de-ejecucion.">
+<h1>Hilos de ejecución.</h1>
+<p><strong>Unidad:</strong> Administración de procesos del sistema:<br><strong>Documento:</strong> 0374 Administración de sistemas operativos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Hilos de ejecución</h2>
+    <p>Los hilos de ejecución son unidades mínimas de procesamiento que pueden compartir recursos del sistema operativo.</p>
+</section>
+
+<section class="slide">
+    <h3>Diferencia entre Procesos y Hilos</h3>
+    <ul>
+        <li><strong>Proceso:</strong> Un programa en ejecución con su propio espacio de memoria.</li>
+        <li><strong>Hilo:</strong> Una unidad dentro de un proceso que comparte el mismo espacio de memoria.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Ventajas de los Hilos</h3>
+    <ul>
+        <li>Economía de recursos: Comparten memoria y otros recursos del sistema.</li>
+        <li>Comunicación eficiente: Los hilos pueden compartir datos fácilmente.</li>
+        <li>Respuesta rápida: Permite una mejor respuesta a las solicitudes de usuario.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Ejemplo Práctico</h3>
+    <p>Un navegador web puede tener múltiples hilos para cargar páginas, manejar eventos y renderizar contenido.</p>
+</section>
+
+<section class="slide">
+    <h3>Caso de Uso: Servidor Web</h3>
+    <ul>
+        <li>El servidor web crea un hilo por cada solicitud HTTP entrante.</li>
+        <li>Estos hilos manejan la solicitud, procesan el contenido y envían la respuesta al cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Hilos vs. Procesos</h3>
+    <table>
+        <tr><th>Hilo</th><th>Proceso</th></tr>
+        <tr><td>Comparten memoria</td><td>No comparten memoria</td></tr>
+        <tr><td>Menor tiempo de creación</td><td>Más tiempo de creación</td></tr>
+        <tr><td>Mayor eficiencia en recursos</td><td>Menor eficiencia en recursos</td></tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h3>Buenas Prácticas</h3>
+    <ul>
+        <li>Limitar el número de hilos para evitar saturación del sistema.</li>
+        <li>Usar sincronización adecuada para evitar problemas de concurrencia.</li>
+        <li>Manejar excepciones y errores en los hilos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Errores Comunes</h3>
+    <ul>
+        <li>No sincronizar correctamente los recursos compartidos.</li>
+        <li>Hilos que no liberan adecuadamente los recursos.</li>
+        <li>Excesivo uso de hilos, lo que puede llevar a problemas de rendimiento.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Mini-Quiz</h3>
+    <p>¿Cuál es la principal diferencia entre un proceso y un hilo?</p>
+    <ol>
+        <li>Ambos comparten el mismo espacio de memoria.</li>
+        <li>Un proceso tiene su propio espacio de memoria, mientras que los hilos comparten el del proceso.</li>
+        <li>Los procesos son más eficientes en términos de recursos.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h3>Checklist</h3>
+    <ul>
+        <li>¿El sistema necesita compartir recursos entre tareas?</li>
+        <li>¿Se espera una respuesta rápida a las solicitudes?</li>
+        <li>¿Es necesario manejar múltiples tareas simultáneamente?</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Actividad</h3>
+    <p>Desarrolla un ejemplo de una aplicación que utilice hilos para mejorar su rendimiento.</p>
+</section>
+
+<section class="slide">
+    <h3>Resumen</h3>
+    <ul>
+        <li>Hilos son unidades de procesamiento dentro de un proceso.</li>
+        <li>Ofrecen ventajas en términos de eficiencia y comunicación.</li>
+        <li>Se deben manejar con cuidado para evitar problemas de concurrencia.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h1>Administración de procesos del sistema</h1>
+    <p><strong>Objetivo:</strong> Comprender los conceptos básicos y aplicaciones de los hilos de ejecución en el contexto de la administración de sistemas operativos.</p>
+</section>
+
+<section class="slide" data-id="extra-conceptos-clave-ampliacion-0">
+<h2>Conceptos clave (ampliación)</h2>
+<p>Profundiza en los fundamentos de <strong>Hilos de ejecución.</strong> con definiciones operativas y límites de aplicación.</p><ul><li>Concepto A vs B</li><li>Variables implicadas</li><li>Supuestos habituales</li><li>Cuándo NO aplicar</li></ul>
+
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0374 Administración de sistemas operativos.md · Administración de procesos del sistema: → Hilos de ejecución.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 04:49:05</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Instalación y configuración de un SGBD. Parámetros relevantes. — Instalación y configuración de un sistema gestor de base de datos: — 0377 Administración de sistemas gestores de bases de datos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="instalacion-y-configuracion-de-un-sgbd.-parametros-relevantes.">
+<h1>Instalación y configuración de un SGBD. Parámetros relevantes.</h1>
+<p><strong>Unidad:</strong> Instalación y configuración de un sistema gestor de base de datos:<br><strong>Documento:</strong> 0377 Administración de sistemas gestores de bases de datos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Instalación y configuración de un SGBD</h1>
+    <p><strong>Objetivo:</strong> Comprender los pasos para instalar y configurar un Sistema Gestor de Bases de Datos (SGBD), con énfasis en los parámetros relevantes.</p>
+</section>
+
+<section class="slide">
+    <h2>Introducción a la Instalación de SGBDs</h2>
+    <ul>
+        <li>Definición de Sistema Gestor de Bases de Datos (SGBD)</li>
+        <li>Tipos de SGBDs: Relacionales, No-relacionales, Orientados a objetos, etc.</li>
+        <li>Ejemplos populares: MySQL, PostgreSQL, MongoDB, Oracle, SQL Server</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Requisitos Previos</h2>
+    <ul>
+        <li>Sistema operativo compatible (Windows, Linux, macOS)</li>
+        <li>Requisitos de hardware: CPU, RAM, espacio en disco</li>
+        <li>Software requerido: para algunos SGBDs (como PostgreSQL)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Paso 1: Descarga del SGBD</h2>
+    <ol>
+        <li>Visita el sitio web oficial del SGBD deseado</li>
+        <li>Descarga la versión más reciente para tu sistema operativo</li>
+        <li>Verifica la integridad del archivo descargado (hash SHA-256)</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Paso 2: Instalación del SGBD</h2>
+    <ol>
+        <li>Ejecuta el instalador descargado</li>
+        <li>Sigue las instrucciones paso a paso</li>
+        <li>Elige la ubicación de instalación y opciones adicionales según sea necesario</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Paso 3: Configuración Inicial</h2>
+    <ul>
+        <li>Crea un nuevo usuario administrador</li>
+        <li>Define una contraseña segura para el usuario administrador</li>
+        <li>Configura los parámetros básicos del SGBD (puerto, idioma, etc.)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Parámetros Relevantes de Configuración</h2>
+    <ul>
+        <li><strong>Puerto:</strong> Define el número de puerto en el que escuchará el SGBD</li>
+        <li><strong>Idioma:</strong> Establece el idioma predeterminado del SGBD y la interfaz de usuario</li>
+        <li><strong>Tamaño de caché:</strong> Configura la cantidad de memoria RAM que utilizará el SGBD para mejorar el rendimiento</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Configuración</h2>
+    <pre>
+        <code>
+            [mysqld]
+            port = 3306
+            language = /usr/share/mysql/english/
+            innodb_buffer_pool_size = 1G
+        </code>
+    </pre>
+</section>
+
+<section class="slide">
+    <h2>Verificación de la Instalación</h2>
+    <ul>
+        <li>Inicia el servicio del SGBD</li>
+        <li>Accede al cliente administrador (por ejemplo,MyAdmin para MySQL)</li>
+        <li>Comprueba que puedas conectarte con el usuario administrador creado</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas de Configuración</h2>
+    <ul>
+        <li>Utiliza un puerto no estándar para evitar conflictos con otros servicios</li>
+        <li>Actualiza regularmente el SGBD y los parches de seguridad</li>
+        <li>Limita el acceso a la interfaz administrativa mediante firewalls</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en la Instalación</h2>
+    <ul>
+        <li>No se ejecuta correctamente el instalador</li>
+        <li>Error al iniciar el servicio del SGBD</li>
+        <li>No se puede conectarse con el usuario administrador</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Instalación de SGBDs</h2>
+    <p>¿Cuál es el puerto predeterminado para MySQL?</p>
+    <ol>
+        <li>3306</li>
+        <li>5432</li>
+        <li>1433</li>
+        <li>8080</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist de Instalación y Configuración</h2>
+    <ul>
+        <li>Descargar el SGBD desde su sitio web oficial</li>
+        <li>Ejecutar el instalador y seguir las instrucciones</li>
+        <li>Crear un usuario administrador con contraseña segura</li>
+        <li>Configurar los parámetros básicos (puerto, idioma, etc.)</li>
+        <li>Verificar la conexión al cliente administrativo</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Configuración de un SGBD</h2>
+    <p>Configura PostgreSQL en tu sistema y verifica que puedas conectarte con el usuario administrador.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Proceso de instalación y configuración de un SGBD</li>
+        <li>Parámetros relevantes para la configuración inicial</li>
+        <li>Buenas prácticas y errores comunes a evitar</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa y Seguridad</h2>
+    <ul>
+        <li>Reglamentos de protección de datos (GDPR, CCPA)</li>
+        <li>Cifrado de la comunicación entre el cliente y el servidor</li>
+        <li>Seguridad contra inyecciones SQL y ataques DDoS</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Preguntas Frecuentes (Q&A)</h2>
+    <p>¿Tienes alguna pregunta sobre la instalación o configuración de SGBDs?</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0377 Administración de sistemas gestores de bases de datos.md · Instalación y configuración de un sistema gestor de base de datos: → Instalación y configuración de un SGBD. Parámetros relevantes.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 08:47:38</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

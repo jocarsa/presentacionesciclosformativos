@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Módulos: instalación, configuración y uso. — Instalación y administración de servidores Web: — 0375 Servicios de red e Internet.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="modulos-instalacion-configuracion-y-uso.">
+<h1>Módulos: instalación, configuración y uso.</h1>
+<p><strong>Unidad:</strong> Instalación y administración de servidores Web:<br><strong>Documento:</strong> 0375 Servicios de red e Internet.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Módulos: Instalación, configuración y uso</h1>
+    <p>Objetivo: Comprender los pasos para instalar, configurar y utilizar servidores web.</p>
+</section>
+
+<section class="slide">
+    <h2>Instalación de un Servidor Web</h2>
+    <ul>
+        <li>Elegir el software del servidor (Apache, Nginx)</li>
+        <li>Descargar e instalar el software en el sistema operativo</li>
+        <li>Configurar los permisos de acceso</li>
+        <li>Iniciar el servicio del servidor web</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo: Instalación de Apache en Ubuntu</h2>
+    <pre><code>sudo apt update
+sudo apt install apache2</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Configuración Básica del Servidor Web</h2>
+    <ul>
+        <li>Modificar el archivo de configuración principal (generalmente /etc/apache2/apache2.conf)</li>
+        <li>Agregar o modificar las configuraciones para sitios web específicos</li>
+        <li>Reiniciar el servicio para aplicar los cambios</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Caso: Configuración de un sitio web en Apache</h2>
+    <p>Configurar un dominio y vincularlo a una carpeta del servidor.</p>
+</section>
+
+<section class="slide">
+    <h2>Proceso de Uso de un Servidor Web</h2>
+    <ol>
+        <li>Cargar el sitio web en la carpeta correspondiente</li>
+        <li>Asegurar que los archivos sean accesibles por el servidor web</li>
+        <li>Verificar la disponibilidad del sitio desde un navegador</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas en la Instalación y Configuración de Servidores Web</h2>
+    <ul>
+        <li>No exponer el servidor a puertos no necesarios</li>
+        <li>Utilizar certificados SSL/TLS para encriptar las comunicaciones</li>
+        <li>Mantener los software actualizados</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en la Instalación y Configuración de Servidores Web</h2>
+    <ul>
+        <li>No tener permisos suficientes para instalar o modificar archivos</li>
+        <li>No reiniciar el servicio después de cambios de configuración</li>
+        <li>Exponer el servidor a puertos no seguros</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: Apache vs Nginx</h2>
+    <table>
+        <tr><th>Apache</th><th>Nginx</th></tr>
+        <tr><td>Más versátil y funcionalidades avanzadas</td><td>Más ligero y eficiente para servir contenido estático</td></tr>
+        <tr><td>Requiere más recursos</td><td>Menos recursos necesarios</td></tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Instalación de Servidores Web</h2>
+    <p>¿Cuál es el comando para instalar Apache en Ubuntu?</p>
+    <ol type="A">
+        <li>sudo apt install apache2</li>
+        <li>sudo yum install apache2</li>
+        <li>sudo brew install apache2</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Instalación y Configuración de Servidores Web</h2>
+    <ul>
+        <li>Elegir el software del servidor</li>
+        <li>Instalar el software en el sistema operativo</li>
+        <li>Configurar los permisos de acceso</li>
+        <li>Iniciar el servicio del servidor web</li>
+        <li>Reiniciar el servicio para aplicar cambios</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Configuración de un Sitio Web</h2>
+    <p>Crea un sitio web básico utilizando Apache y configúralo en tu servidor local.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Instalación: elegir software, descargar e instalar, configurar permisos</li>
+        <li>Configuración: modificar archivos de configuración, reiniciar servicio</li>
+        <li>Uso: cargar contenido, verificar disponibilidad</li>
+        <li>Buenas prácticas y errores comunes</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa General</h2>
+    <p>Seguir las políticas de seguridad del servidor y cumplir con la normativa vigente.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0375 Servicios de red e Internet.md · Instalación y administración de servidores Web: → Módulos: instalación, configuración y uso.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 06:40:04</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

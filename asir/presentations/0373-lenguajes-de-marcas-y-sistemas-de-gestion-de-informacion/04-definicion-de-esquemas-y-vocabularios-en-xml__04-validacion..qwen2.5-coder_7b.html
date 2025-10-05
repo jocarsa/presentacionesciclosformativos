@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Validación. — Definición de esquemas y vocabularios en XML: — 0373 Lenguajes de marcas y sistemas de gestión de información.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="validacion.">
+<h1>Validación.</h1>
+<p><strong>Unidad:</strong> Definición de esquemas y vocabularios en XML:<br><strong>Documento:</strong> 0373 Lenguajes de marcas y sistemas de gestión de información.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Validación en Lenguajes de Marcas y Sistemas de Gestión de Información</h1>
+    <p>Objetivo: Comprender los conceptos básicos de validación en, sus tipos y aplicaciones.</p>
+</section>
+
+<section class="slide">
+    <h2>Definición de Validación</h2>
+    <p>La validación en es el proceso de comprobar que un documento cumple con las reglas definidas por un esquema o vocabulario específico.</p>
+</section>
+
+<section class="slide">
+    <h2>Tipo de Validación</h2>
+    <ul>
+        <li>Validación DTD (Document Type Definition)</li>
+        <li>Validación Schema (XSD)</li>
+        <li>Validación Relax NG</li>
+        <li>Validación Schematron</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Validación DTD</h2>
+    <p>DTD es un lenguaje de definición de tipo de documento que describe la estructura y el contenido de un.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de DTD</h2>
+    <pre>&lt;!ELEMENT libro (titulo, autor, año)&gt;
+&lt;!ELEMENT titulo (#PCDATA)&gt;
+&lt;!ELEMENT autor (#PCDATA)&gt;
+&lt;!ELEMENT año (#PCDATA)&gt;</pre>
+</section>
+
+<section class="slide">
+    <h2>Validación Schema (XSD)</h2>
+    <p>XSD es un lenguaje de definición de tipo de documento que permite una validación más rica y flexible que DTD.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de XSD</h2>
+    <pre>&lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;
+&lt;xs:element name="libro"&gt;
+&lt;xs:complexType&gt;
+&lt;xs:sequence&gt;
+&lt;xs:element name="titulo" type="xs:string"/&gt;
+&lt;xs:element name="autor" type="xs:string"/&gt;
+&lt;xs:element name="año" type="xs:gYear"/&gt;
+&lt;/xs:sequence&gt;
+&lt;/xs:complexType&gt;
+&lt;/xs:element&gt;
+&lt;/xs:schema&gt;</pre>
+</section>
+
+<section class="slide">
+    <h2>Validación Relax NG</h2>
+    <p>Relax NG es un lenguaje de definición de tipo de documento que permite una validación basada en patrones.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Relax NG</h2>
+    <pre>&lt;grammar xmlns="http://relaxng.org/ns/structure/1.0"&gt;
+&lt;element name="libro"&gt;
+&lt;sequence&gt;
+&lt;element name="titulo"&gt;&lt;text/&gt;&lt;/element&gt;
+&lt;element name="autor"&gt;&lt;text/&gt;&lt;/element&gt;
+&lt;element name="año"&gt;&lt;data type="integer"/&gt;&lt;/element&gt;
+&lt;/sequence&gt;
+&lt;/element&gt;
+&lt;/grammar&gt;</pre>
+</section>
+
+<section class="slide">
+    <h2>Validación Schematron</h2>
+    <p>Schematron es un lenguaje de definición de tipo de documento que permite una validación basada en reglas XPath.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Schematron</h2>
+    <pre>&lt;schema xmlns="http://www.ascc.net/xml/schematron"&gt;
+&lt;pattern&gt;
+&lt;rule context="/libro"&gt;
+&lt;assert test="@año gt 1900"&gt;El año debe ser posterior a 1900.&lt;/assert&gt;
+&lt;/rule&gt;
+&lt;/pattern&gt;
+&lt;/schema&gt;</pre>
+</section>
+
+<section class="slide">
+    <h2>Beneficios de la Validación</h2>
+    <ul>
+        <li>Garantiza la estructura correcta del.</li>
+        <li>Aumenta la confiabilidad y el interambio de datos.</li>
+        <li>Facilita la detección de errores comunes.</li>
+        <li>Permite la creación de esquemas más complejos y precisos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Caso Práctico</h2>
+    <p>Un sistema de gestión de bibliotecas utiliza para almacenar información sobre libros. La validación XSD asegura que todos los libros tengan el título, autor y año correctos.</p>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en la Validación</h2>
+    <ul>
+        <li>No se especifica correctamente el tipo de dato.</li>
+        <li>Falta definir elementos o atributos obligatorios.</li>
+        <li>Se permite contenido no esperado.</li>
+        <li>No se consideran restricciones complejas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas en la Validación</h2>
+    <ul>
+        <li>Definir esquemas claros y precisos.</li>
+        <li>Incluir restricciones de contenido y tipo de dato.</li>
+        <li>Utilizar atributos para proporcionar metadatos adicionales.</li>
+        <li>Validar regularmente los documentos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz</h2>
+    <p>¿Cuál de los siguientes es un tipo de validación en?</p>
+    <ol>
+        <li>DTD</li>
+        <li>XSLT</li>
+        <li>SOAP</li>
+        <li></li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist</h2>
+    <ul>
+        <li>¿Se ha definido correctamente el esquema de validación?</li>
+        <li>¿Se han incluido todas las restricciones necesarias?</li>
+        <li>¿Se ha probado la validación con diferentes documentos?</li>
+        <li>¿Se han identificado y corregido los errores comunes?</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad</h2>
+    <p>Cree un esquema XSD para un documento que represente una lista de contactos. Incluya elementos como nombre, apellido y número de teléfono.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>La validación en es crucial para garantizar la calidad y la integridad de los documentos.</li>
+        <li>Existen varios tipos de validación como DTD, XSD, Relax NG y Schematron.</li>
+        <li>Buenas prácticas incluyen definir esquemas claros, probar regularmente y corregir errores comunes.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa</h2>
+    <p>La normativa W3 (World Wide Web Consortium) establece los estándares para la validación de, incluyendo DTD, XSD y Relax NG.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0373 Lenguajes de marcas y sistemas de gestión de información.md · Definición de esquemas y vocabularios en XML: → Validación.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 03:44:19</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

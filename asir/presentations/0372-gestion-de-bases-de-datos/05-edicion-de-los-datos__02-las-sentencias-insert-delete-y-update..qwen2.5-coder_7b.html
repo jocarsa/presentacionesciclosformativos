@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Las sentencias INSERT, DELETE y UPDATE. — Edición de los datos: — 0372 Gestión de bases de datos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="las-sentencias-insert-delete-y-update.">
+<h1>Las sentencias INSERT, DELETE y UPDATE.</h1>
+<p><strong>Unidad:</strong> Edición de los datos:<br><strong>Documento:</strong> 0372 Gestión de bases de datos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Gestión de Bases de Datos</h1>
+    <p><strong>Subunidad:</strong> Las sentencias INSERT, DELETE y UPDATE</p>
+    <p><strong>Objetivo:</strong> Comprender y aplicar las sentencias SQL para manipular datos en una base de datos.</p>
+</section>
+
+<section class="slide">
+    <h2>Las Sentencias INSERT, DELETE y UPDATE</h2>
+    <ul>
+        <li><strong>INSERT:</strong> Añade nuevos registros a una tabla.</li>
+        <li><strong>DELETE:</strong> Elimina registros existentes de una tabla.</li>
+        <li><strong>UPDATE:</strong> Modifica los valores de los registros en una tabla.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de INSERT</h2>
+    <pre><code>INSERT INTO empleados (nombre, apellido, edad) VALUES ('Juan', 'Pérez', 30);</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de DELETE</h2>
+    <pre><code>DELETE FROM empleados WHERE id = 1;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de UPDATE</h2>
+    <pre><code>UPDATE empleados SET edad = 31 WHERE id = 1;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas</h2>
+    <ul>
+        <li>Usar claves primarias para identificar registros.</li>
+        <li>Validar los datos antes de insertar o actualizar.</li>
+        <li>Realizar transacciones en bloques para mantener la integridad.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes</h2>
+    <ul>
+        <li>No especificar las columnas a insertar (INSERT INTO empleados VALUES ('Juan', 'Pérez');)</li>
+        <li>Eliminar todos los registros sin condición (DELETE FROM empleados;)</li>
+        <li>No comprobar la existencia de datos antes de actualizar.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa INSERT vs UPDATE</h2>
+    <table>
+        <tr><th>Sentencia</th><th>Acción</th></tr>
+        <tr><td>INSERT</td><td>Añade nuevos registros.</td></tr>
+        <tr><td>UPDATE</td><td>Modifica los valores de los registros existentes.</td></tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz</h2>
+    <p>¿Cuál es la diferencia entre INSERT y UPDATE?</p>
+    <ol>
+        <li>Añade nuevos registros a una tabla.</li>
+        <li>Elimina registros existentes de una tabla.</li>
+        <li>Modifica los valores de los registros en una tabla.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist</h2>
+    <ul>
+        <li>¿Se ha especificado correctamente la tabla?</li>
+        <li>¿Los datos a insertar son válidos?</li>
+        <li>¿Se ha verificado la existencia de los registros antes de actualizar?</li>
+        <li>¿Se han realizado transacciones en bloques para mantener la integridad?</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad</h2>
+    <p>Escribe una sentencia UPDATE que cambie el apellido de un empleado con id 5 a "González".</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li><strong>INSERT:</strong> Añade nuevos registros.</li>
+        <li><strong>DELETE:</strong> Elimina registros existentes.</li>
+        <li><strong>UPDATE:</strong> Modifica los valores de los registros.</li>
+        <li>Buenas prácticas y errores comunes.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa General</h2>
+    <p>No se permite la eliminación masiva de datos sin condición.</p>
+    <p>Se debe realizar una copia de seguridad antes de realizar cambios significativos en los datos.</p>
+</section>
+
+<section class="slide" data-id="extra-conceptos-clave-ampliacion-0">
+<h2>Conceptos clave (ampliación)</h2>
+<p>Profundiza en los fundamentos de <strong>Las sentencias INSERT, DELETE y UPDATE.</strong> con definiciones operativas y límites de aplicación.</p><ul><li>Concepto A vs B</li><li>Variables implicadas</li><li>Supuestos habituales</li><li>Cuándo NO aplicar</li></ul>
+
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0372 Gestión de bases de datos.md · Edición de los datos: → Las sentencias INSERT, DELETE y UPDATE.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 02:32:42</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

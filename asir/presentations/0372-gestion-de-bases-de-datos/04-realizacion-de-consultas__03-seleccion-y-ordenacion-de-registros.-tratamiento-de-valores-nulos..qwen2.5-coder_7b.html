@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Selección y ordenación de registros. Tratamiento de valores nulos. — Realización de consultas: — 0372 Gestión de bases de datos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="seleccion-y-ordenacion-de-registros.-tratamiento-de-valores-nulos.">
+<h1>Selección y ordenación de registros. Tratamiento de valores nulos.</h1>
+<p><strong>Unidad:</strong> Realización de consultas:<br><strong>Documento:</strong> 0372 Gestión de bases de datos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Realización de consultas en bases de datos</h1>
+    <p>Objetivo: Aprender a seleccionar y ordenar registros, así como manejar valores nulos.</p>
+</section>
+
+<section class="slide">
+    <h2>Selección de Registros</h2>
+    <ul>
+        <li>Utiliza la cláusula SELECT para especificar los campos que deseas recuperar.</li>
+        <li>Ejemplo: SELECT nombre, edad FROM usuarios;</li>
+        <li>Podrías seleccionar todos los registros con *: SELECT * FROM usuarios;</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Filtros con WHERE</h2>
+    <p>La cláusula WHERE se utiliza para filtrar registros según una condición.</p>
+    <ul>
+        <li>Ejemplo: SELECT nombre FROM usuarios WHERE edad > 18;</li>
+        <li>Puedes combinar múltiples condiciones con AND, OR y NOT.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ordenación de Registros</h2>
+    <p>La cláusula ORDER BY se utiliza para ordenar los resultados de una consulta.</p>
+    <ul>
+        <li>Ejemplo: SELECT nombre FROM usuarios ORDER BY edad ASC;</li>
+        <li>Puedes ordenar en orden ascendente (ASC) o descendente (DESC).</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Manejo de Valores Nulos</h2>
+    <p>Los valores nulos representan ausencia de datos.</p>
+    <ul>
+        <li>Para verificar si un valor es nulo, usa IS NULL o IS NOT NULL.</li>
+        <li>Ejemplo: SELECT nombre FROM usuarios WHERE edad IS NULL;</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Funciones Agregadas</h2>
+    <p>Las funciones agregadas realizanálculos sobre un conjunto de valores.</p>
+    <ul>
+        <li>Ejemplo: SELECT AVG(edad) FROM usuarios;</li>
+        <li>Otras funciones: COUNT, SUM, MAX, MIN.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Aliases</h2>
+    <p>Puedes asignar nombres temporales a los resultados de una consulta.</p>
+    <ul>
+        <li>Ejemplo: SELECT nombre AS NombreUsuario FROM usuarios;</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Subconsultas</h2>
+    <p>Una subconsulta es una consulta dentro de otra consulta.</p>
+    <ul>
+        <li>Ejemplo: SELECT nombre FROM usuarios WHERE id IN (SELECT usuario_id FROM pedidos);</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas</h2>
+    <ul>
+        <li>Evita usar * en consultas grandes para mejorar el rendimiento.</li>
+        <li>Utiliza índices en columnas que se filtran frecuentemente.</li>
+        <li>Optimiza las consultas utilizando JOINs eficientes.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes</h2>
+    <ul>
+        <li>Sintaxis incorrecta: Verifica los comandos SQL.</li>
+        <li>No se especifican campos en SELECT: Recuerda incluir todos los campos necesarios.</li>
+        <li>Olvidar ORDER BY: Los resultados pueden no estar ordenados según lo esperado.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico</h2>
+    <p>Ejemplo de consulta compleja:</p>
+    <pre><code>SELECT u.nombre, AVG(p.importe) AS promedio_compra
+FROM usuarios u
+JOIN pedidos p ON u.id = p.usuario_id
+WHERE p.fecha > '2023-01-01'
+GROUP BY u.id
+ORDER BY promedio_compra DESC;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz</h2>
+    <p>¿Cuál de las siguientes consultas es correcta?</p>
+    <ul>
+        <li>A) SELECT nombre FROM usuarios WHERE edad > 18 ORDER BY nombre DESC;</li>
+        <li>B) SELECT nombre, edad FROM usuarios WHERE edad IS NULL;</li>
+        <li>C) SELECT * FROM usuarios WHERE edad = '25';</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist</h2>
+    <ul>
+        <li>Verifica la sintaxis de las consultas.</li>
+        <li>Asegúrate de incluir los campos necesarios en SELECT.</li>
+        <li>Ordena los resultados según lo necesario con ORDER BY.</li>
+        <li>Maneja valores nulos correctamente con IS NULL o IS NOT NULL.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad</h2>
+    <p>Escribe una consulta que seleccione el nombre y la edad de los usuarios mayores de 30 años, ordenados por edad en orden descendente.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Selección de registros con SELECT.</li>
+        <li>Filtros con WHERE.</li>
+        <li>Ordenación con ORDER BY.</li>
+        <li>Manejo de valores nulos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa General</h2>
+    <p>No hay normativas específicas, pero sigue buenas prácticas y asegúrate de que tus consultas sean eficientes y seguras.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0372 Gestión de bases de datos.md · Realización de consultas: → Selección y ordenación de registros. Tratamiento de valores nulos.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 02:27:27</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

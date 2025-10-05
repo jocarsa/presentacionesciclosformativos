@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Definición de enlaces troncales en los conmutadores y «routers». El protocolo IEEE802.1Q. — Configuración de redes virtuales: — 0370 Planificación y administración de redes.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="definicion-de-enlaces-troncales-en-los-conmutadores-y-routers-.-el-protocolo-ieee802.1q.">
+<h1>Definición de enlaces troncales en los conmutadores y «routers». El protocolo IEEE802.1Q.</h1>
+<p><strong>Unidad:</strong> Configuración de redes virtuales:<br><strong>Documento:</strong> 0370 Planificación y administración de redes.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Configuración de redes virtuales</h1>
+    <p>Definición de enlaces troncales en los conmutadores y «routers». El protocolo IEEE802.1Q.</p>
+</section>
+
+<section class="slide">
+    <h2>Objetivo</h2>
+    <ul>
+        <li>Comprender la definición de enlaces troncales en los conmutadores y routers.</li>
+        <li>Conocer el protocolo IEEE802.1Q y su uso en redes virtuales.</li>
+        <li>Aprender cómo configurar enlaces troncales utilizando el protocolo IEEE802.1Q.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Definición de enlaces troncales</h2>
+    <p>Los enlaces troncales son los puertos que conectan diferentes segmentos de una red, permitiendo el interambio de datos entre ellos.</p>
+</section>
+
+<section class="slide">
+    <h2>Función de los enlaces troncales</h2>
+    <ul>
+        <li>Permiten la comunicación entre diferentes VLANs (VLANs aisladas).</li>
+        <li>Evitan el interambio de tráfico no autorizado entre VLANs.</li>
+        <li>Aumentan la seguridad y la eficiencia en las redes.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Protocolo IEEE802.1Q</h2>
+    <p>IEEE802.1Q es un protocolo de etiquetado de trama que permite el interambio de datos entre VLANs en una misma red física.</p>
+</section>
+
+<section class="slide">
+    <h2>Estructura del paquete IEEE802.1Q</h2>
+    <ul>
+        <li>Etiqueta de etiquetado (VLAN Tag): Identifica a qué VLAN pertenece la trama.</li>
+        <li>Trama Ethernet: Contenido original de la trama.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración básica en un conmutador</h2>
+    <p>Para configurar un enlace troncal en un conmutador, se debe:</p>
+    <ol>
+        <li>Crear una VLAN.</li>
+        <li>Asignar el puerto al troncal de la VLAN.</li>
+        <li>Habilitar el protocolo IEEE802.1Q en el puerto.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración</h2>
+    <pre><code>interface GigabitEthernet0/1
+switchport mode trunk
+switchport trunk allowed vlan 10,20,30</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Configuración en un router</h2>
+    <p>Para configurar un enlace troncal en un router, se debe:</p>
+    <ol>
+        <li>Habilitar el protocolo IEEE802.1Q.</li>
+        <li>Asignar la VLAN correspondiente al puerto.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en un router</h2>
+    <pre><code>interface GigabitEthernet0/1
+switchport mode trunk
+switchport trunk allowed vlan 10,20,30</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas</h2>
+    <ul>
+        <li>Asignar puertos troncales a VLANs que necesiten comunicación entre sí.</li>
+        <li>No asignar puertos troncales a VLANs que no requieran comunicación directa.</li>
+        <li>Verificar la configuración periódicamente para asegurar su correcto funcionamiento.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes</h2>
+    <ul>
+        <li>No asignar puertos troncales a VLANs que necesitan comunicación entre sí.</li>
+        <li>Habilitar el protocolo IEEE802.1Q en puertos que no son troncales.</li>
+        <li>No verificar la configuración periódicamente, lo que puede causar problemas de comunicación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz</h2>
+    <p>¿Cuál es el propósito principal de los enlaces troncales en una red?</p>
+    <ol>
+        <li>Aumentar la velocidad de transmisión.</li>
+        <li>Permitir el interambio de datos entre VLANs.</li>
+        <li>Reducir el costo de la red.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist de configuración</h2>
+    <ul>
+        <li>Crear una VLAN.</li>
+        <li>Asignar el puerto al troncal de la VLAN.</li>
+        <li>Habilitar el protocolo IEEE802.1Q en el puerto.</li>
+        <li>Verificar la configuración periódicamente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad práctica</h2>
+    <p>Configurar un enlace troncal entre dos VLANs en un conmutador y verificar su funcionamiento.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Los enlaces troncales permiten la comunicación entre diferentes VLANs.</li>
+        <li>El protocolo IEEE802.1Q es utilizado para etiquetar las tramas y permitir su interambio.</li>
+        <li>Buenas prácticas incluyen asignar puertos troncales correctamente y verificar la configuración periódicamente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa general</h2>
+    <p>La normativa IEEE 802.1Q establece las especificaciones para el etiquetado de tramas Ethernet en redes con múltiples VLANs.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0370 Planificación y administración de redes.md · Configuración de redes virtuales: → Definición de enlaces troncales en los conmutadores y «routers». El protocolo IEEE802.1Q.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 00:43:51</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

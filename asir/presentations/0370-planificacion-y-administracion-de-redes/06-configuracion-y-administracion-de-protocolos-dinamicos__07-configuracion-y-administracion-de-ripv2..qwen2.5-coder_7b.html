@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Configuración y administración de RIPv2. — Configuración y administración de protocolos dinámicos: — 0370 Planificación y administración de redes.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="configuracion-y-administracion-de-ripv2.">
+<h1>Configuración y administración de RIPv2.</h1>
+<p><strong>Unidad:</strong> Configuración y administración de protocolos dinámicos:<br><strong>Documento:</strong> 0370 Planificación y administración de redes.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Configuración y administración de RIPv2</h1>
+    <p>Objetivo: Aprender cómo configurar y administrar el protocolo de enrutamiento RIPv2 en redes IP.</p>
+</section>
+
+<section class="slide">
+    <h2>Introducción a RIPv2</h2>
+    <ul>
+        <li>RIP (Routing Information Protocol) es un protocolo de enrutamiento dinámico simple y eficiente.</li>
+        <li>RIPv2 es la versión 2 del protocolo RIP, que mejora la seguridad y la escalabilidad.</li>
+        <li>Características principales: autenticación5, límites de distancia (15 saltos), y soporte para subredes.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración básica de RIPv2</h2>
+    <ol>
+        <li>Habilitar el protocolo RIP en la interfaz deseada:</li>
+        <pre>router rip
+ network 192.168.1.0</pre>
+        <li>Verificar la configuración y estado del proceso RIPv2:</li>
+        <pre>show ip protocols
+ show ip route rip</pre>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Cisco IOS</h2>
+    <pre>router rip
+ version 2
+ network 192.168.1.0
+ network 10.0.0.0
+ authentication5 key-chain RIPv2-KEY</pre>
+</section>
+
+<section class="slide">
+    <h2>Caso práctico: Implementación de RIPv2 en una red pequeña</h2>
+    <ul>
+        <li>Red A: 192.168.1.0/24</li>
+        <li>Red B: 192.168.2.0/24</li>
+        <li>Red: 192.168.3.0/24</li>
+    </ul>
+    <p>Configurar RIPv2 en todas las redes para que se comuniquen entre sí.</p>
+</section>
+
+<section class="slide">
+    <h2>Proceso de configuración paso a paso</h2>
+    <ol>
+        <li>Habilitar RIP versión 2 en cada router.</li>
+        <li>Configurar la autenticación5 para seguridad.</li>
+        <li>Verificar el estado del proceso RIPv2 y las rutas aprendidas.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas en la configuración de RIPv2</h2>
+    <ul>
+        <li>Usar autenticación5 para proteger contra falsos anuncios de enrutamiento.</li>
+        <li>Limitar el alcance de las rutas con límites de distancia (15 saltos).</li>
+        <li>Monitorear regularmente el estado del proceso RIPv2 y solucionar problemas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes en la configuración de RIPv2</h2>
+    <ul>
+        <li>No habilitar autenticación5, lo que expone a falsos anuncios.</li>
+        <li>No limitar el alcance de las rutas, lo que puede causar problemas de congestión.</li>
+        <li>Olvidar verificar el estado del proceso RIPv2 y solucionar problemas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa con otros protocolos de enrutamiento dinámico</h2>
+    <table>
+        <tr>
+            <th>Protocolo</th>
+            <th>RIPv2</th>
+            <th>EIGRP</th>
+            <th>BGP</th>
+        </tr>
+        <tr>
+            <td>Complejidad</td>
+            <td>Simples</td>
+            <td>Más complejo</td>
+            <td>Muy complejo</td>
+        </tr>
+        <tr>
+            <td>Autenticación</td>
+            <td>5</td>
+            <td>5, SHA-1</td>
+            <td>5, SHA-1</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: RIPv2 vs. EIGRP</h2>
+    <p>¿Cuál de los siguientes protocolos es más seguro?</p>
+    <ul>
+        <li>RIPv2</li>
+        <li>EIGRP</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist para la configuración de RIPv2</h2>
+    <ol>
+        <li>Habilitar RIP versión 2.</li>
+        <li>Configurar autenticación5.</li>
+        <li>Limitar el alcance de las rutas.</li>
+        <li>Verificar el estado del proceso RIPv2.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Configuración práctica de RIPv2</h2>
+    <p>Configurar RIPv2 en un laboratorio virtual y verificar la convergencia del protocolo.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>RIP versión 2 es un protocolo de enrutamiento dinámico simple y eficiente.</li>
+        <li>Se debe configurar con autenticación5 para seguridad.</li>
+        <li>Monitorear regularmente el estado del proceso RIPv2.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa general sobre enrutamiento dinámico</h2>
+    <p>Seguir las mejores prácticas de seguridad y operación al configurar protocolos de enrutamiento dinámico.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0370 Planificación y administración de redes.md · Configuración y administración de protocolos dinámicos: → Configuración y administración de RIPv2.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 01:26:59</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

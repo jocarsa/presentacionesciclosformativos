@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Ficheros de inicio de sistemas operativos. — Instalación de software libre y propietario: — 0369 Implantación de sistemas operativos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="ficheros-de-inicio-de-sistemas-operativos.">
+<h1>Ficheros de inicio de sistemas operativos.</h1>
+<p><strong>Unidad:</strong> Instalación de software libre y propietario:<br><strong>Documento:</strong> 0369 Implantación de sistemas operativos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Ficheros de inicio de sistemas operativos</h1>
+    <p>Objetivo: Comprender los conceptos y funciones de los ficheros de inicio en sistemas operativos.</p>
+</section>
+
+<section class="slide">
+    <h2>Concepto de Fichero de Inicio</h2>
+    <p>Un fichero de inicio es un archivo que se ejecuta automáticamente cuando se inicia un sistema operativo. Su objetivo principal es cargar los componentes necesarios para el funcionamiento del sistema.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplos de Ficheros de Inicio</h2>
+    <ul>
+        <li><code>init</code>: En sistemas Unix/Linux, controla la inicialización del sistema.</li>
+        <li><code>bootmgr</code>: En Windows, gestiona el arranque del sistema.</li>
+        <li><code>grub.cfg</code>: Configuración del bootloader GRUB en Linux.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Funciones de los Ficheros de Inicio</h2>
+    <ul>
+        <li>Carga el kernel del sistema operativo.</li>
+        <li>Inicializa dispositivos y periféricos.</li>
+        <li>Carga servicios y aplicaciones necesarias.</li>
+        <li>Permite la selección del modo de arranque (normal, seguro, recuperación).</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Estructura de un Fichero de Inicio</h2>
+    <p>Generalmente contiene:</p>
+    <ul>
+        <li>Métadatos del sistema.</li>
+        <li>Configuración del arranque.</li>
+        <li>Puntos de montaje para dispositivos y sistemas de archivos.</li>
+        <li>Comandos y scripts para inicializar el sistema.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico: Configuración de GRUB</h2>
+    <p>GRUB (GRand Unified Bootloader) es un popular bootloader usado en Linux. Su fichero de configuración, <code>grub.cfg</code>, se genera automáticamente pero puede ser modificado manualmente.</p>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico: Configuración de GRUB</h2>
+    <ul>
+        <li>Añadir entradas personalizadas para sistemas adicionales.</li>
+        <li>Configurar opciones avanzadas como arranque seguro o recuperación.</li>
+        <li>Modificar la prioridad de los sistemas operativos en el menú de arranque.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Proceso de Creación de un Fichero de Inicio Personalizado</h2>
+    <ol>
+        <li>Identificar los sistemas operativos instalados.</li>
+        <li>Crear una entrada para cada sistema en el fichero de configuración.</li>
+        <li>Añadir opciones avanzadas según sea necesario.</li>
+        <li>Probar la configuración para asegurar que funcione correctamente.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas al Manejar Ficheros de Inicio</h2>
+    <ul>
+        <li>No modificar ficheros de inicio sin conocimiento previo.</li>
+        <li>Hacer copias de seguridad antes de realizar cambios.</li>
+        <li>Utilizar herramientas gráficas si no se está familiarizado con la línea de comandos.</li>
+        <li>Mantener los sistemas actualizados para evitar problemas de compatibilidad.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes al Manejar Ficheros de Inicio</h2>
+    <ul>
+        <li>Modificar ficheros de inicio incorrectamente, causando un arranque inestable.</li>
+        <li>No realizar copias de seguridad antes de cambios importantes.</li>
+        <li>Ignorar advertencias del sistema durante la configuración.</li>
+        <li>No mantener los sistemas actualizados, lo que puede llevar a problemas de compatibilidad.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa entre Sistemas Operativos</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Sistema Operativo</th>
+                <th>Fichero de Inicio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Linux</td>
+                <td><code>init</code>, <code>grub.cfg</code></td>
+            </tr>
+            <tr>
+                <td>Windows</td>
+                <td><code>bootmgr</code></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Identificación de Ficheros de Inicio</h2>
+    <p>¿Cuál es el fichero de inicio en Windows?</p>
+    <ol>
+        <li><code>init</code></li>
+        <li><code>bootmgr</code></li>
+        <li><code>grub.cfg</code></li>
+        <li><code>sysinit</code></li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Identificación de Ficheros de Inicio</h2>
+    <p>¿Qué sistema operativo utiliza el fichero <code>grub.cfg</code>?</p>
+    <ol>
+        <li>Linux</li>
+        <li>Windows</li>
+        <li>macOS</li>
+        <li>Solaris</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Configuración de GRUB</h2>
+    <ul>
+        <li>Identificar sistemas operativos instalados.</li>
+        <li>Añadir entradas personalizadas en <code>grub.cfg</code>.</li>
+        <li>Probar la configuración para asegurar que funcione correctamente.</li>
+        <li>Mantener una copia de seguridad del fichero original.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Modificación de Fichero de Inicio</h2>
+    <p>Modifica el fichero de inicio de tu sistema operativo para añadir una entrada personalizada. Asegúrate de hacer una copia de seguridad antes de realizar cambios.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Ficheros de inicio son archivos que se ejecutan automáticamente al iniciar un sistema operativo.</li>
+        <li>Sirven para cargar el kernel y los componentes necesarios para el funcionamiento del sistema.</li>
+        <li>Existen diferentes ficheros de inicio dependiendo del sistema operativo (GRUB, bootmgr, etc.).</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa General</h2>
+    <p>No realizar cambios en ficheros de inicio sin conocimiento previo.</p>
+    <p>Hacer copias de seguridad antes de realizar cambios importantes.</p>
+    <p>Mantener los sistemas actualizados para evitar problemas de compatibilidad.</p>
+</section>
+
+<section class="slide">
+    <h2>Recursos Adicionales</h2>
+    <ul>
+        <li><a href="https://www.gnu.org/software/grub/manual/grub.html">Documentación oficial de GRUB</a></li>
+        <li><a href="https://docs.microsoft.com/en-us/windows-hardware/drivers/install/boot-process-overview">Guía de Microsoft sobre el proceso de arranque</a></li>
+    </ul>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0369 Implantación de sistemas operativos.md · Instalación de software libre y propietario: → Ficheros de inicio de sistemas operativos.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-04 21:37:27</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

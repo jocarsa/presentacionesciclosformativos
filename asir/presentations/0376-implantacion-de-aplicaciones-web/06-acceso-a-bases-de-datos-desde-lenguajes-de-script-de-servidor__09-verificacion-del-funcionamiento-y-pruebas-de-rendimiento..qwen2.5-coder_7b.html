@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Verificación del funcionamiento y pruebas de rendimiento. — Acceso a bases de datos desde lenguajes de «script» de servidor: — 0376 Implantación de aplicaciones web.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="verificacion-del-funcionamiento-y-pruebas-de-rendimiento.">
+<h1>Verificación del funcionamiento y pruebas de rendimiento.</h1>
+<p><strong>Unidad:</strong> Acceso a bases de datos desde lenguajes de «script» de servidor:<br><strong>Documento:</strong> 0376 Implantación de aplicaciones web.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Verificación del funcionamiento y pruebas de rendimiento</h1>
+    <p>Objetivo: Aprender técnicas para verificar el correcto funcionamiento y optimizar el rendimiento de aplicaciones web que interactúan con bases de datos.</p>
+</section>
+
+<section class="slide">
+    <h2>Verificación del Funcionamiento</h2>
+    <ul>
+        <li>Pruebas unitarias: Verificar la funcionalidad individual de los componentes.</li>
+        <li>Pruebas de integración: Comprobar que los diferentes componentes funcionan juntos correctamente.</li>
+        <li>Pruebas de sistema: Evaluar el sistema completo en un entorno real.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Prueba Unitaria</h2>
+    <p>Código:</p>
+    <pre><code>
+        function getUser($id) {
+            $db = new PDO('mysql:host=localhost;dbname=test', 'user', 'password');
+            $stmt = $db->prepare("SELECT * FROM users WHERE id = :id");
+            $stmt->execute(['id' => $id]);
+            return $stmt->fetch();
+        }
+    </code></pre>
+</section>
+
+<section class="slide">
+    <h2>Pruebas de Rendimiento</h2>
+    <ul>
+        <li>Medición del tiempo de respuesta.</li>
+        <li>Evaluación del uso de recursos (CPU, memoria).</li>
+        <li>Simulación de carga para identificar puntos críticos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico: Optimización de Consultas SQL</h2>
+    <p>Antes:</p>
+    <pre><code>
+        SELECT * FROM users WHERE age > 18;
+    </code></pre>
+    <p>Después:</p>
+    <pre><code>
+        SELECT id, name FROM users WHERE age > 18;
+    </code></pre>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas para Rendimiento</h2>
+    <ul>
+        <li>Indexación de tablas.</li>
+        <li>Caching de resultados.</li>
+        <li>Optimización de consultas SQL.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en Pruebas de Rendimiento</h2>
+    <ul>
+        <li>No simular el entorno real.</li>
+        <li>No considerar la carga de datos.</li>
+        <li>No analizar los resultados adecuadamente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: Pruebas Manuales vs. Automáticas</h2>
+    <table>
+        <tr>
+            <th></th>
+            <th>Pruebas Manuales</th>
+            <th>Pruebas Automáticas</th>
+        </tr>
+        <tr>
+            <td>Eficiencia</td>
+            <td>Poco eficiente</td>
+            <td>Muy eficiente</td>
+        </tr>
+        <tr>
+            <td>Consistencia</td>
+            <td>Poca consistencia</td>
+            <td>Buena consistencia</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Verificación del Funcionamiento</h2>
+    <p>¿Qué tipo de prueba se utiliza para verificar que los componentes individuales funcionan correctamente?</p>
+    <ol>
+        <li>Pruebas unitarias</li>
+        <li>Pruebas de integración</li>
+        <li>Pruebas de sistema</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Pruebas de Rendimiento</h2>
+    <ul>
+        <li>Mide el tiempo de respuesta.</li>
+        <li>Evalúa el uso de recursos.</li>
+        <li>Simula la carga del sistema.</li>
+        <li>Análisis detallado de los resultados.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Optimización de Consultas SQL</h2>
+    <p>Optimiza la siguiente consulta SQL:</p>
+    <pre><code>
+        SELECT * FROM users WHERE age > 18 AND city = 'New York';
+    </code></pre>
+</section>
+
+<section class="slide">
+    <h2>Resumen: Verificación del Funcionamiento y Pruebas de Rendimiento</h2>
+    <ul>
+        <li>Pruebas unitarias, integración y sistema.</li>
+        <li>Evaluación del tiempo de respuesta y uso de recursos.</li>
+        <li>Buenas prácticas: indexación, caching, optimización SQL.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa General</h2>
+    <p>No hay normativas específicas para este tema en el contexto de formación profesional. Sin embargo, es importante seguir buenas prácticas y utilizar herramientas profesionales para las pruebas.</p>
+</section>
+
+<section class="slide" data-id="extra-conceptos-clave-ampliacion-0">
+<h2>Conceptos clave (ampliación)</h2>
+<p>Profundiza en los fundamentos de <strong>Verificación del funcionamiento y pruebas de rendimiento.</strong> con definiciones operativas y límites de aplicación.</p><ul><li>Concepto A vs B</li><li>Variables implicadas</li><li>Supuestos habituales</li><li>Cuándo NO aplicar</li></ul>
+
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0376 Implantación de aplicaciones web.md · Acceso a bases de datos desde lenguajes de «script» de servidor: → Verificación del funcionamiento y pruebas de rendimiento.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 08:37:36</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Zonas primarias y secundarias. Transferencias de zona. — Instalación y administración de servicios de nombres de dominio: — 0375 Servicios de red e Internet.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="zonas-primarias-y-secundarias.-transferencias-de-zona.">
+<h1>Zonas primarias y secundarias. Transferencias de zona.</h1>
+<p><strong>Unidad:</strong> Instalación y administración de servicios de nombres de dominio:<br><strong>Documento:</strong> 0375 Servicios de red e Internet.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Zonas primarias y secundarias. Transferencias de zona.</h2>
+    <p>Objetivo: Comprender la diferencia entre zonas primarias y secundarias, así como los procesos de transferencia de zona.</p>
+</section>
+
+<section class="slide">
+    <h3>Zona Primaria</h3>
+    <ul>
+        <li>Contiene toda la información del dominio.</li>
+        <li>Administrada por el propietario del dominio.</li>
+        <li>Almacena los registros DNS completos.</li>
+        <li>Ejemplo: "example.com" es una zona primaria.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Zona Secundaria</h3>
+    <ul>
+        <li>Copia parcial de la información de la zona primaria.</li>
+        <li>Administrada por un servidor DNS secundario.</li>
+        <li>Actualizadas automáticamente desde la zona primaria.</li>
+        <li>Ejemplo: Un servidor DNS que replica "example.com" es una zona secundaria.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Transferencia de Zona (Zone Transfer)</h3>
+    <p>Proceso por el cual una zona primaria envía su información a un servidor DNS secundario.</p>
+</section>
+
+<section class="slide">
+    <h3>Métodos de Transferencia de Zona</h3>
+    <ul>
+        <li><strong>Axfr (Authoritative Zone Transfer)</strong>: Transferencia completa.</li>
+        <li><strong>IXFR (Incremental Zone Transfer)</strong>: Transferencia incremental basada en cambios.</li>
+        <li><strong>Dynamic Update</strong>: Actualizaciones en tiempo real.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Buenas Prácticas de Transferencia de Zona</h3>
+    <ul>
+        <li>Usar IXFR para minimizar el tráfico.</li>
+        <li>Implementar autenticación para transferencias seguras.</li>
+        <li>Configurar tiempos de actualización adecuados.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Errores Comunes en Transferencia de Zona</h3>
+    <ul>
+        <li>No autorizado: Falta la configuración correcta del servidor secundario.</li>
+        <li>Tiempo de actualización incorrecto: Permite transferencias frecuentes o tardías.</li>
+        <li>Problemas de red: Interrupiones en las transferencias.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Caso Práctico: Configuración de Zona Secundaria</h3>
+    <p>Configurar un servidor DNS secundario para replicar una zona primaria "example.com".</p>
+</section>
+
+<section class="slide">
+    <h3>Ejemplo de Transferencia de Zona</h3>
+    <pre><code>
+dig @primary_server axfr example.com
+</code></pre>
+</section>
+
+<section class="slide">
+    <h3>Proceso de Transferencia de Zona</h3>
+    <ol>
+        <li>El servidor secundario solicita una transferencia.</li>
+        <li>El servidor primario responde con la información completa o incremental.</li>
+        <li>El servidor secundario actualiza sus registros DNS.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h3>Mini-Quiz: Transferencias de Zona</h3>
+    <p>¿Cuál es el propósito principal de una zona secundaria?</p>
+    <ul>
+        <li>Aumentar la velocidad de respuesta.</li>
+        <li>Reducir el tráfico en la red primaria.</li>
+        <li>Proporcionar redundancia y disponibilidad.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Checklist: Configuración de Transferencia de Zona</h3>
+    <ul>
+        <li>Configurar el servidor primario para permitir transferencias.</li>
+        <li>Configurar el servidor secundario con la dirección del servidor primario.</li>
+        <li>Verificar los tiempos de actualización y autenticación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Actividad: Práctica de Transferencia de Zona</h3>
+    <p>Configurar una zona secundaria para replicar una zona primaria "example.com" en un entorno local.</p>
+</section>
+
+<section class="slide">
+    <h3>Resumen</h3>
+    <ul>
+        <li>Zonas primarias y secundarias son fundamentales para la distribución de DNS.</li>
+        <li>Transferencias de zona permiten mantener la consistencia entre servidores DNS.</li>
+        <li>Buenas prácticas y atención a los errores son cruciales para una configuración exitosa.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Normativa Relacionada</h3>
+    <p><strong>RFC 1035</strong>: Definición de los mensajes DNS.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0375 Servicios de red e Internet.md · Instalación y administración de servicios de nombres de dominio: → Zonas primarias y secundarias. Transferencias de zona.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 05:18:09</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

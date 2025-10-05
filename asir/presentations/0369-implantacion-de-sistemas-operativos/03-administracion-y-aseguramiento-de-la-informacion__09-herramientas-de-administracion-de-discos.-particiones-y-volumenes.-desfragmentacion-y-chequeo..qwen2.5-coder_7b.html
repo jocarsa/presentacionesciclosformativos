@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Herramientas de administración de discos. Particiones y volúmenes. Desfragmentación y chequeo. — Administración y aseguramiento de la información: — 0369 Implantación de sistemas operativos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="herramientas-de-administracion-de-discos.-particiones-y-volumenes.-desfragmentacion-y-chequeo.">
+<h1>Herramientas de administración de discos. Particiones y volúmenes. Desfragmentación y chequeo.</h1>
+<p><strong>Unidad:</strong> Administración y aseguramiento de la información:<br><strong>Documento:</strong> 0369 Implantación de sistemas operativos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Herramientas de administración de discos. Particiones y volúmenes. Desfragmentación y chequeo.</h1>
+    <p>Objetivo: Comprender las herramientas utilizadas para gestionar los discos duros, particionarlos, crear volúmenes y mantener la eficiencia del sistema operativo mediante desfragmentación y chequeo.</p>
+</section>
+
+<section class="slide">
+    <h2>Introducción a la administración de discos</h2>
+    <ul>
+        <li>Importancia de la gestión adecuada de los discos duros en sistemas operativos.</li>
+        <li>Diferencia entre particiones y volúmenes.</li>
+        <li>Herramientas comunes para administrar discos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Particiones de disco</h2>
+    <p>Una partición es una sección lógica dentro de un disco duro que contiene un sistema operativo o datos.</p>
+    <ul>
+        <li>Crea subsecciones en un solo disco para organizar mejor los datos.</li>
+        <li>Permite la instalación de múltiples sistemas operativos en el mismo disco.</li>
+        <li>Facilita la gestión del espacio de almacenamiento.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Volumenes lógicos (LVM)</h2>
+    <p>LVM es una tecnología que permite crear volúmenes virtuales a partir de múltiples discos físicos o particiones.</p>
+    <ul>
+        <li>Facilita la gestión dinámica del espacio de almacenamiento.</li>
+        <li>Permite el crecimiento y reducción flexible de los volúmenes.</li>
+        <li>Mejora la eficiencia en el uso del espacio de disco.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Desfragmentación de discos</h2>
+    <p>La desfragmentación reorganiza los archivos en un orden contiguo para mejorar el rendimiento del sistema operativo.</p>
+    <ul>
+        <li>Reduce el tiempo de acceso a los archivos.</li>
+        <li>Aumenta la velocidad general del sistema.</li>
+        <li>Es especialmente útil después de borrar muchos archivos o realizar cambios significativos en el sistema.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Chequeo de discos</h2>
+    <p>El chequeo de discos (también conocido como verificación de errores) busca y corrige problemas físicos en la superficie del disco.</p>
+    <ul>
+        <li>Detección y corrección de errores lógicos y físicos.</li>
+        <li>Mantiene el sistema operativo y los datos libres de corrupción.</li>
+        <li>Es recomendable realizarlo periódicamente, especialmente en discos con alta actividad.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Herramientas comunes para administración de discos</h2>
+    <ul>
+        <li><strong>Windows:</strong> Disk Management, Defragment and Optimize Drives.</li>
+        <li><strong>Linux:</strong> GParted, fdisk, mkfs, fsck.</li>
+        <li><strong>MacOS:</strong> Disk Utility.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo práctico: Creación de particiones en Linux</h2>
+    <p>Usando GParted, crea una nueva partición en un disco adicional para almacenar archivos adicionales.</p>
+    <ul>
+        <li>Abre GParted.</li>
+        <li>Selecciona el disco deseado.</li>
+        <li>Crea una nueva partición con los parámetros deseados.</li>
+        <li>Formatea la partición si es necesario.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo práctico: Desfragmentación en Windows</h2>
+    <p>Usando el Administrador de discos, desfragmenta una partición para mejorar su rendimiento.</p>
+    <ul>
+        <li>Abre el Administrador de discos.</li>
+        <li>Selecciona la partición a desfragmentar.</li>
+        <li>Haz clic en "Desfragmentar" y sigue las instrucciones.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo práctico: Chequeo de discos en MacOS</h2>
+    <p>Usando Disk Utility, verifica la integridad de un disco para detectar y corregir errores.</p>
+    <ul>
+        <li>Abre Disk Utility.</li>
+        <li>Selecciona el disco a verificar.</li>
+        <li>Haz clic en "Verificar" y sigue las instrucciones.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas de administración de discos</h2>
+    <ul>
+        <li>Realiza desfragmentación periódicamente, especialmente después de borrar muchos archivos.</li>
+        <li>Realiza chequeos de discos regularmente para detectar y corregir errores.</li>
+        <li>Crea particiones lógicas (LVM) en sistemas Linux para una gestión dinámica del espacio de almacenamiento.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes al administrar discos</h2>
+    <ul>
+        <li>No realizar desfragmentación o chequeo regularmente, lo que puede causar problemas de rendimiento y corrupción de datos.</li>
+        <li>Formatar incorrectamente una partición, lo que puede resultar en la pérdida de datos.</li>
+        <li>No tener suficiente espacio libre para realizar operaciones como desfragmentación o creación de nuevas particiones.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: Administración de discos</h2>
+    <p>¿Cuál es la principal ventaja de usar LVM en sistemas Linux?</p>
+    <ol>
+        <li>Aumenta la velocidad de acceso a los archivos.</li>
+        <li>Facilita el crecimiento y reducción flexible de los volúmenes.</li>
+        <li>Reduce el tiempo necesario para realizar operaciones de desfragmentación.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Administración de discos</h2>
+    <ul>
+        <li>Realizar desfragmentación periódicamente.</li>
+        <li>Realizar chequeos de discos regularmente.</li>
+        <li>Crear particiones lógicas (LVM) en sistemas Linux si es necesario.</li>
+        <li>No formatar incorrectamente una partición.</li>
+        <li>Tener suficiente espacio libre para realizar operaciones.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Creación de particiones en un sistema Linux virtual</h2>
+    <p>Crea una nueva partición en un disco adicional de un sistema Linux virtual y formatea la misma.</p>
+    <ol>
+        <li>Inicia el sistema Linux virtual.</li>
+        <li>Abre GParted.</li>
+        <li>Selecciona el disco deseado.</li>
+        <li>Crea una nueva partición con los parámetros deseados.</li>
+        <li>Formatea la partición si es necesario.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Resumen: Herramientas de administración de discos</h2>
+    <ul>
+        <li>Particiones y volúmenes lógicos (LVM) para organizar el espacio de almacenamiento.</li>
+        <li>Desfragmentación y chequeo de discos para mejorar el rendimiento y la integridad del sistema.</li>
+        <li>Herramientas comunes como Disk Management, GParted, fdisk, mkfs, fsck en diferentes sistemas operativos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección de datos y seguridad</h2>
+    <p>Es importante seguir las normativas de protección de datos al administrar discos, especialmente si se manejan datos sensibles.</p>
+    <ul>
+        <li>No realizar operaciones sin autorización.</li>
+        <li>Seguir políticas de seguridad internas.</li>
+        <li>Realizar copias de seguridad periódicas de los datos importantes.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Preguntas y dudas</h2>
+    <p>¿Tienes alguna pregunta o duda sobre la administración de discos? No dudes en preguntar.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0369 Implantación de sistemas operativos.md · Administración y aseguramiento de la información: → Herramientas de administración de discos. Particiones y volúmenes. Desfragmentación y chequeo.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-04 21:58:30</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

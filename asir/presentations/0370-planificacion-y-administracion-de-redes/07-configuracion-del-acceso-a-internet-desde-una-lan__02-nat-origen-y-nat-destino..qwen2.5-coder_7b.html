@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>NAT origen y NAT destino. — Configuración del acceso a Internet desde una LAN: — 0370 Planificación y administración de redes.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="nat-origen-y-nat-destino.">
+<h1>NAT origen y NAT destino.</h1>
+<p><strong>Unidad:</strong> Configuración del acceso a Internet desde una LAN:<br><strong>Documento:</strong> 0370 Planificación y administración de redes.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>NAT Origen y NAT Destino</h1>
+    <p>Objetivo: Comprender los conceptos básicos y aplicaciones de NAT origen y NAT destino.</p>
+</section>
+
+<section class="slide">
+    <h2>¿Qué es NAT?</h2>
+    <p>Network Address Translation (NAT) es una técnica que permite a múltiples dispositivos en una red local acceder a Internet mediante una única dirección IP pública.</p>
+</section>
+
+<section class="slide">
+    <h2>NAT Origen</h2>
+    <ul>
+        <li>Cambia la dirección de origen del paquete de datos.</li>
+        <li>El dispositivo interno (LAN) usa una dirección privada, mientras que el exterior usa una dirección pública.</li>
+        <li>Ejemplo: Un usuario en un hogar accede a Internet desde su computadora usando la dirección IP del router.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>NAT Destino</h2>
+    <ul>
+        <li>Cambia la dirección de destino del paquete de datos.</li>
+        <li>El dispositivo interno (LAN) puede acceder a servicios en Internet usando una dirección pública.</li>
+        <li>Ejemplo: Un servidor web en un hogar puede ser accesible desde Internet usando la dirección IP del router.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparación NAT Origen y NAT Destino</h2>
+    <table>
+        <tr>
+            <th>NAT Origen</th>
+            <th>NAT Destino</th>
+        </tr>
+        <tr>
+            <td>Cambia la dirección de origen.</td>
+            <td>Cambia la dirección de destino.</td>
+        </tr>
+        <tr>
+            <td>Dispositivos internos usan direcciones privadas.</td>
+            <td>Dispositivos internos pueden usar direcciones públicas.</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo Práctico: NAT Origen</h2>
+    <p>Un usuario en un hogar intenta acceder a Internet desde su computadora. El router traduce la dirección IP privada de la computadora al address IP pública del router.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo Práctico: NAT Destino</h2>
+    <p>Un servidor web en un hogar está configurado para recibir tráfico desde Internet. El router traduce la dirección IP pública a la dirección privada del servidor.</p>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas</h2>
+    <ul>
+        <li>Configurar NAT origen en todos los dispositivos para seguridad.</li>
+        <li>Usar firewalls para controlar el tráfico entrante y saliente.</li>
+        <li>Mantener actualizadas las firmas de seguridad del router.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes</h2>
+    <ul>
+        <li>No configurar NAT origen adecuadamente puede limitar el acceso a Internet.</li>
+        <li>No usar firewalls puede exponer la red a amenazas externas.</li>
+        <li>No mantener actualizadas las firmas de seguridad puede permitir ataques.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz</h2>
+    <p>¿Cuál es la diferencia entre NAT origen y NAT destino?</p>
+    <ol>
+        <li>NAT origen cambia la dirección de origen, mientras que NAT destino cambia la dirección de destino.</li>
+        <li>NAT origen usa direcciones privadas, mientras que NAT destino usa direcciones públicas.</li>
+        <li>La respuesta correcta es: A y B.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist</h2>
+    <ul>
+        <li>Configurar NAT origen en todos los dispositivos.</li>
+        <li>Usar firewalls para controlar el tráfico entrante y saliente.</li>
+        <li>Mantener actualizadas las firmas de seguridad del router.</li>
+        <li>Verificar la configuración de NAT regularmente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad</h2>
+    <p>Configurar NAT origen en un dispositivo local y verificar que el tráfico saliente sea correctamente traducido.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>NAT Origen cambia la dirección de origen del paquete.</li>
+        <li>NAT Destino cambia la dirección de destino del paquete.</li>
+        <li>Configurar NAT origen y usar firewalls es crucial para la seguridad.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa General</h2>
+    <p>La normativa vigente en cada país puede variar, pero generalmente se requiere la protección de datos personales y la seguridad de las redes.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0370 Planificación y administración de redes.md · Configuración del acceso a Internet desde una LAN: → NAT origen y NAT destino.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 01:28:46</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

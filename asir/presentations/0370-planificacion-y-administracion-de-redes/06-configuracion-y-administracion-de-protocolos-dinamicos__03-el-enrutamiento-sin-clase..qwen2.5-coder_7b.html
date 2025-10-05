@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>El enrutamiento sin clase. — Configuración y administración de protocolos dinámicos: — 0370 Planificación y administración de redes.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="el-enrutamiento-sin-clase.">
+<h1>El enrutamiento sin clase.</h1>
+<p><strong>Unidad:</strong> Configuración y administración de protocolos dinámicos:<br><strong>Documento:</strong> 0370 Planificación y administración de redes.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Configuración y administración de protocolos dinámicos</h1>
+    <p>Subunidad: El enrutamiento sin clase</p>
+    <p>Objetivo: Comprender los conceptos básicos del enrutamiento sin clase y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Enrutamiento sin clase (CIDR)</h2>
+    <ul>
+        <li>Clase A, B y no utilizadas</li>
+        <li>Uso de prefijos IP para definir redes</li>
+        <li>Más eficiente que el enrutamiento por clases</li>
+        <li>Permite una mayor flexibilidad en la asignación de direcciones IP</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de CIDR</h2>
+    <p>Red: 192.168.0.0/24</p>
+    <ul>
+        <li>254 direcciones IP disponibles para hosts</li>
+        <li>Subredes más pequeñas pueden ser creadas fácilmente</li>
+        <li>Ejemplo de subred: 192.168.0.0/27 (30 hosts)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Caso práctico</h2>
+    <p>Una empresa con 5 oficinas necesita conectarse a Internet.</p>
+    <ul>
+        <li>CIDR: 192.168.0.0/24</li>
+        <li>Oficina principal: 192.168.0.0/27</li>
+        <li>Oficina secundaria: 192.168.0.32/27</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Proceso de configuración CIDR</h2>
+    <ol>
+        <li>Determinar la cantidad total de direcciones IP necesarias</li>
+        <li>Elegir el prefijo adecuado para la red</li>
+        <li>Asignar subredes según las necesidades de los usuarios</li>
+        <li>Configurar los dispositivos de red con las nuevas direcciones CIDR</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas en CIDR</h2>
+    <ul>
+        <li>No asignar subredes muy pequeñas o grandes</li>
+        <li>Evitar la fragmentación de direcciones IP</li>
+        <li>Mantener un registro detallado de las direcciones asignadas</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes en CIDR</h2>
+    <ul>
+        <li>Asignar subredes que superan la capacidad disponible</li>
+        <li>No considerar las necesidades futuras de crecimiento</li>
+        <li>No documentar adecuadamente el plan de asignación de direcciones</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa con enrutamiento por clases</h2>
+    <table>
+        <tr>
+            <th></th>
+            <th>Enrutamiento por clases</th>
+            <th>CIDR</th>
+        </tr>
+        <tr>
+            <td>Eficiencia</td>
+            <td>Baja</td>
+            <td>Alta</td>
+        </tr>
+        <tr>
+            <td>Flexibilidad</td>
+            <td>Baja</td>
+            <td>Alta</td>
+        </tr>
+        <tr>
+            <td>Administración</td>
+            <td>Dificil</td>
+            <td>Fácil</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz</h2>
+    <p>¿Cuál es la ventaja principal del enrutamiento sin clase?</p>
+    <ul>
+        <li>a) Mayor eficiencia y flexibilidad</li>
+        <li>b) Menos direcciones IP disponibles</li>
+        <li>c) Dificultad en la administración</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist de configuración CIDR</h2>
+    <ol>
+        <li>Determinar el número total de direcciones IP necesarias</li>
+        <li>Elegir el prefijo CIDR adecuado</li>
+        <li>Asignar subredes según las necesidades</li>
+        <li>Configurar los dispositivos de red</li>
+        <li>Documentar la configuración</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Actividad práctica</h2>
+    <p>Asigne direcciones CIDR a las siguientes redes:</p>
+    <ul>
+        <li>10 usuarios en una oficina</li>
+        <li>50 usuarios en otra oficina</li>
+        <li>100 usuarios en la sede principal</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>El enrutamiento sin clase (CIDR) es una técnica eficiente y flexible para asignar direcciones IP.</li>
+        <li>Permite una mayor eficiencia en la administración de redes.</li>
+        <li>Es recomendable utilizar CIDR en lugar del enrutamiento por clases para nuevas implementaciones.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa general</h2>
+    <p>La normativa ISO/IE 30109 establece las mejores prácticas para la administración de redes IP, incluyendo el uso de CIDR.</p>
+</section>
+
+<section class="slide" data-id="extra-conceptos-clave-ampliacion-0">
+<h2>Conceptos clave (ampliación)</h2>
+<p>Profundiza en los fundamentos de <strong>El enrutamiento sin clase.</strong> con definiciones operativas y límites de aplicación.</p><ul><li>Concepto A vs B</li><li>Variables implicadas</li><li>Supuestos habituales</li><li>Cuándo NO aplicar</li></ul>
+
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0370 Planificación y administración de redes.md · Configuración y administración de protocolos dinámicos: → El enrutamiento sin clase.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 00:47:10</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

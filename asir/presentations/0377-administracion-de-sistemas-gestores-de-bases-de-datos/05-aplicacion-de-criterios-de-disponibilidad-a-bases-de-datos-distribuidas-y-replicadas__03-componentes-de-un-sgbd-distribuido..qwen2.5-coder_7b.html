@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Componentes de un SGBD distribuido. — Aplicación de criterios de disponibilidad a bases de datos distribuidas y replicadas: — 0377 Administración de sistemas gestores de bases de datos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="componentes-de-un-sgbd-distribuido.">
+<h1>Componentes de un SGBD distribuido.</h1>
+<p><strong>Unidad:</strong> Aplicación de criterios de disponibilidad a bases de datos distribuidas y replicadas:<br><strong>Documento:</strong> 0377 Administración de sistemas gestores de bases de datos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Aplicación de criterios de disponibilidad a bases de datos distribuidas y replicadas</h1>
+    <p><strong>Objetivo:</strong> Comprender los componentes de un SGBD distribuido y su impacto en la disponibilidad.</p>
+</section>
+
+<section class="slide">
+    <h2>Definición de SGBD Distribuido</h2>
+    <p>Sistema de Gestión de Bases de Datos (SGBD) que opera sobre múltiples nodos físicos o geográficamente distribuidos.</p>
+</section>
+
+<section class="slide">
+    <h2>Componentes Clave de un SGBD Distribuido</h2>
+    <ul>
+        <li><strong>Nodos:</strong> Componentes físicos que almacenan y procesan datos.</li>
+        <li><strong>Interfaz de Usuario (UI):</strong> Herramientas para interactuar con el SGBD.</li>
+        <li><strong>Controlador Distribuido:</strong> Coordinación entre los nodos.</li>
+        <li><strong>Bases de Datos Replicadas:</strong> Copias de las bases de datos en diferentes ubicaciones.</li>
+        <li><strong>Protocolos de Comunicación:</strong> Estándares para la interacción entre nodos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de SGBD Distribuido</h2>
+    <p><strong>Apache HBase:</strong> Sistema distribuido basado en Google Bigtable, utilizado para grandes conjuntos de datos.</p>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico: Implementación de Replicación</h2>
+    <p>Implementar replicación de bases de datos para garantizar la disponibilidad y redundancia en un SGBD distribuido.</p>
+</section>
+
+<section class="slide">
+    <h2>Proceso de Configuración de Replicación</h2>
+    <ol>
+        <li>Configurar los nodos del SGBD.</li>
+        <li>Especificar las bases de datos a replicar.</li>
+        <li>Definir la estrategia de replicación (sincrónica, asincrónica).</li>
+        <li>Configurar los protocolos de comunicación entre nodos.</li>
+        <li>Verificar la configuración y pruebas de funcionamiento.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas en SGBD Distribuidos</h2>
+    <ul>
+        <li>Monitoreo continuo del estado de los nodos.</li>
+        <li>Implementación de políticas de mantenimiento y actualización.</li>
+        <li>Seguridad robusta para proteger los datos.</li>
+        <li>Optimización de rendimiento en la replicación.</li>
+        <li>Planificación de contingencias para fallos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en SGBD Distribuidos</h2>
+    <ul>
+        <li>Fallos en la sincronización entre nodos.</li>
+        <li>Inconsistencias de datos debido a la replicación asincrónica.</li>
+        <li>Problemas de rendimiento debidos a la sobrecarga de comunicación.</li>
+        <li>Configuraciones incorrectas que afectan la disponibilidad.</li>
+        <li>Falta de monitoreo y mantenimiento adecuado.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: SGBD Distribuido vs. SGBD Centralizado</h2>
+    <table>
+        <tr>
+            <th>SGBD Distribuido</th>
+            <th>SGBD Centralizado</th>
+        </tr>
+        <tr>
+            <td>Múltiples nodos físicos.</td>
+            <td>Un solo nodo central.</td>
+        </tr>
+        <tr>
+            <td>Mayor escalabilidad y disponibilidad.</td>
+            <td>Menor escalabilidad, pero menor costo de mantenimiento.</td>
+        </tr>
+        <tr>
+            <td>Requiere más configuración y gestión.</td>
+            <td>Simpler en su implementación y operación.</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Componentes de un SGBD Distribuido</h2>
+    <p>¿Cuáles son los componentes principales de un SGBD distribuido?</p>
+    <ol>
+        <li>Nodos</li>
+        <li>Interfaz de Usuario (UI)</li>
+        <li>Controlador Distribuido</li>
+        <li>Bases de Datos Replicadas</li>
+        <li>Protocolos de Comunicación</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Configuración de Replicación en SGBD Distribuidos</h2>
+    <ul>
+        <li>Configurar los nodos correctamente.</li>
+        <li>Especificar las bases de datos a replicar.</li>
+        <li>Definir la estrategia de replicación (sincrónica, asincrónica).</li>
+        <li>Configurar los protocolos de comunicación entre nodos.</li>
+        <li>Verificar la configuración y pruebas de funcionamiento.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Diseño de un Plan de Replicación</h2>
+    <p>Diseña un plan de replicación para una base de datos distribuida, considerando la disponibilidad y rendimiento.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <p><strong>Componentes clave:</strong> Nodos, UI, Controlador Distribuido, Bases de Datos Replicadas, Protocolos de Comunicación.</p>
+    <p><strong>Buenas prácticas:</strong> Monitoreo, seguridad, optimización, mantenimiento.</p>
+</section>
+
+<section class="slide">
+    <h2>Normativa y Regulaciones Relevantes</h2>
+    <ul>
+        <li>Reglamento General de Protección de Datos (RGPD)</li>
+        <li>Normas de disponibilidad y continuidad empresarial</li>
+        <li>Estándares de seguridad informática</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Preguntas Frecuentes</h2>
+    <ol>
+        <li>¿Qué es un SGBD distribuido?</li>
+        <li>Cómo se configura la replicación en un SGBD distribuido?</li>
+        <li>Qué errores comunes pueden surgir en un SGBD distribuido?</li>
+        <li>¿Cuáles son las principales diferencias entre SGBD distribuidos y centralizados?</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Recursos Adicionales</h2>
+    <ul>
+        <li><a href="https://www.oracle.com/database/technologies/appdev/db-distributed.html">Oracle Database Distributed</a></li>
+        <li><a href="https://hbase.apache.org/">Apache HBase Documentation</a></li>
+        <li><a href="https://docs.microsoft.com/en-us/sql/sql-server/failover-clusters/high-availability-solutions-sql-server?view=sql-server-ver15">SQL Server High Availability</a></li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Gracias por su atención</h2>
+    <p>Preguntas y comentarios son bienvenidos.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0377 Administración de sistemas gestores de bases de datos.md · Aplicación de criterios de disponibilidad a bases de datos distribuidas y replicadas: → Componentes de un SGBD distribuido.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 09:46:21</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

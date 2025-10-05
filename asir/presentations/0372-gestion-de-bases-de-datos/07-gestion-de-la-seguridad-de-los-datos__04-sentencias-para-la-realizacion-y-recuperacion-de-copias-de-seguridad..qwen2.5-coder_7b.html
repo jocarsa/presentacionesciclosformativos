@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Sentencias para la realización y recuperación de copias de seguridad. — Gestión de la seguridad de los datos: — 0372 Gestión de bases de datos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="sentencias-para-la-realizacion-y-recuperacion-de-copias-de-seguridad.">
+<h1>Sentencias para la realización y recuperación de copias de seguridad.</h1>
+<p><strong>Unidad:</strong> Gestión de la seguridad de los datos:<br><strong>Documento:</strong> 0372 Gestión de bases de datos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Sentencias para la realización y recuperación de copias de seguridad</h1>
+    <p>Objetivo: Aprender las sentencias SQL necesarias para crear, realizar y restaurar copias de seguridad en una base de datos.</p>
+</section>
+
+<section class="slide">
+    <h2>Concepto de Copia de Seguridad</h2>
+    <p>Copia de seguridad es un proceso que crea una copia exacta de los datos almacenados en una base de datos.</p>
+    <ul>
+        <li>Propósito: Protección contra pérdidas de datos y recuperación ante desastres.</li>
+        <li>Tipo de Copias:</li>
+        <ul>
+            <li>Copia completa</li>
+            <li>Copia diferencial</li>
+            <li>Copia incremental</li>
+        </ul>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comando SQL para Crear una Copia de Seguridad</h2>
+    <p>Se utiliza el comando <code>BACKUP DATABASE</code>.</p>
+    <pre><code>BACKUP DATABASE nombre_base_de_datos TO DISK = 'ruta/del/archivo.bak'</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Creación de Copia de Seguridad</h2>
+    <pre><code>BACKUP DATABASE MiBaseDeDatos TO DISK = ':\Backups\MiBaseDeDatos.bak'</code></pre>
+    <p>Este comando crea una copia completa de la base de datos "MiBaseDeDatos" en el archivo "MiBaseDeDatos.bak" ubicado en:\Backups.</p>
+</section>
+
+<section class="slide">
+    <h2>Comando SQL para Realizar una Recuperación de Seguridad</h2>
+    <p>Se utiliza el comando <code>RESTORE DATABASE</code>.</p>
+    <pre><code>RESTORE DATABASE nombre_base_de_datos FROM DISK = 'ruta/del/archivo.bak'</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Recuperación de Seguridad</h2>
+    <pre><code>RESTORE DATABASE MiBaseDeDatos FROM DISK = ':\Backups\MiBaseDeDatos.bak'</code></pre>
+    <p>Este comando restaura la base de datos "MiBaseDeDatos" desde el archivo "MiBaseDeDatos.bak" ubicado en:\Backups.</p>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas para Copias de Seguridad</h2>
+    <ul>
+        <li>Realizar copias de seguridad periódicamente (diariamente, semanalmente).</li>
+        <li>Almacenar copias de seguridad en ubicaciones seguras y separadas.</li>
+        <li>Probar regularmente la recuperación para asegurar su funcionamiento.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes al Manejar Copias de Seguridad</h2>
+    <ul>
+        <li>No realizar copias de seguridad periódicamente.</li>
+        <li>Almacenar copias de seguridad en la misma ubicación que los datos originales.</li>
+        <li>No probar regularmente la recuperación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico: Recuperación Post-Desastre</h2>
+    <p>Un negocio sufrió un desastre y necesita restaurar sus datos desde una copia de seguridad.</p>
+    <ol>
+        <li>Identificar la ubicación de la copia de seguridad.</li>
+        <li>Ejecutar el comando de recuperación SQL.</li>
+        <li>Verificar que los datos se hayan restaurado correctamente.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Comandos de Copia de Seguridad</h2>
+    <p>¿Cuál comando SQL se utiliza para crear una copia de seguridad?</p>
+    <ul>
+        <li>A) CREATE BACKUP</li>
+        <li>B) BACKUP DATABASE</li>
+        <li>C) SAVE DATABASE</li>
+        <li>D) COPY DATABASE</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist de Copias de Seguridad</h2>
+    <ul>
+        <li>¿Se ha realizado una copia de seguridad recientemente?</li>
+        <li>¿La copia de seguridad se almacena en un lugar seguro?</li>
+        <li>¿Se ha probado la recuperación desde la copia de seguridad?</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Crear una Copia de Seguridad</h2>
+    <p>Crea una copia de seguridad de tu base de datos local utilizando el comando SQL.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Comandos SQL para crear y restaurar copias de seguridad.</li>
+        <li>Buenas prácticas y errores comunes en la gestión de copias de seguridad.</li>
+        <li>Caso práctico y mini-quiz para aplicar lo aprendido.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa Relacionada</h2>
+    <p>Normativas como GDPR, HIPAA y PCI DSS requieren la gestión adecuada de copias de seguridad para proteger datos sensibles.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0372 Gestión de bases de datos.md · Gestión de la seguridad de los datos: → Sentencias para la realización y recuperación de copias de seguridad.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 02:42:12</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

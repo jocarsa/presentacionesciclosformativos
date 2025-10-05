@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Gestores de arranque. — Instalación de software libre y propietario: — 0369 Implantación de sistemas operativos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="gestores-de-arranque.">
+<h1>Gestores de arranque.</h1>
+<p><strong>Unidad:</strong> Instalación de software libre y propietario:<br><strong>Documento:</strong> 0369 Implantación de sistemas operativos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Gestores de arranque</h1>
+    <p>Objetivo: Comprender los conceptos básicos y funcionamiento de los gestores de arranque en sistemas operativos.</p>
+</section>
+
+<section class="slide">
+    <h2>¿Qué es un gestor de arranque?</h2>
+    <p>Un gestor de arranque (bootloader) es el software que se ejecuta primero cuando enciende una computadora. Su principal función es cargar el sistema operativo en la memoria RAM para su ejecución.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplos de gestores de arranque</h2>
+    <ul>
+        <li>GRUB (GRand Unified Bootloader)</li>
+        <li>UEFI (Unified Extensible Firmware Interface)</li>
+        <li>rEFInd</li>
+        <li>LILO (Linux Loader)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Funciones principales de un gestor de arranque</h2>
+    <ul>
+        <li>Carga del sistema operativo</li>
+        <li>Presentación de opciones de arranque</li>
+        <li>Verificación de la integridad del sistema</li>
+        <li>Configuración de parámetros de arranque</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa entre GRUB y UEFI</h2>
+    <table>
+        <tr>
+            <th>GRUB</th>
+            <th>UEFI</th>
+        </tr>
+        <tr>
+            <td>Software de nivel BIOS</td>
+            <td>Especificación de hardware</td>
+        </tr>
+        <tr>
+            <td>Sistema de arranque independiente</td>
+            <td>Dependiente del firmware del sistema</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas al configurar un gestor de arranque</h2>
+    <ul>
+        <li>Verificar la integridad del bootloader</li>
+        <li>Configurar opciones de seguridad</li>
+        <li>Manter actualizaciones del bootloader</li>
+        <li>Crear respaldos regulares</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes al trabajar con gestores de arranque</h2>
+    <ul>
+        <li>No tener un respaldo antes de realizar cambios</li>
+        <li>Ignorar advertencias del bootloader</li>
+        <li>No conocer los parámetros de configuración</li>
+        <li>Instalar el sistema operativo en la misma partición que el bootloader</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Caso práctico: Problema con GRUB</h2>
+    <p>Un usuario reporta que no puede arrancar su sistema después de instalar una nueva versión del gestor de arranque. ¿Qué pasó y cómo solucionarlo?</p>
+</section>
+
+<section class="slide">
+    <h2>Proceso para resolver problemas con GRUB</h2>
+    <ol>
+        <li>Reiniciar el sistema en modo de recuperación</li>
+        <li>Acceder a la consola del bootloader</li>
+        <li>Seleccionar la opción correcta de arranque</li>
+        <li>Reinstalar GRUB si es necesario</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: Identificar el gestor de arranque</h2>
+    <p>¿Cuál de los siguientes es un ejemplo de gestor de arranque?</p>
+    <ul>
+        <li>a) Windows Boot Manager</li>
+        <li>b) BIOS</li>
+        <li>c) UEFI Shell</li>
+        <li>d) GRUB</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist para la instalación de un gestor de arranque</h2>
+    <ol>
+        <li>Verificar el tipo de firmware del sistema</li>
+        <li>Descargar el gestor de arranque adecuado</li>
+        <li>Crear una partición de arranque (si es necesario)</li>
+        <li>Escribir el bootloader en la partición de arranque</li>
+        <li>Configurar opciones básicas</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Configuración básica de GRUB</h2>
+    <p>Instala y configura GRUB en tu sistema. Asegúrate de crear una entrada para cada sistema operativo instalado.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Gestores de arranque son software que cargan el sistema operativo al encender la computadora.</li>
+        <li>GRUB y UEFI son ejemplos populares de gestores de arranque.</li>
+        <li>Buenas prácticas incluyen respaldos, configuración segura y actualizaciones regulares.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa</h2>
+    <p>No hay normativas específicas sobre gestores de arranque en sistemas operativos. Sin embargo, es importante seguir buenas prácticas para garantizar la seguridad y funcionalidad del sistema.</p>
+</section>
+
+<section class="slide">
+    <h2>Recursos adicionales</h2>
+    <ul>
+        <li><a href="https://www.gnu.org/software/grub/">Documentación oficial de GRUB</a></li>
+        <li><a href="https://uefi.org/specifications">UEFI Specification</a></li>
+        <li><a href="https://wiki.archlinux.org/title/GRUB">Guía de Arch Linux sobre GRUB</a></li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Preguntas y discusión</h2>
+    <p>¿Tienes alguna pregunta o duda sobre gestores de arranque? ¡No dudes en preguntar!</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0369 Implantación de sistemas operativos.md · Instalación de software libre y propietario: → Gestores de arranque.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-04 21:31:30</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

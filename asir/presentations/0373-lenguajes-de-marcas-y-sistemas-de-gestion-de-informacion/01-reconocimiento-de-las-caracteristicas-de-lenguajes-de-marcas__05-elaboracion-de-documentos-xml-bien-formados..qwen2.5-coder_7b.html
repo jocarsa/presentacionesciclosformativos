@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Elaboración de documentos XML bien formados. — Reconocimiento de las características de lenguajes de marcas: — 0373 Lenguajes de marcas y sistemas de gestión de información.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="elaboracion-de-documentos-xml-bien-formados.">
+<h1>Elaboración de documentos XML bien formados.</h1>
+<p><strong>Unidad:</strong> Reconocimiento de las características de lenguajes de marcas:<br><strong>Documento:</strong> 0373 Lenguajes de marcas y sistemas de gestión de información.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Reconocimiento de las características de lenguajes de marcas</h1>
+    <p>Objetivo: Comprender los principios básicos para la elaboración de documentos bien formados.</p>
+</section>
+
+<section class="slide">
+    <h2>Definición de Lenguaje de Marcas</h2>
+    <p>Un lenguaje de marcas es un conjunto de reglas que define cómo estructurar y presentar información en formato digital.</p>
+</section>
+
+<section class="slide">
+    <h2>Estructura Básica de</h2>
+    <ul>
+        <li><strong>Declaración del Prologo:</strong> Indica la versión de y el tipo de codificación.</li>
+        <li><strong>Elementos:</strong> Representan partes de la información, definidos por etiquetas.</li>
+        <li><strong>Atributos:</strong> Propiedades asociadas a los elementos.</li>
+        <li><strong>Texto:</strong> Contenido dentro de los elementos.</li>
+        <li><strong>Comentarios:</strong> Información no procesada por el parser.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Documento</h2>
+    <pre><code>&lt;? version="1.0" encoding="UTF-8"?&gt;
+&lt;libro&gt;
+    &lt;título&gt;El Señor de los Anillos&lt;/título&gt;
+    &lt;autor&gt;J.R.R. Tolkien&lt;/autor&gt;
+    &lt;año&gt;1954&lt;/año&gt;
+&lt;/libro&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Reglas de Bien Formación</h2>
+    <ul>
+        <li><strong>Cierre de Etiquetas:</strong> Todos los elementos deben cerrarse.</li>
+        <li><strong>Anidamiento Correcto:</strong> Los elementos deben estar correctamente anidados.</li>
+        <li><strong>No Duplicidad de Atributos:</strong> No se pueden repetir atributos en el mismo elemento.</li>
+        <li><strong>No Espacios en Etiquetas:</strong> No hay espacios ni caracteres especiales dentro de las etiquetas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Documento Mal Formado</h2>
+    <pre><code>&lt;? version="1.0" encoding="UTF-8"?&gt;
+&lt;libro&gt;
+    &lt;título&gt;El Señor de los Anillos&lt;/título
+    &lt;autor&gt;J.R.R. Tolkien&lt;/autor&gt;
+    &lt;año&gt;1954&lt;/año&gt;
+&lt;/libro&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en</h2>
+    <ul>
+        <li>Cierre de etiquetas incorrecto.</li>
+        <li>Anidamiento incorrecto.</li>
+        <li>Duplicidad de atributos.</li>
+        <li>Espacios o caracteres especiales dentro de las etiquetas.</li>
+        <li>Declaración del prologo incompleta o incorrecta.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas en</h2>
+    <ul>
+        <li>Usar nombres de elementos y atributos descriptivos.</li>
+        <li>Mantener la indentación para mejorar la legibilidad.</li>
+        <li>Evitar caracteres especiales en el texto, usar entidades si es necesario.</li>
+        <li>Comentar partes del código que no sean necesarias.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Identificación de Errores</h2>
+    <p>¿Cuáles de los siguientes documentos están bien formados?</p>
+    <ol>
+        <li>&lt;? version="1.0" encoding="UTF-8"?&gt;&lt;libro&gt;&lt;título&gt;El Señor de los Anillos&lt;/título&gt;&lt;/libro&gt;</li>
+        <li>&lt;? version="1.0" encoding="UTF-8"?&gt;&lt;libro&gt;&lt;título&gt;El Señor de los Anillos&lt;/título&gt;&lt;/libro&gt;</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist para la Bien Formación de</h2>
+    <ul>
+        <li>Cierre correcto de todas las etiquetas.</li>
+        <li>Anidamiento correcto y lógico.</li>
+        <li>No duplicidad de atributos en el mismo elemento.</li>
+        <li>No espacios ni caracteres especiales dentro de las etiquetas.</li>
+        <li>Declaración del prologo completa y correcta.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejercicios Prácticos</h2>
+    <p>Construye un documento que represente una lista de tareas con los siguientes elementos:</p>
+    <ul>
+        <li>Título de la tarea.</li>
+        <li>Descripción de la tarea.</li>
+        <li>Fecha de vencimiento.</li>
+        <li>Estatus (completado/incompleto).</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <p>Para elaborar documentos bien formados:</p>
+    <ul>
+        <li>Conocer las reglas básicas de estructura.</li>
+        <li>Evitar errores comunes y seguir buenas prácticas.</li>
+        <li>Usar herramientas de validación para verificar la correcta formación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa Relacionada</h2>
+    <p> es un estándar abierto y no requiere normativas específicas, pero se debe seguir las mejores prácticas recomendadas por la comunidad.</p>
+</section>
+
+<section class="slide">
+    <h2>Recursos Adicionales</h2>
+    <ul>
+        <li><a href="https://www.w3schools.com/xml/">W3Schools Tutorial</a></li>
+        <li><a href="https://www.xml.com/">.com</a></li>
+        <li><a href="https://validator.w3.org/"> Validator</a></li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conclusión</h2>
+    <p>La bien formación de documentos es crucial para su correcto procesamiento y análisis en sistemas informáticos.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0373 Lenguajes de marcas y sistemas de gestión de información.md · Reconocimiento de las características de lenguajes de marcas: → Elaboración de documentos XML bien formados.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 02:50:26</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

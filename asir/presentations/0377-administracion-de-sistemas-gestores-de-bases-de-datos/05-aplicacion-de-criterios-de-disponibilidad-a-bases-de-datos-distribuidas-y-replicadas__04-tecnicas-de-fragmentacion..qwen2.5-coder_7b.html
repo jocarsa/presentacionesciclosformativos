@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Técnicas de fragmentación. — Aplicación de criterios de disponibilidad a bases de datos distribuidas y replicadas: — 0377 Administración de sistemas gestores de bases de datos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="tecnicas-de-fragmentacion.">
+<h1>Técnicas de fragmentación.</h1>
+<p><strong>Unidad:</strong> Aplicación de criterios de disponibilidad a bases de datos distribuidas y replicadas:<br><strong>Documento:</strong> 0377 Administración de sistemas gestores de bases de datos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Técnicas de Fragmentación en Bases de Datos Distribuidas y Replicadas</h1>
+    <p>Objetivo: Comprender los conceptos básicos y técnicas de fragmentación para mejorar la disponibilidad y rendimiento de las bases de datos distribuidas y replicadas.</p>
+</section>
+
+<section class="slide">
+    <h2>Definición de Fragmentación</h2>
+    <p>Fragmentación es el proceso de dividir una tabla o conjunto de datos en partes más pequeñas, conocidas como fragmentos, que se almacenan en diferentes ubicaciones del sistema.</p>
+</section>
+
+<section class="slide">
+    <h2>Tipos de Fragmentación</h2>
+    <ul>
+        <li>Fragmentación Vertical (Columnar)</li>
+        <li>Fragmentación Horizontal (Filas)</li>
+        <li>Fragmentación Distribuida</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Fragmentación Vertical (Columnar)</h2>
+    <p>Divide una tabla en varias tablas más pequeñas, cada una con un subconjunto de columnas.</p>
+    <img src="fragmentacion_vertical.png" alt="Fragmentación Vertical">
+</section>
+
+<section class="slide">
+    <h2>Fragmentación Horizontal (Filas)</h2>
+    <p>Divide los datos de una tabla en varias tablas más pequeñas, cada una con un subconjunto de filas.</p>
+    <img src="fragmentacion_horizontal.png" alt="Fragmentación Horizontal">
+</section>
+
+<section class="slide">
+    <h2>Fragmentación Distribuida</h2>
+    <p>Distribuye los datos en diferentes nodos o servidores, cada uno con una copia de la tabla.</p>
+    <img src="fragmentacion_distribuida.png" alt="Fragmentación Distribuida">
+</section>
+
+<section class="slide">
+    <h2>Beneficios de la Fragmentación</h2>
+    <ul>
+        <li>Mejora el rendimiento al reducir el tamaño de los conjuntos de datos procesados.</li>
+        <li>Aumenta la disponibilidad al distribuir los datos en múltiples ubicaciones.</li>
+        <li>Facilita la escalabilidad horizontal del sistema.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Casos de Uso</h2>
+    <ul>
+        <li>Bases de datos grandes y complejas.</li>
+        <li>Sistemas con alta carga de lectura y escritura.</li>
+        <li>Aplicaciones que requieren alta disponibilidad.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo Práctico</h2>
+    <p>Una base de datos de comercio electrónico con millones de registros de ventas y clientes.</p>
+    <img src="ejemplo_comercio_electronico.png" alt="Ejemplo Comercio Electrónico">
+</section>
+
+<section class="slide">
+    <h2>Desafíos de la Fragmentación</h2>
+    <ul>
+        <li>Manejo complejo de las consultas que implican múltiples fragmentos.</li>
+        <li>Costo adicional en términos de hardware y mantenimiento.</li>
+        <li>Potencial inconsistencia entre los fragmentos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas</h2>
+    <ul>
+        <li>Definir claramente las reglas de fragmentación.</li>
+        <li>Monitorear y optimizar el rendimiento regularmente.</li>
+        <li>Implementar políticas de replicación adecuadas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes</h2>
+    <ul>
+        <li>No definir reglas de fragmentación adecuadas.</li>
+        <li>No monitorear el rendimiento y optimizarlo.</li>
+        <li>No implementar políticas de replicación eficientes.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa con Otras Técnicas</h2>
+    <table>
+        <tr>
+            <th>Técnica</th>
+            <th>Ventajas</th>
+            <th>Inventajas</th>
+        </tr>
+        <tr>
+            <td>Replicación</td>
+            <td>Mejora la disponibilidad y redundancia.</td>
+            <td>Puede generar inconsistencias si no se gestiona adecuadamente.</td>
+        </tr>
+        <tr>
+            <td>Copias Calientes</td>
+            <td>Facilita el acceso a los datos en caso de fallo.</td>
+            <td>No distribuye la carga de trabajo eficientemente.</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz</h2>
+    <p>¿Qué tipo de fragmentación se utiliza cuando los datos son distribuidos en múltiples nodos o servidores?</p>
+    <ol>
+        <li>Fragmentación Vertical</li>
+        <li>Fragmentación Horizontal</li>
+        <li>Fragmentación Distribuida</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist de Implementación</h2>
+    <ul>
+        <li>Definir las reglas de fragmentación.</li>
+        <li>Diseñar el esquema de fragmentación.</li>
+        <li>Implementar la replicación adecuada.</li>
+        <li>Monitorear y optimizar el rendimiento.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad Práctica</h2>
+    <p> Diseña un esquema de fragmentación para una base de datos de una tienda en línea que almacene información sobre productos, clientes y pedidos.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <p>La fragmentación es una técnica crucial para mejorar la disponibilidad y rendimiento de las bases de datos distribuidas y replicadas. Permite dividir los datos en partes más pequeñas, facilitando el acceso y escalabilidad.</p>
+</section>
+
+<section class="slide">
+    <h2>Normativa General</h2>
+    <p>No existe una normativa específica para la fragmentación de bases de datos. Sin embargo, es importante seguir buenas prácticas y monitorear regularmente el rendimiento del sistema.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0377 Administración de sistemas gestores de bases de datos.md · Aplicación de criterios de disponibilidad a bases de datos distribuidas y replicadas: → Técnicas de fragmentación.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 09:47:21</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

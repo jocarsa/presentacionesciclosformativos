@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Asignaciones. Tipos. — Instalación y administración de servicios de configuración automática de red: — 0375 Servicios de red e Internet.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="asignaciones.-tipos.">
+<h1>Asignaciones. Tipos.</h1>
+<p><strong>Unidad:</strong> Instalación y administración de servicios de configuración automática de red:<br><strong>Documento:</strong> 0375 Servicios de red e Internet.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Instalación y administración de servicios de configuración automática de red</h1>
+    <p><strong>Objetivo:</strong> Comprender los tipos de asignaciones en la configuración automática de redes.</p>
+</section>
+
+<section class="slide">
+    <h2>Tipos de Asignaciones en Configuración Automática de Red</h2>
+    <ul>
+        <li><strong>Dinámica:</strong> Asignadas automáticamente por un servidor DHCP.</li>
+        <li><strong>Estatica:</strong> Configuradas manualmente por el usuario.</li>
+        <li><strong>Automática con DNS:</strong> Asignación de IP y configuración de DNS.</li>
+        <li><strong>Manual con DNS:</strong> Configuración manual de IP y DNS.</li>
+        <li><strong>Asignación basada en MAC:</strong> Asignación única a dispositivos según su dirección MAC.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Asignación Dinámica</h2>
+    <p>Cuando un dispositivo se conecta a una red, solicita una IP al servidor DHCP. El servidor asigna una IP disponible y proporciona otros parámetros como la puerta de enlace y el DNS.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Asignación Estática</h2>
+    <p>El usuario configura manualmente la dirección IP, la máscara de subred, la puerta de enlace y los servidores DNS. Esto se hace generalmente en dispositivos que no cambian su ubicación.</p>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico: Asignación Automática con DNS</h2>
+    <p>Un dispositivo se conecta a una red y solicita una IP. El servidor DHCP también proporciona la configuración de DNS para que el dispositivo pueda acceder a Internet.</p>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico: Asignación Manual con DNS</h2>
+    <p>Un usuario configura manualmente su dirección IP y los servidores DNS. Esto es útil en entornos donde se requiere una configuración específica para el acceso a Internet.</p>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas: Asignaciones Dinámicas</h2>
+    <ul>
+        <li>Reducción de errores humanos al no tener que asignar manualmente IPs.</li>
+        <li>Facilita la gestión de dispositivos móviles y remotos.</li>
+        <li>Evita conflictos IP ya que las direcciones se asignan automáticamente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas: Asignaciones Estáticas</h2>
+    <ul>
+        <li>Proporciona una dirección IP constante para dispositivos estáticos.</li>
+        <li>Facilita la configuración de servicios que requieren una IP fija.</li>
+        <li>Permite la creación de políticas de red más específicas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en Asignaciones Dinámicas</h2>
+    <ul>
+        <li>No tener suficientes direcciones IP disponibles en el servidor DHCP.</li>
+        <li>Solicitar una IP que ya está asignada a otro dispositivo.</li>
+        <li>No configurar correctamente los parámetros de puerta de enlace y DNS.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en Asignaciones Estáticas</h2>
+    <ul>
+        <li>Duplicar la dirección IP con otro dispositivo.</li>
+        <li>No configurar correctamente la máscara de subred.</li>
+        <li>No tener acceso a Internet debido a errores en la configuración de DNS.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: Asignaciones Dinámicas vs Estáticas</h2>
+    <table>
+        <tr>
+            <th></th>
+            <th>Dinámica</th>
+            <th>Estática</th>
+        </tr>
+        <tr>
+            <td>Control del usuario</td>
+            <td>Bajo</td>
+            <td>Alto</td>
+        </tr>
+        <tr>
+            <td>Facilidad de gestión</td>
+            <td>Alta</td>
+            <td>Baja</td>
+        </tr>
+        <tr>
+            <td>Potencial conflictos IP</td>
+            <td>Sí</td>
+            <td>No</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Tipos de Asignaciones</h2>
+    <p>¿Cuál es la principal ventaja de las asignaciones dinámicas?</p>
+    <ul>
+        <li><input type="radio" name="quiz"> Reducción de errores humanos.</li>
+        <li><input type="radio" name="quiz"> Facilita la gestión de dispositivos móviles y remotos.</li>
+        <li><input type="radio" name="quiz"> Proporciona una dirección IP constante para dispositivos estáticos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Configuración de Asignaciones Dinámicas</h1>
+    <ul>
+        <li>Configurar el servidor DHCP.</li>
+        <li>Asignar una IP a un dispositivo.</li>
+        <li>Verificar la configuración de puerta de enlace y DNS.</li>
+        <li>Probar el acceso a Internet.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Configuración de Asignaciones Estáticas</h1>
+    <ul>
+        <li>Configurar la dirección IP manualmente.</li>
+        <li>Configurar la máscara de subred.</li>
+        <li>Configurar los servidores DNS.</li>
+        <li>Probar el acceso a Internet.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Configuración de Asignaciones Dinámicas</h2>
+    <p>Realizar la configuración de una máquina virtual para que obtenga su dirección IP automáticamente.</p>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Configuración de Asignaciones Estáticas</h2>
+    <p>Configurar manualmente la dirección IP, máscara de subred y servidores DNS en una máquina virtual.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Dinámica: Asignada automáticamente por DHCP.</li>
+        <li>Estática: Configurada manualmente por el usuario.</li>
+        <li>Tipos adicionales: Automática con DNS, Manual con DNS, Basada en MAC.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa General</h2>
+    <p><strong>Reglamento Electrónico de Telecomunicaciones (RET):</strong> Establece las normas para la configuración y gestión de redes.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0375 Servicios de red e Internet.md · Instalación y administración de servicios de configuración automática de red: → Asignaciones. Tipos.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 05:23:22</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

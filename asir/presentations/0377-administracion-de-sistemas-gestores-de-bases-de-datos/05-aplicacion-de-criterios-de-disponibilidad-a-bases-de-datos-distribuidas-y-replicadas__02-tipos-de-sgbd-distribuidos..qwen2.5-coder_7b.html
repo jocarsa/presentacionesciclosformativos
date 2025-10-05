@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Tipos de SGBD distribuidos. — Aplicación de criterios de disponibilidad a bases de datos distribuidas y replicadas: — 0377 Administración de sistemas gestores de bases de datos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="tipos-de-sgbd-distribuidos.">
+<h1>Tipos de SGBD distribuidos.</h1>
+<p><strong>Unidad:</strong> Aplicación de criterios de disponibilidad a bases de datos distribuidas y replicadas:<br><strong>Documento:</strong> 0377 Administración de sistemas gestores de bases de datos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Aplicación de criterios de disponibilidad a bases de datos distribuidas y replicadas</h1>
+    <p><strong>Objetivo:</strong> Comprender los tipos de SGBD distribuidos y su importancia en la gestión de sistemas gestores de bases de datos.</p>
+</section>
+
+<section class="slide">
+    <h2>Definición de SGBD Distribuido</h2>
+    <p>Sistema Gestor de Bases de Datos (SGBD) distribuido es un sistema que se compone de varios nodos interconectados, cada uno con su propia base de datos.</p>
+</section>
+
+<section class="slide">
+    <h2>Tipos de SGBD Distribuidos</h2>
+    <ul>
+        <li><strong>Distribución por Fragmentación:</strong> Datos distribuidos en diferentes nodos.</li>
+        <li><strong>Distribución por Replicación:</strong> Copias de los datos en múltiples ubicaciones.</li>
+        <li><strong>Distribución Híbrida:</strong> Combinación de fragmentación y replicación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Distribución por Fragmentación</h2>
+    <p>Los datos se distribuyen en diferentes nodos según ciertos criterios (por ejemplo, por rango, hash).</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Distribución por Fragmentación</h2>
+    <ul>
+        <li>Fragmentación por rango: Datos del 1 al 100 en un nodo, datos del 101 al 200 en otro.</li>
+        <li>Fragmentación por hash: Los datos se distribuyen según el valor hash de la clave primaria.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Distribución por Replicación</h2>
+    <p>Copias de los mismos datos en múltiples ubicaciones para mejorar la disponibilidad y rendimiento.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Distribución por Replicación</h2>
+    <ul>
+        <li>Replicación total: Todas las copias son idénticas.</li>
+        <li>Replicación parcial: Algunos datos se replican, otros no.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Distribución Híbrida</h2>
+    <p>Combinación de fragmentación y replicación para optimizar el rendimiento y la disponibilidad.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Distribución Híbrida</h2>
+    <ul>
+        <li>Datos importantes se replican en múltiples ubicaciones.</li>
+        <li>Los datos menos críticos se distribuyen por fragmentación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Casos de Uso</h2>
+    <ul>
+        <li>Sistemas financieros: Alta disponibilidad y rendimiento requeridos.</li>
+        <li>Redes sociales: Manejo de grandes volúmenes de datos.</li>
+        <li>E-commerce: Procesamiento rápido de transacciones.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas</h2>
+    <ul>
+        <li>Consistencia de los datos en las réplicas.</li>
+        <li>Algoritmos de sincronización eficientes.</li>
+        <li>Monitoreo y gestión del rendimiento.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes</h2>
+    <ul>
+        <li>No considerar la disponibilidad en el diseño inicial.</li>
+        <li>Sincronización ineficiente entre réplicas.</li>
+        <li>Falta de monitoreo y gestión del rendimiento.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa</h2>
+    <table>
+        <tr>
+            <th>Tipo</th>
+            <th>Distribución por Fragmentación</th>
+            <th>Distribución por Replicación</th>
+            <th>Distribución Híbrida</th>
+        </tr>
+        <tr>
+            <td>Objetivo</td>
+            <td>Mejorar el rendimiento mediante la distribución de datos.</td>
+            <td>Aumentar la disponibilidad mediante réplicas.</td>
+            <td>Optimizar ambos aspectos.</td>
+        </tr>
+        <tr>
+            <td>Ejemplo</td>
+            <td>Fragmentación por rango o hash.</td>
+            <td>Replicación total o parcial.</td>
+            <td>Combinación de fragmentación y replicación.</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz</h2>
+    <p><strong>Pregunta:</strong> ¿Cuál es la principal ventaja de la distribución por replicación?</p>
+    <ul>
+        <li>Aumento del rendimiento.</li>
+        <li>Mejoramiento de la disponibilidad.</li>
+        <li>Reducción del costo de almacenamiento.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist</h2>
+    <ul>
+        <li>Definir los criterios para la distribución de datos.</li>
+        <li>Determinar el nivel de replicación necesario.</li>
+        <li>Implementar algoritmos de sincronización eficientes.</li>
+        <li>Monitorear y gestionar el rendimiento del sistema.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad</h2>
+    <p><strong>Ejercicio:</strong> Diseña un esquema de distribución para una base de datos de una empresa de telecomunicaciones, considerando aspectos de disponibilidad y rendimiento.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>SGBD distribuidos son sistemas compuestos por varios nodos interconectados.</li>
+        <li>Existen tres tipos principales: fragmentación, replicación y híbrida.</li>
+        <li>Cada tipo tiene sus ventajas y desventajas en términos de rendimiento y disponibilidad.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa General</h2>
+    <p>No hay normativas específicas para SGBD distribuidos, pero se aplican principios generales de diseño y gestión de sistemas.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0377 Administración de sistemas gestores de bases de datos.md · Aplicación de criterios de disponibilidad a bases de datos distribuidas y replicadas: → Tipos de SGBD distribuidos.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 09:45:09</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

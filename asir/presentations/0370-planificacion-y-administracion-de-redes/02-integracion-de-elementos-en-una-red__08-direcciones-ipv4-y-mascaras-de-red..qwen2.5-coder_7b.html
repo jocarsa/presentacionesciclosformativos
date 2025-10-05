@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Direcciones IPv4 y máscaras de red. — Integración de elementos en una red: — 0370 Planificación y administración de redes.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="direcciones-ipv4-y-mascaras-de-red.">
+<h1>Direcciones IPv4 y máscaras de red.</h1>
+<p><strong>Unidad:</strong> Integración de elementos en una red:<br><strong>Documento:</strong> 0370 Planificación y administración de redes.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Direcciones IPv4 y máscaras de red</h2>
+    <p>Las direcciones IPv4 son identificadores únicos para dispositivos en una red.ada dirección IP consta de 32 bits, generalmente representados en notación decimal.</p>
+</section>
+
+<section class="slide">
+    <h2>Estructura de una dirección IPv4</h2>
+    <ul>
+        <li>Formato: AAA.BBB.CCC.DDD (donde A, B, y D son números entre 0 y 255)</li>
+        <li>Cada octeto representa un grupo de 8 bits</li>
+        <li>Ejemplo: 192.168.1.1</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Máscaras de red</h2>
+    <p>Las máscaras de red se utilizan para determinar la parte de la dirección IP que identifica a la red y la parte que identifica al host.</p>
+</section>
+
+<section class="slide">
+    <h2>Estructura de una máscara de red</h2>
+    <ul>
+        <li>Formato: AAA.BBB.CCC.DDD (donde A, B, y D son números entre 0 y 255)</li>
+        <li>Cada octeto puede tener valores como 255.255.255.0 o 255.0.0.0</li>
+        <li>Ejemplo: 255.255.255.0</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Clases de direcciones IPv4</h2>
+    <p>Las direcciones IPv4 se clasifican en A, B y según su rango de direcciones.</p>
+</section>
+
+<section class="slide">
+    <h2>Clase A</h2>
+    <ul>
+        <li>Rango: 1.0.0.0 a 126.255.255.255</li>
+        <li>Máscara de red común: 255.0.0.0</li>
+        <li>Usada para redes grandes</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Clase B</h2>
+    <ul>
+        <li>Rango: 128.0.0.0 a 191.255.255.255</li>
+        <li>Máscara de red común: 255.255.0.0</li>
+        <li>Usada para redes medias</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Clase</h2>
+    <ul>
+        <li>Rango: 192.0.0.0 a 223.255.255.255</li>
+        <li>Máscara de red común: 255.255.255.0</li>
+        <li>Usada para redes pequeñas</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Direcciones especiales</h2>
+    <ul>
+        <li>127.0.0.0: Dirección de bucle local (localhost)</li>
+        <li>169.254.0.0/16: Direcciones autoconfiguradas</li>
+        <li>224.0.0.0/4: Multicast</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Cálculo de subredes</h2>
+    <p>Elálculo de subredes permite dividir una red en segmentos más pequeños, mejorando la gestión y el rendimiento.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo deálculo de subred</h2>
+    <ul>
+        <li>Dirección IP: 192.168.1.0/24</li>
+        <li>Máscara de red: 255.255.255.0</li>
+        <li>Subredes posibles: 254 (menos 2 para la red y el broadcast)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas en asignación de direcciones IP</h1>
+    <ul>
+        <li>Evitar direcciones de clase D y E</li>
+        <li>Utilizar máscaras de red adecuadas para el tamaño de la red</li>
+        <li>Asignar direcciones reservadas a redes privadas</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes en asignación de direcciones IP</h1>
+    <ul>
+        <li>Confusión entre clases A, B y</li>
+        <li>Uso incorrecto de máscaras de red</li>
+        <li>No asignación de direcciones reservadas a redes privadas</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Caso práctico: Asignación de direcciones IP en una pequeña empresa</h1>
+    <p>Una pequeña empresa con 50 usuarios puede usar una red de clase (192.168.1.0/24) y asignar direcciones IP desde 192.168.1.1 hasta 192.168.1.50.</p>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: Direcciones IPv4</h1>
+    <ul>
+        <li>¿Cuál es la dirección de clase A que incluye a 172.16.0.0?</li>
+        <li>¿Qué máscara de red se usa para una red de 100 dispositivos?</li>
+        <li>¿Cuáles son las direcciones reservadas para redes privadas?</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Asignación de direcciones IP</h1>
+    <ul>
+        <li>Identificar el tamaño de la red</li>
+        <li>Elegir la clase y máscara de red adecuadas</li>
+        <li>Asignar direcciones reservadas a redes privadas</li>
+        <li>Evitar direcciones de clase D y E</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad:álculo de subredes</h1>
+    <p>Dado un bloque de red 192.168.0.0/16, calcula las direcciones de red y broadcast para las siguientes máscaras:</p>
+    <ul>
+        <li>255.255.254.0</li>
+        <li>255.255.252.0</li>
+        <li>255.255.248.0</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Resumen: Direcciones IPv4 y máscaras de red</h1>
+    <ul>
+        <li>Direcciones IPv4 son identificadores únicos para dispositivos en una red.</li>
+        <li>Máscaras de red determinan la parte de la dirección que identifica a la red y al host.</li>
+        <li>Existen clases A, B y con máscaras de red específicas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Asignación de direcciones IP</h1>
+    <p>La asignación de direcciones IP debe seguir las normativas estableidas por la IETF y los organismos de regulación correspondientes.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0370 Planificación y administración de redes.md · Integración de elementos en una red: → Direcciones IPv4 y máscaras de red.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-04 23:47:30</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

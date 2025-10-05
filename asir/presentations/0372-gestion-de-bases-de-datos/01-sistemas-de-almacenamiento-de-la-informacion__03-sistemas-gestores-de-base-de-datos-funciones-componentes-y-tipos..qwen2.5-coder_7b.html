@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Sistemas gestores de base de datos: funciones, componentes y tipos. — Sistemas de almacenamiento de la información: — 0372 Gestión de bases de datos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="sistemas-gestores-de-base-de-datos-funciones-componentes-y-tipos.">
+<h1>Sistemas gestores de base de datos: funciones, componentes y tipos.</h1>
+<p><strong>Unidad:</strong> Sistemas de almacenamiento de la información:<br><strong>Documento:</strong> 0372 Gestión de bases de datos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Sistemas gestores de base de datos: funciones, componentes y tipos</h2>
+    <p>Objetivo: Comprender las principales características, funciones, componentes y tipos de Sistemas Gestores de Bases de Datos (SGBD).</p>
+</section>
+
+<section class="slide">
+    <h3>Funciones principales de los SGBD</h3>
+    <ul>
+        <li>Almacenamiento persistente de datos</li>
+        <li>Integridad y seguridad de los datos</li>
+        <li>Consistencia de los datos</li>
+        <li>Isolación de transacciones</li>
+        <li>Recovery y recuperación ante fallos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Componentes principales de un SGBD</h3>
+    <ul>
+        <li>Interprete o compilador SQL</li>
+        <li>Motor de almacenamiento</li>
+        <li>Administrador de transacciones</li>
+        <li>Servidor de red (opcional)</li>
+        <li>Interfaz gráfica de usuario (GUI)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Tipo 1: SGBD Relacionales</h3>
+    <p>Características principales:</p>
+    <ul>
+        <li>Modelo de datos basado en tablas y relaciones</li>
+        <li>Lenguaje SQL estándar para consultas y manipulación de datos</li>
+        <li>Integridad referencial</li>
+        <li>Consistencia ACID</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Tipo 2: SGBD No Relacionales (NOSQL)</h3>
+    <p>Características principales:</p>
+    <ul>
+        <li>No utiliza el modelo de datos relacional tradicional</li>
+        <li>Soporta diferentes tipos de datos estructurados y semi-estructurados</li>
+        <li>Escalabilidad horizontal y alta disponibilidad</li>
+        <li>Baja latencia y alto rendimiento</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Tipo 3: SGBD Orientados a Objetos (ODBMS)</h3>
+    <p>Características principales:</p>
+    <ul>
+        <li>Modelo de datos basado en objetos y clases</li>
+        <li>Soporta herencia, polimorfismo y encapsulamiento</li>
+        <li>Integración nativa con lenguajes orientados a objetos</li>
+        <li>Facilidad para representar relaciones complejas</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Tipo 4: SGBD Orientados a Documentos (DBMS)</h3>
+    <p>Características principales:</p>
+    <ul>
+        <li>Modelo de datos basado en documentos o BSON</li>
+        <li>Estructura flexible y escalable</li>
+        <li>Búsqueda rápida y eficiente sobre documentos complejos</li>
+        <li>No requiere esquemas rígidos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Tipo 5: SGBD Orientados a Gráficos (Graph DBMS)</h3>
+    <p>Características principales:</p>
+    <ul>
+        <li>Modelo de datos basado en gráficos y relaciones</li>
+        <li>Representación eficiente de relaciones complejas y no lineales</li>
+        <li>Búsqueda rápida sobre relaciones y caminos en el grafo</li>
+        <li>Facilidad para representar relaciones heterogéneas</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Ejemplo de SGBD Relacional: MySQL</h3>
+    <p>MySQL es un popular SGBD relacional que utiliza el lenguaje SQL estándar.</p>
+</section>
+
+<section class="slide">
+    <h3>Ejemplo de SGBD No Relacional: MongoDB</h3>
+    <p>MongoDB es un SGBD no relacional orientado a documentos que utiliza como formato de datos.</p>
+</section>
+
+<section class="slide">
+    <h3>Caso Práctico: Implementación de una Base de Datos Relacional</h3>
+    <p>Se describe el proceso de diseño y creación de una base de datos relacional para un sistema de gestión de inventario.</p>
+</section>
+
+<section class="slide">
+    <h3>Buenas Prácticas en SGBD</h3>
+    <ul>
+        <li>Uso de índices eficientes</li>
+        <li>Optimización de consultas SQL</li>
+        <li>Seguridad y control de acceso</li>
+        <li>Mantenimiento regular del sistema</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Errores Comunes en SGBD</h3>
+    <ul>
+        <li>No indexación adecuada</li>
+        <li>Inconsistencias de datos</li>
+        <li>Fallo en la seguridad</li>
+        <li>Mantenimiento insuficiente</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Comparativa entre SGBD Relacional y No Relacional</h3>
+    <table>
+        <tr>
+            <th></th>
+            <th>SGBD Relacional</th>
+            <th>SGBD No Relacional</th>
+        </tr>
+        <tr>
+            <td>Modelo de datos</td>
+            <td>Tablas y relaciones</td>
+            <td>Documentos o BSON</td>
+        </tr>
+        <tr>
+            <td>Ejemplo</td>
+            <td>MySQL, PostgreSQL</td>
+            <td>MongoDB, Cassandra</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h3>Mini-Quiz: Tipos de SGBD</h3>
+    <p>¿Cuáles son los tipos principales de Sistemas Gestores de Bases de Datos?</p>
+    <ul>
+        <li>SGBD Relacionales</li>
+        <li>SGBD No Relacionales (NOSQL)</li>
+        <li>SGBD Orientados a Objetos (ODBMS)</li>
+        <li>SGBD Orientados a Documentos (DBMS)</li>
+        <li>SGBD Orientados a Gráficos (Graph DBMS)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Checklist: Consideraciones al elegir un SGBD</h3>
+    <ul>
+        <li>Tipo de datos a almacenar</li>
+        <li>Volumen de datos</li>
+        <li>Rendimiento requerido</li>
+        <li>Escalabilidad necesaria</li>
+        <li>Seguridad y control de acceso</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Actividad: Diseño de una Base de Datos</h3>
+    <p>Diseña un esquema básico para una base de datos relacional que almacene información sobre clientes, productos y pedidos.</p>
+</section>
+
+<section class="slide">
+    <h3>Resumen</h3>
+    <ul>
+        <li>Sistemas gestores de bases de datos (SGBD) son herramientas esenciales para almacenar y gestionar datos.</li>
+        <li>Existen diferentes tipos de SGBD, cada uno con sus propias características y aplicaciones.</li>
+        <li>Es importante elegir el tipo adecuado de SGBD según las necesidades del proyecto.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Normativa y Regulaciones</h3>
+    <p>Algunas regulaciones importantes relacionadas con la gestión de bases de datos incluyen:</p>
+    <ul>
+        <li>LGPD (Reglamento General de Protección de Datos)</li>
+        <li>GDPR (General Data Protection Regulation)</li>
+        <li>NIST (National Institute of Standards and Technology)</li>
+    </ul>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0372 Gestión de bases de datos.md · Sistemas de almacenamiento de la información: → Sistemas gestores de base de datos: funciones, componentes y tipos.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 02:13:50</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

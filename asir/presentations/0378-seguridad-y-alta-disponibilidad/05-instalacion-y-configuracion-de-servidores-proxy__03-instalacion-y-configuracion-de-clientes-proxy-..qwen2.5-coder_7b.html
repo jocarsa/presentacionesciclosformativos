@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Instalación y configuración de clientes «proxy». — Instalación y configuración de servidores «proxy»: — 0378 Seguridad y alta disponibilidad.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="instalacion-y-configuracion-de-clientes-proxy-.">
+<h1>Instalación y configuración de clientes «proxy».</h1>
+<p><strong>Unidad:</strong> Instalación y configuración de servidores «proxy»:<br><strong>Documento:</strong> 0378 Seguridad y alta disponibilidad.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Instalación y configuración de clientes «proxy»</h1>
+    <p>Objetivo: Aprender a instalar, configurar y optimizar clientes proxy para mejorar la seguridad y alta disponibilidad en entornos empresariales.</p>
+</section>
+
+<section class="slide">
+    <h2>¿Qué es un cliente proxy?</h2>
+    <ul>
+        <li>Servicio que actúa como intermediario entre el usuario final y los servidores web.</li>
+        <li>Permite ocultar la dirección IP del usuario, protegiendo su identidad en Internet.</li>
+        <li>Optimiza el acceso a recursos web mediante la caché de páginas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Tipos de clientes proxy</h2>
+    <ul>
+        <li><strong>Proxy transparente:</strong> No requiere ninguna configuración especial en el cliente final.</li>
+        <li><strong>Proxy anónimo:</strong> Oculta la dirección IP del usuario, pero no su navegador.</li>
+        <li><strong>Proxy distorsionado:</strong> Oculta tanto la dirección IP del usuario como su navegador.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de instalación en Windows</h2>
+    <ol>
+        <li>Descarga e instala el software del cliente proxy (por ejemplo, CCProxy).</li>
+        <li>Configura las preferencias generales.</li>
+        <li>Define las reglas de filtrado según tus necesidades.</li>
+        <li>Inicia el servicio y configura los clientes para usarlo como proxy.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de instalación en Linux</h2>
+    <ol>
+        <li>Instala el software del cliente proxy (por ejemplo, Polipo).</li>
+        <li>Configura el archivo de configuración (`/etc/polipo/config`).</li>
+        <li>Inicia el servicio con `sudo systemctl start polipo`.</li>
+        <li>Configura los clientes para usarlo como proxy.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Configuración básica de un cliente proxy</h2>
+    <ul>
+        <li><strong>Dirección IP del servidor proxy:</strong> 192.168.1.100.</li>
+        <li><strong>Puerto:</strong> 8080.</li>
+        <li><strong>Autenticación (si es necesario):</strong> Nombre de usuario y contraseña.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas en la configuración de clientes proxy</h2>
+    <ul>
+        <

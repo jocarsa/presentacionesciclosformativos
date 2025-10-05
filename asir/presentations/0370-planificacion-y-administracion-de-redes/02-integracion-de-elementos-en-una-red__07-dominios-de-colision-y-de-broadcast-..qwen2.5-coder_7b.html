@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Dominios de colisión y de «broadcast». — Integración de elementos en una red: — 0370 Planificación y administración de redes.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="dominios-de-colision-y-de-broadcast-.">
+<h1>Dominios de colisión y de «broadcast».</h1>
+<p><strong>Unidad:</strong> Integración de elementos en una red:<br><strong>Documento:</strong> 0370 Planificación y administración de redes.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Dominios de colisión y de «broadcast»</h1>
+    <p>Objetivo: Comprender los conceptos clave de dominios de colisión y de «broadcast» en redes.</p>
+</section>
+
+<section class="slide">
+    <h2>Definición de Dominio de Colisión</h2>
+    <p>Un dominio de colisión es un segmento de la red donde dos o más dispositivos pueden intentar enviar datos al mismo tiempo.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Dominio de Colisión</h2>
+    <ul>
+        <li>Cuando dos computadoras intentan enviar paquetes de datos por el mismo cable Ethernet simultáneamente.</li>
+        <li>La colisión puede causar errores en la transmisión y requerir retransmisiones.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Definición de Dominio de «Broadcast»</h2>
+    <p>Un dominio de «broadcast» es un segmento de red donde todos los dispositivos pueden recibir datos enviados a una dirección de broadcast.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Dominio de «Broadcast»</h2>
+    <ul>
+        <li>Cuando un servidor envía paquetes a todas las máquinas en la misma red.</li>
+        <li>Los dispositivos que no son el destinatario ignoran los datos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Tipos de Dominios</h2>
+    <ul>
+        <li><strong>Domino de Colisión Local (Collision Domain):</strong> Segmento de red donde ocurren las colisiones.</li>
+        <li><strong>Domino de Broadcast (Broadcast Domain):</strong> Segmento de red donde se envían paquetes a todos los dispositivos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Características del Dominio de Colisión</h2>
+    <ul>
+        <li>Limita la velocidad de transmisión debido a las colisiones.</li>
+        <li>Usado en redes Ethernet y Token Ring.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Características del Dominio de «Broadcast»</h2>
+    <ul>
+        <li>No limita la velocidad de transmisión.</li>
+        <li>Usado en redes de tipo Ethernet y Wi-Fi.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas para el Diseño de Dominios</h2>
+    <ul>
+        <li>Minimizar el tamaño del dominio de colisión para evitar colisiones frecuentes.</li>
+        <li>Utilizar switches para segmentar la red en múltiples dominios de broadcast.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes al Manejar Dominios</h2>
+    <ul>
+        <li>No segmentar adecuadamente la red, lo que puede causar colisiones y pérdida de rendimiento.</li>
+        <li>No utilizar direcciones de broadcast correctamente, lo que puede generar tráfico innecesario.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz</h2>
+    <p>¿Cuál es la principal diferencia entre un dominio de colisión y un dominio de «broadcast»?</p>
+    <ol>
+        <li><input type="radio" name="q1"> Un dominio de colisión permite que todos los dispositivos envíen datos simultáneamente.</li>
+        <li><input type="radio" name="q1"> Un dominio de «broadcast» limita la velocidad de transmisión debido a las colisiones.</li>
+        <li><input type="radio" name="q1"> La respuesta correcta es que un dominio de colisión ocurre cuando dos o más dispositivos intentan enviar datos al mismo tiempo, mientras que un dominio de «broadcast» se envían paquetes a todos los dispositivos en la misma red.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist para el Diseño de Dominios</h2>
+    <ul>
+        <li>Identificar los segmentos de la red que requieren segmentación.</li>
+        <li>Configurar switches adecuadamente para crear dominios de broadcast y colisión.</li>
+        <li>Verificar la configuración mediante pruebas de latencia y velocidad de transmisión.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad Práctica</h2>
+    <p>Diseña un esquema de red que incluya al menos dos dominios de colisión y dos dominios de «broadcast». Indica las razones para cada segmentación.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Dominio de Colisión: Segmento donde ocurren las colisiones, limita la velocidad.</li>
+        <li>Dominio de «Broadcast»: Segmento donde se envían paquetes a todos los dispositivos, no limita la velocidad.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa y Estándares</h2>
+    <p>IEEE 802.3 (Ethernet) y IEEE 802.11 (Wi-Fi) definen los protocolos para manejar dominios de colisión y «broadcast».</p>
+</section>
+
+<section class="slide">
+    <h2>Preguntas Finales</h2>
+    <ul>
+        <li>¿Qué es un dominio de colisión y cómo afecta la velocidad de transmisión?</li>
+        <li>¿Cuál es la diferencia entre un dominio de «broadcast» y un dominio de colisión?</li>
+        <li>¿Cómo se pueden segmentar una red para evitar problemas de colisión y broadcast?</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Recursos Adicionales</h2>
+    <ul>
+        <li><a href="https://www.cisco.com/c/es_mx/support/docs/wireless/wireless-networking-concepts/802-11-basics.html">Cisco: 802.11 Basics</a></li>
+        <li><a href="https://www.techopedia.com/definition/3795/broadcast-domain">Techopedia: Broadcast Domain</a></li>
+    </ul>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0370 Planificación y administración de redes.md · Integración de elementos en una red: → Dominios de colisión y de «broadcast».</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-04 23:46:13</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

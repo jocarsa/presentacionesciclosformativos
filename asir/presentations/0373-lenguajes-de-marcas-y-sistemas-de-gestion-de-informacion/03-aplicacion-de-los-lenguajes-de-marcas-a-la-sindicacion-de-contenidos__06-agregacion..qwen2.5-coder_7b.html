@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Agregación. — Aplicación de los lenguajes de marcas a la sindicación de contenidos: — 0373 Lenguajes de marcas y sistemas de gestión de información.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="agregacion.">
+<h1>Agregación.</h1>
+<p><strong>Unidad:</strong> Aplicación de los lenguajes de marcas a la sindicación de contenidos:<br><strong>Documento:</strong> 0373 Lenguajes de marcas y sistemas de gestión de información.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Agregación en Lenguajes de Marcas para la Sindicación de Contenidos</h1>
+    <p>Objetivo: Comprender el concepto de agregación y su aplicación en lenguajes de marcas.</p>
+</section>
+
+<section class="slide">
+    <h2>Definición de Agregación</h2>
+    <p>Agregación es la práctica de incorporar contenido externo a una página web mediante etiquetas específicas de lenguajes de marcado.</p>
+</section>
+
+<section class="slide">
+    <h2>Beneficios de la Agregación</h2>
+    <ul>
+        <li>Mejora la experiencia del usuario al proporcionar información adicional.</li>
+        <li>Aumenta la visibilidad y el alcance del contenido.</li>
+        <li>Facilita la actualización y mantenimiento del sitio web.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplos de Agregación</h2>
+    <ul>
+        <li>Microdatos (schema.org)</li>
+        <li>RSS feeds</li>
+        <li>Open Graph tags</li>
+        <li>-LD</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Microdatos: Ejemplo Práctico</h2>
+    <pre><code>&lt;div itemscope itemtype="http://schema.org/Article"&gt;
+    &lt;h1 itemprop="headline"&gt;Título del Artículo&lt;/h1&gt;
+    &lt;p itemprop="description"&gt;Resumen del artículo.&lt;/p&gt;
+    &lt;a href="url-artículo" itemprop="url"&gt;&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>RSS Feeds: Ejemplo Práctico</h2>
+    <pre><code>&lt;link rel="alternate" type="application/rss+xml" href="url-rss"&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Open Graph Tags: Ejemplo Práctico</h2>
+    <pre><code>&lt;meta property="og:title" content="Título de la página"&gt;
+&lt;meta property="og:description" content="Descripción de la página"&gt;
+&lt;meta property="og:image" content="url-imagen"&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>-LD: Ejemplo Práctico</h2>
+    <pre><code>&lt;script type="application/ld+"&gt;
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "headline": "Título del Artículo",
+  "description": "Resumen del artículo",
+  "url": "url-artículo"
+}
+&lt;/script&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Uso de Agregación en SEO</h2>
+    <p>Agregación mejora la clasificación de los motores de búsqueda al proporcionar información adicional sobre el contenido.</p>
+</section>
+
+<section class="slide">
+    <h2>Casos de Uso Comunes</h2>
+    <ul>
+        <li>Comercio electrónico: Productos relacionados.</li>
+        <li>Noticias: Artículos relacionados.</li>
+        <li>Blog: Post recientes y populares.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas en Agregación</h2>
+    <ul>
+        <li>Mantener la consistencia en el uso de etiquetas.</li>
+        <li>Proveer información precisa y relevante.</li>
+        <li>Optimizar para diferentes formatos (text/plain, application/rss+xml, etc.).</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en Agregación</h2>
+    <ul>
+        <li>Uso incorrecto de etiquetas.</li>
+        <li>Falta o error en la información proporcionada.</li>
+        <li>No actualización regular del contenido agregado.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa y Reglamentos</h2>
+    <p>Es importante cumplir con las leyes de privacidad y derechos de autor al utilizar agregación en el sitio web.</p>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Identificación de Etiquetas de Agregación</h2>
+    <ul>
+        <li>¿Qué etiqueta se utiliza para agregar información sobre un artículo?</li>
+        <li>¿Cuál es el propósito del atributo "itemprop" en microdatos?</li>
+        <li>¿Qué tipo MIME se usa para feeds RSS?</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist de Agregación</h2>
+    <ul>
+        <li>Definir el contenido que se desea agregar.</li>
+        <li>Elegir la etiqueta adecuada según el formato del contenido.</li>
+        <li>Incluir información relevante y precisa.</li>
+        <li>Probar la agregación en diferentes motores de búsqueda.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Crear un Fragmento de Código con Agregación</h2>
+    <p>Crea un fragmento de código que incluya una etiqueta de agregación para un artículo, utilizando microdatos.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Agregación es la práctica de incorporar contenido externo a una página web mediante etiquetas específicas.</li>
+        <li>Diferentes formatos como microdatos, RSS feeds y Open Graph tags se utilizan para agregar información adicional.</li>
+        <li>Es importante seguir buenas prácticas y evitar errores comunes al implementar agregación en el sitio web.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Preguntas Finales</h2>
+    <p>¿Tienes alguna pregunta sobre la agregación de contenidos en lenguajes de marcas?</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0373 Lenguajes de marcas y sistemas de gestión de información.md · Aplicación de los lenguajes de marcas a la sindicación de contenidos: → Agregación.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 03:03:34</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

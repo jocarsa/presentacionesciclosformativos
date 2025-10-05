@@ -1,0 +1,1560 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Utilización de métodos de definición de documentos XML. — Definición de esquemas y vocabularios en XML: — 0373 Lenguajes de marcas y sistemas de gestión de información.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="utilizacion-de-metodos-de-definicion-de-documentos-xml.">
+<h1>Utilización de métodos de definición de documentos XML.</h1>
+<p><strong>Unidad:</strong> Definición de esquemas y vocabularios en XML:<br><strong>Documento:</strong> 0373 Lenguajes de marcas y sistemas de gestión de información.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Definición de esquemas y vocabularios en</h1>
+    <p>Objetivo: Comprender los métodos para definir documentos utilizando esquemas y vocabularios.</p>
+</section>
+
+<section class="slide">
+    <h2>Esquemas</h2>
+    <ul>
+        <li>Estructura que define la forma de un documento.</li>
+        <li>Utiliza lenguaje XSD ( Schema Definition).</li>
+        <li>Define tipos de datos, restricciones y relaciones entre elementos.</li>
+        <li>Permite validar la estructura y contenido del documento.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Vocabularios</h2>
+    <ul>
+        <li>Son conjuntos de etiquetas predefinidas para representar información específica.</li>
+        <li>Utilizados para estructurar y organizar datos en documentos.</li>
+        <li>Ejemplos: XHTML, SVG, RSS.</li>
+        <li>Pueden ser definidos por el usuario o utilizar vocabularios existentes.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Definición de un esquema básico</h2>
+    <pre><code>&lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;xs:element name="persona"&gt;
+    &lt;xs:complexType&gt;
+      &lt;xs:sequence&gt;
+        &lt;xs:element name="nombre" type="xs:string"/&gt;
+        &lt;xs:element name="edad" type="xs:int"/&gt;
+      &lt;/xs:sequence&gt;
+    &lt;/xs:complexType&gt;
+  &lt;/xs:element&gt;
+&lt;/xs:schema&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Definición de un vocabulario básico</h2>
+    <pre><code>&lt;persona xmlns="http://www.ejemplo.com/vocab"&gt;
+  &lt;nombre&gt;Juan&lt;/nombre&gt;
+  &lt;edad&gt;30&lt;/edad&gt;
+&lt;/persona&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Uso de DTD (Document Type Definition)</h2>
+    <ul>
+        <li>Especifica la estructura y contenido de un documento.</li>
+        <li>Utilizado antes de XSD, pero menos flexible.</li>
+        <li>Define elementos, atributos y relaciones entre ellos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de DTD</h2>
+    <pre><code>&lt;!ELEMENT persona (nombre, edad)&gt;
+&lt;!ELEMENT nombre (#PCDATA)&gt;
+&lt;!ELEMENT edad (#PCDATA)&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Uso de namespaces en</h2>
+    <ul>
+        <li>Permite definir elementos y atributos con el mismo nombre pero diferentes significados.</li>
+        <li>Evita conflictos entre vocabularios.</li>
+        <li>Ejemplo: &lt;ns1:persona&gt;</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Validación de documentos</h2>
+    <ul>
+        <li>Se realiza utilizando esquemas o DTD.</li>
+        <li>Asegura que el documento cumpla con la estructura y contenido definidos.</li>
+        <li>Permite identificar errores antes del procesamiento del documento.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de validación</h2>
+    <pre><code>&lt;persona xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="persona.xsd"&gt;
+  &lt;nombre&gt;Juan&lt;/nombre&gt;
+  &lt;edad&gt;30&lt;/edad&gt;
+&lt;/persona&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Uso de XSLT (Extensible Stylesheet Language Transformations)</h2>
+    <ul>
+        <li>Permite transformar documentos en otros formatos.</li>
+        <li>Ejemplos:, PDF, CSV.</li>
+        <li>Define reglas para la conversión del contenido del documento.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de XSLT</h2>
+    <pre><code>&lt;xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&gt;
+  &lt;xsl:template match="/persona"&gt;
+    &lt;&gt;
+      &lt;body&gt;
+        &lt;h1&gt;Persona&lt;/h1&gt;
+        &lt;p&gt;Nombre: &lt;xsl:value-of select="nombre"/&gt;&lt;/p&gt;
+        &lt;p&gt;Edad: &lt;xsl:value-of select="edad"/&gt;&lt;/p&gt;
+      &lt;/body&gt;
+    &lt;/&gt;
+  &lt;/xsl:template&gt;
+&lt;/xsl:stylesheet&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Particles</h2>
+    <ul>
+        <li>Especifican la estructura y contenido de elementos.</li>
+        <li>Incluyen elementos como sequence, choice, all, group, etc.</li>
+        <li>Permiten definir complejidades en la estructura del documento.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de uso de particles</h2>
+    <pre><code>&lt;xs:complexType name="personaType"&gt;
+  &lt;xs:sequence&gt;
+    &lt;xs:element name="nombre" type="xs:string"/&gt;
+    &lt;xs:element name="edad" type="xs:int"/&gt;
+  &lt;/xs:sequence&gt;
+&lt;/xs:complexType&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types</h2>
+    <ul>
+        <li>Definen tipos complejos que pueden incluir elementos, atributos y restricciones.</li>
+        <li>Ejemplo: &lt;xs:complexType&gt;</li>
+        <li>Permiten crear estructuras más ricas y reutilizables.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de uso de complex types</h2>
+    <pre><code>&lt;xs:complexType name="personaType"&gt;
+  &lt;xs:sequence&gt;
+    &lt;xs:element name="nombre" type="xs:string"/&gt;
+    &lt;xs:element name="edad" type="xs:int"/&gt;
+  &lt;/xs:sequence&gt;
+&lt;/xs:complexType&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Simple Types</h2>
+    <ul>
+        <li>Definen tipos básicos que pueden incluir restricciones.</li>
+        <li>Ejemplo: &lt;xs:simpleType&gt;</li>
+        <li>Permiten crear tipos personalizados para elementos y atributos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de uso de simple types</h2>
+    <pre><code>&lt;xs:simpleType name="edadType"&gt;
+  &lt;xs:restriction base="xs:int"&gt;
+    &lt;xs:minInclusive value="0"/&gt;
+  &lt;/xs:restriction&gt;
+&lt;/xs:simpleType&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Attributes</h2>
+    <ul>
+        <li>Permiten añadir información adicional a los elementos.</li>
+        <li>Ejemplo: &lt;xs:attribute&gt;</li>
+        <li>Pueden ser requeridos, opcionales o con valores predeterminados.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de uso de attributes</h2>
+    <pre><code>&lt;xs:element name="persona"&gt;
+  &lt;xs:complexType&gt;
+    &lt;xs:sequence&gt;
+      &lt;xs:element name="nombre" type="xs:string"/&gt;
+      &lt;xs:element name="edad" type="xs:int"/&gt;
+    &lt;/xs:sequence&gt;
+    &lt;xs:attribute name="id" type="xs:ID" use="required"/&gt;
+  &lt;/xs:complexType&gt;
+&lt;/xs:element&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Inclusions y Extensions</h2>
+    <ul>
+        <li>Inclusión permite combinar esquemas existentes.</li>
+        <li>Extensión permite añadir nuevas partes a un esquema existente.</li>
+        <li>Ejemplos: &lt;xs:include&gt;, &lt;xs:extension&gt;</li>
+        <li>Permiten crear jerarquías y reutilizar definiciones.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de uso de inclusion</h2>
+    <pre><code>&lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;xs:include schemaLocation="base.xsd"/&gt;
+&lt;/xs:schema&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de uso de extension</h2>
+    <pre><code>&lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;xs:include schemaLocation="base.xsd"/&gt;
+  &lt;xs:complexType name="personaTypeExtended" base="base:personaType"&gt;
+    &lt;xs:sequence&gt;
+      &lt;xs:element name="email" type="xs:string"/&gt;
+    &lt;/xs:sequence&gt;
+  &lt;/xs:complexType&gt;
+&lt;/xs:schema&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Imports y Reimports</h2>
+    <ul>
+        <li>Imports permite combinar esquemas existentes en un nuevo esquema.</li>
+        <li>Reimports permite reutilizar partes de un esquema existente sin modificarlo.</li>
+        <li>Ejemplos: &lt;xs:import&gt;, &lt;xs:reimport&gt;</li>
+        <li>Permiten crear bibliotecas de definiciones comunes.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de uso de import</h2>
+    <pre><code>&lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;xs:import namespace="http://www.ejemplo.com/vocab" schemaLocation="vocab.xsd"/&gt;
+&lt;/xs:schema&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de uso de reimport</h2>
+    <pre><code>&lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;xs:reimport namespace="http://www.ejemplo.com/vocab" schemaLocation="vocab.xsd"/&gt;
+&lt;/xs:schema&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Documentation</h2>
+    <ul>
+        <li>Permite añadir comentarios y documentación a los esquemas.</li>
+        <li>Ejemplo: &lt;xs:annotation&gt;</li>
+        <li>Ayuda en la comprensión y mantenimiento del esquema.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de uso de documentation</h2>
+    <pre><code>&lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;xs:element name="persona"&gt;
+    &lt;xs:annotation&gt;
+      &lt;xs:documentation&gt;Representa una persona con nombre y edad.&lt;/xs:documentation&gt;
+    &lt;/xs:annotation&gt;
+    &lt;xs:complexType&gt;
+      &lt;xs:sequence&gt;
+        &lt;xs:element name="nombre" type="xs:string"/&gt;
+        &lt;xs:element name="edad" type="xs:int"/&gt;
+      &lt;/xs:sequence&gt;
+    &lt;/xs:complexType&gt;
+  &lt;/xs:element&gt;
+&lt;/xs:schema&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Content Model</h2>
+    <ul>
+        <li>Permite definir contenido complejo para elementos.</li>
+        <li>Ejemplo: &lt;xs:complexContent&gt;</li>
+        <li>Permite extender o reemplazar el contenido de un tipo base.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de uso de complex content model</h2>
+    <pre><code>&lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;xs:complexType name="personaType"&gt;
+    &lt;xs:sequence&gt;
+      &lt;xs:element name="nombre" type="xs:string"/&gt;
+      &lt;xs:element name="edad" type="xs:int"/&gt;
+    &lt;/xs:sequence&gt;
+  &lt;/xs:complexType&gt;
+
+  &lt;xs:complexType name="personaTypeExtended"&gt;
+    &lt;xs:complexContent&gt;
+      &lt;xs:extension base="personaType"&gt;
+        &lt;xs:sequence&gt;
+          &lt;xs:element name="email" type="xs:string"/&gt;
+        &lt;/xs:sequence&gt;
+      &lt;/xs:extension&gt;
+    &lt;/xs:complexContent&gt;
+  &lt;/xs:complexType&gt;
+&lt;/xs:schema&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Key and Unique Constraints</h2>
+    <ul>
+        <li>Permite definir restricciones únicas y claves en los documentos.</li>
+        <li>Ejemplos: &lt;xs:key&gt;, &lt;xs:unique&gt;</li>
+        <li>Aseguran la integridad de los datos en el documento.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de uso de key constraint</h2>
+    <pre><code>&lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;xs:element name="persona"&gt;
+    &lt;xs:key name="idKey"&gt;
+      &lt;xs:selector xpath="@id"/&gt;
+      &lt;xs:field xpath="@id"/&gt;
+    &lt;/xs:key&gt;
+    &lt;xs:complexType&gt;
+      &lt;xs:sequence&gt;
+        &lt;xs:element name="nombre" type="xs:string"/&gt;
+        &lt;xs:element name="edad" type="xs:int"/&gt;
+      &lt;/xs:sequence&gt;
+      &lt;xs:attribute name="id" type="xs:ID" use="required"/&gt;
+    &lt;/xs:complexType&gt;
+  &lt;/xs:element&gt;
+&lt;/xs:schema&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Notation Constraints</h2>
+    <ul>
+        <li>Permite definir restricciones basadas en notaciones.</li>
+        <li>Ejemplo: &lt;xs:notation&gt;</li>
+        <li>Aseguran que los valores de atributos sean válidos según una notación específica.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de uso de notation constraint</h2>
+    <pre><code>&lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;xs:notation name="emailNotation" public="http://www.example.com/email"/&gt;
+
+  &lt;xs:element name="persona"&gt;
+    &lt;xs:complexType&gt;
+      &lt;xs:sequence&gt;
+        &lt;xs:element name="nombre" type="xs:string"/&gt;
+        &lt;xs:element name="email" type="xs:string"/&gt;
+      &lt;/xs:sequence&gt;
+    &lt;/xs:complexType&gt;
+  &lt;/xs:element&gt;
+
+  &lt;xs:attribute name="email" type="xs:string"&gt;
+    &lt;xs:simpleType&gt;
+      &lt;xs:restriction base="xs:string"&gt;
+        &lt;xs:whiteSpace value="collapse"/&gt;
+        &lt;xs:minLength value="1"/&gt;
+        &lt;xs:maxLength value="254"/&gt;
+        &lt;xs:pattern value="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"/&gt;
+      &lt;/xs:restriction&gt;
+    &lt;/xs:simpleType&gt;
+  &lt;/xs:attribute&gt;
+&lt;/xs:schema&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Facets</h2>
+    <ul>
+        <li>Permite definir restricciones adicionales en tipos simples.</li>
+        <li>Ejemplos: &lt;xs:minInclusive&gt;, &lt;xs:maxExclusive&gt;</li>
+        <li>Aseguran que los valores de elementos y atributos cumplan con ciertas condiciones.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de uso de facets</h2>
+    <pre><code>&lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;xs:simpleType name="edadType"&gt;
+    &lt;xs:restriction base="xs:int"&gt;
+      &lt;xs:minInclusive value="0"/&gt;
+      &lt;xs:maxExclusive value="150"/&gt;
+    &lt;/xs:restriction&gt;
+  &lt;/xs:simpleType&gt;
+
+  &lt;xs:element name="persona"&gt;
+    &lt;xs:complexType&gt;
+      &lt;xs:sequence&gt;
+        &lt;xs:element name="nombre" type="xs:string"/&gt;
+        &lt;xs:element name="edad" type="edadType"/&gt;
+      &lt;/xs:sequence&gt;
+    &lt;/xs:complexType&gt;
+  &lt;/xs:element&gt;
+&lt;/xs:schema&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Mixed Content</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden contener tanto elementos como texto.</li>
+        <li>Ejemplo: &lt;xs:mixed&gt;</li>
+        <li>Ayuda en la representación de documentos con una mezcla de estructura y contenido textual.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de uso de complex types with mixed content</h2>
+    <pre><code>&lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;xs:complexType name="paragraphType"&gt;
+    &lt;xs:mixed&gt;
+      &lt;xs:sequence&gt;
+        &lt;xs:element name="title" type="xs:string"/&gt;
+        &lt;xs:element name="text" type="xs:string"/&gt;
+      &lt;/xs:sequence&gt;
+    &lt;/xs:mixed&gt;
+  &lt;/xs:complexType&gt;
+
+  &lt;xs:element name="paragraph" type="paragraphType"/&gt;
+&lt;/xs:schema&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos adicionales no definidos en el esquema.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de uso de complex types with any attribute</h2>
+    <pre><code>&lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;xs:complexType name="personType"&gt;
+    &lt;xs:sequence&gt;
+      &lt;xs:element name="name" type="xs:string"/&gt;
+      &lt;xs:element name="age" type="xs:int"/&gt;
+    &lt;/xs:sequence&gt;
+    &lt;xs:anyAttribute namespace="##any" processContents="lax"/&gt;
+  &lt;/xs:complexType&gt;
+
+  &lt;xs:element name="person" type="personType"/&gt;
+&lt;/xs:schema&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Element</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden contener elementos adicionales no definidos en el esquema.</li>
+        <li>Ejemplo: &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de uso de complex types with any element</h2>
+    <pre><code>&lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;xs:complexType name="personType"&gt;
+    &lt;xs:sequence&gt;
+      &lt;xs:element name="name" type="xs:string"/&gt;
+      &lt;xs:element name="age" type="xs:int"/&gt;
+    &lt;/xs:sequence&gt;
+    &lt;xs:any namespace="##any" processContents="lax"/&gt;
+  &lt;/xs:complexType&gt;
+
+  &lt;xs:element name="person" type="personType"/&gt;
+&lt;/xs:schema&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de uso de complex types with any attribute and any element</h2>
+    <pre><code>&lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;xs:complexType name="personType"&gt;
+    &lt;xs:sequence&gt;
+      &lt;xs:element name="name" type="xs:string"/&gt;
+      &lt;xs:element name="age" type="xs:int"/&gt;
+    &lt;/xs:sequence&gt;
+    &lt;xs:anyAttribute namespace="##any" processContents="lax"/&gt;
+    &lt;xs:any namespace="##any" processContents="lax"/&gt;
+  &lt;/xs:complexType&gt;
+
+  &lt;xs:element name="person" type="personType"/&gt;
+&lt;/xs:schema&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Sequence</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de una secuencia.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de uso de complex types with any attribute and any element in a sequence</h2>
+    <pre><code>&lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;xs:complexType name="personType"&gt;
+    &lt;xs:sequence&gt;
+      &lt;xs:element name="name" type="xs:string"/&gt;
+      &lt;xs:element name="age" type="xs:int"/&gt;
+      &lt;xs:anyAttribute namespace="##any" processContents="lax"/&gt;
+      &lt;xs:any namespace="##any" processContents="lax"/&gt;
+    &lt;/xs:sequence&gt;
+  &lt;/xs:complexType&gt;
+
+  &lt;xs:element name="person" type="personType"/&gt;
+&lt;/xs:schema&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de uso de complex types with any attribute and any element in a choice</h2>
+    <pre><code>&lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;xs:complexType name="personType"&gt;
+    &lt;xs:choice&gt;
+      &lt;xs:element name="name" type="xs:string"/&gt;
+      &lt;xs:element name="age" type="xs:int"/&gt;
+      &lt;xs:anyAttribute namespace="##any" processContents="lax"/&gt;
+      &lt;xs:any namespace="##any" processContents="lax"/&gt;
+    &lt;/xs:choice&gt;
+  &lt;/xs:complexType&gt;
+
+  &lt;xs:element name="person" type="personType"/&gt;
+&lt;/xs:schema&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Group</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de uso de complex types with any attribute and any element in a group</h2>
+    <pre><code>&lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;xs:group name="personGroup"&gt;
+    &lt;xs:sequence&gt;
+      &lt;xs:element name="name" type="xs:string"/&gt;
+      &lt;xs:element name="age" type="xs:int"/&gt;
+    &lt;/xs:sequence&gt;
+  &lt;/xs:group&gt;
+
+  &lt;xs:complexType name="personType"&gt;
+    &lt;xs:sequence&gt;
+      &lt;xs:group ref="personGroup"/&gt;
+      &lt;xs:anyAttribute namespace="##any" processContents="lax"/&gt;
+      &lt;xs:any namespace="##any" processContents="lax"/&gt;
+    &lt;/xs:sequence&gt;
+  &lt;/xs:complexType&gt;
+
+  &lt;xs:element name="person" type="personType"/&gt;
+&lt;/xs:schema&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de uso de complex types with any attribute and any element in a choice group</h2>
+    <pre><code>&lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;xs:group name="personGroup"&gt;
+    &lt;xs:choice&gt;
+      &lt;xs:element name="name" type="xs:string"/&gt;
+      &lt;xs:element name="age" type="xs:int"/&gt;
+    &lt;/xs:choice&gt;
+  &lt;/xs:group&gt;
+
+  &lt;xs:complexType name="personType"&gt;
+    &lt;xs:sequence&gt;
+      &lt;xs:group ref="personGroup"/&gt;
+      &lt;xs:anyAttribute namespace="##any" processContents="lax"/&gt;
+      &lt;xs:any namespace="##any" processContents="lax"/&gt;
+    &lt;/xs:sequence&gt;
+  &lt;/xs:complexType&gt;
+
+  &lt;xs:element name="person" type="personType"/&gt;
+&lt;/xs:schema&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Sequence Group</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de secuencia.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de uso de complex types with any attribute and any element in a sequence group</h2>
+    <pre><code>&lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;xs:group name="personGroup"&gt;
+    &lt;xs:sequence&gt;
+      &lt;xs:element name="name" type="xs:string"/&gt;
+      &lt;xs:element name="age" type="xs:int"/&gt;
+    &lt;/xs:sequence&gt;
+  &lt;/xs:group&gt;
+
+  &lt;xs:complexType name="personType"&gt;
+    &lt;xs:sequence&gt;
+      &lt;xs:group ref="personGroup"/&gt;
+      &lt;xs:anyAttribute namespace="##any" processContents="lax"/&gt;
+      &lt;xs:any namespace="##any" processContents="lax"/&gt;
+    &lt;/xs:sequence&gt;
+  &lt;/xs:complexType&gt;
+
+  &lt;xs:element name="person" type="personType"/&gt;
+&lt;/xs:schema&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de uso de complex types with any attribute and any element in a choice group sequence</h2>
+    <pre><code>&lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;xs:group name="personGroup"&gt;
+    &lt;xs:choice&gt;
+      &lt;xs:sequence&gt;
+        &lt;xs:element name="name" type="xs:string"/&gt;
+        &lt;xs:element name="age" type="xs:int"/&gt;
+      &lt;/xs:sequence&gt;
+    &lt;/xs:choice&gt;
+  &lt;/xs:group&gt;
+
+  &lt;xs:complexType name="personType"&gt;
+    &lt;xs:sequence&gt;
+      &lt;xs:group ref="personGroup"/&gt;
+      &lt;xs:anyAttribute namespace="##any" processContents="lax"/&gt;
+      &lt;xs:any namespace="##any" processContents="lax"/&gt;
+    &lt;/xs:sequence&gt;
+  &lt;/xs:complexType&gt;
+
+  &lt;xs:element name="person" type="personType"/&gt;
+&lt;/xs:schema&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de uso de complex types with any attribute and any element in a choice group sequence choice</h2>
+    <pre><code>&lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;xs:group name="personGroup"&gt;
+    &lt;xs:choice&gt;
+      &lt;xs:sequence&gt;
+        &lt;xs:element name="name" type="xs:string"/&gt;
+        &lt;xs:element name="age" type="xs:int"/&gt;
+      &lt;/xs:sequence&gt;
+    &lt;/xs:choice&gt;
+  &lt;/xs:group&gt;
+
+  &lt;xs:complexType name="personType"&gt;
+    &lt;xs:sequence&gt;
+      &lt;xs:group ref="personGroup"/&gt;
+      &lt;xs:anyAttribute namespace="##any" processContents="lax"/&gt;
+      &lt;xs:any namespace="##any" processContents="lax"/&gt;
+    &lt;/xs:sequence&gt;
+  &lt;/xs:complexType&gt;
+
+  &lt;xs:element name="person" type="personType"/&gt;
+&lt;/xs:schema&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de uso de complex types with any attribute and any element in a choice group sequence choice group</h2>
+    <pre><code>&lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;xs:group name="personGroup"&gt;
+    &lt;xs:choice&gt;
+      &lt;xs:sequence&gt;
+        &lt;xs:element name="name" type="xs:string"/&gt;
+        &lt;xs:element name="age" type="xs:int"/&gt;
+      &lt;/xs:sequence&gt;
+    &lt;/xs:choice&gt;
+  &lt;/xs:group&gt;
+
+  &lt;xs:complexType name="personType"&gt;
+    &lt;xs:sequence&gt;
+      &lt;xs:group ref="personGroup"/&gt;
+      &lt;xs:anyAttribute namespace="##any" processContents="lax"/&gt;
+      &lt;xs:any namespace="##any" processContents="lax"/&gt;
+    &lt;/xs:sequence&gt;
+  &lt;/xs:complexType&gt;
+
+  &lt;xs:element name="person" type="personType"/&gt;
+&lt;/xs:schema&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de uso de complex types with any attribute and any element in a choice group sequence choice group sequence choice</h2>
+    <pre><code>&lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;xs:group name="personGroup"&gt;
+    &lt;xs:choice&gt;
+      &lt;xs:sequence&gt;
+        &lt;xs:element name="name" type="xs:string"/&gt;
+        &lt;xs:element name="age" type="xs:int"/&gt;
+      &lt;/xs:sequence&gt;
+    &lt;/xs:choice&gt;
+  &lt;/xs:group&gt;
+
+  &lt;xs:complexType name="personType"&gt;
+    &lt;xs:sequence&gt;
+      &lt;xs:group ref="personGroup"/&gt;
+      &lt;xs:anyAttribute namespace="##any" processContents="lax"/&gt;
+      &lt;xs:any namespace="##any" processContents="lax"/&gt;
+    &lt;/xs:sequence&gt;
+  &lt;/xs:complexType&gt;
+
+  &lt;xs:element name="person" type="personType"/&gt;
+&lt;/xs:schema&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una elección que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una elección que contiene una elección que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una estructura flexible y extensible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de Schema Complex Types with Any Attribute and Any Element in a Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice Group Sequence Choice</h2>
+    <ul>
+        <li>Permite definir tipos complejos que pueden tener atributos y elementos adicionales no definidos en el esquema, dentro de un grupo de elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene un grupo que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una secuencia que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección que contiene una elección.</li>
+        <li>Ejemplo: &lt;xs:anyAttribute&gt;, &lt;xs:any&gt;</li>
+        <li>Ayuda en la representación de documentos con una
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0373 Lenguajes de marcas y sistemas de gestión de información.md · Definición de esquemas y vocabularios en XML: → Utilización de métodos de definición de documentos XML.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 03:40:09</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

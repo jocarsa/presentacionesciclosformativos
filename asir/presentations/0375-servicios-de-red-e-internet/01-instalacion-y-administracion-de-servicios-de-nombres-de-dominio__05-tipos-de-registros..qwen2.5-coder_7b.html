@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Tipos de registros. — Instalación y administración de servicios de nombres de dominio: — 0375 Servicios de red e Internet.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="tipos-de-registros.">
+<h1>Tipos de registros.</h1>
+<p><strong>Unidad:</strong> Instalación y administración de servicios de nombres de dominio:<br><strong>Documento:</strong> 0375 Servicios de red e Internet.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Tipo A: Registro estándar</h2>
+    <p>Se utiliza para asignar un nombre de dominio a una dirección IP. Ejemplo: www.ejemplo.com.</p>
+</section>
+
+<section class="slide">
+    <h2>Tipo B: RegistroNAME (Canonical Name)</h2>
+    <ul>
+        <li>Asigna un alias a otro nombre de dominio.</li>
+        <li>Ejemplo: subdominio.ejemplo.com apunta a www.ejemplo.com.</li>
+        <li>No se puede utilizar para asignar una dirección IP directamente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Tipo: Registro TXT (Text)</h2>
+    <p>Se utiliza para almacenar texto adicional asociado con un nombre de dominio. Ejemplo: verificar propiedad de un dominio.</p>
+</section>
+
+<section class="slide">
+    <h2>Tipo D: Registro MX (Mail Exchange)</h2>
+    <ul>
+        <li>Especifica los servidores de correo electrónico para un dominio.</li>
+        <li>Formato: prioridad, nombre del servidor.</li>
+        <li>Ejemplo: mail1.ejemplo.com con prioridad 10.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Tipo E: Registro NS (Name Server)</h2>
+    <p>Define los servidores de nombres que gestionan un dominio. Ejemplo: ns1.ejemplo.com, ns2.ejemplo.com.</p>
+</section>
+
+<section class="slide">
+    <h2>Tipo F: Registro SRV (Service)</h2>
+    <ul>
+        <li>Proporciona información sobre servicios específicos en un dominio.</li>
+        <li>Ejemplo: ubicación de un servicio SIP.</li>
+        <li>Formato: prioridad, peso, puerto, nombre del servicio.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Tipo G: Registro AAAA (IPv6 Address)</h2>
+    <p>Asigna una dirección IPv6 a un nombre de dominio. Ejemplo: 2001:db8::1.</p>
+</section>
+
+<section class="slide">
+    <h2>Tipo H: Registro SOA (Start of Authority)</h2>
+    <ul>
+        <li>Contiene información sobre el dominio y su configuración de nombres.</li>
+        <li>Ejemplo: administrador del dominio, fecha de la última actualización, etc.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Tipo I: Registro ALIAS (Windows)</h2>
+    <p>Similar alNAME pero específico para sistemas Windows. Ejemplo: subdominio.ejemplo.com apunta a www.ejemplo.com.</p>
+</section>
+
+<section class="slide">
+    <h2>Tipo J: Registro SPF (Sender Policy Framework)</h2>
+    <p>Especifica qué servidores son autorizados para enviar correo electrónico en nombre de un dominio. Ejemplo: v=spf1 include:_spf.google.com ~all.</p>
+</section>
+
+<section class="slide">
+    <h2>Tipo K: Registro DKIM (DomainKeys Identified Mail)</h2>
+    <p>Proporciona una forma de verificar la autenticidad del remitente en los correos electrónicos. Ejemplo: v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC...</p>
+</section>
+
+<section class="slide">
+    <h2>Tipo L: Registro DMARC (Domain-based Message Authentication, Reporting & Conformance)</h2>
+    <p>Define políticas para la autenticidad y el seguimiento de los correos electrónicos entrantes. Ejemplo: v=DMARC1; p=quarantine; rua=mailto:dmar-reports@example.com.</p>
+</section>
+
+<section class="slide">
+    <h2>Tipo M: Registro TLSA (Transport Layer Security Authentication)</h2>
+    <p>Proporciona información sobre la configuración de seguridad TLS para un dominio. Ejemplo: v=TLSA; h=sha256; e=spki; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC...</p>
+</section>
+
+<section class="slide">
+    <h2>Tipo N: Registro SSHFP (SSH Fingerprint)</h2>
+    <p>Proporciona información sobre la huella digital de un servidor SSH. Ejemplo: ssh-rsa 2048 SHA256:abcdef1234567890.</p>
+</section>
+
+<section class="slide">
+    <h2>Tipo O: Registro NAPTR (Naming Authority Pointer)</h2>
+    <ul>
+        <li>Proporciona información sobre cómo se debe contactar con un servicio en un dominio.</li>
+        <li>Ejemplo: redirección a un servicio SIP.</li>
+        <li>Formato: orden, prefijo, flags, servicios, regexp, reemplazo.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Tipo P: Registro URI (Uniform Resource Identifier)</h2>
+    <p>Asocia un nombre de dominio con una URL. Ejemplo: example.com apunta a https://www.example.com.</p>
+</section>
+
+<section class="slide">
+    <h2>Tipo Q: Registro SVCB (Service Binding)</h2>
+    <ul>
+        <li>Proporciona información sobre cómo se debe contactar con un servicio en un dominio.</li>
+        <li>Ejemplo: redirección a un servicio SIP.</li>
+        <li>Formato: orden, prefijo, flags, servicios, ipv4hint, ipv6hint, alpn, port.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Tipo R: Registro HTTPS (HTTP Strict Transport Security)</h2>
+    <p>Especifica que un sitio web solo debe ser accedido mediante HTTPS. Ejemplo: max-age=31536000; includeSubDomains.</p>
+</section>
+
+<section class="slide">
+    <h2>Tipo S: Registro DNSSEC (Domain Name System Security Extensions)</h2>
+    <p>Proporciona seguridad a los registros de nombres de dominio mediante firmas digitales. Ejemplo: DS record para verificar la autoridad del dominio.</p>
+</section>
+
+<section class="slide">
+    <h2>Tipo T: Registro EDNS (Extension Mechanisms for DNS)</h2>
+    <p>Permite el uso de extensiones adicionales en los mensajes DNS. Ejemplo: soportar IPv6 o consultas más largas.</p>
+</section>
+
+<section class="slide">
+    <h2>Tipo U: Registro NSEC3 (Next Secure DNS)</h2>
+    <p>Proporciona seguridad a los registros de nombres de dominio mediante un enfoque de hash. Ejemplo: algoritmo, iteraciones, salt, respuestas.</p>
+</section>
+
+<section class="slide">
+    <h2>Tipo V: Registro NSEC3PARAM (Next Secure DNS Parameters)</h2>
+    <p>Especifica los parámetros para el uso de NSEC3. Ejemplo: algoritmo, iteraciones, salt.</p>
+</section>
+
+<section class="slide">
+    <h2>Tipo W: Registro TLSALPN (Transport Layer Security Application-Layer Protocol Negotiation)</h2>
+    <p>Proporciona información sobre los protocolos de aplicación soportados por un servidor. Ejemplo: h2, http/1.1.</p>
+</section>
+
+<section class="slide">
+    <h2>Tipo X: RegistroAA (Certificate Authority Authorization)</h2>
+    <p>Especifica qué autoridades de certificación pueden emitir certificados para un dominio. Ejemplo: issue "letsencrypt.org" ; issuewild "letsencrypt.org".</p>
+</section>
+
+<section class="slide">
+    <h2>Tipo Y: Registro OPENPGPKEY (OpenPGP Key)</h2>
+    <p>Almacena una clave PGP para el dominio. Ejemplo: v=spkix1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC...</p>
+</section>
+
+<section class="slide">
+    <h2>Tipo Z: Registro SSHFP (SSH Fingerprint)</h2>
+    <p>Proporciona información sobre la huella digital de un servidor SSH. Ejemplo: ssh-rsa 2048 SHA256:abcdef1234567890.</p>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico: Configuración de registros DNS para una empresa</h2>
+    <ul>
+        <li>Configurar registros A yNAME para el sitio web principal.</li>
+        <li>Configurar registros MX para correo electrónico.</li>
+        <li>Configurar registros TXT para verificación SPF, DKIM y DMARC.</li>
+        <li>Configurar registros DNSSEC para seguridad adicional.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas: Mantenimiento de registros DNS</h2>
+    <ul>
+        <li>Mantener actualizados los registros según las necesidades del negocio.</li>
+        <li>Realizar pruebas periódicas para asegurar la funcionalidad.</li>
+        <li>Utilizar herramientas de monitoreo y alerta para detectar problemas temprano.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en la Administración de Registros DNS</h2>
+    <ul>
+        <li>Olvidar actualizar registros cuando cambia el proveedor de servicios o dirección IP.</li>
+        <li>No configurar correctamente los registros MX para correo electrónico.</li>
+        <li>No verificar adecuadamente las firmas digitales en los registros DNSSEC.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Identificación de Tipos de Registros DNS</h2>
+    <p>¿Cuál es el tipo de registro utilizado para asignar una dirección IP a un nombre de dominio?</p>
+    <ol>
+        <li>A) Registro A</li>
+        <li>B) RegistroNAME</li>
+        <li>C) Registro TXT</li>
+        <li>D) Registro MX</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Verificación de Configuración de Registros DNS</h2>
+    <ul>
+        <li>¿Se han configurado correctamente los registros A yNAME?</li>
+        <li>¿Los registros MX están correctamente configurados para el correo electrónico?</li>
+        <li>¿Se han verificado adecuadamente las firmas digitales en los registros DNSSEC?</li>
+        <li>¿Se ha realizado pruebas periódicas de la funcionalidad de los registros?</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Creación de un Diagrama de Red para una Empresa</h2>
+    <p>Diseña un diagrama de red que incluya los siguientes elementos:</p>
+    <ul>
+        <li>Servidores web</li>
+        <li>Servidor de correo electrónico</li>
+        <li>Base de datos</li>
+        <li>Redes privadas y públicas</li>
+        <li>Registros DNS relevantes</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Resumen: Tipos de Registros DNS</h2>
+    <p>Los registros DNS son esenciales para la gestión de nombres de dominio y servicios en Internet.ada tipo de registro tiene un propósito específico y se utiliza según las necesidades del negocio.</p>
+</section>
+
+<section class="slide">
+    <h1>Instalación y Administración de Servicios de Nombres de Dominio</h1>
+    <h2>Tipos de Registros</h2>
+    <p>Objetivo: Comprender los diferentes tipos de registros DNS y cómo se utilizan en la administración de servicios de nombres de dominio.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0375 Servicios de red e Internet.md · Instalación y administración de servicios de nombres de dominio: → Tipos de registros.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 05:20:11</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

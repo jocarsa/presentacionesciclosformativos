@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Protocolos enrutables y protocolos de enrutamiento. — Configuración y administración de protocolos dinámicos: — 0370 Planificación y administración de redes.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="protocolos-enrutables-y-protocolos-de-enrutamiento.">
+<h1>Protocolos enrutables y protocolos de enrutamiento.</h1>
+<p><strong>Unidad:</strong> Configuración y administración de protocolos dinámicos:<br><strong>Documento:</strong> 0370 Planificación y administración de redes.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Configuración y administración de protocolos dinámicos</h1>
+    <p>Objetivo: Comprender los protocolos enrutables y de enrutamiento, así como su configuración y administración.</p>
+</section>
+
+<section class="slide">
+    <h2>Protocolos enrutables</h2>
+    <ul>
+        <li>Definición de protocolos enrutables</li>
+        <li>Ejemplos: OSPF, BGP, EIGRP</li>
+        <li>Ventajas de los protocolos enrutables</li>
+        <li>Desventajas de los protocolos enrutables</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Protocolos de enrutamiento</h2>
+    <ul>
+        <li>Definición de protocolos de enrutamiento</li>
+        <li>Ejemplos: RIP, EIGRP, OSPF</li>
+        <li>Ventajas de los protocolos de enrutamiento</li>
+        <li>Desventajas de los protocolos de enrutamiento</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Diferencias entre protocolos enrutables y de enrutamiento</h2>
+    <ul>
+        <li>Protocolos enrutables: Se utilizan para determinar la ruta más eficiente para el tráfico IP.</li>
+        <li>Protocolos de enrutamiento: Son los que se encargan de actualizar las tablas de enrutamiento.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo práctico: Configuración de OSPF</h2>
+    <p>Configurar OSPF en un router Cisco:</p>
+    <pre>
+        interface GigabitEthernet0/1
+            ip address 192.168.1.1 255.255.255.0
+            no shutdown
+        router ospf 1
+            network 192.168.1.0 0.0.0.255 area 0
+    </pre>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo práctico: Configuración de BGP</h2>
+    <p>Configurar BGP en un router Cisco:</p>
+    <pre>
+        router bgp 65000
+            neighbor 192.168.2.1 remote-as 65001
+            network 172.16.0.0 mask 255.255.0.0
+    </pre>
+</section>
+
+<section class="slide">
+    <h2>Caso de estudio: Implementación de EIGRP</h2>
+    <p>Una empresa decide implementar EIGRP para mejorar la eficiencia del enrutamiento.</p>
+    <ul>
+        <li>EIGRP se configura automáticamente y aprende las rutas sin necesidad de comandos específicos.</li>
+        <li>Reduce el tiempo de convergencia del enrutamiento.</li>
+        <li>Optimiza la utilización de los recursos de red.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Proceso de configuración de un protocolo de enrutamiento</h2>
+    <ol>
+        <li>Definir el protocolo y su versión.</li>
+        <li>Configurar las interfaces del router.</li>
+        <li>Definir las redes que se anunciarán al vecino.</li>
+        <li>Configurar los parámetros de autenticación (si es necesario).</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas en la configuración de protocolos de enrutamiento</h2>
+    <ul>
+        <li>Usar nombres descriptivos para las interfaces.</li>
+        <li>Configurar los límites de subred correctamente.</li>
+        <li>Verificar la convergencia del enrutamiento periódicamente.</li>
+        <li>Documentar la configuración y los cambios realizados.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes en la configuración de protocolos de enrutamiento</h2>
+    <ul>
+        <li>No definir las redes correctas para anunciar.</li>
+        <li>No configurar los límites de subred correctamente.</li>
+        <li>No verificar la convergencia del enrutamiento.</li>
+        <li>No documentar la configuración y los cambios realizados.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa entre OSPF, BGP y EIGRP</h2>
+    <table>
+        <tr>
+            <th>Protocolo</th>
+            <th>Ventajas</th>
+            <th>Desventajas</th>
+        </tr>
+        <tr>
+            <td>OSPF</td>
+            <td>Fiable, eficiente, soporta redes de gran escala.</td>
+            <td>Puede requerir configuración compleja.</td>
+        </tr>
+        <tr>
+            <td>BGP</td>
+            <td>Muy flexible y escalable, soporta múltiples proveedores.</td>
+            <td>Configuración más compleja que OSPF.</td>
+        </tr>
+        <tr>
+            <td>EIGRP</td>
+            <td>Automático, eficiente, soporta redes de gran escala.</td>
+            <td>No está estandarizado y puede requerir licencias adicionales.</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: Protocolos enrutables y de enrutamiento</h2>
+    <p>¿Cuáles son los principales protocolos enrutables?</p>
+    <ol>
+        <li>RIP</li>
+        <li>BGP</li>
+        <li>EIGRP</li>
+        <li>OSPF</li>
+        <li>HSRP</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist de configuración de OSPF</h2>
+    <ul>
+        <li>Configurar la interfaz del router.</li>
+        <li>Definir el proceso OSPF.</li>
+        <li>Anunciar las redes a través del proceso OSPF.</li>
+        <li>Verificar la configuración y la convergencia del enrutamiento.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Configurar BGP en un router Cisco</h2>
+    <p>Configurar BGP en un router Cisco con las siguientes características:</p>
+    <ul>
+        <li>Número de AS: 65000</li>
+        <li>Vecino: 192.168.2.1</li>
+        <li>Red anunciada: 172.16.0.0/16</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <p>Los protocolos enrutables y de enrutamiento son fundamentales para la configuración y administración de redes.</p>
+    <ul>
+        <li>OSPF, BGP y EIGRP son ejemplos populares de estos protocolos.</li>
+        <li>Es importante seguir buenas prácticas y evitar errores comunes en su configuración.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa general</h2>
+    <p>La normativa aplicable a la configuración de protocolos de enrutamiento varía según el país y la industria.</p>
+    <ul>
+        <li>Es importante estar al tanto de las regulaciones locales y nacionales.</li>
+        <li>Seguir las mejores prácticas de seguridad y cumplimiento legal.</li>
+    </ul>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0370 Planificación y administración de redes.md · Configuración y administración de protocolos dinámicos: → Protocolos enrutables y protocolos de enrutamiento.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 00:45:06</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

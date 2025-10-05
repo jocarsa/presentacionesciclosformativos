@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Tipos de datos, identificadores, variables. — Construcción de guiones: — 0372 Gestión de bases de datos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="tipos-de-datos-identificadores-variables.">
+<h1>Tipos de datos, identificadores, variables.</h1>
+<p><strong>Unidad:</strong> Construcción de guiones:<br><strong>Documento:</strong> 0372 Gestión de bases de datos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Tipos de datos, identificadores y variables en bases de datos</h1>
+    <p>Objetivo: Comprender los tipos de datos, cómo definir identificadores y variables en el contexto de las bases de datos.</p>
+</section>
+
+<section class="slide">
+    <h2>Tipos de Datos</h2>
+    <ul>
+        <li><strong>Númericos:</strong> Enteros (INT), Reales (FLOAT, DOUBLE)</li>
+        <li><strong>Cadenas:</strong> Caracteres (CHAR, VARCHAR), Texto (TEXT)</li>
+        <li><strong>Lógicos:</strong> Verdadero/Falso (BOOLEAN)</li>
+        <li><strong>Fecha y Hora:</strong> Fecha (DATE), Tiempo (TIME), Fecha y Hora (DATETIME)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Tipos de Datos</h2>
+    <p>Tabla "Empleados":</p>
+    <table>
+        <tr><th>ID</th><th>Nombre</th><th>Edad</th><th>Sueldo</th></tr>
+        <tr><td>1</td><td>Juan</td><td>30</td><td>5000.00</td></tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Identificadores</h2>
+    <p>Un identificador es un nombre único que se utiliza para referirse a una tabla, columna o otro objeto en la base de datos.</p>
+    <p>Ejemplo: "TablaEmpleados"</p>
+</section>
+
+<section class="slide">
+    <h2>Reglas para Identificadores</h2>
+    <ul>
+        <li>No puede comenzar con un número</li>
+        <li>No puede contener espacios</li>
+        <li>No puede ser una palabra reservada de SQL</li>
+        <li>Debe seguir las convenciones de nomenclatura (por ejemplo, CamelCase)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Identificador</h2>
+    <p>Tabla "Producto":</p>
+    <table>
+        <tr><th>IDProducto</th><th>Nombre</th><th>Precio</th></tr>
+        <tr><td>101</td><td>Laptop</td><td>999.99</td></tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Variables en Bases de Datos</h2>
+    <p>Las variables son contenedores que almacenan valores durante la ejecución de un programa o consulta.</p>
+    <p>Ejemplo: @precioUnitario</p>
+</section>
+
+<section class="slide">
+    <h2>Tipos de Variables en SQL Server</h2>
+    <ul>
+        <li><strong>Numeric:</strong> INT, FLOAT, DECIMAL</li>
+        <li><strong>String:</strong> VARCHAR, NVARCHAR</li>
+        <li><strong>Date:</strong> DATE, DATETIME</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Uso de Variables en SQL Server</h2>
+    <pre><code>
+DECLARE @precioUnitario DECIMAL(10, 2)
+SET @precioUnitario = 99.99
+SELECT * FROM Producto WHERE Precio > @precioUnitario
+    </code></pre>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas</h2>
+    <ul>
+        <li>Usar nombres descriptivos para identificadores y variables</li>
+        <li>Definir tipos de datos adecuados para evitar problemas de rendimiento</li>
+        <li>Evitar el uso de caracteres especiales en los nombres</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes</h2>
+    <ul>
+        <li>No definir un tipo de dato para una columna</li>
+        <li>Usar nombres de identificadores que son palabras reservadas</li>
+        <li>No inicializar variables antes de usarlas</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: Variables vs. Columnas</h2>
+    <table>
+        <tr><th>Variables</th><th>Columnas</th></tr>
+        <tr><td>Almacenan valores temporales</td><td>Almacenan datos persistentes</td></tr>
+        <tr><td>No persisten entre ejecuciones</td><td>Persisten en la base de datos</td></tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz</h2>
+    <p>¿Cuál es el tipo de dato más adecuado para almacenar una edad?</p>
+    <ul>
+        <li>A) CHAR(3)</li>
+        <li>B) INT</li>
+        <li>C) FLOAT</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist</h2>
+    <ul>
+        <li>Definir tipos de datos correctos para las columnas</li>
+        <li>Usar nombres descriptivos para identificadores y variables</li>
+        <li>Evitar caracteres especiales en los nombres</li>
+        <li>Inicializar variables antes de usarlas</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad</h2>
+    <p>Crea una tabla "Alumnos" con las siguientes columnas:</p>
+    <ul>
+        <li>IDAlumno (INT)</li>
+        <li>Nombre (VARCHAR)</li>
+        <li>Edad (INT)</li>
+        <li>Promedio (DECIMAL)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <p>En esta subunidad aprendimos sobre:</p>
+    <ul>
+        <li>Tipos de datos en bases de datos</li>
+        <li>Cómo definir identificadores y variables</li>
+        <li>Buenas prácticas y errores comunes al trabajar con tipos de datos, identificadores y variables</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa General</h2>
+    <p>No hay normativas específicas para estos temas en SQL Server. Sin embargo, es importante seguir las mejores prácticas recomendadas por la comunidad de desarrolladores.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0372 Gestión de bases de datos.md · Construcción de guiones: → Tipos de datos, identificadores, variables.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 02:37:33</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

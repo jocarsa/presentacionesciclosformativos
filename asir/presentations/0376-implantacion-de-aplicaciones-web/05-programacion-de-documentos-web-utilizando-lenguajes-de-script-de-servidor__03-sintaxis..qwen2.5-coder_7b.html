@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Sintaxis. — Programación de documentos Web utilizando lenguajes de «script» de servidor: — 0376 Implantación de aplicaciones web.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="sintaxis.">
+<h1>Sintaxis.</h1>
+<p><strong>Unidad:</strong> Programación de documentos Web utilizando lenguajes de «script» de servidor:<br><strong>Documento:</strong> 0376 Implantación de aplicaciones web.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Sintaxis en Programación de Documentos Web</h1>
+    <p>Objetivo: Aprender las reglas básicas y sintaxis para escribir scripts de servidor.</p>
+</section>
+
+<section class="slide">
+    <h2>¿Qué es la Sintaxis?</h2>
+    <p>Sintaxis se refiere a las reglas gramaticales que determinan cómo se estructuran los elementos en un lenguaje de programación.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Sintaxis en</h2>
+    <pre><code>&lt;?
+echo "Hola, mundo!";
+?&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Reglas Básicas de Sintaxis</h2>
+    <ul>
+        <li>Cada instrucción termina con un punto y coma (;)</li>
+        <li>Las variables comienzan con el signo dolar ($)</li>
+        <li>No se distingue entre mayúsculas y minúsculas en las palabras clave</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Variables en</h2>
+    <pre><code>&lt;?
+$nombre = "Juan";
+echo $nombre;
+?&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Comentarios en</h2>
+    <ul>
+        <li>Comentarios de una línea: // texto</li>
+        <li>Comentarios multilínea: /* texto */</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Comentarios en</h2>
+    <pre><code>&lt;?
+// Esto es un comentario de una línea
+/* 
+Esto es un 
+comentario multilínea
+*/
+echo "Hola, mundo!";
+?&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Operadores en</h2>
+    <ul>
+        <li>Aritméticos: +, -, *, /, %</li>
+        <li>Comparación: ==, !=, >, <, >=, <=</li>
+        <li>Lógicos: &&, ||, !</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Operadores en</h2>
+    <pre><code>&lt;?
+$a = 5;
+$b = 10;
+echo $a + $b; // Suma
+echo $a > $b; // Comparación
+echo !$a; // Negación lógica
+?&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Funciones en</h2>
+    <p>Las funciones son bloques de código reutilizables que realizan una tarea específica.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Función en</h2>
+    <pre><code>&lt;?
+function saludo($nombre) {
+    return "Hola, $nombre!";
+}
+echo saludo("Juan");
+?&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Control de Flujo en</h2>
+    <ul>
+        <li>if-else: condicionales</li>
+        <li>for: bucles iterativos</li>
+        <li>foreach: bucles para arrays</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Control de Flujo en</h2>
+    <pre><code>&lt;?
+$numero = 5;
+if ($numero > 0) {
+    echo "El número es positivo";
+} else {
+    echo "El número es negativo";
+}
+?&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en Sintaxis</h2>
+    <ul>
+        <li>Falta de punto y coma (;)</li>
+        <li>Error de sintaxis en las variables</li>
+        <li>Comentarios mal formados</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Errores Comunes</h2>
+    <pre><code>&lt;?
+echo "Hola, mundo!" // Falta punto y coma
+?&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas en Sintaxis</h2>
+    <ul>
+        <li>Usar espacios entre operadores y variables</li>
+        <li>Comentar el código para facilitar su lectura</li>
+        <li>Mantener un orden lógico en el código</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Buenas Prácticas</h2>
+    <pre><code>&lt;?
+// Comentar el código para facilitar su lectura
+$numero = 5; // Declaración de variable
+
+if ($numero > 0) { // Condicional
+    echo "El número es positivo"; // Salida
+} else {
+    echo "El número es negativo";
+}
+?&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Sintaxis en</h2>
+    <p>¿Cuál de las siguientes opciones es una sintaxis correcta para declarar una variable en?</p>
+    <ul>
+        <li>a) var $nombre = "Juan";</li>
+        <li>b) $nombre = "Juan";</li>
+        <li>c) nombre = "Juan";</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Sintaxis en</h2>
+    <ul>
+        <li>[ ] Usar punto y coma al final de cada instrucción</li>
+        <li>[ ] Declarar variables con el signo dolar ($)</li>
+        <li>[ ] Comentar el código para facilitar su lectura</li>
+        <li>[ ] Mantener un orden lógico en el código</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Escribe una Función</h2>
+    <p>Escribe una función en que reciba dos números y devuelva su suma.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Sintaxis es el conjunto de reglas gramaticales para escribir scripts de servidor.</li>
+        <li> utiliza variables, operadores y funciones para realizar tareas.</li>
+        <li>Buenas prácticas incluyen espacios, comentarios y orden lógico.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa General</h2>
+    <p>La normativa general en el desarrollo de aplicaciones web implica seguir buenas prácticas de codificación, seguridad y mantenimiento.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0376 Implantación de aplicaciones web.md · Programación de documentos Web utilizando lenguajes de «script» de servidor: → Sintaxis.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 08:17:34</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Características generales de un servidor Web. — Instalación y administración de servidores Web: — 0375 Servicios de red e Internet.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="caracteristicas-generales-de-un-servidor-web.">
+<h1>Características generales de un servidor Web.</h1>
+<p><strong>Unidad:</strong> Instalación y administración de servidores Web:<br><strong>Documento:</strong> 0375 Servicios de red e Internet.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Características generales de un servidor Web</h1>
+    <p>Objetivo: Comprender las principales características y funciones de un servidor web.</p>
+</section>
+
+<section class="slide">
+    <h2>Definición de Servidor Web</h2>
+    <p>Un servidor web es un software que sirve páginas web a los usuarios mediante el protocolo HTTP (Hypertext Transfer Protocol).</p>
+</section>
+
+<section class="slide">
+    <h2>Funciones principales del Servidor Web</h2>
+    <ul>
+        <li>Serve pages: Envía páginas web al cliente.</li>
+        <li>Handle requests: Procesa solicitudes de los clientes.</li>
+        <li>Manage sessions: Administra sesiones de usuario.</li>
+        <li>Cache content: Almacena contenido para mejorar la velocidad.</li>
+        <li>Support SSL/TLS: Proporciona encriptación segura.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Estructura de un Servidor Web</h2>
+    <ul>
+        <li><strong>Kernel:</strong> Controla el sistema operativo.</li>
+        <li><strong>Web Server Software:</strong> Ejecuta las solicitudes del cliente.</li>
+        <li><strong>Document Root:</strong> Ubicación de los archivos web.</li>
+        <li><strong>Configuration Files:</strong> Define la configuración del servidor.</li>
+        <li><strong>Logs:</strong> Registra actividades del servidor.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Tecnologías Comunes de Servidores Web</h2>
+    <ul>
+        <li>Apache HTTP Server</li>
+        <li>Nginx</li>
+        <li>Microsoft IIS (Internet Information Services)</li>
+        <li>Lighttpd</li>
+        <li>LiteSpeed</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Características Avanzadas de los Servidores Web</h2>
+    <ul>
+        <li><strong>Modularidad:</strong> Permite la adición de módulos adicionales.</li>
+        <li><strong>Load Balancing:</strong> Distribuye el tráfico entre múltiples servidores.</li>
+        <li><strong>Reverse Proxy:</strong> Actúa como intermediario entre los clientes y los servidores backend.</li>
+        <li><strong>Content Delivery Network (CDN):</strong> Mejora la velocidad de carga del contenido.</li>
+        <li><strong>Security Features:</strong> Implementa medidas para proteger contra ataques.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo Práctico: Configuración Básica de Apache</h2>
+    <p>1. Instalar Apache<br>2. Configurar Document Root<br>3. Crear un archivo index.html<br>4. Reiniciar el servicio Apache</p>
+</section>
+
+<section class="slide">
+    <h2>Caso Real: Implementación de SSL/TLS en Nginx</h2>
+    <ul>
+        <li>Generar certificado SSL/TLS</li>
+        <li>Configurar Nginx para usar el certificado</li>
+        <li>Reiniciar Nginx</li>
+        <li>Verificar la configuración</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas en la Administración de Servidores Web</h2>
+    <ul>
+        <li>Mantenimiento regular del software</li>
+        <li>Actualizaciones seguras y frecuentes</li>
+        <li>Copias de seguridad periódicas</li>
+        <li>Monitoreo continuo del rendimiento</li>
+        <li>Seguridad contra ataques</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en la Configuración de Servidores Web</h2>
+    <ul>
+        <li>Configuraciones incorrectas del Document Root</li>
+        <li>No se ha habilitado SSL/TLS</li>
+        <li>Mala configuración del firewall</li>
+        <li>Servidor no responde a las solicitudes</li>
+        <li>Problemas de rendimiento debido a la falta de optimización</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa entre Apache y Nginx</h2>
+    <table>
+        <tr>
+            <th>Apache</th>
+            <th>Nginx</th>
+        </tr>
+        <tr>
+            <td>Más antiguo</td>
+            <td>Más reciente</td>
+        </tr>
+        <tr>
+            <td>Modularidad alta</td>
+            <td>Menos modular, pero más eficiente en el manejo de conexiones</td>
+        </tr>
+        <tr>
+            <td>Mejor para aplicaciones dinámicas</td>
+            <td>Más eficaz para contenido estático y reverse proxy</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Características de un Servidor Web</h2>
+    <p>¿Cuáles de las siguientes características son verdaderas?</p>
+    <ul>
+        <li>Un servidor web solo puede servir páginas estáticas.</li>
+        <li>Apache es el único servidor web disponible en el mercado.</li>
+        <li>El Document Root es la ubicación donde se almacenan los archivos del sitio web.</li>
+        <li>Nginx no soporta SSL/TLS.</li>
+        <li>Mantener actualizaciones seguras es una práctica recomendada para servidores web.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist de Configuración Básica de un Servidor Web</h2>
+    <ol>
+        <li>Instalar el software del servidor web</li>
+        <li>Configurar el Document Root</li>
+        <li>Crear archivos index.html y otros recursos necesarios</li>
+        <li>Reiniciar el servicio del servidor web</li>
+        <li>Verificar que la configuración es correcta</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Configuración de un Servidor Web Local</h2>
+    <p>Configura un servidor web local usando Apache en tu máquina.rea una página sencilla y accede a ella desde el navegador.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Servidor Web: Software que sirve páginas web a los clientes.</li>
+        <li>Funciones principales: Serve pages, Handle requests, Manage sessions, Cache content, Support SSL/TLS.</li>
+        <li>Tecnologías comunes: Apache, Nginx, IIS, Lighttpd, LiteSpeed.</li>
+        <li>Características avanzadas: Modularidad, Load Balancing, Reverse Proxy, CDN, Security Features.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa y Reglamentos Relevantes</h2>
+    <ul>
+        <li><strong>Cybersecurity Framework (CSF):</strong> Marco para la gestión de la seguridadibernética en organizaciones.</li>
+        <li><strong>HIPAA (Health Insurance Portability and Accountability Act):</strong> Reglamento que protege la privacidad y el acceso a los datos médicos.</li>
+        <li><strong>CAN-SPAM Act:</strong> Ley que regula los correos electrónicos comerciales en Estados Unidos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Preguntas Frecuentes (FAQ)</h2>
+    <dl>
+        <dt>¿Qué es un servidor web?</dt>
+        <dd>Un software que sirve páginas web a los clientes mediante el protocolo HTTP.</dd>
+        <dt>¿Cuáles son las principales funciones de un servidor web?</dt>
+        <dd>Serve pages, Handle requests, Manage sessions, Cache content, Support SSL/TLS.</dd>
+    </dl>
+</section>
+
+<section class="slide">
+    <h2>Contacto</h2>
+    <p>Si tienes preguntas o necesitas más información, no dudes en contactar con el equipo de soporte técnico.</p>
+    <ul>
+        <li>Email: soporte@ejemplo.com</li>
+        <li>Teléfono: +34 123 456 789</li>
+        <li>Web: www.ejemplo.com</li>
+    </ul>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0375 Servicios de red e Internet.md · Instalación y administración de servidores Web: → Características generales de un servidor Web.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 06:02:39</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

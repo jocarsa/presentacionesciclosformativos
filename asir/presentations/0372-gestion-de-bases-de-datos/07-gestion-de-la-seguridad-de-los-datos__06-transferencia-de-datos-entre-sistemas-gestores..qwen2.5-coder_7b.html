@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Transferencia de datos entre sistemas gestores. — Gestión de la seguridad de los datos: — 0372 Gestión de bases de datos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="transferencia-de-datos-entre-sistemas-gestores.">
+<h1>Transferencia de datos entre sistemas gestores.</h1>
+<p><strong>Unidad:</strong> Gestión de la seguridad de los datos:<br><strong>Documento:</strong> 0372 Gestión de bases de datos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Transferencia de datos entre sistemas gestores</h1>
+    <p>Objetivo: Comprender los métodos y mejores prácticas para transferir datos entre diferentes SGBD.</p>
+</section>
+
+<section class="slide">
+    <h2>Definición</h2>
+    <p>La transferencia de datos entre sistemas gestores de bases de datos (SGBD) implica el proceso de mover información desde un SGBD a otro, o entre diferentes instancias del mismo SGBD.</p>
+</section>
+
+<section class="slide">
+    <h2>Métodos comunes</h2>
+    <ul>
+        <li>Exportación/Importación (E/Imp)</li>
+        <li>Replicación de datos</li>
+        <li>Sincronización de datos</li>
+        <li>Integración ETL (Extract, Transform, Load)</li>
+        <li>APIs y servicios web</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Exportación/Importación (E/Imp)</h2>
+    <p>Consiste en exportar datos de un SGBD a un archivo intermedio (como CSV,,) y luego importarlos al otro SGBD.</p>
+</section>
+
+<section class="slide">
+    <h2>Replicación de datos</h2>
+    <p>Copia los datos de un SGBD principal a uno o varios secundarios para redundancia y disponibilidad.</p>
+</section>
+
+<section class="slide">
+    <h2>Sincronización de datos</h2>
+    <p>Mantiene dos o más bases de datos actualizadas entre sí, asegurando que los datos sean consistentes en todos los sistemas.</p>
+</section>
+
+<section class="slide">
+    <h2>Integración ETL (Extract, Transform, Load)</h2>
+    <p>Proceso automatizado para extraer datos de fuentes externas, transformarlos según las necesidades y cargarlos en el SGBD objetivo.</p>
+</section>
+
+<section class="slide">
+    <h2>APIs y servicios web</h2>
+    <p>Utiliza interfaces programáticas para interambiar datos entre sistemas a través de solicitudes HTTP.</p>
+</section>
+
+<section class="slide">
+    <h2>Ventajas de la transferencia de datos</h2>
+    <ul>
+        <li>Integración de sistemas</li>
+        <li>Migración de bases de datos</li>
+        <li>Actualización de información en tiempo real</li>
+        <li>Compartir datos entre departamentos o organizaciones</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Desventajas de la transferencia de datos</h2>
+    <ul>
+        <li>Potencial pérdida de datos durante el proceso</li>
+        <li>Requisitos de infraestructura y recursos computacionales</li>
+        <li>Tiempo de inactividad o latencia en los sistemas implicados</li>
+        <li>Seguridad y privacidad de los datos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas</h2>
+    <ul>
+        <li>Realizar copias de seguridad antes del proceso</li>
+        <li>Validar los datos importados para asegurar su integridad</li>
+        <li>Monitorear el rendimiento durante la transferencia</li>
+        <li>Documentar el proceso y cualquier cambio en las estructuras de datos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes</h2>
+    <ul>
+        <li>Omisión o error en la definición del esquema de destino</li>
+        <li>Problemas de codificación al transferir datos entre sistemas con diferentes conjuntos de caracteres</li>
+        <li>No considerar las restricciones de integridad al importar datos</li>
+        <li>Ignorar la seguridad y privacidad durante el proceso</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Caso práctico: Migración de bases de datos</h2>
+    <p>Ejemplo de cómo una empresa migró sus datos desde un SGBD Oracle a uno MySQL, utilizando herramientas ETL y procesos de replicación.</p>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz</h2>
+    <ol>
+        <li>¿Qué método es más adecuado para transferir grandes volúmenes de datos entre sistemas?</li>
+        <li>¿Cuáles son las principales ventajas y desventajas de la replicación de datos?</li>
+        <li>¿Cómo se puede asegurar la integridad de los datos durante el proceso de importación?</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist</h2>
+    <ul>
+        <li>Definir claramente las necesidades y objetivos del transferimiento</li>
+        <li>Elegir el método más adecuado según los requisitos</li>
+        <li>Realizar una planificación detallada, incluyendo tiempos estimados y recursos requeridos</li>
+        <li>Probar el proceso en un entorno de prueba antes del lanzamiento real</li>
+        <li>Monitorear y controlar el proceso durante la transferencia</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad práctica</h2>
+    <p>Realizar una simulación de transferencia de datos entre dos sistemas gestores de bases de datos, utilizando uno de los métodos explicados en esta subunidad.</p>
+</section>
+
+<section class="slide">
+    <h2>Normativa y regulaciones</h2>
+    <p>Considerar las regulaciones de protección de datos (como GDPR) al transferir información entre sistemas, asegurando la confidencialidad y el cumplimiento legal.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <p>La transferencia de datos entre SGBD es un proceso crucial para la integración de sistemas, la migración de bases de datos y la actualización de información en tiempo real. Se deben seguir buenas prácticas y considerar los riesgos asociados para asegurar el éxito del proceso.</p>
+</section>
+
+<section class="slide">
+    <h2>Recursos adicionales</h2>
+    <ul>
+        <li><a href="https://www.oracle.com/database/technologies/oracle-database-transfer.html">Oracle Database Transfer Guide</a></li>
+        <li><a href="https://docs.microsoft.com/en-us/sql/integration-services/data-flow/introduction-to-data-flow?view=sql-server-ver15">SQL Server Integration Services (SSIS)</a></li>
+        <li><a href="https://www.ibm.com/docs/es/infrastructure/db2/11.5?topic=data-migration">IBM Db2 Data Migration</a></li>
+    </ul>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0372 Gestión de bases de datos.md · Gestión de la seguridad de los datos: → Transferencia de datos entre sistemas gestores.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 02:44:23</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

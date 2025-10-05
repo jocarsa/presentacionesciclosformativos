@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Terminales en modo texto. — Instalación, configuración y uso de servicios de acceso y administración remota: — 0374 Administración de sistemas operativos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="terminales-en-modo-texto.">
+<h1>Terminales en modo texto.</h1>
+<p><strong>Unidad:</strong> Instalación, configuración y uso de servicios de acceso y administración remota:<br><strong>Documento:</strong> 0374 Administración de sistemas operativos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Instalación, configuración y uso de servicios de acceso y administración remota</h1>
+    <p><strong>Subunidad:</strong> Terminales en modo texto</p>
+    <p><strong>Objetivo:</strong> Comprender los conceptos básicos de terminales en modo texto y su uso en la administración remota.</p>
+</section>
+
+<section class="slide">
+    <h2>¿Qué son las terminales en modo texto?</h2>
+    <ul>
+        <li>Son interfaces de usuario que permiten interactuar con sistemas operativos a través del teclado y la pantalla.</li>
+        <li>Ofrecen un entorno minimalista, ideal para usuarios avanzados o para automatizar tareas.</li>
+        <li>Existen varias terminales populares como SSH (Secure Shell), Telnet, y PuTTY.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Principales ventajas de las terminales en modo texto</h2>
+    <ul>
+        <li>Seguridad: Encriptan la comunicación entre el cliente y el servidor.</li>
+        <li>Rendimiento: Ofrecen un acceso rápido y directo al sistema operativo.</li>
+        <li>Automatización: Facilitan la ejecución de comandos en masa.</li>
+        <li>Flexibilidad: Permiten control remoto desde cualquier lugar con conexión a internet.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo práctico: Conexión SSH</h2>
+    <p>Para conectarse a un servidor mediante SSH, utiliza el siguiente comando en la terminal:</p>
+    <pre><code>ssh usuario@direccion_ip_servidor</code></pre>
+    <p>Por ejemplo:</p>
+    <pre><code>ssh admin@192.168.1.100</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Caso de uso: Administración remota de servidores web</h2>
+    <p>Los administradores utilizan terminales en modo texto para gestionar servidores web, como Apache o Nginx.</p>
+    <ul>
+        <li>Instalar y configurar módulos.</li>
+        <li>Reiniciar servicios.</li>
+        <li>Verificar logs de errores.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Proceso básico de uso de una terminal en modo texto</h2>
+    <ol>
+        <li>Inicia la terminal.</li>
+        <li>Conecta al servidor remoto usando el comando SSH o Telnet.</li>
+        <li>Ejecuta comandos para gestionar el sistema operativo.</li>
+        <li>Cierra la conexión cuando termine.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas al usar terminales en modo texto</h2>
+    <ul>
+        <li>Utiliza contraseñas seguras y actualizadas.</li>
+        <li>No ejecutes comandos desconocidos o de terceros.</li>
+        <li>Copia los resultados importantes antes de cerrar la sesión.</li>
+        <li>Guarda los logs de todas las sesiones para auditoría.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes al usar terminales en modo texto</h2>
+    <ul>
+        <li>Escribir comandos incorrectamente, lo que puede causar daños.</li>
+        <li>No tener permisos suficientes para ejecutar ciertos comandos.</li>
+        <li>No cerrar la conexión después de terminar las tareas.</li>
+        <li>Perder el enlace SSH y no saber cómo reestablecerlo.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: Terminales vs. Interfaces gráficas</h2>
+    <table>
+        <tr>
+            <th></th>
+            <th>Terminales en modo texto</th>
+            <th>Interfaces gráficas</th>
+        </tr>
+        <tr>
+            <td>Interactividad</td>
+            <td>Baja (requiere conocimiento de comandos)</td>
+            <td>Alta (interfaz visual intuitiva)</td>
+        </tr>
+        <tr>
+            <td>Rendimiento</td>
+            <td>Alto</td>
+            <td>Bajo (depende del rendimiento del sistema operativo)</td>
+        </tr>
+        <tr>
+            <td>Flexibilidad</td>
+            <td>Alta (personalización y automatización)</td>
+            <td>Baja (limitada a las funcionalidades de la interfaz)</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: ¿Cuál es la ventaja principal de usar terminales en modo texto?</h2>
+    <ul>
+        <li>a) Interfaz gráfica más intuitiva.</li>
+        <li>b) Seguridad mejorada.</li>
+        <li>c) Mayor velocidad de respuesta.</li>
+        <li>d) Menos recursos utilizados.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Pasos para una conexión segura SSH</h2>
+    <ol>
+        <li>Verifica la dirección IP del servidor.</li>
+        <li>Usa un cliente SSH confiable (PuTTY, OpenSSH).</li>
+        <li>Ingresa el usuario y contraseña correctos.</li>
+        <li>Configura opciones de seguridad como autenticación por clave pública.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Práctica de conexión SSH</h2>
+    <p>Conéctate a un servidor remoto utilizando SSH y ejecuta algunos comandos básicos para verificar su estado.</p>
+    <ul>
+        <li>Ejemplo: Verifica el espacio en disco con `df -h`.</li>
+        <li>Ejemplo: Muestra los procesos actuales con `top`.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <p>Las terminales en modo texto son herramientas esenciales para la administración remota de sistemas operativos.</p>
+    <ul>
+        <li>Ofrecen seguridad, rendimiento y flexibilidad.</li>
+        <li>Son útiles para usuarios avanzados y para automatizar tareas.</li>
+        <li>Es importante seguir buenas prácticas y prevenir errores comunes.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa general</h2>
+    <p>Al utilizar terminales en modo texto, es crucial cumplir con las normativas de seguridad informática:</p>
+    <ul>
+        <li>No compartir contraseñas.</li>
+        <li>No ejecutar comandos desconocidos.</li>
+        <li>Mantener actualizadas todas las aplicaciones y sistemas operativos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Recursos adicionales</h2>
+    <p>Para profundizar en el tema:</p>
+    <ul>
+        <li><a href="https://www.s.com/ssh/">SSH.com</a></li>
+        <li><a href="https://docs.microsoft.com/en-us/windows-server/administration/opens/opens_overview">Microsoft OpenSSH</a></li>
+        <li><a href="https://www.putty.org/">PuTTY</a></li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Preguntas y dudas</h2>
+    <p>¿Tienes alguna pregunta o duda sobre terminales en modo texto?</p>
+    <p>Estamos aquí para ayudarte.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0374 Administración de sistemas operativos.md · Instalación, configuración y uso de servicios de acceso y administración remota: → Terminales en modo texto.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 04:58:00</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

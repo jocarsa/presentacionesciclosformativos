@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Bases de datos distribuidas. — Aplicación de criterios de disponibilidad a bases de datos distribuidas y replicadas: — 0377 Administración de sistemas gestores de bases de datos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="bases-de-datos-distribuidas.">
+<h1>Bases de datos distribuidas.</h1>
+<p><strong>Unidad:</strong> Aplicación de criterios de disponibilidad a bases de datos distribuidas y replicadas:<br><strong>Documento:</strong> 0377 Administración de sistemas gestores de bases de datos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Bases de datos distribuidas</h2>
+    <p>Las bases de datos distribuidas son sistemas que almacenan y gestionan los datos en varios nodos o servidores interconectados.</p>
+</section>
+
+<section class="slide">
+    <h3>Estructura de una base de datos distribuida</h3>
+    <ul>
+        <li>Controlador: Coordinación y control del sistema.</li>
+        <li>Nodos de datos: Almacenan los datos reales.</li>
+        <li>Nodos de procesamiento: Realizan las operaciones de consulta y actualización.</li>
+        <li>Red: Conecta todos los nodos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Tipos de bases de datos distribuidas</h3>
+    <ul>
+        <li>Bases de datos distribuidas por fragmentación (arding).</li>
+        <li>Bases de datos distribuidas por replicación.</li>
+        <li>Bases de datos distribuidas híbridas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Características principales</h3>
+    <ul>
+        <li>Escalabilidad horizontal: Aumenta el rendimiento añadiendo más nodos.</li>
+        <li>Redundancia: Mejora la disponibilidad al replicar datos.</li>
+        <li>Alta disponibilidad: Minimiza los tiempos de inactividad.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Ejemplos de bases de datos distribuidas</h3>
+    <ul>
+        <li>Hadoop Distributed File System (HDFS)</li>
+        <li>Apache Cassandra</li>
+        <li>Google Bigtable</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Casos de uso comunes</h3>
+    <ul>
+        <li>Sistemas de comercio electrónico grandes.</li>
+        <li>Bases de datos geográficas distribuidas.</li>
+        <li>Aplicaciones de análisis en tiempo real.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Desafíos de las bases de datos distribuidas</h3>
+    <ul>
+        <li>Sincronización de datos: Mantener los datos consistentes entre nodos.</li>
+        <li>Consistencia vs. disponibilidad: Dilema de CAP.</li>
+        <li>Latencia: Reducir el tiempo de respuesta.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Buenas prácticas</h3>
+    <ul>
+        <li>Planificación cuidadosa del diseño.</li>
+        <li>Optimización de consultas y operaciones.</li>
+        <li>Monitoreo y gestión continua.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Errores comunes</h3>
+    <ul>
+        <li>No considerar la escalabilidad desde el principio.</li>
+        <li>Sincronización ineficiente de datos.</li>
+        <li>Negligencia en la gestión del rendimiento.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Comparativa con bases de datos monolíticas</h3>
+    <table>
+        <tr>
+            <th>Bases de datos monolíticas</th>
+            <th>Bases de datos distribuidas</th>
+        </tr>
+        <tr>
+            <td>Escala vertical (aumento del hardware)</td>
+            <td>Escala horizontal (aumento del número de nodos)</td>
+        </tr>
+        <tr>
+            <td>Menor latencia generalmente</td>
+            <td>Puede tener mayor latencia debido a la red</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h3>Mini-quiz</h3>
+    <p>¿Qué tipo de base de datos distribuida se utiliza comúnmente para análisis en tiempo real?</p>
+    <ul>
+        <li>A) MongoDB</li>
+        <li>B) Apache Hadoop</li>
+        <li>C) Google Bigtable</li>
+        <li>D) MySQL</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Checklist de implementación</h3>
+    <ol>
+        <li>Definir los requisitos de escalabilidad.</li>
+        <li>Seleccionar el modelo de distribución adecuado.</li>
+        <li>Diseñar la estrategia de sincronización.</li>
+        <li>Implementar un sistema de monitoreo y alertas.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h3>Actividad práctica</h3>
+    <p>Realizar una simulación de escalado horizontal en un entorno de base de datos distribuida utilizando herramientas como Docker Swarm o Kubernetes.</p>
+</section>
+
+<section class="slide">
+    <h3>Resumen</h3>
+    <ul>
+        <li>Bases de datos distribuidas son sistemas que almacenan y gestionan los datos en varios nodos interconectados.</li>
+        <li>Ofrecen escalabilidad, redundancia y alta disponibilidad.</li>
+        <li>Se utilizan en aplicaciones grandes y complejas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Normativa y regulaciones</h3>
+    <p>No hay normativas específicas para bases de datos distribuidas, pero es importante cumplir con las regulaciones generales de protección de datos (GDPR, CCPA).</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0377 Administración de sistemas gestores de bases de datos.md · Aplicación de criterios de disponibilidad a bases de datos distribuidas y replicadas: → Bases de datos distribuidas.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 09:44:07</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

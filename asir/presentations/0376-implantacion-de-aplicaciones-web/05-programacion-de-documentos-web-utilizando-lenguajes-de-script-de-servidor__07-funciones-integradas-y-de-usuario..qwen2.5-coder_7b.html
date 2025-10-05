@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Funciones integradas y de usuario. — Programación de documentos Web utilizando lenguajes de «script» de servidor: — 0376 Implantación de aplicaciones web.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="funciones-integradas-y-de-usuario.">
+<h1>Funciones integradas y de usuario.</h1>
+<p><strong>Unidad:</strong> Programación de documentos Web utilizando lenguajes de «script» de servidor:<br><strong>Documento:</strong> 0376 Implantación de aplicaciones web.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Funciones integradas y de usuario en aplicaciones web</h1>
+    <p>Objetivo: Comprender y utilizar funciones integradas y personalizadas en lenguajes de script servidor para mejorar la funcionalidad de las aplicaciones web.</p>
+</section>
+
+<section class="slide">
+    <h2>Funciones Integradas</h2>
+    <ul>
+        <li>Definición: Funciones predefinidas disponibles en el lenguaje de script del servidor.</li>
+        <li>Ejemplo: En, la función `date()` devuelve la fecha y hora actual.</li>
+        <li>Ventajas: Facilitan el desarrollo, ahorrando tiempo y reduciendo errores.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Funciones de Usuario</h2>
+    <ul>
+        <li>Definición: Funciones creadas por el programador para realizar tareas específicas.</li>
+        <li>Ejemplo: Una función en que valida un formulario antes de enviarlo.</li>
+        <li>Ventajas: Permiten la reutilización del código y su mantenimiento facilitado.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Creación de Funciones en</h2>
+    <pre><code>&lt;?
+function calcularImpuesto($monto) {
+    return $monto * 0.16;
+}
+$impuesto = calcularImpuesto(100);
+echo "El impuesto es: $" . $impuesto;
+?&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros en Funciones</h2>
+    <ul>
+        <li>Definición: Valores que se pasan a una función para realizar operaciones.</li>
+        <li>Ejemplo: En la función anterior, `$monto` es un parámetro.</li>
+        <li>Ventajas: Permiten flexibilidad y reutilización de funciones.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Retorno de Valores</h2>
+    <ul>
+        <li>Definición: Valor que una función devuelve al finalizar su ejecución.</li>
+        <li>Ejemplo: La función `calcularImpuesto` retorna el valor del impuesto calculado.</li>
+        <li>Ventajas: Facilita la obtención de resultados y su uso en otras partes del código.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Funciones Anónimas (losures)</h2>
+    <pre><code>&lt;?
+$suma = function($a, $b) {
+    return $a + $b;
+};
+echo "La suma es: " . $suma(5, 3);
+?&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz</h2>
+    <p>¿Cuál de las siguientes funciones es integrada en?</p>
+    <ul>
+        <li>a) `miFuncion()`</li>
+        <li>b) `date()`</li>
+        <li>c) `sumar($a, $b)`</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz</h2>
+    <p>¿Qué hace la siguiente función?</p>
+    <pre><code>&lt;?
+function esPar($numero) {
+    return $numero % 2 == 0;
+}
+echo esPar(4); // Devuelve true
+?&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Checklist de Buenas Prácticas</h2>
+    <ul>
+        <li>Documentar las funciones para facilitar su uso y mantenimiento.</li>
+        <li>Validar los parámetros de entrada para evitar errores.</li>
+        <li>Usar nombres descriptivos para las funciones y sus parámetros.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Caso: Sistema de Reservas</h2>
+    <p>Se requiere una función que calcule el costo total de una reserva en un hotel, considerando la cantidad de noches y el precio por noche.</p>
+    <pre><code>&lt;?
+function calcularCostoReserva($noches, $precioNoche) {
+    return $noches * $precioNoche;
+}
+$costo = calcularCostoReserva(3, 100);
+echo "El costo total es: $" . $costo;
+?&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes</h2>
+    <ul>
+        <li>No validar los parámetros de entrada.</li>
+        <li>Olvidar el uso del return en una función que debe devolver un valor.</li>
+        <li>Nombres confusos o ambiguos para las funciones y sus parámetros.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Errores Comunes</h2>
+    <pre><code>&lt;?
+function calcularCosto($a, $b) {
+    return $a * $b;
+}
+$costo = calcularCosto(3); // Error: Falta el segundo parámetro
+echo "El costo es: $" . $costo;
+?&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Comparativa de Lenguajes</h2>
+    <ul>
+        <li><strong>:</strong> Funciones integradas y personalizadas, fácil de aprender para principiantes.</li>
+        <li><strong>:</strong> Funciones integradas y personalizadas, amplia comunidad y bibliotecas.</li>
+        <li><strong>:</strong> Funciones integradas y personalizadas, sintaxis clara y legible.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <p>Funciones integradas y de usuario son herramientas esenciales en el desarrollo de aplicaciones web. Permiten la creación de código reutilizable, más eficiente y fácil de mantener.</p>
+</section>
+
+<section class="slide">
+    <h2>Normativa General</h2>
+    <ul>
+        <li><strong>Código limpio:</strong> Mantener el código bien organizado y legible.</li>
+        <li><strong>Seguridad:</strong> Validar entradas y evitar inyecciones de código.</li>
+        <li><strong>Mantenibilidad:</strong> Documentar funciones y seguir buenas prácticas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Crear una Función</h2>
+    <p>Crea una función en que calcule el área de unírculo, dado su radio. Asegúrate de validar el parámetro y manejar posibles errores.</p>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Crear una Función</h2>
+    <p>Escribe la función `calcularAreairculo($radio)` en un archivo y prueba su funcionamiento con diferentes valores de radio.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0376 Implantación de aplicaciones web.md · Programación de documentos Web utilizando lenguajes de «script» de servidor: → Funciones integradas y de usuario.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 08:21:18</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

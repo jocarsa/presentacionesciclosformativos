@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Subconsultas y combinaciones en órdenes de edición. — Edición de los datos: — 0372 Gestión de bases de datos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="subconsultas-y-combinaciones-en-ordenes-de-edicion.">
+<h1>Subconsultas y combinaciones en órdenes de edición.</h1>
+<p><strong>Unidad:</strong> Edición de los datos:<br><strong>Documento:</strong> 0372 Gestión de bases de datos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Edición de los datos en bases de datos</h1>
+    <p>Objetivo: Comprender y aplicar subconsultas y combinaciones en órdenes de edición.</p>
+</section>
+
+<section class="slide">
+    <h2>Subconsultas en órdenes de edición</h2>
+    <ul>
+        <li>Definición: Consulta que se ejecuta dentro de otra consulta.</li>
+        <li>Tipos principales: Correlacionadas y no correlacionadas.</li>
+        <li>Ventajas: Facilitan la realización de operaciones complejas en una sola consulta.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de subconsulta</h2>
+    <pre><code>UPDATE empleados
+SET salario = salario * 1.10
+WHERE departamento_id IN (SELECT id FROM departamentos WHERE ubicacion = 'Nueva York');</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Combinaciones en órdenes de edición</h2>
+    <ul>
+        <li>Definición: Combinación de dos o más operaciones de edición (INSERT, UPDATE, DELETE).</li>
+        <li>Ventajas: Permiten realizar múltiples cambios en una sola transacción.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de combinación de órdenes de edición</h2>
+    <pre><code>BEGIN TRANSACTION;
+UPDATE empleados SET salario = salario * 1.05 WHERE departamento_id = 1;
+DELETE FROM proyectos WHERE estado = 'Terminado';
+COMMIT;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas en subconsultas y combinaciones</h2>
+    <ul>
+        <li>Optimización: Usar índices y evitar subconsultas complejas.</li>
+        <li>Transacciones: Utilizar transacciones para asegurar la integridad de los datos.</li>
+        <li>Seguridad: Limitar el acceso a las consultas y operaciones de edición.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes en subconsultas y combinaciones</h2>
+    <ul>
+        <li>Sintaxis incorrecta: Verificar la estructura de la consulta.</li>
+        <li>Subconsulta no correlacionada: Asegurarse de que la subconsulta dependa de los datos del exterior.</li>
+        <li>Problemas de rendimiento: Optimizar las consultas y evitar bucles innecesarios.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa entre subconsultas y combinaciones</h2>
+    <table>
+        <tr><th>Subconsultas</th><th>Combinaciones</th></tr>
+        <tr><td>Ejecutan una consulta dentro de otra.</td><td>Realizan múltiples operaciones en una sola transacción.</td></tr>
+        <tr><td>Facilitan consultas complejas.</td><td>Aseguran la integridad de los datos.</td></tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: Subconsultas y combinaciones</h2>
+    <p>¿Cuál es el resultado de esta consulta?</p>
+    <pre><code>SELECT COUNT(*) FROM empleados WHERE salario > (SELECT AVG(salario) FROM empleados);</code></pre>
+    <ol>
+        <li>Muestra el número de empleados con un salario mayor que la media.</li>
+        <li>Muestra el número total de empleados.</li>
+        <li>Devuelve un error debido a la subconsulta no correlacionada.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Subconsultas y combinaciones</h2>
+    <ul>
+        <li>Verificar la sintaxis de las consultas.</li>
+        <li>Asegurar que las subconsultas sean correlacionadas si es necesario.</li>
+        <li>Optimizar las consultas para mejorar el rendimiento.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Práctica de subconsultas y combinaciones</h2>
+    <p>Ejecute las siguientes consultas en su entorno de desarrollo:</p>
+    <ol>
+        <li>Actualice el salario de los empleados del departamento 3 en un 10%.</li>
+        <li>Borre los proyectos que no tienen ninguna tarea asignada.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Resumen: Subconsultas y combinaciones</h2>
+    <ul>
+        <li>Subconsultas: Consulta dentro de otra consulta.</li>
+        <li>Combinaciones: Múltiples operaciones de edición en una sola transacción.</li>
+        <li>Buenas prácticas: Optimización, transacciones y seguridad.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa general sobre subconsultas y combinaciones</h2>
+    <p>Seguir las normativas de la base de datos utilizada para garantizar la integridad y rendimiento.</p>
+</section>
+
+<section class="slide" data-id="extra-conceptos-clave-ampliacion-0">
+<h2>Conceptos clave (ampliación)</h2>
+<p>Profundiza en los fundamentos de <strong>Subconsultas y combinaciones en órdenes de edición.</strong> con definiciones operativas y límites de aplicación.</p><ul><li>Concepto A vs B</li><li>Variables implicadas</li><li>Supuestos habituales</li><li>Cuándo NO aplicar</li></ul>
+
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0372 Gestión de bases de datos.md · Edición de los datos: → Subconsultas y combinaciones en órdenes de edición.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 02:33:30</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

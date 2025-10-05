@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Creación y eliminación de usuarios. — Acceso a la información: — 0377 Administración de sistemas gestores de bases de datos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="creacion-y-eliminacion-de-usuarios.">
+<h1>Creación y eliminación de usuarios.</h1>
+<p><strong>Unidad:</strong> Acceso a la información:<br><strong>Documento:</strong> 0377 Administración de sistemas gestores de bases de datos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Acceso a la información: Creación y eliminación de usuarios</h1>
+    <p>Objetivo: Comprender los procesos para crear y eliminar usuarios en sistemas gestores de bases de datos.</p>
+</section>
+
+<section class="slide">
+    <h2>Concepto básico</h2>
+    <ul>
+        <li><strong>Usuario:</strong> Entidad que accede a una base de datos.</li>
+        <li><strong>Credenciales:</strong> Nombre de usuario y contraseña para autenticarse.</li>
+        <li><strong>Rol:</strong> Conjunto de permisos asignados a un usuario.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Proceso de creación de usuarios</h2>
+    <ol>
+        <li>Identificar el nombre de usuario y la contraseña.</li>
+        <li>Especificar los roles o permisos necesarios.</li>
+        <li>Utilizar comandos SQL como <code>CREATE USER</code>.</li>
+        <li>Asignar la contraseña mediante un comando como <code>SET PASSWORD</code>.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de creación de usuario</h2>
+    <pre><code>CREATE USER 'usuario1'@'localhost' IDENTIFIED BY 'contraseña1';
+GRANT SELECT, INSERT ON database_name.* TO 'usuario1'@'localhost';</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Caso práctico: Creación de usuario para un proyecto</h2>
+    <p>Se necesita crear un usuario para el equipo de marketing que solo tenga permisos de lectura en la base de datos.</p>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas al crear usuarios</h2>
+    <ul>
+        <li>Usar contraseñas fuertes y únicas.</li>
+        <li>Asignar roles específicos según necesidad.</li>
+        <li>No compartir credenciales.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes al crear usuarios</h2>
+    <ul>
+        <li>Usar contraseñas débiles o fáciles de adivinar.</li>
+        <li>No asignar roles adecuados.</li>
+        <li>Compartir credenciales con otros usuarios.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Proceso de eliminación de usuarios</h2>
+    <ol>
+        <li>Identificar el usuario a eliminar.</li>
+        <li>Utilizar comandos SQL como <code>DROP USER</code>.</li>
+        <li>Confirmar la eliminación.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de eliminación de usuario</h2>
+    <pre><code>DROP USER 'usuario1'@'localhost';</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Caso práctico: Eliminación de un usuario inactivo</h2>
+    <p>Se necesita eliminar un usuario que no ha utilizado la base de datos en el último año.</p>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas al eliminar usuarios</h2>
+    <ul>
+        <li>Confirmar la eliminación antes de ejecutar el comando.</li>
+        <li>No eliminar usuarios que aún puedan tener datos importantes.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes al eliminar usuarios</h2>
+    <ul>
+        <li>Eliminar usuarios por error.</li>
+        <li>No confirmar la eliminación antes de ejecutar el comando.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: Creación y eliminación de usuarios</h2>
+    <p>¿Cuál es el comando SQL para crear un usuario con permisos de lectura en una base de datos?</p>
+    <ol>
+        <li><code>CREATE USER 'usuario'@'localhost' IDENTIFIED BY 'contraseña'; GRANT SELECT ON database_name.* TO 'usuario'@'localhost';</li>
+        <li><code>CREATE USER 'usuario'@'localhost' IDENTIFIED BY 'contraseña'; GRANT ALL PRIVILEGES ON database_name.* TO 'usuario'@'localhost';</li>
+        <li><code>CREATE USER 'usuario'@'localhost' IDENTIFIED BY 'contraseña'; REVOKE SELECT ON database_name.* FROM 'usuario'@'localhost';</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Creación y eliminación de usuarios</h2>
+    <ul>
+        <li>Identificar el nombre de usuario y la contraseña.</li>
+        <li>Especificar los roles o permisos necesarios.</li>
+        <li>Utilizar comandos SQL como <code>CREATE USER</code>.</li>
+        <li>Asignar la contraseña mediante un comando como <code>SET PASSWORD</code>.</li>
+        <li>Confirmar la eliminación antes de ejecutar el comando <code>DROP USER</code>.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Creación y eliminación de usuarios</h2>
+    <p>Crea un usuario para un equipo de ventas que solo tenga permisos de lectura en la base de datos. Luego, elimina el usuario cuando ya no sea necesario.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Proceso de creación y eliminación de usuarios en sistemas gestores de bases de datos.</li>
+        <li>Buenas prácticas y errores comunes al gestionar usuarios.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa general</h2>
+    <p>Seguridad de la información: Es fundamental proteger las credenciales de los usuarios para evitar accesos no autorizados a la base de datos.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0377 Administración de sistemas gestores de bases de datos.md · Acceso a la información: → Creación y eliminación de usuarios.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 08:54:22</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

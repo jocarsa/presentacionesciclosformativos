@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Consultas de resumen. Agrupamiento de registros. — Realización de consultas: — 0372 Gestión de bases de datos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="consultas-de-resumen.-agrupamiento-de-registros.">
+<h1>Consultas de resumen. Agrupamiento de registros.</h1>
+<p><strong>Unidad:</strong> Realización de consultas:<br><strong>Documento:</strong> 0372 Gestión de bases de datos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Realización de consultas en bases de datos</h1>
+    <p><strong>Objetivo:</strong> Aprender a realizar consultas de resumen y agrupamiento de registros.</p>
+</section>
+
+<section class="slide">
+    <h2>Consultas de Resumen</h2>
+    <p>Las consultas de resumen se utilizan para obtener información general sobre los datos, como:</p>
+    <ul>
+        <li>Cantidad total de registros</li>
+        <li>Suma de valores numéricos</li>
+        <li>Promedio de valores</li>
+        <li>Máximo y mínimo de valores</li>
+        <li>Frecuencia de ocurrencias</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Consulta de Resumen</h2>
+    <p>Supongamos una tabla llamada "Ventas" con columnas 'Producto' y 'Cantidad'. Una consulta de resumen podría ser:</p>
+    <pre><code>SELECT Producto, SUM(Cantidad) AS Total_Vendido FROM Ventas GROUP BY Producto;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Funciones Agregadas en SQL</h2>
+    <p>Algunas funciones agregadas comunes son:</p>
+    <ul>
+        <li><strong>SUM(columna):</strong> Suma los valores de la columna.</li>
+        <li><strong>COUNT(columna):</strong>uenta el número de registros que cumplen una condición.</li>
+        <li><strong>AVG(columna):</strong> Calcula el promedio de los valores de la columna.</li>
+        <li><strong>MAX(columna) y MIN(columna):</strong> Devuelven el valor máximo y mínimo, respectivamente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Agrupamiento de Registros</h2>
+    <p>El agrupamiento de registros se realiza usando la cláusula GROUP BY. Permite organizar los resultados por uno o más campos.</p>
+    <pre><code>SELECT Producto, SUM(Cantidad) AS Total_Vendido FROM Ventas GROUP BY Producto;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Agrupamiento</h2>
+    <p>Si queremos saber el total vendido por cada categoría de producto:</p>
+    <pre><code>SELECT Categoria, SUM(Cantidad) AS Total_Vendido FROM Ventas JOIN Productos ON Ventas.Producto = Productos.Id GROUP BY Categoria;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Ordenación de Resultados</h2>
+    <p>Puedes ordenar los resultados del agrupamiento usando ORDER BY:</p>
+    <pre><code>SELECT Producto, SUM(Cantidad) AS Total_Vendido FROM Ventas GROUP BY Producto ORDER BY Total_Vendido DESC;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Filtros en Agrupamientos</h2>
+    <p>Puedes aplicar filtros antes del agrupamiento con WHERE:</p>
+    <pre><code>SELECT Producto, SUM(Cantidad) AS Total_Vendido FROM Ventas WHERE Fecha > '2023-01-01' GROUP BY Producto;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico: Análisis de Ventas</h2>
+    <p>¿Cómo podrías usar consultas de resumen y agrupamiento para analizar las ventas diarias?</p>
+    <ul>
+        <li>Calcular el total vendido por día.</li>
+        <li>Identificar los productos más vendidos.</li>
+        <li>Analizar la tendencia de ventas a lo largo del tiempo.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas en Consultas</h2>
+    <p>Al realizar consultas, es importante:</p>
+    <ul>
+        <li>Optimizar las consultas para mejorar el rendimiento.</li>
+        <li>Usar alias para columnas y tablas.</li>
+        <li>Evitar subconsultas innecesarias.</li>
+        <li>Documentar las consultas para futuras referencias.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en Consultas</h2>
+    <p>Algunos errores comunes son:</p>
+    <ul>
+        <li>No incluir la cláusula GROUP BY cuando es necesario.</li>
+        <li>Olvidar alias o usar nombres de columnas incorrectos.</li>
+        <li>No aplicar filtros adecuados, lo que puede generar resultados inesperados.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz</h2>
+    <p>¿Cuál de las siguientes consultas agrupa los registros por la columna 'Producto' y calcula el total vendido?</p>
+    <ol>
+        <li><code>SELECT Producto, SUM(Cantidad) AS Total_Vendido FROM Ventas ORDER BYantidad DESC;</code></li>
+        <li><code>SELECT Producto, SUM(Cantidad) AS Total_Vendido FROM Ventas GROUP BYantidad;</code></li>
+        <li><code>SELECT Producto, SUM(Cantidad) AS Total_Vendido FROM Ventas GROUP BY Producto;</code></li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist de Consultas</h2>
+    <ul>
+        <li>¿Necesito agrupar los resultados?</li>
+        <li>¿Qué campos necesito seleccionar?</li>
+        <li>¿Debería aplicar algún filtro?</li>
+        <li>¿Necesito ordenar los resultados?</li>
+        <li>¿Estoy usando alias correctamente?</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Consultas de Resumen y Agrupamiento</h2>
+    <p>Realiza las siguientes consultas en tu base de datos:</p>
+    <ol>
+        <li>Cuenta el número total de registros en la tabla 'Empleados'.</li>
+        <li>Calcula el promedio de edad de los empleados.</li>
+        <li>Encuentra el producto más vendido en la tabla 'Ventas'.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <p>En esta subunidad hemos aprendido a realizar consultas de resumen y agrupamiento, que son herramientas esenciales para analizar datos en bases de datos. Aprendimos cómo usar funciones agregadas, cláusulas GROUP BY y ORDER BY, así como cómo aplicar filtros y buenas prácticas.</p>
+</section>
+
+<section class="slide">
+    <h2>Normativa General</h2>
+    <p>Es importante seguir las normativas de seguridad y privacidad al realizar consultas en bases de datos. Esto incluye:</p>
+    <ul>
+        <li>No acceder a información confidencial sin autorización.</li>
+        <li>Usar consultas seguras para prevenir inyecciones SQL.</li>
+        <li>Documentar todas las consultas realizadas y sus resultados.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Preguntas Finales</h2>
+    <p>Tienes alguna pregunta sobre consultas de resumen y agrupamiento? Deja tu duda en los comentarios.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0372 Gestión de bases de datos.md · Realización de consultas: → Consultas de resumen. Agrupamiento de registros.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 02:28:38</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

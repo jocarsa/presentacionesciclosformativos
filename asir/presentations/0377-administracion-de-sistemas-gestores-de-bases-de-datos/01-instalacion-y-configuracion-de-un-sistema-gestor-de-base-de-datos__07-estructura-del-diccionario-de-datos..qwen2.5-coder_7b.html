@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Estructura del diccionario de datos. — Instalación y configuración de un sistema gestor de base de datos: — 0377 Administración de sistemas gestores de bases de datos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="estructura-del-diccionario-de-datos.">
+<h1>Estructura del diccionario de datos.</h1>
+<p><strong>Unidad:</strong> Instalación y configuración de un sistema gestor de base de datos:<br><strong>Documento:</strong> 0377 Administración de sistemas gestores de bases de datos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Estructura del diccionario de datos</h2>
+    <p>El diccionario de datos es una documentación formal que describe la estructura y las relaciones entre los datos en un sistema gestor de bases de datos.</p>
+</section>
+
+<section class="slide">
+    <h3>Componentes principales del diccionario de datos</h3>
+    <ul>
+        <li><strong>Entidades:</strong> Representan objetos o conceptos reales del mundo real.</li>
+        <li><strong>Atributos:</strong> Características que definen a las entidades.</li>
+        <li><strong>Relaciones:</strong> Conexiones entre entidades.</li>
+        <li><strong>Valores de dominio:</strong> Conjunto de valores posibles para un atributo.</li>
+        <li><strong>Cardinalidad:</strong> Número de instancias de una entidad que pueden estar relacionadas con otra.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Ejemplo de diccionario de datos</h3>
+    <p>Consideremos un sistema de gestión de bibliotecas. Entidades: Libro, Autor, Socio. Atributos: ISBN, Nombre del libro, Fecha de publicación, Nombre del autor, Apellido del autor, Nombre del socio, DNI del socio.</p>
+</section>
+
+<section class="slide">
+    <h3>Relaciones en el diccionario de datos</h3>
+    <ul>
+        <li><strong>Un libro está escrito por un autor:</strong> Relación 1:N (un autor puede escribir varios libros).</li>
+        <li><strong>Un socio puede prestar varios libros:</strong> Relación M:N (un libro puede ser prestado a varios socios y viceversa).</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Valores de dominio en el diccionario de datos</h3>
+    <p>Ejemplo: El atributo "Estado del libro" podría tener los valores de dominio {Disponible, Prestado, Reservado}.</p>
+</section>
+
+<section class="slide">
+    <h3>Cardinalidad en el diccionario de datos</h3>
+    <ul>
+        <li><strong>1:N (Uno a muchos):</strong> Un socio puede prestar varios libros.</li>
+        <li><strong>M:N (Muchos a muchos):</strong> Un libro puede ser prestado a varios socios y viceversa.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Estructura de una entidad en el diccionario de datos</h3>
+    <p>Cada entidad se describe con su nombre, sus atributos y posibles valores de dominio.</p>
+</section>
+
+<section class="slide">
+    <h3>Representación gráfica del diccionario de datos</h3>
+    <p>Se utilizan diagramas ER (Entidades-Relaciones) para representar visualmente las entidades, sus atributos y relaciones.</p>
+</section>
+
+<section class="slide">
+    <h3>Ejemplo de diagrama ER</h3>
+    <img src="ruta/a/diagrama_er.png" alt="Diagrama ER de bibliotecas">
+</section>
+
+<section class="slide">
+    <h3>Importancia del diccionario de datos</h3>
+    <ul>
+        <li>Ayuda a la comprensión y comunicación entre los stakeholders.</li>
+        <li>Sirve como base para el diseño y la implementación de bases de datos.</li>
+        <li>Facilita la documentación y la gestión del sistema.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Ejemplos de diccionarios de datos en uso</h3>
+    <ul>
+        <li>Sistemas de gestión empresarial (ERP).</li>
+        <li>Sistemas de información financiera.</li>
+        <li>Sistemas de gestión de proyectos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Desafíos en la creación del diccionario de datos</h3>
+    <ul>
+        <li>Dificultad para capturar completamente todas las entidades y relaciones.</li>
+        <li>Actualización constante debido a cambios en el negocio.</li>
+        <li>Potencial inconsistencia entre diferentes partes del sistema.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Buenas prácticas para el diccionario de datos</h3>
+    <ul>
+        <li>Documentación clara y precisa.</li>
+        <li>Revisión y actualización regular.</li>
+        <li>Uso de terminología estándar.</li>
+        <li>Integración con otros documentos de la documentación técnica.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Errores comunes en el diccionario de datos</h3>
+    <ul>
+        <li>Omisión de entidades o relaciones importantes.</li>
+        <li>Inconsistencias en la definición de atributos y valores de dominio.</li>
+        <li>No actualización del diccionario con cambios en el sistema.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Mini-quiz: Estructura del diccionario de datos</h3>
+    <p>¿Qué es un diccionario de datos?</p>
+    <ol>
+        <li>Una lista de todos los usuarios del sistema.</li>
+        <li>Una documentación formal que describe la estructura y las relaciones entre los datos en un sistema gestor de bases de datos.</li>
+        <li>Un plan de implementación para una nueva base de datos.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h3>Mini-quiz: Estructura del diccionario de datos (continuación)</h3>
+    <p>¿Qué componente del diccionario de datos describe las relaciones entre entidades?</p>
+    <ol>
+        <li>Atributos.</li>
+        <li>Valores de dominio.</li>
+        <li>Relaciones.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h3>Mini-quiz: Estructura del diccionario de datos (continuación)</h3>
+    <p>¿Qué tipo de relación representa "Un socio puede prestar varios libros"?</p>
+    <ol>
+        <li>1:N</li>
+        <li>M:N</li>
+        <li>N:1</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h3>Mini-quiz: Estructura del diccionario de datos (continuación)</h3>
+    <p>¿Qué es el valor de dominio?</p>
+    <ol>
+        <li>Un conjunto de valores posibles para un atributo.</li>
+        <li>Una entidad en el sistema.</li>
+        <li>Una relación entre entidades.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h3>Mini-quiz: Estructura del diccionario de datos (continuación)</h3>
+    <p>¿Qué es la cardinalidad?</p>
+    <ol>
+        <li>Número de instancias de una entidad que pueden estar relacionadas con otra.</li>
+        <li>Un valor posible para un atributo.</li>
+        <li>Una relación entre entidades.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h3>Checklist: Creación del diccionario de datos</h3>
+    <ul>
+        <li>Identificar todas las entidades relevantes.</li>
+        <li>Listar los atributos y sus valores de dominio para cada entidad.</li>
+        <li>Dibujar el diagrama ER que represente las relaciones entre entidades.</li>
+        <li>Revisar y actualizar regularmente el diccionario.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Actividad: Creación de un diccionario de datos</h3>
+    <p>Crea un diccionario de datos para un sistema de gestión de tiendas en línea. Identifica las entidades, sus atributos y relaciones.</p>
+</section>
+
+<section class="slide">
+    <h3>Resumen: Estructura del diccionario de datos</h3>
+    <ul>
+        <li>El diccionario de datos es una documentación formal que describe la estructura y las relaciones entre los datos en un sistema gestor de bases de datos.</li>
+        <li>Componentes principales: entidades, atributos, relaciones, valores de dominio y cardinalidad.</li>
+        <li>Es crucial para el diseño y la implementación de bases de datos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h1>Estructura del diccionario de datos</h1>
+    <p>Objetivo: Comprender y documentar la estructura y relaciones entre los datos en un sistema gestor de bases de datos.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0377 Administración de sistemas gestores de bases de datos.md · Instalación y configuración de un sistema gestor de base de datos: → Estructura del diccionario de datos.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 08:51:29</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

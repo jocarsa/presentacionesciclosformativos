@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>El protocolo RIPv2; comparación con RIPv1. — Configuración y administración de protocolos dinámicos: — 0370 Planificación y administración de redes.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="el-protocolo-ripv2-comparacion-con-ripv1.">
+<h1>El protocolo RIPv2; comparación con RIPv1.</h1>
+<p><strong>Unidad:</strong> Configuración y administración de protocolos dinámicos:<br><strong>Documento:</strong> 0370 Planificación y administración de redes.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>El protocolo RIPv2; comparación con RIPv1</h1>
+    <p>Objetivo: Comprender las características y diferencias entre RIPv2 y RIPv1.</p>
+</section>
+
+<section class="slide">
+    <h2>Introducción a RIPv2</h2>
+    <ul>
+        <li>RIPv2 es la versión 2 del protocolo Routing Information Protocol (RIP).</li>
+        <li>Fue introduida en 1989 para mejorar las capacidades de RIPv1.</li>
+        <li>Permite una ruta máxima de 24 bits y soporta redes de hasta 65.535 hosts.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Características principales de RIPv2</h2>
+    <ul>
+        <li>Soporte para subredes (rutas más específicas).</li>
+        <li>Autenticación5 para seguridad.</li>
+        <li>Soporta el protocolo multicast.</li>
+        <li>Más eficiente en términos de recursos que RIPv1.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Diferencias entre RIPv1 y RIPv2</h2>
+    <table>
+        <tr>
+            <th>RIPv1</th>
+            <th>RIPv2</th>
+        </tr>
+        <tr>
+            <td>Soporta solo rutas de 8 bits.</td>
+            <td>Soporta rutas de hasta 24 bits.</td>
+        </tr>
+        <tr>
+            <td>No soporta subredes.</td>
+            <td>Soporta subredes (rutas más específicas).</td>
+        </tr>
+        <tr>
+            <td>No tiene autenticación.</td>
+            <td>Soporta autenticación5.</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración básica en RIPv2</h2>
+    <pre><code>
+interface Serial0/0
+ ip address 192.168.1.1 255.255.255.0
+!
+router rip
+ version 2
+ network 192.168.1.0
+    </code></pre>
+</section>
+
+<section class="slide">
+    <h2>Caso de estudio: Implementación de RIPv2 en una red pequeña</h2>
+    <ul>
+        <li>Red con 3 routers y 4 redes.</li>
+        <li>Configuración de interfaces y rutas.</li>
+        <li>Verificación del estado de las rutas mediante el comando "show ip route rip".</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Proceso de configuración en RIPv2</h2>
+    <ol>
+        <li>Configurar interfaces y direcciones IP.</li>
+        <li>Habilitar el protocolo RIP versión 2.</li>
+        <li>Especificar las redes que se quieren propagar.</li>
+        <li>Verificar la configuración con "show ip protocols" y "show ip route rip".</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas en RIPv2</h2>
+    <ul>
+        <li>Limitar el alcance de las rutas para evitar problemas de congestión.</li>
+        <li>Configurar autenticación5 para mejorar la seguridad.</li>
+        <li>Monitorear regularmente el estado de las rutas con "show ip route rip".</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes en RIPv2</h2>
+    <ul>
+        <li>No especificar la versión del protocolo RIP.</li>
+        <li>No configurar las redes correctas para propagar.</li>
+        <li>No verificar el estado de las rutas periódicamente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparación con RIPv1</2>
+    <table>
+        <tr>
+            <th>RIPv1</th>
+            <th>RIPv2</th>
+        </tr>
+        <tr>
+            <td>No soporta subredes.</td>
+            <td>Soporta subredes (rutas más específicas).</td>
+        </tr>
+        <tr>
+            <td>No tiene autenticación.</td>
+            <td>Soporta autenticación5.</td>
+        </tr>
+        <tr>
+            <td>Más ineficiente en términos de recursos.</td>
+            <td>Más eficiente en términos de recursos que RIPv1.</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: Diferencias entre RIPv1 y RIPv2</h2>
+    <ul>
+        <li>¿Cuál es la principal diferencia entre RIPv1 y RIPv2?</li>
+        <li>¿Qué versión del protocolo RIP se debe especificar en la configuración de RIPv2?</li>
+        <li>¿Qué tipo de autenticación se puede utilizar en RIPv2?</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist para la implementación de RIPv2</h2>
+    <ol>
+        <li>Configurar interfaces y direcciones IP.</li>
+        <li>Habilitar el protocolo RIP versión 2.</li>
+        <li>Especificar las redes que se quieren propagar.</li>
+        <li>Verificar la configuración con "show ip protocols" y "show ip route rip".</li>
+        <li>Configurar autenticación5 si es necesario.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Configuración de RIPv2 en un laboratorio virtual</h2>
+    <p>Realizar la configuración de RIPv2 en un laboratorio virtual y verificar el estado de las rutas.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>RIPv2 es una versión mejorada de RIPv1 con soporte para subredes y autenticación5.</li>
+        <li>Es importante configurar correctamente las redes y verificar el estado de las rutas periódicamente.</li>
+        <li>La comparación entre RIPv1 y RIPv2 muestra las ventajas del protocolo más reciente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa general</h2>
+    <p>No se especifican normativas específicas para esta subunidad, pero es recomendable seguir buenas prácticas de seguridad y eficiencia en la configuración de protocolos de enrutamiento.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0370 Planificación y administración de redes.md · Configuración y administración de protocolos dinámicos: → El protocolo RIPv2; comparación con RIPv1.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 00:49:02</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

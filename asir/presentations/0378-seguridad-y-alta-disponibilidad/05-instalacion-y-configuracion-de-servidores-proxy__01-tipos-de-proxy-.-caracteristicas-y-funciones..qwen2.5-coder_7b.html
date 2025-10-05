@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Tipos de «proxy». Características y funciones. — Instalación y configuración de servidores «proxy»: — 0378 Seguridad y alta disponibilidad.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="tipos-de-proxy-.-caracteristicas-y-funciones.">
+<h1>Tipos de «proxy». Características y funciones.</h1>
+<p><strong>Unidad:</strong> Instalación y configuración de servidores «proxy»:<br><strong>Documento:</strong> 0378 Seguridad y alta disponibilidad.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Tipo 1: Proxy Inverso</h2>
+    <p>El proxy inverso oculta el servidor real y expone una dirección IP pública. Ejemplos: Nginx, Apache HTTP Server.</p>
+</section>
+
+<section class="slide">
+    <h2>Tipo 2: Proxy Directo</h2>
+    <p>El cliente se conecta directamente al servidor. No oculta la dirección del servidor. Ejemplo: SOCKS5.</p>
+</section>
+
+<section class="slide">
+    <h2>Tipo 3: Proxy Transparente</h2>
+    <p>No requiere configuración especial en el cliente. El tráfico pasa silenciosamente a través del proxy. Ejemplos: Squid, Fiddler.</p>
+</section>
+
+<section class="slide">
+    <h2>Tipo 4: Proxy Anónimo</h2>
+    <p>El servidor no registra la dirección IP del cliente. Protege la privacidad pero revela el tipo de proxy. Ejemplo: Tor.</p>
+</section>
+
+<section class="slide">
+    <h2>Tipo 5: Proxy Barrera</h2>
+    <p>El cliente se conecta a través del proxy para acceder a Internet, pero no puede ser utilizado por otros dispositivos en la red. Ejemplo: OpenVPN.</p>
+</section>
+
+<section class="slide">
+    <h2>Característica 1:aching</h2>
+    <ul>
+        <li>Almacena copias de los recursos solicitados para acelerar el acceso futuro.</li>
+        <li>Reduce la carga en servidores originales y mejora la velocidad del usuario.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Característica 2: Filtrado de Contenido</h2>
+    <ul>
+        <li>Permite o deniega el acceso a ciertos tipos de contenido basándose en políticas estableidas.</li>
+        <li>Aumenta la seguridad y control sobre el tráfico web.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Característica 3: Autenticación</h2>
+    <ul>
+        <li>Solicita credenciales de los usuarios antes de permitir el acceso al proxy.</li>
+        <li>Aumenta la seguridad y control sobre quién puede usar el proxy.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Característica 4: Balanceo dearga</h2>
+    <ul>
+        <li>Distribuye la carga entre múltiples servidores para mejorar la disponibilidad y rendimiento.</li>
+        <li>Aumenta la capacidad del sistema al manejar más solicitudes simultáneas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Característica 5: Registro y Monitoreo</h2>
+    <ul>
+        <li>Almacena información sobre el tráfico pasante para análisis y auditoría.</li>
+        <li>Aumenta la visibilidad y control sobre el uso del proxy.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo Práctico: Configuración de un Proxy Inverso con Nginx</h2>
+    <p>Instalar Nginx, configurar el archivo de configuración para redirigir tráfico a los servidores backend.</p>
+</section>
+
+<section class="slide">
+    <h2>Caso Real: Implementación de un Proxy Transparente en una Organización</h2>
+    <p>Reducción del tiempo de respuesta y aumento de la seguridad mediante el uso de Squid.</p>
+</section>
+
+<section class="slide">
+    <h2>Proceso: Configuración Básica de un Proxy Anónimo con Tor</h2>
+    <ol>
+        <li>Descargar e instalar Tor Browser.</li>
+        <li>Iniciar el navegador y navegar por Internet.</li>
+        <li>Verificar la conexión anónima mediante servicios como WhatIsMyIP.com.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buena Práctica: Uso de Certificados SSL/TLS en Proxies</h2>
+    <p>Para garantizar la seguridad del tráfico entre el cliente y el servidor, utilizar certificados SSL/TLS firmados por autoridades confiables.</p>
+</section>
+
+<section class="slide">
+    <h2>Error Común: Exposición de Direcciones IP Internas</h2>
+    <p>No exponer direcciones IP internas en la configuración del proxy para evitar vulnerabilidades de seguridad.</p>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: Proxy Inverso vs. Proxy Directo</h2>
+    <table>
+        <tr>
+            <th></th>
+            <th>Proxy Inverso</th>
+            <th>Proxy Directo</th>
+        </tr>
+        <tr>
+            <td>Caching</td>
+            <td>Sí</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td>Control de Acceso</td>
+            <td>Sí</td>
+            <td>No</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Tipos de Proxy</h2>
+    <p>¿Cuál es el tipo de proxy que oculta la dirección IP del cliente?</p>
+    <ol>
+        <li>Proxy Inverso</li>
+        <li>Proxy Directo</li>
+        <li>Proxy Transparente</li>
+        <li>Proxy Anónimo</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Configuración de un Proxy Inverso</h2>
+    <ul>
+        <li>Instalar el software del proxy.</li>
+        <li>Configurar las reglas de redirección.</li>
+        <li>Verificar la configuración con pruebas de rendimiento.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Implementar un Proxy Transparente en una Máquina Virtual</h2>
+    <p>Configurar Squid en una máquina virtual y probar su funcionamiento mediante navegación web.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen: Tipos de Proxy y Características</h2>
+    <ul>
+        <li>Proxy Inverso, Directo, Transparente, Anónimo y Barrera.</li>
+        <li>Caching, Filtrado de Contenido, Autenticación, Balanceo dearga y Registro.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Uso Responsable de Proxies</h2>
+    <p>Seguir las leyes y regulaciones locales sobre privacidad y seguridad al utilizar proxies.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0378 Seguridad y alta disponibilidad.md · Instalación y configuración de servidores «proxy»: → Tipos de «proxy». Características y funciones.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 10:20:03</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

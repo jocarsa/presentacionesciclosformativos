@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Excepciones. — Automatización de tareas: construcción de guiones de administración: — 0377 Administración de sistemas gestores de bases de datos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="excepciones.">
+<h1>Excepciones.</h1>
+<p><strong>Unidad:</strong> Automatización de tareas: construcción de guiones de administración:<br><strong>Documento:</strong> 0377 Administración de sistemas gestores de bases de datos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Automatización de tareas: construcción de guiones de administración</h1>
+    <p><strong>Objetivo:</strong> Comprender y aplicar conceptos de excepciones en la automatización de tareas mediante guiones de administración.</p>
+</section>
+
+<section class="slide">
+    <h2>Definición de Excepciones</h2>
+    <p>Una excepción es un evento inesperado que ocurre durante la ejecución de un programa, interrumpiendo el flujo normal del programa.</p>
+</section>
+
+<section class="slide">
+    <h2>Causas comunes de excepciones</h2>
+    <ul>
+        <li>Errores en los datos de entrada</li>
+        <li>Problemas de conexión a bases de datos</li>
+        <li>Fallos en la autenticación</li>
+        <li>Desbordamientos de memoria</li>
+        <li>Divisiones porero</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Estructura de un bloque try-catch</h2>
+    <pre><code>
+try {
+    // Código que puede generar una excepción
+} catch (TipoDeExcepcion e) {
+    // Código para manejar la excepción
+}
+    </code></pre>
+</section>
+
+<section class="slide">
+    <h2>Tipos de excepciones en</h2>
+    <ul>
+        <li><strong>Checked Exception:</strong> Excepciones que deben ser declaradas o manejadas.</li>
+        <li><strong>Unchecked Exception (RuntimeException):</strong> Excepciones no comprobadas, generalmente errores del programador.</li>
+        <li><strong>Error:</strong> Errores graves que no pueden ser recuperados por el programa.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Manejo de excepciones personalizado</h2>
+    <p>Puedes crear tus propias excepciones extendiendo las clases existentes como `Exception` o `RuntimeException`.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de excepción personalizada</h2>
+    <pre><code>
+public class MiExcepcion extends Exception {
+    public MiExcepcion(String mensaje) {
+        super(mensaje);
+    }
+}
+    </code></pre>
+</section>
+
+<section class="slide">
+    <h2>Uso de finally</h2>
+    <p>El bloque `finally` se ejecuta siempre, independientemente de si ocurre una excepción o no.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de uso de finally</h2>
+    <pre><code>
+try {
+    // Código que puede generar una excepción
+} catch (Exception e) {
+    // Manejo de la excepción
+} finally {
+    // Código que siempre se ejecuta
+}
+    </code></pre>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Excepciones en</h2>
+    <p>¿Cuál es la diferencia entre `Exception` y `RuntimeException`?</p>
+    <ol>
+        <li><strong>Exception:</strong> Excepciones comprobadas.</li>
+        <li><strong>RuntimeException:</strong> Excepciones no comprobadas.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas en el manejo de excepciones</h2>
+    <ul>
+        <li>Captura las excepciones más específicas primero.</li>
+        <li>Propague las excepciones cuando no puedas manejarlas.</li>
+        <li>Mantén los mensajes de error claros y descriptivos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes en el manejo de excepciones</h2>
+    <ul>
+        <li>No capturar excepciones que no puedas manejar.</li>
+        <li>No propagar excepciones sin información útil.</li>
+        <li>No usar `catch (Exception e)` sin procesamiento adecuado.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: Try-catch vs. If-else</h2>
+    <p><strong>Try-catch:</strong> Mejor para manejar errores inesperados y mantener el flujo normal del programa.</p>
+    <p><strong>If-else:</strong> Mejor para verificar condiciones conocidas antes de ejecutar código.</p>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Manejo de excepciones</h2>
+    <ul>
+        <li>Captura las excepciones específicas.</li>
+        <li>Propaga las excepciones cuando no puedas manejarlas.</li>
+        <li>Mantén mensajes de error claros.</li>
+        <li>Usa `finally` para liberar recursos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Implementación de excepciones en un guion de administración</h2>
+    <p>Crea un fragmento de código que maneje una posible excepción al conectarse a una base de datos.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Excepciones son eventos inesperados durante la ejecución del programa.</li>
+        <li>Manejo eficiente de excepciones es crucial para la robustez de los sistemas.</li>
+        <li>Usa `try-catch`, `finally` y propaga excepciones cuando sea necesario.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa (general)</h2>
+    <p><strong>ISO/IE 9126:</strong> Modelo de calidad para el software, que incluye aspectos como la robustez y la confiabilidad.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0377 Administración de sistemas gestores de bases de datos.md · Automatización de tareas: construcción de guiones de administración: → Excepciones.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 09:38:03</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Creación y depuración de «scripts». — Aplicación de lenguajes de «scripting» en sistemas operativos libres y propietarios: — 0374 Administración de sistemas operativos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="creacion-y-depuracion-de-scripts-.">
+<h1>Creación y depuración de «scripts».</h1>
+<p><strong>Unidad:</strong> Aplicación de lenguajes de «scripting» en sistemas operativos libres y propietarios:<br><strong>Documento:</strong> 0374 Administración de sistemas operativos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Aplicación de lenguajes de «scripting» en sistemas operativos libres y propietarios</h1>
+    <h3>Creado por [Nombre del Autor]</h3>
+    <p>Objetivo: Aprender a crear y depurar scripts en sistemas operativos.</p>
+</section>
+
+<section class="slide">
+    <h2>¿Qué es scripting?</h2>
+    <p>Scripting es el uso de un lenguaje de programación para automatizar tareas repetitivas o complejas.</p>
+</section>
+
+<section class="slide">
+    <h2>Lenguajes de scripting populares</h2>
+    <ul>
+        <li>Bash (Unix/Linux)</li>
+        <li>PowerShell (Windows)</li>
+        <li></li>
+        <li>Ruby</li>
+        <li>Perl</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Cómo crear un script básico</h2>
+    <ol>
+        <li>Elegir el lenguaje de scripting adecuado.</li>
+        <li>Escribir el código en un editor de texto.</li>
+        <li>Guardar el archivo con la extensión correspondiente (por ejemplo, . para).</li>
+        <li>Hacer que el script sea ejecutable: chmod +x nombre_script.sh</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de script en</h2>
+    <pre><code>#!/bin/bash
+echo "Hola, mundo!"
+date</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Depuración de scripts</h2>
+    <p>La depuración es el proceso de identificar y corregir errores en un script.</p>
+</section>
+
+<section class="slide">
+    <h2>Métodos de depuración</h2>
+    <ul>
+        <li>Ejecución paso a paso (debugging)</li>
+        <li>Uso de mensajes de error personalizados</li>
+        <li>Pruebas unitarias</li>
+        <li>Revisión de código</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de depuración en</h2>
+    <pre><code>#!/bin/bash
+set -x  # Habilita el modo de depuración
+echo "Hola, mundo!"
+date
+set +x  # Deshabilita el modo de depuración</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas en scripting</h2>
+    <ul>
+        <li>Comentar el código</li>
+        <li>Usar variables y funciones</li>
+        <li>Manejo de errores</li>
+        <li>Seguridad (evitar inyecciones)</li>
+        <li>Mantenimiento y actualización</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes en scripting</h2>
+    <ul>
+        <li>Sintaxis incorrecta</li>
+        <li>Comandos no reconocidos</li>
+        <li>Variables sin definir</li>
+        <li>Permisos insuficientes</li>
+        <li>Bucle infinito</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de error común en</h2>
+    <pre><code>#!/bin/bash
+echo "Hola, mundo!"
+date
+ls /ruta/incorrecta  # Error: directorio no encontrado</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Comparativa entre sistemas operativos libres y propietarios</h2>
+    <ul>
+        <li>Sistemas libres (Linux): mayor personalización, seguridad, transparencia.</li>
+        <li>Sistemas propietarios (Windows, macOS): soporte técnico, facilidad de uso.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Scripting en sistemas operativos libres</h2>
+    <p>Ejemplos:,, Ruby. Ventajas: mayor control, seguridad, comunidad activa.</p>
+</section>
+
+<section class="slide">
+    <h2>Scripting en sistemas operativos propietarios</h2>
+    <p>Ejemplos: PowerShell (Windows), AppleScript (macOS). Ventajas: facilidad de uso, soporte técnico.</p>
+</section>
+
+<section class="slide">
+    <h2>Caso práctico: Automatización de tareas en Linux</h2>
+    <p>Crear un script que actualice automáticamente los paquetes del sistema operativo.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de script para actualizar paquetes (Linux)</h2>
+    <pre><code>#!/bin/bash
+sudo apt update && sudo apt upgrade -y</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Caso práctico: Automatización de tareas en Windows</h2>
+    <p>Crear un script que reinicie automáticamente el servicio de impresión.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de script para reiniciar servicio (Windows)</h2>
+    <pre><code>@echo off
+net stop spooler
+timeout /t 5
+net start spooler</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: Identificación de errores en scripts</h2>
+    <p>¿Cuál es el error en este script?</p>
+    <pre><code>#!/bin/bash
+echo "Hola, mundo!"
+ls /ruta/incorrecta  # Error: directorio no encontrado</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Chequeo de conocimientos</h2>
+    <ul>
+        <li>¿Qué es scripting?</li>
+        <li>¿Cuáles son los principales lenguajes de scripting?</li>
+        <li>¿Cómo se crea un script básico en?</li>
+        <li>¿Qué métodos existen para depurar scripts?</li>
+        <li>¿Cuáles son las mejores prácticas al escribir scripts?</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad práctica: Crear un script personalizado</h2>
+    <p>Crea un script que realice una tarea específica (por ejemplo, crear un archivo de texto con la fecha actual).</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Scripting es la automatización de tareas mediante lenguajes de programación.</li>
+        <li>Los sistemas operativos libres y propietarios tienen diferentes opciones para scripting.</li>
+        <li>Buenas prácticas y depuración son cruciales para crear scripts eficientes y seguros.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa y ética en scripting</h2>
+    <p>Es importante seguir las normativas de seguridad y ética al escribir y ejecutar scripts.</p>
+</section>
+
+<section class="slide">
+    <h2>Recursos adicionales</h2>
+    <ul>
+        <li>Documentación oficial de: https://www.gnu.org/software/bash/manual/</li>
+        <li>Documentación oficial de PowerShell: https://docs.microsoft.com/en-us/powershell/scripting/user-guide/index?view=powershell-7.1</li>
+        <li>Cursos en línea sobre scripting (Coursera, Udemy, etc.)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Gracias por su atención</h2>
+    <p>Preguntas o dudas: [Correo electrónico]</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0374 Administración de sistemas operativos.md · Aplicación de lenguajes de «scripting» en sistemas operativos libres y propietarios: → Creación y depuración de «scripts».</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 05:11:11</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

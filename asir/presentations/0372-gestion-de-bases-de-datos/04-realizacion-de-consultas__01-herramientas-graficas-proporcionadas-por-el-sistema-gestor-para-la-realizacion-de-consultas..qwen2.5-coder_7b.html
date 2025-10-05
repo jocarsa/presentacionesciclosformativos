@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Herramientas gráficas proporcionadas por el sistema gestor para la realización de consultas. — Realización de consultas: — 0372 Gestión de bases de datos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="herramientas-graficas-proporcionadas-por-el-sistema-gestor-para-la-realizacion-de-consultas.">
+<h1>Herramientas gráficas proporcionadas por el sistema gestor para la realización de consultas.</h1>
+<p><strong>Unidad:</strong> Realización de consultas:<br><strong>Documento:</strong> 0372 Gestión de bases de datos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Herramientas gráficas proporcionadas por el sistema gestor para la realización de consultas</h1>
+    <p>Objetivo: Comprender y utilizar las herramientas gráficas disponibles en los sistemas gestores de bases de datos para realizar consultas eficientes.</p>
+</section>
+
+<section class="slide">
+    <h2>Herramientas Gráficas en Sistemas Gestores de Bases de Datos</h2>
+    <ul>
+        <li>Interfaz gráfica de usuario (GUI)</li>
+        <li>Consultor SQL</li>
+        <li>Generador de consultas</li>
+        <li>Visualización de datos</li>
+        <li>Edición y ejecución de scripts</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Interfaz Gráfica de Usuario (GUI)</h2>
+    <p>Proporciona una forma visual para interactuar con el sistema gestor de bases de datos.</p>
+    <img src="gui_example.png" alt="Ejemplo de GUI">
+</section>
+
+<section class="slide">
+    <h2>Consultor SQL</h2>
+    <p>Herramienta que permite escribir y ejecutar consultas SQL directamente desde la interfaz gráfica.</p>
+    <img src="sql_editor.png" alt="Editor SQL">
+</section>
+
+<section class="slide">
+    <h2>Generador de Consultas</h2>
+    <p>Facilita la creación de consultas complejas sin necesidad de conocimientos avanzados de SQL.</p>
+    <img src="query_builder.png" alt="Constructor de consultas">
+</section>
+
+<section class="slide">
+    <h2>Visualización de Datos</h2>
+    <p>Muestra los resultados de las consultas en formatos gráficos para facilitar su comprensión.</p>
+    <img src="data_visualization.png" alt="Visualización de datos">
+</section>
+
+<section class="slide">
+    <h2>Edición y Ejecución de Scripts</h2>
+    <p>Permite crear, editar y ejecutar bloques de código SQL complejos.</p>
+    <img src="script_editor.png" alt="Editor de scripts SQL">
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Consulta Simple</h2>
+    <pre><code>SELECT nombre, edad FROM usuarios WHERE edad > 18;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Consulta Compleja</h2>
+    <pre><code>SELECT p.nombre, a.titulo 
+FROM prestamos p
+JOIN libros b ON p.libro_id = b.id
+JOIN autores a ON b.autor_id = a.id
+WHERE p.fechadevuelta IS NULL;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico: Consulta de Ventas</h2>
+    <p>Realizar una consulta para obtener el total de ventas por producto en un período específico.</p>
+    <img src="sales_query.png" alt="Consulta de ventas">
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas</h2>
+    <ul>
+        <li>Usar consultas parametrizadas para evitar inyecciones SQL</li>
+        <li>Optimizar las consultas para mejorar el rendimiento</li>
+        <li>Documentar las consultas para su mantenimiento futuro</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes</h2>
+    <ul>
+        <li>No cerrar correctamente las comillas en las cadenas SQL</li>
+        <li>No usar paréntesis adecuadamente en las consultas complejas</li>
+        <li>No indexar adecuadamente las columnas utilizadas en las cláusulas WHERE</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: Consultas SQL vs. Herramientas Gráficas</h2>
+    <table>
+        <tr>
+            <th>Herramienta Gráfica</th>
+            <th>Consultas SQL</th>
+        </tr>
+        <tr>
+            <td>Fácil de usar para consultas simples</td>
+            <td>Más flexible y potente para consultas complejas</td>
+        </tr>
+        <tr>
+            <td>No requiere conocimientos avanzados de SQL</td>
+            <td>Requiere conocimientos básicos de SQL</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz</h2>
+    <p>¿Cuál es la ventaja principal de usar herramientas gráficas para realizar consultas?</p>
+    <ol>
+        <li>Reducir el tiempo necesario para escribir consultas complejas</li>
+        <li>Facilitar la visualización de los resultados</li>
+        <li>Evitar errores tipográficos en las consultas SQL</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist</h2>
+    <ul>
+        <li>¿Tienes acceso a una interfaz gráfica de usuario?</li>
+        <li>¿Sabes cómo escribir consultas SQL básicas?</li>
+        <li>¿Puedes utilizar herramientas para generar consultas complejas?</li>
+        <li>¿Conoces cómo visualizar los resultados de las consultas?</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Crear una Consulta</h2>
+    <p>Crea una consulta SQL para obtener el nombre y la edad de los usuarios que tienen más de 30 años.</p>
+    <textarea rows="4" cols="50"></textarea>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Herramientas gráficas facilitan la realización de consultas en sistemas gestores de bases de datos.</li>
+        <li>Proporcionan interfaces amigables y funciones avanzadas para el desarrollo de consultas SQL.</li>
+        <li>Es importante conocer tanto las herramientas gráficas como las consultas SQL para una gestión eficiente de las bases de datos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa</h2>
+    <p>No hay normativas específicas sobre el uso de herramientas gráficas en sistemas gestores de bases de datos, pero es recomendable seguir buenas prácticas para garantizar la seguridad y eficiencia del sistema.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0372 Gestión de bases de datos.md · Realización de consultas: → Herramientas gráficas proporcionadas por el sistema gestor para la realización de consultas.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 02:25:33</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

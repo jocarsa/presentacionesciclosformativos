@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Creación de la base de datos. — Instalación de gestores de contenidos: — 0376 Implantación de aplicaciones web.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="creacion-de-la-base-de-datos.">
+<h1>Creación de la base de datos.</h1>
+<p><strong>Unidad:</strong> Instalación de gestores de contenidos:<br><strong>Documento:</strong> 0376 Implantación de aplicaciones web.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Instalación de gestores de contenidos</h1>
+    <p><strong>Objetivo:</strong> Crear la base de datos para una aplicación web utilizando un gestor de contenidos.</p>
+</section>
+
+<section class="slide">
+    <h2>¿Qué es una base de datos?</h2>
+    <ul>
+        <li>Almacena y organiza información estructurada.</li>
+        <li>Permite el acceso, recuperación y modificación de datos.</li>
+        <li>Tipo de dato: texto, números, imágenes, etc.</li>
+        <li>Ejemplos: MySQL, PostgreSQL, MongoDB.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Tipos de bases de datos</h2>
+    <ul>
+        <li>Relacionales (SQL): Tablas y relaciones entre ellas.</li>
+        <li>No relacionales (NoSQL): Almacenan datos sin estructura rígida.</li>
+        <li>Híbridos: Combinan características de bases de datos relacional y no-relacional.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Características importantes de una base de datos</h2>
+    <ul>
+        <li>Integridad: Datos consistentes y precisos.</li>
+        <li>Seguridad: Protección contra accesos no autorizados.</li>
+        <li>Escalabilidad: Aumento en el tamaño sin problemas.</li>
+        <li>Velocidad de acceso: Tiempo rápido para recuperar datos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Proceso de creación de una base de datos</h2>
+    <ol>
+        <li>Especificar los requisitos del sistema.</li>
+        <li>Diseñar la estructura de la base de datos.</li>
+        <li>Implementar la base de datos.</li>
+        <li>Cargar y probar los datos iniciales.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo: Diseño de una base de datos para un blog</h2>
+    <ul>
+        <li>Tabla "usuarios": id, nombre, correo electrónico, contraseña.</li>
+        <li>Tabla "artículos": id, título, contenido, fecha_publicación, autor_id (FK).</li>
+        <li>Tabla "comentarios": id, texto, fecha_comentario, usuario_id (FK), artículo_id (FK).</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso de SQL para crear tablas</h2>
+    <pre><code>
+CREATE TABLE usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    correo_electronico VARCHAR(100) UNIQUE NOT NULL,
+    contraseña VARCHAR(255) NOT NULL
+);
+    </code></pre>
+</section>
+
+<section class="slide">
+    <h2>Uso de SQL para insertar datos</h2>
+    <pre><code>
+INSERT INTO usuarios (nombre, correo_electronico, contraseña)
+VALUES ('Juan Pérez', 'juan.perez@example.com', 'password123');
+    </code></pre>
+</section>
+
+<section class="slide">
+    <h2>Uso de SQL para consultar datos</h2>
+    <pre><code>
+SELECT * FROM usuarios WHERE correo_electronico = 'juan.perez@example.com';
+    </code></pre>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas al crear bases de datos</h2>
+    <ul>
+        <li>Normalización: Reducir la redundancia y mejorar la integridad.</li>
+        <li>Indexación: Acelerar las búsquedas.</li>
+        <li>Seguridad: Implementar roles y permisos.</li>
+        <li>Mantenimiento regular: Actualizaciones y optimización.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes al crear bases de datos</h2>
+    <ul>
+        <li>No normalizar la base de datos.</li>
+        <li>No indexar las columnas frecuentemente consultadas.</li>
+        <li>No implementar roles y permisos adecuados.</li>
+        <li>Olvidar realizar backups regulares.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Caso de estudio: Implementación exitosa de una base de datos para un e-commerce</h2>
+    <p>Se diseñó una base de datos eficiente que permitió manejar productos, clientes, pedidos y transacciones con alta velocidad y escalabilidad.</p>
+</section>
+
+<section class="slide">
+    <h2>Caso de estudio: Implementación fallida de una base de datos para un blog</h2>
+    <p>Se creó una base de datos desnormalizada sin indexar adecuadamente, lo que resultó en lentitud significativa y problemas de escalabilidad.</p>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: ¿Cuál es la ventaja principal de las bases de datos no relacionales?</h2>
+    <ul>
+        <li>a) Velocidad de acceso a los datos.</li>
+        <li>b) Escalabilidad horizontal.</li>
+        <li>c) Integridad de los datos.</li>
+        <li>d) Facilidad de implementación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Creación de una base de datos exitosa</h2>
+    <ul>
+        <li>Especificar requisitos del sistema.</li>
+        <li>Diseñar estructura de la base de datos.</li>
+        <li>Implementar la base de datos.</li>
+        <li>Cargar y probar los datos iniciales.</li>
+        <li>Normalizar la base de datos.</li>
+        <li>Indexar columnas frecuentemente consultadas.</li>
+        <li>Implementar roles y permisos adecuados.</li>
+        <li>Mantenimiento regular.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Diseño de una base de datos para un sistema de reservas de vuelos</h2>
+    <p>El estudiante debe diseñar la estructura de una base de datos que permita gestionar aerolíneas, vuelos, clientes y reservaciones.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Una base de datos es crucial para cualquier aplicación web.</li>
+        <li>Es importante elegir el tipo adecuado de base de datos según las necesidades del sistema.</li>
+        <li>Se deben seguir buenas prácticas y evitar errores comunes para una implementación exitosa.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa general</h2>
+    <p>La normativa vigente en el sector de la tecnología impone requisitos mínimos de seguridad y protección de datos, que deben ser cumplidos al diseñar y implementar bases de datos.</p>
+</section>
+
+<section class="slide">
+    <h2>Preguntas frecuentes</h2>
+    <ul>
+        <li>¿Qué es una base de datos?</li>
+        <li>¿Cuáles son los tipos principales de bases de datos?</li>
+        <li>¿Cuáles son las mejores prácticas al crear una base de datos?</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Contacto</h2>
+    <p>Si tienes alguna pregunta o necesitas más ayuda, no dudes en contactar con el equipo de soporte técnico.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0376 Implantación de aplicaciones web.md · Instalación de gestores de contenidos: → Creación de la base de datos.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 07:55:38</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Comandos para administración del «router». — Configuración y administración básica de «routers»: — 0370 Planificación y administración de redes.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="comandos-para-administracion-del-router-.">
+<h1>Comandos para administración del «router».</h1>
+<p><strong>Unidad:</strong> Configuración y administración básica de «routers»:<br><strong>Documento:</strong> 0370 Planificación y administración de redes.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Configuración y administración básica de «routers»</h1>
+    <p>Objetivo: Aprender los comandos básicos para la administración de un router.</p>
+</section>
+
+<section class="slide">
+    <h2>Introducción a los routers</h2>
+    <ul>
+        <li>Definición y función principal</li>
+        <li>Estructura básica de un router</li>
+        <li>Tipos de routers (domésticos, empresariales)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexiones básicas</h2>
+    <ul>
+        <li>Conexión Ethernet</li>
+        <li>Conexión Wi-Fi</li>
+        <li>Configuración de puertos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración inicial</h2>
+    <p>Proceso básico para configurar un router:</p>
+    <ol>
+        <li>Conectar el router a la red eléctrica</li>
+        <li>Acceder a la interfaz web del router</li>
+        <li>Cambiar la contraseña de administración</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Configuración de puertos</h2>
+    <ul>
+        <li>Asignación de direcciones IP</li>
+        <li>Configuración de VLANs (opcional)</li>
+        <li>Configuración de puertos SSH y Telnet</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de enrutamiento estático</h2>
+    <p>Ejemplo básico:</p>
+    <pre>
+        ip route 192.168.2.0 255.255.255.0 192.168.1.2
+    </pre>
+</section>
+
+<section class="slide">
+    <h2>Configuración de enrutamiento dinámico</h2>
+    <ul>
+        <li>Protocolos de enrutamiento (OSPF, BGP)</li>
+        <li>Ejemplo básico de OSPF:</li>
+    </ul>
+    <pre>
+        router ospf 1
+        network 192.168.1.0 0.0.0.255 area 0
+    </pre>
+</section>
+
+<section class="slide">
+    <h2>Configuración de firewall básico</h2>
+    <ul>
+        <li>Definición y función del firewall</li>
+        <li>Ejemplo básico de reglas de firewall:</li>
+    </ul>
+    <pre>
+        access-list 1 permit 192.168.1.0 0.0.0.255
+        interface GigabitEthernet0/0
+        ip access-group 1 in
+    </pre>
+</section>
+
+<section class="slide">
+    <h2>Configuración de DNS</h2>
+    <ul>
+        <li>Definición y función del DNS</li>
+        <li>Ejemplo básico de configuración:</li>
+    </ul>
+    <pre>
+        ip name-server 8.8.8.8
+        ip domain-name example.com
+    </pre>
+</section>
+
+<section class="slide">
+    <h2>Configuración de SSH y Telnet</h2>
+    <p>Buenas prácticas:</p>
+    <ul>
+        <li>Desactivar Telnet (seguridad)</li>
+        <li>Habilitar SSH (ifrado)</li>
+        <li>Configurar claves públicas/privadas</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes en la configuración de routers</h2>
+    <ul>
+        <li>Conectar el router a la red eléctrica incorrectamente</li>
+        <li>No cambiar la contraseña de administración</li>
+        <li>Configurar puertos incorrectamente</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas en la administración de routers</h2>
+    <ul>
+        <li>Mantener actualizaciones del firmware</li>
+        <li>Realizar copias de seguridad periódicas</li>
+        <li>Monitorear el rendimiento y los logs</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Caso práctico: Configuración avanzada de un router</h2>
+    <p>Ejemplo de configuración avanzada:</p>
+    <pre>
+        interface GigabitEthernet0/1
+        ip address 192.168.1.1 255.255.255.0
+        no shutdown
+        ip nat inside
+        crypto isakmp policy 10
+        encryption aes 256
+    </pre>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: Comandos básicos de administración de routers</h2>
+    <p>Pregunta: ¿Cuál es el comando para reiniciar un router?</p>
+    <ul>
+        <li>a) reset router</li>
+        <li>b) reboot</li>
+        <li>c) shutdown</li>
+        <li>d) restart</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist de configuración básica de un router</h2>
+    <ol>
+        <li>Conectar el router a la red eléctrica</li>
+        <li>Acceder a la interfaz web del router</li>
+        <li>Cambiar la contraseña de administración</li>
+        <li>Configurar puertos Ethernet</li>
+        <li>Configurar dirección IP y máscara de subred</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Configuración básica de un router en laboratorio</h2>
+    <p>Tarea: Configurar un router con las siguientes características:</p>
+    <ul>
+        <li>Dirección IP: 192.168.1.1/24</li>
+        <li>Puerto SSH habilitado</li>
+        <li>Firewall básico permitiendo acceso a la red interna</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Resumen de los comandos básicos para administración de routers</h2>
+    <ul>
+        <li>show ip interface brief</li>
+        <li>ping</li>
+        <li>traceroute</li>
+        <li>ssh</li>
+        <li>telnet</li>
+        <li>copy running-config startup-config</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa y regulaciones aplicables a la administración de routers</h2>
+    <ul>
+        <li>Reglamento Electrónica de Comunicaciones (REC)</li>
+        <li>Directiva General de Protección de Datos (GDPR)</li>
+        <li>Políticas internas de la organización</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Preguntas y dudas</h2>
+    <p>¿Tienes alguna pregunta o duda sobre los comandos básicos para administración de routers?</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0370 Planificación y administración de redes.md · Configuración y administración básica de «routers»: → Comandos para administración del «router».</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 00:38:56</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>NAT estático, dinámico, de sobrecarga (PAT) e inverso. — Configuración del acceso a Internet desde una LAN: — 0370 Planificación y administración de redes.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="nat-estatico-dinamico-de-sobrecarga-pat-e-inverso.">
+<h1>NAT estático, dinámico, de sobrecarga (PAT) e inverso.</h1>
+<p><strong>Unidad:</strong> Configuración del acceso a Internet desde una LAN:<br><strong>Documento:</strong> 0370 Planificación y administración de redes.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>NAT estático, dinámico, de sobrecarga (PAT) e inverso</h1>
+    <p>Objetivo: Comprender los tipos de NAT y sus aplicaciones en redes.</p>
+</section>
+
+<section class="slide">
+    <h2>NAT estático</h2>
+    <ul>
+        <li>Asignación manual de una dirección IP pública a una dirección IP privada.</li>
+        <li>No requiere cambios en los dispositivos internos.</li>
+        <li>No es escalable para redes grandes.</li>
+        <li>Ejemplo: Asignación específica de un ISP.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>NAT dinámico</h2>
+    <ul>
+        <li>Asignación automática de una dirección IP pública a una dirección IP privada.</li>
+        <li>Requiere cambios en los dispositivos internos.</li>
+        <li>Más escalable que el NAT estático.</li>
+        <li>Ejemplo: DHCP con NAT.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>NAT de sobrecarga (PAT)</h2>
+    <ul>
+        <li>Asignación de una única dirección IP pública a múltiples direcciones IP privadas.</li>
+        <li>Permite la conexión simultánea de múltiples dispositivos.</li>
+        <li>Ejemplo: NAT con múltiples puertos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>NAT inverso</h2>
+    <ul>
+        <li>Asignación de una dirección IP privada a una dirección IP pública.</li>
+        <li>Permite la conexión desde el exterior a un dispositivo específico dentro de la LAN.</li>
+        <li>Ejemplo: Servicios web internos accesibles desde Internet.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ventajas del NAT estático</h2>
+    <ul>
+        <li>Seguridad mejorada al ocultar la dirección IP interna.</li>
+        <li>No requiere cambios en los dispositivos internos.</li>
+        <li>Más control sobre el acceso a la LAN.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ventajas del NAT dinámico</h2>
+    <ul>
+        <li>Escalabilidad para redes grandes.</li>
+        <li>No requiere cambios en los dispositivos internos.</li>
+        <li>Más eficiente en términos de uso de direcciones IP públicas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ventajas del NAT de sobrecarga (PAT)</h2>
+    <ul>
+        <li>Permite la conexión simultánea de múltiples dispositivos.</li>
+        <li>Escalabilidad para redes grandes.</li>
+        <li>Más eficiente en términos de uso de direcciones IP públicas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ventajas del NAT inverso</h2>
+    <ul>
+        <li>Permite la conexión desde el exterior a un dispositivo específico dentro de la LAN.</li>
+        <li>Más control sobre el acceso a los servicios internos.</li>
+        <li>Seguridad mejorada al ocultar la dirección IP interna.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Caso práctico: NAT estático en una pequeña empresa</h2>
+    <p>Una pequeña empresa con 10 dispositivos necesita acceso a Internet. Se asignan direcciones IP públicas estáticas a los servidores web y correo electrónico.</p>
+</section>
+
+<section class="slide">
+    <h2>Caso práctico: NAT dinámico en una universidad</h2>
+    <p>Una universidad con 10,000 dispositivos necesita acceso a Internet. Se utiliza DHCP con NAT para asignar direcciones IP públicas dinámicamente.</p>
+</section>
+
+<section class="slide">
+    <h2>Caso práctico: NAT de sobrecarga (PAT) en una empresa global</h2>
+    <p>Una empresa global con 10,000 dispositivos necesita acceso a Internet. Se utiliza NAT de sobrecarga para permitir la conexión simultánea de múltiples dispositivos.</p>
+</section>
+
+<section class="slide">
+    <h2>Caso práctico: NAT inverso en una institución gubernamental</h2>
+    <p>Una institución gubernamental con 100 servidores necesita acceso a Internet. Se utiliza NAT inverso para permitir la conexión desde el exterior a los servicios web internos.</p>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas en el uso de NAT</h2>
+    <ul>
+        <li>Seguridad: Utilizar firewalls y listas de control de acceso (ACL).</li>
+        <li>Mantenimiento: Monitorear y mantener actualizados los registros de NAT.</li>
+        <li>Escalabilidad: Planificar la escalabilidad desde el inicio.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes en el uso de NAT</h2>
+    <ul>
+        <li>No asignar direcciones IP públicas a dispositivos internos necesarios.</li>
+        <li>No configurar correctamente los firewalls y ACL.</li>
+        <li>No monitorear y mantener actualizados los registros de NAT.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: Tipos de NAT</h2>
+    <p>¿Cuál es la principal diferencia entre el NAT estático y el NAT dinámico?</p>
+    <ol>
+        <li>NAT estático asigna direcciones IP públicas manualmente, mientras que NAT dinámico las asigna automáticamente.</li>
+        <li>NAT estático requiere cambios en los dispositivos internos, mientras que NAT dinámico no.</li>
+        <li>NAT estático es más escalable que el NAT dinámico.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: Tipos de NAT</h2>
+    <p>¿Cuál es la principal ventaja del NAT de sobrecarga (PAT)?</p>
+    <ol>
+        <li>Permite la conexión simultánea de múltiples dispositivos.</li>
+        <li>No requiere cambios en los dispositivos internos.</li>
+        <li>Más eficiente en términos de uso de direcciones IP públicas.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: Tipos de NAT</h2>
+    <p>¿Cuál es la principal ventaja del NAT inverso?</p>
+    <ol>
+        <li>Permite la conexión desde el exterior a un dispositivo específico dentro de la LAN.</li>
+        <li>No requiere cambios en los dispositivos internos.</li>
+        <li>Más control sobre el acceso a los servicios internos.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Configuración de NAT estático</h2>
+    <ul>
+        <li>Asignar direcciones IP públicas manualmente a los dispositivos internos necesarios.</li>
+        <li>Configurar firewalls y ACL para seguridad.</li>
+        <li>Mantener registros actualizados de las asignaciones de NAT.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Configuración de NAT dinámico</h2>
+    <ul>
+        <li>Configurar DHCP para asignar direcciones IP públicas dinámicamente.</li>
+        <li>Configurar firewalls y ACL para seguridad.</li>
+        <li>Mantener registros actualizados de las asignaciones de NAT.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Configuración de NAT de sobrecarga (PAT)</h2>
+    <ul>
+        <li>Configurar firewalls y ACL para seguridad.</li>
+        <li>Mantener registros actualizados de las asignaciones de NAT.</li>
+        <li>Monitorear el uso de direcciones IP públicas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Configuración de NAT inverso</h2>
+    <ul>
+        <li>Asignar una dirección IP pública a un dispositivo específico dentro de la LAN.</li>
+        <li>Configurar firewalls y ACL para seguridad.</li>
+        <li>Mantener registros actualizados de las asignaciones de NAT.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <p>NAT estático, dinámico, de sobrecarga (PAT) e inverso son tipos diferentes de traducción de puertos que se utilizan para permitir el acceso a Internet desde una LAN.</p>
+</section>
+
+<section class="slide">
+    <h2>Normativa general</h2>
+    <ul>
+        <li>NAT estático: Requiere asignación manual de direcciones IP públicas.</li>
+        <li>NAT dinámico: Asigna direcciones IP públicas automáticamente mediante DHCP.</li>
+        <li>NAT de sobrecarga (PAT): Permite la conexión simultánea de múltiples dispositivos.</li>
+        <li>NAT inverso: Permite la conexión desde el exterior a un dispositivo específico dentro de la LAN.</li>
+    </ul>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0370 Planificación y administración de redes.md · Configuración del acceso a Internet desde una LAN: → NAT estático, dinámico, de sobrecarga (PAT) e inverso.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 01:30:20</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

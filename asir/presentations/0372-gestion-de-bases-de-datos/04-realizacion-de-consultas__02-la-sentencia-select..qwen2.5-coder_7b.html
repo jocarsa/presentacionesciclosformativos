@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>La sentencia SELECT. — Realización de consultas: — 0372 Gestión de bases de datos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="la-sentencia-select.">
+<h1>La sentencia SELECT.</h1>
+<p><strong>Unidad:</strong> Realización de consultas:<br><strong>Documento:</strong> 0372 Gestión de bases de datos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Realización de consultas en bases de datos</h1>
+    <p>Objetivo: Aprender a utilizar la sentencia SELECT para consultar datos en una base de datos.</p>
+</section>
+
+<section class="slide">
+    <h2>¿Qué es la sentencia SELECT?</h2>
+    <p>La sentencia SELECT se utiliza para seleccionar datos de una o varias tablas en una base de datos.</p>
+</section>
+
+<section class="slide">
+    <h2>Sintaxis básica de SELECT</h2>
+    <pre><code>SELECT column1, column2, ...
+FROM table_name;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo básico</h2>
+    <p>Seleccionar todos los registros de la tabla "Empleados":</p>
+    <pre><code>SELECT * FROM Empleados;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Seleccionar columnas específicas</h2>
+    <p>Ejemplo: Seleccionar solo el nombre y el salario de los empleados:</p>
+    <pre><code>SELECT Nombre, Salario FROM Empleados;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Filtros con WHERE</h2>
+    <p>Añadir un filtro para seleccionar solo registros que cumplan ciertas condiciones.</p>
+    <pre><code>SELECT * FROM Empleados WHERE Departamento = 'Ventas';</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Ordenamiento con ORDER BY</h2>
+    <p>Ordenar los resultados de una consulta.</p>
+    <pre><code>SELECT Nombre, Salario FROM Empleados ORDER BY Salario DESC;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Límites con LIMIT</h2>
+    <p>Limitar el número de registros devueltos por una consulta.</p>
+    <pre><code>SELECT Nombre, Salario FROM Empleados ORDER BY Salario DESC LIMIT 10;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Funciones agregadas</h2>
+    <ul>
+        <li>SUM(columna): Suma los valores de una columna.</li>
+        <li>AVG(columna): Calcula el promedio de los valores de una columna.</li>
+        <li>COUNT(columna):uenta el número de registros que cumplen la condición.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz</h2>
+    <p>¿Cuál es la diferencia entre SELECT * y SELECT Nombre, Salario?</p>
+    <ol>
+        <li><input type="radio" name="q1"> Devuelven todos los registros de la tabla.</li>
+        <li><input type="radio" name="q1"> Devuelven solo el nombre y el salario de los empleados.</li>
+        <li><input type="radio" name="q1"> No hay diferencia, son equivalentes.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Comprobación del mini-quiz</h2>
+    <p>La respuesta correcta es: Devuelven solo el nombre y el salario de los empleados.</p>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas</h2>
+    <ul>
+        <li>Usar nombres descriptivos para las columnas.</li>
+        <li>Añadir índices a las columnas utilizadas en WHERE, ORDER BY y JOIN.</li>
+        <li>Evitar SELECT * cuando solo se necesiten algunas columnas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes</h2>
+    <ul>
+        <li>Olvidar la cláusula FROM.</li>
+        <li>Escribir mal el nombre de una columna o tabla.</li>
+        <li>No usar paréntesis alrededor de las funciones agregadas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa con otras sentencias SQL</h2>
+    <table>
+        <tr>
+            <th>Sentencia</th>
+            <th>Descripción</th>
+        </tr>
+        <tr>
+            <td>INSERT INTO</td>
+            <td>Inserta nuevos registros en una tabla.</td>
+        </tr>
+        <tr>
+            <td>UPDATE</td>
+            <td>Actualiza los valores de las columnas de un registro o registros.</td>
+        </tr>
+        <tr>
+            <td>DELETE FROM</td>
+            <td>Borra registros de una tabla.</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Checklist</h2>
+    <ul>
+        <li>¿Se ha especificado correctamente la tabla?</li>
+        <li>¿Se han seleccionado las columnas correctas?</li>
+        <li>¿Se ha aplicado el filtro necesario?</li>
+        <li>¿Se ha ordenado los resultados de manera adecuada?</li>
+        <li>¿Se ha limitado el número de registros devueltos?</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejercicios prácticos</h2>
+    <p>Realizar consultas SQL para seleccionar datos de una base de datos ficticia.</p>
+    <ol>
+        <li>Selecciona todos los clientes de la ciudad de Madrid.</li>
+        <li>Calcula el promedio del salario de los empleados en el departamento de Finanzas.</li>
+        <li>Ordena los productos por precio descendente y limita el resultado a 5.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>La sentencia SELECT se utiliza para consultar datos en una base de datos.</li>
+        <li>Se pueden seleccionar todas las columnas o solo algunas específicas.</li>
+        <li>Pueden aplicarse filtros, ordenamientos y límites a las consultas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa general</h2>
+    <p>No hay normativas específicas para la sentencia SELECT en SQL. Sin embargo, es importante seguir buenas prácticas de codificación y seguridad al realizar consultas.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0372 Gestión de bases de datos.md · Realización de consultas: → La sentencia SELECT.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 02:26:32</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

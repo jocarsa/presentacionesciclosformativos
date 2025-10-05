@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Control de accesos. — Implantación de aplicaciones de ofimática Web: — 0376 Implantación de aplicaciones web.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="control-de-accesos.">
+<h1>Control de accesos.</h1>
+<p><strong>Unidad:</strong> Implantación de aplicaciones de ofimática Web:<br><strong>Documento:</strong> 0376 Implantación de aplicaciones web.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Implantación de aplicaciones web</h1>
+    <h3>Control de accesos</h3>
+    <p>Objetivo: Aprender los métodos y tecnologías para controlar el acceso a las aplicaciones web.</p>
+</section>
+
+<section class="slide">
+    <h2>Concepto de Control de Accesos</h2>
+    <p>El control de accesos en aplicaciones web es un proceso que limita el acceso a ciertas partes del sistema solo a usuarios autorizados.</p>
+</section>
+
+<section class="slide">
+    <h2>Métodos de Autenticación</h2>
+    <ul>
+        <li>Autenticación basada en contraseñas</li>
+        <li>Autenticación multifactor</li>
+        <li>Autenticación por tokens (JWT)</li>
+        <li>Autenticación biológica</li>
+        <li>Autenticación mediante dispositivos móviles</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Métodos de Autorización</h2>
+    <ul>
+        <li>Rol basado en el rol (RBAC)</li>
+        <li>Autorización basada en la identidad (ABAC)</li>
+        <li>Política basada en el contexto (PBC)</li>
+        <li>Listas de control de acceso (ACL)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo: Sistema de Autenticación Multifactor</h2>
+    <p>Un sistema que solicita tanto contraseña como un código enviado a un dispositivo móvil.</p>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico: Implementación de RBAC en una Aplicación Web</h2>
+    <p>Se configuran roles como "Administrador", "Editor" y "Vista".ada rol tiene permisos específicos.</p>
+</section>
+
+<section class="slide">
+    <h2>Proceso de Control de Accesos</h2>
+    <ol>
+        <li>Autenticación del usuario</li>
+        <li>Verificación de credenciales</li>
+        <li>Determinación de roles y permisos</li>
+        <li>Acceso condicional basado en políticas</li>
+        <li>Registro de actividades de acceso</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas</h2>
+    <ul>
+        <li>Utilizar autenticación segura (HTTPS)</li>
+        <li>Implementar políticas de contraseña fuertes</li>
+        <li>Regularmente actualizar y parchear sistemas</li>
+        <li>Monitorear y auditar accesos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en Control de Accesos</h2>
+    <ul>
+        <li>Exposición de credenciales</li>
+        <li>Autorización insuficiente</li>
+        <li>Fallo en la autenticación</li>
+        <li>Inyección SQL o XSS</li>
+        <li>No actualizaciones de seguridad</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: Autenticación vs Autorización</h2>
+    <table>
+        <tr>
+            <th>Autenticación</th>
+            <th>Autorización</th>
+        </tr>
+        <tr>
+            <td>Verificación de identidad del usuario</td>
+            <td>Determinación de permisos del usuario</td>
+        </tr>
+        <tr>
+            <td>Métodos: contraseñas, tokens, etc.</td>
+            <td>Métodos: roles, políticas, etc.</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz</h2>
+    <p>¿Cuál es el método de autenticación que no utiliza contraseñas?</p>
+    <ol>
+        <li>Autenticación basada en tokens</li>
+        <li>Autenticación multifactor</li>
+        <li>Autenticación por correo electrónico</li>
+        <li>Autenticación biológica</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Implementación de Control de Accesos</h2>
+    <ul>
+        <li>Configurar autenticación segura (HTTPS)</li>
+        <li>Definir roles y permisos adecuados</li>
+        <li>Implementar políticas de contraseña fuertes</li>
+        <li>Monitorear y auditar accesos regularmente</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Diseño de un Sistema de Control de Accesos</h2>
+    <p>Diseña un sistema de control de accesos para una aplicación web que tenga roles como "Administrador", "Editor" y "Vista".</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <p>El control de accesos es crucial en aplicaciones web. Se utilizan métodos de autenticación y autorización para limitar el acceso a usuarios autorizados.</p>
+</section>
+
+<section class="slide">
+    <h2>Normativa General</h2>
+    <ul>
+        <li>Reglamento General de Protección de Datos (RGPD)</li>
+        <li>Ley Orgánica 15/1999, de 3 de diciembre, sobre protección de datos de carácter personal</li>
+        <li>NIST SP 800-62: Seguridad de la autenticación y control de acceso</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conclusión</h2>
+    <p>El control de accesos es un aspecto fundamental en la seguridad de las aplicaciones web. Implementar medidas adecuadas puede prevenir accesos no autorizados y proteger los datos de los usuarios.</p>
+</section>
+
+<section class="slide">
+    <h2>Preguntas y Respuestas</h2>
+    <p>¿Tienes alguna pregunta sobre el control de accesos en aplicaciones web?</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0376 Implantación de aplicaciones web.md · Implantación de aplicaciones de ofimática Web: → Control de accesos.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 08:14:02</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

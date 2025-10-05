@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Instalación de servidores «proxy». — Instalación y configuración de servidores «proxy»: — 0378 Seguridad y alta disponibilidad.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="instalacion-de-servidores-proxy-.">
+<h1>Instalación de servidores «proxy».</h1>
+<p><strong>Unidad:</strong> Instalación y configuración de servidores «proxy»:<br><strong>Documento:</strong> 0378 Seguridad y alta disponibilidad.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Instalación y configuración de servidores «proxy»</h1>
+    <p>Objetivo: Aprender los pasos necesarios para instalar y configurar servidores proxy.</p>
+</section>
+
+<section class="slide">
+    <h2>¿Qué es un servidor proxy?</h2>
+    <ul>
+        <li>Servidor que actúa como intermediario entre el cliente y el servidor web.</li>
+        <li>Permite mejorar la seguridad, velocidad y eficiencia de la red.</li>
+        <li>Se utiliza para ocultar la dirección IP del cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Tipos de servidores proxy</h2>
+    <ul>
+        <li>Servidor Proxy HTTP: Para tráfico web.</li>
+        <li>Servidor Proxy SOCKS: Para cualquier tipo de tráfico.</li>
+        <li>Servidor Proxy FTP: Para transferencias de archivos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Software para servidores proxy</h2>
+    <ul>
+        <li>Squid (Linux)</li>
+        <li>Apache HTTP Server (con módulo mod_proxy)</li>
+        <li>Nginx (con módulos de proxy)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Instalación de Squid en Linux</h2>
+    <pre><code>sudo apt update
+sudo apt install squid</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Configuración básica de Squid</h2>
+    <ul>
+        <li>Edita el archivo `/etc/squid/squid.conf`.</li>
+        <li>Especifica la dirección IP y puerto del servidor proxy.</li>
+        <li>Define las reglas de acceso (ACLs).</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración ACL</h2>
+    <pre><code>acl localnet src 192.168.1.0/24
+http_access allow localnet</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Reiniciar el servicio Squid</h2>
+    <pre><code>sudo systemctl restart squid</pre></code>
+</section>
+
+<section class="slide">
+    <h2>Configuración del firewall</h2>
+    <ul>
+        <li>Asegúrate de permitir el tráfico en el puerto 3128 (puerto predeterminado de Squid).</li>
+        <pre><code>sudo ufw allow 3128/tcp</pre></code>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Prueba del servidor proxy</h2>
+    <ul>
+        <li>Configura tu navegador para usar el servidor proxy.</li>
+        <li>Navega a un sitio web y verifica que el tráfico pasa por el proxy.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas de configuración</h2>
+    <ul>
+        <li>Utiliza autenticación para controlar el acceso.</li>
+        <li>Implementa encriptación SSL/TLS para tráfico seguro.</li>
+        <li>Mantén las reglas ACL actualizadas y seguras.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes al configurar servidores proxy</h2>
+    <ul>
+        <li>No permitir el acceso a direcciones IP incorrectas.</li>
+        <li>No configurar el firewall adecuadamente.</li>
+        <li>No utilizar autenticación o encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: Configuración de servidores proxy</h2>
+    <p>¿Cuál es el puerto predeterminado para Squid?</p>
+    <ol>
+        <li>80</li>
+        <li>443</li>
+        <li>3128</li>
+        <li>8080</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist de configuración</h2>
+    <ul>
+        <li>Instalar el software del servidor proxy.</li>
+        <li>Configurar la dirección IP y puerto.</li>
+        <li>Definir reglas de acceso (ACLs).</li>
+        <li>Reiniciar el servicio.</li>
+        <li>Configurar el firewall.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Configuración práctica</h2>
+    <p>Instala y configura un servidor proxy Squid en tu sistema Linux.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Servidores proxy actúan como intermediarios entre clientes y servidores web.</li>
+        <li>Software populares incluyen Squid, Apache y Nginx.</li>
+        <li>Configuración básica implica definir ACLs y reiniciar el servicio.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa</h2>
+    <p>No hay normativas específicas para la instalación de servidores proxy, pero es importante seguir buenas prácticas de seguridad y cumplir con las políticas internas del organismo.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0378 Seguridad y alta disponibilidad.md · Instalación y configuración de servidores «proxy»: → Instalación de servidores «proxy».</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 10:20:53</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Búsqueda de información del sistema mediante comandos y herramientas gráficas. — Administración y aseguramiento de la información: — 0369 Implantación de sistemas operativos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="busqueda-de-informacion-del-sistema-mediante-comandos-y-herramientas-graficas.">
+<h1>Búsqueda de información del sistema mediante comandos y herramientas gráficas.</h1>
+<p><strong>Unidad:</strong> Administración y aseguramiento de la información:<br><strong>Documento:</strong> 0369 Implantación de sistemas operativos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Búsqueda de información del sistema mediante comandos y herramientas gráficas</h2>
+    <p>Objetivo: Aprender las técnicas para buscar e interactuar con la información del sistema operativo.</p>
+</section>
+
+<section class="slide">
+    <h3>Comandos básicos de búsqueda en sistemas operativos</h3>
+    <ul>
+        <li><code>dir</code> o <code>ls</code>: Lista los archivos y directorios.</li>
+        <li><code>find</code>: Busca archivos según criterios específicos.</li>
+        <li><code>locate</code>: Busca archivos rápidamente utilizando una base de datos actualizada.</li>
+        <li><code>grep</code>: Filtra texto en archivos basándose en patrones.</li>
+        <li><code>which</code>: Encuentra la ubicación de un ejecutable.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Herramientas gráficas para búsqueda</h3>
+    <ul>
+        <li><strong>Explorador de archivos</strong>: Interfaz gráfica para navegar y buscar archivos.</li>
+        <li><strong>Búsqueda avanzada</strong>: Permite filtrar resultados por tipo, tamaño, fecha de modificación, etc.</li>
+        <li><strong>Busadores web</strong>: Utilizados para buscar información en Internet sobre sistemas operativos.</li>
+        <li><strong>Herramientas de búsqueda interna del sistema</strong>: Como el Finder en macOS o el Explorador de Windows.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Ejemplo práctico: Buscar archivos con extensión .txt</h3>
+    <p>En un terminal, puedes usar:</p>
+    <code>find /ruta/directorio -name "*.txt"</code>
+</section>
+
+<section class="slide">
+    <h3>Caso de estudio: Uso del explorador de archivos en Windows</h3>
+    <p>Explora la carpeta ":\Users\TuNombre" y busca todos los archivos PDF.</p>
+</section>
+
+<section class="slide">
+    <h3>Proceso: Actualizar la base de datos para uso de locate</h3>
+    <ol>
+        <li>Abre un terminal con privilegios de administrador.</li>
+        <li>Escribe:<code>sudo updatedb</code></li>
+        <li>Espera a que se complete el proceso (puede tardar unos minutos).</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h3>Buenas prácticas al buscar información del sistema</h3>
+    <ul>
+        <li>Usa comandos y herramientas específicas para la tarea.</li>
+        <li>Limita los resultados con criterios de búsqueda precisos.</li>
+        <li>Guarda los resultados importantes en un archivo o nota.</li>
+        <li>Evita usar comandos potencialmente perjudiciales sin conocimiento.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Errores comunes al buscar información del sistema</h3>
+    <ul>
+        <li>No especificar criterios de búsqueda adecuados.</li>
+        <li>Usar comandos incorrectos o no existentes.</li>
+        <li>No tener permisos suficientes para acceder a ciertas áreas.</li>
+        <li>Perder el contexto al navegar por múltiples directorios.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Comparativa: Comandos vs. Herramientas Gráficas</h3>
+    <table>
+        <tr>
+            <th>Comandos</th>
+            <th>Herramientas Gráficas</th>
+        </tr>
+        <tr>
+            <td>Más rápido y eficiente para usuarios avanzados.</td>
+            <td>Más intuitiva y fácil de usar para usuarios principiantes.</td>
+        </tr>
+        <tr>
+            <td>Permite automatización y scripting.</td>
+            <td>No permite automatización, solo interacción manual.</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h3>Mini-quiz: ¿Cuál comando busca archivos ocultos?</h3>
+    <ul>
+        <li>a) find /ruta/directorio -name "*"</li>
+        <li>b) locate /ruta/directorio</li>
+        <li>c) grep /ruta/directorio ".*"</li>
+        <li>d) ls /ruta/directorio -a</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Checklist: Verificación de la búsqueda del sistema</h3>
+    <ol>
+        <li>¿Se especificaron correctamente los criterios de búsqueda?</li>
+        <li>¿Se tuvieron en cuenta los permisos necesarios?</li>
+        <li>¿Se guardaron los resultados importantes?</li>
+        <li>¿Se verificó la precisión de los resultados?</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h3>Actividad: Buscar y listar todos los archivos ejecutables en el sistema</h3>
+    <p>Escribe un comando que liste todos los archivos con extensión .exe en la carpeta ":\Windows\System32" y guarda los resultados en un archivo de texto.</p>
+</section>
+
+<section class="slide">
+    <h3>Resumen: Búsqueda de información del sistema</h3>
+    <ul>
+        <li>Se aprendieron comandos básicos para buscar archivos y directorios.</li>
+        <li>Se exploraron herramientas gráficas para búsqueda en sistemas operativos.</li>
+        <li>Se discutieron buenas prácticas y errores comunes al buscar información del sistema.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Normativa: Seguridad al buscar información del sistema</h3>
+    <p>Es importante tener en cuenta la seguridad al buscar información del sistema, evitando el acceso no autorizado a áreas sensibles y protegiendo datos confidenciales.</p>
+</section>
+
+<section class="slide">
+    <h2>Preguntas y dudas</h2>
+    <p>¿Tienes alguna pregunta o duda sobre la búsqueda de información del sistema mediante comandos y herramientas gráficas?</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0369 Implantación de sistemas operativos.md · Administración y aseguramiento de la información: → Búsqueda de información del sistema mediante comandos y herramientas gráficas.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-04 21:54:05</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

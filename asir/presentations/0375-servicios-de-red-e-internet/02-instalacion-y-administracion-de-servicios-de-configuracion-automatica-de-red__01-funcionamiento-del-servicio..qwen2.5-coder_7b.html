@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Funcionamiento del servicio. — Instalación y administración de servicios de configuración automática de red: — 0375 Servicios de red e Internet.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="funcionamiento-del-servicio.">
+<h1>Funcionamiento del servicio.</h1>
+<p><strong>Unidad:</strong> Instalación y administración de servicios de configuración automática de red:<br><strong>Documento:</strong> 0375 Servicios de red e Internet.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Funcionamiento del servicio de configuración automática de red</h1>
+    <p>Objetivo: Comprender los principios y mecanismos detrás del funcionamiento del servicio de configuración automática de red.</p>
+</section>
+
+<section class="slide">
+    <h2>Introducción al Servicio de Configuración Automática de Red</h2>
+    <ul>
+        <li>Servicios como DHCP (Dynamic Host Configuration Protocol)</li>
+        <li>Propósito: Asignar automáticamente direcciones IP y otros parámetros a los dispositivos en una red.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Mecanismos de Funcionamiento del DHCP</h2>
+    <ol>
+        <li>DHCP Discover: El cliente envía un broadcast para solicitar una dirección IP.</li>
+        <li>DHCP Offer: El servidor ofrece una dirección IP al cliente.</li>
+        <li>DHCP Request: El cliente acepta la oferta y solicita la asignación de la dirección IP.</li>
+        <li>DHCP Acknowledgment (ACK): El servidor confirma la asignación de la dirección IP.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Roles en el Proceso DHCP</h2>
+    <ul>
+        <li><strong>Cliente:</strong> Dispositivo que solicita una dirección IP.</li>
+        <li><strong>Servidor DHCP:</strong> Equipo que asigna direcciones IP y otros parámetros.</li>
+        <li><strong>Dirección de Broadcast:</strong> Dirección utilizada para enviar mensajes a todos los dispositivos en la red.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración Automática de Red: Ventajas</h2>
+    <ul>
+        <li>Economía de tiempo y esfuerzo</li>
+        <li>Reducción de errores humanos</li>
+        <li>Facilita la gestión de grandes redes</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración Automática de Red: Desventajas</h2>
+    <ul>
+        <li>Puede causar conflictos IP si no se gestiona correctamente</li>
+        <li>No es seguro para redes sensibles o empresariales</li>
+        <li>Dependencia del servidor DHCP</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo Práctico: Configuración Automática de Red en Windows</h2>
+    <p>Paso a paso para configurar el cliente DHCP en un sistema operativo Windows.</p>
+</section>
+
+<section class="slide">
+    <h2>Caso Real: Implementación de DHCP en una Empresa</h2>
+    <p>Descripción de cómo una empresa utilizó DHCP para mejorar la gestión de sus redes.</p>
+</section>
+
+<section class="slide">
+    <h2>Proceso de Configuración Automática de Red</h2>
+    <ol>
+        <li>El cliente envía un broadcast DHCP Discover.</li>
+        <li>El servidor DHCP responde con un DHCP Offer.</li>
+        <li>El cliente acepta la oferta y envía un DHCP Request.</li>
+        <li>El servidor confirma la asignación con un DHCP ACK.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas en Configuración Automática de Red</h2>
+    <ul>
+        <li>Configurar subredes separadas para diferentes tipos de dispositivos</li>
+        <li>Asignar direcciones IP reservadas para dispositivos críticos</li>
+        <li>Monitorear y mantener el servidor DHCP regularmente</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en Configuración Automática de Red</h2>
+    <ul>
+        <li>No asignación de direcciones IP (conflictos DHCP)</li>
+        <li>Configuración incorrecta del servidor DHCP</li>
+        <li>Exposición de la red a amenazas debido a la dependencia del DHCP</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: Configuración Automática vs. Configuración Manual</h2>
+    <table>
+        <tr>
+            <th></th>
+            <th>Configuración Automática (DHCP)</th>
+            <th>Configuración Manual</th>
+        </tr>
+        <tr>
+            <td>Tiempo de configuración</td>
+            <td>Rápido</td>
+            <td>Lento y complejo</td>
+        </tr>
+        <tr>
+            <td>Precisión</td>
+            <td>Alta</td>
+            <td>Baja (riesgo de errores)</td>
+        </tr>
+        <tr>
+            <td>Mantenimiento</td>
+            <td>Menor</td>
+            <td>Más alto</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Comprendiendo el DHCP</h2>
+    <p>¿Qué es el DHCP y cómo funciona?</p>
+    <ol>
+        <li>DHCP es un protocolo que asigna automáticamente direcciones IP a los dispositivos en una red.</li>
+        <li>El cliente envía un broadcast para solicitar una dirección IP.</li>
+        <li>El servidor DHCP responde con una oferta y el cliente acepta la asignación.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Configuración Automática de Red</h2>
+    <ul>
+        <li>Configurar el servidor DHCP</li>
+        <li>Definir subredes y rangos IP</li>
+        <li>Asignar direcciones IP reservadas si es necesario</li>
+        <li>Monitorear la actividad del servidor DHCP</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Implementación de DHCP en una Red Local</h2>
+    <p>Ejercicio práctico para configurar el servicio DHCP en un entorno local.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen del Funcionamiento del Servicio de Configuración Automática de Red</h2>
+    <ul>
+        <li>DHCP es un protocolo que asigna automáticamente direcciones IP a los dispositivos en una red.</li>
+        <li>Incluye roles como cliente, servidor y dirección de broadcast.</li>
+        <li>Ofrece ventajas como economía de tiempo y seguridad, pero requiere cuidado en la configuración.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa Relacionada con el Servicio de Configuración Automática de Red</h2>
+    <p>Información sobre las normativas que regulan el uso y seguridad del DHCP en redes empresariales.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0375 Servicios de red e Internet.md · Instalación y administración de servicios de configuración automática de red: → Funcionamiento del servicio.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 05:22:13</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

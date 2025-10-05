@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Tolerancia a fallos de hardware. RAID1 y RAID5 por software. — Administración y aseguramiento de la información: — 0369 Implantación de sistemas operativos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="tolerancia-a-fallos-de-hardware.-raid1-y-raid5-por-software.">
+<h1>Tolerancia a fallos de hardware. RAID1 y RAID5 por software.</h1>
+<p><strong>Unidad:</strong> Administración y aseguramiento de la información:<br><strong>Documento:</strong> 0369 Implantación de sistemas operativos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Tolerancia a fallos de hardware. RAID1 y RAID5 por software</h2>
+    <p>Objetivo: Comprender los conceptos básicos de tolerancia a fallos de hardware, con énfasis en RAID1 y RAID5 implementados por software.</p>
+</section>
+
+<section class="slide">
+    <h3>Definición de Tolerancia a Fallos de Hardware</h3>
+    <ul>
+        <li>Capacidad del sistema para continuar operando sin interrupción ante la falla de uno o más componentes físicos.</li>
+        <li>Objetivo principal: Maximizar el tiempo de actividad y minimizar los tiempos de inactividad debido a fallos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>RAID1 (MIRRORING)</h3>
+    <ul>
+        <li>Copia exacta de todos los datos en dos o más discos duros.</li>
+        <li>No mejora la velocidad, pero ofrece alta disponibilidad y redundancia.</li>
+        <li>Requiere al menos 2 discos para su funcionamiento.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Ejemplo de RAID1</h3>
+    <p>Configuración típica: 2 discos duros. Si uno falla, el otro continúa operando con los datos originales.</p>
+</section>
+
+<section class="slide">
+    <h3>RAID5 (DISTRIBUCIÓN DE PARIDAD)</h3>
+    <ul>
+        <li>Distribución de datos y paridad en múltiples discos para mejorar la velocidad y redundancia.</li>
+        <li>Cálculo de paridad distribuido entre los discos.</li>
+        <li>Requiere al menos 3 discos para su funcionamiento.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Ejemplo de RAID5</h3>
+    <p>Configuración típica: 3 discos duros. Si uno falla, los otros dos pueden recuperar la información perdida a partir de la paridad.</p>
+</section>
+
+<section class="slide">
+    <h3>Ventajas de RAID1 y RAID5</h3>
+    <ul>
+        <li>Redundancia: Protección contra fallos individuales de discos.</li>
+        <li>Disponibilidad: Continuidad del servicio sin interrupiones significativas.</li>
+        <li>Velocidad: Mejora en algunas operaciones debido a la distribución de datos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Desventajas de RAID1 y RAID5</h3>
+    <ul>
+        <li>Costo: Requiere más discos para su implementación.</li>
+        <li>Espacio de almacenamiento reducido: No se utiliza el espacio completo de todos los discos.</li>
+        <li>Configuración compleja: Necesita un buen diseño y mantenimiento.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Buenas Prácticas en RAID1 y RAID5</h3>
+    <ul>
+        <li>Uso de discos de alta calidad para evitar fallos prematuros.</li>
+        <li>Mantenimiento regular del sistema para detectar y corregir problemas temprano.</li>
+        <li>Respaldo periódico de los datos críticos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Errores Comunes en RAID1 y RAID5</h3>
+    <ul>
+        <li>No realizar copias de seguridad regulares.</li>
+        <li>No monitorizar el estado del sistema RAID.</li>
+        <li>No reemplazar discos fallantes inmediatamente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Comparación: RAID1 vs. RAID5</h3>
+    <table>
+        <tr>
+            <th></th>
+            <th>RAID1</th>
+            <th>RAID5</th>
+        </tr>
+        <tr>
+            <td>Redundancia</td>
+            <td>Alta (opia exacta)</td>
+            <td>Moderada (paridad distribuida)</td>
+        </tr>
+        <tr>
+            <td>Velocidad</td>
+            <td>No mejora significativamente</td>
+            <td>Puede mejorar en algunas operaciones</td>
+        </tr>
+        <tr>
+            <td>Espacio de almacenamiento</td>
+            <td>Reducido (mitad del espacio total)</td>
+            <td>Moderado (alrededor del 67% del espacio total)</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h3>Mini-Quiz: RAID1 y RAID5</h3>
+    <p>¿Cuál de los siguientes es un beneficio principal de RAID5?</p>
+    <ul>
+        <li>a) Redundancia completa contra fallos individuales.</li>
+        <li>b) Velocidad significativa en todas las operaciones.</li>
+        <li>c) Espacio de almacenamiento completo.</li>
+        <li>d) Alta disponibilidad ante fallos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Checklist: Implementación de RAID1 y RAID5</h3>
+    <ol>
+        <li>Evaluación del espacio de almacenamiento necesario.</li>
+        <li>Selección de discos de alta calidad.</li>
+        <li>Configuración del sistema RAID.</li>
+        <li>Prueba inicial del sistema RAID.</li>
+        <li>Mantenimiento periódico y monitorización.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h3>Actividad: Diseño de un Sistema RAID5</h3>
+    <p>Diseña un sistema RAID5 utilizando 4 discos duros. Calcula el espacio de almacenamiento disponible y la velocidad esperada.</p>
+</section>
+
+<section class="slide">
+    <h3>Resumen</h3>
+    <ul>
+        <li>Tolerancia a fallos de hardware es crucial para sistemas críticos.</li>
+        <li>RAID1 ofrece alta redundancia pero no mejora la velocidad.</li>
+        <li>RAID5 combina redundancia y velocidad, pero requiere más discos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Normativa</h3>
+    <p>Seguridad de la información: Normativas como GDPR requieren medidas para proteger los datos contra fallos de hardware.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0369 Implantación de sistemas operativos.md · Administración y aseguramiento de la información: → Tolerancia a fallos de hardware. RAID1 y RAID5 por software.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-04 22:00:30</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

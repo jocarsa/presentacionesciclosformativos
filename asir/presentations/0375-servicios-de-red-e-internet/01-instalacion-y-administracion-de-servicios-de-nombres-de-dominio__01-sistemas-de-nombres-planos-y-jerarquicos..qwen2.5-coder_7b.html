@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Sistemas de nombres planos y jerárquicos. — Instalación y administración de servicios de nombres de dominio: — 0375 Servicios de red e Internet.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="sistemas-de-nombres-planos-y-jerarquicos.">
+<h1>Sistemas de nombres planos y jerárquicos.</h1>
+<p><strong>Unidad:</strong> Instalación y administración de servicios de nombres de dominio:<br><strong>Documento:</strong> 0375 Servicios de red e Internet.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Sistemas de nombres planos y jerárquicos</h2>
+    <p>Los sistemas de nombres en Internet pueden ser clasificados en dos tipos principales: los sistemas de nombres planos y los sistemas de nombres jerárquicos.</p>
+</section>
+
+<section class="slide">
+    <h3>Sistemas de nombres planos</h3>
+    <ul>
+        <li>No utilizan una estructura jerárquica.</li>
+        <li>Cada nombre es único en el sistema.</li>
+        <li>Ejemplo: "www.ejemplo.com" y "ftp.ejemplo.com".</li>
+        <li>Limitaciones: dificultad para organizar y escalar sistemas grandes.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Sistemas de nombres jerárquicos</h3>
+    <ul>
+        <li>Organizan los nombres en una estructura jerárquica.</li>
+        <li>Cada nombre se compone de varios niveles separados por puntos.</li>
+        <li>Ejemplo: "www.ejemplo.com" (dominio, subdominio y nivel superior).</li>
+        <li>Ventajas: facilita la organización y escalabilidad del sistema.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Características de los sistemas jerárquicos</h3>
+    <ul>
+        <li>División en dominios (top-level domains, TLDs).</li>
+        <li>Niveles de subdominio.</li>
+        <li>Estructura jerárquica desde el nivel superior hasta el nivel inferior.</li>
+        <li>Cada nivel tiene un servidor autoritativo para gestionar sus nombres.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Tipos de dominios (TLDs)</h3>
+    <ul>
+        <li>.com: Comercio electrónico.</li>
+        <li>.org: Organizaciones no gubernamentales.</li>
+        <li>.edu: Educación.</li>
+        <li>.gov: Gobierno.</li>
+        <li>.net: Redes y telecomunicaciones.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Subdominios</h3>
+    <p>Los subdominios son partes adicionales de un dominio principal, separados por puntos.</p>
+    <ul>
+        <li>Ejemplo: "blog.ejemplo.com" (subdominio "blog" dentro del dominio "ejemplo.com").</li>
+        <li>Permiten una organización más detallada y específica de los recursos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Estructura jerárquica en Internet</h3>
+    <p>La estructura jerárquica en Internet se basa en un modelo de autoridad descentralizada.</p>
+    <ul>
+        <li>Cada nivel tiene servidores autoritativos (nameservers).</li>
+        <li>Los nombres son resueltos a direcciones IP mediante una serie de consultas DNS.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Funcionamiento del sistema jerárquico</h3>
+    <p>El sistema jerárquico funciona mediante una red de servidores DNS (Domain Name System).</p>
+    <ul>
+        <li>Los clientes envían consultas a los servidores DNS.</li>
+        <li>Los servidores responden con la dirección IP correspondiente o redirigir a otros servidores si es necesario.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Desventajas de los sistemas jerárquicos</h3>
+    <ul>
+        <li>Requiere una estructura compleja y coordinada.</li>
+        <li>Puede experimentar problemas de rendimiento en momentos de alta carga.</li>
+        <li>Necesita actualizaciones frecuentes para mantener la consistencia.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Comparación con los sistemas planos</h3>
+    <table>
+        <tr>
+            <th>Sistema Planos</th>
+            <th>Sistema Jerárquicos</th>
+        </tr>
+        <tr>
+            <td>No jerárquico</td>
+            <td>Jerárquico</td>
+        </tr>
+        <tr>
+            <td>Menos escalable</td>
+            <td>Más escalable</td>
+        </tr>
+        <tr>
+            <td>Dificultad en la organización</td>
+            <td>Fácil organización y escalabilidad</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h3>Mini-quiz: Sistema de nombres jerárquicos</h3>
+    <p>¿Cuáles son los principales beneficios del sistema de nombres jerárquicos en Internet?</p>
+    <ul>
+        <li>a) Facilita la organización y escalabilidad.</li>
+        <li>b) Reduce la complejidad del sistema.</li>
+        <li>c) Mejora el rendimiento en momentos de alta carga.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Checklist: Consideraciones al usar sistemas jerárquicos</h3>
+    <ul>
+        <li>Planificar la estructura jerárquica adecuada.</li>
+        <li>Gestionar servidores DNS de manera eficiente.</li>
+        <li>Mantener actualizadas las tablas de nombres.</li>
+        <li>Probar el sistema periódicamente para detectar problemas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Ejemplo práctico: Configuración de DNS</h3>
+    <p>Configurar servidores DNS es crucial para gestionar los sistemas jerárquicos de nombres en Internet.</p>
+    <ul>
+        <li>Definir registros A yNAME.</li>
+        <li>Gestionar zonas de nombres.</li>
+        <li>Configurar TTL (Time To Live).</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Buenas prácticas en sistemas jerárquicos</h3>
+    <ul>
+        <li>Usar nombres descriptivos y fáciles de recordar.</li>
+        <li>Mantener una estructura coherente y organizada.</li>
+        <li>Proteger contra ataques DNS como DDoS.</li>
+        <li>Auditar regularmente el sistema para identificar problemas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Errores comunes en sistemas jerárquicos</h3>
+    <ul>
+        <li>Nombres de dominio mal escritos o incorrectos.</li>
+        <li>Servidores DNS no respondiendo correctamente.</li>
+        <li>TTL configurado demasiado alto o bajo.</li>
+        <li>Problemas de propagación de cambios en los registros.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Caso práctico: Implementación exitosa de un sistema jerárquico</h3>
+    <p>Una empresa puede mejorar su presencia en Internet implementando un sistema de nombres jerárquicos bien organizado.</p>
+    <ul>
+        <li>Reducción del tiempo de respuesta para los clientes.</li>
+        <li>Mejora la confiabilidad y disponibilidad del servicio.</li>
+        <li>Facilita el manejo y escalabilidad del sistema.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Normativa en sistemas jerárquicos de nombres</h3>
+    <p>Existen regulaciones y normativas que gobiernan la gestión de los sistemas jerárquicos de nombres en Internet.</p>
+    <ul>
+        <li>ICANN (Internet Corporation for Assigned Names and Numbers).</li>
+        <li>Reglas sobre la creación, uso y modificación de dominios.</li>
+        <li>Normativas para la seguridad y privacidad en el sistema DNS.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Resumen: Sistemas de nombres planos y jerárquicos</h3>
+    <p>Los sistemas de nombres jerárquicos son la base del funcionamiento de Internet moderno, ofreciendo una estructura organizada y escalable para los dominios.</p>
+    <ul>
+        <li>Estructurados en niveles jerárquicos desde el nivel superior hasta el inferior.</li>
+        <li>Facilitan la organización y escalabilidad del sistema.</li>
+        <li>Requieren una gestión cuidadosa de servidores DNS y tablas de nombres.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h1>Instalación y administración de servicios de nombres de dominio</h1>
+    <p>Objetivo: Comprender los sistemas de nombres planos y jerárquicos en Internet, con énfasis en su estructura y funcionamiento.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0375 Servicios de red e Internet.md · Instalación y administración de servicios de nombres de dominio: → Sistemas de nombres planos y jerárquicos.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 05:15:27</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

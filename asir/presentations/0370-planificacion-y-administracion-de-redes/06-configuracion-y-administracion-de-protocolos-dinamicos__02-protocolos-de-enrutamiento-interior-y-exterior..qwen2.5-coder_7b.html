@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Protocolos de enrutamiento interior y exterior. — Configuración y administración de protocolos dinámicos: — 0370 Planificación y administración de redes.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="protocolos-de-enrutamiento-interior-y-exterior.">
+<h1>Protocolos de enrutamiento interior y exterior.</h1>
+<p><strong>Unidad:</strong> Configuración y administración de protocolos dinámicos:<br><strong>Documento:</strong> 0370 Planificación y administración de redes.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Configuración y administración de protocolos dinámicos</h2>
+    <p>Objetivo: Comprender los protocolos de enrutamiento interior y exterior, su configuración y administración.</p>
+</section>
+
+<section class="slide">
+    <h3>Protocolos de enrutamiento interior</h3>
+    <ul>
+        <li>RIP (Routing Information Protocol)</li>
+        <li>OSPF (Open Shortest Path First)</li>
+        <li>BGP (Border Gateway Protocol)</li>
+        <li>EIGRP (Enhanced Interior Gateway Routing Protocol)</li>
+        <li>IS-IS (Intermediate System to Intermediate System)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>RIP: Protocolo de enrutamiento interior</h3>
+    <p>RIP utiliza un algoritmo de vecinos para propagar información sobre rutas.</p>
+</section>
+
+<section class="slide">
+    <h3>OSPF: Protocolo de enrutamiento interior</h3>
+    <p>OSPF es un protocolo de enrutamiento de área que usa el algoritmo SPF (Shortest Path First).</p>
+</section>
+
+<section class="slide">
+    <h3>BGP: Protocolo de enrutamiento exterior</h3>
+    <p>BGP se utiliza para interconectar diferentes redes IP y es conocido por su complejidad.</p>
+</section>
+
+<section class="slide">
+    <h3>EIGRP: Protocolo de enrutamiento interior</h3>
+    <p>EIGRP es un protocolo de enrutamiento que combina características de OSPF y RIP.</p>
+</section>
+
+<section class="slide">
+    <h3>IS-IS: Protocolo de enrutamiento interior</h3>
+    <p>IS-IS es un protocolo de enrutamiento de nivel 2 que usa el algoritmo SPF.</p>
+</section>
+
+<section class="slide">
+    <h3>Ejemplo de configuración RIP</h3>
+    <pre><code>router rip
+ network 192.168.1.0
+ version 2</code></pre>
+</section>
+
+<section class="slide">
+    <h3>Ejemplo de configuración OSPF</h3>
+    <pre><code>router ospf 1
+ network 192.168.1.0 0.0.0.255 area 0</code></pre>
+</section>
+
+<section class="slide">
+    <h3>Ejemplo de configuración BGP</h3>
+    <pre><code>router bgp 65000
+ neighbor 192.168.1.2 remote-as 65001</code></pre>
+</section>
+
+<section class="slide">
+    <h3>Ejemplo de configuración EIGRP</h3>
+    <pre><code>router eigrp 1
+ network 192.168.1.0</code></pre>
+</section>
+
+<section class="slide">
+    <h3>Ejemplo de configuración IS-IS</h3>
+    <pre><code>router isis
+ net 49.0001.0000.0000.0001.00</code></pre>
+</section>
+
+<section class="slide">
+    <h3>Buenas prácticas en la configuración de protocolos dinámicos</h3>
+    <ul>
+        <li>Configurar correctamente los parámetros de cada protocolo.</li>
+        <li>Monitorear el estado del enrutamiento regularmente.</li>
+        <li>Ajustar los valores de métrica según sea necesario.</li>
+        <li>Evitar la configuración de bucles en las rutas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Errores comunes en la configuración de protocolos dinámicos</h3>
+    <ul>
+        <li>No especificar correctamente los rangos de red.</li>
+        <li>No configurar las interfaces correctas.</li>
+        <li>No establecer las métricas adecuadas.</li>
+        <li>Olvidar la configuración de vecinos o routers BGP.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Comparativa entre protocolos dinámicos</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Protocolo</th>
+                <th>Ventajas</th>
+                <th>Inconvenientes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>RIP</td>
+                <td>Sencillo, rápido de configurar.</td>
+                <td>Limitado en tamaño de red, no soporta VLSM.</td>
+            </tr>
+            <tr>
+                <td>OSPF</td>
+                <td>Soporta VLSM, escalable.</td>
+                <td>Más complejo que RIP, requiere más configuración.</td>
+            </tr>
+            <tr>
+                <td>BGP</td>
+                <td>Escalable para redes grandes.</td>
+                <td>Complejo de configurar y mantener.</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<section class="slide">
+    <h3>Mini-quiz: Protocolos dinámicos</h3>
+    <p>¿Cuál de los siguientes protocolos es un ejemplo de protocolo de enrutamiento exterior?</p>
+    <ul>
+        <li>RIP</li>
+        <li>OSPF</li>
+        <li>BGP</li>
+        <li>EIGRP</li>
+        <li>IS-IS</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Mini-quiz: Protocolos dinámicos</h3>
+    <p>¿Cuál de los siguientes protocolos es conocido por su algoritmo SPF?</p>
+    <ul>
+        <li>RIP</li>
+        <li>OSPF</li>
+        <li>BGP</li>
+        <li>EIGRP</li>
+        <li>IS-IS</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Checklist de configuración de protocolos dinámicos</h3>
+    <ul>
+        <li>Verificar la versión del protocolo.</li>
+        <li>Configurar los rangos de red correctamente.</li>
+        <li>Ajustar las métricas según sea necesario.</li>
+        <li>Establecer los vecinos o routers BGP.</li>
+        <li>Monitorear el estado del enrutamiento regularmente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Actividad: Configuración práctica de RIP</h3>
+    <p>Configurar un router con RIP y probar la propagación de rutas entre diferentes interfaces.</p>
+</section>
+
+<section class="slide">
+    <h3>Resumen</h3>
+    <ul>
+        <li>Protocolos de enrutamiento interior: RIP, OSPF, EIGRP, IS-IS.</li>
+        <li>Protocolos de enrutamiento exterior: BGP.</li>
+        <li>Buenas prácticas y errores comunes en la configuración.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Normativa general</h3>
+    <p>No hay normativas específicas para la configuración de protocolos dinámicos, pero es importante seguir las mejores prácticas y cumplir con los estándares de seguridad y rendimiento.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0370 Planificación y administración de redes.md · Configuración y administración de protocolos dinámicos: → Protocolos de enrutamiento interior y exterior.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 00:46:16</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

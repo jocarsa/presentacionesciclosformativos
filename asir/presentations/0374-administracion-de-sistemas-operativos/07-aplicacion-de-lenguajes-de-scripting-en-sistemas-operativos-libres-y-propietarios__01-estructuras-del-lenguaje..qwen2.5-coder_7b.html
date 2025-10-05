@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Estructuras del lenguaje. — Aplicación de lenguajes de «scripting» en sistemas operativos libres y propietarios: — 0374 Administración de sistemas operativos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="estructuras-del-lenguaje.">
+<h1>Estructuras del lenguaje.</h1>
+<p><strong>Unidad:</strong> Aplicación de lenguajes de «scripting» en sistemas operativos libres y propietarios:<br><strong>Documento:</strong> 0374 Administración de sistemas operativos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Estructuras del lenguaje en scripting para sistemas operativos</h1>
+    <p>Objetivo: Comprender las estructuras fundamentales de los lenguajes de scripting utilizados en sistemas operativos.</p>
+</section>
+
+<section class="slide">
+    <h2>Introducción a los lenguajes de scripting</h2>
+    <ul>
+        <li>Lenguajes como,, PowerShell y Ruby son esenciales para automatización y gestión de sistemas operativos.</li>
+        <li>Permiten la creación de scripts que pueden ejecutar tareas repetitivas o complejas de manera eficiente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Sintaxis básica de</h2>
+    <p>Bash es el shell predeterminado en sistemas operativos Linux y macOS.</p>
+    <pre><code>echo "Hola, mundo!"</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Estructuras condicionales en</h2>
+    <ul>
+        <li>if-else: Permite ejecutar bloques de código según la evaluación de una expresión booleana.</li>
+        <li>ejemplo:
+            <pre><code>if [ "$USER" == "root" ]; then
+                echo "Eres root"
+            else
+                echo "No eres root"
+            fi</code></pre>
+        </li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Bucles en</h2>
+    <ul>
+        <li>for: Ejecuta un bloque de código para cada elemento de una lista.</li>
+        <li>while: Repite un bloque de código mientras se cumpla una condición.</li>
+        <li>ejemplo:
+            <pre><code>for i in 1 2 3; do
+                echo "Iteración $i"
+            done</code></pre>
+        </li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Estructuras de control en</h2>
+    <p> es un lenguaje de scripting popular para sistemas operativos.</p>
+    <ul>
+        <li>if-elif-else: Permite tomar decisiones basadas en múltiples condiciones.</li>
+        <li>for y while: Permiten iterar sobre elementos o mientras se cumpla una condición.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de script</h2>
+    <pre><code>if __name__ == "__main__":
+    print("Este es el punto de entrada del programa")
+    for i in range(3):
+        print(f"Iteración {i}")</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Estructuras condicionales en PowerShell</h2>
+    <p>PowerShell es un lenguaje de scripting para sistemas operativos Windows.</p>
+    <ul>
+        <li>if, elseif, else: Permite ejecutar bloques de código según la evaluación de una expresión booleana.</li>
+        <li>ejemplo:
+            <pre><code>if ($isAdmin) {
+                Write-Output "Eres administrador"
+            } else {
+                Write-Output "No eres administrador"
+            }</code></pre>
+        </li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Bucles en PowerShell</h2>
+    <ul>
+        <li>for: Ejecuta un bloque de código para cada elemento de una lista.</li>
+        <li>while: Repite un bloque de código mientras se cumpla una condición.</li>
+        <li>ejemplo:
+            <pre><code>for ($i = 1; $i -le 3; $i++) {
+                Write-Output "Iteración $i"
+            }</code></pre>
+        </li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Estructuras de control en Ruby</h2>
+    <p>Ruby es un lenguaje de scripting versátil y fácil de aprender.</p>
+    <ul>
+        <li>if, elsif, else: Permite tomar decisiones basadas en múltiples condiciones.</li>
+        <li>for y while: Permiten iterar sobre elementos o mientras se cumpla una condición.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de script Ruby</h2>
+    <pre><code>if ARGV[0] == 'admin'
+        puts "Eres administrador"
+    else
+        puts "No eres administrador"
+    end
+
+    (1..3).each do |i|
+        puts "Iteración #{i}"
+    end</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Variables en, y Ruby</h2>
+    <ul>
+        <li>Bash: Se declaran con el nombre de la variable seguido del valor.</li>
+        <li>: Se declaran con el nombre de la variable seguido del valor, sin necesidad de tipo explícito.</li>
+        <li>Ruby: Se declaran con el nombre de la variable seguido del valor, sin necesidad de tipo explícito.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Funciones en, y Ruby</h2>
+    <ul>
+        <li>Bash: Se definen usando la palabra clave function o simplemente el nombre seguido del código.</li>
+        <li>: Se definen usando la palabra clave def seguida del nombre de la función y los parámetros.</li>
+        <li>Ruby: Se definen usando la palabra clave def seguida del nombre de la función y los parámetros.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de función en</h2>
+    <pre><code>function greet {
+        echo "Hola, $1!"
+    }
+
+    greet "Mundo"</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de función en</h2>
+    <pre><code>def greet(name):
+        return f"Hola, {name}!"
+
+    print(greet("Mundo"))</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de función en Ruby</h2>
+    <pre><code>def greet(name)
+        "Hola, #{name}!"
+    end
+
+    puts greet("Mundo")</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Manejo de errores en</h2>
+    <ul>
+        <li>set -e: Salir del script si ocurre un error.</li>
+        <li>trap 'echo "Error"' ERR: Ejecutar una acción cuando ocurra un error.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Manejo de errores en</h2>
+    <ul>
+        <li>try-except: Permite capturar y manejar excepciones.</li>
+        <li>finally: Ejecutar código después de un bloque try-except, independientemente de si ocurrió una excepción o no.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Manejo de errores en Ruby</h2>
+    <ul>
+        <li>begin-rescue: Permite capturar y manejar excepciones.</li>
+        <li>ensure: Ejecutar código después de un bloque begin-rescue, independientemente de si ocurrió una excepción o no.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Bash,, PowerShell y Ruby son lenguajes de scripting utilizados en sistemas operativos.</li>
+        <li>Cada uno tiene sus propias estructuras de control y manejo de errores.</li>
+        <li>Comprender estas estructuras es crucial para la automatización y gestión de sistemas operativos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Bibliografía</h2>
+    <ul>
+        <li>Linux Command Line and Shell Scripting Bible (O'Reilly)</li>
+        <li> Crash Course (No Starch Press)</li>
+        <li>PowerShell in Depth (Manning Publications)</li>
+        <li>Ruby on Rails Tutorial (Pragmatic Bookshelf)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Preguntas y discusión</h2>
+    <p>¿Tienes preguntas sobre las estructuras de los lenguajes de scripting?</p>
+    <p>Comparte tus experiencias con la automatización de tareas en sistemas operativos.</p>
+</section>
+
+<section class="slide">
+    <h2>Cierre</h2>
+    <p>Gracias por su atención.</p>
+    <p>Preguntas adicionales: [Tu correo electrónico]</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0374 Administración de sistemas operativos.md · Aplicación de lenguajes de «scripting» en sistemas operativos libres y propietarios: → Estructuras del lenguaje.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 05:09:57</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

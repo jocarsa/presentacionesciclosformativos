@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Direccionamiento dinámico (DHCP). — Integración de elementos en una red: — 0370 Planificación y administración de redes.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="direccionamiento-dinamico-dhcp-.">
+<h1>Direccionamiento dinámico (DHCP).</h1>
+<p><strong>Unidad:</strong> Integración de elementos en una red:<br><strong>Documento:</strong> 0370 Planificación y administración de redes.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Dirección Dinámica (DHCP)</h2>
+    <p>DHCP es un protocolo que asigna automáticamente direcciones IP a los dispositivos en una red.</p>
+</section>
+
+<section class="slide">
+    <h3>Funcionamiento básico de DHCP</h3>
+    <ul>
+        <li>Solicita IP al servidor DHCP</li>
+        <li>El servidor DHCP responde con una oferta</li>
+        <li>El cliente acepta la oferta</li>
+        <li>El servidor confirma la asignación</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Ventajas de DHCP</h3>
+    <ul>
+        <li>Reducción manual de configuraciones</li>
+        <li>Economía en tiempo y recursos</li>
+        <li>Facilita la gestión de cambios en la red</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Desventajas de DHCP</h3>
+    <ul>
+        <li>Puede causar problemas si el servidor está sobrecargado</li>
+        <li>No es seguro para redes públicas</li>
+        <li>Puede asignar direcciones IP incorrectas</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Configuración básica de DHCP en un router</h3>
+    <p>1. Ingresar a la configuración del router<br>2. Buscar opciones de "DHCP Server"<br>3. Habilitar el servicio DHCP<br>4. Configurar el rango IP asignable</p>
+</section>
+
+<section class="slide">
+    <h3>Ejemplo de configuración DHCP</h3>
+    <pre><code>IP Range: 192.168.1.10 - 192.168.1.100<br>Subnet Mask: 255.255.255.0<br>Default Gateway: 192.168.1.1</code></pre>
+</section>
+
+<section class="slide">
+    <h3>Caso de estudio: Implementación de DHCP en una pequeña empresa</h3>
+    <p>Una empresa con 20 computadoras implementó DHCP para asignar automáticamente direcciones IP, reduciendo el tiempo de configuración y facilitando la gestión del inventario.</p>
+</section>
+
+<section class="slide">
+    <h3>Proceso de asignación de IP por DHCP</h3>
+    <ol>
+        <li>DHCPDISCOVER: El cliente envía una solicitud a todos los servidores DHCP disponibles</li>
+        <li>DHCPOFFER: Un servidor DHCP responde con una oferta de dirección IP</li>
+        <li>DHCPREQUEST: El cliente acepta la oferta y solicita la confirmación</li>
+        <li>DHCPACK: El servidor confirma la asignación de la dirección IP</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h3>Buenas prácticas en DHCP</h3>
+    <ul>
+        <li>Configurar un rango IP adecuado para el tamaño de la red</li>
+        <li>Habilitar la asignación automática de puertas de enlace y DNS</li>
+        <li>Configurar tiempos de renovación y reasignación</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Errores comunes en DHCP</h3>
+    <ul>
+        <li>Servidor DHCP sobrecargado</li>
+        <li>Direcciones IP asignadas incorrectamente</li>
+        <li>Tiempo de renovación y reasignación configurados incorrectamente</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Comparativa: DHCP vs. Asignación estática</h3>
+    <table>
+        <tr>
+            <th>Dirección IP</th>
+            <th>DHCP</th>
+            <th>Asignación Estática</th>
+        </tr>
+        <tr>
+            <td>Configuración automática</td>
+            <td>Sí</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td>Manejo de cambios</td>
+            <td>Fácil</td>
+            <td>Difícil</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h3>Mini-quiz: DHCP</h3>
+    <p>¿Qué es DHCP?</p>
+    <ol type="A">
+        <li>Protocolo de transferencia de archivos</li>
+        <li>Protocolo de asignación dinámica de direcciones IP</li>
+        <li>Protocolo de control de acceso remoto</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h3>Checklist: Configuración DHCP</h3>
+    <ul>
+        <li>Habilitar el servicio DHCP en el router</li>
+        <li>Configurar el rango IP asignable</li>
+        <li>Habilitar la asignación automática de puertas de enlace y DNS</li>
+        <li>Configurar tiempos de renovación y reasignación</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Actividad: Configuración práctica de DHCP</h3>
+    <p>Realizar la configuración de DHCP en un router virtual o físico.</p>
+</section>
+
+<section class="slide">
+    <h3>Resumen</h3>
+    <ul>
+        <li>DHCP es un protocolo que asigna automáticamente direcciones IP a los dispositivos en una red</li>
+        <li>Ventajas: reducción manual de configuraciones, economía en tiempo y recursos, facilita la gestión de cambios</li>
+        <li>Desventajas: problemas si el servidor está sobrecargado, no es seguro para redes públicas, puede asignar direcciones IP incorrectas</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Normativa general sobre DHCP</h3>
+    <p>DHCP debe ser configurado de manera segura y eficiente para evitar problemas en la red.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0370 Planificación y administración de redes.md · Integración de elementos en una red: → Direccionamiento dinámico (DHCP).</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-04 23:48:27</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Hojas de estilo. — Utilización de lenguajes de marcas en entornos Web: — 0373 Lenguajes de marcas y sistemas de gestión de información.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="hojas-de-estilo.">
+<h1>Hojas de estilo.</h1>
+<p><strong>Unidad:</strong> Utilización de lenguajes de marcas en entornos Web:<br><strong>Documento:</strong> 0373 Lenguajes de marcas y sistemas de gestión de información.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Utilización de lenguajes de marcas en entornos Web: Hojas de estilo</h1>
+    <p>Objetivo: Comprender los conceptos básicos y aplicaciones de las hojas de estilo en el desarrollo web.</p>
+</section>
+
+<section class="slide">
+    <h2>¿Qué son las Hojas de Estilo?</h2>
+    <p>Las hojas de estilo (CSS) son archivos que contienen reglas para definir la apariencia visual de un documento.</p>
+</section>
+
+<section class="slide">
+    <h2>Estructura Básica de una Hoja de Estilo</h2>
+    <pre><code>&lt;style&gt;
+        selector {
+            propiedad: valor;
+        }
+    &lt;/style&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Tipos de Selectores</h2>
+    <ul>
+        <li>Selectores por etiqueta</li>
+        <li>Selectores por clase</li>
+        <li>Selectores por ID</li>
+        <li>Selectores atributo</li>
+        <li>Selectores descendientes</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Propiedades Comunes en CSS</h2>
+    <ul>
+        <li>color: Define el color del texto.</li>
+        <li>font-size: Define el tamaño de la fuente.</li>
+        <li>background-color: Define el color de fondo.</li>
+        <li>margin: Define los márgenes.</li>
+        <li>padding: Define el relleno interno.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Cascada y Herencia en CSS</h2>
+    <p>Cascada: Las reglas se aplican en orden de especificidad, siendo las más específicas las que tienen mayor prioridad.</p>
+    <p>Herencia: Algunas propiedades se heredan automáticamente a los elementos secundarios.</p>
+</section>
+
+<section class="slide">
+    <h2>Cascada y Herencia Ejemplo</h2>
+    <pre><code>&lt;style&gt;
+        body {
+            font-size: 16px;
+        }
+        .container {
+            color: blue;
+        }
+        p {
+            margin: 0;
+        }
+    &lt;/style&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Importancia de la Separación de Contenido y Presentación</h2>
+    <p>La separación de contenido () y presentación (CSS) facilita el mantenimiento y la actualización del diseño.</p>
+</section>
+
+<section class="slide">
+    <h2>Optimización para SEO con CSS</h2>
+    <ul>
+        <li>Uso de selectores específicos.</li>
+        <li>Minificación del código CSS.</li>
+        <li>Uso de media queries para diseño responsivo.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico: Diseño Responsivo con CSS</h2>
+    <p>Ejemplo de cómo usar media queries para adaptar el diseño a diferentes dispositivos.</p>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz</h2>
+    <p>Pregunta 1: ¿Qué tipo de selector se usa para seleccionar todos los elementos del mismo nombre?</p>
+    <ul>
+        <li>a) Selector por etiqueta</li>
+        <li>b) Selector por clase</li>
+        <li>c) Selector por ID</li>
+        <li>d) Selector atributo</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz</h2>
+    <p>Pregunta 2: ¿Qué propiedad CSS se usa para definir el espacio entre los elementos?</p>
+    <ul>
+        <li>a) margin</li>
+        <li>b) padding</li>
+        <li>c) border</li>
+        <li>d) background-color</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist de Buenas Prácticas en CSS</h2>
+    <ul>
+        <li>Separar contenido y presentación.</li>
+        <li>Usar selectores específicos.</li>
+        <li>Minificar el código CSS.</li>
+        <li>Utilizar media queries para diseño responsivo.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Código CSS Completo</h2>
+    <pre><code>&lt;style&gt;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+        }
+        .content {
+            margin: 20px;
+        }
+    &lt;/style&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en CSS</h2>
+    <ul>
+        <li>No separar contenido y presentación.</li>
+        <li>Usar selectores genéricos.</li>
+        <li>No minificar el código CSS.</li>
+        <li>No utilizar media queries para diseño responsivo.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: CSS vs. Inline Styles</h2>
+    <table>
+        <tr>
+            <th>CSS</th>
+            <th>Inline Styles</th>
+        </tr>
+        <tr>
+            <td>Mantiene la separación de contenido y presentación.</td>
+            <td>No mantiene la separación de contenido y presentación.</td>
+        </tr>
+        <tr>
+            <td>Puede ser reutilizado en múltiples elementos.</td>
+            <td>Solo se aplica al elemento donde se define.</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Diseño de un Botón con CSS</h2>
+    <p>Desarrolla un botón personalizado utilizando CSS, incluyendo color, tamaño y efectos de hover.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Las hojas de estilo (CSS) definen la apariencia visual de los documentos.</li>
+        <li>Existen diferentes tipos de selectores y propiedades CSS.</li>
+        <li>La separación de contenido y presentación es crucial para el mantenimiento del sitio web.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa General</h2>
+    <p>Se recomienda seguir las mejores prácticas en CSS para mejorar la accesibilidad, rendimiento y mantenimiento del sitio web.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0373 Lenguajes de marcas y sistemas de gestión de información.md · Utilización de lenguajes de marcas en entornos Web: → Hojas de estilo.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 02:57:10</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

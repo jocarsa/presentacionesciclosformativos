@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Segmentación de redes. — Configuración y administración de conmutadores: — 0370 Planificación y administración de redes.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="segmentacion-de-redes.">
+<h1>Segmentación de redes.</h1>
+<p><strong>Unidad:</strong> Configuración y administración de conmutadores:<br><strong>Documento:</strong> 0370 Planificación y administración de redes.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Configuración y administración de conmutadores</h1>
+    <p><strong>Objetivo:</strong> Comprender la segmentación de redes en conmutadores.</p>
+</section>
+
+<section class="slide">
+    <h2>Segmentación de redes</h2>
+    <p>La segmentación de redes es el proceso de dividir una red en subredes más pequeñas y manejables.</p>
+</section>
+
+<section class="slide">
+    <h2>Beneficios de la segmentación</h2>
+    <ul>
+        <li>Mejora la seguridad al aislar áreas vulnerables</li>
+        <li>Aumenta el rendimiento al reducir el tráfico en una sola red</li>
+        <li>Facilita la gestión y escalabilidad de la infraestructura</li>
+        <li>Permite aplicar políticas de acceso más específicas</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Técnicas de segmentación</h2>
+    <ul>
+        <li>Segmentación basada en VLANs (VLAN Trunking)</li>
+        <li>Segmentación basada en puertos</li>
+        <li>Segmentación basada en direcciones IP</li>
+        <li>Segmentación basada en aplicaciones</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>VLANs (VLAN Trunking)</h2>
+    <p>Las VLANs permiten crear segmentos lógicos dentro de una red física.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración de VLAN</h2>
+    <pre><code>
+        interface GigabitEthernet0/1
+            switchport mode access
+            switchport access vlan 10
+    </code></pre>
+</section>
+
+<section class="slide">
+    <h2>Segmentación basada en puertos</h2>
+    <p>Asigna puertos específicos a una VLAN.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de segmentación por puerto</h2>
+    <pre><code>
+        interface GigabitEthernet0/1
+            switchport mode access
+            switchport port-security maximum 2
+    </code></pre>
+</section>
+
+<section class="slide">
+    <h2>Segmentación basada en direcciones IP</h2>
+    <p>Asigna segmentos de red específicos a una VLAN.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de segmentación por dirección IP</h2>
+    <pre><code>
+        ip access-list extended VLAN_10
+            permit ip 192.168.10.0 0.0.0.255 any
+        interface GigabitEthernet0/1
+            switchport mode access
+            switchport access vlan 10
+    </code></pre>
+</section>
+
+<section class="slide">
+    <h2>Segmentación basada en aplicaciones</h2>
+    <p>Asigna segmentos de red a VLANs según el tipo de tráfico.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de segmentación por aplicación</h2>
+    <pre><code>
+        policy-map type inspect http HTTP_POLICY
+            parameters
+                class class-default
+                    inspect http
+        interface GigabitEthernet0/1
+            service-policy input HTTP_POLICY
+    </code></pre>
+</section>
+
+<section class="slide">
+    <h2>Consideraciones de seguridad</h2>
+    <ul>
+        <li>Implementa autenticación y autorización adecuada</li>
+        <li>Configura firewalls internos para controlar el tráfico entre VLANs</li>
+        <li>Monitorea y rastrea el tráfico en cada segmento</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de firewall interno</h2>
+    <pre><code>
+        access-list 101 permit ip 192.168.10.0 0.0.0.255 192.168.20.0 0.0.0.255
+        interface GigabitEthernet0/1
+            ip access-group 101 in
+    </code></pre>
+</section>
+
+<section class="slide">
+    <h2>Prácticas recomendadas</h2>
+    <ul>
+        <li>Documenta todas las configuraciones y segmentaciones realizadas</li>
+        <li>Realiza pruebas de conectividad y rendimiento en cada segmento</li>
+        <li>Mantén actualizadas las políticas de acceso y seguridad</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes</h2>
+    <ul>
+        <li>No asignar suficientes VLANs para todas las necesidades</li>
+        <li>No configurar correctamente los firewalls internos</li>
+        <li>No documentar adecuadamente las configuraciones realizadas</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz</h2>
+    <p>¿Cuál es el propósito de la segmentación basada en VLANs?</p>
+    <ol>
+        <li>Aumentar la velocidad de transmisión de datos</li>
+        <li>Mejorar la seguridad al aislar áreas vulnerables</li>
+        <li>Reducir el costo de la infraestructura física</li>
+        <li>Facilitar la gestión y escalabilidad de la red</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist</h2>
+    <ul>
+        <li>Configurar VLANs según las necesidades del negocio</li>
+        <li>Implementar firewalls internos para controlar el tráfico entre VLANs</li>
+        <li>Mantener documentación actualizada de todas las configuraciones</li>
+        <li>Realizar pruebas de conectividad y rendimiento en cada segmento</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad</h2>
+    <p>Configura una VLAN en un conmutador y configura un firewall interno para controlar el tráfico entre la VLAN y otra.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>La segmentación de redes es crucial para mejorar la seguridad, rendimiento y gestión de las infraestructuras de red.</li>
+        <li>Existen varias técnicas de segmentación como VLANs, puertos, direcciones IP y aplicaciones.</li>
+        <li>Es importante implementar prácticas recomendadas y prevenir errores comunes para un despliegue exitoso.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa general</h2>
+    <p>Seguir las normativas locales y nacionales de seguridad en redes es fundamental para cumplir con los requisitos legales.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0370 Planificación y administración de redes.md · Configuración y administración de conmutadores: → Segmentación de redes.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-04 23:54:25</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Configuración de PAT. — Configuración del acceso a Internet desde una LAN: — 0370 Planificación y administración de redes.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="configuracion-de-pat.">
+<h1>Configuración de PAT.</h1>
+<p><strong>Unidad:</strong> Configuración del acceso a Internet desde una LAN:<br><strong>Documento:</strong> 0370 Planificación y administración de redes.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Configuración del acceso a Internet desde una LAN</h1>
+    <p><strong>Objetivo:</strong> Aprender cómo configurar el Protocolo de Acceso a Tránsito (PAT) para optimizar la conexión a Internet en redes locales.</p>
+</section>
+
+<section class="slide">
+    <h2>¿Qué es PAT?</h2>
+    <p>PAT, o Protocolo de Acceso a Tránsito, es una técnica utilizada en las firewalls que permite asignar un solo IP público a múltiples dispositivos dentro de una red local.</p>
+</section>
+
+<section class="slide">
+    <h2>Beneficios del PAT</h2>
+    <ul>
+        <li>Optimización de la dirección IP pública</li>
+        <li>Reducción del uso de IPs públicas</li>
+        <li>Mejora de la seguridad al ocultar las direcciones internas</li>
+        <li>Economía en el costo de asignación de IPs públicas</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Cómo funciona PAT</h2>
+    <p>El PAT mapea los paquetes de datos de la LAN a través del IP público, utilizando puertos para distinguir entre diferentes dispositivos y aplicaciones.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo práctico</h2>
+    <p><strong>Caso:</strong> Una pequeña empresa con 10 usuarios necesita acceso a Internet. Usando PAT, se asigna un solo IP público y se distribuyen puertos para cada usuario.</p>
+</section>
+
+<section class="slide">
+    <h2>Configuración básica de PAT</h2>
+    <ul>
+        <li>Acceder a la consola o interfaz web de la firewall</li>
+        <li>Crear una regla NAT (Network Address Translation)</li>
+        <li>Especificar el rango de IPs internas y el IP público</li>
+        <li>Configurar los puertos necesarios para cada servicio</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas en PAT</h2>
+    <ul>
+        <li>Asignar puertos específicos para servicios conocidos</li>
+        <li>Monitorear el uso de puertos y ajustar la configuración según sea necesario</li>
+        <li>Utilizar firewalls con soporte avanzado para PAT</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes en la configuración de PAT</h2>
+    <ul>
+        <li>No asignar suficientes puertos para todos los servicios</li>
+        <li>Configurar puertos incorrectos, lo que puede causar problemas de conexión</li>
+        <li>No monitorear el uso de puertos y no ajustar la configuración según sea necesario</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa con NAT estándar</h2>
+    <table>
+        <tr>
+            <th>NAT Estándar</th>
+            <th>PAT</th>
+        </tr>
+        <tr>
+            <td>Cada dispositivo tiene su propia dirección IP pública</td>
+            <td>Un solo IP público para toda la LAN</td>
+        </tr>
+        <tr>
+            <td>No optimiza el uso de IPs públicas</td>
+            <td>Optimiza el uso de IPs públicas</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: PAT vs NAT Estándar</h2>
+    <p><strong>Pregunta:</strong> ¿Cuál es la principal diferencia entre PAT y NAT estándar?</p>
+    <ul>
+        <li>a) Ambas técnicas usan el mismo número de puertos para todos los dispositivos.</li>
+        <li>b) PAT asigna un solo IP público a toda la LAN, mientras que NAT estándar asigna una dirección IP pública a cada dispositivo.</li>
+        <li>c) No hay diferencia entre ambas técnicas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist para configuración de PAT</h2>
+    <ol>
+        <li>Verificar la disponibilidad de puertos suficientes en el IP público</li>
+        <li>Configurar las reglas NAT correspondientes</li>
+        <li>Asignar puertos específicos para cada servicio</li>
+        <li>Probar la conexión desde diferentes dispositivos y servicios</li>
+        <li>Monitorear el uso de puertos y ajustar la configuración según sea necesario</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Actividad práctica</h2>
+    <p><strong>Ejercicio:</strong> Configurar PAT en una firewall virtual utilizando un software como GNS3 o Packet Tracer.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>PAT es una técnica de NAT que permite asignar un solo IP público a múltiples dispositivos dentro de una red local.</li>
+        <li>Optimiza el uso de IPs públicas y mejora la seguridad al ocultar las direcciones internas.</li>
+        <li>La configuración básica implica crear reglas NAT y asignar puertos específicos para cada servicio.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa general</h2>
+    <p><strong>Nota:</strong> La normativa específica puede variar según el país o la industria. Es recomendable consultar las leyes y regulaciones locales al configurar PAT.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0370 Planificación y administración de redes.md · Configuración del acceso a Internet desde una LAN: → Configuración de PAT.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 01:33:18</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

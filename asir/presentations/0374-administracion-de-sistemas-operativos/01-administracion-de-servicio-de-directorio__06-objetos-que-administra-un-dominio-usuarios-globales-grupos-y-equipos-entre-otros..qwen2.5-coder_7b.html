@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Objetos que administra un dominio: usuarios globales, grupos y equipos entre otros. — Administración de servicio de directorio: — 0374 Administración de sistemas operativos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="objetos-que-administra-un-dominio-usuarios-globales-grupos-y-equipos-entre-otros.">
+<h1>Objetos que administra un dominio: usuarios globales, grupos y equipos entre otros.</h1>
+<p><strong>Unidad:</strong> Administración de servicio de directorio:<br><strong>Documento:</strong> 0374 Administración de sistemas operativos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Administración de sistemas operativos</h1>
+    <h3>Unidad: Administración de servicio de directorio</h3>
+    <h4>Subunidad: Objetos que administra un dominio: usuarios globales, grupos y equipos entre otros.</h4>
+</section>
+
+<section class="slide">
+    <h2>Objetivos del slide</h2>
+    <ul>
+        <li>Comprender los objetos principales administrados en un dominio de red.</li>
+        <li>Distinguir entre usuarios globales, grupos y equipos.</li>
+        <li>Explorar las características y funciones de cada objeto.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Definición de objetos en un dominio</h2>
+    <p>En un dominio de red, los objetos son entidades que contienen información y pueden ser administradas por el sistema operativo. Los principales tipos de objetos incluyen usuarios globales, grupos y equipos.</p>
+</section>
+
+<section class="slide">
+    <h2>Usuarios globales</h2>
+    <ul>
+        <li>Representan individuos o entidades que utilizan recursos del dominio.</li>
+        <li>Cada usuario tiene su propia cuenta con privilegios específicos.</li>
+        <li>Autorizan el acceso a sistemas, aplicaciones y recursos compartidos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Grupos</h2>
+    <ul>
+        <li>Colectivos de usuarios que comparten privilegios y permisos.</li>
+        <li>Facilitan la administración en lotes, permitiendo asignar privilegios a múltiples usuarios simultáneamente.</li>
+        <li>Permiten el control del acceso a recursos compartidos y aplicaciones.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Equipos</h2>
+    <ul>
+        <li>Representan dispositivos físicos o virtuales que forman parte del dominio.</li>
+        <li>Cada equipo tiene su propia configuración y atributos específicos.</li>
+        <li>Autorizan el acceso a recursos y servicios disponibles en el dominio.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Relaciones entre objetos</h2>
+    <p>Los usuarios pueden pertenecer a grupos, y los equipos pueden tener privilegios asignados a través de grupos. Esta jerarquía permite una gestión eficiente del acceso y recursos en el dominio.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo práctico</h2>
+    <ul>
+        <li>Un administrador crea un grupo "Desarrolladores" y asigna privilegios de edición a todos los miembros.</li>
+        <li>Cada desarrollador es un usuario global que pertenece al grupo "Desarrolladores".</li>
+        <li>El equipo de desarrollo comparte recursos como servidores de código fuente y herramientas de desarrollo.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Caso real: Administración de usuarios en Active Directory</h2>
+    <p>En un entorno Windows, el Active Directory es un servicio de directorio que administra usuarios globales, grupos y equipos. Permite la creación, modificación y eliminación de cuentas, así como la asignación de privilegios.</p>
+</section>
+
+<section class="slide">
+    <h2>Proceso de administración de usuarios</h2>
+    <ol>
+        <li>Creación de cuenta de usuario global.</li>
+        <li>Asignación de grupos y roles.</li>
+        <li>Configuración de políticas de seguridad.</li>
+        <li>Monitoreo y auditoría del acceso.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas en administración de usuarios</h2>
+    <ul>
+        <li>Usar nombres de usuario descriptivos y fáciles de recordar.</li>
+        <li>Establecer políticas fuertes para contraseñas.</li>
+        <li>Realizar auditorías periódicas de acceso.</li>
+        <li>Limitar privilegios a lo mínimo necesario.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes en administración de usuarios</h2>
+    <ul>
+        <li>No establecer políticas de seguridad adecuadas.</li>
+        <li>No monitorear el acceso y actividad de los usuarios.</li>
+        <li>No limitar privilegios a lo mínimo necesario.</li>
+        <li>Usar nombres de usuario ambiguos o difíciles de recordar.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: Usuarios globales vs. usuarios locales</h2>
+    <table>
+        <tr>
+            <th>Usuario global</th>
+            <th>Usuario local</th>
+        </tr>
+        <tr>
+            <td>Cuenta existente en el dominio.</td>
+            <td>Cuenta creada localmente en la máquina.</td>
+        </tr>
+        <tr>
+            <td>Puede acceder a recursos del dominio.</td>
+            <td>No puede acceder a recursos del dominio.</td>
+        </tr>
+        <tr>
+            <td>Administrado por el servicio de directorio.</td>
+            <td>Administrado localmente en la máquina.</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: Identificación de objetos</h2>
+    <p>¿Cuál de los siguientes es un objeto que administra un dominio?</p>
+    <ul>
+        <li>a) Un archivo en el disco duro.</li>
+        <li>b) Una impresora conectada a la red.</li>
+        <li>c) Un usuario global.</li>
+        <li>d) Una carpeta compartida.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Administración de usuarios globales</h2>
+    <ol>
+        <li>Crear cuenta de usuario global.</li>
+        <li>Asignar grupos y roles.</li>
+        <li>Configurar políticas de seguridad.</li>
+        <li>Realizar auditorías periódicas de acceso.</li>
+        <li>Limitar privilegios a lo mínimo necesario.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Creación de usuarios globales</h2>
+    <p>Crea una cuenta de usuario global en tu entorno de prueba y asigna privilegios según las políticas de seguridad estableidas.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Los objetos principales administrados en un dominio son usuarios globales, grupos y equipos.</li>
+        <li>Cada objeto tiene características específicas y funciones importantes para la gestión del acceso y recursos.</li>
+        <li>Buenas prácticas y políticas de seguridad son cruciales para una administración eficiente y segura de los objetos en un dominio.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa general</h2>
+    <p>La normativa vigente establece requisitos mínimos para la administración de usuarios globales, grupos y equipos en entornos de red. Es importante estar al tanto de las regulaciones locales y nacionales.</p>
+</section>
+
+<section class="slide">
+    <h2>Preguntas y discusión</h2>
+    <p>¿Tienes alguna pregunta o duda sobre la administración de objetos en un dominio? Comparte tus ideas y experiencias en el foro de discusión.</p>
+</section>
+
+<section class="slide">
+    <h2>Agradecimientos</h2>
+    <p>Muchas gracias por su atención. Esperamos que esta presentación les haya sido útil para comprender mejor la administración de objetos en un dominio de red.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0374 Administración de sistemas operativos.md · Administración de servicio de directorio: → Objetos que administra un dominio: usuarios globales, grupos y equipos entre otros.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 04:46:15</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

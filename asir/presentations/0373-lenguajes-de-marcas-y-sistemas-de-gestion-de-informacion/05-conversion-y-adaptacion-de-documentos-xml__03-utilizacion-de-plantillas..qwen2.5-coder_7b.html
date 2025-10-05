@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Utilización de plantillas. — Conversión y adaptación de documentos XML: — 0373 Lenguajes de marcas y sistemas de gestión de información.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="utilizacion-de-plantillas.">
+<h1>Utilización de plantillas.</h1>
+<p><strong>Unidad:</strong> Conversión y adaptación de documentos XML:<br><strong>Documento:</strong> 0373 Lenguajes de marcas y sistemas de gestión de información.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Conversión y adaptación de documentos</h1>
+    <p>Objetivo: Aprender a utilizar plantillas para la conversión y adaptación de documentos.</p>
+</section>
+
+<section class="slide">
+    <h2>¿Qué son las plantillas?</h2>
+    <ul>
+        <li>Plantillas son documentos que definen cómo se debe estructurar el contenido final.</li>
+        <li>Permiten la reutilización de código y facilitan la adaptación del contenido a diferentes formatos.</li>
+        <li>Son utilizadas en procesadores de plantillas como XSLT, XSL-FO o XQuery.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo básico de plantilla XSLT</h2>
+    <pre><code>&lt;? version="1.0" encoding="UTF-8"?&gt;
+&lt;xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&gt;
+  &lt;xsl:output method="" indent="yes"/&gt;
+  &lt;xsl:template match="/libro"&gt;
+    &lt;&gt;
+      &lt;head&gt;&lt;title&gt;Libro&lt;/title&gt;&lt;/head&gt;
+      &lt;body&gt;
+        &lt;h1&gt;Título: &lt;xsl:value-of select="titulo"/&gt;&lt;/h1&gt;
+        &lt;p&gt;Autor: &lt;xsl:value-of select="autor"/&gt;&lt;/p&gt;
+      &lt;/body&gt;
+    &lt;/&gt;
+  &lt;/xsl:template&gt;
+&lt;/xsl:stylesheet&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Proceso de conversión con plantillas</h2>
+    <ol>
+        <li>Cargar el documento fuente.</li>
+        <li>Cargar la plantilla XSLT.</li>
+        <li>Ejecutar el procesador de plantillas, que transforma el en el formato deseado.</li>
+        <li>Obtener el resultado transformado.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas al usar plantillas</h2>
+    <ul>
+        <li>Mantener la separación entre contenido y presentación.</li>
+        <li>Utilizar variables y parámetros para mayor flexibilidad.</li>
+        <li>Optimizar el rendimiento mediante la minimización de procesos innecesarios.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes al usar plantillas</h2>
+    <ul>
+        <li>No definir correctamente las rutas XPath.</li>
+        <li>No gestionar adecuadamente los espacios de nombres.</li>
+        <li>No optimizar el procesamiento para grandes documentos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: XSLT vs. XSL-FO</h2>
+    <table>
+        <tr>
+            <th>XSLT</th>
+            <th>XSL-FO</th>
+        </tr>
+        <tr>
+            <td>Procesa datos para generar cualquier tipo de contenido.</td>
+            <td>Específico para la generación de documentos físicos (PDF, PostScript).</td>
+        </tr>
+        <tr>
+            <td>Más versátil pero más complejo.</td>
+            <td>Menos versátil pero más fácil de aprender y usar.</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: ¿Qué es XSLT?</h2>
+    <p>¿Cuál de las siguientes opciones describe mejor a XSLT?</p>
+    <ul>
+        <li>a) Un lenguaje de programación para crear aplicaciones web.</li>
+        <li>b) Un formato de archivo para almacenar datos.</li>
+        <li>c) Un procesador que transforma documentos en otros formatos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Consideraciones al usar plantillas XSLT</h2>
+    <ul>
+        <li>Definir claramente las rutas XPath.</li>
+        <li>Gestionar correctamente los espacios de nombres.</li>
+        <li>Optimizar el procesamiento para documentos grandes.</li>
+        <li>Mantener la separación entre contenido y presentación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejercicio práctico: Crear una plantilla XSLT</h2>
+    <p>Desarrolla una plantilla XSLT que convierta un documento de noticias en un formato.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Las plantillas son documentos que definen cómo se debe estructurar el contenido final.</li>
+        <li>Son utilizadas en procesadores de plantillas como XSLT, XSL-FO o XQuery.</li>
+        <li>Buenas prácticas incluyen la separación entre contenido y presentación, uso de variables y parámetros.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa relevante</h2>
+    <p>No hay normativas específicas para el uso de plantillas, pero se debe seguir las mejores prácticas de seguridad y accesibilidad en la generación de contenido.</p>
+</section>
+
+<section class="slide">
+    <h2>Preguntas y dudas</h2>
+    <p>¿Tienes alguna pregunta o duda sobre el uso de plantillas?</p>
+</section>
+
+<section class="slide" data-id="extra-conceptos-clave-ampliacion-0">
+<h2>Conceptos clave (ampliación)</h2>
+<p>Profundiza en los fundamentos de <strong>Utilización de plantillas.</strong> con definiciones operativas y límites de aplicación.</p><ul><li>Concepto A vs B</li><li>Variables implicadas</li><li>Supuestos habituales</li><li>Cuándo NO aplicar</li></ul>
+
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0373 Lenguajes de marcas y sistemas de gestión de información.md · Conversión y adaptación de documentos XML: → Utilización de plantillas.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 04:24:33</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

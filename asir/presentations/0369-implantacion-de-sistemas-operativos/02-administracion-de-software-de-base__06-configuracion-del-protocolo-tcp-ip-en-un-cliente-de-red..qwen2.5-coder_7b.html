@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Configuración del protocolo TCP/IP en un cliente de red. — Administración de software de base: — 0369 Implantación de sistemas operativos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="configuracion-del-protocolo-tcp-ip-en-un-cliente-de-red.">
+<h1>Configuración del protocolo TCP/IP en un cliente de red.</h1>
+<p><strong>Unidad:</strong> Administración de software de base:<br><strong>Documento:</strong> 0369 Implantación de sistemas operativos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Configuración del protocolo TCP/IP en un cliente de red</h1>
+    <p>Objetivo: Aprender los pasos para configurar el protocolo TCP/IP en un cliente de red.</p>
+</section>
+
+<section class="slide">
+    <h2>¿Qué es TCP/IP?</h2>
+    <ul>
+        <li>TCP/IP significa Transmission Control Protocol/Internet Protocol.</li>
+        <li>Es el conjunto de protocolos que permite la comunicación entre dispositivos en una red.</li>
+        <li>Incluye dos protocolos principales: TCP (Control de Transmisión) y IP (Protocolo de Internet).</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Importancia del TCP/IP</h2>
+    <p>El TCP/IP es fundamental para la comunicación en redes modernas, ya que:</p>
+    <ul>
+        <li>Proporciona una capa de abstracción entre los dispositivos.</li>
+        <li>Sirve como el lenguaje común para la comunicación en internet.</li>
+        <li>Asegura la transmisión confiable y segura de datos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración básica del TCP/IP</h2>
+    <p>Los pasos básicos para configurar el protocolo TCP/IP en un cliente de red son:</p>
+    <ol>
+        <li>Acceder a la interfaz de red.</li>
+        <li>Elegir la opción de configuración IP.</li>
+        <li>Seleccionar el método de asignación de dirección IP (manual o automático).</li>
+        <li>Ingresar la dirección IP, máscara de subred y puerta de enlace predeterminada.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración manual</h2>
+    <p>Para configurar manualmente el TCP/IP en un cliente Windows:</p>
+    <ul>
+        <li>Ir a "Configuración del red" > "Cambiar adaptadores de red".</li>
+        <li>Hacer clic derecho en la interfaz de red y seleccionar "Propiedades".</li>
+        <li>Elegir "Internet Protocol Version 4 (TCP/IPv4)" y hacer clic en "Propiedades".</li>
+        <li>Seleccionar "Usar las siguientes direcciones IP" e ingresar los datos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Caso de estudio: Configuración en un servidor Linux</h2>
+    <p>En un servidor Linux, la configuración del TCP/IP se realiza a través del archivo /etc/network/interfaces:</p>
+    <pre><code>auto eth0
+iface eth0 inet static
+    address 192.168.1.100
+    netmask 255.255.255.0
+    gateway 192.168.1.1</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Proceso de configuración automática (DHCP)</h2>
+    <p>Cuando se selecciona la opción "Obtener automáticamente las direcciones IP y DNS del servidor DHCP", el cliente:</p>
+    <ul>
+        <li>Solicita una dirección IP al servidor DHCP.</li>
+        <li>Recibe la configuración de red (IP, máscara, puerta de enlace, DNS).</li>
+        <li>No es necesario ingresar datos manualmente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas para la configuración TCP/IP</h2>
+    <ul>
+        <li>Asignar direcciones IP únicas en la red.</li>
+        <li>Configurar correctamente las máscaras de subred y puertas de enlace.</li>
+        <li>Verificar la conectividad con los servidores DNS.</li>
+        <li>Mantener actualizados los protocolos TCP/IP.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes en la configuración TCP/IP</h2>
+    <ul>
+        <li>Dirección IP duplicada.</li>
+        <li>Máscara de subred incorrecta.</li>
+        <li>Puerta de enlace no accesible.</li>
+        <li>Servidor DNS no respondiendo.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: Configuración manual vs. automática</h2>
+    <table>
+        <tr>
+            <th>Manual</th>
+            <th>Automática (DHCP)</th>
+        </tr>
+        <tr>
+            <td>Necesita intervención humana.</td>
+            <td>No requiere intervención manual.</td>
+        </tr>
+        <tr>
+            <td>Puede ser más confiable si se configura correctamente.</td>
+            <td>Depende de la confiabilidad del servidor DHCP.</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: Configuración TCP/IP</h2>
+    <p>¿Cuál es el protocolo que se utiliza para asignar automáticamente las direcciones IP en una red?</p>
+    <ul>
+        <li>A) FTP</li>
+        <li>B) DHCP</li>
+        <li>C) SMTP</li>
+        <li>D) DNS</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist de configuración TCP/IP</h2>
+    <ol>
+        <li>Verificar la interfaz de red.</li>
+        <li>Elegir el método de asignación de dirección IP.</li>
+        <li>Ingresar la dirección IP, máscara y puerta de enlace.</li>
+        <li>Comprobar la conectividad con los servidores DNS.</li>
+        <li>Probar la conexión a otros dispositivos en la red.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Configuración práctica</h2>
+    <p>Configurar el protocolo TCP/IP manualmente en un cliente de red y verificar su funcionamiento.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>TCP/IP es el protocolo fundamental para la comunicación en redes.</li>
+        <li>Se configura manualmente o automáticamente (DHCP).</li>
+        <li>Buenas prácticas y errores comunes a evitar.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa general</h2>
+    <p>La normativa ISO/IE 9848-1 define los protocolos TCP/IP como estándar internacional.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0369 Implantación de sistemas operativos.md · Administración de software de base: → Configuración del protocolo TCP/IP en un cliente de red.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-04 21:44:40</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

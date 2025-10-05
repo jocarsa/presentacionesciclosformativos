@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Servicios de acceso remoto del propio sistema operativo. — Instalación, configuración y uso de servicios de acceso y administración remota: — 0374 Administración de sistemas operativos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="servicios-de-acceso-remoto-del-propio-sistema-operativo.">
+<h1>Servicios de acceso remoto del propio sistema operativo.</h1>
+<p><strong>Unidad:</strong> Instalación, configuración y uso de servicios de acceso y administración remota:<br><strong>Documento:</strong> 0374 Administración de sistemas operativos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Servicios de acceso remoto del propio sistema operativo</h2>
+    <p>Los sistemas operativos ofrecen herramientas para acceder y administrar sistemas desde una ubicación remota.</p>
+</section>
+
+<section class="slide">
+    <h3>SSH (Secure Shell)</h3>
+    <ul>
+        <li>Protocolo de red utilizado para proporcionar una conexión segura entre dos computadoras.</li>
+        <li>Cifra todos los datos transmitidos, incluyendo el nombre de usuario y la contraseña.</li>
+        <li>Permite ejecutar comandos en un servidor remoto desde una máquina local.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>RDP (Remote Desktop Protocol)</h3>
+    <ul>
+        <li>Protocolo de Microsoft para acceder a una computadora remota desde una máquina local.</li>
+        <li>Permite controlar la pantalla del servidor como si estuviera directamente conectado.</li>
+        <li>Suele requerir autenticación y puede cifrar los datos transmitidos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>VNC (Virtual Network Computing)</h3>
+    <ul>
+        <li>Protocolo de red que permite el acceso remoto a una máquina gráfica.</li>
+        <li>Permite ver y controlar la pantalla del servidor desde una máquina local.</li>
+        <li>Suele requerir autenticación y puede cifrar los datos transmitidos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>FTP (File Transfer Protocol)</h3>
+    <ul>
+        <li>Protocolo utilizado para transferir archivos entre computadoras en una red.</li>
+        <li>Suele requerir autenticación y puede cifrar los datos transmitidos.</li>
+        <li>No es seguro para el tráfico de datos sensibles.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>SCP (Secure Copy Protocol)</h3>
+    <ul>
+        <li>Herramienta basada en SSH que permite transferir archivos entre computadoras de forma segura.</li>
+        <li>Cifra todos los datos transmitidos, incluyendo el nombre de usuario y la contraseña.</li>
+        <li>Es más seguro que FTP para el tráfico de datos sensibles.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>SFTP (SSH File Transfer Protocol)</h3>
+    <ul>
+        <li>Herramienta basada en SSH que permite transferir archivos entre computadoras de forma segura.</li>
+        <li>Cifra todos los datos transmitidos, incluyendo el nombre de usuario y la contraseña.</li>
+        <li>Es más seguro que FTP para el tráfico de datos sensibles.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Mini-Quiz</h3>
+    <p>¿Cuál de los siguientes protocolos es utilizado para acceder a una máquina remota desde una máquina local?</p>
+    <ol>
+        <li>SSH</li>
+        <li>RDP</li>
+        <li>VNC</li>
+        <li>FTP</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h3>Buenas prácticas</h3>
+    <ul>
+        <li>Utilizar protocolos seguros como SSH, RDP o VNC.</li>
+        <li>Cambiar regularmente las contraseñas de acceso remoto.</li>
+        <li>Configurar firewalls para limitar el acceso a los servicios remotos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Errores comunes</h3>
+    <ul>
+        <li>No utilizar protocolos seguros, lo que puede exponer datos sensibles.</li>
+        <li>No cambiar regularmente las contraseñas de acceso remoto.</li>
+        <li>No configurar firewalls adecuadamente, lo que puede permitir el acceso no autorizado.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Comparativa</h3>
+    <table>
+        <tr>
+            <th>Protocolo</th>
+            <th>Descripción</th>
+            <th>Cifrado</th>
+            <th>Uso</th>
+        </tr>
+        <tr>
+            <td>SSH</td>
+            <td>Protocolo de red utilizado para proporcionar una conexión segura entre dos computadoras.</td>
+            <td>Sí</td>
+            <td>Acceso remoto, ejecución de comandos.</td>
+        </tr>
+        <tr>
+            <td>RDP</td>
+            <td>Protocolo de Microsoft para acceder a una computadora remota desde una máquina local.</td>
+            <td>Sí</td>
+            <td>Control remoto de la pantalla.</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h3>Checklist</h3>
+    <ul>
+        <li>Configurar SSH para acceso remoto seguro.</li>
+        <li>Cambiar regularmente las contraseñas de acceso remoto.</li>
+        <li>Configurar firewalls para limitar el acceso a los servicios remotos.</li>
+        <li>Utilizar protocolos seguros para transferir archivos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Actividad</h3>
+    <p>Realice una configuración básica de SSH en su sistema operativo y pruebe el acceso remoto desde otra máquina.</p>
+</section>
+
+<section class="slide">
+    <h3>Resumen</h3>
+    <ul>
+        <li>Servicios de acceso remoto permiten controlar sistemas desde una ubicación remota.</li>
+        <li>Protocolos como SSH, RDP y VNC son utilizados para este propósito.</li>
+        <li>Buenas prácticas incluyen el uso de protocolos seguros y la configuración adecuada de firewalls.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Normativa (general)</h3>
+    <p>La normativa vigente establece requisitos para la seguridad en sistemas operativos, incluyendo los protocolos utilizados para el acceso remoto.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0374 Administración de sistemas operativos.md · Instalación, configuración y uso de servicios de acceso y administración remota: → Servicios de acceso remoto del propio sistema operativo.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 05:01:11</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

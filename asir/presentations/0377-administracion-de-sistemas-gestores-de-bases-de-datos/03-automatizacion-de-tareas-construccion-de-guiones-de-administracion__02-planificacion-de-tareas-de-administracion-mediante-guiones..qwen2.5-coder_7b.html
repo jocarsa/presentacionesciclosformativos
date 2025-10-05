@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Planificación de tareas de administración mediante guiones. — Automatización de tareas: construcción de guiones de administración: — 0377 Administración de sistemas gestores de bases de datos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="planificacion-de-tareas-de-administracion-mediante-guiones.">
+<h1>Planificación de tareas de administración mediante guiones.</h1>
+<p><strong>Unidad:</strong> Automatización de tareas: construcción de guiones de administración:<br><strong>Documento:</strong> 0377 Administración de sistemas gestores de bases de datos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Planificación de tareas de administración mediante guiones</h1>
+    <p>Objetivo: Comprender cómo planificar y automatizar tareas de administración de bases de datos utilizando guiones.</p>
+</section>
+
+<section class="slide">
+    <h2>Definición de guiones de administración</h2>
+    <ul>
+        <li>Conjunto de instrucciones programadas para realizar tareas específicas en sistemas de gestión de bases de datos.</li>
+        <li>Aumentan la eficiencia y reducen el tiempo necesario para realizar tareas repetitivas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Beneficios de usar guiones de administración</h2>
+    <ul>
+        <li>Automatización de tareas recurrentes.</li>
+        <li>Reducción del error humano.</li>
+        <li>Consistencia en la ejecución de tareas.</li>
+        <li>Mejora del rendimiento operativo.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Estructura básica de un guion</h2>
+    <ol>
+        <li>Identificación de la tarea a automatizar.</li>
+        <li>Definición de los pasos necesarios para completar la tarea.</li>
+        <li>Incorporación de comandos y scripts específicos del sistema de gestión de bases de datos.</li>
+        <li>Configuración de parámetros y variables según sea necesario.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de guion para una tarea de respaldo</h2>
+    <pre><code>
+-- Respaldo de la base de datos 'mydatabase'
+mysqldump -u username -p mydatabase > backup.sql
+    </code></pre>
+</section>
+
+<section class="slide">
+    <h2>Tipos de tareas que pueden automatizarse con guiones</h2>
+    <ul>
+        <li>Respaldos periódicos.</li>
+        <li>Actualizaciones de esquemas.</li>
+        <li>Optimización de índices.</li>
+        <li>Carga de datos masivos.</li>
+        <li>Monitoreo y alertas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Consideraciones al crear guiones</h2>
+    <ul>
+        <li>Pruebas exhaustivas antes de la implementación.</li>
+        <li>Documentación clara y detallada.</li>
+        <li>Control de versiones para el seguimiento de cambios.</li>
+        <li>Seguridad adecuada, incluyendo encriptación de datos sensibles.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de guion para una tarea de monitoreo</h2>
+    <pre><code>
+-- Monitoreo del espacio disponible en disco
+df -h /path/to/database | awk 'NR==2 {print $4}'
+    </code></pre>
+</section>
+
+<section class="slide">
+    <h2>Integración con herramientas de automatización</h2>
+    <ul>
+        <li>Schedulers como cron para tareas periódicas.</li>
+        <li>Herramientas de control de versiones (Git) para guiones complejos.</li>
+        <li>Automatización continua (CI/CD) para integración y despliegue.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de uso de cron para un respaldo diario</h2>
+    <pre><code>
+0 3 * * * /path/to/backup_script.sh
+    </code></pre>
+</section>
+
+<section class="slide">
+    <h2>Pruebas y validación de guiones</h2>
+    <ul>
+        <li>Ejecución manual para verificar resultados.</li>
+        <li>Comprobación de logs y salida estándar.</li>
+        <li>Simulación de errores para probar la resiliencia del guion.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de simulación de error en un guion</h2>
+    <pre><code>
+-- Simulación de error al intentar respaldar una base inexistente
+mysqldump -u username -p non_existent_db > backup.sql
+    </code></pre>
+</section>
+
+<section class="slide">
+    <h2>Seguridad en el uso de guiones</h2>
+    <ul>
+        <li>Uso de variables de entorno para almacenar credenciales.</li>
+        <li>Encriptación de datos sensibles en scripts.</li>
+        <li>Limitación de permisos para ejecutar los guiones.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de uso de variables de entorno</h2>
+    <pre><code>
+-- Uso de variable de entorno para almacenar la contraseña
+export DB_PASSWORD=mypassword
+mysqldump -u username -p$DB_PASSWORD mydatabase > backup.sql
+    </code></pre>
+</section>
+
+<section class="slide">
+    <h2>Documentación y mantenimiento de guiones</h2>
+    <ul>
+        <li>Mantenimiento regular del código.</li>
+        <li>Actualización de documentación según los cambios en el sistema.</li>
+        <li>Revisión periódica por parte de expertos en sistemas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de checklist para la revisión de guiones</h2>
+    <ul>
+        <li>Todas las instrucciones están claras y concisas?</li>
+        <li>Se han probado todos los casos de uso?</li>
+        <li>Los permisos son adecuados?</li>
+        <li>La documentación está actualizada?</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: ¿Cuáles son los beneficios principales de usar guiones de administración?</h2>
+    <ol>
+        <li>Aumento del tiempo necesario para realizar tareas.</li>
+        <li>Reducción del error humano.</li>
+        <li>Consistencia en la ejecución de tareas.</li>
+        <li>Mejora del rendimiento operativo.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Crear un guion simple para una tarea de actualización de esquema</h2>
+    <p>Escriba un guion que actualice el esquema de la base de datos 'mydatabase' utilizando un archivo SQL.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Guiones de administración automatizan tareas repetitivas en sistemas de gestión de bases de datos.</li>
+        <li>Ofrecen beneficios como eficiencia, reducción de errores y consistencia.</li>
+        <li>Se deben crear con pruebas exhaustivas y mantener actualizados para garantizar su funcionamiento correcto.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa y buenas prácticas</h2>
+    <ul>
+        <li>ISO/IE 27001: Norma internacional de gestión de la seguridad de la información.</li>
+        <li>NIST SP 800-53: Directrices para el control de sistemas operativos y aplicaciones.</li>
+        <li>Buenas prácticas incluyen pruebas exhaustivas, documentación clara y mantenimiento regular.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Recursos adicionales</h2>
+    <ul>
+        <li><a href="https://www.mysql.com/">Documentación oficial de MySQL</a></li>
+        <li><a href="https://docs.oracle.com/en/database/oracle/oracle-database/19/admin/managing-scheduled-jobs.html">Guía de Oracle sobre tareas programadas</a></li>
+        <li><a href="https://www.postgresql.org/docs/current/app-pgagent.html">Documentación de pgAgent para PostgreSQL</a></li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Gracias</h2>
+    <p>Preguntas y aclaraciones son bienvenidas.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0377 Administración de sistemas gestores de bases de datos.md · Automatización de tareas: construcción de guiones de administración: → Planificación de tareas de administración mediante guiones.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 09:35:10</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

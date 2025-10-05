@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Transacciones distribuidas. — Aplicación de criterios de disponibilidad a bases de datos distribuidas y replicadas: — 0377 Administración de sistemas gestores de bases de datos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="transacciones-distribuidas.">
+<h1>Transacciones distribuidas.</h1>
+<p><strong>Unidad:</strong> Aplicación de criterios de disponibilidad a bases de datos distribuidas y replicadas:<br><strong>Documento:</strong> 0377 Administración de sistemas gestores de bases de datos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Aplicación de criterios de disponibilidad a bases de datos distribuidas y replicadas</h1>
+    <p><strong>Objetivo:</strong> Comprender los conceptos básicos de transacciones distribuidas en sistemas gestores de bases de datos.</p>
+</section>
+
+<section class="slide">
+    <h2>Definición de Transacción Distribuida</h2>
+    <p>Una transacción distribuida es un conjunto de operaciones que se realizan en diferentes componentes del sistema y deben ser tratadas como una unidad única.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Transacción Distribuida</h2>
+    <ul>
+        <li>Transferencia bancaria entre dos cuentas en diferentes bancos.</li>
+        <li>Pedidos en línea que involucran múltiples servicios (compra, envío, facturación).</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Características de las Transacciones Distribuidas</h2>
+    <ul>
+        <li><strong>Autoridad:</strong>ada componente tiene autoridad sobre sus datos.</li>
+        <li><strong>Asincronía:</strong> Operaciones pueden realizarse en diferentes momentos.</li>
+        <li><strong>Conurrencia:</strong> Pueden existir múltiples transacciones simultáneas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Proceso de Ejecución de una Transacción Distribuida</h2>
+    <ol>
+        <li><strong>Iniciar la transacción:</strong> El cliente inicia la transacción en el servidor local.</li>
+        <li><strong>Propagar la transacción:</strong> La transacción se propaga a los servidores remotos involucrados.</li>
+        <li><strong>Ejecutar la transacción:</strong>ada servidor ejecuta las operaciones correspondientes.</li>
+        <li><strong>Confirmar o abortar la transacción:</strong> Se confirma si todas las operaciones son exitosas, o se aborta si ocurre un error.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas para Transacciones Distribuidas</h2>
+    <ul>
+        <li>Usar protocolos de comunicación confiables (TCP/IP).</li>
+        <li>Implementar mecanismos de concurrencia y bloqueo.</li>
+        <li>Monitorear y gestionar los tiempos de respuesta.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en Transacciones Distribuidas</h2>
+    <ul>
+        <li><strong>Desacoplamiento:</strong> Falta de comunicación entre componentes.</li>
+        <li><strong>Fallo de un componente:</strong> Un servidor no responde o falla.</li>
+        <li><strong>Conflicto de concurrencia:</strong> Dos transacciones intentan modificar los mismos datos simultáneamente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Mecanismos para Manejar Errores en Transacciones Distribuidas</h2>
+    <ul>
+        <li><strong>Afirmación:</strong> Confirmar la transacción si todas las operaciones son exitosas.</li>
+        <li><strong>Aborto:</strong> Anular la transacción si ocurre un error.</li>
+        <li><strong>Rol de coordinador:</strong> Un servidor que coordina y gestiona las transacciones.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa Relacionada con Transacciones Distribuidas</h2>
+    <p><strong>ACID (Atomicidad, Consistencia, Isolamiento, Durabilidad):</strong> Propiedades esenciales para garantizar la integridad de las transacciones distribuidas.</p>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico: Sistema de Reservas en Aerolíneas</h2>
+    <ul>
+        <li>Reserva de vuelo y alojamiento.</li>
+        <li>Pago del viaje.</li>
+        <li>Confirmación final.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Conceptos Básicos</h2>
+    <p>¿Cuáles son las características principales de una transacción distribuida?</p>
+    <ol type="A">
+        <li>Autoridad, asincronía y concurrencia.</li>
+        <li>Conurrencia, confiabilidad y eficiencia.</li>
+        <li>Confiabilidad, autoridad y seguridad.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Ejecución de una Transacción Distribuida</h2>
+    <ul>
+        <li>Iniciar la transacción en el servidor local.</li>
+        <li>Propagar la transacción a los servidores remotos.</li>
+        <li>Ejecutar las operaciones correspondientes en cada servidor.</li>
+        <li>Confirmar o abortar la transacción según el resultado de las operaciones.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Diseño de una Transacción Distribuida</h2>
+    <p>Diseña una transacción distribuida para un sistema de gestión de inventario en línea, incluyendo los componentes involucrados y el proceso de ejecución.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen: Transacciones Distribuidas</h2>
+    <ul>
+        <li>Definición y características de las transacciones distribuidas.</li>
+        <li>Proceso de ejecución y mecanismos para manejar errores.</li>
+        <li>Buenas prácticas y normativa relacionadas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Preguntas Finales</h2>
+    <p>¿Tienes preguntas sobre transacciones distribuidas? ¿Qué conceptos te gustaría explorar más a fondo?</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0377 Administración de sistemas gestores de bases de datos.md · Aplicación de criterios de disponibilidad a bases de datos distribuidas y replicadas: → Transacciones distribuidas.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 09:50:06</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

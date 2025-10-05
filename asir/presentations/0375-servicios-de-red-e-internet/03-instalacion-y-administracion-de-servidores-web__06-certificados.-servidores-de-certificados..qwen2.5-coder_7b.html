@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Certificados. Servidores de certificados. — Instalación y administración de servidores Web: — 0375 Servicios de red e Internet.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="certificados.-servidores-de-certificados.">
+<h1>Certificados. Servidores de certificados.</h1>
+<p><strong>Unidad:</strong> Instalación y administración de servidores Web:<br><strong>Documento:</strong> 0375 Servicios de red e Internet.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Certificados. Servidores de certificados.</h2>
+    <p>Objetivo: Comprender los conceptos básicos y funciones de los certificados digitales y los servidores de certificación (CA).</p>
+</section>
+
+<section class="slide">
+    <h3>¿Qué son los Certificados Digitales?</h3>
+    <ul>
+        <li>Son documentos electrónicos que garantizan la identidad digital de una entidad.</li>
+        <li>Utilizados para autenticar usuarios, servidores y aplicaciones en Internet.</li>
+        <li>Forman parte del protocolo SSL/TLS para cifrar las comunicaciones web.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Funciones de los Certificados Digitales</h3>
+    <ul>
+        <li>Autenticación: Confirma la identidad de un usuario o servidor.</li>
+        <li>Confidencialidad:ifra las comunicaciones para evitar interceptaciones no autorizadas.</li>
+        <li>Integridad: Garantiza que los datos no hayan sido alterados durante el tránsito.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Tipos de Certificados Digitales</h3>
+    <ul>
+        <li>Certificados SSL/TLS: Para sitios web y aplicaciones web.</li>
+        <li>Certificados SMTP: Para correo electrónico seguro.</li>
+        <li>Certificados SSH: Para conexiones seguras a servidores remotos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>¿Qué son los Servidores de Certificación (CA)?</h3>
+    <p>Son entidades que emiten y gestionan certificados digitales.</p>
+</section>
+
+<section class="slide">
+    <h3>Funciones de los Servidores de Certificación</h3>
+    <ul>
+        <li>Emisión de certificados: Verifica la identidad del solicitante y emite el certificado.</li>
+        <li>Gestión de certificados: Revoca o renueva los certificados cuando sea necesario.</li>
+        <li>Almacenamiento seguro: Almacena los certificados y claves privadas de forma segura.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Ejemplos de Servidores de Certificación</h3>
+    <ul>
+        <li>VeriSign</li>
+        <li>DigiCert</li>
+        <li>GlobalSign</li>
+        <li>CertifiCan (en España)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Proceso de Emisión de Certificados</h3>
+    <ol>
+        <li>Solicitar el certificado a la CA.</li>
+        <li>Verificar la identidad del solicitante.</li>
+        <li>Generar y firmar el certificado digital.</li>
+        <li>Distribuir el certificado al solicitante.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h3>Buenas Prácticas en el Manejo de Certificados</h3>
+    <ul>
+        <li>Utilizar certificados válidos y actualizados.</li>
+        <li>No compartir claves privadas.</li>
+        <li>Revocar certificados cuando sea necesario.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Errores Comunes en el Manejo de Certificados</h3>
+    <ul>
+        <li>Usar certificados caducados o revocados.</li>
+        <li>No verificar la identidad del solicitante.</li>
+        <li>No almacenar claves privadas de manera segura.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Comparativa entre Certificados Digitales y Autenticación Basada en Contraseñas</h3>
+    <table>
+        <tr>
+            <th>Certificados Digitales</th>
+            <th>Autenticación Basada en Contraseñas</th>
+        </tr>
+        <tr>
+            <td>Más seguros (SSL/TLS)</td>
+            <td>Menos seguros (fácilmente hackeables)</td>
+        </tr>
+        <tr>
+            <td>No requiere recordar contraseñas</td>
+            <td>Requiere recordar y gestionar múltiples contraseñas</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h3>Mini-Quiz: ¿Qué es un Certificado Digital?</h3>
+    <p>¿Cuál de las siguientes opciones no es una función de los certificados digitales?</p>
+    <ul>
+        <li>Autenticación</li>
+        <li>Confidencialidad</li>
+        <li>Integridad</li>
+        <li>Velocidad</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Checklist: Configuración de un Servidor de Certificado</h3>
+    <ol>
+        <li>Instalar el software de la CA.</li>
+        <li>Generar una solicitud de certificado digital.</li>
+        <li>Verificar la identidad del solicitante.</li>
+        <li>Emite y distribuye el certificado.</li>
+        <li>Configura el servidor para usar el certificado.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h3>Actividad: Crear un Certificado Digital</h3>
+    <p>Crea un certificado digital utilizando OpenSSL y configúralo en un servidor web.</p>
+</section>
+
+<section class="slide">
+    <h3>Resumen</h3>
+    <ul>
+        <li>Los certificados digitales garantizan la identidad y seguridad en Internet.</li>
+        <li>Los servidores de certificación emiten y gestionan estos certificados.</li>
+        <li>Es crucial seguir buenas prácticas para el manejo de certificados.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Normativa General</h3>
+    <p>La normativa vigente en España sobre seguridad informática incluye la Ley Orgánica 15/1999, de Protección de Datos Personales.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0375 Servicios de red e Internet.md · Instalación y administración de servidores Web: → Certificados. Servidores de certificados.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 06:42:59</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Instalación, configuración y uso de servicios de red para compartir recursos. — Integración de sistemas operativos en red libres y propietarios: — 0374 Administración de sistemas operativos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="instalacion-configuracion-y-uso-de-servicios-de-red-para-compartir-recursos.">
+<h1>Instalación, configuración y uso de servicios de red para compartir recursos.</h1>
+<p><strong>Unidad:</strong> Integración de sistemas operativos en red libres y propietarios:<br><strong>Documento:</strong> 0374 Administración de sistemas operativos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Integración de sistemas operativos en red libres y propietarios</h1>
+    <p>Objetivo: Aprender a instalar, configurar y usar servicios de red para compartir recursos.</p>
+</section>
+
+<section class="slide">
+    <h2>Instalación de servicios de red</h2>
+    <ul>
+        <li>Elegir el sistema operativo adecuado (libre o propietario)</li>
+        <li>Instalar el servidor de archivos (Samba, NFS, FTP)</li>
+        <li>Configurar las reglas de firewall</li>
+        <li>Instalar y configurar el servidor web (Apache, Nginx)</li>
+        <li>Instalar y configurar el servidor de correo electrónico (Postfix, Sendmail)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo: Instalación de Samba en Linux</h2>
+    <pre><code>
+sudo apt-get update
+sudo apt-get install samba
+sudo smbpasswd -a username
+sudo nano /etc/samba/smb.conf
+# Añadir configuración del recurso compartido
+sudo systemctl restart smbd nmbd
+    </code></pre>
+</section>
+
+<section class="slide">
+    <h2>Configuración de servicios de red</h2>
+    <ul>
+        <li>Definir permisos de acceso (lectura, escritura)</li>
+        <li>Configurar grupos y usuarios para control de acceso</li>
+        <li>Ajustar la configuración del firewall para permitir el tráfico necesario</li>
+        <li>Optimizar la configuración según las necesidades específicas</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Caso: Compartir carpetas en Windows y Linux</h2>
+    <p>Configurar una carpeta compartida entre un sistema operativo Windows y uno basado en Linux usando Samba.</p>
+</section>
+
+<section class="slide">
+    <h2>Proceso de configuración</h2>
+    <ol>
+        <li>Instalar Samba en el servidor Linux</li>
+        <li>Configurar los permisos de la carpeta compartida</li>
+        <li>Añadir la carpeta al archivo smb.conf</li>
+        <li>Reiniciar el servicio Samba</li>
+        <li>Acceder a la carpeta desde un cliente Windows</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas de configuración</h2>
+    <ul>
+        <li>Usar contraseñas fuertes para los usuarios Samba</li>
+        <li>Limitar el acceso a grupos específicos</li>
+        <li>Monitorear y mantener actualizado el sistema</li>
+        <li>Documentar la configuración para futuras referencias</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes en la configuración</h2>
+    <ul>
+        <li>No definir permisos adecuados</li>
+        <li>No reiniciar el servicio Samba después de cambios</li>
+        <li>No configurar correctamente las reglas del firewall</li>
+        <li>Usar contraseñas débiles o fáciles de adivinar</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: Samba vs. NFS</h2>
+    <table>
+        <tr>
+            <th>Samba</th>
+            <th>NFS</th>
+        </tr>
+        <tr>
+            <td>Protocolo de red basado en SMB/CIFS</td>
+            <td>Protocolo de red basado en RPC</td>
+        </tr>
+        <tr>
+            <td>Soporta sistemas operativos Windows, Linux y macOS</td>
+            <td>Principalmente para sistemas Unix/Linux</td>
+        </tr>
+        <tr>
+            <td>Más fácil de configurar para compartir archivos</td>
+            <td>Más eficiente en términos de rendimiento</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: Servicios de red</h2>
+    <p>¿Cuál es el protocolo utilizado por Samba para compartir archivos?</p>
+    <ol>
+        <li>TCP/IP</li>
+        <li>SMB/CIFS</li>
+        <li>FTP</li>
+        <li>NFS</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Configuración de Samba</h2>
+    <ul>
+        <li>Instalar Samba</li>
+        <li>Configurar usuarios Samba</li>
+        <li>Añadir carpeta compartida al smb.conf</li>
+        <li>Reiniciar servicios Samba</li>
+        <li>Probar el acceso desde un cliente</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Configurar NFS en Linux</h2>
+    <p>Configurar un servidor NFS y compartir una carpeta con clientes Linux.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Instalación y configuración de servicios de red para compartir recursos</li>
+        <li>Ejemplos prácticos de configuración</li>
+        <li>Buenas prácticas y errores comunes a evitar</li>
+        <li>Comparativa entre diferentes protocolos de red</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa general</h2>
+    <p>Seguir las políticas de seguridad y cumplimiento normativo al configurar servicios de red.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0374 Administración de sistemas operativos.md · Integración de sistemas operativos en red libres y propietarios: → Instalación, configuración y uso de servicios de red para compartir recursos.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 05:07:08</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

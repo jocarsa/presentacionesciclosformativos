@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Configuración de la resolución de nombres. — Administración de software de base: — 0369 Implantación de sistemas operativos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="configuracion-de-la-resolucion-de-nombres.">
+<h1>Configuración de la resolución de nombres.</h1>
+<p><strong>Unidad:</strong> Administración de software de base:<br><strong>Documento:</strong> 0369 Implantación de sistemas operativos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Configuración de la resolución de nombres</h1>
+    <p>Objetivo: Aprender los conceptos básicos y procedimientos para configurar el sistema de resolución de nombres en sistemas operativos.</p>
+</section>
+
+<section class="slide">
+    <h2>Concepto de Resolución de Nombres</h2>
+    <ul>
+        <li>Sistema que traduce nombres legibles (nombres de dominio) a direcciones IP numéricas.</li>
+        <li>Incluye DNS (Domain Name System), DHCP y otros protocolos.</li>
+        <li>Permite la comunicación entre dispositivos en una red.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Componentes del Sistema de Resolución de Nombres</h2>
+    <ul>
+        <li><strong>DNS (Domain Name System):</strong> Servidor que almacena y proporciona información sobre los nombres de dominio.</li>
+        <li><strong>Cliente DNS:</strong> Software en el dispositivo que solicita la traducción de nombres a direcciones IP.</li>
+        <li><strong>Cache DNS:</strong> Almacena temporalmente las respuestas del servidor para acelerar las búsquedas futuras.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo Práctico: Configuración de DNS en Windows</h2>
+    <ol>
+        <li>Ir a "Configuración del sistema" > "Red e Internet" > "Adaptadores de red".</li>
+        <li>Hacer clic derecho en el adaptador activo y seleccionar "Propiedades".</li>
+        <li>Seleccionar la pestaña "Protocolo de Internet versión 4 (TCP/IPv4)" y hacer clic en "Propiedades".</li>
+        <li>Elegir "Obtener automáticamente las direcciones IP y los servidores DNS" o configurar manualmente.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Caso de Uso: Implementación de DHCP para Resolución de Nombres</h2>
+    <p>DHCP (Dynamic Host Configuration Protocol) asigna automáticamente direcciones IP y DNS a los dispositivos en una red.</p>
+    <ul>
+        <li>Reduce la configuración manual y minimiza errores.</li>
+        <li>Asegura que todos los dispositivos tengan acceso a los servidores DNS necesarios.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Proceso de Configuración de Resolución de Nombres</h2>
+    <ol>
+        <li>Identificar el servidor DNS principal y secundario.</li>
+        <li>Configurar la dirección IP del servidor DNS en el cliente.</li>
+        <li>Verificar la configuración utilizando herramientas como "nslookup" o "ping".</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas para Configuración de Resolución de Nombres</h2>
+    <ul>
+        <li>Usar servidores DNS públicos confiables (como Google DNS o Cloudflare).</li>
+        <li>Configurar un servidor DNS local si la red es grande o crítica.</li>
+        <li>Mantener actualizados los registros de nombres y direcciones IP.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en Configuración de Resolución de Nombres</h2>
+    <ul>
+        <li>Dirección IP del servidor DNS incorrecta.</li>
+        <li>No se configura el servidor DNS principal y secundario.</li>
+        <li>Problemas con la conexión a los servidores DNS públicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: Configuración Manual vs. Automática</h2>
+    <table>
+        <tr>
+            <th>Configuración Manual</th>
+            <th>Configuración Automática (DHCP)</th>
+        </tr>
+        <tr>
+            <td>Más control y personalización.</td>
+            <td>Menos errores y menos tiempo de configuración.</td>
+        </tr>
+        <tr>
+            <td>Dificultad en la gestión a gran escala.</td>
+            <td>Fácilmente administrable incluso en redes grandes.</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Configuración de Resolución de Nombres</h2>
+    <p>¿Cuál es el propósito del servidor DNS?</p>
+    <ol>
+        <li>Asignar nombres a direcciones IP.</li>
+        <li>Proporcionar información sobre dispositivos en la red.</li>
+        <li>Controlar el acceso a recursos de la red.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Configuración de Resolución de Nombres</h2>
+    <ul>
+        <li>Identificar los servidores DNS principales y secundarios.</li>
+        <li>Configurar la dirección IP del servidor DNS en el cliente.</li>
+        <li>Verificar la configuración con herramientas como "nslookup" o "ping".</li>
+        <li>Mantener actualizados los registros de nombres y direcciones IP.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Configuración Práctica</h2>
+    <p>Configurar el sistema de resolución de nombres en un dispositivo virtual o físico utilizando los pasos descritos en la presentación.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>El sistema de resolución de nombres traduce nombres legibles a direcciones IP numéricas.</li>
+        <li>Incluye DNS, DHCP y otros protocolos.</li>
+        <li>Buenas prácticas incluyen usar servidores DNS confiables y mantener actualizados los registros.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa Relacionada</h2>
+    <p>Normativas como la GDPR pueden afectar cómo se maneja la información de identificación en el sistema de resolución de nombres.</p>
+    <ul>
+        <li>Se debe garantizar la privacidad y seguridad de los datos de los usuarios.</li>
+        <li>Es necesario obtener consentimiento explícito para recopilar y utilizar información personal.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Preguntas Frecuentes</h2>
+    <ol>
+        <li><strong>¿Qué es el DNS?</strong> Es un sistema que traduce nombres de dominio a direcciones IP numéricas.</li>
+        <li><strong>¿Cómo se configura el DNS en Windows?</strong> Se puede hacer a través de las propiedades del adaptador de red.</li>
+        <li><strong>¿Qué es DHCP y por qué es útil?</strong> DHCP asigna automáticamente direcciones IP y servidores DNS, facilitando la gestión de redes grandes.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Recursos Adicionales</h2>
+    <ul>
+        <li><a href="https://docs.microsoft.com/es-es/windows-server/networking/technologies/dns/dns-overview">Documentación oficial de Microsoft sobre DNS</a></li>
+        <li><a href="https://www.cloudflare.com/dns/">Cloudflare: Servicios de DNS y seguridad en la nube</a></li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Gracias por su atención</h2>
+    <p>Preguntas o comentarios? No dudes en contactar.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0369 Implantación de sistemas operativos.md · Administración de software de base: → Configuración de la resolución de nombres.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-04 21:45:54</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Herramientas gráficas y utilidades proporcionadas por el sistema gestor para la realización y recuperación de copias de seguridad. — Gestión de la seguridad de los datos: — 0372 Gestión de bases de datos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="herramientas-graficas-y-utilidades-proporcionadas-por-el-sistema-gestor-para-la-realizacion-y-recuperacion-de-copias-de-seguridad.">
+<h1>Herramientas gráficas y utilidades proporcionadas por el sistema gestor para la realización y recuperación de copias de seguridad.</h1>
+<p><strong>Unidad:</strong> Gestión de la seguridad de los datos:<br><strong>Documento:</strong> 0372 Gestión de bases de datos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Herramientas gráficas y utilidades para la realización y recuperación de copias de seguridad</h1>
+    <p>Objetivo: Comprender las herramientas disponibles en los sistemas gestores de bases de datos para realizar y restaurar copias de seguridad.</p>
+</section>
+
+<section class="slide">
+    <h2>Herramientas gráficas para la realización de copias de seguridad</h2>
+    <ul>
+        <li>pgAdmin (PostgreSQL)</li>
+        <li>MySQL Workbench (MySQL)</li>
+        <li>SQL Server Management Studio (SSMS) (Microsoft SQL Server)</li>
+        <li>Oracle Enterprise Manager (Oracle Database)</li>
+        <li>DBeaver</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Herramientas gráficas para la recuperación de copias de seguridad</h2>
+    <ul>
+        <li>pgAdmin (PostgreSQL)</li>
+        <li>MySQL Workbench (MySQL)</li>
+        <li>SQL Server Management Studio (SSMS) (Microsoft SQL Server)</li>
+        <li>Oracle Enterprise Manager (Oracle Database)</li>
+        <li>DBeaver</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de uso en PostgreSQL con pgAdmin</h2>
+    <p>Crea una copia de seguridad:</p>
+    <ol>
+        <li>Conéctate a la base de datos.</li>
+        <li>Navega hasta "Backup" y selecciona la base de datos.</li>
+        <li>Especifica el tipo de backup (pg_dump, pg_dumpall).</li>
+        <li>Selecciona el archivo de salida y realiza el backup.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de uso en MySQL con MySQL Workbench</h2>
+    <p>Crea una copia de seguridad:</p>
+    <ol>
+        <li>Conéctate a la base de datos.</li>
+        <li>Navega hasta "Server" y selecciona "Data Export".</li>
+        <li>Especifica las bases de datos a exportar.</li>
+        <li>Selecciona el archivo de salida y realiza la exportación.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Caso práctico: Recuperación de copia de seguridad en SQL Server con SSMS</h2>
+    <p>Pasos:</p>
+    <ol>
+        <li>Conéctate a la instancia de SQL Server.</li>
+        <li>Navega hasta "Management" y selecciona "Backup and Restore".</li>
+        <li>Especifica el archivo de copia de seguridad.</li>
+        <li>Selecciona las opciones de restauración (reemplazar, aplicar parches).</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas para la gestión de copias de seguridad</h2>
+    <ul>
+        <li>Frecuencia: Diaria, semanal o mensual según riesgo.</li>
+        <li>Almacenamiento seguro: Diferentes ubicaciones geográficas.</li>
+        <li>Pruebas periódicas: Simular recuperación para validar copias de seguridad.</li>
+        <li>Caducidad: Eliminar copias de seguridad antiguas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes en la gestión de copias de seguridad</h2>
+    <ul>
+        <li>No realizar copias de seguridad frecuentes.</li>
+        <li>Almacenar todas las copias de seguridad en el mismo lugar.</li>
+        <li>No probar regularmente las copias de seguridad.</li>
+        <li>Copiar y almacenar solo la estructura sin datos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa entre herramientas gráficas</h2>
+    <table>
+        <tr>
+            <th>Herramienta</th>
+            <th>PostgreSQL</th>
+            <th>MySQL</th>
+            <th>SQL Server</th>
+            <th>Oracle</th>
+        </tr>
+        <tr>
+            <td>Interfaz gráfica</td>
+            <td>Sí</td>
+            <td>Sí</td>
+            <td>Sí</td>
+            <td>Sí</td>
+        </tr>
+        <tr>
+            <td>Funciones de copia de seguridad</td>
+            <td>pg_dump, pg_dumpall</td>
+            <td>mysqldump</td>
+            <td>BACKUP DATABASE</td>
+            <td>expdp, impdp</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: Herramientas gráficas de copia de seguridad</h2>
+    <p>¿Cuál herramienta permite realizar copias de seguridad y restauración en MySQL?</p>
+    <ol>
+        <li>pgAdmin</li>
+        <li>MySQL Workbench</li>
+        <li>SQL Server Management Studio</li>
+        <li>DBeaver</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist de gestión de copias de seguridad</h2>
+    <ul>
+        <li>¿Se realiza una copia de seguridad diaria?</li>
+        <li>¿Las copias de seguridad se almacenan en diferentes ubicaciones?</li>
+        <li>¿Se prueban regularmente las copias de seguridad?</li>
+        <li>¿Se eliminan copias de seguridad antiguas según la política estableida?</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Realizar una copia de seguridad en PostgreSQL con pgAdmin</h2>
+    <p>Sigue los pasos para realizar una copia de seguridad de una base de datos en PostgreSQL usando pgAdmin.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Herramientas gráficas disponibles para la gestión de copias de seguridad.</li>
+        <li>Ejemplos prácticos y casos de uso.</li>
+        <li>Buenas prácticas y errores comunes.</li>
+        <li>Comparativa entre herramientas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa relevante</h2>
+    <ul>
+        <li>NIST SP 800-53 (Seguridad de la información)</li>
+        <li>CIS Benchmark (Configuración segura del sistema operativo y aplicaciones)</li>
+        <li>ISO/IE 27001 (Gestión de la seguridad de la información)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Preguntas y dudas</h2>
+    <p>¿Tienes alguna pregunta o duda sobre el tema?</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0372 Gestión de bases de datos.md · Gestión de la seguridad de los datos: → Herramientas gráficas y utilidades proporcionadas por el sistema gestor para la realización y recuperación de copias de seguridad.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 02:41:21</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

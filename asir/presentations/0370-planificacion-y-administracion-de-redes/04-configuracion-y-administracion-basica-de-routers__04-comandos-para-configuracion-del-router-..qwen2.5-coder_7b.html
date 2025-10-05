@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Comandos para configuración del «router». — Configuración y administración básica de «routers»: — 0370 Planificación y administración de redes.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="comandos-para-configuracion-del-router-.">
+<h1>Comandos para configuración del «router».</h1>
+<p><strong>Unidad:</strong> Configuración y administración básica de «routers»:<br><strong>Documento:</strong> 0370 Planificación y administración de redes.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Configuración y administración básica de «routers»</h1>
+    <p>Objetivo: Aprender los comandos básicos para configurar un router.</p>
+</section>
+
+<section class="slide">
+    <h2>Introducción a la Configuración de Routers</h2>
+    <ul>
+        <li>Importancia de la configuración correcta de routers en redes empresariales.</li>
+        <li>Concepto básico: qué es un router y su función.</li>
+        <li>Ejemplo práctico: cómo se conectan los dispositivos en una red con un router.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración Básica de un Router</h2>
+    <ol>
+        <li>Encender el router y acceder a su interfaz web.</li>
+        <li>Cambiar la contraseña predeterminada del administrador.</li>
+        <li>Configurar la dirección IP del router.</li>
+        <li>Establecer la configuración de red (LAN/WAN).</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Comandos Básicos en el Shell del Router</h2>
+    <ul>
+        <li><code>show ip interface brief</code>: Muestra las interfaces IP activas.</li>
+        <li><code>ping [dirección_IP]</code>: Prueba la conectividad con otra máquina.</li>
+        <li><code>traceroute [dirección_IP]</code>: Rastrea el camino de datos a una dirección IP.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Puertos y VLANs</h2>
+    <ol>
+        <li>Configurar puertos en modo Access o Trunk.</li>
+        <li>Crear y asignar VLANs (VLAN ID, nombre).</li>
+        <li>Configurar interfaces para diferentes VLANs.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Rutas Estáticas</h2>
+    <ul>
+        <li><code>ip route [red] [máscara] [puerta_de_enlace]</code>: Configura una ruta estática.</li>
+        <li>Ejemplo: <code>ip route 192.168.2.0 255.255.255.0 192.168.1.1</code>.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Protocolos de Enrutamiento Dinámico</h2>
+    <ul>
+        <li>OSPF (Open Shortest Path First):</li>
+        <li>BGP (Border Gateway Protocol):</li>
+        <li>Ejemplo: Configurar OSPF en un router.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Firewall y Seguridad</h2>
+    <ol>
+        <li>Habilitar el firewall del router.</li>
+        <li>Configurar reglas de acceso (ACL).</li>
+        <li>Ejemplo: Permitir solo tráfico SSH al router.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Backup y Restauración de Configuraciones</h2>
+    <ul>
+        <li><code>show running-config</code>: Muestra la configuración actual en ejecución.</li>
+        <li><code>write memory</code> o <code>copy running-config startup-config</code>: Guarda la configuración.</li>
+        <li>Ejemplo: Restaurar una configuración guardada.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas en la Configuración de Routers</h2>
+    <ul>
+        <li>Documentar todas las configuraciones realizadas.</li>
+        <li>Realizar copias de seguridad periódicas.</li>
+        <li>Monitorear el rendimiento del router.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en la Configuración de Routers</h2>
+    <ul>
+        <li>Configurar interfaces incorrectamente (LAN/WAN).</li>
+        <li>No configurar correctamente las VLANs.</li>
+        <li>Olvidar el backup periódico de la configuración.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Comandos Básicos en Routers</h2>
+    <ol>
+        <li>¿Qué comando se usa para mostrar las interfaces IP activas?</li>
+        <li>¿Cuál es el propósito del comando <code>ping</code>?</li>
+        <li>¿Cómo se configura una ruta estática en un router?</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist de Configuración Básica de Routers</h2>
+    <ul>
+        <li>Encender el router y acceder a su interfaz web.</li>
+        <li>Cambiar la contraseña del administrador.</li>
+        <li>Configurar la dirección IP del router.</li>
+        <li>Establecer la configuración de red (LAN/WAN).</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Configuración de un Router Simulado</h2>
+    <p>Ejercicio práctico para configurar un router simulado con los comandos básicos aprendidos.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen de Comandos Básicos en Routers</h2>
+    <ul>
+        <li><code>show ip interface brief</code></li>
+        <li><code>ping [dirección_IP]</code></li>
+        <li><code>traceroute [dirección_IP]</code></li>
+        <li><code>ip route [red] [máscara] [puerta_de_enlace]</code></li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa y Seguridad en la Configuración de Routers</h2>
+    <ul>
+        <li>Seguridadibernética: Proteger contra amenazas.</li>
+        <li>Reglamentos locales y nacionales sobre seguridad de redes.</li>
+        <li>Ejemplo: Cumplir con las normativas de la GDPR en el manejo de datos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Preguntas Finales</h2>
+    <p>¿Tienes alguna pregunta sobre la configuración y administración básica de routers?</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0370 Planificación y administración de redes.md · Configuración y administración básica de «routers»: → Comandos para configuración del «router».</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 00:37:47</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Configuración de los parámetros relevantes. — Instalación y configuración de un sistema gestor de base de datos: — 0377 Administración de sistemas gestores de bases de datos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="configuracion-de-los-parametros-relevantes.">
+<h1>Configuración de los parámetros relevantes.</h1>
+<p><strong>Unidad:</strong> Instalación y configuración de un sistema gestor de base de datos:<br><strong>Documento:</strong> 0377 Administración de sistemas gestores de bases de datos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Configuración de los parámetros relevantes en sistemas gestores de bases de datos</h1>
+    <p>Objetivo: Aprender a configurar correctamente los parámetros clave para optimizar el rendimiento y la seguridad de una base de datos.</p>
+</section>
+
+<section class="slide">
+    <h2>Concepto: Parámetros de Configuración</h2>
+    <ul>
+        <li>Parámetros de rendimiento que controlan cómo se maneja la información en la base de datos.</li>
+        <li>Influyen directamente en el desempeño y la eficiencia del sistema.</li>
+        <li>Ejemplos: tamaño de buffer, número de conexiones simultáneas, nivel de aislamiento transaccional.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Parámetro: Tamaño del Buffer</h2>
+    <p><strong>Tamaño del Buffer:</strong> Define la cantidad de memoria RAM asignada para almacenar bloques de datos en caché.</p>
+    <ul>
+        <li>Más grande = mayor rendimiento, pero más consumo de memoria.</li>
+        <li>Depende del tamaño y frecuencia de acceso a los datos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Parámetro: Número de Conexiones Simultáneas</h2>
+    <p><strong>Número de Conexiones Simultáneas:</strong> Limita el número de usuarios que pueden acceder simultáneamente a la base de datos.</p>
+    <ul>
+        <li>Más alto = mayor capacidad para usuarios, pero más carga en el servidor.</li>
+        <li>Depende del rendimiento del hardware y las necesidades de los usuarios.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Parámetro: Nivel de Aislamiento Transaccional</h2>
+    <p><strong>Nivel de Aislamiento Transaccional:</strong> Define la visibilidad de las transacciones para otros usuarios.</p>
+    <ul>
+        <li>Puede ser READ UNCOMMITTED, READ COMMITTED, REPEATABLE READ o SERIALIZABLE.</li>
+        <li>Mayor nivel = mayor seguridad pero menor rendimiento.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo: Configuración de Tamaño del Buffer en MySQL</h2>
+    <p><code>innodb_buffer_pool_size = 1G</code></p>
+    <p>Esta configuración asigna 1 gigabyte de memoria RAM al buffer pool de InnoDB.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo: Configuración de Número de Conexiones Simultáneas en PostgreSQL</h2>
+    <p><code>max_connections = 100</code></p>
+    <p>Esta configuración permite hasta 100 conexiones simultáneas a la base de datos.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo: Configuración de Nivel de Aislamiento Transaccional en SQL Server</h2>
+    <p><code>SET TRANSACTION ISOLATION LEVEL READ COMMITTED;</code></p>
+    <p>Esta configuración establece el nivel de aislamiento transaccional como READ COMMITTED.</p>
+</section>
+
+<section class="slide">
+    <h2>Caso: Optimización de Rendimiento</h2>
+    <p><strong>Caso:</strong> Una empresa necesita mejorar el rendimiento de su base de datos para soportar creciente carga de trabajo.</p>
+    <ul>
+        <li>Aumenta el tamaño del buffer pool.</li>
+        <li>Reduce el número de conexiones simultáneas.</li>
+        <li>Optimiza consultas y índices.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Caso: Mejora de Seguridad</h2>
+    <p><strong>Caso:</strong> Una institución necesita mejorar la seguridad de su base de datos para cumplir con regulaciones.</p>
+    <ul>
+        <li>Reduce el nivel de aislamiento transaccional.</li>
+        <li>Implementa autenticación y autorización robustas.</li>
+        <li>Realiza copias de seguridad periódicas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Proceso: Configuración Avanzada</h2>
+    <p><strong>Proceso:</strong> Pasos para configurar parámetros avanzados en un sistema gestor de bases de datos.</p>
+    <ol>
+        <li>Evaluación del rendimiento actual.</li>
+        <li>Identificación de áreas de mejora.</li>
+        <li>Configuración de los parámetros correspondientes.</li>
+        <li>Pruebas y ajustes.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas: Configuración Segura</h2>
+    <ul>
+        <li>No exponer los parámetros de configuración en scripts públicos.</li>
+        <li>Usar valores predeterminados seguros si no se especifican.</li>
+        <li>Mantener una copia de seguridad de los archivos de configuración.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas: Monitoreo y Ajustes Continuos</h2>
+    <ul>
+        <li>Monitorear el rendimiento regularmente.</li>
+        <li>Ajustar los parámetros según sea necesario.</li>
+        <li>Documentar cambios y razones de ajuste.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes: Configuración Incorrecta</h2>
+    <ul>
+        <li>Asignar un tamaño de buffer muy pequeño.</li>
+        <li>No limitar el número de conexiones.</li>
+        <li>Establecer niveles de aislamiento demasiado altos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes: Falta de Monitoreo</h2>
+    <ul>
+        <li>No realizar pruebas después de los ajustes.</li>
+        <li>No documentar cambios realizados.</li>
+        <li>No realizar copias de seguridad periódicas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: MySQL vs PostgreSQL</h2>
+    <table>
+        <tr>
+            <th>Parámetro</th>
+            <th>MySQL</th>
+            <th>PostgreSQL</th>
+        </tr>
+        <tr>
+            <td>Tamaño del Buffer Pool</td>
+            <td><code>innodb_buffer_pool_size</code></td>
+            <td><code>shared_buffers</code></td>
+        </tr>
+        <tr>
+            <td>Número de Conexiones Simultáneas</td>
+            <td><code>max_connections</code></td>
+            <td><code>max_connections</code></td>
+        </tr>
+        <tr>
+            <td>Nivel de Aislamiento Transaccional</td>
+            <td><code>transaction_isolation</code></td>
+            <td><code>default_transaction_isolation</code></td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Configuración de Parámetros</h2>
+    <p>¿Cuál es el parámetro que controla la cantidad máxima de conexiones simultáneas en PostgreSQL?</p>
+    <ul>
+        <li><input type="radio" name="quiz1"> max_connections</li>
+        <li><input type="radio" name="quiz1"> shared_buffers</li>
+        <li><input type="radio" name="quiz1"> transaction_isolation</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Configuración de Parámetros</h2>
+    <ul>
+        <li>Evaluación del rendimiento actual.</li>
+        <li>Identificación de áreas de mejora.</li>
+        <li>Configuración de los parámetros correspondientes.</li>
+        <li>Pruebas y ajustes.</li>
+        <li>Monitoreo continuo del rendimiento.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Configuración Práctica</h2>
+    <p>Configura los siguientes parámetros en tu entorno de desarrollo:</p>
+    <ul>
+        <li>Tamaño del buffer pool a 512MB.</li>
+        <li>Número máximo de conexiones a 50.</li>
+        <li>Nivel de aislamiento transaccional a READ COMMITTED.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Resumen: Configuración de Parámetros Relevantes</h2>
+    <p>La configuración correcta de los parámetros es crucial para el rendimiento y la seguridad de una base de datos. Se deben evaluar, ajustar y monitorear regularmente estos parámetros.</p>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Regulaciones de Seguridad en Bases de Datos</h2>
+    <ul>
+        <li>PCI DSS (Payment Card Industry Data Security Standard)</li>
+        <li>GDPR (General Data Protection Regulation)</li>
+        <li>NIST (National Institute of Standards and Technology)</li>
+    </ul>
+    <p>Estas regulaciones impiden que las organizaciones no cumplan con los estándares de seguridad en la gestión de bases de datos.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0377 Administración de sistemas gestores de bases de datos.md · Instalación y configuración de un sistema gestor de base de datos: → Configuración de los parámetros relevantes.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 08:50:03</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

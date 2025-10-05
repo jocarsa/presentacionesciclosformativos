@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Transacciones. Sentencias de procesamiento de transacciones. — Edición de los datos: — 0372 Gestión de bases de datos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="transacciones.-sentencias-de-procesamiento-de-transacciones.">
+<h1>Transacciones. Sentencias de procesamiento de transacciones.</h1>
+<p><strong>Unidad:</strong> Edición de los datos:<br><strong>Documento:</strong> 0372 Gestión de bases de datos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Transacciones. Sentencias de procesamiento de transacciones</h1>
+    <p>Objetivo: Comprender los conceptos básicos y sentencias utilizadas para gestionar las transacciones en bases de datos.</p>
+</section>
+
+<section class="slide">
+    <h2>Definición de Transacción</h2>
+    <p>Una transacción es una unidad de trabajo que realiza un conjunto de operaciones relacionadas. Debe cumplir cuatro propiedades fundamentales: ACID (Atomicidad, Coherencia, Isolación y Durabilidad).</p>
+</section>
+
+<section class="slide">
+    <h2>Tipos de Transacciones</h2>
+    <ul>
+        <li><strong>Transacciones Locales:</strong> Realizadas dentro de una sola base de datos.</li>
+        <li><strong>Transacciones Distribuidas:</strong> Involucran múltiples bases de datos o sistemas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Sentencias SQL para Transacciones</h2>
+    <ul>
+        <li><code>BEGIN TRANSACTION;</code></li>
+        <li><code>COMMIT;</code></li>
+        <li><code>ROLLBACK;</code></li>
+        <li><code>SAVEPOINT;</code></li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Atomicidad (A)</h2>
+    <p>Cada transacción debe ser una unidad indivisible. Si ocurre un error, toda la operación debe revertirse.</p>
+</section>
+
+<section class="slide">
+    <h2>Coherencia ()</h2>
+    <p>Una transacción debe llevar a la base de datos de un estado válido a otro. No puede dejar el sistema en un estado inconsistente.</p>
+</section>
+
+<section class="slide">
+    <h2>Isolación (I)</h2>
+    <p>Cada transacción debe ejecutarse como si fuera la única operación en el sistema, evitando interferencias entre ellas.</p>
+</section>
+
+<section class="slide">
+    <h2>Durabilidad (D)</h2>
+    <p>Una vez que una transacción ha sido confirmada, sus cambios deben persistir incluso ante fallas del sistema.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Transacción</h2>
+    <pre><code>
+BEGIN TRANSACTION;
+UPDATE cuentas SET saldo = saldo - 100 WHERE id = 1;
+UPDATE cuentas SET saldo = saldo + 100 WHERE id = 2;
+COMMIT;
+    </code></pre>
+</section>
+
+<section class="slide">
+    <h2>Manejo de Errores</h2>
+    <p>Usar <code>ROLLBACK;</code> para revertir cambios en caso de error. Usar <code>SAVEPOINT;</code> para marcar puntos de recuperación.</p>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico: Transferencia Bancaria</h2>
+    <p>Ejemplo real de transacción distribuida entre dos cuentas bancarias.</p>
+</section>
+
+<section class="slide">
+    <h2>Proceso de Transacción</h2>
+    <ol>
+        <li>Iniciar la transacción con <code>BEGIN TRANSACTION;</code></li>
+        <li>Ejecutar las operaciones necesarias.</li>
+        <li>Confirmar los cambios con <code>COMMIT;</code></li>
+        <li>Opcionalmente, usar <code>SAVEPOINT;</code> para puntos de recuperación.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas</h2>
+    <ul>
+        <li>Usar transacciones cuando sea necesario mantener la integridad de los datos.</li>
+        <li>Minimizar el tiempo de bloqueo para evitar problemas de concurrencia.</li>
+        <li>Manejar adecuadamente errores y excepciones.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en Transacciones</h2>
+    <ul>
+        <li>Olvidar el uso de <code>BEGIN TRANSACTION;</code></li>
+        <li>No confirmar cambios con <code>COMMIT;</code></li>
+        <li>No manejar adecuadamente errores y excepciones.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: Transacciones vs. Consultas</h2>
+    <table>
+        <tr>
+            <th>Transacción</th>
+            <th>Consulta</th>
+        </tr>
+        <tr>
+            <td>Efectúa múltiples operaciones.</td>
+            <td>Ejecuta una sola consulta.</td>
+        </tr>
+        <tr>
+            <td>Requiere confirmación con <code>COMMIT;</code></td>
+            <td>No requiere confirmación explícita.</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz</h2>
+    <p>¿Cuál de las siguientes sentencias es correcta para iniciar una transacción?</p>
+    <ul>
+        <li><code>START TRANSACTION;</code></li>
+        <li><code>BEGIN TRANSACTION;</code></li>
+        <li><code>INITIATE TRANSACTION;</code></li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist de Transacciones</h2>
+    <ul>
+        <li>Iniciar la transacción con <code>BEGIN TRANSACTION;</code></li>
+        <li>Ejecutar las operaciones necesarias.</li>
+        <li>Confirmar los cambios con <code>COMMIT;</code></li>
+        <li>Manejar adecuadamente errores y excepciones.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Crear una Transacción</h2>
+    <p>Crea una transacción que actualice el stock de productos en una tienda virtual.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Transacciones son unidades de trabajo que realizan operaciones relacionadas.</li>
+        <li>Deben cumplir las propiedades ACID para garantizar la integridad de los datos.</li>
+        <li>Se manejan con sentencias como <code>BEGIN TRANSACTION;</code>, <code>COMMIT;</code> y <code>ROLLBACK;</code>.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa Relacionada</h2>
+    <p>ISO/IE 9001:2015 - Sistema de gestión de la calidad.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0372 Gestión de bases de datos.md · Edición de los datos: → Transacciones. Sentencias de procesamiento de transacciones.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 02:34:32</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

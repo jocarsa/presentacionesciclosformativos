@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Herramientas y sentencias para la gestión de índices. — Optimización del rendimiento: monitorización y optimización: — 0377 Administración de sistemas gestores de bases de datos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="herramientas-y-sentencias-para-la-gestion-de-indices.">
+<h1>Herramientas y sentencias para la gestión de índices.</h1>
+<p><strong>Unidad:</strong> Optimización del rendimiento: monitorización y optimización:<br><strong>Documento:</strong> 0377 Administración de sistemas gestores de bases de datos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Herramientas y sentencias para la gestión de índices</h2>
+    <p>Objetivo: Aprender las herramientas y sentencias clave para gestionar eficientemente los índices en sistemas gestores de bases de datos.</p>
+</section>
+
+<section class="slide">
+    <h3>Herramientas para la gestión de índices</h3>
+    <ul>
+        <li>MySQL: `CREATE INDEX`, `DROP INDEX`, `ALTER TABLE ... ADD INDEX`</li>
+        <li>PostgreSQL: `CREATE INDEX`, `DROP INDEX`, `CREATE INDEX CONCURRENTLY`</li>
+        <li>SQL Server: `CREATE INDEX`, `DROP INDEX`, `CREATE NONCLUSTERED INDEX`</li>
+        <li>Oracle: `CREATE INDEX`, `DROP INDEX`, `CREATE BITMAP INDEX`</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Sentencias para la gestión de índices</h3>
+    <ul>
+        <li>`CREATE INDEX`:rea un índice en una tabla.</li>
+        <li>`DROP INDEX`: Elimina un índice existente.</li>
+        <li>`ALTER TABLE ... ADD INDEX`: Añade un nuevo índice a una tabla existente.</li>
+        <li>`ANALYZE TABLE`: Actualiza estadísticas de la tabla para mejorar el rendimiento del optimizador.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Ejemplo: Creación de índices en MySQL</h3>
+    <pre><code>CREATE INDEX idx_lastname ON employees (last_name);</code></pre>
+</section>
+
+<section class="slide">
+    <h3>Ejemplo: Eliminación de índices en PostgreSQL</h3>
+    <pre><code>DROP INDEX idx_lastname;</code></pre>
+</section>
+
+<section class="slide">
+    <h3>Caso práctico: Optimización de consultas con índices</h3>
+    <p>Considera una consulta que realiza búsquedas frecuentes por `last_name` en la tabla `employees`. Crear un índice en `last_name` puede mejorar significativamente el rendimiento.</p>
+</section>
+
+<section class="slide">
+    <h3>Buenas prácticas para la gestión de índices</h3>
+    <ul>
+        <li>Crear índices solo en columnas que se utilizan en cláusulas `WHERE`, `JOIN` o `ORDER BY`.</li>
+        <li>Mantener un equilibrio entre el número de índices y el rendimiento de las operaciones de inserción, actualización y eliminación.</li>
+        <li>Usar índices compuestos cuando sea necesario para mejorar la eficiencia en consultas complejas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Errores comunes al gestionar índices</h3>
+    <ul>
+        <li>Crea demasiados índices sin considerar el impacto en el rendimiento de las operaciones de escritura.</li>
+        <li>No analiza regularmente las tablas para mantener estadísticas actualizadas.</li>
+        <li>Elimina índices que no se utilizan, pero olvida los que son esenciales para ciertas consultas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Comparativa de tipos de índices</h3>
+    <table>
+        <tr>
+            <th>Tipo de Índice</th>
+            <th>Descripción</th>
+        </tr>
+        <tr>
+            <td>B-Tree</td>
+            <td>Más común, ordenado y equilibrado.</td>
+        </tr>
+        <tr>
+            <td>Hash</td>
+            <td>Rápido acceso a los datos, pero no soporta rangos.</td>
+        </tr>
+        <tr>
+            <td>Bloom Filter</td>
+            <td>Estimación de la existencia de elementos sin almacenarlos.</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h3>Mini-quiz: ¿Cuál es el propósito del análisis de tablas?</h3>
+    <ul>
+        <li>Aumentar el tamaño de la tabla para mejorar el rendimiento.</li>
+        <li>Actualizar estadísticas utilizadas por el optimizador de consultas.</li>
+        <li>Eliminar índices innecesarios.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Checklist: Consideraciones al crear índices</h3>
+    <ol>
+        <li>Identifica las columnas más utilizadas en consultas.</li>
+        <li>Evaluación del impacto en operaciones de escritura.</li>
+        <li>Mantén un solo índice por columna si es posible.</li>
+        <li>Prueba el rendimiento antes y después de la creación del índice.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h3>Actividad: Diseña un índice para una consulta específica</h3>
+    <p>Diseña un índice para mejorar la siguiente consulta en PostgreSQL:</p>
+    <pre><code>SELECT * FROM employees WHERE department = 'Sales' AND last_name LIKE 'A%';</code></pre>
+</section>
+
+<section class="slide">
+    <h3>Resumen: Herramientas y sentencias para la gestión de índices</h3>
+    <ul>
+        <li>Herramientas disponibles en diferentes SGBDs.</li>
+        <li>Sentencias básicas para crear, eliminar y analizar índices.</li>
+        <li>Buenas prácticas y errores comunes al gestionar índices.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Normativa: Normas de gestión de índices en SGBDs</h3>
+    <p>Cada SGBD tiene sus propias normativas y mejores prácticas para la gestión eficiente de índices. Consulta las documentaciones oficiales para obtener información específica.</p>
+</section>
+
+<section class="slide">
+    <h2>Fin de la subunidad: Herramientas y sentencias para la gestión de índices</h2>
+    <p>Recuerda practicar regularmente y aplicar los conceptos aprendidos en proyectos reales.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0377 Administración de sistemas gestores de bases de datos.md · Optimización del rendimiento: monitorización y optimización: → Herramientas y sentencias para la gestión de índices.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 09:42:14</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

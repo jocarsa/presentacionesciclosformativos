@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Mecanismos de introducción de información: formularios. — Programación de documentos Web utilizando lenguajes de «script» de servidor: — 0376 Implantación de aplicaciones web.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="mecanismos-de-introduccion-de-informacion-formularios.">
+<h1>Mecanismos de introducción de información: formularios.</h1>
+<p><strong>Unidad:</strong> Programación de documentos Web utilizando lenguajes de «script» de servidor:<br><strong>Documento:</strong> 0376 Implantación de aplicaciones web.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Mecanismos de introducción de información: formularios</h1>
+    <p>Objetivo: Comprender los conceptos básicos y aplicaciones de los formularios en aplicaciones web.</p>
+</section>
+
+<section class="slide">
+    <h2>Definición de Formulario</h2>
+    <p>Un formulario es una colección de controles que permiten a los usuarios ingresar datos para ser procesados por un servidor.</p>
+</section>
+
+<section class="slide">
+    <h2>Estructura Básica de un Formulario</h2>
+    <pre><code>&lt;form action="/procesar" method="post"&gt;
+    &lt;label for="nombre"&gt;Nombre:&lt;/label&gt;
+    &lt;input type="text" id="nombre" name="nombre"&gt;&lt;br&gt;
+    &lt;label for="email"&gt;Email:&lt;/label&gt;
+    &lt;input type="email" id="email" name="email"&gt;&lt;br&gt;
+    &lt;input type="submit" value="Enviar"&gt;
+&lt;/form&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Tipos de Controles en Formularios</h2>
+    <ul>
+        <li><strong>Input:</strong> Campos de texto, números, checkboxes, radios.</li>
+        <li><strong>Select:</strong> Menús desplegables.</li>
+        <li><strong>Textarea:</strong> Áreas de texto multilínea.</li>
+        <li><strong>Button:</strong> Botones personalizados.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Atributos Importantes de los Input</h2>
+    <ul>
+        <li><strong>type:</strong> Define el tipo de control (text, email, password, etc.).</li>
+        <li><strong>name:</strong> Nombre del campo para identificarlo en el servidor.</li>
+        <li><strong>id:</strong> Identificador único del campo.</li>
+        <li><strong>value:</strong> Valor predeterminado del campo.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Métodos de Envío de Formularios</h2>
+    <ul>
+        <li><strong>GET:</strong> Datos visibles en la URL, limitados por tamaño.</li>
+        <li><strong>POST:</strong> Datos ocultos en el cuerpo del mensaje, sin límite de tamaño.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Acciones de Formularios</h2>
+    <p>El atributo <code>action</code> especifica la URL donde se enviarán los datos del formulario.</p>
+</section>
+
+<section class="slide">
+    <h2>Validación Básica en5</h2>
+    <ul>
+        <li><strong>required:</strong> Campo obligatorio.</li>
+        <li><strong>pattern:</strong> Expresión regular para validar el contenido.</li>
+        <li><strong>minlength, maxlength:</strong> Longitud mínima y máxima del campo.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Formulario con Validación</h2>
+    <pre><code>&lt;form action="/procesar" method="post"&gt;
+    &lt;label for="nombre"&gt;Nombre (requerido):&lt;/label&gt;
+    &lt;input type="text" id="nombre" name="nombre" required&gt;&lt;br&gt;
+    &lt;label for="email"&gt;Email (requerido, formato válido):&lt;/label&gt;
+    &lt;input type="email" id="email" name="email" required&gt;&lt;br&gt;
+    &lt;input type="submit" value="Enviar"&gt;
+&lt;/form&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Manejo de Formularios con</h2>
+    <p>Puedes usar para validar formularios dinámicamente antes del envío.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Validación con</h2>
+    <pre><code>&lt;script&gt;
+function validateForm() {
+    var x = document.forms["myForm"]["email"].value;
+    if (x == "") {
+        alert("El email es obligatorio");
+        return false;
+    }
+}
+&lt;/script&gt;
+
+&lt;form name="myForm" action="/procesar" method="post" onsubmit="return validateForm()"&gt;
+    &lt;label for="email"&gt;Email (requerido):&lt;/label&gt;
+    &lt;input type="text" id="email" name="email"&gt;&lt;br&gt;
+    &lt;input type="submit" value="Enviar"&gt;
+&lt;/form&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Formularios y Seguridad</h2>
+    <ul>
+        <li>Evita la exposición de datos sensibles en URLs.</li>
+        <li>Usa HTTPS para proteger los datos durante el envío.</li>
+        <li>Valida y sanitiza todos los datos del formulario en el servidor.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico: Formulario de Contacto</h2>
+    <p>Un formulario común para contactar a una empresa o persona, incluyendo campos para nombre, email y mensaje.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Formulario de Contacto</h2>
+    <pre><code>&lt;form action="/contacto" method="post"&gt;
+    &lt;label for="nombre"&gt;Nombre:&lt;/label&gt;
+    &lt;input type="text" id="nombre" name="nombre"&gt;&lt;br&gt;
+    &lt;label for="email"&gt;Email:&lt;/label&gt;
+    &lt;input type="email" id="email" name="email"&gt;&lt;br&gt;
+    &lt;label for="mensaje"&gt;Mensaje:&lt;/label&gt;
+    &lt;textarea id="mensaje" name="mensaje"></textarea&gt;&lt;br&gt;
+    &lt;input type="submit" value="Enviar"&gt;
+&lt;/form&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Formularios</h2>
+    <p>¿Cuál es el propósito de los atributos <code>name</code> y <code>id</code> en un formulario?</p>
+    <ol>
+        <li><input type="radio" name="quiz1" value="a"> Identificar el campo para procesarlo en el servidor.</li>
+        <li><input type="radio" name="quiz1" value="b"> Establecer estilos CSS específicos.</li>
+        <li><input type="radio" name="quiz1" value=""> Crear enlaces internos dentro del formulario.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist de Formularios</h2>
+    <ul>
+        <li>Usa etiquetas (<code>&lt;label&gt;</code>) para mejorar la accesibilidad.</li>
+        <li>Valida los datos en el cliente y en el servidor.</li>
+        <li>Evita mostrar contraseñas en texto plano.</li>
+        <li>Proporciona mensajes de error claros y específicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Diseño de un Formulario</h2>
+    <p>Diseña un formulario para una tienda en línea que incluya campos para nombre, email, dirección, teléfono y productos seleccionados.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Los formularios son herramientas esenciales para la interacción con los usuarios en aplicaciones web.</li>
+        <li>Se pueden crear utilizando y, y deben ser seguros y accesibles.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa Relacionada</h2>
+    <ul>
+        <li><strong>WCAG (Web Content Accessibility Guidelines):</strong> Estándares para hacer contenido web accesible a personas con discapacidades.</li>
+        <li><strong>CAN-SPAM Act:</strong> Ley que regula el envío de correos electrónicos comerciales en Estados Unidos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Preguntas Frecuentes</h2>
+    <ol>
+        <li><strong>¿Qué es un formulario?</strong> Es una colección de controles para ingresar datos.</li>
+        <li><strong>¿Cuáles son los métodos de envío de formularios?</strong> GET y POST.</li>
+        <li><strong>¿Cómo se valida la entrada en5?</strong> Usando atributos como required, pattern, minlength, maxlength.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Recursos Adicionales</h2>
+    <ul>
+        <li><a href="https://developer.mozilla.org/es/docs/Web//Elemento/form">N Web Docs - Formularios</a></li>
+        <li><a href="https://www.w3schools.com/html/html_form.asp">W3Schools - Formularios</a></li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Gracias</h2>
+    <p>Preguntas o comentarios? ¡Estoy aquí para ayudar!</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0376 Implantación de aplicaciones web.md · Programación de documentos Web utilizando lenguajes de «script» de servidor: → Mecanismos de introducción de información: formularios.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 08:24:25</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

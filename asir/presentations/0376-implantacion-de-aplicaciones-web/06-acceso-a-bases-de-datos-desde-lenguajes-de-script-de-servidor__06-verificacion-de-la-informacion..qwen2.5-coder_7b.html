@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Verificación de la información. — Acceso a bases de datos desde lenguajes de «script» de servidor: — 0376 Implantación de aplicaciones web.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="verificacion-de-la-informacion.">
+<h1>Verificación de la información.</h1>
+<p><strong>Unidad:</strong> Acceso a bases de datos desde lenguajes de «script» de servidor:<br><strong>Documento:</strong> 0376 Implantación de aplicaciones web.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Acceso a bases de datos desde lenguajes de «script» de servidor</h1>
+    <p>Subunidad: Verificación de la información</p>
+    <p>Objetivo: Aprender técnicas para verificar la integridad y confiabilidad de los datos en aplicaciones web.</p>
+</section>
+
+<section class="slide">
+    <h2>Concepto de verificación de la información</h2>
+    <p>La verificación de la información es el proceso de comprobar la exactitud, precisión y validez de los datos antes de su uso en aplicaciones web.</p>
+</section>
+
+<section class="slide">
+    <h2>Métodos de verificación</h2>
+    <ul>
+        <li>Validación del lado del cliente ()</li>
+        <li>Validación del lado del servidor (,, etc.)</li>
+        <li>Sanitización de datos</li>
+        <li>Hashing y salting de contraseñas</li>
+        <li>Autenticación y autorización</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo: Validación del lado del cliente</h2>
+    <pre><code>
+&lt;script&gt;
+function validateForm() {
+    var x = document.forms["myForm"]["fname"].value;
+    if (x == "") {
+        alert("Name must be filled out");
+        return false;
+    }
+}
+&lt;/script&gt;
+    </code></pre>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo: Validación del lado del servidor ()</h2>
+    <pre><code>
+&lt;?
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = htmlspecialchars($_REQUEST['fname']);
+    if (empty($name)) {
+        echo "Name is empty";
+    } else {
+        echo "Welcome " . $name;
+    }
+}
+?&gt;
+    </code></pre>
+</section>
+
+<section class="slide">
+    <h2>Sanitización de datos</h2>
+    <p>La sanitización implica eliminar o escapar caracteres especiales que podrían ser utilizados para inyección SQL o ataques XSS.</p>
+</section>
+
+<section class="slide">
+    <h2>Hashing y salting de contraseñas</h2>
+    <ul>
+        <li>Hashing: Convierte una contraseña en un valor fijo.</li>
+        <li>Salting: Añade un valor aleatorio a la contraseña antes del hashing.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Autenticación y autorización</h2>
+    <p>La autenticación confirma la identidad de un usuario, mientras que la autorización determina qué acciones puede realizar.</p>
+</section>
+
+<section class="slide">
+    <h2>Caso práctico: Sistema de login seguro</h2>
+    <ul>
+        <li>Validación del formulario de inicio de sesión.</li>
+        <li>Hashing y salting de contraseñas al almacenarlas en la base de datos.</li>
+        <li>Autenticación mediante tokens (JWT).</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas</h2>
+    <ul>
+        <li>No confiar solo en validaciones del lado del cliente.</li>
+        <li>Realizar siempre validaciones del lado del servidor.</li>
+        <li>Usar librerías de seguridad para evitar inyecciones SQL y XSS.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes</h2>
+    <ul>
+        <li>No validar datos en el lado del servidor.</li>
+        <li>No usar hashing y salting de contraseñas.</li>
+        <li>No implementar autenticación y autorización adecuadas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: Validación vs. Sanitización</h2>
+    <table>
+        <tr>
+            <th></th>
+            <th>Validación</th>
+            <th>Sanitización</th>
+        </tr>
+        <tr>
+            <td>Propósito</td>
+            <td>Comprobar la exactitud de los datos.</td>
+            <td>Eliminar o escapar caracteres especiales.</td>
+        </tr>
+        <tr>
+            <td>Ejemplo</td>
+            <td>Verificar que un campo no esté vacío.</td>
+            <td>Escapar comillas en una cadena SQL.</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: Verificación de datos</h2>
+    <p>¿Qué es la validación del lado del servidor?</p>
+    <ul>
+        <li>a) Comprobar que los datos cumplen con ciertas reglas antes de su uso.</li>
+        <li>b) Ocultar información sensible en las páginas web.</li>
+        <li>c) Enviar datos al cliente sin procesamiento.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Verificación de la información</h2>
+    <ul>
+        <li>Validar todos los campos del formulario en el lado del servidor.</li>
+        <li>Usar hashing y salting para almacenar contraseñas.</li>
+        <li>Implementar autenticación y autorización adecuadas.</li>
+        <li>No confiar solo en validaciones del lado del cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Implementar una función de validación</h2>
+    <p>Crea una función en que valide un correo electrónico ingresado por el usuario.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>La verificación de la información es crucial para la seguridad de las aplicaciones web.</li>
+        <li>Incluye validación, sanitización, hashing y salting, autenticación y autorización.</li>
+        <li>No confiar solo en validaciones del lado del cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa general</h2>
+    <p>La normativa vigente impone la protección de datos personales y la seguridad informática, como lo establece el Reglamento General de Protección de Datos (RGPD).</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0376 Implantación de aplicaciones web.md · Acceso a bases de datos desde lenguajes de «script» de servidor: → Verificación de la información.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 08:34:57</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

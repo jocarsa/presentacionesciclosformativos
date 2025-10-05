@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>«Scripts» para la administración de cuentas de usuario, procesos y servicios del sistema operativo. — Aplicación de lenguajes de «scripting» en sistemas operativos libres y propietarios: — 0374 Administración de sistemas operativos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="scripts-para-la-administracion-de-cuentas-de-usuario-procesos-y-servicios-del-sistema-operativo.">
+<h1>«Scripts» para la administración de cuentas de usuario, procesos y servicios del sistema operativo.</h1>
+<p><strong>Unidad:</strong> Aplicación de lenguajes de «scripting» en sistemas operativos libres y propietarios:<br><strong>Documento:</strong> 0374 Administración de sistemas operativos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Aplicación de lenguajes de «scripting» en sistemas operativos libres y propietarios</h1>
+    <p>Subunidad: «Scripts» para la administración de cuentas de usuario, procesos y servicios del sistema operativo.</p>
+    <img src="logo.png" alt="Logo de la institución">
+</section>
+
+<section class="slide">
+    <h2>Objetivo de la Subunidad</h2>
+    <ul>
+        <li>Comprender cómo usar scripts para administrar cuentas de usuario, procesos y servicios en sistemas operativos.</li>
+        <li>Aprender lenguajes de scripting como, PowerShell y aplicados a sistemas operativos.</li>
+        <li>Ejercitar la creación y ejecución de scripts para automatizar tareas administrativas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>¿Qué son los Scripts?</h2>
+    <p>Los scripts son secuencias de comandos que se ejecutan automáticamente en un sistema operativo. Ayudan a automatizar tareas repetitivas y mejorar la eficiencia administrativa.</p>
+</section>
+
+<section class="slide">
+    <h2>Lenguajes de Scripting Comunes</h2>
+    <ul>
+        <li><strong>Bash:</strong> Lenguaje estándar para sistemas operativos Linux y Unix.</li>
+        <li><strong>PowerShell:</strong> Lenguaje de scripting para Windows, basado en .NET Framework.</li>
+        <li><strong>:</strong> Lenguaje versátil que se puede usar en múltiples plataformas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Script</h2>
+    <pre><code>
+#!/bin/bash
+# Crear un nuevo usuario
+echo "Ingrese el nombre del nuevo usuario:"
+read username
+useradd $username
+passwd $username
+echo "Usuario $username creado con éxito."
+    </code></pre>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Script PowerShell</h2>
+    <pre><code>
+# Crear un nuevo usuario
+$username = Read-Host "Ingrese el nombre del nuevo usuario"
+New-LocalUser -Name $username -Password (ConvertTo-SecureString -AsPlainText "P@ssw0rd" -Force)
+Write-Output "Usuario $username creado con éxito."
+    </code></pre>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Script</h2>
+    <pre><code>
+import os
+# Crear un nuevo usuario
+username = input("Ingrese el nombre del nuevo usuario: ")
+os.system(f"useradd {username}")
+os.system(f"passwd {username}")
+print(f"Usuario {username} creado con éxito.")
+    </code></pre>
+</section>
+
+<section class="slide">
+    <h2>Administración de Procesos</h2>
+    <p>Los scripts también pueden utilizarse para administrar procesos del sistema operativo, como iniciar, detener o reiniciar servicios.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Script para Administrar Procesos</h2>
+    <pre><code>
+#!/bin/bash
+# Iniciar un servicio
+service apache2 start
+echo "Servicio Apache iniciado."
+    </code></pre>
+</section>
+
+<section class="slide">
+    <h2>Administración de Servicios</h2>
+    <p>Los scripts pueden automatizar la gestión de servicios del sistema operativo, como reiniciar o detener servicios.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Script para Administrar Servicios</h2>
+    <pre><code>
+#!/bin/bash
+# Reiniciar un servicio
+service apache2 restart
+echo "Servicio Apache reiniciado."
+    </code></pre>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas en la Creación de Scripts</h2>
+    <ul>
+        <li>Comentar el código para facilitar su comprensión y mantenimiento.</li>
+        <li>Usar variables para almacenar datos que pueden cambiar.</li>
+        <li>Manejar errores con comandos como `if` y `else`.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en los Scripts</h2>
+    <ul>
+        <li>No manejo adecuado de errores.</li>
+        <li>Falta de comprobación de permisos.</li>
+        <li>Scripts mal escritos que causan problemas de rendimiento.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: ¿Qué lenguaje de scripting es más utilizado para administrar sistemas operativos Linux?</h2>
+    <ol>
+        <li>Bash</li>
+        <li>PowerShell</li>
+        <li></li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist para la Creación de Scripts</h2>
+    <ul>
+        <li>Definir claramente el propósito del script.</li>
+        <li>Comprobar los permisos necesarios antes de ejecutar comandos.</li>
+        <li>Probar el script en un entorno seguro antes de usarlo en producción.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Crear un Script para Reiniciar un Servicio</h2>
+    <p>Crea un script que reinicie el servicio Apache2 en sistemas Linux utilizando.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Los scripts son herramientas poderosas para administrar cuentas de usuario, procesos y servicios del sistema operativo.</li>
+        <li>Se pueden usar lenguajes como, PowerShell y para crear scripts automatizados.</li>
+        <li>Buenas prácticas y atención a los errores son cruciales para la eficacia y seguridad de los scripts.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa General</h2>
+    <p>Es importante seguir las normativas de seguridad informática al crear y ejecutar scripts, protegiendo datos confidenciales y evitando accesos no autorizados.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0374 Administración de sistemas operativos.md · Aplicación de lenguajes de «scripting» en sistemas operativos libres y propietarios: → «Scripts» para la administración de cuentas de usuario, procesos y servicios del sistema operativo.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 05:14:00</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

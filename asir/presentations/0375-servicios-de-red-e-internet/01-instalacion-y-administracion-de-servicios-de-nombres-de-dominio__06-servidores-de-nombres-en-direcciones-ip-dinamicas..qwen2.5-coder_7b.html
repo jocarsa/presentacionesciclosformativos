@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Servidores de nombres en direcciones «ip» dinámicas. — Instalación y administración de servicios de nombres de dominio: — 0375 Servicios de red e Internet.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="servidores-de-nombres-en-direcciones-ip-dinamicas.">
+<h1>Servidores de nombres en direcciones «ip» dinámicas.</h1>
+<p><strong>Unidad:</strong> Instalación y administración de servicios de nombres de dominio:<br><strong>Documento:</strong> 0375 Servicios de red e Internet.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Servidores de nombres en direcciones «ip» dinámicas</h1>
+    <p>Objetivo: Comprender cómo funcionan los servidores de nombres para dominios con IP dinámica y su importancia.</p>
+</section>
+
+<section class="slide">
+    <h2>Concepto de IP Dinámica</h2>
+    <p>La IP dinámica asigna una dirección IP temporal a un dispositivo cada vez que se conecta a la red.</p>
+</section>
+
+<section class="slide">
+    <h2>Ventajas de las IPs Dinámicas</h2>
+    <ul>
+        <li>Economía en la asignación de direcciones IP</li>
+        <li>Facilita el cambio de ubicación del dispositivo</li>
+        <li>No requiere intervención manual para cambiar la dirección IP</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Desventajas de las IPs Dinámicas</h2>
+    <ul>
+        <li>Puede causar problemas con el acceso a servicios que requieren una IP estática</li>
+        <li>No es recomendable para dispositivos críticos o de uso continuo</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Tipos de Servidores de Nombres para IPs Dinámicas</h2>
+    <ul>
+        <li>Servidores de nombres dinámicos (DNS)</li>
+        <li>Servidores DHCP (Dynamic Host Configuration Protocol)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Funcionamiento del DNS para IPs Dinámicas</h2>
+    <p>El DNS actualiza automáticamente las direcciones IP asociadas a los nombres de dominio cuando cambian.</p>
+</section>
+
+<section class="slide">
+    <h2>Configuración del DHCP</h2>
+    <ul>
+        <li>Asigna una dirección IP temporal al dispositivo</li>
+        <li>Actualiza el registro DNS con la nueva dirección IP</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo Práctico</h2>
+    <p>Un usuario se conecta a su red móvil y recibe una nueva dirección IP dinámica. El servidor DHCP asigna una nueva IP y el DNS actualiza la entrada correspondiente.</p>
+</section>
+
+<section class="slide">
+    <h2>Caso de Uso: Servicios Web en IPs Dinámicas</h2>
+    <p>Un servicio web que se ejecuta en un dispositivo con IP dinámica puede verse afectado por cambios frecuentes en la dirección IP, lo que requiere actualizaciones constantes del registro DNS.</p>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas</h2>
+    <ul>
+        <li>Usar un servicio de nombres dinámico confiable</li>
+        <li>Configurar alertas para cambios en la dirección IP</li>
+        <li>Documentar los procedimientos de actualización del registro DNS</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes</h2>
+    <ul>
+        <li>No actualizar el registro DNS cuando cambia la dirección IP</li>
+        <li>No tener un servicio de nombres dinámico confiable</li>
+        <li>No documentar los procedimientos de actualización del registro DNS</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa con IPs Estáticas</h2>
+    <table>
+        <tr>
+            <th></th>
+            <th>IP Dinámica</th>
+            <th>IP Estática</th>
+        </tr>
+        <tr>
+            <td>Costo</td>
+            <td>Bajo</td>
+            <td>Alto</td>
+        </tr>
+        <tr>
+            <td>Flexibilidad</td>
+            <td>Alta</td>
+            <td>Baja</td>
+        </tr>
+        <tr>
+            <td>Manejo</td>
+            <td>Simplificado</td>
+            <td>Complejo</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz</h2>
+    <p>¿Qué es un servidor de nombres dinámico?</p>
+    <ul>
+        <li>a) Un dispositivo que asigna direcciones IP estáticas a los dispositivos</li>
+        <li>b) Un dispositivo que actualiza automáticamente las direcciones IP asociadas a los nombres de dominio cuando cambian</li>
+        <li>c) Un dispositivo que configura automáticamente la dirección IP del dispositivo</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist</h2>
+    <ul>
+        <li>¿Está configurado el servidor DHCP?</li>
+        <li>¿El registro DNS se actualiza automáticamente cuando cambia la dirección IP?</li>
+        <li>¿Se ha documentado el procedimiento de actualización del registro DNS?</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad</h2>
+    <p>Configurar un servidor DHCP en su red local y verificar que las direcciones IP asignadas se reflejen correctamente en el registro DNS.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Servidores de nombres dinámicos actualizan automáticamente las direcciones IP asociadas a los nombres de dominio cuando cambian.</li>
+        <li>El DHCP asigna una dirección IP temporal al dispositivo y actualiza el registro DNS con la nueva dirección IP.</li>
+        <li>Buenas prácticas incluyen usar un servicio confiable, configurar alertas y documentar los procedimientos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa General</h2>
+    <p>No hay normativas específicas sobre el uso de servidores de nombres dinámicos, pero es recomendable seguir buenas prácticas para garantizar la seguridad y la continuidad del servicio.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0375 Servicios de red e Internet.md · Instalación y administración de servicios de nombres de dominio: → Servidores de nombres en direcciones «ip» dinámicas.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 05:21:07</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

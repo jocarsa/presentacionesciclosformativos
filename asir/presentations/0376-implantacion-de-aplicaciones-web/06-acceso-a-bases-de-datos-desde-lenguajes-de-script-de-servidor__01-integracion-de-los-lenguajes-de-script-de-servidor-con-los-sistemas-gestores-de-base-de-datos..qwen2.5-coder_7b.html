@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Integración de los lenguajes de «script» de servidor con los sistemas gestores de base de datos. — Acceso a bases de datos desde lenguajes de «script» de servidor: — 0376 Implantación de aplicaciones web.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="integracion-de-los-lenguajes-de-script-de-servidor-con-los-sistemas-gestores-de-base-de-datos.">
+<h1>Integración de los lenguajes de «script» de servidor con los sistemas gestores de base de datos.</h1>
+<p><strong>Unidad:</strong> Acceso a bases de datos desde lenguajes de «script» de servidor:<br><strong>Documento:</strong> 0376 Implantación de aplicaciones web.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Integración de los lenguajes de «script» de servidor con los sistemas gestores de base de datos</h1>
+    <p>Objetivo: Comprender cómo integrar lenguajes como, o Node.js con bases de datos SQL y NoSQL.</p>
+</section>
+
+<section class="slide">
+    <h2>Concepto básico</h2>
+    <p>La integración de lenguajes de script de servidor con sistemas gestores de base de datos permite:</p>
+    <ul>
+        <li>Almacenar y recuperar datos dinámicamente.</li>
+        <li>Ejecutar consultas y operaciones en la base de datos desde el lado del servidor.</li>
+        <li>Generar contenido personalizado para los usuarios basado en los datos almacenados.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Lenguajes populares</h2>
+    <p>Algunos lenguajes de script de servidor comunes son:</p>
+    <ul>
+        <li> (Para aplicaciones web dinámicas)</li>
+        <li> (Para desarrollo web y análisis de datos)</li>
+        <li>Node.js (Para aplicaciones web escalables)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Sistemas gestores de base de datos</h2>
+    <p>Los sistemas gestores de base de datos más utilizados son:</p>
+    <ul>
+        <li>SQL (MySQL, PostgreSQL, SQLite)</li>
+        <li>NoSQL (MongoDB, Cassandra, Redis)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo práctico: Conexión con MySQL</h2>
+    <p>Código básico para conectarse a una base de datos MySQL usando:</p>
+    <pre><code>&lt;?
+$servername = "localhost";
+$username = "username";
+$password = "password";
+$dbname = "myDB";
+
+// Crear conexión
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Verificar conexión
+if ($conn->connect_error) {
+    die("Conexión fallida: " . $conn->connect_error);
+}
+echo "Conexión exitosa";
+?&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo práctico: Consulta SQL en</h2>
+    <p>Código para ejecutar una consulta SQL y mostrar los resultados:</p>
+    <pre><code>&lt;?
+$sql = "SELECT id, name, email FROM users";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // Salida de datos de cada fila
+    while($row = $result->fetch_assoc()) {
+        echo "id: " . $row["id"]. " - Name: " . $row["name"]. " - Email: " . $row["email"]. "<br>";
+    }
+} else {
+    echo "0 resultados";
+}
+$conn->close();
+?&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Conexión Node.js con MongoDB</h2>
+    <p>Código básico para conectarse a una base de datos MongoDB usando Node.js:</p>
+    <pre><code>const MongoClient = require('mongodb').MongoClient;
+
+async function main() {
+    const uri = "your_mongodb_connection_string";
+    const client = new MongoClient(uri);
+
+    try {
+        await client.connect();
+        console.log("Conexión exitosa");
+    } finally {
+        await client.close();
+    }
+}
+
+main().catch(console.error);
+?&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Manejo de errores en la integración</h2>
+    <p>Algunos errores comunes son:</p>
+    <ul>
+        <li>Conexiones fallidas a la base de datos.</li>
+        <li>Sintaxis incorrecta en las consultas SQL o NoSQL.</li>
+        <li>Inyección SQL (SQL Injection).</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas</h2>
+    <p>Para una integración segura y eficiente:</p>
+    <ul>
+        <li>Usar consultas preparadas para evitar inyecciones SQL.</li>
+        <li>Cerrar conexiones a la base de datos después de su uso.</li>
+        <li>Validar y sanitizar los datos ingresados por el usuario.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: vs Node.js</h2>
+    <table>
+        <tr>
+            <th>Lenguaje</th>
+            <th>Ventajas</th>
+            <th>Inconvenientes</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Simplicidad, amplia comunidad, fácil de aprender.</td>
+            <td>Puede ser menos eficiente para aplicaciones escalables.</td>
+        </tr>
+        <tr>
+            <td>Node.js</td>
+            <td>Escalabilidad, asincrónico, buen rendimiento.</td>
+            <td>Puede ser más complejo de aprender y configurar.</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Caso práctico: E-commerce con Node.js y MongoDB</h2>
+    <p>Un e-commerce puede utilizar Node.js para el backend, MongoDB para almacenar productos y usuarios, y una base de datos SQL para transacciones financieras.</p>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: ¿Qué lenguaje es mejor para bases de datos NoSQL?</h2>
+    <ol>
+        <li></li>
+        <li></li>
+        <li>Node.js</li>
+        <li>MongoDB</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Integración de lenguajes con bases de datos</h2>
+    <ul>
+        <li>Configurar correctamente la conexión a la base de datos.</li>
+        <li>Escribir consultas SQL o NoSQL seguras y eficientes.</li>
+        <li>Validar e sanitizar los datos ingresados por el usuario.</li>
+        <li>Cerrar conexiones a la base de datos después de su uso.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Desarrolla una función que inserte un nuevo usuario en una base de datos MySQL.</h2>
+    <p>Escribe el código necesario y prueba su funcionamiento.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <p>La integración de lenguajes de script de servidor con sistemas gestores de base de datos es fundamental para el desarrollo web dinámico. Se deben seguir buenas prácticas y prevenir errores comunes para asegurar la seguridad y eficiencia del sistema.</p>
+</section>
+
+<section class="slide">
+    <h2>Normativa general</h2>
+    <p>Es importante estar al tanto de las normativas y regulaciones que afectan el manejo de datos, como:</p>
+    <ul>
+        <li>LGPD (Reglamento General de Protección de Datos)</li>
+        <li>CAN-SPAM (Contenido Anunciático y Spam)</li>
+        <li>GDPR (General Data Protection Regulation)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Preguntas y dudas</h2>
+    <p>¿Tienes alguna pregunta o duda sobre la integración de lenguajes de script de servidor con sistemas gestores de base de datos?</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0376 Implantación de aplicaciones web.md · Acceso a bases de datos desde lenguajes de «script» de servidor: → Integración de los lenguajes de «script» de servidor con los sistemas gestores de base de datos.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 08:29:44</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

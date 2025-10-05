@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Técnicas de asignación. — Aplicación de criterios de disponibilidad a bases de datos distribuidas y replicadas: — 0377 Administración de sistemas gestores de bases de datos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="tecnicas-de-asignacion.">
+<h1>Técnicas de asignación.</h1>
+<p><strong>Unidad:</strong> Aplicación de criterios de disponibilidad a bases de datos distribuidas y replicadas:<br><strong>Documento:</strong> 0377 Administración de sistemas gestores de bases de datos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Técnicas de asignación en sistemas gestores de bases de datos distribuidas y replicadas</h1>
+    <p>Objetivo: Comprender los criterios de disponibilidad y las técnicas de asignación utilizadas en sistemas de bases de datos distribuidas y replicadas.</p>
+</section>
+
+<section class="slide">
+    <h2>Criterios de Disponibilidad</h2>
+    <ul>
+        <li>Definición de disponibilidad en sistemas de bases de datos</li>
+        <li>Objetivos principales: minimizar el tiempo de inactividad y maximizar la accesibilidad</li>
+        <li>Tipos de disponibilidad: alta, media y baja</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Técnicas de Asignación</h2>
+    <p>Las técnicas de asignación determinan cómo se distribuyen los datos y las operaciones entre los diferentes nodos del sistema.</p>
+</section>
+
+<section class="slide">
+    <h2>Asignación Estatica</h2>
+    <ul>
+        <li>Distribución predefinida de los datos y recursos</li>
+        <li>No se realiza reorganización dinámica</li>
+        <li>Ejemplo: Bases de datos en múltiples servidores con asignación estática</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Asignación Dinámica</h2>
+    <ul>
+        <li>Distribución de los datos y recursos puede cambiar según la carga del sistema</li>
+        <li>Más flexible pero requiere mecanismos de reorganización</li>
+        <li>Ejemplo: Bases de datos con asignación dinámica basada en el uso de recursos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Algoritmos de Asignación</h2>
+    <ul>
+        <li>Round Robin</li>
+        <li>Least Recently Used (LRU)</li>
+        <li>First Fit</li>
+        <li>Best Fit</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Asignación Dinámica</h2>
+    <p>Un sistema distribuido utiliza asignación dinámica para equilibrar la carga entre los servidores.</p>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico: MongoDBarding</h2>
+    <ul>
+        <li>MongoDB utilizaarding para distribuir datos en múltiples servidores</li>
+        <li>Asignación dinámica basada en la distribución de colecciones y shards</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas en Asignación</h2>
+    <ul>
+        <li>Monitoreo continuo del rendimiento del sistema</li>
+        <li>Optimización de la asignación según el uso real de recursos</li>
+        <li>Planificación anticipada para escalamiento horizontal</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en Asignación</h2>
+    <ul>
+        <li>No considerar la distribución equitativa de los datos</li>
+        <li>Sobrecarga de ciertos nodos debido a asignaciones incorrectas</li>
+        <li>Falta de redundancia y disponibilidad en casos de fallos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: Asignación Estatica vs Dinámica</h2>
+    <table>
+        <tr>
+            <th>Estatica</th>
+            <th>Dinámica</th>
+        </tr>
+        <tr>
+            <td>Fija y predefinida</td>
+            <td>Flexible y adaptable</td>
+        </tr>
+        <tr>
+            <td>No reorganización dinámica</td>
+            <td>Mecanismos de reorganización</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Asignación en Bases de Datos Distribuidas</h2>
+    <p>¿Cuál es la principal ventaja de la asignación dinámica sobre la estática?</p>
+    <ol>
+        <li>Mejor rendimiento constante</li>
+        <li>Flexibilidad para adaptarse a cambios en la carga del sistema</li>
+        <li>Reducción del tiempo de inactividad</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Consideraciones al Diseñar una Técnica de Asignación</h2>
+    <ul>
+        <li>Evaluación de la carga actual del sistema</li>
+        <li>Determinación de los objetivos de disponibilidad</li>
+        <li>Selección de algoritmos y estrategias de asignación</li>
+        <li>Monitoreo y optimización continua</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Diseño de una Técnica de Asignación</h2>
+    <p>Diseña una técnica de asignación para un sistema distribuido con tres servidores.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Técnicas de asignación en sistemas gestores de bases de datos distribuidas y replicadas</li>
+        <li>Diferencias entre asignación estática y dinámica</li>
+        <li>Importancia de considerar el rendimiento, la disponibilidad y la flexibilidad en la asignación</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa General</h2>
+    <p>No existe normativa específica para la asignación en sistemas de bases de datos distribuidas.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0377 Administración de sistemas gestores de bases de datos.md · Aplicación de criterios de disponibilidad a bases de datos distribuidas y replicadas: → Técnicas de asignación.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 09:48:15</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

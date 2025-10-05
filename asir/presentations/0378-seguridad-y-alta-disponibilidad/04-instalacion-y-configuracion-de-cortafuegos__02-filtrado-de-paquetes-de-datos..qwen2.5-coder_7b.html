@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Filtrado de paquetes de datos. — Instalación y configuración de cortafuegos: — 0378 Seguridad y alta disponibilidad.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="filtrado-de-paquetes-de-datos.">
+<h1>Filtrado de paquetes de datos.</h1>
+<p><strong>Unidad:</strong> Instalación y configuración de cortafuegos:<br><strong>Documento:</strong> 0378 Seguridad y alta disponibilidad.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Instalación y configuración de cortafuegos: Filtrado de paquetes de datos</h1>
+    <p>Objetivo: Comprender los conceptos básicos del filtrado de paquetes de datos en cortafuegos.</p>
+</section>
+
+<section class="slide">
+    <h2>Concepto de filtrado de paquetes</h2>
+    <p>El filtrado de paquetes es una técnica utilizada por los cortafuegos para decidir si permitir o denegar el paso de tráfico de red.</p>
+</section>
+
+<section class="slide">
+    <h2>Cómo funciona el filtrado de paquetes</h2>
+    <ul>
+        <li>Los cortafuegos examinan cada paquete de datos que intenta pasar por él.</li>
+        <li>Aplican reglas predefinidas para determinar si el paquete debe ser permitido o denegado.</li>
+        <li>Las reglas pueden basarse en criterios como origen, destino, protocolo y puerto.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de regla de filtrado</h2>
+    <p>Ejemplo: Permitir todos los tráfico entrante del puerto 80 (HTTP).</p>
+</section>
+
+<section class="slide">
+    <h2>Caso práctico: Implementación de un cortafuegos</h2>
+    <p>Se debe configurar un cortafuegos para permitir el acceso a una base de datos solo desde la red interna.</p>
+</section>
+
+<section class="slide">
+    <h2>Proceso de configuración</h2>
+    <ol>
+        <li>Identificar las interfaces de red del cortafuegos.</li>
+        <li>Configurar reglas para permitir el tráfico necesario entre interfaces.</li>
+        <li>Aplicar reglas adicionales para denegar todo el resto del tráfico entrante y saliente.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas en filtrado de paquetes</h2>
+    <ul>
+        <li>Minimizar las reglas activas para evitar problemas de rendimiento.</li>
+        <li>Usar listas blancas (permitir lo necesario) en lugar de listas negras (denegar lo innecesario).</li>
+        <li>Mantener actualizadas las reglas según los cambios en la infraestructura y las políticas de seguridad.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes en filtrado de paquetes</h2>
+    <ul>
+        <li>No configurar suficientemente las reglas para permitir el tráfico necesario.</li>
+        <li>Configurar reglas demasiado restrictivas que impidan el acceso a recursos necesarios.</li>
+        <li>No mantener actualizadas las reglas con los cambios en la infraestructura o políticas de seguridad.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: Filtrado por estado vs. filtrado por paquete</h2>
+    <p><strong>Filtrado por estado:</strong> Permite el paso de tráfico basándose en la conexión existente.</p>
+    <p><strong>Filtrado por paquete:</strong> Examina cada paquete individualmente, independientemente de las conexiones existentes.</p>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: Tipos de filtrado</h2>
+    <ol>
+        <li>¿Qué tipo de filtrado permite el paso de tráfico basándose en la conexión existente?</li>
+        <li>¿Cuál es la ventaja del filtrado por estado sobre el filtrado por paquete?</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Configuración de un cortafuegos básico</h2>
+    <ul>
+        <li>Identificar las interfaces de red.</li>
+        <li>Configurar reglas para permitir el tráfico necesario entre interfaces.</li>
+        <li>Aplicar reglas adicionales para denegar todo el resto del tráfico entrante y saliente.</li>
+        <li>Verificar la configuración con pruebas de conectividad.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Crear una lista de reglas de filtrado</h2>
+    <p>Crea una lista de 5 reglas de filtrado para un cortafuegos que permita el acceso a servicios web (HTTP y HTTPS) desde la red interna.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen: Filtrado de paquetes en cortafuegos</h2>
+    <ul>
+        <li>El filtrado de paquetes es una técnica utilizada por los cortafuegos para decidir si permitir o denegar el paso de tráfico de red.</li>
+        <li>Las reglas pueden basarse en criterios como origen, destino, protocolo y puerto.</li>
+        <li>Buenas prácticas incluyen minimizar las reglas activas, usar listas blancas y mantener actualizadas las reglas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Reglamento de Seguridad en la Comunicación Electrónica (RSEC)</h2>
+    <p>El RSEC establece requisitos para la seguridad en la comunicación electrónica, incluyendo el uso de cortafuegos y filtrado de paquetes.</p>
+</section>
+
+<section class="slide">
+    <h2>Cierre: Preguntas y dudas</h2>
+    <p>¿Tienes alguna pregunta o duda sobre el filtrado de paquetes en cortafuegos?</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0378 Seguridad y alta disponibilidad.md · Instalación y configuración de cortafuegos: → Filtrado de paquetes de datos.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 10:14:36</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Reglas de filtrado de cortafuegos. — Instalación y configuración de cortafuegos: — 0378 Seguridad y alta disponibilidad.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="reglas-de-filtrado-de-cortafuegos.">
+<h1>Reglas de filtrado de cortafuegos.</h1>
+<p><strong>Unidad:</strong> Instalación y configuración de cortafuegos:<br><strong>Documento:</strong> 0378 Seguridad y alta disponibilidad.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Reglas de filtrado de cortafuegos</h1>
+    <p>Objetivo: Comprender y configurar las reglas de filtrado en un cortafuego.</p>
+</section>
+
+<section class="slide">
+    <h2>Concepto básico</h2>
+    <ul>
+        <li>Las reglas de filtrado definen qué tráfico es permitido o denegado por el cortafuego.</li>
+        <li>Estructuran las políticas de seguridad del sistema.</li>
+        <li>Incluyen criterios como origen, destino y protocolo.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Tipos de reglas</h2>
+    <ul>
+        <li><strong>Permitir (Allow)</strong>: Acepta el tráfico que cumple con los criterios especificados.</li>
+        <li><strong>Denegar (Deny)</strong>: Bloquea el tráfico que no cumple con los criterios.</li>
+        <li><strong>Rechazar (Reject)</strong>: Similar a Deny, pero envía un mensaje de rechazo al origen del paquete.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Estructura de una regla</h2>
+    <ul>
+        <li><strong>Protocolo</strong>: TCP, UDP, ICMP, etc.</li>
+        <li><strong>Origen</strong>: Dirección IP o rango permitido.</li>
+        <li><strong>Destino</strong>: Dirección IP o rango permitido.</li>
+        <li><strong>Puerto</strong>: Número de puerto específico o rango.</li>
+        <li><strong>Accion</strong>: Permitir, Denegar o Rechazar.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de regla</h2>
+    <pre>
+&lt;rule family="ipv4" action="accept"&gt;
+    &lt;source address="192.168.1.0/24"/&gt;
+    &lt;destination address="10.0.0.0/8"/&gt;
+    &lt;protocol name="tcp" port="80"/&gt;
+&lt;/rule&gt;
+    </pre>
+</section>
+
+<section class="slide">
+    <h2>Orden de las reglas</h2>
+    <ul>
+        <li>Las reglas se evalúan en el orden en que aparecen.</li>
+        <li>La primera regla que coincide determina la acción.</li>
+        <li>Es crucial tener cuidado con el orden para evitar cortar tráfico innecesario.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Caso práctico: Reglas de entrada y salida</h2>
+    <ul>
+        <li><strong>Entrada (Inbound)</strong>: Controla el tráfico entrante al sistema.</li>
+        <li><strong>Salida (Outbound)</strong>: Controla el tráfico saliente del sistema.</li>
+        <li>Ejemplo: Permitir SSH (puerto 22) solo desde una red interna específica.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas</h2>
+    <ul>
+        <li>Minimizar el número de reglas activas para mejorar la eficiencia.</li>
+        <li>Usar grupos de direcciones y puertos para simplificar las reglas.</li>
+        <li>Mantener un registro y auditoría de las reglas configuradas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes</h2>
+    <ul>
+        <li>No permitir tráfico necesario (por ejemplo, SSH).</li>
+        <li>Denegar tráfico innecesario (por ejemplo, tráfico de aplicaciones legítimas).</li>
+        <li>No tener en cuenta el orden de las reglas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: Reglas vs. Políticas</h2>
+    <ul>
+        <li><strong>Reglas</strong>: Definen acciones específicas para tráfico individual.</li>
+        <li><strong>Políticas</strong>: Define comportamientos generales (por ejemplo, permitir todo el tráfico entrante).</li>
+        <li>Las reglas suelen ser más detalladas y específicas que las políticas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz</h2>
+    <p>¿Cuál de las siguientes acciones es una acción válida en una regla de cortafuegos?</p>
+    <ol>
+        <li>Aceptar (Accept)</li>
+        <li>Denegar (Deny)</li>
+        <li>Rechazar (Reject)</li>
+        <li>Ignorar (Ignore)</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist de configuración</h2>
+    <ul>
+        <li>Identificar los servicios necesarios.</li>
+        <li>Determinar las direcciones IP y puertos correspondientes.</li>
+        <li>Configurar reglas de entrada y salida.</li>
+        <li>Revisar el orden de las reglas.</li>
+        <li>Probar la configuración con herramientas como ping o telnet.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad práctica</h2>
+    <p>Configurar una regla de cortafuegos en un sistema Linux utilizando iptables para permitir el tráfico SSH desde una red interna específica.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Las reglas de filtrado definen las políticas de seguridad del cortafuego.</li>
+        <li>Incluyen criterios como origen, destino y protocolo.</li>
+        <li>Es crucial tener cuidado con el orden y la eficiencia de las reglas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa general</h2>
+    <p>Seguir normativas como NIST SP 800-53 para configurar políticas de seguridad efectivas.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0378 Seguridad y alta disponibilidad.md · Instalación y configuración de cortafuegos: → Reglas de filtrado de cortafuegos.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 10:17:14</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

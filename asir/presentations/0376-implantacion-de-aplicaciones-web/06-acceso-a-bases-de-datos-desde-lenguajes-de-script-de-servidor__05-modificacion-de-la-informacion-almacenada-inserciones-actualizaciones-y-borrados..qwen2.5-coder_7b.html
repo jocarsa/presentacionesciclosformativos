@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Modificación de la información almacenada: inserciones, actualizaciones y borrados. — Acceso a bases de datos desde lenguajes de «script» de servidor: — 0376 Implantación de aplicaciones web.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="modificacion-de-la-informacion-almacenada-inserciones-actualizaciones-y-borrados.">
+<h1>Modificación de la información almacenada: inserciones, actualizaciones y borrados.</h1>
+<p><strong>Unidad:</strong> Acceso a bases de datos desde lenguajes de «script» de servidor:<br><strong>Documento:</strong> 0376 Implantación de aplicaciones web.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Acceso a bases de datos desde lenguajes de «script» de servidor</h1>
+    <p>Objetivo: Comprender cómo modificar la información almacenada en bases de datos utilizando lenguajes de script del lado del servidor.</p>
+</section>
+
+<section class="slide">
+    <h2>Modificación de la información almacenada</h2>
+    <ul>
+        <li>Inseriones (INSERT)</li>
+        <li>Actualizaciones (UPDATE)</li>
+        <li>Borrados (DELETE)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Inseriones (INSERT)</h3>
+    <p>Permite agregar nuevos registros a una tabla.</p>
+    <pre><code>INSERT INTO nombre_tabla (columna1, columna2) VALUES (valor1, valor2);</code></pre>
+</section>
+
+<section class="slide">
+    <h3>Actualizaciones (UPDATE)</h3>
+    <p>Modifica los valores de uno o varios registros en una tabla.</p>
+    <pre><code>UPDATE nombre_tabla SET columna1 = nuevoValor WHERE condicion;</code></pre>
+</section>
+
+<section class="slide">
+    <h3>Borrados (DELETE)</h3>
+    <p>Elimina registros de una tabla que cumplen con ciertas condiciones.</p>
+    <pre><code>DELETE FROM nombre_tabla WHERE condicion;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo práctico</h2>
+    <p>Añadir un nuevo usuario a la base de datos:</p>
+    <pre><code>INSERT INTO usuarios (nombre, correo) VALUES ('Juan', 'juan@example.com');</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Caso real</h2>
+    <p>Una aplicación web que permite a los usuarios actualizar su perfil.</p>
+    <ul>
+        <li>El usuario ingresa sus nuevos datos</li>
+        <li>Los datos se envían al servidor</li>
+        <li>El servidor ejecuta una consulta UPDATE en la base de datos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Proceso de inserción</h2>
+    <ol>
+        <li>Conectar a la base de datos</li>
+        <li>Escribir la sentencia INSERT</li>
+        <li>Ejecutar la consulta</li>
+        <li>Cerrar la conexión</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas</h2>
+    <ul>
+        <li>Validar los datos antes de insertarlos</li>
+        <li>Usar consultas preparadas para evitar inyecciones SQL</li>
+        <li>Manejar errores y excepciones adecuadamente</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes</h2>
+    <ul>
+        <li>No cerrar la conexión a la base de datos</li>
+        <li>Inyecciones SQL no controladas</li>
+        <li>No validar los datos de entrada</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa</h2>
+    <table>
+        <tr>
+            <th>Lenguaje</th>
+            <th>Sentencia</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td><code>$stmt = $pdo->prepare("INSERT INTO usuarios (nombre, correo) VALUES (:nombre, :correo)");<br>$stmt->execute([':nombre' => 'Juan', ':correo' => 'juan@example.com']);</code></td>
+        </tr>
+        <tr>
+            <td> (SQLAlchemy)</td>
+            <td><code>session.add(User(nombre='Juan', correo='juan@example.com'))<br>session.commit()</code></td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz</h2>
+    <p>¿Qué lenguaje de script del lado del servidor permite ejecutar consultas SQL directamente?</p>
+    <ul>
+        <li>A)</li>
+        <li>B)</li>
+        <li>C)</li>
+        <li>D)#</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist</h2>
+    <ul>
+        <li>¿Conectaste a la base de datos?</li>
+        <li>¿Escribiste la consulta SQL correcta?</li>
+        <li>¿Manejas los errores y excepciones?</li>
+        <li>¿erraste la conexión a la base de datos?</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad práctica</h2>
+    <p>Escribe una consulta UPDATE que cambie el correo electrónico de un usuario con ID 1.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Inseriones, actualizaciones y borrados son operaciones fundamentales en bases de datos.</li>
+        <li>Se utilizan sentencias SQL como INSERT, UPDATE y DELETE.</li>
+        <li>Es crucial seguir buenas prácticas para evitar errores y mantener la seguridad.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa general</h2>
+    <p>Seguridad de datos: Cumplir con las leyes de protección de datos (GDPR, CCPA).</p>
+    <p>Privacidad: No almacenar información sensible sin consentimiento del usuario.</p>
+</section>
+
+<section class="slide">
+    <h2>Preguntas y dudas</h2>
+    <p>¿Tienes alguna pregunta o duda sobre el tema?</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0376 Implantación de aplicaciones web.md · Acceso a bases de datos desde lenguajes de «script» de servidor: → Modificación de la información almacenada: inserciones, actualizaciones y borrados.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 08:33:57</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

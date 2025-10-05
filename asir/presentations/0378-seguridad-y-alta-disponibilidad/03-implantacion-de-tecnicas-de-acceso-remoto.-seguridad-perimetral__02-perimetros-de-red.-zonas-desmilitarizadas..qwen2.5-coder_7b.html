@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Perímetros de red. Zonas desmilitarizadas. — Implantación de técnicas de acceso remoto. Seguridad perimetral: — 0378 Seguridad y alta disponibilidad.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="perimetros-de-red.-zonas-desmilitarizadas.">
+<h1>Perímetros de red. Zonas desmilitarizadas.</h1>
+<p><strong>Unidad:</strong> Implantación de técnicas de acceso remoto. Seguridad perimetral:<br><strong>Documento:</strong> 0378 Seguridad y alta disponibilidad.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Implantación de técnicas de acceso remoto. Seguridad perimetral: Perímetros de red. Zonas desmilitarizadas.</h1>
+    <p>Objetivo: Comprender los conceptos básicos y prácticas recomendadas para la configuración de perímetros de red y zonas desmilitarizadas en entornos empresariales.</p>
+</section>
+
+<section class="slide">
+    <h2>Definición de Perímetro de Red</h2>
+    <p>El perímetro de red es el conjunto de dispositivos, protocolos y políticas que definen la frontera entre una organización y su entorno externo.</p>
+</section>
+
+<section class="slide">
+    <h2>Zonas Desmilitarizadas (DMZ)</h2>
+    <ul>
+        <li>Área de red separada para servicios públicos accesibles desde Internet.</li>
+        <li>Propósito: Proteger los sistemas internos críticos mientras proporcionan acceso a servicios web y correo electrónico.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Estructura Básica de una DMZ</h2>
+    <img src="dmz_structure.png" alt="Estructura de DMZ">
+</section>
+
+<section class="slide">
+    <h2>Funciones de los Dispositivos en la DMZ</h2>
+    <ul>
+        <li>Firewall: Controla el tráfico entrante y saliente.</li>
+        <li>Balancer dearga: Distribuye el tráfico entre servidores web.</li>
+        <li>Servidor Web: Ofrece servicios públicos como páginas web y aplicaciones.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Consideraciones de Seguridad en la DMZ</h2>
+    <ul>
+        <li>Actualizaciones regulares del software.</li>
+        <li>Congelamiento de puertos innecesarios.</li>
+        <li>Uso de firewalls y antivirus.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo Práctico: Configuración de una DMZ</h2>
+    <p>Configurar un firewall para permitir el acceso a servicios web en la DMZ mientras bloquea todo el tráfico entrante directo a los servidores internos.</p>
+</section>
+
+<section class="slide">
+    <h2>Caso Real: Implementación de una DMZ</h2>
+    <p>Una empresa implementó una DMZ para proteger sus sistemas financieros. El proyecto fue exitoso, reduciendo significativamente el riesgo de ataques externos.</p>
+</section>
+
+<section class="slide">
+    <h2>Proceso de Implementación</h2>
+    <ol>
+        <li>Evaluación del entorno actual.</li>
+        <li>Diseño de la DMZ.</li>
+        <li>Configuración del firewall.</li>
+        <li>Pruebas y ajustes.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas en la DMZ</h2>
+    <ul>
+        <li>Utilizar firewalls de alta calidad.</li>
+        <li>Implementar segmentación de red.</li>
+        <li>Mantenimiento regular del sistema.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en la DMZ</h2>
+    <ul>
+        <li>No mantener actualizados los sistemas.</li>
+        <li>Configurar puertos innecesarios abiertos.</li>
+        <li>No realizar pruebas adecuadas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: DMZ vs. Red Interna</h2>
+    <table>
+        <tr>
+            <th></th>
+            <th>DMZ</th>
+            <th>Red Interna</th>
+        </tr>
+        <tr>
+            <td>Acceso desde Internet</td>
+            <td>Sí</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td>Seguridad</td>
+            <td>Alta</td>
+            <td>Baja</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Conceptos Básicos de DMZ</h2>
+    <p>¿Qué es la DMZ y cuáles son sus principales funciones?</p>
+</section>
+
+<section class="slide">
+    <h2>Checklist de Implementación de DMZ</h2>
+    <ul>
+        <li>Evaluación del entorno.</li>
+        <li>Diseño de la arquitectura.</li>
+        <li>Configuración del firewall.</li>
+        <li>Pruebas y validaciones.</li>
+        <li>Mantenimiento continuo.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Diseño de una DMZ</h2>
+    <p>Diseña un esquema básico de una DMZ para una empresa que ofrece servicios web y correo electrónico.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Perímetro de red: Frontera entre la organización y el entorno externo.</li>
+        <li>Zonas desmilitarizadas (DMZ): Área separada para servicios públicos.</li>
+        <li>Importancia de la DMZ en la seguridad perimetral.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa y Reglamentos</h2>
+    <p>La normativa como la Ley Orgánica 15/1998, de Protección de Datos Personales, debe considerarse en el diseño y mantenimiento de las DMZ.</p>
+</section>
+
+<section class="slide">
+    <h2>Preguntas Finales</h2>
+    <p>¿Tienes preguntas sobre la implantación de perímetros de red y zonas desmilitarizadas?</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0378 Seguridad y alta disponibilidad.md · Implantación de técnicas de acceso remoto. Seguridad perimetral: → Perímetros de red. Zonas desmilitarizadas.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 10:05:44</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

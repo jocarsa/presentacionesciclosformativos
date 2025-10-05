@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Recuperación de la información de la base de datos desde una página Web. — Acceso a bases de datos desde lenguajes de «script» de servidor: — 0376 Implantación de aplicaciones web.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="recuperacion-de-la-informacion-de-la-base-de-datos-desde-una-pagina-web.">
+<h1>Recuperación de la información de la base de datos desde una página Web.</h1>
+<p><strong>Unidad:</strong> Acceso a bases de datos desde lenguajes de «script» de servidor:<br><strong>Documento:</strong> 0376 Implantación de aplicaciones web.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Acceso a bases de datos desde lenguajes de «script» de servidor</h1>
+    <p><strong>Objetivo:</strong> Aprender cómo recuperar información de una base de datos desde una página Web utilizando lenguajes de script del lado del servidor.</p>
+</section>
+
+<section class="slide">
+    <h2>Concepto: Acceso a Bases de Datos</h2>
+    <p>El acceso a bases de datos desde el lado del servidor permite que las aplicaciones web interactúen con la información almacenada en ellas. Esto se realiza mediante lenguajes como SQL (Structured Query Language).</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo: Conexión a una Base de Datos</h2>
+    <pre><code>const mysql = require('mysql');
+const connection = mysql.createConnection({
+  host: 'localhost',
+  user: 'tu_usuario',
+  password: 'tu_contraseña',
+  database: 'tu_base_de_datos'
+});
+connection.connect((err) => {
+  if (err) throw err;
+  console.log('Conectado a la base de datos');
+});</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Proceso: Recuperación de Datos</h2>
+    <ol>
+        <li>Establecer conexión con la base de datos.</li>
+        <li>Escribir una consulta SQL para recuperar los datos deseados.</li>
+        <li>Ejecutar la consulta y procesar el resultado.</li>
+        <li>Cerrar la conexión con la base de datos.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas: Seguridad</h2>
+    <ul>
+        <li>Usar consultas preparadas para evitar inyecciones SQL.</li>
+        <li>Cifrar las credenciales de la base de datos.</li>
+        <li>Limitar el acceso a la base de datos solo a los usuarios necesarios.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes: Inyecciones SQL</h2>
+    <p>La inyección SQL ocurre cuando un atacante introduce código malicioso en una consulta SQL. Esto puede llevar a la pérdida de datos o incluso al compromiso del sistema.</p>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico: Consulta Preparada</h2>
+    <pre><code>const mysql = require('mysql');
+const connection = mysql.createConnection({
+  host: 'localhost',
+  user: 'tu_usuario',
+  password: 'tu_contraseña',
+  database: 'tu_base_de_datos'
+});
+connection.connect();
+const usuario = 'usuario';
+const consulta = 'SELECT * FROM usuarios WHERE nombre = ?';
+connection.query(consulta, [usuario], (err, results) => {
+  if (err) throw err;
+  console.log(results);
+});
+connection.end();</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Seguridad en Bases de Datos</h2>
+    <p>¿Cuál es el principal riesgo asociado con la inyección SQL?</p>
+    <ul>
+        <li>a) Pérdida de datos</li>
+        <li>b) Compromiso del sistema</li>
+        <li>c) Aumento de rendimiento</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Seguridad en Acceso a Bases de Datos</h2>
+    <ul>
+        <li>Usar consultas preparadas.</li>
+        <li>Cifrar credenciales.</li>
+        <li>Limitar acceso.</li>
+        <li>Validar entradas del usuario.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Desarrolla una Consulta SQL</h2>
+    <p>Escribe una consulta SQL que recupere el nombre y la edad de todos los usuarios mayores de 18 años en la tabla 'usuarios'.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen: Acceso a Bases de Datos desde Servidor</h2>
+    <ul>
+        <li>Se establece una conexión con la base de datos.</li>
+        <li>Se ejecuta una consulta SQL para recuperar los datos.</li>
+        <li>Se procesa el resultado y se cierra la conexión.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección de Datos Personales (GDPR)</h2>
+    <p>El acceso a bases de datos debe cumplir con las regulaciones de protección de datos personales, como el GDPR en Europa.</p>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico: Cumplimiento GDPR</h2>
+    <p>Antes de acceder a una base de datos que contiene información personal, es necesario verificar si la empresa está cumpliendo con las regulaciones GDPR y obtener el consentimiento del usuario.</p>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Cumplimiento GDPR</h2>
+    <p>¿Qué acción debe realizar una empresa antes de acceder a una base de datos que contiene información personal?</p>
+    <ul>
+        <li>a) Verificar el cumplimiento con las regulaciones GDPR.</li>
+        <li>b) Eliminar la información personal.</li>
+        <li>c) No hacer nada.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Cumplimiento GDPR</h2>
+    <ul>
+        <li>Verificar el cumplimiento con las regulaciones GDPR.</li>
+        <li>Obtener consentimiento del usuario.</li>
+        <li>Cifrar la información personal.</li>
+        <li>Limitar el acceso a los datos solo a los usuarios necesarios.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Verifica Cumplimiento GDPR</h2>
+    <p>Escribe una lista de acciones que debe realizar una empresa para verificar su cumplimiento con las regulaciones GDPR antes de acceder a una base de datos que contiene información personal.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen: Recuperación de Datos desde Servidor</h2>
+    <ul>
+        <li>Se establece una conexión con la base de datos.</li>
+        <li>Se ejecuta una consulta SQL para recuperar los datos.</li>
+        <li>Se procesa el resultado y se cierra la conexión.</li>
+        <li>Se implementan buenas prácticas de seguridad.</li>
+        <li>Se verifica el cumplimiento con las regulaciones GDPR.</li>
+    </ul>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0376 Implantación de aplicaciones web.md · Acceso a bases de datos desde lenguajes de «script» de servidor: → Recuperación de la información de la base de datos desde una página Web.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 08:33:04</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

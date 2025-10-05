@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Administración de usuarios y grupos locales. — Administración de software de base: — 0369 Implantación de sistemas operativos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="administracion-de-usuarios-y-grupos-locales.">
+<h1>Administración de usuarios y grupos locales.</h1>
+<p><strong>Unidad:</strong> Administración de software de base:<br><strong>Documento:</strong> 0369 Implantación de sistemas operativos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Administración de usuarios y grupos locales</h1>
+    <p>Objetivo: Aprender cómo gestionar usuarios y grupos en sistemas operativos locales.</p>
+</section>
+
+<section class="slide">
+    <h2>Concepto de Usuarios y Grupos</h2>
+    <ul>
+        <li><strong>Usuario:</strong>uenta individual con privilegios específicos.</li>
+        <li><strong>Grupo:</strong> Colección de usuarios que comparten permisos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Crea un Usuario</h2>
+    <p>Comando: <code>sudo adduser nombre_usuario</code></p>
+    <p>Paso 1: Introduce la contraseña del usuario.</p>
+    <p>Paso 2: Configura información personal (nombre, teléfono, etc.).</p>
+</section>
+
+<section class="slide">
+    <h2>Crea un Grupo</h2>
+    <p>Comando: <code>sudo addgroup nombre_grupo</code></p>
+    <p>Añade usuarios a grupos existentes con: <code>sudo usermod -aG nombre_usuario nombre_grupo</code></p>
+</section>
+
+<section class="slide">
+    <h2>Configura Permisos de Archivos y Carpetas</h2>
+    <ul>
+        <li><strong>Chown:</strong> Cambia el propietario del archivo.</li>
+        <li><strong>Chgrp:</strong> Cambia el grupo del archivo.</li>
+        <li><strong>Chmod:</strong> Cambia los permisos de acceso.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Administración Avanzada</h2>
+    <ul>
+        <li><strong>sudo -i:</strong> Inicia sesión como root.</li>
+        <li><strong>su nombre_usuario:</strong> Cambia de usuario.</li>
+        <li><strong>passwd:</strong> Cambia la contraseña del usuario actual.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas</h2>
+    <ul>
+        <li>No usar cuentas root para tareas diarias.</li>
+        <li>Utilizar grupos para asignar permisos colectivos.</li>
+        <li>Regularmente revisar y ajustar los privilegios de usuarios.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes</h2>
+    <ul>
+        <li>No tener suficientes permisos para realizar acciones.</li>
+        <li>Cambiar la contraseña incorrectamente.</li>
+        <li>Añadir usuarios a grupos equivocados.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz</h2>
+    <p>¿Cuál comando se usa para crear un nuevo usuario?</p>
+    <ol>
+        <li><code>sudo adduser nombre_usuario</code></li>
+        <li><code>sudo usermod -aG nombre_usuario nombre_grupo</code></li>
+        <li><code>sudo chown nombre_usuario nombre_archivo</code></li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist</h2>
+    <ul>
+        <li>Crea un usuario con la contraseña correcta.</li>
+        <li>Añade el usuario a los grupos necesarios.</li>
+        <li>Verifica los permisos de acceso a archivos y carpetas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad Práctica</h2>
+    <p>Crea un nuevo usuario, añádelo a un grupo y cambia su contraseña.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Administración de usuarios y grupos es fundamental para la seguridad del sistema.</li>
+        <li>Utiliza comandos como <code>adduser</code>, <code>addgroup</code>, <code>chown</code>, etc.</li>
+        <li>Mantén prácticas seguras y revisa regularmente los privilegios de usuarios.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa General</h2>
+    <p><strong>Política Interna:</strong> Define las reglas para la creación, modificación y eliminación de cuentas de usuario.</p>
+    <p><strong>Reglamento de Seguridad:</strong> Establece los procedimientos para el manejo de permisos y acceso.</p>
+</section>
+
+<section class="slide">
+    <h2>Preguntas Frecuentes</h2>
+    <ul>
+        <li>¿Cómo puedo crear un usuario sin contraseña?</li>
+        <li>¿Qué hace el comando <code>sudo -i</code>?</li>
+        <li>¿Cuándo debo usar <code>chown</code> en lugar de <code>chmod</code>?</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Recursos Adicionales</h2>
+    <ul>
+        <li><a href="https://www.tutorialspoint.com/unix/unix-users-groups.htm">Tutorial de Usuarios y Grupos en Unix/Linux</a></li>
+        <li><a href="https://help.ubuntu.com/stable/ubuntu-help/users-add.html">Ubuntu Help: Adding Users</a></li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Gracias</h2>
+    <p>Preguntas o comentarios?</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0369 Implantación de sistemas operativos.md · Administración de software de base: → Administración de usuarios y grupos locales.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-04 21:40:07</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

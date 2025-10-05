@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Sistema gestor de base de datos: instalación y configuración. — Instalación de servidores de aplicaciones Web: — 0376 Implantación de aplicaciones web.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="sistema-gestor-de-base-de-datos-instalacion-y-configuracion.">
+<h1>Sistema gestor de base de datos: instalación y configuración.</h1>
+<p><strong>Unidad:</strong> Instalación de servidores de aplicaciones Web:<br><strong>Documento:</strong> 0376 Implantación de aplicaciones web.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Instalación y Configuración de un Sistema Gestor de Base de Datos en Servidores Web</h1>
+    <p>Objetivo: Aprender los pasos para instalar y configurar un sistema gestor de base de datos (SGBD) en servidores web.</p>
+</section>
+
+<section class="slide">
+    <h2>Introducción a los Sistemas Gestores de Base de Datos (SGBD)</h2>
+    <ul>
+        <li>SGBD son herramientas que permiten almacenar, gestionar y recuperar datos de manera eficiente.</li>
+        <li>Ejemplos populares: MySQL, PostgreSQL, Oracle Database, Microsoft SQL Server.</li>
+        <li>Importancia en la arquitectura web para almacenar información del usuario, configuraciones, etc.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Requisitos Previos</h2>
+    <ul>
+        <li>Servidor web instalado (Apache, Nginx).</li>
+        <li>Acceso a la terminal del servidor.</li>
+        <li>Permiso de administrador para instalar software.</li>
+        <li>Conocimientos básicos de SQL.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Instalación de MySQL en Ubuntu</h2>
+    <ol>
+        <li>Abrir la terminal del servidor.</li>
+        <li>Ejecutar: <code>sudo apt update</code></li>
+        <li>Ejecutar: <code>sudo apt install mysql-server</code></li>
+        <li>Iniciar el servicio: <code>sudo systemctl start mysql</code></li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Configuración Inicial de MySQL</h2>
+    <ul>
+        <li>Ejecutar: <code>sudo mysql_secure_installation</code></li>
+        <li>Seguir las indicaciones para establecer una contraseña root y configurar opciones adicionales.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Crea tu Primera Base de Datos en MySQL</h2>
+    <ol>
+        <li>Ingresar a la consola de MySQL: <code>sudo mysql -u root -p</code></li>
+        <li>Ejecutar: <code>CREATE DATABASE nombre_de_tu_base_de_datos;</code></li>
+        <li>Crea un usuario y otorga permisos: <code>GRANT ALL PRIVILEGES ON nombre_de_tu_base_de_datos.* TO 'nombre_usuario'@'localhost';</code></li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Configuración de MySQL en Apache (MyAdmin)</h2>
+    <ul>
+        <li>Ejecutar: <code>sudo apt installmyadmin</code></li>
+        <li>Seguir las indicaciones para configurarMyAdmin.</li>
+        <li>Añadir la siguiente línea a /etc/apache2/apache2.conf: <code>Include /etc/phpmyadmin/apache.conf</code></li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Acceso aMyAdmin</h2>
+    <p>Después de la instalación, puedes acceder aMyAdmin en tu navegador: <code>http://tu_servidor/phpmyadmin</code></p>
+    <ul>
+        <li>Inicia sesión con el usuario y contraseña que configuraste.</li>
+        <li>Aquí podrás gestionar tus bases de datos y tablas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Pruebas Básicas enMyAdmin</h2>
+    <ol>
+        <li>Crea una nueva base de datos.</li>
+        <li>Crea una tabla dentro de la base de datos.</li>
+        <li>Añade algunos registros a la tabla.</li>
+        <li>Verifica que los datos se almacenen correctamente.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas en la Configuración de SGBD</h2>
+    <ul>
+        <li>Usar contraseñas fuertes para el usuario root y otros usuarios.</li>
+        <li>Limitar los privilegios de los usuarios a lo mínimo necesario.</li>
+        <li>Realizar copias de seguridad periódicas de las bases de datos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en la Instalación y Configuración</h2>
+    <ul>
+        <li>No establecer una contraseña para el usuario root.</li>
+        <li>No limitar los privilegios de los usuarios.</li>
+        <li>No realizar copias de seguridad periódicas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparación entre MySQL y PostgreSQL</h2>
+    <table>
+        <tr>
+            <th></th>
+            <th>MySQL</th>
+            <th>PostgreSQL</th>
+        </tr>
+        <tr>
+            <td>Lenguaje de consulta</td>
+            <td>SQL</td>
+            <td>SQL</td>
+        </tr>
+        <tr>
+            <td>Soporte para transacciones ACID</td>
+            <td>Sí</td>
+            <td>Sí</td>
+        </tr>
+        <tr>
+            <td>Desempeño</td>
+            <td>Bueno, especialmente en entornos de producción.</td>
+            <td>Bueno, pero generalmente más lento que MySQL.</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: ¿Cuál es la diferencia entre MySQL y PostgreSQL?</h2>
+    <ul>
+        <li><input type="radio" name="quiz"> a) MySQL solo soporta transacciones ACID.</li>
+        <li><input type="radio" name="quiz"> b) PostgreSQL tiene un mejor desempeño que MySQL.</li>
+        <li><input type="radio" name="quiz">) MySQL utiliza SQL como lenguaje de consulta.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist para la Instalación y Configuración</h2>
+    <ul>
+        <li>Instalar el SGBD (MySQL, PostgreSQL, etc.).</li>
+        <li>Configurar el servicio del SGBD.</li>
+        <li>Crea una base de datos y un usuario con privilegios adecuados.</li>
+        <li>Instalar y configurarMyAdmin para gestión gráfica.</li>
+        <li>Realizar pruebas básicas en la interfaz deMyAdmin.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Configura tu Propio SGBD</h2>
+    <p>Configura un SGBD en tu servidor web y crea una base de datos con al menos una tabla. Prueba la conexión desdeMyAdmin.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Instalación y configuración de un SGBD en servidores web.</li>
+        <li>Ejemplos prácticos con MySQL yMyAdmin.</li>
+        <li>Buenas prácticas y errores comunes a evitar.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa y Seguridad</h2>
+    <p>Seguir las mejores prácticas de seguridad al instalar y configurar SGBD, como establecer contraseñas fuertes y limitar privilegios.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0376 Implantación de aplicaciones web.md · Instalación de servidores de aplicaciones Web: → Sistema gestor de base de datos: instalación y configuración.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 07:46:31</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

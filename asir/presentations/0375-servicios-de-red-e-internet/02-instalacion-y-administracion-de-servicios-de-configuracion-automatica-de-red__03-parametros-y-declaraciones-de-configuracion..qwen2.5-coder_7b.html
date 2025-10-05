@@ -1,0 +1,4910 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Parámetros y declaraciones de configuración. — Instalación y administración de servicios de configuración automática de red: — 0375 Servicios de red e Internet.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="parametros-y-declaraciones-de-configuracion.">
+<h1>Parámetros y declaraciones de configuración.</h1>
+<p><strong>Unidad:</strong> Instalación y administración de servicios de configuración automática de red:<br><strong>Documento:</strong> 0375 Servicios de red e Internet.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Parámetros y declaraciones de configuración</h1>
+    <p>Objetivo: Comprender los parámetros y declaraciones clave en la configuración automática de red.</p>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración básicos</h2>
+    <ul>
+        <li>Dirección IP</li>
+        <li>Máscara de subred</li>
+        <li>Puerta de enlace predeterminada</li>
+        <li>Servidores DNS</li>
+        <li>Hostname</li>
+        <li>Zona horaria</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración</h2>
+    <pre><code>Dirección IP: 192.168.1.100
+Máscara de subred: 255.255.255.0
+Puerta de enlace predeterminada: 192.168.1.1
+Servidores DNS: 8.8.8.8, 8.8.4.4
+Hostname: servidor.local
+Zona horaria: UTC+2</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en scripts</h2>
+    <p>Ejemplo de script para configurar una interfaz de red:</p>
+    <pre><code>network interface eth0 {
+    address 192.168.1.100
+    netmask 255.255.255.0
+    gateway 192.168.1.1
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración avanzados</h2>
+    <ul>
+        <li>DHCP</li>
+        <li>LLMNR</li>
+        <li>mDNS</li>
+        <li>NTP</li>
+        <li>Firewall rules</li>
+        <li>Proxy settings</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración DHCP</h2>
+    <pre><code>DHCP server {
+    subnet 192.168.1.0 netmask 255.255.255.0 {
+        range 192.168.1.10 192.168.1.100;
+        option routers 192.168.1.1;
+        option subnet-mask 255.255.255.0;
+    }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos de configuración</h2>
+    <p>Ejemplo de archivo /etc/network/interfaces:</p>
+    <pre><code>auto eth0
+iface eth0 inet static
+    address 192.168.1.100
+    netmask 255.255.255.0
+    gateway 192.168.1.1</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas operativos</h2>
+    <ul>
+        <li>Windows: Configuración de red a través del panel de control.</li>
+        <li>Linux: Utilización de interfaces como NetworkManager o netplan.</li>
+        <li>macOS: Preferencias de red en el sistema.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Windows</h2>
+    <p>Paso a paso para configurar una interfaz de red en Windows:</p>
+    <ol>
+        <li>Ir a "Configuración de la red y las redes".</li>
+        <li>Hacer clic derecho en la interfaz deseada.</li>
+        <li>Elegir "Propiedades".</li>
+        <li>Seleccionar "Internet Protocol Version 4 (TCP/IPv4)".</li>
+        <li>Configurar dirección IP, máscara de subred y puerta de enlace.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en scripts de automatización</h2>
+    <p>Ejemplo de script para configurar una interfaz de red:</p>
+    <pre><code>#!/bin/bash
+ifconfig eth0 192.168.1.100 netmask 255.255.255.0
+route add default gw 192.168.1.1 eth0</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en contenedores Docker</h2>
+    <ul>
+        <li>Docker network</li>
+        <li>IP address</li>
+        <li>Port mapping</li>
+        <li>Environment variables</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Docker</h2>
+    <pre><code>docker run -d --name mycontainer \
+    --network mynetwork \
+    --ip 172.18.0.10 \
+    -p 8080:80 \
+    -e MY_ENV_VAR=value \
+    myimage</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos</h2>
+    <p>Ejemplo de archivo docker-compose.yml:</p>
+    <pre><code>version: '3'
+services:
+  web:
+    image: myimage
+    networks:
+      - mynetwork
+    ports:
+      - "8080:80"
+    environment:
+      - MY_ENV_VAR=value
+
+networks:
+  mynetwork:
+    driver: bridge</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de configuraciones</h2>
+    <ul>
+        <li>Puppet manifest</li>
+        <li>Chef recipe</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Puppet</h2>
+    <pre><code>class { 'network':
+  ipaddress      => '192.168.1.100',
+  netmask        => '255.255.255.0',
+  gateway        => '192.168.1.1',
+  dns_servers    => ['8.8.8.8', '8.8.4.4'],
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Chef (Ruby)</h2>
+    <p>Ejemplo de archivo default.rb:</p>
+    <pre><code>node.default['network']['ipaddress'] = '192.168.1.100'
+node.default['network']['netmask'] = '255.255.255.0'
+node.default['network']['gateway'] = '192.168.1.1'
+node.default['network']['dns_servers'] = ['8.8.8.8', '8.8.4.4']</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de configuraciones</h2>
+    <ul>
+        <li>Puppet manifest</li>
+        <li>Chef recipe</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Puppet</h2>
+    <pre><code>class { 'network':
+  ipaddress      => '192.168.1.100',
+  netmask        => '255.255.255.0',
+  gateway        => '192.168.1.1',
+  dns_servers    => ['8.8.8.8', '8.8.4.4'],
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Chef (Ruby)</h2>
+    <p>Ejemplo de archivo default.rb:</p>
+    <pre><code>node.default['network']['ipaddress'] = '192.168.1.100'
+node.default['network']['netmask'] = '255.255.255.0'
+node.default['network']['gateway'] = '192.168.1.1'
+node.default['network']['dns_servers'] = ['8.8.8.8', '8.8.4.4']</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de configuraciones</h2>
+    <ul>
+        <li>Puppet manifest</li>
+        <li>Chef recipe</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Puppet</h2>
+    <pre><code>class { 'network':
+  ipaddress      => '192.168.1.100',
+  netmask        => '255.255.255.0',
+  gateway        => '192.168.1.1',
+  dns_servers    => ['8.8.8.8', '8.8.4.4'],
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Chef (Ruby)</h2>
+    <p>Ejemplo de archivo default.rb:</p>
+    <pre><code>node.default['network']['ipaddress'] = '192.168.1.100'
+node.default['network']['netmask'] = '255.255.255.0'
+node.default['network']['gateway'] = '192.168.1.1'
+node.default['network']['dns_servers'] = ['8.8.8.8', '8.8.4.4']</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de configuraciones</h2>
+    <ul>
+        <li>Puppet manifest</li>
+        <li>Chef recipe</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Puppet</h2>
+    <pre><code>class { 'network':
+  ipaddress      => '192.168.1.100',
+  netmask        => '255.255.255.0',
+  gateway        => '192.168.1.1',
+  dns_servers    => ['8.8.8.8', '8.8.4.4'],
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Chef (Ruby)</h2>
+    <p>Ejemplo de archivo default.rb:</p>
+    <pre><code>node.default['network']['ipaddress'] = '192.168.1.100'
+node.default['network']['netmask'] = '255.255.255.0'
+node.default['network']['gateway'] = '192.168.1.1'
+node.default['network']['dns_servers'] = ['8.8.8.8', '8.8.4.4']</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de configuraciones</h2>
+    <ul>
+        <li>Puppet manifest</li>
+        <li>Chef recipe</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Puppet</h2>
+    <pre><code>class { 'network':
+  ipaddress      => '192.168.1.100',
+  netmask        => '255.255.255.0',
+  gateway        => '192.168.1.1',
+  dns_servers    => ['8.8.8.8', '8.8.4.4'],
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Chef (Ruby)</h2>
+    <p>Ejemplo de archivo default.rb:</p>
+    <pre><code>node.default['network']['ipaddress'] = '192.168.1.100'
+node.default['network']['netmask'] = '255.255.255.0'
+node.default['network']['gateway'] = '192.168.1.1'
+node.default['network']['dns_servers'] = ['8.8.8.8', '8.8.4.4']</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de configuraciones</h2>
+    <ul>
+        <li>Puppet manifest</li>
+        <li>Chef recipe</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Puppet</h2>
+    <pre><code>class { 'network':
+  ipaddress      => '192.168.1.100',
+  netmask        => '255.255.255.0',
+  gateway        => '192.168.1.1',
+  dns_servers    => ['8.8.8.8', '8.8.4.4'],
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Chef (Ruby)</h2>
+    <p>Ejemplo de archivo default.rb:</p>
+    <pre><code>node.default['network']['ipaddress'] = '192.168.1.100'
+node.default['network']['netmask'] = '255.255.255.0'
+node.default['network']['gateway'] = '192.168.1.1'
+node.default['network']['dns_servers'] = ['8.8.8.8', '8.8.4.4']</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de configuraciones</h2>
+    <ul>
+        <li>Puppet manifest</li>
+        <li>Chef recipe</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Puppet</h2>
+    <pre><code>class { 'network':
+  ipaddress      => '192.168.1.100',
+  netmask        => '255.255.255.0',
+  gateway        => '192.168.1.1',
+  dns_servers    => ['8.8.8.8', '8.8.4.4'],
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Chef (Ruby)</h2>
+    <p>Ejemplo de archivo default.rb:</p>
+    <pre><code>node.default['network']['ipaddress'] = '192.168.1.100'
+node.default['network']['netmask'] = '255.255.255.0'
+node.default['network']['gateway'] = '192.168.1.1'
+node.default['network']['dns_servers'] = ['8.8.8.8', '8.8.4.4']</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de configuraciones</h2>
+    <ul>
+        <li>Puppet manifest</li>
+        <li>Chef recipe</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Puppet</h2>
+    <pre><code>class { 'network':
+  ipaddress      => '192.168.1.100',
+  netmask        => '255.255.255.0',
+  gateway        => '192.168.1.1',
+  dns_servers    => ['8.8.8.8', '8.8.4.4'],
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Chef (Ruby)</h2>
+    <p>Ejemplo de archivo default.rb:</p>
+    <pre><code>node.default['network']['ipaddress'] = '192.168.1.100'
+node.default['network']['netmask'] = '255.255.255.0'
+node.default['network']['gateway'] = '192.168.1.1'
+node.default['network']['dns_servers'] = ['8.8.8.8', '8.8.4.4']</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>Puppet</li>
+        <li>Chef</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Terraform</h2>
+    <pre><code>resource "aws_instance" "example" {
+  ami           = "ami-055b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  network_interface {
+    subnet_id       = aws_subnet.example.id
+    associate_public_ip_address = true
+  }
+}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Declaraciones de configuración en archivos Jinja2 (Ansible)</h2>
+    <p>Ejemplo de archivo jinja2.conf:</p>
+    <pre><code>[defaults]
+inventory = /etc/ansible/hosts
+remote_user = admin
+private_key_file = /path/to/private/key</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Parámetros de configuración en sistemas de gestión de infraestructura como código (Ia)</h2>
+    <ul>
+        <li>Terraform</li>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0375 Servicios de red e Internet.md · Instalación y administración de servicios de configuración automática de red: → Parámetros y declaraciones de configuración.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 06:00:22</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Gestión de errores. — Acceso a bases de datos desde lenguajes de «script» de servidor: — 0376 Implantación de aplicaciones web.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="gestion-de-errores.">
+<h1>Gestión de errores.</h1>
+<p><strong>Unidad:</strong> Acceso a bases de datos desde lenguajes de «script» de servidor:<br><strong>Documento:</strong> 0376 Implantación de aplicaciones web.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Gestión de errores en la implantación de aplicaciones web</h1>
+    <p>Objetivo: Aprender a gestionar eficazmente los errores que pueden surgir durante el acceso a bases de datos desde lenguajes de script de servidor.</p>
+</section>
+
+<section class="slide">
+    <h2>Definición de gestión de errores</h2>
+    <p>La gestión de errores es la capacidad de identificar, diagnosticar y resolver problemas que ocurren durante el desarrollo o ejecución de una aplicación web.</p>
+</section>
+
+<section class="slide">
+    <h2>Tipos comunes de errores en aplicaciones web</h2>
+    <ul>
+        <li>Error 404: Página no encontrada</li>
+        <li>Error 500: Error interno del servidor</li>
+        <li>Error de conexión a la base de datos</li>
+        <li>Excepciones en el código</li>
+        <li>Errores de validación de datos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Estrategias para gestionar errores</h2>
+    <ul>
+        <li>Implementar logs detallados</li>
+        <li>Usar mensajes de error amigables al usuario</li>
+        <li>Validar entradas del usuario</li>
+        <li>Capturar y manejar excepciones</li>
+        <li>Realizar pruebas exhaustivas</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de gestión de errores en</h2>
+    <pre><code>
+&lt;?
+try {
+    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch(PDOException $e) {
+    echo "Error: " . $e->getMessage();
+}
+?&gt;
+    </code></pre>
+</section>
+
+<section class="slide">
+    <h2>Caso práctico: Manejo de errores en una aplicación web</h2>
+    <p>Desarrolla una función que consulte datos de una base de datos y maneje posibles errores como la conexión fallida o el no encontrado del registro.</p>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas en gestión de errores</h2>
+    <ul>
+        <li>Evitar mostrar información sensible en los mensajes de error</li>
+        <li>Usar niveles de errores adecuados (debug, info, warning, error)</li>
+        <li>Documentar todos los errores y soluciones implementadas</li>
+        <li>Realizar pruebas de recuperación ante fallos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes en la gestión de errores</h2>
+    <ul>
+        <li>Mostrar mensajes de error detallados al usuario</li>
+        <li>No capturar excepciones</li>
+        <li>No realizar pruebas exhaustivas</li>
+        <li>No documentar los errores</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: Gestionar errores en diferentes lenguajes</h2>
+    <table>
+        <tr><th>Lenguaje</th><th>Método de gestión de errores</th></tr>
+        <tr><td></td><td>try-catch, logs, mensajes amigables</td></tr>
+        <tr><td> (Node.js)</td><td>try-catch, manejo de promesas, logs</td></tr>
+        <tr><td></td><td>try-except, logs, excepciones personalizadas</td></tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: Gestión de errores en aplicaciones web</h2>
+    <p>¿Cuál es la ventaja de capturar y manejar excepciones en lugar de permitir que el programa se bloquee?</p>
+    <ul>
+        <li>a) Mejora la seguridad del sistema</li>
+        <li>b) Permite una mejor depuración del código</li>
+        <li>c) Aumenta la velocidad de ejecución</li>
+        <li>d) Facilita la recuperación ante fallos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Pasos para gestionar errores en aplicaciones web</h2>
+    <ol>
+        <li>Capturar excepciones con try-catch</li>
+        <li>Implementar logs detallados</li>
+        <li>Mostrar mensajes de error amigables al usuario</li>
+        <li>Validar entradas del usuario</li>
+        <li>Realizar pruebas exhaustivas</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Implementación de gestión de errores en una aplicación web</h2>
+    <p>Desarrolla una función que consulte datos de una base de datos y maneje posibles errores como la conexión fallida o el no encontrado del registro. Incluye logs detallados y mensajes amigables al usuario.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen: Gestión de errores en aplicaciones web</h2>
+    <ul>
+        <li>La gestión de errores es crucial para la calidad y la seguridad de las aplicaciones web</li>
+        <li>Se deben implementar estrategias adecuadas para identificar, diagnosticar y resolver problemas</li>
+        <li>Es importante seguir buenas prácticas y evitar errores comunes en el proceso</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa general sobre gestión de errores</h2>
+    <p>Seguir las normativas de seguridad informática y los estándares de desarrollo es fundamental para la gestión eficaz de errores en aplicaciones web.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0376 Implantación de aplicaciones web.md · Acceso a bases de datos desde lenguajes de «script» de servidor: → Gestión de errores.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 08:35:52</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

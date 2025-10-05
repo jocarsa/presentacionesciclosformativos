@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Servidores raíz y dominios de primer nivel y sucesivos. — Instalación y administración de servicios de nombres de dominio: — 0375 Servicios de red e Internet.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="servidores-raiz-y-dominios-de-primer-nivel-y-sucesivos.">
+<h1>Servidores raíz y dominios de primer nivel y sucesivos.</h1>
+<p><strong>Unidad:</strong> Instalación y administración de servicios de nombres de dominio:<br><strong>Documento:</strong> 0375 Servicios de red e Internet.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Servidores raíz y dominios de primer nivel y sucesivos</h1>
+    <p>Objetivo: Comprender la estructura jerárquica de los sistemas DNS.</p>
+</section>
+
+<section class="slide">
+    <h2>Concepto de Servidor Raíz</h2>
+    <p>El servidor raíz es el punto de partida en la resolución de nombres de dominio. Almacena información sobre los dominios de primer nivel.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Servidor Raíz</h2>
+    <ul>
+        <li>Los servidores raíz son generalmente ubicados en Estados Unidos y Europa.</li>
+        <li>Ejemplos populares: .com, .org, .net, .edu, etc.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Concepto de Dominio de Primer Nivel</h2>
+    <p>Los dominios de primer nivel son los que aparecen directamente bajo el servidor raíz. Por ejemplo: .com, .es, .uk.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Dominio de Primer Nivel</h2>
+    <ul>
+        <li>Los dominios de primer nivel son administrados por autoridades nacionales o internacionales.</li>
+        <li>Ejemplos: example.com, instituto.es, universidad.uk.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Concepto de Dominio Sucesivo</h2>
+    <p>Los dominios sucesivos son los que aparecen después del dominio de primer nivel. Por ejemplo: www.example.com.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Dominio Sucesivo</h2>
+    <ul>
+        <li>Los dominios sucesivos pueden tener varios niveles, como subdominios.</li>
+        <li>Ejemplos: blog.example.com, noticias.instituto.es.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Proceso de Resolución DNS</h2>
+    <ol>
+        <li>Peticion del cliente al servidor raíz para encontrar el dominio de primer nivel.</li>
+        <li>Servidor raíz responde con la dirección IP del servidor autoridad del dominio de primer nivel.</li>
+        <li>Cliente pide al servidor autoridad del dominio de primer nivel.</li>
+        <li>Servidor autoridad responde con la dirección IP del servidor de nombres local (DNS local).</li>
+        <li>Cliente pide al servidor de nombres local.</li>
+        <li>Servidor de nombres local responde con la dirección IP solicitada.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas en Servidores Raíz y Dominios</h2>
+    <ul>
+        <li>Seguridad: Actualizar regularmente los sistemas y software.</li>
+        <li>Disponibilidad: Implementar redundancia para evitar downtime.</li>
+        <li>Escalabilidad: Configurar servidores para manejar creciente tráfico.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en Servidores Raíz y Dominios</h2>
+    <ul>
+        <li>No actualización de registros DNS.</li>
+        <li>Fallo en la configuración del servidor.</li>
+        <li>No implementación de seguridad adecuada.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa entre Servidores Raíz y Dominios Locales</h2>
+    <table>
+        <tr>
+            <th>Servidor Raíz</th>
+            <th>Dominio Local (DNS)</th>
+        </tr>
+        <tr>
+            <td>Almacena información global.</td>
+            <td>Administra dominios locales.</td>
+        </tr>
+        <tr>
+            <td>No depende de la red local.</td>
+            <td>Depende del servidor DNS local.</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Servidores Raíz y Dominios</h2>
+    <p>¿Cuál es el propósito de un servidor raíz?</p>
+    <ul>
+        <li><input type="radio" name="quiz"> Almacenar información local.</li>
+        <li><input type="radio" name="quiz"> Administrar dominios locales.</li>
+        <li><input type="radio" name="quiz"> Proporcionar información global sobre los dominios de primer nivel.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Configuración Servidor Raíz</h2>
+    <ol>
+        <li>Instalar software DNS adecuado.</li>
+        <li>Configurar servidores autoridades de dominios de primer nivel.</li>
+        <li>Implementar seguridad y actualizaciones regulares.</li>
+        <li>Probar la configuración con herramientas de diagnóstico.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Creación de Dominio Sucesivo</h2>
+    <p>Crea un dominio sucesivo (subdominio) para tu institución o proyecto personal. Documenta el proceso y la configuración.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Servidores raíz almacenan información global sobre dominios de primer nivel.</li>
+        <li>Dominios de primer nivel son administrados por autoridades nacionales o internacionales.</li>
+        <li>Dominios sucesivos proporcionan información específica dentro del dominio de primer nivel.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa General</h2>
+    <p>La normativa en el ámbito de los servicios DNS se centra en la seguridad, la disponibilidad y la confidencialidad. Los proveedores de servicios deben cumplir con regulaciones como GDPR.</p>
+</section>
+
+<section class="slide">
+    <h2>Preguntas Frecuentes</h2>
+    <ul>
+        <li><strong>¿Qué es un servidor raíz?</strong> Es el punto de partida en la resolución de nombres de dominio, almacena información sobre los dominios de primer nivel.</li>
+        <li><strong>¿Cuál es la diferencia entre servidores raíz y dominios locales?</strong> Los servidores raíz proporcionan información global, mientras que los dominios locales gestionan dominios específicos dentro de una red local.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Contacto</h2>
+    <p>Si tienes preguntas o necesitas más ayuda, no dudes en contactar con el equipo de soporte técnico.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0375 Servicios de red e Internet.md · Instalación y administración de servicios de nombres de dominio: → Servidores raíz y dominios de primer nivel y sucesivos.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 05:17:20</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

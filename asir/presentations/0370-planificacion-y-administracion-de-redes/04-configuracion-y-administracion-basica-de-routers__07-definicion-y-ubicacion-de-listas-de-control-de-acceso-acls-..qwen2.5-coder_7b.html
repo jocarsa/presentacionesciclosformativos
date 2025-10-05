@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Definición y ubicación de listas de control de acceso (ACLs). — Configuración y administración básica de «routers»: — 0370 Planificación y administración de redes.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="definicion-y-ubicacion-de-listas-de-control-de-acceso-acls-.">
+<h1>Definición y ubicación de listas de control de acceso (ACLs).</h1>
+<p><strong>Unidad:</strong> Configuración y administración básica de «routers»:<br><strong>Documento:</strong> 0370 Planificación y administración de redes.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Definición y ubicación de listas de control de acceso (ACLs)</h1>
+    <p>Objetivo: Comprender qué son las ACLs, cómo se definen y dónde se aplican en los routers.</p>
+</section>
+
+<section class="slide">
+    <h2>¿Qué son las Listas de Control de Acceso?</h2>
+    <ul>
+        <li>Conjunto de reglas que controlan el tráfico de red.</li>
+        <li>Pueden ser implícitas (por defecto) o explícitas (configuradas por el usuario).</li>
+        <li>Sirven para filtrar paquetes de red según criterios específicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Tipos de ACLs</h2>
+    <ul>
+        <li>ACL Extendida: Permite especificar criterios más detallados (por ejemplo, protocolo, puerto).</li>
+        <li>ACL Estándar: Filtra tráfico basado en el número IP del origen o destino.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de ACL Extendida</h2>
+    <pre><code>access-list 101 permit tcp any host 192.168.1.1 eq 80
+access-list 101 deny ip any any</code></pre>
+    <p>Permite tráfico TCP al puerto 80 desde cualquier origen, pero deniega todo el resto.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de ACL Estándar</h2>
+    <pre><code>access-list 10 permit ip 192.168.1.0 0.0.0.255 any
+access-list 10 deny ip any any</code></pre>
+    <p>Permite tráfico IP desde la red 192.168.1.0/24, pero deniega todo el resto.</p>
+</section>
+
+<section class="slide">
+    <h2>Ubicación de las ACLs en los Routers</h2>
+    <ul>
+        <li>ACL Extendida: Pueden aplicarse a interfaces o a subinterfaces.</li>
+        <li>ACL Estándar: Generalmente se aplican a interfaces.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Aplicación de ACL en una Interfaz</h2>
+    <pre><code>interface GigabitEthernet0/1
+ip access-group 101 in</code></pre>
+    <p>Aplica la ACL 101 a la interfaz GigabitEthernet0/1 para filtrar el tráfico entrante.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Aplicación de ACL en una Subinterfaz</h2>
+    <pre><code>interface Vlan1
+ip address 192.168.1.1 255.255.255.0
+ip access-group 10 in subinterface GigabitEthernet0/1</code></pre>
+    <p>Aplica la ACL 10 a la subinterfaz Vlan1 para filtrar el tráfico entrante.</p>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas al Usar ACLs</h2>
+    <ul>
+        <li>Minimizar el número de ACLs para evitar problemas de rendimiento.</li>
+        <li>Ordenar las reglas de la ACL de mayor a menor especificidad.</li>
+        <li>Usar nombres descriptivos para las ACLs y sus reglas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes al Usar ACLs</h2>
+    <ul>
+        <li>No ordenar las reglas de la ACL correctamente, lo que puede causar el descarte prematuro de paquetes.</li>
+        <li>No aplicar las ACLs a las interfaces correctas, lo que puede resultar en filtrado incorrecto del tráfico.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz</h2>
+    <p>¿Cuál es la diferencia entre una ACL Extendida y una ACL Estándar?</p>
+    <ol>
+        <li>ACL Extendida filtra por número IP, mientras que ACL Estándar filtra por protocolo.</li>
+        <li>ACL Extendida filtra por protocolo, mientras que ACL Estándar filtra por número IP.</li>
+        <li>No hay diferencia entre ambos tipos de ACLs.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist para Configurar ACLs</h2>
+    <ul>
+        <li>Identificar el tipo de ACL necesario (Extendida o Estándar).</li>
+        <li>Especificar los criterios de filtrado en las reglas.</li>
+        <li>Aplicar la ACL a la interfaz o subinterfaz correcta.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Configurar una ACL Extendida</h2>
+    <p>Cree una ACL Extendida que permita tráfico ICMP solo desde la red 10.0.0.0/8 y deniega todo el resto.</p>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Aplicar una ACL Estándar</h2>
+    <p>Configure una ACL Estándar que permita tráfico IP desde la red 172.16.0.0/16 a cualquier destino.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>ACLs son herramientas esenciales para filtrar el tráfico de red en los routers.</li>
+        <li>Existen dos tipos principales: ACL Extendida y ACL Estándar.</li>
+        <li>Las ACLs se aplican a interfaces o subinterfaces según sea necesario.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa General</h2>
+    <p>Seguir las mejores prácticas al configurar y administrar ACLs para garantizar la seguridad y el rendimiento de la red.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0370 Planificación y administración de redes.md · Configuración y administración básica de «routers»: → Definición y ubicación de listas de control de acceso (ACLs).</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 00:40:58</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

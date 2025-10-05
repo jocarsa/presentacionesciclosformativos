@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Herramientas de análisis del rendimiento. — Supervisión del rendimiento del sistema: — 0369 Implantación de sistemas operativos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="herramientas-de-analisis-del-rendimiento.">
+<h1>Herramientas de análisis del rendimiento.</h1>
+<p><strong>Unidad:</strong> Supervisión del rendimiento del sistema:<br><strong>Documento:</strong> 0369 Implantación de sistemas operativos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Herramientas de análisis del rendimiento</h1>
+    <p>Objetivo: Comprender y utilizar herramientas eficaces para analizar el rendimiento del sistema operativo.</p>
+</section>
+
+<section class="slide">
+    <h2>Introducción a las Herramientas de Análisis</h2>
+    <ul>
+        <li>Definición de herramientas de análisis del rendimiento</li>
+        <li>Importancia del monitoreo continuo del sistema</li>
+        <li>Ejemplos de herramientas populares (top, htop, glances, iostat)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Herramienta Top</h2>
+    <p>Top es una herramienta estándar en Unix/Linux que muestra un resumen de los procesos activos.</p>
+    <ul>
+        <li>CPU y memoria utilizadas por cada proceso</li>
+        <li>Listado de procesos ordenados por uso de CPU o memoria</li>
+        <li>Permite ver el top 10 procesos más intensivos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Herramienta Htop</h2>
+    <p>Htop es una versión mejorada y más visual de Top.</p>
+    <ul>
+        <li>Interfaz gráfica con color</li>
+        <li>Ordenación dinámica de procesos</li>
+        <li>Filtros y búsqueda avanzados</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Herramienta Glances</h2>
+    <p>Glances es una herramienta multiplataforma que ofrece un visor completo del sistema.</p>
+    <ul>
+        <li>CPU, memoria, red, discos y procesos en tiempo real</li>
+        <li>Interfaz web para visualización remota</li>
+        <li>Exportación de datos a formatos como CSV o</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Herramienta Iostat</h2>
+    <p>Iostat es una herramienta que proporciona información sobre el rendimiento del sistema de archivos.</p>
+    <ul>
+        <li>Uso de discos y unidades de estado sólido (SSD)</li>
+        <li>E/S por segundo, tiempo promedio de E/S</li>
+        <li>Colas de espera y transferencias activas</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Interpretación de los Datos</h2>
+    <p>Cómo interpretar la información proporcionada por las herramientas de análisis.</p>
+    <ul>
+        <li>Identificar procesos consumidores de recursos</li>
+        <li>Detectar problemas de rendimiento (CPU, memoria, disco)</li>
+        <li>Comparar datos históricos para identificar tendencias</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo Práctico</h2>
+    <p>Análisis del rendimiento de un servidor web bajo carga alta.</p>
+    <ul>
+        <li>Uso de top y htop para identificar procesos intensivos</li>
+        <li>Interpretación de iostat para optimizar el almacenamiento</li>
+        <li>Recomendaciones basadas en los datos obtenidos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas</h2>
+    <p>Consejos para utilizar eficazmente las herramientas de análisis del rendimiento.</p>
+    <ul>
+        <li>Ejecutar análisis periódicos (diario, semanal)</li>
+        <li>Documentar los resultados y recomendaciones</li>
+        <li>Realizar ajustes basados en los datos obtenidos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes</h2>
+    <p>Errores frecuentes al utilizar herramientas de análisis del rendimiento.</p>
+    <ul>
+        <li>No realizar análisis periódicos</li>
+        <li>No interpretar los datos correctamente</li>
+        <li>No documentar los resultados y recomendaciones</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa de Herramientas</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Herramienta</th>
+                <th>CPU</th>
+                <th>Memoria</th>
+                <th>Red</th>
+                <th>Discos</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Top</td>
+                <td>X</td>
+                <td>X</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Htop</td>
+                <td>X</td>
+                <td>X</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Glances</td>
+                <td>X</td>
+                <td>X</td>
+                <td>X</td>
+                <td>X</td>
+            </tr>
+            <tr>
+                <td>Iostat</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>X</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz</h2>
+    <p>¿Cuál de las siguientes herramientas es más adecuada para monitorear el rendimiento del sistema en tiempo real?</p>
+    <ul>
+        <li>Top</li>
+        <li>Htop</li>
+        <li>Glances</li>
+        <li>Iostat</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist de Monitoreo del Rendimiento</h2>
+    <ol>
+        <li>Ejecutar análisis periódicos (diario, semanal)</li>
+        <li>Documentar los resultados y recomendaciones</li>
+        <li>Realizar ajustes basados en los datos obtenidos</li>
+        <li>Monitorear la CPU, memoria, red y discos</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Ejercicio Práctico</h2>
+    <p>Realizar un análisis del rendimiento de su propio sistema operativo utilizando las herramientas aprendidas.</p>
+    <ul>
+        <li>Ejecutar top, htop y glances</li>
+        <li>Interpretar los resultados obtenidos</li>
+        <li>Documentar los hallazgos y recomendaciones</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <p>Resumen de las herramientas de análisis del rendimiento y su importancia en la supervisión del sistema.</p>
+    <ul>
+        <li>Herramientas disponibles (top, htop, glances, iostat)</li>
+        <li>Interpretación de los datos</li>
+        <li>Buenas prácticas y errores comunes</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa y Reglamentos</h2>
+    <p>Reglas y normativas aplicables al monitoreo del rendimiento del sistema.</p>
+    <ul>
+        <li>Políticas de seguridad informática</li>
+        <li>Reglamentos de cumplimiento (GDPR, PCI-DSS)</li>
+        <li>Normativa específica para el sector (industria, gobierno)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Preguntas y Respuestas</h2>
+    <p>Abordar dudas y responder preguntas sobre las herramientas de análisis del rendimiento.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0369 Implantación de sistemas operativos.md · Supervisión del rendimiento del sistema: → Herramientas de análisis del rendimiento.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-04 22:29:38</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

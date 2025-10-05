@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Registros de sucesos de un cortafuegos. — Instalación y configuración de cortafuegos: — 0378 Seguridad y alta disponibilidad.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="registros-de-sucesos-de-un-cortafuegos.">
+<h1>Registros de sucesos de un cortafuegos.</h1>
+<p><strong>Unidad:</strong> Instalación y configuración de cortafuegos:<br><strong>Documento:</strong> 0378 Seguridad y alta disponibilidad.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Seguridad y alta disponibilidad</h1>
+    <h3>Instalación y configuración de cortafuegos</h3>
+    <p>Objetivo: Comprender los registros de sucesos en un cortafuegos.</p>
+</section>
+
+<section class="slide">
+    <h2>Registros de sucesos en cortafuegos</h2>
+    <p>Los cortafuegos generan registros detallados que ayudan a monitorear y diagnosticar el tráfico de red.</p>
+</section>
+
+<section class="slide">
+    <h2>Tipos de registros comunes</h2>
+    <ul>
+        <li>Registros de acceso (who)</li>
+        <li>Registros de actividad (what)</li>
+        <li>Registros de origen (where)</li>
+        <li>Registros de tiempo (when)</li>
+        <li>Registros de resultado (why)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de registro</h2>
+    <pre><code>192.168.1.100 - - [24/Oct/2023:15:23:34 +0200] "GET /index.html HTTP/1.1" 200 1234</code></pre>
+    <p>Formato común de registro (Common Log Format)</p>
+</section>
+
+<section class="slide">
+    <h2>Caso práctico: Análisis de registros</h2>
+    <p>Analizar los registros puede ayudar a identificar amenazas y optimizar el rendimiento del cortafuegos.</p>
+</section>
+
+<section class="slide">
+    <h2>Proceso de análisis de registros</h2>
+    <ol>
+        <li>Recopilar registros</li>
+        <li>Filtrar datos relevantes</li>
+        <li>Identificar patrones y anomalías</li>
+        <li>Emitir alertas si es necesario</li>
+        <li>Documentar hallazgos</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas en el manejo de registros</h2>
+    <ul>
+        <li>Mantener registros por un período suficiente</li>
+        <li>Utilizar herramientas de análisis avanzadas</li>
+        <li>Seguir políticas de privacidad y seguridad al almacenar registros</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes en el manejo de registros</h2>
+    <ul>
+        <li>No mantener suficientes registros</li>
+        <li>No analizar los registros regularmente</li>
+        <li>No documentar hallazgos relevantes</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: Registros vs. Alertas</h2>
+    <table>
+        <tr><th>Registros</th><th>Alertas</th></tr>
+        <tr><td>Datos detallados</td><td>Notificación inmediata de eventos importantes</td></tr>
+        <tr><td>No son en tiempo real</td><td>Son en tiempo real o casi en tiempo real</td></tr>
+        <tr><td>Pueden ser analizados manualmente</td><td>Suelen requerir herramientas automatizadas</td></tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: ¿Qué tipo de registro indica un intento de acceso denegado?</h2>
+    <ol>
+        <li>A) Access Denied</li>
+        <li>B) Connection Refused</li>
+        <li>C) File Not Found</li>
+        <li>D) Service Unavailable</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Configuración de registros en cortafuegos</h2>
+    <ul>
+        <li>Habilitar el registro de todos los tipos de eventos</li>
+        <li>Configurar la rotación y almacenamiento de registros</li>
+        <li>Establecer niveles de gravedad adecuados para los registros</li>
+        <li>Verificar que las herramientas de análisis estén configuradas correctamente</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Analizar un registro ficticio</h2>
+    <p>Analiza el siguiente registro y explica su significado:</p>
+    <pre><code>10.0.0.1 - - [15/Nov/2023:14:30:00 +0100] "POST /login HTTP/1.1" 403 200</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <p>Los registros de sucesos en cortafuegos son esenciales para la seguridad y el monitoreo del sistema.</p>
+</section>
+
+<section class="slide">
+    <h2>Normativa relevante</h2>
+    <ul>
+        <li>NIST SP 800-53 (Seguridad de redes)</li>
+        <li>CIS Benchmarks (Configuración segura de sistemas operativos y aplicaciones)</li>
+        <li>Reglamento General de Protección de Datos (RGPD)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Preguntas frecuentes</h2>
+    <ol>
+        <li>¿Qué es un registro en un cortafuegos?</li>
+        <li>¿Para qué sirven los registros de sucesos?</li>
+        <li>¿Cómo puedo analizar los registros de un cortafuegos?</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Contacto</h2>
+    <p>Preguntas o comentarios? Contacta con el equipo de soporte.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0378 Seguridad y alta disponibilidad.md · Instalación y configuración de cortafuegos: → Registros de sucesos de un cortafuegos.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 10:18:59</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>
