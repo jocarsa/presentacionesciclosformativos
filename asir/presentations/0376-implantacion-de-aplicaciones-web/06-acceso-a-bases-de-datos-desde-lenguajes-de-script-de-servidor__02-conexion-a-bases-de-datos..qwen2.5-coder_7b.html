@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Conexión a bases de datos. — Acceso a bases de datos desde lenguajes de «script» de servidor: — 0376 Implantación de aplicaciones web.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="conexion-a-bases-de-datos.">
+<h1>Conexión a bases de datos.</h1>
+<p><strong>Unidad:</strong> Acceso a bases de datos desde lenguajes de «script» de servidor:<br><strong>Documento:</strong> 0376 Implantación de aplicaciones web.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Acceso a bases de datos desde lenguajes de «script» de servidor</h1>
+    <p>Objetivo: Comprender los métodos para conectar y acceder a bases de datos desde scripts del lado del servidor.</p>
+</section>
+
+<section class="slide">
+    <h2>Introducción</h2>
+    <ul>
+        <li>Definición de acceso a bases de datos.</li>
+        <li>Importancia en aplicaciones web dinámicas.</li>
+        <li>Ejemplos de lenguajes utilizados:,, Node.js, etc.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Concepto básico</h2>
+    <p>El acceso a bases de datos desde scripts del lado del servidor permite interactuar con la información almacenada en una base de datos para mostrarla o modificarla dinámicamente en una página web.</p>
+</section>
+
+<section class="slide">
+    <h2>Métodos comunes de conexión</h2>
+    <ul>
+        <li>APIs específicas del lenguaje (: PDO, MySQLi;: SQLAlchemy).</li>
+        <li>Bibliotecas generales (Node.js: Sequelize, Mongoose).</li>
+        <li>Frameworks ORM (Object-Relational Mapping).</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo práctico con y PDO</h2>
+    <pre><code>
+&lt;?
+$host = 'localhost';
+$dbname = 'mi_base_de_datos';
+$user = 'usuario';
+$password = 'contraseña';
+
+try {
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $user, $password);
+    echo "Conexión exitosa";
+} catch (PDOException $e) {
+    echo "Error de conexión: " . $e->getMessage();
+}
+?&gt;
+</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo práctico con y SQLAlchemy</h2>
+    <pre><code>
+from sqlalchemy import create_engine
+
+engine = create_engine('mysql+pymysql://usuario:contraseña@localhost/mi_base_de_datos')
+connection = engine.connect()
+result = connection.execute("SELECT * FROM mi_tabla")
+for row in result:
+    print(row)
+</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Seguridad en la conexión a bases de datos</h2>
+    <ul>
+        <li>Uso de sentencias preparadas (prepared statements).</li>
+        <li>Evitar inyecciones SQL.</li>
+        <li>Cifrado de credenciales.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas</h2>
+    <ul>
+        <li>Mantener la conexión a la base de datos abierta lo mínimo posible.</li>
+        <li>Utilizar transacciones para operaciones complejas.</li>
+        <li>Realizar copias de seguridad periódicas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes y soluciones</h2>
+    <ul>
+        <li>Conexión rechazada: Verificar credenciales, permisos y configuración del servidor.</li>
+        <li>Inyecciones SQL: Usar sentencias preparadas y validar entradas.</li>
+        <li>Desconexiones inesperadas: Implementar mecanismos de reconexión.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Caso práctico: Autenticación en una aplicación web</h2>
+    <p>Ejemplo de cómo conectar a una base de datos para verificar las credenciales del usuario y permitir el acceso al sistema.</p>
+</section>
+
+<section class="slide">
+    <h2>Proceso de autenticación</h2>
+    <ol>
+        <li>Recoger los datos del formulario de inicio de sesión.</li>
+        <li>Conectar a la base de datos.</li>
+        <li>Ejecutar una consulta para verificar las credenciales.</li>
+        <li>Autenticar al usuario o mostrar un mensaje de error.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: Conexión a bases de datos</h2>
+    <p>¿Cuál es la ventaja principal de usar sentencias preparadas en lugar de cadenas concatenadas para ejecutar consultas SQL?</p>
+    <ol>
+        <li>Mejora el rendimiento de las consultas.</li>
+        <li>Eficiencia en el uso de recursos del servidor.</li>
+        <li>Prevención de inyecciones SQL.</li>
+        <li>Facilita la actualización de la base de datos.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Conexión a bases de datos</h2>
+    <ul>
+        <li>Verificar las credenciales del usuario.</li>
+        <li>Usar sentencias preparadas para evitar inyecciones SQL.</li>
+        <li>Cerrar la conexión a la base de datos después de usarla.</li>
+        <li>Implementar políticas de seguridad para proteger las credenciales.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Desarrolla una función en que conecte a una base de datos y retorne un resultado de consulta.</h2>
+    <p>Ejemplo de cómo implementar la conexión y ejecución de una consulta simple.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Conexión a bases de datos es fundamental para aplicaciones web dinámicas.</li>
+        <li>Métodos como PDO, SQLAlchemy y ORM facilitan el acceso a la información.</li>
+        <li>Seguridad es crucial en todas las etapas del proceso.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa y regulaciones</h2>
+    <p>Es importante estar al tanto de las normativas y regulaciones que afectan la protección de datos, como el RGPD (Reglamento General de Protección de Datos).</p>
+</section>
+
+<section class="slide">
+    <h2>Preguntas y dudas</h2>
+    <p>¿Tienes alguna pregunta o duda sobre el acceso a bases de datos desde scripts del lado del servidor?</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0376 Implantación de aplicaciones web.md · Acceso a bases de datos desde lenguajes de «script» de servidor: → Conexión a bases de datos.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 08:30:43</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

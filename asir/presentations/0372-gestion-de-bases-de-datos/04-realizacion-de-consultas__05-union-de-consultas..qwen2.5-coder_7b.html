@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Unión de consultas. — Realización de consultas: — 0372 Gestión de bases de datos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="union-de-consultas.">
+<h1>Unión de consultas.</h1>
+<p><strong>Unidad:</strong> Realización de consultas:<br><strong>Documento:</strong> 0372 Gestión de bases de datos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Unión de consultas en SQL</h1>
+    <p>Objetivo: Aprender a combinar múltiples consultas SQL utilizando UNION y UNION ALL.</p>
+</section>
+
+<section class="slide">
+    <h2>Concepto básico</h2>
+    <ul>
+        <li><strong>UNION:</strong> Combina los resultados de dos o más SELECTs, eliminando duplicados.</li>
+        <li><strong>UNION ALL:</strong> Combina los resultados de dos o más SELECTs, incluyendo duplicados.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Sintaxis básica</h2>
+    <pre><code>
+SELECT columna1, columna2 FROM tabla1
+UNION [ALL]
+SELECT columna1, columna2 FROM tabla2;
+    </code></pre>
+</section>
+
+<section class="slide">
+    <h2>Requisitos para la unión</h2>
+    <ul>
+        <li>Número de columnas debe ser el mismo en ambos SELECTs.</li>
+        <li>Tipo de datos correspondientes en las columnas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo simple</h2>
+    <pre><code>
+SELECT nombre, edad FROM empleados
+UNION ALL
+SELECT nombre, edad FROM clientes;
+    </code></pre>
+</section>
+
+<section class="slide">
+    <h2>Ordenamiento de resultados</h2>
+    <p>Puedes ordenar los resultados combinados con ORDER BY al final:</p>
+    <pre><code>
+(SELECT nombre, edad FROM empleados
+UNION ALL
+SELECT nombre, edad FROM clientes)
+ORDER BY edad DESC;
+    </code></pre>
+</section>
+
+<section class="slide">
+    <h2>Uso de WHERE en UNION</h2>
+    <p>No puedes usar WHERE directamente en cada SELECT dentro de UNION. Filtra los datos antes de la unión:</p>
+    <pre><code>
+SELECT nombre, edad FROM empleados WHERE edad > 30
+UNION ALL
+SELECT nombre, edad FROM clientes WHERE edad > 30;
+    </code></pre>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz</h2>
+    <p>¿Cuál de las siguientes consultas es correcta?</p>
+    <ul>
+        <li><input type="radio" name="q1"> SELECT nombre FROM empleados UNION SELECT apellido FROM clientes;</li>
+        <li><input type="radio" name="q1"> SELECT nombre, edad FROM empleados WHERE edad > 30 UNION ALL SELECT nombre, edad FROM clientes WHERE edad > 30;</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas</h2>
+    <ul>
+        <li>Usa UNION ALL si es posible para evitar el costo de eliminación de duplicados.</li>
+        <li>Ordena los resultados al final si es necesario.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes</h2>
+    <ul>
+        <li>No tener el mismo número de columnas en ambos SELECTs.</li>
+        <li>Diferentes tipos de datos entre las columnas correspondientes.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa UNION vs. UNION ALL</h2>
+    <table>
+        <tr><th></th><th>UNION</th><th>UNION ALL</th></tr>
+        <tr><td>Duplicados</td><td>No incluye</td><td>Incluye</td></tr>
+        <tr><td>Costo computacional</td><td>Más alto debido a la eliminación de duplicados</td><td>Bajo, solo combina los resultados</td></tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Caso práctico</h2>
+    <p>Un banco necesita una lista de todos los clientes y empleados. ¿Cómo usar UNION?</p>
+    <pre><code>
+SELECT nombre, apellido FROM clientes
+UNION ALL
+SELECT nombre, apellido FROM empleados;
+    </code></pre>
+</section>
+
+<section class="slide">
+    <h2>Checklist</h2>
+    <ul>
+        <li>Verifica que el número de columnas sea igual en ambos SELECTs.</li>
+        <li>Asegúrate de que los tipos de datos sean compatibles.</li>
+        <li>Ordena los resultados si es necesario al final.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad práctica</h2>
+    <p>Combina las siguientes consultas usando UNION y UNION ALL:</p>
+    <pre><code>
+SELECT producto, precio FROM productos
+WHERE categoria = 'Electrónica';
+SELECT producto, precio FROM productos
+WHERE categoria = 'Ropa';
+    </code></pre>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>UNION combina resultados eliminando duplicados.</li>
+        <li>UNION ALL combina resultados incluyendo duplicados.</li>
+        <li>Requiere el mismo número de columnas y tipos de datos compatibles.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa general</h2>
+    <p>No hay normativas específicas, pero sigue las mejores prácticas de SQL para mejorar la eficiencia y legibilidad del código.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0372 Gestión de bases de datos.md · Realización de consultas: → Unión de consultas.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 02:29:28</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

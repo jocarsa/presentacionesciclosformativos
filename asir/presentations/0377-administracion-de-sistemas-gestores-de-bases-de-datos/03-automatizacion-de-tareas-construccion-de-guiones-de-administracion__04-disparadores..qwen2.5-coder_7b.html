@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Disparadores. — Automatización de tareas: construcción de guiones de administración: — 0377 Administración de sistemas gestores de bases de datos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="disparadores.">
+<h1>Disparadores.</h1>
+<p><strong>Unidad:</strong> Automatización de tareas: construcción de guiones de administración:<br><strong>Documento:</strong> 0377 Administración de sistemas gestores de bases de datos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Automatización de tareas: construcción de guiones de administración</h1>
+    <p><strong>Objetivo:</strong> Comprender y aplicar los conceptos de disparadores en sistemas gestores de bases de datos.</p>
+</section>
+
+<section class="slide">
+    <h2>¿Qué son los disparadores?</h2>
+    <ul>
+        <li>Definición: Son rutinas que se ejecutan automáticamente cuando ocurre un evento específico en la base de datos (INSERT, UPDATE, DELETE).</li>
+        <li>Ventajas: Automatizan tareas repetitivas, mantienen integridad de los datos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Estructura de un disparador</h2>
+    <ul>
+        <li>Nombre del disparador</li>
+        <li>Tipo de evento (INSERT, UPDATE, DELETE)</li>
+        <li>Tabla afectada</li>
+        <li>Cuerpo del disparador (instrucciones SQL)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo práctico</h2>
+    <pre><code>
+CREATE TRIGGER trg_insertar_usuario
+AFTER INSERT ON usuarios
+FOR EACH ROW
+BEGIN
+    INSERT INTO auditoria (usuario, accion, fecha) 
+    VALUES (NEW.usuario, 'INSERT', NOW());
+END;
+    </code></pre>
+</section>
+
+<section class="slide">
+    <h2>Tipos de disparadores</h2>
+    <ul>
+        <li><strong>Antes (BEFORE):</strong> Se ejecuta antes de que el evento ocurra.</li>
+        <li><strong>Después (AFTER):</strong> Se ejecuta después de que el evento ocurra.</li>
+        <li><strong>Insteado de (INSTEAD OF):</strong> Reemplaza el comportamiento predeterminado del evento.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Casos de uso comunes</h2>
+    <ul>
+        <li>Mantenimiento de auditoría</li>
+        <li>Actualización automática de campos</li>
+        <li>Restriciones complejas</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de restricción compleja</h2>
+    <pre><code>
+CREATE TRIGGER trg_restriccion_edad
+BEFORE INSERT ON empleados
+FOR EACH ROW
+BEGIN
+    IF NEW.edad < 18 THEN
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'La edad debe ser mayor de 18 años';
+    END IF;
+END;
+    </code></pre>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes al trabajar con disparadores</h2>
+    <ul>
+        <li>No se considera la lógica de negocio en el cuerpo del disparador.</li>
+        <li>No se manejan adecuadamente las excepciones.</li>
+        <li>Disparadores innecesarios o mal diseñados pueden causar problemas de rendimiento.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas</h2>
+    <ul>
+        <li>Documentación clara y detallada del propósito y funcionamiento del disparador.</li>
+        <li>Pruebas exhaustivas antes de implementar en producción.</li>
+        <li>Mantenimiento regular para actualizar o optimizar según sea necesario.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz</h2>
+    <p>¿Cuál es el tipo de disparador que se ejecuta antes de que un evento ocurra?</p>
+    <ol>
+        <li><input type="radio" name="q1"> Antes (BEFORE)</li>
+        <li><input type="radio" name="q1"> Después (AFTER)</li>
+        <li><input type="radio" name="q1"> Insteado de (INSTEAD OF)</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist</h2>
+    <ul>
+        <li>¿Se ha definido el nombre del disparador?</li>
+        <li>¿El evento es correcto y se ejecuta en la tabla adecuada?</li>
+        <li>¿Se han manejado adecuadamente las excepciones posibles?</li>
+        <li>¿Se ha documentado claramente el propósito del disparador?</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad práctica</h2>
+    <p>Crea un disparador que actualice automáticamente la fecha de modificación cuando se actualice una fila en la tabla 'productos'.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Disparadores son rutinas automáticas ejecutadas por eventos en la base de datos.</li>
+        <li>Se utilizan para automatizar tareas y mantener integridad de los datos.</li>
+        <li>Existen diferentes tipos de disparadores (BEFORE, AFTER, INSTEAD OF).</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa general</h2>
+    <p>La normativa específica puede variar según el sistema gestor de bases de datos utilizado. Es importante consultar la documentación oficial del SGBD para obtener información precisa.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0377 Administración de sistemas gestores de bases de datos.md · Automatización de tareas: construcción de guiones de administración: → Disparadores.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 09:37:09</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

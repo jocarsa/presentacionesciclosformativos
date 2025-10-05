@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Optimización. — Optimización del rendimiento: monitorización y optimización: — 0377 Administración de sistemas gestores de bases de datos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="optimizacion.">
+<h1>Optimización.</h1>
+<p><strong>Unidad:</strong> Optimización del rendimiento: monitorización y optimización:<br><strong>Documento:</strong> 0377 Administración de sistemas gestores de bases de datos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Optimización del rendimiento: Monitorización y optimización</h1>
+    <p>Objetivo: Comprender los métodos para mejorar la eficiencia de los sistemas gestores de bases de datos.</p>
+</section>
+
+<section class="slide">
+    <h2>Definición de Optimización</h2>
+    <p>La optimización en SGBD se refiere a las técnicas y estrategias utilizadas para mejorar el rendimiento, la eficiencia y la escalabilidad del sistema.</p>
+</section>
+
+<section class="slide">
+    <h2>Importancia de la Optimización</h2>
+    <ul>
+        <li>Aumenta la velocidad de respuesta de las consultas</li>
+        <li>Reduce el tiempo de procesamiento</li>
+        <li>Mejora la capacidad de manejo de grandes volúmenes de datos</li>
+        <li>Optimiza los recursos del servidor</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Técnicas de Optimización</h2>
+    <ul>
+        <li>Indexación</li>
+        <li>Normalización</li>
+        <li>Consultas eficientes</li>
+        <li>Caché y buffers</li>
+        <li>Replicación y distribución</li>
+        <li>Optimización de hardware</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Indexación</h2>
+    <p>La indexación mejora el rendimiento al permitir búsquedas más rápidas en los datos.</p>
+</section>
+
+<section class="slide">
+    <h2>Normalización</h2>
+    <p>La normalización reduce la redundancia y las dependencias, lo que mejora la eficiencia del SGBD.</p>
+</section>
+
+<section class="slide">
+    <h2>Consultas Eficientes</h2>
+    <ul>
+        <li>Evitar SELECT *</li>
+        <li>Usar JOINs optimizados</li>
+        <li>Avoid subconsultas innecesarias</li>
+        <li>Utilizar índices en las cláusulas WHERE</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Caché y Buffers</h2>
+    <p>El uso de cachés y buffers mejora el rendimiento al almacenar datos frecuentemente accedidos en memoria.</p>
+</section>
+
+<section class="slide">
+    <h2>Replicación y Distribución</h2>
+    <ul>
+        <li>Replicación para alta disponibilidad</li>
+        <li>Distribución para escalabilidad horizontal</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Optimización de Hardware</h2>
+    <p>El uso de hardware adecuado (CPU, RAM, almacenamiento SSD) puede mejorar significativamente el rendimiento del SGBD.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo Práctico: Optimización de una Consulta</h2>
+    <pre><code>SELECT nombre, apellido FROM clientes WHERE ciudad = 'Madrid' AND edad > 30;</code></pre>
+    <p>Optimización sugerida:</p>
+    <ul>
+        <li>Agregar índices en `ciudad` y `edad`</li>
+        <li>Usar JOINs optimizados si es necesario</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Caso Real: Optimización de un SGBD</h2>
+    <p>Un banco implementó una estrategia de indexación y normalización, lo que redujo el tiempo de respuesta de las consultas en 50%.</p>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas</h2>
+    <ul>
+        <li>Realizar análisis de carga regularmente</li>
+        <li>Mantener actualizados los índices</li>
+        <li>Monitorear el rendimiento continuamente</li>
+        <li>Optimizar consultas frecuentes</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en la Optimización</h2>
+    <ul>
+        <li>Crea índices innecesarios</li>
+        <li>No analiza el rendimiento regularmente</li>
+        <li>No optimiza consultas frecuentes</li>
+        <li>Mantiene índices obsoletos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: Optimización vs. Desnormalización</h2>
+    <table>
+        <tr>
+            <th>Optimización</th>
+            <th>Desnormalización</th>
+        </tr>
+        <tr>
+            <td>Mejora el rendimiento</td>
+            <td>Aumenta la eficiencia de almacenamiento</td>
+        </tr>
+        <tr>
+            <td>Requiere análisis regular</td>
+            <td>Puede mejorar el rendimiento en consultas frecuentes</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz</h2>
+    <p>¿Cuál de las siguientes técnicas es una forma común de optimizar la consulta a un SGBD?</p>
+    <ul>
+        <li>Aumentar el tamaño del almacenamiento</li>
+        <li>Crear índices en columnas frecuentemente consultadas</li>
+        <li>Desactivar el caché</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist de Optimización</h2>
+    <ol>
+        <li>Analizar las consultas más lentas</li>
+        <li>Crear índices en columnas frecuentemente consultadas</li>
+        <li>Optimizar consultas con JOINs</li>
+        <li>Mantener actualizados los índices</li>
+        <li>Monitorear el rendimiento regularmente</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Optimización de una Consulta</h2>
+    <p>Escriba una consulta SQL y proporcione sugerencias para optimizarla.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Optimización es crucial para mejorar el rendimiento de los SGBD</li>
+        <li>Se pueden aplicar técnicas como indexación, normalización y consultas eficientes</li>
+        <li>Es importante realizar análisis regularmente y mantener actualizados los índices</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa y Reglamentos</h2>
+    <p>No hay normativas específicas, pero es importante seguir buenas prácticas de seguridad y rendimiento en el diseño y mantenimiento de SGBD.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0377 Administración de sistemas gestores de bases de datos.md · Optimización del rendimiento: monitorización y optimización: → Optimización.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 09:41:18</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Configuración del «nodo maestro» y los «nodos esclavos». — Aplicación de criterios de disponibilidad a bases de datos distribuidas y replicadas: — 0377 Administración de sistemas gestores de bases de datos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="configuracion-del-nodo-maestro-y-los-nodos-esclavos-.">
+<h1>Configuración del «nodo maestro» y los «nodos esclavos».</h1>
+<p><strong>Unidad:</strong> Aplicación de criterios de disponibilidad a bases de datos distribuidas y replicadas:<br><strong>Documento:</strong> 0377 Administración de sistemas gestores de bases de datos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Aplicación de criterios de disponibilidad a bases de datos distribuidas y replicadas</h1>
+    <p><strong>Objetivo:</strong> Comprender la configuración del «nodo maestro» y los «nodos esclavos» en sistemas gestores de bases de datos distribuidas y replicadas.</p>
+</section>
+
+<section class="slide">
+    <h2>Definición de nodo maestro (Master)</h2>
+    <ul>
+        <li>Nodo principal que recibe todas las solicitudes de escritura.</li>
+        <li>Mantiene la versión más actualizada del conjunto de datos.</li>
+        <li>Se encarga de replicar los cambios a los nodos esclavos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Definición de nodo esclavo (Slave)</h2>
+    <ul>
+        <li>Nodos secundarios que reciben copias de los datos del nodo maestro.</li>
+        <li>No pueden recibir solicitudes de escritura, solo lectura.</li>
+        <li>Mantienen una versión actualizada de los datos basada en las replications del nodo maestro.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración del nodo maestro</h2>
+    <ul>
+        <li>Instalación y configuración del software del gestor de base de datos.</li>
+        <li>Habilitación de la replicación en el modo master.</li>
+        <li>Definición de los parámetros de replicación (por ejemplo, intervalo de replications).</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración del nodo esclavo</h2>
+    <ul>
+        <li>Instalación y configuración del software del gestor de base de datos.</li>
+        <li>Habilitación de la replicación en el modo slave.</li>
+        <li>Especificación del nodo maestro como origen de los datos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración adicional</h2>
+    <ul>
+        <li>Sincronización inicial: transferencia de todos los datos del nodo maestro al esclavo.</li>
+        <li>Monitoreo y mantenimiento de la replicación en tiempo real.</li>
+        <li>Resolución de conflictos si ocurren durante las replications.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo práctico</h2>
+    <p><strong>Caso:</strong> Configuración de una base de datos MySQL distribuida con un nodo maestro y dos nodos esclavos.</p>
+    <ul>
+        <li>Nodo maestro: mysql-master.example.com</li>
+        <li>Nodos esclavos: mysql-slave1.example.com, mysql-slave2.example.com</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Proceso de configuración</h2>
+    <ol>
+        <li>Configurar el nodo maestro en MySQL.</li>
+        <li>Configurar los nodos esclavos en MySQL.</li>
+        <li>Iniciar la replicación desde el nodo maestro a los esclavos.</li>
+        <li>Verificar la sincronización y funcionamiento de la replicación.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas</h2>
+    <ul>
+        <li>Usar un hardware robusto para los nodos maestros y esclavos.</li>
+        <li>Mantener actualizados el software del gestor de base de datos.</li>
+        <li>Realizar copias de seguridad periódicas de los datos en los nodos esclavos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes</h2>
+    <ul>
+        <li>No configurar correctamente el parámetro del intervalo de replications.</li>
+        <li>No realizar la sincronización inicial adecuada.</li>
+        <li>No monitorear y mantener la replicación en tiempo real.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa con bases de datos locales</h2>
+    <table>
+        <tr>
+            <th>Bases de datos locales</th>
+            <th>Bases de datos distribuidas y replicadas</th>
+        </tr>
+        <tr>
+            <td>No requieren configuración adicional.</td>
+            <td>Requieren configuración del nodo maestro y esclavos.</td>
+        </tr>
+        <tr>
+            <td>No tienen redundancia de datos.</td>
+            <td>Tienen redundancia de datos en los nodos esclavos.</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz</h2>
+    <p><strong>Pregunta:</strong> ¿Qué es el nodo maestro en un sistema de bases de datos distribuidas y replicadas?</p>
+    <ul>
+        <li>a) Un nodo que solo recibe solicitudes de lectura.</li>
+        <li>b) Un nodo que recibe todas las solicitudes de escritura y replica los cambios a los nodos esclavos.</li>
+        <li>c) Un nodo que no puede recibir solicitudes de escritura ni lectura.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist de configuración</h2>
+    <ol>
+        <li>Instalar y configurar el software del gestor de base de datos en los nodos maestros y esclavos.</li>
+        <li>Habilitar la replicación en modo master para el nodo maestro.</li>
+        <li>Especificar el nodo maestro como origen de los datos en los nodos esclavos.</li>
+        <li>Iniciar la sincronización inicial de datos entre el nodo maestro y los esclavos.</li>
+        <li>Monitorear y mantener la replicación en tiempo real.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Actividad práctica</h2>
+    <p><strong>Tarea:</strong> Configurar un sistema de bases de datos MySQL distribuido con un nodo maestro y dos nodos esclavos siguiendo los pasos descritos en la presentación.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Nodo maestro: recibe escrituras, replica a los esclavos.</li>
+        <li>Nodos esclavos: solo lectura, mantienen copias de los datos del maestro.</li>
+        <li>Configuración incluye instalación, replicación y monitoreo.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa general</h2>
+    <p><strong>Nota:</strong> La normativa específica puede variar según el contexto legal y organizacional. Consulte las políticas internas de su organización o consulte a un experto en seguridad informática.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0377 Administración de sistemas gestores de bases de datos.md · Aplicación de criterios de disponibilidad a bases de datos distribuidas y replicadas: → Configuración del «nodo maestro» y los «nodos esclavos».</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 09:53:33</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

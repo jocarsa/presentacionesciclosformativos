@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Conmutadores y dominios de colisión y «broadcast». — Configuración y administración de conmutadores: — 0370 Planificación y administración de redes.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="conmutadores-y-dominios-de-colision-y-broadcast-.">
+<h1>Conmutadores y dominios de colisión y «broadcast».</h1>
+<p><strong>Unidad:</strong> Configuración y administración de conmutadores:<br><strong>Documento:</strong> 0370 Planificación y administración de redes.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Configuración y administración de conmutadores</h1>
+    <p><strong>Objetivo:</strong> Comprender los conceptos básicos de dominios de colisión y «broadcast» en conmutadores.</p>
+</section>
+
+<section class="slide">
+    <h2>Definición de Dominio de Colisión</h2>
+    <p>Un dominio de colisión es un área de red donde dos o más dispositivos pueden intentar enviar datos al mismo tiempo, causando una colisión.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Dominio de Colisión</h2>
+    <ul>
+        <li>Un cable Ethernet simple entre dos computadoras.</li>
+        <li>Una red con varios dispositivos conectados a un solo conmutador.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Definición de «Broadcast»</h2>
+    <p>El término «broadcast» se refiere al envío de datos a todos los dispositivos en una red, sin necesidad de especificar un destino individual.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de «Broadcast»</h2>
+    <ul>
+        <li>Un paquete IP con dirección de destino como "255.255.255.255".</li>
+        <li>La transmisión de un mensaje a todos los usuarios en una red local.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Impacto de la Colisión y el «Broadcast»</h2>
+    <p><strong>Colisión:</strong> Reduce la velocidad de transmisión y puede causar errores.</p>
+    <p><strong>Broadcast:</strong> Puede sobrecargar la red, especialmente en redes con muchos dispositivos.</p>
+</section>
+
+<section class="slide">
+    <h2>Prevenir la Colisión</h2>
+    <ul>
+        <li>Usar segmentación de red (subredes).</li>
+        <li>Implementar protocolos de control de colisiones como CSMA/CD.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Prevenir el «Broadcast»</h2>
+    <ul>
+        <li>Usar segmentación de red (subredes).</li>
+        <li>Configurar filtros de paquetes para limitar el «broadcast».</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas</h2>
+    <ul>
+        <li>Evitar la configuración de redes en modo promiscuo.</li>
+        <li>Limitar el uso de «broadcast» en aplicaciones no necesarias.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes</h2>
+    <ul>
+        <li>No segmentar la red adecuadamente, causando colisiones y sobrecarga.</li>
+        <li>No configurar correctamente los filtros de paquetes para el «broadcast».</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa</h2>
+    <table>
+        <tr>
+            <th>Colisión</th>
+            <th>Broadcast</th>
+        </tr>
+        <tr>
+            <td>Afecta la velocidad de transmisión.</td>
+            <td>Puede sobrecargar la red.</td>
+        </tr>
+        <tr>
+            <td>Se evita con segmentación y CSMA/CD.</td>
+            <td>Se limita con filtros de paquetes.</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz</h2>
+    <p>¿Qué es un dominio de colisión?</p>
+    <ul>
+        <li>a) Un área de red donde se envían datos a todos los dispositivos.</li>
+        <li>b) Una técnica para aumentar la velocidad de transmisión.</li>
+        <li>c) Un método para controlar el acceso a la red.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz</h2>
+    <p>¿Qué es el «broadcast»?</p>
+    <ul>
+        <li>a) Una técnica para aumentar la velocidad de transmisión.</li>
+        <li>b) Un área de red donde se envían datos a todos los dispositivos.</li>
+        <li>c) Un método para controlar el acceso a la red.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist</h2>
+    <ul>
+        <li>¿La red está segmentada adecuadamente?</li>
+        <li>¿Se están utilizando protocolos de control de colisiones?</li>
+        <li>¿Se han configurado correctamente los filtros de paquetes para el «broadcast»?</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad</h2>
+    <p>Evaluación práctica: Configurar segmentación y control de colisiones en un conmutador.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Dominio de colisión: Área de red donde se producen colisiones.</li>
+        <li>Broadcast: Envío de datos a todos los dispositivos en la red.</li>
+        <li>Prevenirlos: Segmentación, CSMA/CD y filtros de paquetes.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa General</h2>
+    <p><strong>IEEE 802.3:</strong> Estándar para redes Ethernet.</p>
+    <p><strong>IEEE 802.1Q:</strong> Estándar para VLANs (Segmentación de red).</p>
+</section>
+
+<section class="slide">
+    <h2>Preguntas Finales</h2>
+    <ul>
+        <li>¿Qué es un dominio de colisión?</li>
+        <li>¿Cómo se puede prevenir la colisión en una red?</li>
+        <li>¿Qué es el «broadcast» y cómo se limita su uso?</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Agradecimiento</h2>
+    <p>Muchas gracias por su atención.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0370 Planificación y administración de redes.md · Configuración y administración de conmutadores: → Conmutadores y dominios de colisión y «broadcast».</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-04 23:53:18</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

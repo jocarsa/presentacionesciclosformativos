@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Autenticación y control de acceso. — Instalación y administración de servidores Web: — 0375 Servicios de red e Internet.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="autenticacion-y-control-de-acceso.">
+<h1>Autenticación y control de acceso.</h1>
+<p><strong>Unidad:</strong> Instalación y administración de servidores Web:<br><strong>Documento:</strong> 0375 Servicios de red e Internet.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Autenticación y control de acceso en servidores Web</h1>
+    <p>Objetivo: Comprender los métodos de autenticación y control de acceso en servidores Web.</p>
+</section>
+
+<section class="slide">
+    <h2>Definición de Autenticación</h2>
+    <p>Autenticación es el proceso mediante el cual se verifica la identidad de un usuario o servicio antes de permitirle acceder a recursos protegidos.</p>
+</section>
+
+<section class="slide">
+    <h2>Métodos de Autenticación en Servidores Web</h2>
+    <ul>
+        <li>Autenticación basada en contraseñas (Basic Auth)</li>
+        <li>Autenticación basada en tokens (JWT, OAuth)</li>
+        <li>Autenticación multifactor (MFA)</li>
+        <li>Autenticación de dos factores (2FA)</li>
+        <li>Autenticación basada en certificados digitales</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo: Autenticación Basada en Contraseñas</h2>
+    <p>El usuario ingresa su nombre de usuario y contraseña, que son verificados contra una base de datos para permitir el acceso.</p>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico: Implementación de Autenticación MFA</h2>
+    <p>Se implementa un sistema que solicita tanto la contraseña como un código OTP enviado a un dispositivo móvil del usuario.</p>
+</section>
+
+<section class="slide">
+    <h2>Proceso de Control de Acceso</h2>
+    <ol>
+        <li>El usuario intenta acceder a una recurso protegido.</li>
+        <li>El servidor solicita autenticación al usuario.</li>
+        <li>El usuario proporciona sus credenciales.</li>
+        <li>El servidor verifica las credenciales.</li>
+        <li>Si son válidas, el servidor permite el acceso y asigna permisos.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas en Autenticación y Control de Acceso</h2>
+    <ul>
+        <li>Usar contraseñas fuertes y únicas.</li>
+        <li>Habilitar autenticación multifactor siempre que sea posible.</li>
+        <li>Utilizar tokens de acceso cortos y renovables.</li>
+        <li>Implementar políticas de expiración de sesiones.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en Autenticación y Control de Acceso</h2>
+    <ul>
+        <li>No usar contraseñas fuertes.</li>
+        <li>Habilitar autenticación multifactor opcionalmente.</li>
+        <li>Utilizar tokens de acceso largos y permanentes.</li>
+        <li>No implementar políticas de expiración de sesiones.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: Autenticación Basada en Contraseñas vs. Tokens</h2>
+    <table>
+        <tr>
+            <th>Método</th>
+            <th>Ventajas</th>
+            <th>Inventajas</th>
+        </tr>
+        <tr>
+            <td>Contraseñas</td>
+            <td>Simplicidad, amplia compatibilidad.</td>
+            <td>Menos segura, vulnerabilidad a ataques de fuerza bruta.</td>
+        </tr>
+        <tr>
+            <td>Tokens</td>
+            <td>Más segura, autenticación basada en estado menos.</td>
+            <td>Implementación más compleja, gestión de tokens.</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Tipos de Autenticación</h2>
+    <p>¿Cuáles son los tres tipos principales de autenticación en servidores Web?</p>
+    <ol>
+        <li>Autenticación basada en contraseñas</li>
+        <li>Autenticación basada en tokens</li>
+        <li>Autenticación multifactor</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Implementación de Autenticación MFA</h2>
+    <ul>
+        <li>Habilitar autenticación multifactor.</li>
+        <li>Configurar sistema de envío deódigos OTP.</li>
+        <li>Probar el proceso de autenticación con MFA.</li>
+        <li>Asegurarse de que los usuarios entiendan cómo usar MFA.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Crear una Política de Autenticación</h2>
+    <p>Crea una política de autenticación para un servidor Web, incluyendo tipos de autenticación permitidos y procedimientos de control de acceso.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Autenticación es el proceso de verificar la identidad del usuario.</li>
+        <li>Métodos comunes: contraseñas, tokens, MFA.</li>
+        <li>Buenas prácticas: contraseñas fuertes, autenticación multifactor.</li>
+        <li>Errores comunes: contraseñas débiles, autenticación opcional.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa General sobre Seguridad en Servidores Web</h2>
+    <p>La normativa como la Ley Orgánica 15/1999 de Protección de Datos (LOPD) y el Reglamento General de Protección de Datos (RGPD) requieren medidas de seguridad adecuadas para proteger los datos personales.</p>
+</section>
+
+<section class="slide">
+    <h2>Conclusión</h2>
+    <p>La autenticación y control de acceso son fundamentales para la seguridad de servidores Web. Implementar métodos seguros y seguir buenas prácticas es crucial para proteger los recursos contra accesos no autorizados.</p>
+</section>
+
+<section class="slide">
+    <h2>Preguntas Frecuentes</h2>
+    <ul>
+        <li>¿Qué es la autenticación?</li>
+        <li>¿Cuáles son los métodos más seguros de autenticación?</li>
+        <li>¿Cómo puedo implementar MFA en mi servidor Web?</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Contacto</h2>
+    <p>Preguntas o dudas: [Email del instructor]</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0375 Servicios de red e Internet.md · Instalación y administración de servidores Web: → Autenticación y control de acceso.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 06:42:01</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

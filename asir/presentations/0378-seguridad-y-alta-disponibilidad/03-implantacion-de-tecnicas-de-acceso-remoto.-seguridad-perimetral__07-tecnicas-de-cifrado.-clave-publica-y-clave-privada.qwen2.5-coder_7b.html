@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Técnicas de cifrado. Clave pública y clave privada: — Implantación de técnicas de acceso remoto. Seguridad perimetral: — 0378 Seguridad y alta disponibilidad.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="tecnicas-de-cifrado.-clave-publica-y-clave-privada">
+<h1>Técnicas de cifrado. Clave pública y clave privada:</h1>
+<p><strong>Unidad:</strong> Implantación de técnicas de acceso remoto. Seguridad perimetral:<br><strong>Documento:</strong> 0378 Seguridad y alta disponibilidad.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+  <h2>Tecniques de cifrado. Clave pública y clave privada</h2>
+  <p>Objetivo: Comprender los conceptos básicos de cifrado, enfocándose en el uso de claves públicas y privadas.</p>
+</section>
+
+<section class="slide">
+  <h3>Concepto de cifrado</h3>
+  <ul>
+    <li>Cifrado es el proceso de convertir información legible (clara) en una forma que solo pueda ser leída por alguien con la clave adecuada.</li>
+    <li>El cifrado asegura la confidencialidad, integridad y autenticidad de los datos transmitidos o almacenados.</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h3>Clave pública y clave privada</h3>
+  <p>Las claves públicas y privadas son pares de números grandes que se generan juntas.ada par consta de dos claves:</p>
+  <ul>
+    <li><strong>Clave pública:</strong> Se puede compartir libremente con cualquier persona.</li>
+    <li><strong>Clave privada:</strong> Debe mantenerse en secreto y nunca compartirse.</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h3>Funcionamiento del cifrado asimétrico</h3>
+  <p>El cifrado asimétrico utiliza tanto la clave pública como la clave privada:</p>
+  <ul>
+    <li>Cifrado con la clave pública: El remitente cifra el mensaje con la clave pública del destinatario.</li>
+    <li>Descifrado con la clave privada: El destinatario descifra el mensaje con su propia clave privada.</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h3>Ejemplo de uso en SSH</h3>
+  <p>SSH (Secure Shell) utiliza claves públicas y privadas para autenticar usuarios:</p>
+  <ul>
+    <li>El cliente genera una clave pública y una clave privada.</li>
+    <li>La clave pública se envía al servidor durante la conexión.</li>
+    <li>El servidor verifica la firma digital con la clave pública correspondiente a la clave privada del cliente.</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h3>Ejemplo de uso en SSL/TLS</h3>
+  <p>SSL/TLS (Secure Sockets Layer/Transport Layer Security) utiliza claves públicas y privadas para cifrar las comunicaciones:</p>
+  <ul>
+    <li>El cliente envía una solicitud de conexión al servidor.</li>
+    <li>El servidor responde con su certificado digital, que contiene su clave pública.</li>
+    <li>El cliente verifica el certificado y genera un par temporal de claves públicas y privadas para la sesión.</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h3>Ventajas del cifrado asimétrico</h3>
+  <ul>
+    <li>Cifrado de alta seguridad: Aunque la clave pública es compartida, solo la clave privada puede descifrar los datos.</li>
+    <li>Autenticación digital: Permite verificar la identidad de las partes involucradas.</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h3>Desventajas del cifrado asimétrico</h3>
+  <ul>
+    <li>Cálculos intensivos: El cifrado y descifrado con claves largas son computacionalmente intensivos.</li>
+    <li>Requisitos de almacenamiento: Se requieren almacenes grandes para almacenar las claves privadas.</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h3>Comparación VPN a nivel de red y SSL/TLS</h3>
+  <table>
+    <tr>
+      <th>Tecnología</th>
+      <th>Ventajas</th>
+      <th>Desventajas</th>
+    </tr>
+    <tr>
+      <td>VPN a nivel de red (IKEv2/IPSec)</td>
+      <td>Seguridad robusta, autenticación múltiple, soporte para múltiples protocolos.</td>
+      <td>Configuración compleja, requerimientos de hardware y software adicionales.</td>
+    </tr>
+    <tr>
+      <td>SSL/TLS</td>
+      <td>Cifrado de datos en tránsito, autenticación digital, soporte para aplicaciones web.</td>
+      <td>Dependencia del protocolo HTTP/HTTPS, limitado a aplicaciones web.</td>
+    </tr>
+  </table>
+</section>
+
+<section class="slide">
+  <h3>Buenas prácticas en el uso de claves públicas y privadas</h3>
+  <ul>
+    <li>Generar claves de tamaño adecuado (al menos 2048 bits).</li>
+    <li>Utilizar certificados digitales emitidos por autoridades confiables.</li>
+    <li>Regularmente actualizar las claves y certificados.</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h3>Errores comunes en el uso de claves públicas y privadas</h3>
+  <ul>
+    <li>Compartir la clave privada con terceros.</li>
+    <li>No actualizar regularmente las claves y certificados.</li>
+    <li>Usar claves de tamaño insuficientemente grande.</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h3>Caso práctico: Implementación de SSH con claves públicas y privadas</h3>
+  <p>Para implementar SSH con claves públicas y privadas:</p>
+  <ol>
+    <li>Generar una pareja de claves (publica.pem, private.pem).</li>
+    <li>Copiar la clave pública al servidor remoto.</li>
+    <li>Configurar el cliente para usar la clave privada.</li>
+    <li>Conectar al servidor utilizando SSH.</li>
+  </ol>
+</section>
+
+<section class="slide">
+  <h3>Mini-quiz: ¿Cuál es la diferencia entre VPN a nivel de red y SSL/TLS?</h3>
+  <p>Elija la respuesta correcta:</p>
+  <ul>
+    <li><input type="radio" name="quiz"> VPN a nivel de red cifra datos en tránsito.</li>
+    <li><input type="radio" name="quiz"> SSL/TLS autentica identidades digitales.</li>
+    <li><input type="radio" name="quiz"> VPN a nivel de red es más adecuada para aplicaciones web.</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h3>Checklist: Implementación segura de SSH con claves públicas y privadas</h3>
+  <ol>
+    <li>Generar una pareja de claves (publica.pem, private.pem).</li>
+    <li>Copiar la clave pública al servidor remoto.</li>
+    <li>Configurar el cliente para usar la clave privada.</li>
+    <li>Verificar los permisos de las claves (solo lectura para la clave privada).</li>
+  </ol>
+</section>
+
+<section class="slide">
+  <h3>Actividad: Configuración de una conexión SSH segura con claves públicas y privadas</h3>
+  <p>Siga los pasos descritos en el caso práctico para configurar una conexión SSH segura.</p>
+</section>
+
+<section class="slide">
+  <h3>Resumen</h3>
+  <ul>
+    <li>Cifrado asimétrico utiliza claves públicas y privadas para garantizar la seguridad de los datos.</li>
+    <li>SSH y SSL/TLS son ejemplos comunes de aplicaciones que utilizan este tipo de cifrado.</li>
+    <li>Buenas prácticas incluyen generar claves seguras, mantenerlas actualizadas y proteger las claves privadas.</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h3>Normativa general</h3>
+  <p>La normativa vigente establece requisitos mínimos para la implementación de sistemas de seguridad:</p>
+  <ul>
+    <li>Norma ISO/IE 27001: Norma internacional para el manejo seguro de la información.</li>
+    <li>Reglamento General de Protección de Datos (RGPD): Reglamento europeo sobre protección de datos personales.</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h3>Preguntas y discusión</h3>
+  <p>¿Tiene alguna pregunta o duda sobre el tema? Estamos aquí para ayudar.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0378 Seguridad y alta disponibilidad.md · Implantación de técnicas de acceso remoto. Seguridad perimetral: → Técnicas de cifrado. Clave pública y clave privada:</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 10:11:11</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

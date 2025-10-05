@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Modelo de datos. — Diseño lógico de bases de datos: — 0372 Gestión de bases de datos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="modelo-de-datos.">
+<h1>Modelo de datos.</h1>
+<p><strong>Unidad:</strong> Diseño lógico de bases de datos:<br><strong>Documento:</strong> 0372 Gestión de bases de datos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Diseño lógico de bases de datos: Modelo de datos</h1>
+    <p>Objetivo: Comprender los conceptos básicos del modelo de datos y su importancia en el diseño lógico de bases de datos.</p>
+</section>
+
+<section class="slide">
+    <h2>Modelo de datos</h2>
+    <p>El modelo de datos es una representación abstracta de la información que se desea almacenar y procesar en una base de datos. Los modelos de datos principales son:</p>
+    <ul>
+        <li>Modelo relacional (ERD)</li>
+        <li>Modelo jerárquico</li>
+        <li>Modelo en red</li>
+        <li>Modelo orientado a objetos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Modelo relacional (ERD)</h2>
+    <p>El Modelo Relacional, también conocido como Modelo Entidad-Relación-Dominio (ERD), es el modelo de datos más común y ampliamente utilizado. Se basa en la teoría algebraica de conjuntos.</p>
+</section>
+
+<section class="slide">
+    <h2>Entidades</h2>
+    <p>Una entidad representa un objeto o concepto del mundo real que tiene una identidad única y puede existir independientemente de otras entidades. Ejemplos: Cliente, Producto, Empleado.</p>
+</section>
+
+<section class="slide">
+    <h2>Atributos</h2>
+    <p>Los atributos son las características o propiedades de una entidad.ada atributo tiene un nombre y un tipo de dato. Ejemplo: Nombre (Texto), Edad (Número).</p>
+</section>
+
+<section class="slide">
+    <h2>Relaciones</h2>
+    <p>Una relación establece una conexión entre dos o más entidades. Las relaciones pueden ser uno a uno, uno a muchos o muchos a muchos. Ejemplo: Un cliente puede tener muchas órdenes.</p>
+</section>
+
+<section class="slide">
+    <h2>Cardinalidad</h2>
+    <p>La cardinalidad indica cuántos elementos de una entidad están relacionados con un elemento de otra entidad. Ejemplos:</p>
+    <ul>
+        <li>Uno a Uno (1:1)</li>
+        <li>Uno a Muchos (1:N)</li>
+        <li>Muchos a Muchos (M:N)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de ERD</h2>
+    <p><img src="erd_example.png" alt="Ejemplo de Modelo ERD"></p>
+</section>
+
+<section class="slide">
+    <h2>Normalización</h2>
+    <p>La normalización es el proceso de eliminar la redundancia y los datos no consistentes en una base de datos. Los niveles de normalización son:</p>
+    <ul>
+        <li>Nivel 1 (NFC)</li>
+        <li>Nivel 2 (BCNF)</li>
+        <li>Nivel 3 (4FN, 5FN)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Principios de normalización</h2>
+    <p>Los principios principales de la normalización son:</p>
+    <ul>
+        <li>No redundancia</li>
+        <li>Independencia funcional</li>
+        <li>Integridad referencial</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Caso práctico: Diseño de una base de datos de biblioteca</h2>
+    <p><img src="library_db_design.png" alt="Diseño de base de datos de biblioteca"></p>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz</h2>
+    <p>¿Cuál es el modelo de datos más utilizado en la actualidad?</p>
+    <ul>
+        <li>Modelo relacional (ERD)</li>
+        <li>Modelo jerárquico</li>
+        <li>Modelo en red</li>
+        <li>Modelo orientado a objetos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas</h2>
+    <p>Al diseñar un modelo de datos, es importante:</p>
+    <ul>
+        <li>Definir entidades claras y bien definidas</li>
+        <li>Usar atributos descriptivos y únicos</li>
+        <li>Establecer relaciones coherentes y necesarias</li>
+        <li>Aplicar la normalización para evitar redundancia</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes en el diseño de modelos de datos</h2>
+    <p>Algunos errores comunes son:</p>
+    <ul>
+        <li>No definir entidades suficientes o redundantes</li>
+        <li>Usar atributos ambiguos o innecesarios</li>
+        <li>No establecer relaciones coherentes</li>
+        <li>No aplicar la normalización adecuada</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist de diseño de modelos de datos</h2>
+    <p><img src="db_design_checklist.png" alt="Checklist de diseño de modelos de datos"></p>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Diseño de un modelo de datos simple</h2>
+    <p>Elige una entidad y diseña su modelo ERD, incluyendo atributos y relaciones.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <p>En resumen, el diseño lógico de bases de datos implica crear un modelo de datos que represente adecuadamente la información del mundo real. El Modelo Relacional (ERD) es el más utilizado y se basa en entidades, atributos y relaciones. La normalización es crucial para evitar redundancia y errores.</p>
+</section>
+
+<section class="slide">
+    <h2>Normativa</h2>
+    <p>No hay normativas específicas sobre el diseño de modelos de datos, pero es importante seguir buenas prácticas y seguir recomendaciones profesionales para garantizar la calidad del diseño.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0372 Gestión de bases de datos.md · Diseño lógico de bases de datos: → Modelo de datos.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 02:14:48</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

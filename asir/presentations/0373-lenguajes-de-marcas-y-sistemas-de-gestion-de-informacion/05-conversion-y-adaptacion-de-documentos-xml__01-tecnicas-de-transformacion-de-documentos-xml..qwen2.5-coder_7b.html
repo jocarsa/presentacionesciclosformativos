@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Técnicas de transformación de documentos XML. — Conversión y adaptación de documentos XML: — 0373 Lenguajes de marcas y sistemas de gestión de información.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="tecnicas-de-transformacion-de-documentos-xml.">
+<h1>Técnicas de transformación de documentos XML.</h1>
+<p><strong>Unidad:</strong> Conversión y adaptación de documentos XML:<br><strong>Documento:</strong> 0373 Lenguajes de marcas y sistemas de gestión de información.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Título: Conversión y adaptación de documentos</h2>
+    <p>Objetivo: Aprender técnicas para transformar y adaptar documentos.</p>
+</section>
+
+<section class="slide">
+    <h3>Introducción a la Transformación de Documentos</h3>
+    <ul>
+        <li>Definición de transformación</li>
+        <li>Importancia en el manejo de datos estructurados</li>
+        <li>Tecnologías utilizadas: XSLT, XPath, XQuery</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>XSLT (Extensible Stylesheet Language Transformations)</h3>
+    <p>Descripción de XSLT y sus principales características.</p>
+</section>
+
+<section class="slide">
+    <h3>Ejemplo básico de transformación con XSLT</h3>
+    <pre><code>&lt;? version="1.0" encoding="UTF-8"?&gt;
+&lt;xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&gt;
+  &lt;xsl:output method=""/&gt;
+  &lt;xsl:template match="/libros"&gt;
+    &lt;ul&gt;
+      &lt;xsl:for-each select="libro"&gt;
+        &lt;li&gt;&lt;xsl:value-of select="titulo"/&gt; - &lt;xsl:value-of select="autor"/&gt;&lt;/li&gt;
+      &lt;/xsl:for-each&gt;
+    &lt;/ul&gt;
+  &lt;/xsl:template&gt;
+&lt;/xsl:stylesheet&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h3>XPath ( Path Language)</h3>
+    <p>Descripción de XPath y sus aplicaciones en la transformación.</p>
+</section>
+
+<section class="slide">
+    <h3>Ejemplo de consulta XPath</h3>
+    <pre><code>/libros/libro[titulo='El Quijote']/autor</code></pre>
+</section>
+
+<section class="slide">
+    <h3>XQuery (XQuery for)</h3>
+    <p>Descripción de XQuery y sus ventajas sobre XPath.</p>
+</section>
+
+<section class="slide">
+    <h3>Ejemplo básico de consulta XQuery</h3>
+    <pre><code>xquery version "1.0";
+for $libro in doc('biblioteca.xml')/libros/libro
+where $libro/titulo = 'El Quijote'
+return $libro/autor</code></pre>
+</section>
+
+<section class="slide">
+    <h3>Uso de XSLT para adaptar documentos</h3>
+    <p>Cómo transformar un documento en otro con diferentes estructuras.</p>
+</section>
+
+<section class="slide">
+    <h3>Ejemplo práctico: Adaptación de un documento</h3>
+    <pre><code>&lt;? version="1.0" encoding="UTF-8"?&gt;
+&lt;xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&gt;
+  &lt;xsl:output method=""/&gt;
+  &lt;xsl:template match="/libros"&gt;
+    &lt;table&gt;
+      &lt;tr&gt;&lt;th&gt;Título&lt;/th&gt;&lt;th&gt;Autor&lt;/th&gt;&lt;/tr&gt;
+      &lt;xsl:for-each select="libro"&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;xsl:value-of select="titulo"/&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;xsl:value-of select="autor"/&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/xsl:for-each&gt;
+    &lt;/table&gt;
+  &lt;/xsl:template&gt;
+&lt;/xsl:stylesheet&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h3>Buenas prácticas en la transformación</h3>
+    <ul>
+        <li>Validar los documentos antes de la transformación</li>
+        <li>Usar namespaces adecuadamente</li>
+        <li>Mantener el código XSLT legible y mantenible</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Errores comunes en la transformación</h3>
+    <ul>
+        <li>No validar los documentos</li>
+        <li>Olvidar namespaces</li>
+        <li>Código XSLT mal estructurado y difícil de mantener</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Comparativa entre XSLT, XPath y XQuery</h3>
+    <table>
+        <tr><th>Tecnología</th><th>Características principales</th></tr>
+        <tr><td>XSLT</td><td>Transformación de documentos a otros formatos</td></tr>
+        <tr><td>XPath</td><td>Navegación y consulta en documentos</td></tr>
+        <tr><td>XQuery</td><td>Consulta y procesamiento avanzado de datos</td></tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h3>Mini-quiz: Identificación de tecnologías</h3>
+    <p>¿Cuál tecnología se utiliza para transformar un documento en otro?</p>
+    <ol>
+        <li>XSLT</li>
+        <li>XPath</li>
+        <li>XQuery</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h3>Checklist de transformación</h3>
+    <ul>
+        <li>Validar los documentos</li>
+        <li>Usar namespaces adecuadamente</li>
+        <li>Mantener el código XSLT legible y mantenible</li>
+        <li>Probar la transformación con diferentes casos de uso</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Ejercicios prácticos: Transformación</h3>
+    <p>Realizar una transformación utilizando XSLT.</p>
+</section>
+
+<section class="slide">
+    <h3>Resumen de las técnicas de transformación de documentos</h3>
+    <ul>
+        <li>XSLT: Transformación a otros formatos</li>
+        <li>XPath: Navegación y consulta en documentos</li>
+        <li>XQuery: Consulta avanzada de datos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Normativa y recomendaciones</h3>
+    <p>Normativas y recomendaciones sobre la transformación y gestión de documentos.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0373 Lenguajes de marcas y sistemas de gestión de información.md · Conversión y adaptación de documentos XML: → Técnicas de transformación de documentos XML.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 04:22:16</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

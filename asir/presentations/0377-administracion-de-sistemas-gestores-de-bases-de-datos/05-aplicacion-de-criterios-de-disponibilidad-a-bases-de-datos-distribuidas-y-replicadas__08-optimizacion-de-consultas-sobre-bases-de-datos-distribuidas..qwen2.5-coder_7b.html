@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Optimización de consultas sobre bases de datos distribuidas. — Aplicación de criterios de disponibilidad a bases de datos distribuidas y replicadas: — 0377 Administración de sistemas gestores de bases de datos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="optimizacion-de-consultas-sobre-bases-de-datos-distribuidas.">
+<h1>Optimización de consultas sobre bases de datos distribuidas.</h1>
+<p><strong>Unidad:</strong> Aplicación de criterios de disponibilidad a bases de datos distribuidas y replicadas:<br><strong>Documento:</strong> 0377 Administración de sistemas gestores de bases de datos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Aplicación de criterios de disponibilidad a bases de datos distribuidas y replicadas</h1>
+    <p><strong>Objetivo:</strong> Comprender las técnicas para optimizar consultas en sistemas de bases de datos distribuidas y replicadas.</p>
+</section>
+
+<section class="slide">
+    <h2>Definición de Bases de Datos Distribuidas y Replicadas</h2>
+    <ul>
+        <li><strong>Distribuidas:</strong> Datos almacenados en múltiples ubicaciones geográficas.</li>
+        <li><strong>Replicadas:</strong> Copias de los datos en diferentes servidores para redundancia.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Criterios de Disponibilidad</h2>
+    <ul>
+        <li>Tiempo de inactividad (MTBF)</li>
+        <li>Disponibilidad del sistema (% uptime)</li>
+        <li>Resistencia a fallos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Optimización de Consultas en Bases Distribuidas</h2>
+    <p><strong>Objetivo:</strong> Mejorar el rendimiento y la eficiencia de las consultas en sistemas distribuidos.</p>
+</section>
+
+<section class="slide">
+    <h2>Dividir Consultas</h2>
+    <ul>
+        <li>Divide la consulta en partes más pequeñas.</li>
+        <li>Ejecuta cada parte en un servidor local.</li>
+        <li>Combina los resultados en el cliente final.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Usar Indexes</h2>
+    <ul>
+        <li>Indexes mejorarán significativamente la velocidad de búsqueda.</li>
+        <li>Crea índices en las columnas que se consultan frecuentemente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Optimizar Joins</h2>
+    <ul>
+        <li>Minimize el uso de joins entre tablas distribuidas.</li>
+        <li>Usa subconsultas o vistas para reducir la complejidad.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Caching</h2>
+    <ul>
+        <li>Almacena resultados de consultas frecuentes en memoria caché.</li>
+        <li>Reduce el tiempo de respuesta y carga del servidor.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Replicación Asincrónica</h2>
+    <ul>
+        <li>Permite una mayor tolerancia a fallos.</li>
+        <li>Puede reducir el tiempo de respuesta al cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buena Práctica: Monitorización Continua</h2>
+    <p><strong>Monitoriza:</strong> Tiempo de respuesta, uso del CPU y memoria, errores de red.</p>
+    <p><strong>Ajusta:</strong> Configuraciones según el rendimiento real.</p>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en Consultas Distribuidas</h2>
+    <ul>
+        <li>No indexar adecuadamente las columnas consultadas.</li>
+        <li>No optimizar joins entre tablas distribuidas.</li>
+        <li>No usar caching eficazmente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: Consultas Distribuidas vs. Locales</h2>
+    <table>
+        <tr><th>Distribuido</th><th>Local</th></tr>
+        <tr><td>Mayor latencia</td><td>Baja latencia</td></tr>
+        <tr><td>Menor rendimiento por consulta</td><td>Más alto rendimiento por consulta</td></tr>
+        <tr><td>Mayor costo de infraestructura</td><td>Costo menor de infraestructura</td></tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz</h2>
+    <p>¿Cuál es la ventaja principal de usar índices en consultas distribuidas?</p>
+    <ul>
+        <li>Aumenta el tiempo de respuesta.</li>
+        <li>Reduce la velocidad de búsqueda.</li>
+        <li><strong>Mejora significativamente la velocidad de búsqueda.</strong></li>
+        <li>No afecta el rendimiento.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist para Optimizar Consultas Distribuidas</h2>
+    <ol>
+        <li>Divide las consultas en partes más pequeñas.</li>
+        <li>Crea índices en columnas consultadas frecuentemente.</li>
+        <li>Optimiza joins entre tablas distribuidas.</li>
+        <li>Usa caching para almacenar resultados de consultas frecuentes.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo Práctico</h2>
+    <p><strong>Caso:</strong> Una aplicación de comercio electrónico con bases de datos distribuidas.</p>
+    <ul>
+        <li>Divide la consulta de búsqueda por categoría y ubicación.</li>
+        <li>Crea índices en las columnas de nombre del producto, precio y ubicación.</li>
+        <li>Optimiza joins entre tablas de productos y tiendas.</li>
+        <li>Usa caching para almacenar resultados de búsquedas recientes.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <p><strong>Puntos Clave:</strong></p>
+    <ul>
+        <li>Optimización de consultas en bases distribuidas es crucial para el rendimiento.</li>
+        <li>Aplica técnicas como dividir consultas, usar índices, optimizar joins y caching.</li>
+        <li>Monitorea continuamente el rendimiento y ajusta las configuraciones según sea necesario.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa y Reglamentos</h2>
+    <p><strong>Aspectos Legales:</strong></p>
+    <ul>
+        <li>Seguridad de datos en sistemas distribuidos.</li>
+        <li>Reglamento General de Protección de Datos (GDPR).</li>
+        <li>Normativas locales y nacionales sobre protección de datos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Preguntas Frecuentes</h2>
+    <ol>
+        <li>¿Qué es la distribución de bases de datos?</li>
+        <li>¿Cómo afecta la replicación a la disponibilidad del sistema?</li>
+        <li>¿Cuáles son las mejores prácticas para optimizar consultas en sistemas distribuidos?</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Recursos Adicionales</h2>
+    <ul>
+        <li><a href="https://www.oracle.com/database/technologies/distributed-databases.html">Oracle Distributed Databases</a></li>
+        <li><a href="https://docs.microsoft.com/en-us/sql/relational-databases/distributed-replicated-data-architecture?view=sql-server-ver15">Microsoft Distributed Replicated Data Architecture (DRDA)</a></li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Gracias por su atención</h2>
+    <p>Preguntas o comentarios?</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0377 Administración de sistemas gestores de bases de datos.md · Aplicación de criterios de disponibilidad a bases de datos distribuidas y replicadas: → Optimización de consultas sobre bases de datos distribuidas.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 09:51:18</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>XML: estructura y sintaxis. — Reconocimiento de las características de lenguajes de marcas: — 0373 Lenguajes de marcas y sistemas de gestión de información.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="xml-estructura-y-sintaxis.">
+<h1>XML: estructura y sintaxis.</h1>
+<p><strong>Unidad:</strong> Reconocimiento de las características de lenguajes de marcas:<br><strong>Documento:</strong> 0373 Lenguajes de marcas y sistemas de gestión de información.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>: Estructura y Sintaxis</h1>
+    <p>Objetivo: Comprender las características básicas de la estructura y sintaxis del lenguaje.</p>
+</section>
+
+<section class="slide">
+    <h2>¿Qué es?</h2>
+    <p> (eXtensible Markup Language) es un lenguaje de marcado que permite definir su propio conjunto de etiquetas para representar datos estructurados.</p>
+</section>
+
+<section class="slide">
+    <h2>Estructura Básica de</h2>
+    <ul>
+        <li>Declaración del Prologo: <? version="1.0" encoding="UTF-8"?></li>
+        <li>Etiqueta Raíz: Define el punto de entrada del documento.</li>
+        <li>Etiquetas Anidadas: Permiten estructurar los datos en forma jerárquica.</li>
+        <li>Atributos: Proporcionan información adicional sobre las etiquetas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de</h2>
+    <pre><code>&lt;libro&gt;
+    &lt;título&gt;El Quijote&lt;/título&gt;
+    &lt;autor&gt;Miguel deervantes&lt;/autor&gt;
+    &lt;año&gt;1605&lt;/año&gt;
+&lt;/libro&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Sintaxis</h2>
+    <ul>
+        <li>Etiquetas deben estar bien formadas (cerrarlas correctamente).</li>
+        <li>No se permiten etiquetas mal cerradas.</li>
+        <li>No se pueden usar caracteres especiales sin codificación.</li>
+        <li>Los nombres de las etiquetas son sensibles a mayúsculas y minúsculas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Errores</h2>
+    <pre><code>&lt;libro&gt;
+    &lt;título&gt;El Quijote&lt;/título&gt
+    &lt;autor&gt;Miguel deervantes&lt;/autor&gt;
+    &lt;año&gt;1605&lt;/año&gt;
+&lt;/libro&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Características Especiales en</h2>
+    <ul>
+        <li>&amp;: Ampersand.</li>
+        <li>&lt;: Menor que.</li>
+        <li>&gt;: Mayor que.</li>
+        <li>&quot;: Comillas dobles.</li>
+        <li>&apos;: Comillas simples.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comentarios en</h2>
+    <pre><code>&lt;!-- Este es un comentario --&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Comentario</h2>
+    <pre><code>&lt;libro&gt;
+    &lt;título&gt;El Quijote&lt;/título&gt;
+    &lt;autor&gt;Miguel deervantes&lt;/autor&gt;
+    &lt;año&gt;1605&lt;/año&gt;
+    &lt;!-- Este es un comentario --&gt;
+&lt;/libro&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Namespaces en</h2>
+    <p>Los namespaces permiten evitar conflictos de nombres al definir etiquetas similares en diferentes partes del documento.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Namespace</h2>
+    <pre><code>&lt;libro xmlns:dc="http://purl.org/dc/elements/1.1/"&gt;
+    &lt;título&gt;El Quijote&lt;/título&gt;
+    &lt;autor&gt;Miguel deervantes&lt;/autor&gt;
+    &lt;año&gt;1605&lt;/año&gt;
+    &lt;dc:fecha&gt;1605&lt;/dc:fecha&gt;
+&lt;/libro&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Validación</h2>
+    <p>La validación permite asegurar que un documento cumpla con un esquema predefinido.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Esquema</h2>
+    <pre><code>&lt;? version="1.0" encoding="UTF-8"?&gt;
+&lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;
+    &lt;xs:element name="libro"&gt;
+        &lt;xs:complexType&gt;
+            &lt;xs:sequence&gt;
+                &lt;xs:element name="título" type="xs:string"/&gt;
+                &lt;xs:element name="autor" type="xs:string"/&gt;
+                &lt;xs:element name="año" type="xs:gYear"/&gt;
+            &lt;/xs:sequence&gt;
+        &lt;/xs:complexType&gt;
+    &lt;/xs:element&gt;
+&lt;/xs:schema&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz</h2>
+    <p>¿Cuál de las siguientes no es una característica válida de?</p>
+    <ul>
+        <li>a) Etiquetas bien formadas.</li>
+        <li>b) Uso de caracteres especiales sin codificación.</li>
+        <li>c) Namespaces para evitar conflictos de nombres.</li>
+        <li>d) Comentarios en el documento.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist</h2>
+    <ul>
+        <li>Declaración del Prologo.</li>
+        <li>Estructura jerárquica con etiquetas anidadas.</li>
+        <li>Uso de atributos para información adicional.</li>
+        <li>Codificación de caracteres especiales.</li>
+        <li>Comentarios en el documento.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejercicios Prácticos</h2>
+    <p>1.rea un documento con una estructura sencilla de libro.</p>
+    <p>2. Valida tu documento contra un esquema predefinido.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li> es un lenguaje de marcado para representar datos estructurados.</li>
+        <li>Características básicas: etiquetas bien formadas, namespaces, comentarios.</li>
+        <li>Validación contra esquemas para asegurar la integridad del documento.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa y Recursos Adicionales</h2>
+    <p>Para más información:</p>
+    <ul>
+        <li><a href="https://www.w3.org/TR/xml/">W3 Specification</a></li>
+        <li><a href="https://www.xml.com/">.com</a></li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Preguntas y Discusión</h2>
+    <p>¿Dudas o preguntas sobre la estructura y sintaxis de?</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0373 Lenguajes de marcas y sistemas de gestión de información.md · Reconocimiento de las características de lenguajes de marcas: → XML: estructura y sintaxis.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 02:46:51</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

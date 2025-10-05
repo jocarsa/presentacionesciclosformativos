@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Creación de bases de datos y tablas. — Acceso a bases de datos desde lenguajes de «script» de servidor: — 0376 Implantación de aplicaciones web.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="creacion-de-bases-de-datos-y-tablas.">
+<h1>Creación de bases de datos y tablas.</h1>
+<p><strong>Unidad:</strong> Acceso a bases de datos desde lenguajes de «script» de servidor:<br><strong>Documento:</strong> 0376 Implantación de aplicaciones web.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Acceso a bases de datos desde lenguajes de «script» de servidor</h1>
+    <p><strong>Objetivo:</strong> Aprender cómo crear bases de datos y tablas utilizando lenguajes de script del lado del servidor.</p>
+</section>
+
+<section class="slide">
+    <h2>Introducción a la Creación de Bases de Datos</h2>
+    <ul>
+        <li>Definición de una base de datos</li>
+        <li>Ventajas de usar bases de datos en aplicaciones web</li>
+        <li>Ejemplos de sistemas de gestión de bases de datos (DBMS)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Selección del Sistema de Gestión de Bases de Datos (SGBD)</h2>
+    <p>Algunos ejemplos populares:</p>
+    <ul>
+        <li>MySQL</li>
+        <li>PostgreSQL</li>
+        <li>MongoDB</li>
+        <li>SQLite</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Instalación de MySQL</h2>
+    <p>Pasos básicos:</p>
+    <ol>
+        <li>Descargar e instalar MySQL Server</li>
+        <li>Configurar el servidor</li>
+        <li>Iniciar el servicio de MySQL</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Creación de una Base de Datos en MySQL</h2>
+    <p>Ejemplo de comando SQL:</p>
+    <pre><code>CREATE DATABASE nombre_base_de_datos;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Selección de la Base de Datos</h2>
+    <p>Ejemplo de comando SQL:</p>
+    <pre><code>USE nombre_base_de_datos;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Creación de Tablas en MySQL</h2>
+    <p>Ejemplo de comando SQL para crear una tabla:</p>
+    <pre><code>CREATE TABLE nombre_tabla (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        nombre VARCHAR(100),
+        edad INT
+    );</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Estructura de una Tabla</h2>
+    <ul>
+        <li>Campos (columnas)</li>
+        <li>Tipo de datos</li>
+        <li>Restriciones (llaves primarias, únicas, etc.)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplos de Tipos de Datos</h2>
+    <ul>
+        <li>INT</li>
+        <li>VARCHAR(n)</li>
+        <li>DATE</li>
+        <li>DECIMAL(p, s)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Añadir Campos a una Tabla Existente</h2>
+    <p>Ejemplo de comando SQL:</p>
+    <pre><code>ALTER TABLE nombre_tabla ADD COLUMN nuevo_campo INT;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Borrar Campos de una Tabla</h2>
+    <p>Ejemplo de comando SQL:</p>
+    <pre><code>ALTER TABLE nombre_tabla DROP COLUMN campo_a_eliminar;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Modificar Campos de una Tabla</h2>
+    <p>Ejemplo de comando SQL:</p>
+    <pre><code>ALTER TABLE nombre_tabla MODIFY COLUMN campo INT NOT NULL;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Insertar Datos en una Tabla</h2>
+    <p>Ejemplo de comando SQL:</p>
+    <pre><code>INSERT INTO nombre_tabla (nombre, edad) VALUES ('Juan', 30);</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Consultar Datos en una Tabla</h2>
+    <p>Ejemplo de comando SQL:</p>
+    <pre><code>SELECT * FROM nombre_tabla WHERE edad > 25;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Borrar Datos de una Tabla</h2>
+    <p>Ejemplo de comando SQL:</p>
+    <pre><code>DELETE FROM nombre_tabla WHERE id = 1;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Actualizar Datos en una Tabla</h2>
+    <p>Ejemplo de comando SQL:</p>
+    <pre><code>UPDATE nombre_tabla SET edad = 31 WHERE id = 1;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Cómo crear bases de datos y tablas en MySQL</li>
+        <li>Estructura y tipos de campos en una tabla</li>
+        <li>Operaciones básicas con datos (insert, select, update, delete)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas</h2>
+    <ul>
+        <li>Usar nombres descriptivos para tablas y campos</li>
+        <li>Asegurar la seguridad de las bases de datos</li>
+        <li>Mantener un diseño normalizado</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes</h2>
+    <ul>
+        <li>No cerrar correctamente las conexiones a la base de datos</li>
+        <li>No validar los datos antes de insertarlos</li>
+        <li>No manejar adecuadamente las excepciones</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz</h2>
+    <p>¿Cuál es el comando SQL para crear una base de datos?</p>
+    <ol>
+        <li>CREATE TABLE nombre_base_de_datos;</li>
+        <li>CREATE DATABASE nombre_base_de_datos;</li>
+        <li>SELECT * FROM nombre_base_de_datos;</li>
+        <li>UPDATE nombre_base_de_datos SET nombre = 'nombre_nuevo';</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist de Creación de Tablas</h2>
+    <ul>
+        <li>Especificar el nombre de la tabla</li>
+        <li>D definir los campos con sus tipos y restricciones</li>
+        <li>Asegurarse de que las llaves primarias sean únicas</li>
+        <li>Validar los datos antes de insertarlos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad Práctica</h2>
+    <p>Crea una base de datos llamada "biblioteca" y dos tablas: "libros" y "autores". La tabla "libros" debe tener campos como id, título, autor_id (llave foránea), año_publicacion. La tabla "autores" debe tener campos como id, nombre, nacionalidad.</p>
+</section>
+
+<section class="slide">
+    <h2>Normativa y Seguridad</h2>
+    <ul>
+        <li>Seguridad de las bases de datos (autenticación, autorización)</li>
+        <li>Cryptografía de datos sensibles</li>
+        <li>Reglamento de protección de datos (GDPR, etc.)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Recursos Adicionales</h2>
+    <ul>
+        <li><a href="https://www.mysql.com/">Documentación oficial de MySQL</a></li>
+        <li><a href="https://www.w3schools.com/sql/">Tutorial SQL en W3Schools</a></li>
+        <li><a href="https://dev.mysql.com/downloads/mysql/">Descarga MySQL</a></li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conclusión</h2>
+    <p>Hemos aprendido cómo crear bases de datos y tablas utilizando lenguajes de script del lado del servidor, con un enfoque en MySQL. Ahora puedes aplicar estos conocimientos para desarrollar aplicaciones web que interactúen con bases de datos.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0376 Implantación de aplicaciones web.md · Acceso a bases de datos desde lenguajes de «script» de servidor: → Creación de bases de datos y tablas.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 08:32:02</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

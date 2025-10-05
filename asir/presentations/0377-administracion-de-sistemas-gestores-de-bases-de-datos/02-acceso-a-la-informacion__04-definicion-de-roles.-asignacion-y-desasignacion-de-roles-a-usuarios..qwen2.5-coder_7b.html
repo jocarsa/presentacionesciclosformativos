@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Definición de roles. Asignación y desasignación de roles a usuarios. — Acceso a la información: — 0377 Administración de sistemas gestores de bases de datos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="definicion-de-roles.-asignacion-y-desasignacion-de-roles-a-usuarios.">
+<h1>Definición de roles. Asignación y desasignación de roles a usuarios.</h1>
+<p><strong>Unidad:</strong> Acceso a la información:<br><strong>Documento:</strong> 0377 Administración de sistemas gestores de bases de datos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Definición de roles. Asignación y desasignación de roles a usuarios.</h1>
+    <p>Objetivo: Comprender los conceptos básicos de roles en sistemas gestores de bases de datos, su definición, asignación y desasignación.</p>
+</section>
+
+<section class="slide">
+    <h2>Definición de Roles</h2>
+    <p>Un rol en un sistema de gestión de bases de datos es un conjunto de privilegios o permisos que se asocian a un usuario o grupo de usuarios. Estos privilegios determinan qué operaciones pueden realizar sobre los objetos del sistema.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Roles</h2>
+    <ul>
+        <li>Administrador: Tiene todos los permisos en la base de datos.</li>
+        <li>Editor: Puede crear, modificar y eliminar registros.</li>
+        <li>Consultor: Solo puede consultar los datos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Tipos de Roles</h2>
+    <ul>
+        <li>Rol predefinido: Proporcionados por el sistema (por ejemplo, Administrador, Usuario).</li>
+        <li>Rol personalizado: Creados por el administrador del sistema.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Asignación de Roles a Usuarios</h2>
+    <p>El proceso de asignación implica otorgar un rol a uno o varios usuarios, lo que les confiere los privilegios asociados con ese rol.</p>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico: Asignación de Roles</h2>
+    <p>Un editor de noticias necesita acceso a la base de datos para crear y modificar artículos, pero no debe tener permisos para eliminar registros. Se le asigna el rol "Editor".</p>
+</section>
+
+<section class="slide">
+    <h2>Desasignación de Roles a Usuarios</h2>
+    <p>La desasignación implica retirar un rol de un usuario, lo que revoca los privilegios asociados con ese rol.</p>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico: Desasignación de Roles</h2>
+    <p>Un usuario que ya no necesita acceso a la base de datos debido a un cambio en sus funciones puede ser desasignado del rol "Editor".</p>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas</h2>
+    <ul>
+        <li>Asigne roles según las necesidades específicas de cada usuario.</li>
+        <li>No asigne roles predefinidos a usuarios individuales, use roles personalizados.</li>
+        <li>Revise y ajuste regularmente los roles para mantener la seguridad y eficiencia del sistema.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes</h2>
+    <ul>
+        <li>Asignar roles predefinidos a usuarios individuales, lo que puede llevar a permisos innecesarios.</li>
+        <li>No revocar los privilegios de un usuario cuando ya no sea necesario, lo que puede comprometer la seguridad del sistema.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: Roles vs. Permisos Individuales</h2>
+    <table>
+        <tr>
+            <th>Roles</th>
+            <th>Permisos Individuales</th>
+        </tr>
+        <tr>
+            <td>Facilitan la gestión de privilegios.</td>
+            <td>Pueden ser difíciles de administrar y mantener.</td>
+        </tr>
+        <tr>
+            <td>Aplican a grupos de usuarios.</td>
+            <td>Se aplican a individuos específicos.</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz</h2>
+    <p>¿Cuál es la principal ventaja de usar roles en un sistema de gestión de bases de datos?</p>
+    <ul>
+        <li><input type="radio" name="quiz"> Facilita la gestión de privilegios.</li>
+        <li><input type="radio" name="quiz"> Permite asignar permisos a individuos específicos.</li>
+        <li><input type="radio" name="quiz"> Mejora el rendimiento del sistema.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Asignación y Desasignación de Roles</h1>
+    <ol>
+        <li>Identifique las necesidades específicas del usuario.</li>
+        <li>Cree un rol personalizado si es necesario.</li>
+        <li>Asigne el rol al usuario.</li>
+        <li>Revise y ajuste regularmente los roles.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Crear Roles para un Proyecto</h2>
+    <p>Cree roles personalizados para un proyecto de gestión de proyectos. Identifique las necesidades de diferentes equipos y asigna roles según sea necesario.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Definición de roles en sistemas gestores de bases de datos.</li>
+        <li>Asignación y desasignación de roles a usuarios.</li>
+        <li>Buenas prácticas y errores comunes en la gestión de roles.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa General</h2>
+    <p>Seguridad de la Información: Es importante seguir las normativas de seguridad para proteger los datos sensibles almacenados en el sistema.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0377 Administración de sistemas gestores de bases de datos.md · Acceso a la información: → Definición de roles. Asignación y desasignación de roles a usuarios.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 08:56:14</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

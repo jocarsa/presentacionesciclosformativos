@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Información del registro de auditoría. — Directivas de seguridad y auditorías: — 0369 Implantación de sistemas operativos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="informacion-del-registro-de-auditoria.">
+<h1>Información del registro de auditoría.</h1>
+<p><strong>Unidad:</strong> Directivas de seguridad y auditorías:<br><strong>Documento:</strong> 0369 Implantación de sistemas operativos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Información del registro de auditoría</h1>
+    <p>Objetivo: Comprender los aspectos clave del registro de auditoría en sistemas operativos.</p>
+</section>
+
+<section class="slide">
+    <h2>Definición del Registro de Auditoría</h2>
+    <p>El registro de auditoría es un proceso que documenta las actividades realizadas por usuarios y procesos dentro de un sistema operativo.</p>
+</section>
+
+<section class="slide">
+    <h2>Beneficios del Registro de Auditoría</h2>
+    <ul>
+        <li>Detección temprana de actividades sospechosas</li>
+        <li>Cumplimiento con regulaciones y normativas</li>
+        <li>Auditoría interna y externa</li>
+        <li>Seguimiento de cambios en el sistema</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplos de Eventos Registrados</h2>
+    <ul>
+        <li>Inicio yierre de sesión de usuarios</li>
+        <li>Acceso a archivos y directorios</li>
+        <li>Modificaciones en configuración del sistema</li>
+        <li>Intentos fallidos de inicio de sesión</li>
+        <li>Ejecución de comandos privilegiados</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración del Registro de Auditoría</h2>
+    <p>La configuración del registro de auditoría varía según el sistema operativo utilizado.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo: Configuración en Linux</h2>
+    <pre><code>sudo auditctl -a exit,always -F arch=b64 -S openat -k file_access</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo: Configuración en Windows</h2>
+    <p>Abrir el Editor de Registros y navegar hasta "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Security".</p>
+</section>
+
+<section class="slide">
+    <h2>Visualización del Registro de Auditoría</h2>
+    <p>Los registros de auditoría pueden visualizarse utilizando herramientas específicas para cada sistema operativo.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo: Visualización en Linux</h2>
+    <pre><code>sudo ausearch -k file_access</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo: Visualización en Windows</h2>
+    <p>Utilizar la herramienta "Event Viewer" y navegar hasta "Windows Logs -> Security".</p>
+</section>
+
+<section class="slide">
+    <h2>Casos de Uso</h2>
+    <ul>
+        <li>Detección de intrusiones</li>
+        <li>Auditoría interna por parte del equipo de TI</li>
+        <li>Seguimiento de cambios en configuraciones críticas</li>
+        <li>Cumplimiento con regulaciones como GDPR o HIPAA</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas</h2>
+    <ul>
+        <li>Configurar el registro de auditoría para eventos cruciales</li>
+        <li>Utilizar claves descriptivas en los registros</li>
+        <li>Realizar análisis periódicos del registro de auditoría</li>
+        <li>Seguir políticas de retención adecuadas para los registros</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes</h2>
+    <ul>
+        <li>No configurar el registro de auditoría</li>
+        <li>Configurar el registro de manera insuficiente</li>
+        <li>No analizar regularmente los registros de auditoría</li>
+        <li>No mantener políticas claras sobre el uso del registro de auditoría</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa y Regulaciones</h2>
+    <p>El registro de auditoría es crucial para cumplir con diversas regulaciones, como GDPR, HIPAA, PCI-DSS, etc.</p>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico: Cumplimiento GDPR</h2>
+    <p>La normativa GDPR requiere que las empresas registren todas las actividades de procesamiento de datos personales.</p>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz</h2>
+    <p>¿Cuáles son los principales beneficios del registro de auditoría en un sistema operativo?</p>
+    <ul>
+        <li>Detección temprana de actividades sospechosas</li>
+        <li>Cumplimiento con regulaciones y normativas</li>
+        <li>Auditoría interna y externa</li>
+        <li>Seguimiento de cambios en el sistema</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist</h2>
+    <ul>
+        <li>Configurar eventos a auditar</li>
+        <li>Utilizar claves descriptivas</li>
+        <li>Realizar análisis periódicos</li>
+        <li>Mantener políticas claras sobre el uso del registro de auditoría</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Configuración del Registro de Auditoría</h2>
+    <p>Configurar el registro de auditoría para eventos relacionados con accesos a archivos y directorios en un sistema operativo Linux.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <p>El registro de auditoría es una herramienta fundamental para la seguridad y cumplimiento en sistemas operativos. Permite detectar actividades sospechosas, cumplir con regulaciones y mantener un seguimiento detallado del sistema.</p>
+</section>
+
+<section class="slide">
+    <h2>Preguntas Finales</h2>
+    <p>¿Tienes alguna pregunta sobre el registro de auditoría en sistemas operativos?</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0369 Implantación de sistemas operativos.md · Directivas de seguridad y auditorías: → Información del registro de auditoría.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-04 22:41:38</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

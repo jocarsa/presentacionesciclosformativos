@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Equipos del dominio. — Administración del acceso al dominio: — 0369 Implantación de sistemas operativos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="equipos-del-dominio.">
+<h1>Equipos del dominio.</h1>
+<p><strong>Unidad:</strong> Administración del acceso al dominio:<br><strong>Documento:</strong> 0369 Implantación de sistemas operativos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Implantación de sistemas operativos</h1>
+    <p><strong>Objetivo:</strong> Comprender los equipos del dominio y su papel en la administración del acceso al dominio.</p>
+</section>
+
+<section class="slide">
+    <h2>Definición de equipos del dominio</h2>
+    <ul>
+        <li>Servidores de dominio: Controlan el registro de nombres de usuario y grupos.</li>
+        <li>Computadoras de trabajo: Se unen al dominio para compartir recursos.</li>
+        <li>Servicios de red: Ofrecen funciones como impresión, almacenamiento compartido, etc.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Tipos de equipos del dominio</h2>
+    <ul>
+        <li>Equipo principal (Domain Controller): Almacena la base de datos del dominio.</li>
+        <li>Equipo secundario (Backup Domain Controller): Proporciona redundancia y respaldo.</li>
+        <li>Computadoras de trabajo: Se unen al dominio para compartir recursos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Funciones del equipo principal (DC)</h2>
+    <ul>
+        <li>Gestión de cuentas de usuario y grupos.</li>
+        <li>Control de acceso a los recursos.</li>
+        <li>Sincronización de la hora.</li>
+        <li>Almacenamiento de información del dominio.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Funciones del equipo secundario (BDC)</h2>
+    <ul>
+        <li>Replícacion de la base de datos del dominio.</li>
+        <li>Sincronización de la hora.</li>
+        <li>Control de acceso a los recursos.</li>
+        <li>Gestión de cuentas de usuario y grupos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración del equipo principal (DC)</h2>
+    <ol>
+        <li>Elegir el sistema operativo adecuado (Windows Server).</li>
+        <li>Instalar el rol de Controlador de Dominio.</li>
+        <li>Configurar la red y los nombres de dominio.</li>
+        <li>Crear las unidades organizativas necesarias.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Configuración del equipo secundario (BDC)</h2>
+    <ol>
+        <li>Elegir el sistema operativo adecuado (Windows Server).</li>
+        <li>Instalar el rol de Controlador de Dominio.</li>
+        <li>Configurar la red y los nombres de dominio.</li>
+        <li>Sincronizar con el equipo principal.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Unión de computadoras al dominio</h2>
+    <ol>
+        <li>Iniciar sesión en la computadora.</li>
+        <li>Elegir la opción "Unirse a un dominio o red workgroup".</li>
+        <li>Introducir el nombre del dominio y las credenciales de administrador.</li>
+        <li>Reiniciar la computadora si es necesario.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas en la configuración del dominio</h2>
+    <ul>
+        <li>Usar nombres de dominio descriptivos y fáciles de recordar.</li>
+        <li>Seguir políticas de seguridad para las cuentas de usuario.</li>
+        <li>Mantener actualizados los sistemas operativos y software.</li>
+        <li>Realizar copias de seguridad periódicas del dominio.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes en la configuración del dominio</h2>
+    <ul>
+        <li>No usar nombres de dominio descriptivos.</li>
+        <li>No seguir políticas de seguridad para las cuentas de usuario.</li>
+        <li>No mantener actualizados los sistemas operativos y software.</li>
+        <li>No realizar copias de seguridad periódicas del dominio.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa entre equipos del dominio</h2>
+    <table>
+        <tr>
+            <th>Tipo de Equipo</th>
+            <th>Papel en el Dominio</th>
+        </tr>
+        <tr>
+            <td>Equipo Principal (DC)</td>
+            <td>Gestión central del dominio, almacenamiento de información.</td>
+        </tr>
+        <tr>
+            <td>Equipo Secundario (BDC)</td>
+            <td>Replícacion de la base de datos, control de acceso.</td>
+        </tr>
+        <tr>
+            <td>Computadoras de Trabajo</td>
+            <td>Unión al dominio, compartir recursos.</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Identificación de equipos del dominio</h2>
+    <p>¿Cuáles son los roles principales en un dominio Windows?</p>
+    <ol type="A">
+        <li>Servidor FTP</li>
+        <li>Controlador de Dominio</li>
+        <li>Computadora de Trabajo</li>
+        <li>Impresora</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Configuración del equipo principal (DC)</h2>
+    <ul>
+        <li>Elegir sistema operativo adecuado.</li>
+        <li>Instalar rol de Controlador de Dominio.</li>
+        <li>Configurar red y nombres de dominio.</li>
+        <li>Crear unidades organizativas necesarias.</li>
+        <li>Realizar pruebas de conectividad.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Configuración del equipo secundario (BDC)</h2>
+    <ul>
+        <li>Elegir sistema operativo adecuado.</li>
+        <li>Instalar rol de Controlador de Dominio.</li>
+        <li>Configurar red y nombres de dominio.</li>
+        <li>Sincronizar con el equipo principal.</li>
+        <li>Realizar pruebas de conectividad.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Creación de un equipo principal (DC)</h2>
+    <p>Crea un plan paso a paso para configurar el equipo principal del dominio en Windows Server.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Equipos del dominio: Servidores de dominio, computadoras de trabajo y servicios de red.</li>
+        <li>Tipo de equipos: Principal (DC), secundario (BDC) y de trabajo.</li>
+        <li>Configuración y funciones de los equipos del dominio.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa relevante</h2>
+    <ul>
+        <li>NIST SP 800-53: Seguridad en sistemas operativos.</li>
+        <li>ISO/IE 27001: Gestión de la seguridad de la información.</li>
+        <li>Políticas internas de la organización sobre seguridad del dominio.</li>
+    </ul>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0369 Implantación de sistemas operativos.md · Administración del acceso al dominio: → Equipos del dominio.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-04 22:20:17</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Utilización de extensiones de comandos para tareas de administración. — Aplicación de lenguajes de «scripting» en sistemas operativos libres y propietarios: — 0374 Administración de sistemas operativos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="utilizacion-de-extensiones-de-comandos-para-tareas-de-administracion.">
+<h1>Utilización de extensiones de comandos para tareas de administración.</h1>
+<p><strong>Unidad:</strong> Aplicación de lenguajes de «scripting» en sistemas operativos libres y propietarios:<br><strong>Documento:</strong> 0374 Administración de sistemas operativos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Aplicación de lenguajes de «scripting» en sistemas operativos libres y propietarios</h1>
+    <p><strong>Objetivo:</strong> Explorar el uso de extensiones de comandos para tareas de administración en Sistemas Operativos.</p>
+</section>
+
+<section class="slide">
+    <h2>Introducción a los lenguajes de scripting</h2>
+    <ul>
+        <li>Definición y propósito de los lenguajes de scripting.</li>
+        <li>Ejemplos populares:, PowerShell,.</li>
+        <li>Ventajas en administración de sistemas operativos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Extensiones de comandos en Sistemas Operativos</h2>
+    <p>Las extensiones de comandos permiten automatizar tareas repetitivas y mejorar la eficiencia administrativa.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo: Script para monitoreo de discos</h2>
+    <pre><code>#!/bin/bash
+df -h | grep '^/dev/sd' | awk '{print $1, $5}'
+</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo: Script PowerShell para reinicio de servicios</h2>
+    <pre><code>$services = Get-Service -Name "Spooler", "EventLog"
+foreach ($service in $services) {
+    Restart-Service -InputObject $service
+}
+</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Proceso de creación de un script</h2>
+    <ol>
+        <li>Especificar el intérprete (por ejemplo, #!/bin/bash).</li>
+        <li>Escribir las instrucciones del script.</li>
+        <li>Hacer que el script sea ejecutable con chmod +x nombre_script.sh.</li>
+        <li>Probar y depurar el script.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas en scripting</h2>
+    <ul>
+        <li>Comentar el código para facilitar su lectura.</li>
+        <li>Usar variables para almacenar valores reutilizables.</li>
+        <li>Manejar errores y excepciones de manera adecuada.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes en scripting</h2>
+    <ul>
+        <li>No tener permisos suficientes para ejecutar el script.</li>
+        <li>Sintaxis incorrecta del código.</li>
+        <li>Variables no definidas o mal utilizadas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa de y PowerShell</h2>
+    <table>
+        <tr>
+            <th>Bash</th>
+            <th>PowerShell</th>
+        </tr>
+        <tr>
+            <td>Lenguaje de scripting para Unix/Linux.</td>
+            <td>Lenguaje de scripting para Windows.</td>
+        </tr>
+        <tr>
+            <td>Sintaxis más simple y directa.</td>
+            <td>Más complejo pero con mayor potencia y funcionalidad.</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: ¿Cuál es el propósito de un script?</h2>
+    <ol>
+        <li>Ejecutar tareas repetitivas automáticamente.</li>
+        <li>Crear interfaces gráficas de usuario.</li>
+        <li>Definir funciones matemáticas complejas.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist para la creación de scripts efectivos</h2>
+    <ul>
+        <li>Identificar las tareas a automatizar.</li>
+        <li>Escribir el código con claridad y concisión.</li>
+        <li>Probar el script en un entorno seguro.</li>
+        <li>Ajustar y optimizar según sea necesario.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Creación de un script básico</h2>
+    <p>Crea un script que liste los usuarios del sistema y muestre su directorio home.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Los lenguajes de scripting facilitan la automatización de tareas administrativas.</li>
+        <li>Se pueden usar en Unix/Linux y PowerShell en Windows.</li>
+        <li>Buenas prácticas y atención a los errores son cruciales para un buen script.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa general sobre scripting</h2>
+    <p><strong>Seguridad:</strong> Evitar scripts con privilegios elevados sin necesidad.</p>
+    <p><strong>Mantenimiento:</strong> Documentar el código y mantenerlo actualizado.</p>
+</section>
+
+<section class="slide">
+    <h2>Preguntas y discusión</h2>
+    <p>¿Tienes preguntas sobre la creación de scripts o aplicaciones de scripting en sistemas operativos?</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0374 Administración de sistemas operativos.md · Aplicación de lenguajes de «scripting» en sistemas operativos libres y propietarios: → Utilización de extensiones de comandos para tareas de administración.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 05:13:02</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

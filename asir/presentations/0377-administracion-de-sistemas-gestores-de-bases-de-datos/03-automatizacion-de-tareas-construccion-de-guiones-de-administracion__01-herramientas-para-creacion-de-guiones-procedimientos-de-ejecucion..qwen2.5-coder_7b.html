@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Herramientas para creación de guiones; procedimientos de ejecución. — Automatización de tareas: construcción de guiones de administración: — 0377 Administración de sistemas gestores de bases de datos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="herramientas-para-creacion-de-guiones-procedimientos-de-ejecucion.">
+<h1>Herramientas para creación de guiones; procedimientos de ejecución.</h1>
+<p><strong>Unidad:</strong> Automatización de tareas: construcción de guiones de administración:<br><strong>Documento:</strong> 0377 Administración de sistemas gestores de bases de datos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Herramientas para creación de guiones</h2>
+    <ul>
+        <li>SQL*Plus (Oracle)</li>
+        <li>Toad for Oracle</li>
+        <li>DBeaver</li>
+        <li>Navicat</li>
+        <li>PL/Scope (Oracle)</li>
+        <li>DBMS_SCHEDULER (Oracle)</li>
+        <li>SQL Developer (Oracle)</li>
+        <li>pgAdmin (PostgreSQL)</li>
+        <li>MySQL Workbench</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Procedimientos de ejecución</h2>
+    <ol>
+        <li>Conexión a la base de datos</li>
+        <li>Creación del guion</li>
+        <li>Escribir las sentencias SQL</li>
+        <li>Guardado del guion</li>
+        <li>Ejecución del guion</li>
+        <li>Verificación de resultados</li>
+        <li>Desconexión de la base de datos</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>SQL*Plus (Oracle)</h2>
+    <p>Es una herramienta de línea de comandos para interactuar con Oracle Database.</p>
+</section>
+
+<section class="slide">
+    <h2>Toad for Oracle</h2>
+    <p>Una interfaz gráfica completa para el desarrollo, gestión y monitoreo de bases de datos Oracle.</p>
+</section>
+
+<section class="slide">
+    <h2>DBeaver</h2>
+    <p>Es una herramienta universal para la administración de bases de datos que soporta múltiples sistemas.</p>
+</section>
+
+<section class="slide">
+    <h2>Navicat</h2>
+    <p>Una suite de herramientas de gestión de bases de datos que incluye clientes, diseñadores y herramientas de monitoreo.</p>
+</section>
+
+<section class="slide">
+    <h2>PL/Scope (Oracle)</h2>
+    <p>Es una característica que permite rastrear el alcance de los objetos en PL/SQL.</p>
+</section>
+
+<section class="slide">
+    <h2>DBMS_SCHEDULER (Oracle)</h2>
+    <p>Sirve para programar tareas y procesos en Oracle Database.</p>
+</section>
+
+<section class="slide">
+    <h2>SQL Developer (Oracle)</h2>
+    <p>Es una herramienta de desarrollo integrado para Oracle Database que incluye un editor SQL, un diseñador de esquemas y un monitor de sesiones.</p>
+</section>
+
+<section class="slide">
+    <h2>pgAdmin (PostgreSQL)</h2>
+    <p>Una interfaz gráfica completa para el manejo de PostgreSQL.</p>
+</section>
+
+<section class="slide">
+    <h2>MySQL Workbench</h2>
+    <p>Es una herramienta de diseño, desarrollo y gestión de bases de datos MySQL.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de guion en SQL*Plus</h2>
+    <pre><code>CONNECT username/password@database
+CREATE OR REPLACE PROCEDURE example_procedure AS
+BEGIN
+    INSERT INTO table_name (column1, column2) VALUES ('value1', 'value2');
+END;
+/
+EXEC example_procedure;
+EXIT;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Caso práctico: Automatización de respaldo de bases de datos</h2>
+    <p>Se puede crear un guion que realice el respaldo diario de una base de datos Oracle usando RMAN (Recovery Manager).</p>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas en la creación de guiones</h2>
+    <ul>
+        <li>Comentar el código para facilitar su comprensión</li>
+        <li>Usar variables y parámetros para mejorar la reutilización</li>
+        <li>Validar los resultados antes de continuar</li>
+        <li>Manejar errores adecuadamente</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes en la creación de guiones</h2>
+    <ul>
+        <li>No validar los resultados</li>
+        <li>No manejar errores</li>
+        <li>No comentar el código</li>
+        <li>No usar variables y parámetros</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: Herramientas para creación de guiones</h2>
+    <p>¿Cuál de las siguientes herramientas no es una herramienta para la creación de guiones en Oracle?</p>
+    <ol>
+        <li>SQL*Plus</li>
+        <li>Toad for Oracle</li>
+        <li>DBeaver</li>
+        <li>Navicat</li>
+        <li>PL/Scope (Oracle)</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Procedimientos de ejecución</h2>
+    <ul>
+        <li>Conectarse a la base de datos</li>
+        <li>Crear el guion</li>
+        <li>Escribir las sentencias SQL</li>
+        <li>Guardar el guion</li>
+        <li>Ejecutar el guion</li>
+        <li>Verificar los resultados</li>
+        <li>Desconectarse de la base de datos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Crear un guion simple en SQL*Plus</h2>
+    <p>Crea un guion que inserte una fila en una tabla y luego seleccione todas las filas de esa tabla.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Herramientas para la creación de guiones: SQL*Plus, Toad for Oracle, DBeaver, Navicat, PL/Scope (Oracle), DBMS_SCHEDULER (Oracle), SQL Developer (Oracle), pgAdmin (PostgreSQL), MySQL Workbench.</li>
+        <li>Procedimientos de ejecución: Conexión, creación del guion, escritura de sentencias SQL, guardado, ejecución, verificación y desconexión.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa general</h2>
+    <p>No hay normativas específicas sobre la creación de guiones de administración en bases de datos. Sin embargo, es importante seguir buenas prácticas y manejar errores adecuadamente.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0377 Administración de sistemas gestores de bases de datos.md · Automatización de tareas: construcción de guiones de administración: → Herramientas para creación de guiones; procedimientos de ejecución.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 09:33:51</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

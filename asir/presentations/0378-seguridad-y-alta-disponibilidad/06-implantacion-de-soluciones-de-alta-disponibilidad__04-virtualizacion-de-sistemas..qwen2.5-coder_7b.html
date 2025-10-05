@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Virtualización de sistemas. — Implantación de soluciones de alta disponibilidad: — 0378 Seguridad y alta disponibilidad.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="virtualizacion-de-sistemas.">
+<h1>Virtualización de sistemas.</h1>
+<p><strong>Unidad:</strong> Implantación de soluciones de alta disponibilidad:<br><strong>Documento:</strong> 0378 Seguridad y alta disponibilidad.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Implantación de soluciones de alta disponibilidad</h1>
+    <p>Subunidad: Virtualización de sistemas</p>
+    <p>Objetivo: Comprender los conceptos y técnicas de virtualización para mejorar la disponibilidad de sistemas.</p>
+</section>
+
+<section class="slide">
+    <h2>Definición de alta disponibilidad</h2>
+    <ul>
+        <li>Sistema operativo que minimiza el tiempo de inactividad.</li>
+        <li>Objetivo: Mantener la continuidad del servicio sin interrupiones.</li>
+        <li>Medidas: Redundancia, failover y mantenimiento preventivo.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ventajas de la virtualización para la alta disponibilidad</h2>
+    <ul>
+        <li>Recursos compartidos eficientes.</li>
+        <li>Escala horizontal sin limitaciones físicas.</li>
+        <li>Reducción del tiempo de mantenimiento.</li>
+        <li>Capacidad de failover instantáneo.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Tecnologías de virtualización</h2>
+    <ul>
+        <li>Hypervisor: Software que ejecuta máquinas virtuales.</li>
+        <li>Paravirtualización: Mejora el rendimiento al eliminar la necesidad de emulación.</li>
+        <li>Fusion-io: Tecnología de almacenamiento SSD para virtualización.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de implementación</h2>
+    <p>Redundancia de servidores web:</p>
+    <ul>
+        <li>Dos servidores web configurados en modo balanceo de carga.</li>
+        <li>Cada servidor tiene una copia del sitio web.</li>
+        <li>Failover automático si uno de los servidores falla.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Caso de estudio: Implementación en un centro de datos</h2>
+    <p>Un centro de datos utiliza virtualización para:</p>
+    <ul>
+        <li>Reducción del espacio físico.</li>
+        <li>Economía energética mediante la optimización de recursos.</li>
+        <li>Facilidad de escalado y mantenimiento.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Proceso de virtualización</h2>
+    <ol>
+        <li>Selección del hardware adecuado.</li>
+        <li>Instalación del hipervisor.</li>
+        <li>Creación y configuración de máquinas virtuales.</li>
+        <li>Implementación de políticas de seguridad.</li>
+        <li>Pruebas de failover y recuperación.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas en virtualización para la alta disponibilidad</h2>
+    <ul>
+        <li>Uso de hardware confiable y de alta capacidad.</li>
+        <li>Configuración de red redundante.</li>
+        <li>Implementación de copias de seguridad periódicas.</li>
+        <li>Mantenimiento regular del sistema y los componentes.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes en la virtualización para la alta disponibilidad</h2>
+    <ul>
+        <li>No planificación adecuada de la red.</li>
+        <li>Falta de redundancia en el almacenamiento.</li>
+        <li>Mantenimiento inadecuado del sistema.</li>
+        <li>Configuración incorrecta del hipervisor.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: Virtualización vs. Servidores Físicos</h2>
+    <table>
+        <tr>
+            <th></th>
+            <th>Virtualización</th>
+            <th>Servidores Físicos</th>
+        </tr>
+        <tr>
+            <td>Espacio físico</td>
+            <td>Más eficiente</td>
+            <td>Menos eficiente</td>
+        </tr>
+        <tr>
+            <td>Rendimiento</td>
+            <td>Depende de la configuración</td>
+            <td>Generalmente mejorado</td>
+        </tr>
+        <tr>
+            <td>Escala</td>
+            <td>Hasta límites del hardware</td>
+            <td>Límite por servidor físico</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: Virtualización y Alta Disponibilidad</h2>
+    <p>¿Cuál de las siguientes no es una ventaja de la virtualización para la alta disponibilidad?</p>
+    <ul>
+        <li>a) Reducción del tiempo de inactividad.</li>
+        <li>b) Optimización de recursos físicos.</li>
+        <li>c) Aumento del costo operativo.</li>
+        <li>d) Facilidad de escalado horizontal.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist para la implementación de virtualización en alta disponibilidad</h2>
+    <ol>
+        <li>Evaluación del requerimiento de disponibilidad.</li>
+        <li>Selección del hardware y del hipervisor.</li>
+        <li>Diseño de la red virtualizada.</li>
+        <li>Creación de máquinas virtuales con redundancia.</li>
+        <li>Configuración de políticas de seguridad.</li>
+        <li>Pruebas de failover y recuperación.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Diseño de un plan de alta disponibilidad virtualizado</h2>
+    <p>Crea un plan para implementar una solución de alta disponibilidad virtualizada en un entorno empresarial.</p>
+    <ul>
+        <li>Especifica el tipo de servidores y aplicaciones.</li>
+        <li>Diseña la arquitectura virtualizada.</li>
+        <li>Configura las políticas de seguridad.</li>
+        <li>Planifica las pruebas de failover.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Resumen: Virtualización para la alta disponibilidad</h2>
+    <p>La virtualización es una herramienta clave para mejorar la disponibilidad de sistemas. Permite:</p>
+    <ul>
+        <li>Recursos compartidos eficientes.</li>
+        <li>Escala horizontal sin limitaciones físicas.</li>
+        <li>Reducción del tiempo de mantenimiento.</li>
+        <li>Capacidad de failover instantáneo.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa y regulaciones en la alta disponibilidad virtualizada</h2>
+    <p>Es importante cumplir con las normativas locales y nacionales para:</p>
+    <ul>
+        <li>Seguridad de datos.</li>
+        <li>Disponibilidad del servicio.</li>
+        <li>Protección contra desastres naturales.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Preguntas y discusión</h2>
+    <p>¿Tienes preguntas sobre la virtualización para la alta disponibilidad?</p>
+    <p>Comparte tus experiencias o dudas en el chat.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0378 Seguridad y alta disponibilidad.md · Implantación de soluciones de alta disponibilidad: → Virtualización de sistemas.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 11:05:28</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

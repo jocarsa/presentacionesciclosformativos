@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Creación de descripciones. — Definición de esquemas y vocabularios en XML: — 0373 Lenguajes de marcas y sistemas de gestión de información.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="creacion-de-descripciones.">
+<h1>Creación de descripciones.</h1>
+<p><strong>Unidad:</strong> Definición de esquemas y vocabularios en XML:<br><strong>Documento:</strong> 0373 Lenguajes de marcas y sistemas de gestión de información.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Definición de esquemas y vocabularios en</h1>
+    <p>Objetivo: Comprender cómo crear descripciones utilizando esquemas y vocabularios en.</p>
+</section>
+
+<section class="slide">
+    <h2>Esquemas</h2>
+    <ul>
+        <li>Estructura que define la forma de un documento.</li>
+        <li>Utiliza lenguajes como DTD, XSD o RNG.</li>
+        <li>Asegura que los documentos sean válidos y estructurados correctamente.</li>
+        <li>Permite la definición de tipos de datos, restricciones y relaciones entre elementos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Vocabularios</h2>
+    <ul>
+        <li>Son conjuntos de etiquetas predefinidas para describir contenido específico.</li>
+        <li>Permiten la creación de lenguajes de marcado especializados.</li>
+        <li>Ejemplos: XHTML, SVG, RSS.</li>
+        <li>Aumentan la legibilidad y el significado del contenido.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>DTD (Document Type Definition)</h2>
+    <p>Define la estructura de un documento mediante una lista de elementos, atributos y relaciones entre ellos.</p>
+    <p>Ejemplo: 
+        <pre>&lt;!ELEMENT libro (titulo, autor, año)&gt;
+&lt;!ELEMENT titulo (#PCDATA)&gt;
+&lt;!ELEMENT autor (#PCDATA)&gt;
+&lt;!ELEMENT año (#PCDATA)&gt;</pre>
+    </p>
+</section>
+
+<section class="slide">
+    <h2>XSD ( Schema Definition)</h2>
+    <p>Define la estructura y el contenido de un documento mediante tipos de datos, restricciones y relaciones.</p>
+    <p>Ejemplo: 
+        <pre>&lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;
+&lt;xs:element name="libro"&gt;
+    &lt;xs:complexType&gt;
+        &lt;xs:sequence&gt;
+            &lt;xs:element name="titulo" type="xs:string"/&gt;
+            &lt;xs:element name="autor" type="xs:string"/&gt;
+            &lt;xs:element name="año" type="xs:gYear"/&gt;
+        &lt;/xs:sequence&gt;
+    &lt;/xs:complexType&gt;
+&lt;/xs:element&gt;
+&lt;/xs:schema&gt;</pre>
+    </p>
+</section>
+
+<section class="slide">
+    <h2>RNG (Relax NG)</h2>
+    <p>Define la estructura de un documento mediante patrones y reglas.</p>
+    <p>Ejemplo: 
+        <pre>&lt;grammar xmlns="http://relaxng.org/ns/structure/1.0"&gt;
+&lt;element name="libro"&gt;
+    &lt;sequence&gt;
+        &lt;element name="titulo" type="string"/&gt;
+        &lt;element name="autor" type="string"/&gt;
+        &lt;element name="año" type="integer"/&gt;
+    &lt;/sequence&gt;
+&lt;/element&gt;
+&lt;/grammar&gt;</pre>
+    </p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Descripción con DTD</h2>
+    <pre>&lt;!ELEMENT libro (titulo, autor, año)&gt;
+&lt;!ELEMENT titulo (#PCDATA)&gt;
+&lt;!ELEMENT autor (#PCDATA)&gt;
+&lt;!ELEMENT año (#PCDATA)&gt;
+
+&lt;libro&gt;
+    &lt;titulo&gt;El Quijote de la Mancha&lt;/titulo&gt;
+    &lt;autor&gt;Miguel deervantes Saavedra&lt;/autor&gt;
+    &lt;año&gt;1605&lt;/año&gt;
+&lt;/libro&gt;</pre>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Descripción con XSD</h2>
+    <pre>&lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;
+&lt;xs:element name="libro"&gt;
+    &lt;xs:complexType&gt;
+        &lt;xs:sequence&gt;
+            &lt;xs:element name="titulo" type="xs:string"/&gt;
+            &lt;xs:element name="autor" type="xs:string"/&gt;
+            &lt;xs:element name="año" type="xs:gYear"/&gt;
+        &lt;/xs:sequence&gt;
+    &lt;/xs:complexType&gt;
+&lt;/xs:element&gt;
+&lt;/xs:schema&gt;
+
+&lt;libro&gt;
+    &lt;titulo&gt;El Quijote de la Mancha&lt;/titulo&gt;
+    &lt;autor&gt;Miguel deervantes Saavedra&lt;/autor&gt;
+    &lt;año&gt;1605&lt;/año&gt;
+&lt;/libro&gt;</pre>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Descripción con RNG</h2>
+    <pre>&lt;grammar xmlns="http://relaxng.org/ns/structure/1.0"&gt;
+&lt;element name="libro"&gt;
+    &lt;sequence&gt;
+        &lt;element name="titulo" type="string"/&gt;
+        &lt;element name="autor" type="string"/&gt;
+        &lt;element name="año" type="integer"/&gt;
+    &lt;/sequence&gt;
+&lt;/element&gt;
+&lt;/grammar&gt;
+
+&lt;libro&gt;
+    &lt;titulo&gt;El Quijote de la Mancha&lt;/titulo&gt;
+    &lt;autor&gt;Miguel deervantes Saavedra&lt;/autor&gt;
+    &lt;año&gt;1605&lt;/año&gt;
+&lt;/libro&gt;</pre>
+</section>
+
+<section class="slide">
+    <h2>Beneficios de Usar Esquemas y Vocabularios</h2>
+    <ul>
+        <li>Validación automática del contenido.</li>
+        <li>Mejora la legibilidad y el mantenimiento del código.</li>
+        <li>Aumenta la interoperabilidad entre sistemas.</li>
+        <li>Facilita la creación de herramientas especializadas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico: Descripción de Productos con</h2>
+    <p>Ejemplo de cómo usar un esquema para describir productos en una tienda online.</p>
+    <pre>&lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;
+&lt;xs:element name="producto"&gt;
+    &lt;xs:complexType&gt;
+        &lt;xs:sequence&gt;
+            &lt;xs:element name="id" type="xs:string"/&gt;
+            &lt;xs:element name="nombre" type="xs:string"/&gt;
+            &lt;xs:element name="precio" type="xs:decimal"/&gt;
+            &lt;xs:element name="categoria" type="xs:string"/&gt;
+        &lt;/xs:sequence&gt;
+    &lt;/xs:complexType&gt;
+&lt;/xs:element&gt;
+&lt;/xs:schema&gt;</pre>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz</h2>
+    <p>¿Cuál es el propósito de un esquema?</p>
+    <ul>
+        <li>a) Definir la estructura y contenido de un documento.</li>
+        <li>b) Establecer estilos visuales para los documentos.</li>
+        <li>c) Controlar el acceso a los datos en una base de datos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Creación de Descripciones con Esquemas</h1>
+    <ul>
+        <li>Definir la estructura del documento usando elementos y atributos.</li>
+        <li>Especificar tipos de datos para los elementos.</li>
+        <li>Agregar restricciones si es necesario (por ejemplo, longitud mínima).</li>
+        <li>Validar el contenido contra el esquema antes de su uso.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas</h2>
+    <ul>
+        <li>Utilizar namespaces para evitar conflictos entre vocabularios.</li>
+        <li>Mantener los esquemas actualizados con las necesidades del proyecto.</li>
+        <li>Documentar el esquema y su uso para facilitar la comprensión y mantenimiento.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes</h2>
+    <ul>
+        <li>No definir correctamente las relaciones entre elementos.</li>
+        <li>No especificar tipos de datos adecuados para los elementos.</li>
+        <li>No validar el contenido contra el esquema antes de su uso.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: DTD vs XSD vs RNG</h2>
+    <table>
+        <tr>
+            <th></th>
+            <th>DTD</th>
+            <th>XSD</th>
+            <th>RNG</th>
+        </tr>
+        <tr>
+            <td>Especifica tipos de datos</td>
+            <td>No</td>
+            <td>Sí</td>
+            <td>Sí</td>
+        </tr>
+        <tr>
+            <td>Validación más estricta</td>
+            <td>Sí, pero limitada</td>
+            <td>Sí, con más opciones</td>
+            <td>Sí, con patrones flexibles</td>
+        </tr>
+        <tr>
+            <td>Interoperabilidad</td>
+            <td>Baja</td>
+            <td>Moderada</td>
+            <td>Alta</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Crear un Esquema para una Entidad</h2>
+    <p>Crea un esquema para describir una entidad específica, como "Cliente" o "Producto". Incluye elementos, atributos y tipos de datos.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Esquemas definen la estructura y contenido de documentos.</li>
+        <li>Vocabularios proporcionan un conjunto predefinido de etiquetas para describir contenido específico.</li>
+        <li>Diferentes tipos de esquemas (DTD, XSD, RNG) ofrecen diferentes niveles de flexibilidad y validación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa</h2>
+    <p>No existe una normativa específica para la creación de esquemas. Sin embargo, se recomienda seguir buenas prácticas para asegurar la interoperabilidad y mantenibilidad del contenido.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0373 Lenguajes de marcas y sistemas de gestión de información.md · Definición de esquemas y vocabularios en XML: → Creación de descripciones.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 03:42:01</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

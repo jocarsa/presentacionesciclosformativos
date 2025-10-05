@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Montaje y desmontaje de dispositivos en sistemas operativos. Automatización. — Administración y aseguramiento de la información: — 0369 Implantación de sistemas operativos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="montaje-y-desmontaje-de-dispositivos-en-sistemas-operativos.-automatizacion.">
+<h1>Montaje y desmontaje de dispositivos en sistemas operativos. Automatización.</h1>
+<p><strong>Unidad:</strong> Administración y aseguramiento de la información:<br><strong>Documento:</strong> 0369 Implantación de sistemas operativos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Montaje y desmontaje de dispositivos en sistemas operativos. Automatización</h1>
+    <p>Objetivo: Aprender los métodos para montar, desmontar y automatizar el manejo de dispositivos en sistemas operativos.</p>
+</section>
+
+<section class="slide">
+    <h2>Concepto básico</h2>
+    <ul>
+        <li>Montaje: Instalación de un dispositivo en un sistema operativo.</li>
+        <li>Desmontaje: Eliminación de un dispositivo del sistema operativo.</li>
+        <li>Automatización: Crear scripts o herramientas para facilitar el montaje y desmontaje.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo práctico</h2>
+    <p>Instalar un controlador de red en Windows:</p>
+    <ol>
+        <li>Iniciar la instalación desde el CD/DVD del dispositivo.</li>
+        <li>Siguir las instrucciones en pantalla.</li>
+        <li>Reiniciar el sistema si es necesario.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Caso de estudio</h2>
+    <p>Desmontar un dispositivo USB en Linux:</p>
+    <ul>
+        <li>Identificar el dispositivo con el comando `lsblk` o `fdisk -l`.</li>
+        <li>Montar el dispositivo con `mount /dev/sdb1 /mnt`.</li>
+        <li>Desmontar el dispositivo con `umount /mnt`.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Proceso de automatización</h2>
+    <p>Crea un script para montar automáticamente un USB en Linux:</p>
+    <pre><code>
+#!/bin/bash
+DEVICE="/dev/sdb1"
+MOUNT_POINT="/mnt/usb"
+
+if [ ! -d "$MOUNT_POINT" ]; then
+    mkdir -p "$MOUNT_POINT"
+fi
+
+mount "$DEVICE" "$MOUNT_POINT"
+echo "USB montado en $MOUNT_POINT"
+</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas</h2>
+    <ul>
+        <li>Verificar siempre los permisos antes de realizar operaciones.</li>
+        <li>Realizar copias de seguridad antes de desmontar dispositivos importantes.</li>
+        <li>Utilizar herramientas confiables para la automatización.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes</h2>
+    <ul>
+        <li>No verificar los permisos antes de montar/desmontar.</li>
+        <li>No realizar copias de seguridad antes de desmontar dispositivos importantes.</li>
+        <li>Usar herramientas inseguras para la automatización.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa</h2>
+    <table>
+        <tr>
+            <th>Sistema Operativo</th>
+            <th>Montaje manual</th>
+            <th>Montaje automático</th>
+        </tr>
+        <tr>
+            <td>Windows</td>
+            <td>Paso a paso en el instalador.</td>
+            <td>Scripts de PowerShell o批处理文件。</td>
+        </tr>
+        <tr>
+            <td>Linux</td>
+            <td>Comandos como `mount` y `umount`.</td>
+            <td>Scripts o.</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz</h2>
+    <p>¿Cuál es el comando para montar un dispositivo en Linux?</p>
+    <ul>
+        <li>a) `mount /dev/sdb1 /mnt`</li>
+        <li>b) `umount /dev/sdb1 /mnt`</li>
+        <li>c) `format /dev/sdb1 /mnt`</li>
+        <li>d) `copy /dev/sdb1 /mnt`</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist</h2>
+    <ul>
+        <li>Verificar los permisos del dispositivo.</li>
+        <li>Copiar datos importantes antes de desmontar.</li>
+        <li>Utilizar herramientas confiables para la automatización.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad práctica</h2>
+    <p>Desarrolla un script en que monte automáticamente un dispositivo USB en Linux.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Montaje y desmontaje de dispositivos es una tarea común en sistemas operativos.</li>
+        <li>La automatización puede mejorar la eficiencia y reducir errores humanos.</li>
+        <li>Es importante seguir buenas prácticas y prevenir errores comunes.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa general</h2>
+    <p>Seguridad de la información: Proteger datos sensibles al montar/desmontar dispositivos.</p>
+    <p>Compliance: Cumplir con las regulaciones de protección de datos aplicables.</p>
+</section>
+
+<section class="slide">
+    <h2>Preguntas y dudas</h2>
+    <p>¿Tienes alguna pregunta o duda sobre el montaje y desmontaje de dispositivos en sistemas operativos?</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0369 Implantación de sistemas operativos.md · Administración y aseguramiento de la información: → Montaje y desmontaje de dispositivos en sistemas operativos. Automatización.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-04 21:57:03</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

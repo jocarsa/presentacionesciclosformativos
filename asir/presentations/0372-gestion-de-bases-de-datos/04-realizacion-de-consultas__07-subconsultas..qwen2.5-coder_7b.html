@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Subconsultas. — Realización de consultas: — 0372 Gestión de bases de datos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="subconsultas.">
+<h1>Subconsultas.</h1>
+<p><strong>Unidad:</strong> Realización de consultas:<br><strong>Documento:</strong> 0372 Gestión de bases de datos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Realización de consultas en bases de datos</h1>
+    <p><strong>Objetivo:</strong> Aprender a utilizar subconsultas para mejorar la eficiencia y precisión de las consultas SQL.</p>
+</section>
+
+<section class="slide">
+    <h2>¿Qué son las subconsultas?</h2>
+    <p>Las subconsultas, también conocidas como consultas anidadas, son consultas que se ejecutan dentro de otra consulta principal.</p>
+</section>
+
+<section class="slide">
+    <h2>Estructura básica</h2>
+    <pre><code>SELECT column1 FROM table1 WHERE condition IN (SELECT column2 FROM table2 WHERE condition);</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Tipos de subconsultas</h2>
+    <ul>
+        <li>Subconsulta en la cláusula WHERE</li>
+        <li>Subconsulta en la cláusula FROM</li>
+        <li>Subconsulta en la cláusula HAVING</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo: Subconsulta en la cláusula WHERE</h2>
+    <pre><code>SELECT nombre, edad FROM empleados WHERE departamento IN (SELECT id FROM departamentos WHERE ubicacion = 'Madrid');</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo: Subconsulta en la cláusula FROM</h2>
+    <pre><code>SELECT e.nombre, d.nombre AS depto FROM empleados e JOIN (SELECT id, nombre FROM departamentos WHERE ubicacion = 'Madrid') d ON e.departamento = d.id;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo: Subconsulta en la cláusula HAVING</h2>
+    <pre><code>SELECT departamento, COUNT(*) FROM empleados GROUP BY departamento HAVING COUNT(*) > (SELECT AVG(COUNT(*)) FROM empleados GROUP BY departamento);</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas</h2>
+    <ul>
+        <li>Evita subconsultas complejas y anidadas innecesarias.</li>
+        <li>Optimiza las consultas internas para mejorar el rendimiento.</li>
+        <li>Utiliza alias para tablas y columnas en consultas anidadas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes</h2>
+    <ul>
+        <li>No cerrar correctamente las subconsultas con paréntesis.</li>
+        <li>No utilizar el operador correcto (IN, NOT IN, EXISTS, etc.) según la lógica de la consulta.</li>
+        <li>Olvidar alias o nombres de columnas en consultas anidadas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Caso práctico</h2>
+    <p>Un hospital necesita identificar los pacientes que han tenido más de 3 citas médicas en el último mes. ¿Cómo podríamos utilizar una subconsulta para resolver este problema?</p>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz</h2>
+    <p>¿Cuál es la diferencia entre un EXISTS y un IN en una subconsulta?</p>
+    <ul>
+        <li><input type="radio" name="mini_quiz"> EXISTS devuelve verdadero si la subconsulta devuelve al menos una fila.</li>
+        <li><input type="radio" name="mini_quiz"> IN devuelve verdadero si el valor de la columna coincide con cualquier valor en la lista de la subconsulta.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist</h2>
+    <ul>
+        <li>¿La consulta interna está correctamente cerrada?</li>
+        <li>¿Se ha utilizado el operador correcto en la cláusula WHERE?</li>
+        <li>¿Se han utilizado alias apropiados?</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad práctica</h2>
+    <p>Escribe una consulta que devuelva el nombre y el salario de los empleados que ganan más que la media del salario en su departamento.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Las subconsultas son herramientas poderosas para mejorar las consultas SQL.</li>
+        <li>Es importante conocer los tipos de subconsultas y cómo utilizarlos correctamente.</li>
+        <li>Se deben seguir buenas prácticas y evitar errores comunes para optimizar el rendimiento.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa general</h2>
+    <p>No se aplican restricciones específicas en este contexto, pero es importante seguir las mejores prácticas de seguridad y eficiencia al escribir consultas SQL.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0372 Gestión de bases de datos.md · Realización de consultas: → Subconsultas.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 02:31:01</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Resolutores de nombres. Proceso de resolución de un nombre de dominio. — Instalación y administración de servicios de nombres de dominio: — 0375 Servicios de red e Internet.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="resolutores-de-nombres.-proceso-de-resolucion-de-un-nombre-de-dominio.">
+<h1>Resolutores de nombres. Proceso de resolución de un nombre de dominio.</h1>
+<p><strong>Unidad:</strong> Instalación y administración de servicios de nombres de dominio:<br><strong>Documento:</strong> 0375 Servicios de red e Internet.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Resolutores de nombres. Proceso de resolución de un nombre de dominio.</h1>
+    <p>Objetivo: Entender el proceso detallado de cómo los resolutores de nombres convierten una dirección URL en una dirección IP.</p>
+</section>
+
+<section class="slide">
+    <h2>¿Qué son los Resolutores de Nombres?</h2>
+    <ul>
+        <li>Servicios que traducen nombres de dominio (como www.example.com) a direcciones IP (como 192.0.2.1).</li>
+        <li>Utilizan una base de datos distribuida para almacenar y compartir esta información.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Estructura del Sistema DNS</h2>
+    <ul>
+        <li>Root Servers: Los servidores más altos en la jerarquía.</li>
+        <li>TLD Servers (Top-Level Domain): Servidores para dominios de nivel superior (.com, .org, etc.).</li>
+        <li>Authoritative Servers: Servidores que tienen la autoridad sobre un dominio específico.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Proceso de Resolución</h2>
+    <ol>
+        <li>Digito o escribo una URL en el navegador.</li>
+        <li>Navegador envía una solicitud DNS al resolver local del usuario.</li>
+        <li>Resolver local consulta los servidores root para encontrar el TLD server correspondiente.</li>
+        <li>TLD server responde con la dirección del servidor autoritativo para el dominio específico.</li>
+        <li>Resolver local consulta el servidor autoritativo, que devuelve la dirección IP.</li>
+        <li>Resolver local almacena esta información en su caché para futuras solicitudes.</li>
+        <li>Navegador usa la dirección IP para establecer una conexión con el servidor web del dominio.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Casos de Uso Comunes</h2>
+    <ul>
+        <li>Acceso a sitios web.</li>
+        <li>Email.</li>
+        <li>Servicios en la nube (Google, Amazon).</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas</h2>
+    <ul>
+        <li>Usar resolutores de nombres confiables y actualizados.</li>
+        <li>Mantener la configuración DNS segura.</li>
+        <li>Realizar pruebas periódicas de conectividad.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes</h2>
+    <ul>
+        <li>DNS no encontrado (NXDOMAIN).</li>
+        <li>Tiempo de espera excedido (Timeout).</li>
+        <li>Error de autorización.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa con otros sistemas</h2>
+    <table>
+        <tr>
+            <th>Sistema</th>
+            <th>Características</th>
+        </tr>
+        <tr>
+            <td>DNS (Domain Name System)</td>
+            <td>Base de datos distribuida, escalable.</td>
+        </tr>
+        <tr>
+            <td>ARP (Address Resolution Protocol)</td>
+            <td>Traduce direcciones MAC a IP en una red local.</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz</h2>
+    <p>¿Cuál es el propósito principal de los resolutores de nombres?</p>
+    <ul>
+        <li>a) Almacenar datos de usuarios.</li>
+        <li>b) Traducir nombres de dominio a direcciones IP.</li>
+        <li>c) Enviar correos electrónicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist</h2>
+    <ul>
+        <li>Verificar la configuración del resolver DNS.</li>
+        <li>Realizar pruebas de resolución de nombres.</li>
+        <li>Mantener actualizado el software del resolver.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad</h2>
+    <p>Investiga y comparte un ejemplo real de cómo un resolutor de nombres ha solucionado una solicitud DNS.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Los resolutores de nombres traducen nombres de dominio a direcciones IP.</li>
+        <li>Involucran múltiples servidores en una jerarquía distribuida.</li>
+        <li>El proceso incluye consultas a root servers, TLD servers y servidores autoritativos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa General</h2>
+    <p>La normativa sobre seguridad en la red impone que los resolutores de nombres sean confiables y actualizados para prevenir ataques como el DNS Spoofing.</p>
+</section>
+
+<section class="slide" data-id="extra-conceptos-clave-ampliacion-0">
+<h2>Conceptos clave (ampliación)</h2>
+<p>Profundiza en los fundamentos de <strong>Resolutores de nombres. Proceso de resolución de un nombre de dominio.</strong> con definiciones operativas y límites de aplicación.</p><ul><li>Concepto A vs B</li><li>Variables implicadas</li><li>Supuestos habituales</li><li>Cuándo NO aplicar</li></ul>
+
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0375 Servicios de red e Internet.md · Instalación y administración de servicios de nombres de dominio: → Resolutores de nombres. Proceso de resolución de un nombre de dominio.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 05:16:15</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

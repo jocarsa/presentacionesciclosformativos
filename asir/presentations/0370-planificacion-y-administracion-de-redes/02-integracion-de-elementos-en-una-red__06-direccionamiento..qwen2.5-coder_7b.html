@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Direccionamiento. — Integración de elementos en una red: — 0370 Planificación y administración de redes.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="direccionamiento.">
+<h1>Direccionamiento.</h1>
+<p><strong>Unidad:</strong> Integración de elementos en una red:<br><strong>Documento:</strong> 0370 Planificación y administración de redes.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Dirección de redes</h2>
+    <p>La dirección de redes es el proceso de asignar direcciones IP a los dispositivos en una red para permitir la comunicación entre ellos.</p>
+</section>
+
+<section class="slide">
+    <h3>Tipos de direcciones IP</h3>
+    <ul>
+        <li>Dirección IPv4: 32 bits (4 octetos)</li>
+        <li>Dirección IPv6: 128 bits (8 grupos de 4 hexadecimales)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Clases de direcciones IP</h3>
+    <ul>
+        <li>A: 0.0.0.0 - 127.255.255.255 (1 bit para la clase)</li>
+        <li>B: 128.0.0.0 - 191.255.255.255 (2 bits para la clase)</li>
+        <li>C: 192.0.0.0 - 223.255.255.255 (3 bits para la clase)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Subredes y máscaras de subred</h3>
+    <p>Las máscaras de subred permiten dividir una red en subredes más pequeñas.</p>
+</section>
+
+<section class="slide">
+    <h3>Cálculo de la máscara de subred</h3>
+    <ul>
+        <li>Determinar el número de bits de red (clase)</li>
+        <li>Calcular el número de bits de host</li>
+        <li>Convertir los bits a notación CIDR</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Ejemplo deálculo de máscara</h3>
+    <p>Dado una red A (24 bits de red), la máscara es 255.255.255.0.</p>
+</section>
+
+<section class="slide">
+    <h3>Uso de direcciones especiales</h3>
+    <ul>
+        <li>Dirección de broadcast (último bit del bloque de host en 1)</li>
+        <li>Dirección de red (primer bit del bloque de host en 0)</li>
+        <li>Direcciones reservadas para otros usos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Configuración de direcciones IP</h3>
+    <p>Puede realizarse manualmente o automáticamente mediante DHCP.</p>
+</section>
+
+<section class="slide">
+    <h3>Ejemplo de configuración manual</h3>
+    <ul>
+        <li>Dirección IP: 192.168.1.100</li>
+        <li>Máscara de subred: 255.255.255.0</li>
+        <li>Gateway: 192.168.1.1</li>
+        <li>DNS: 8.8.8.8, 8.8.4.4</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Ejemplo de configuración DHCP</h3>
+    <p>El dispositivo obtiene automáticamente la dirección IP y otros parámetros del servidor DHCP.</p>
+</section>
+
+<section class="slide">
+    <h3>Comandos útiles en Windows</h3>
+    <ul>
+        <li><code>ipconfig /all</code></li>
+        <li><code>ping [dirección IP]</code></li>
+        <li><code>tracert [dirección IP]</code></li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Comandos útiles en Linux</h3>
+    <ul>
+        <li><code>ifconfig</code></li>
+        <li><code>ping [dirección IP]</code></li>
+        <li><code>traceroute [dirección IP]</code></li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Buenas prácticas de dirección de redes</h3>
+    <ul>
+        <li>Usar subredes lo más pequeñas posible para optimizar la eficiencia</li>
+        <li>Asegurarse de que las direcciones IP no se repitan en diferentes subredes</li>
+        <li>Reservar direcciones para servidores y dispositivos críticos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Errores comunes en la dirección de redes</h3>
+    <ul>
+        <li>Dirección IP incorrecta o no asignada</li>
+        <li>Máscara de subred incompatibles</li>
+        <li>No configuración de gateway</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Mini-quiz: Dirección de redes</h3>
+    <p>¿Cuál es la máscara de subred para una red con 254 dispositivos?</p>
+    <ol>
+        <li>255.255.255.0</li>
+        <li>255.255.255.128</li>
+        <li>255.255.255.240</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h3>Checklist: Dirección de redes</h3>
+    <ul>
+        <li>Dirección IP correcta asignada a cada dispositivo</li>
+        <li>Máscara de subred adecuada para la cantidad de dispositivos</li>
+        <li>Configuración de gateway y DNS correctas</li>
+        <li>No repeticiones de direcciones IP en diferentes subredes</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Actividad: Configuración de red</h3>
+    <p>Configura la dirección IP, máscara de subred y gateway para un dispositivo en una red A.</p>
+</section>
+
+<section class="slide">
+    <h3>Resumen</h3>
+    <ul>
+        <li>Dirección IP: Identifica cada dispositivo en la red</li>
+        <li>Máscaras de subred: Divide la red en segmentos más pequeños</li>
+        <li>Configuración correcta es crucial para la comunicación entre dispositivos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Normativa</h3>
+    <p>La normativa ISO/IE 25964 establece las recomendaciones para la dirección de redes.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0370 Planificación y administración de redes.md · Integración de elementos en una red: → Direccionamiento.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-04 23:45:11</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

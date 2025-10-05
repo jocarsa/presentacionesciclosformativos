@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Protocolos de acceso remoto y puertos implicados. — Instalación, configuración y uso de servicios de acceso y administración remota: — 0374 Administración de sistemas operativos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="protocolos-de-acceso-remoto-y-puertos-implicados.">
+<h1>Protocolos de acceso remoto y puertos implicados.</h1>
+<p><strong>Unidad:</strong> Instalación, configuración y uso de servicios de acceso y administración remota:<br><strong>Documento:</strong> 0374 Administración de sistemas operativos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Protocolos de acceso remoto y puertos implicados</h1>
+    <p>Objetivo: Comprender los protocolos utilizados para el acceso remoto a sistemas operativos y conocer los puertos asociados.</p>
+</section>
+
+<section class="slide">
+    <h2>Introducción</h2>
+    <ul>
+        <li>Definición de acceso remoto</li>
+        <li>Importancia en la administración de sistemas</li>
+        <li>Ejemplos de protocolos utilizados</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Protocolos de Acceso Remoto</h2>
+    <ul>
+        <li><strong>RDP (Remote Desktop Protocol)</strong>: Utilizado principalmente en Windows.</li>
+        <li><strong>VNC (Virtual Network Computing)</strong>: Versátil y compatible con múltiples sistemas operativos.</li>
+        <li><strong>SSH (Secure Shell)</strong>: Protocolo de red utilizado para el acceso seguro a servidores.</li>
+        <li><strong>FTP (File Transfer Protocol)</strong>: Para transferir archivos entre computadoras.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Puertos Implicados en Acceso Remoto</h2>
+    <ul>
+        <li><strong>RDP (3389)</strong>: Puerto predeterminado para RDP.</li>
+        <li><strong>VNC (5900-5910)</strong>: Puertos utilizados por VNC.</li>
+        <li><strong>SSH (22)</strong>: Puerto estándar para SSH.</li>
+        <li><strong>FTP (21)</strong>: Puerto utilizado para FTP.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Configuración RDP</h2>
+    <p>Para configurar RDP en Windows:</p>
+    <ol>
+        <li>Iniciar el "Servicio de Escritorio remoto".</li>
+        <li>Habilitar la opción "Permitir conexiones remotas a este equipo".</li>
+        <li>Configurar las opciones de seguridad según sea necesario.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Configuración SSH</h2>
+    <p>Para configurar SSH en Linux:</p>
+    <ol>
+        <li>Instalar el servidor SSH (`sudo apt-get install opens-server`).</li>
+        <li>Habilitar el servicio SSH (`sudo systemctl enable ssh`).</li>
+        <li>Iniciar el servicio SSH (`sudo systemctl start ssh`).</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Seguridad en Acceso Remoto</h2>
+    <ul>
+        <li>Uso de contraseñas fuertes</li>
+        <li>Configuración de firewalls</li>
+        <li>Utilización de protocolos seguros (SSH, RDP con SSL)</li>
+        <li>Limitar el acceso a usuarios autorizados</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico: Implementación de SSH</h2>
+    <p>Implementar SSH en un servidor Linux para permitir el acceso remoto seguro.</p>
+    <ol>
+        <li>Instalar OpenSSH (`sudo apt-get install opens-server`).</li>
+        <li>Habilitar el servicio SSH (`sudo systemctl enable ssh`).</li>
+        <li>Iniciar el servicio SSH (`sudo systemctl start ssh`).</li>
+        <li>Configurar el firewall para permitir el tráfico SSH (puerto 22).</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas</h2>
+    <ul>
+        <li>Evitar el uso de puertos predeterminados para evitar ataques</li>
+        <li>Utilizar autenticación de dos factores cuando sea posible</li>
+        <li>Mantener actualizados los sistemas y protocolos utilizados</li>
+        <li>Realizar auditorías periódicas de seguridad</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en Acceso Remoto</h2>
+    <ul>
+        <li>Uso incorrecto de puertos</li>
+        <li>No configuración correcta del firewall</li>
+        <li>Contraseñas débiles o fáciles de adivinar</li>
+        <li>Autorización no adecuada de usuarios</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa entre Protocolos</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Protocolo</th>
+                <th>Puerto</th>
+                <th>Características</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>RDP</td>
+                <td>3389</td>
+                <td>Windows, fácil de usar, pero menos seguro que SSH.</td>
+            </tr>
+            <tr>
+                <td>VNC</td>
+                <td>5900-5910</td>
+                <td>Multisistema, flexible, pero puede ser inseguro si no se configura adecuadamente.</td>
+            </tr>
+            <tr>
+                <td>SSH</td>
+                <td>22</td>
+                <td>Seguro, multiplataforma, recomendado para acceso remoto a servidores.</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz</h2>
+    <p>¿Cuál de los siguientes protocolos es utilizado principalmente para el acceso remoto a sistemas Linux?</p>
+    <ul>
+        <li>RDP</li>
+        <li>VNC</li>
+        <li>SSH</li>
+        <li>FTP</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist de Seguridad</h2>
+    <ol>
+        <li>Configurar el firewall para permitir solo puertos necesarios.</li>
+        <li>Utilizar contraseñas fuertes y únicas.</li>
+        <li>Habilitar autenticación de dos factores cuando sea posible.</li>
+        <li>Mantener actualizados los sistemas y protocolos utilizados.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Actividad Práctica</h2>
+    <p>Configurar SSH en un servidor Linux y probar el acceso remoto desde otro equipo.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Protocolos utilizados para el acceso remoto: RDP, VNC, SSH, FTP.</li>
+        <li>Puertos asociados: 3389 (RDP), 5900-5910 (VNC), 22 (SSH), 21 (FTP).</li>
+        <li>Importancia de la seguridad en el acceso remoto.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa y Reglamentos</h2>
+    <p>Seguridad informática: Ley Orgánica 15/1998, de 30 de junio, sobre protección de datos personales.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0374 Administración de sistemas operativos.md · Instalación, configuración y uso de servicios de acceso y administración remota: → Protocolos de acceso remoto y puertos implicados.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 05:00:14</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

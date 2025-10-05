@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Simulación de servicios con virtualización. — Implantación de soluciones de alta disponibilidad: — 0378 Seguridad y alta disponibilidad.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="simulacion-de-servicios-con-virtualizacion.">
+<h1>Simulación de servicios con virtualización.</h1>
+<p><strong>Unidad:</strong> Implantación de soluciones de alta disponibilidad:<br><strong>Documento:</strong> 0378 Seguridad y alta disponibilidad.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Implantación de soluciones de alta disponibilidad</h1>
+    <p><strong>Objetivo:</strong> Comprender y aplicar técnicas de simulación de servicios con virtualización para mejorar la seguridad y alta disponibilidad.</p>
+</section>
+
+<section class="slide">
+    <h2>Definición de Alta Disponibilidad</h2>
+    <ul>
+        <li>Servicios disponibles 99,9% del tiempo (5 minutos de inactividad al año)</li>
+        <li>Redundancia y failover automáticos para minimizar el tiempo de inactividad</li>
+        <li>Uso de tecnologías como clustering, replicación y virtualización</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Virtualización: Concepto Básico</h2>
+    <p>La virtualización permite ejecutar múltiples sistemas operativos en una sola máquina física.</p>
+    <ul>
+        <li>Hypervisor: software que gestiona los recursos físicos y proporciona entornos virtuales</li>
+        <li>Instancia Virtual (VM): copia aislada de un sistema operativo ejecutándose dentro del hypervisor</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Implementación</h2>
+    <p>Caso práctico: Configuración de una infraestructura virtual para servicios web.</p>
+    <ul>
+        <li>Instalación del hypervisor (Ej: VMware ESXi)</li>
+        <li>Creación de VMs para servidores web, base de datos y almacenamiento</li>
+        <li>Configuración de red y seguridad</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas en Virtualización</h2>
+    <ul>
+        <li>Monitoreo constante del rendimiento y salud de las VMs</li>
+        <li>Actualizaciones regulares del software y parches de seguridad</li>
+        <li>Copia de seguridad periódica de los datos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en Virtualización</h2>
+    <ul>
+        <li>Sobrecarga de recursos: no asignar suficientes CPU, memoria o espacio de almacenamiento a las VMs</li>
+        <li>Configuración incorrecta de la red: problemas de conectividad entre VMs y el exterior</li>
+        <li>No realizar copias de seguridad adecuadas: pérdida de datos cruciales</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa con Soluciones Físicas</h2>
+    <table>
+        <tr>
+            <th>Solución Física</th>
+            <th>Solución Virtualizada</th>
+        </tr>
+        <tr>
+            <td>Máquina física dedicada por servicio</td>
+            <td>Reutilización de recursos con VMs compartidas</td>
+        </tr>
+        <tr>
+            <td>No escalable fácilmente</td>
+            <td>Escalar horizontalmente fácilmente (agregar más VMs)</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Conceptos Básicos de Virtualización</h2>
+    <p>¿Qué es un hypervisor?</p>
+    <ul>
+        <li>a) Software que ejecuta aplicaciones en la nube</li>
+        <li>b) Sistema operativo virtualizado</li>
+        <li>c) Hardware dedicado a la virtualización</li>
+        <li>d) Herramienta de monitoreo de rendimiento</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Implementación de Soluciones Virtuales</h2>
+    <ol>
+        <li>Definir los requisitos de alta disponibilidad</li>
+        <li>Elegir el hypervisor adecuado</li>
+        <li>Configurar la red virtual</li>
+        <li>Crear y configurar las VMs</li>
+        <li>Implementar políticas de copia de seguridad</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Diseño de una Infraestructura Virtual</h2>
+    <p>Diseña una infraestructura virtual para un servicio de correo electrónico.</p>
+    <ul>
+        <li>Identifica los servicios necesarios (SMTP, IMAP, POP3)</li>
+        <li>Decide la configuración de las VMs (número y tipo de recursos)</li>
+        <li>Planifica la red virtual</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Resumen: Simulación de Servicios con Virtualización</h2>
+    <p>La virtualización es una herramienta poderosa para mejorar la seguridad y alta disponibilidad al permitir la simulación eficiente de servicios en entornos virtuales.</p>
+    <ul>
+        <li>Permite la reutilización de recursos y escalabilidad fácil</li>
+        <li>Facilita el monitoreo, actualizaciones y copias de seguridad</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa Relacionada con Alta Disponibilidad</h2>
+    <p><strong>ISO/IE 27035:</strong> Norma que establece requisitos para la gestión de la disponibilidad y continuidad del negocio.</p>
+    <ul>
+        <li>Define procesos y prácticas para garantizar el funcionamiento continuo de los sistemas</li>
+        <li>Requiere evaluaciones periódicas y mejoras continuas</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conclusión</h2>
+    <p>La simulación de servicios con virtualización es una técnica clave para mejorar la seguridad y alta disponibilidad en entornos empresariales.</p>
+    <ul>
+        <li>Implementar soluciones virtuales requiere conocimiento técnico y planificación cuidadosa</li>
+        <li>Seguir buenas prácticas y estar al tanto de las normativas es fundamental para su éxito</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Preguntas y Respuestas</h2>
+    <p>¿Tienes alguna pregunta sobre la simulación de servicios con virtualización?</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0378 Seguridad y alta disponibilidad.md · Implantación de soluciones de alta disponibilidad: → Simulación de servicios con virtualización.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 11:10:06</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

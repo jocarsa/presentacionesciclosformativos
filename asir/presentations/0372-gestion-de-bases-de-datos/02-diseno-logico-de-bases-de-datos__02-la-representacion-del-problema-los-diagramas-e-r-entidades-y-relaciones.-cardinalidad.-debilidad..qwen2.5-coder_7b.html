@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>La representación del problema: los diagramas E/R entidades y relaciones. Cardinalidad. Debilidad. — Diseño lógico de bases de datos: — 0372 Gestión de bases de datos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="la-representacion-del-problema-los-diagramas-e-r-entidades-y-relaciones.-cardinalidad.-debilidad.">
+<h1>La representación del problema: los diagramas E/R entidades y relaciones. Cardinalidad. Debilidad.</h1>
+<p><strong>Unidad:</strong> Diseño lógico de bases de datos:<br><strong>Documento:</strong> 0372 Gestión de bases de datos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Diseño lógico de bases de datos</h1>
+    <p>Objetivo: Comprender la representación del problema mediante diagramas E/R, entender cardinalidad y debilidad.</p>
+</section>
+
+<section class="slide">
+    <h2>Diagramas Entidades-Relaciones (E/R)</h2>
+    <ul>
+        <li>Representan la estructura lógica de una base de datos.</li>
+        <li>Incluyen entidades, atributos y relaciones.</li>
+        <li>Facilitan el diseño y la comprensión del modelo de datos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Entidades</h2>
+    <ul>
+        <li>Son objetos o conceptos reales sobre los que se almacenan datos.</li>
+        <li>Ejemplo: Cliente, Producto, Pedido.</li>
+        <li>Cada entidad tiene un nombre y atributos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Atributos</h2>
+    <ul>
+        <li>Características o propiedades de las entidades.</li>
+        <li>Ejemplo: Nombre del cliente, Precio del producto.</li>
+        <li>Cada atributo tiene un nombre y tipo de dato.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Relaciones</h2>
+    <ul>
+        <li>Representan las asociaciones entre entidades.</li>
+        <li>Ejemplo: Relación "Realiza" entre Cliente y Pedido.</li>
+        <li>Cada relación tiene un nombre y cardinalidad.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Cardinalidad</h2>
+    <ul>
+        <li>Define la cantidad de instancias de una entidad que pueden estar asociadas con una instancia de otra entidad.</li>
+        <li>Ejemplos: 1:N, M:N, 1:1.</li>
+        <li>Es crucial para el diseño funcional y eficiente de las bases de datos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Debilidad</h2>
+    <ul>
+        <li>Indica la dependencia entre entidades en un diagrama E/R.</li>
+        <li>Ejemplo: Una relación 1:N donde una entidad débil depende de otra para su existencia.</li>
+        <li>Debe ser minimizada para evitar redundancia y inconsistencias.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Diagrama E/R</h2>
+    <img src="diagrama_er.png" alt="Diagrama Entidades-Relaciones">
+</section>
+
+<section class="slide">
+    <h2>Analizando un Diagrama E/R</h2>
+    <ul>
+        <li>Identificar entidades y sus atributos.</li>
+        <li>Determinar relaciones y su cardinalidad.</li>
+        <li>Evaluación de debilidades para mejorar el diseño.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico: Diseño de un Sistema de Biblioteca</h2>
+    <ul>
+        <li>Entidades: Libro, Autor, Prestamo, Socio.</li>
+        <li>Relaciones y cardinalidad.</li>
+        <li>Evaluación de debilidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas en Diseño E/R</h2>
+    <ul>
+        <li>Usar nombres descriptivos para entidades y atributos.</li>
+        <li>Mantener relaciones claras y bien definidas.</li>
+        <li>Minimizar debilidades y redundancia.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en Diseño E/R</h2>
+    <ul>
+        <li>No definir relaciones adecuadas.</li>
+        <li>No considerar cardinalidad.</li>
+        <li>No minimizar debilidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Diseño E/R</h2>
+    <p>¿Cuál es la cardinalidad entre Autor y Libro?</p>
+    <ol>
+        <li>1:N</li>
+        <li>M:N</li>
+        <li>1:1</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist para Diseño E/R</h2>
+    <ul>
+        <li>¿Todas las entidades tienen nombres descriptivos?</li>
+        <li>¿Las relaciones están bien definidas y claras?</li>
+        <li>¿Se ha minimizado la debilidad?</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Diseño E/R de un Sistema de Tienda Online</h2>
+    <p>Crea un diagrama E/R para un sistema de tienda online, incluyendo entidades, atributos y relaciones.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Diagramas E/R son herramientas esenciales para el diseño lógico de bases de datos.</li>
+        <li>Cardinalidad y debilidad son factores cruciales en la calidad del diseño.</li>
+        <li>Prácticas recomendadas y errores comunes deben ser considerados.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa (General)</h2>
+    <p>No hay normativas específicas para el diseño E/R, pero se recomienda seguir buenas prácticas y mantener la consistencia en los diagramas.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0372 Gestión de bases de datos.md · Diseño lógico de bases de datos: → La representación del problema: los diagramas E/R entidades y relaciones. Cardinalidad. Debilidad.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 02:15:42</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

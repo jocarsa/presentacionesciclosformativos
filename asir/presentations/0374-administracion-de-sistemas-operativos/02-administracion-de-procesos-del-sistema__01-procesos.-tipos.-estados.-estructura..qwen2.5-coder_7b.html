@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Procesos. Tipos. Estados. Estructura. — Administración de procesos del sistema: — 0374 Administración de sistemas operativos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="procesos.-tipos.-estados.-estructura.">
+<h1>Procesos. Tipos. Estados. Estructura.</h1>
+<p><strong>Unidad:</strong> Administración de procesos del sistema:<br><strong>Documento:</strong> 0374 Administración de sistemas operativos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Administración de procesos del sistema</h1>
+    <p>Objetivo: Comprender los tipos, estados y estructura de los procesos en sistemas operativos.</p>
+</section>
+
+<section class="slide">
+    <h2>Definición de Proceso</h2>
+    <p>Un proceso es una instancia de un programa en ejecución. Incluye:</p>
+    <ul>
+        <li>Código del programa</li>
+        <li>Datos asociados</li>
+        <li>Estado actual</li>
+        <li>Recursos asignados</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Tipos de Procesos</h2>
+    <p>Existen varios tipos de procesos en sistemas operativos:</p>
+    <ul>
+        <li>Procesos de usuario: Ejecutados por el usuario.</li>
+        <li>Procesos del sistema: Ejecutados por el sistema operativo.</li>
+        <li>Procesos demonio: Ejecutados en segundo plano.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Estados de un Proceso</h2>
+    <p>Un proceso puede estar en uno de los siguientes estados:</p>
+    <ul>
+        <li>Nuevo (recién creado)</li>
+        <li>Listo (listo para ejecutarse)</li>
+        <li>Ejecución (en curso)</li>
+        <li>Bloqueado (esperando un evento)</li>
+        <li>Terminado</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Diagrama de Estados de Procesos</h2>
+    <img src="diagrama_estados_procesos.png" alt="Diagrama de estados de procesos">
+</section>
+
+<section class="slide">
+    <h2>Estructura Interna de un Proceso</h2>
+    <p>La estructura interna de un proceso incluye:</p>
+    <ul>
+        <li>Pila de llamadas (stack)</li>
+        <li>Área de datos (data segment)</li>
+        <li>Área de código (text segment)</li>
+        <li>Registros del procesador</li>
+        <li>Identificador único (PID)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ciclo de Vida de un Proceso</h2>
+    <p>El ciclo de vida de un proceso incluye:</p>
+    <ol>
+        <li>Nacimiento: Creación del proceso.</li>
+        <li>Ejecución: Ejecución del código del programa.</li>
+        <li>Bloqueo: Espera por algún evento.</li>
+        <li>Reanudación: Continuación de la ejecución.</li>
+        <li>Muerte: Finalización del proceso.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Recursos Asignados a los Procesos</h2>
+    <p>Cada proceso tiene acceso a:</p>
+    <ul>
+        <li>Memoria virtual</li>
+        <li>Procesador (CPU)</li>
+        <li>Entrada/salida (I/O)</li>
+        <li>Archivos y directorios</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comunicación entre Procesos</h2>
+    <p>Existen varios métodos de comunicación entre procesos:</p>
+    <ul>
+        <li>Pipes (tuberías)</li>
+        <li>Sockets</li>
+        <li>Mensajes</li>
+        <li>Memoria compartida</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Procesos y Seguridad</h2>
+    <p>Los procesos pueden ser:</p>
+    <ul>
+        <li>Privilegiados (con permisos elevados)</li>
+        <li>No privilegiados (con permisos limitados)</li>
+    </ul>
+    <p>La seguridad en sistemas operativos implica controlar el acceso a los recursos por procesos.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Proceso</h2>
+    <p>Un ejemplo de proceso es un navegador web:</p>
+    <ul>
+        <li>Carga páginas web</li>
+        <li>Muestra contenido multimedia</li>
+        <li>Gestiona pestañas y ventanas</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Tipos de Procesos</h2>
+    <p>¿Cuáles son los tres tipos principales de procesos en sistemas operativos?</p>
+    <ol>
+        <li>Procesos de usuario</li>
+        <li>Procesos del sistema</li>
+        <li>Procesos demonio</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Estados de Procesos</h2>
+    <ul>
+        <li>Nuevo</li>
+        <li>Listo</li>
+        <li>Ejecución</li>
+        <li>Bloqueado</li>
+        <li>Terminado</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Identificación de Procesos</h2>
+    <p>Identifica los procesos que se están ejecutando en tu sistema operativo actual.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Proceso: Instancia de un programa en ejecución.</li>
+        <li>Tipos: Procesos de usuario, procesos del sistema, procesos demonio.</li>
+        <li>Estados: Nuevo, listo, ejecución, bloqueado, terminado.</li>
+        <li>Estructura interna: Pila, datos, código, registros, PID.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa sobre Seguridad de Procesos</h2>
+    <p>Normativas como SELinux y AppArmor controlan el acceso a los recursos por procesos.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0374 Administración de sistemas operativos.md · Administración de procesos del sistema: → Procesos. Tipos. Estados. Estructura.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 04:48:24</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

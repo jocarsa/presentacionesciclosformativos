@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Operadores. Estructuras de control. — Construcción de guiones: — 0372 Gestión de bases de datos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="operadores.-estructuras-de-control.">
+<h1>Operadores. Estructuras de control.</h1>
+<p><strong>Unidad:</strong> Construcción de guiones:<br><strong>Documento:</strong> 0372 Gestión de bases de datos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Operadores y Estructuras de Control en Bases de Datos</h1>
+    <p>Objetivo: Comprender los operadores y estructuras de control utilizados en la construcción de guiones para bases de datos.</p>
+</section>
+
+<section class="slide">
+    <h2>Introducción a los Operadores</h2>
+    <ul>
+        <li>Operadores aritméticos: +, -, *, /, %</li>
+        <li>Operadores relacionales: =, !=, >, <, >=, <=</li>
+        <li>Operadores lógicos: AND, OR, NOT</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Operador Aritmético</h2>
+    <p>SELECT precio * 0.95 AS descuento FROM productos;</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Operador Relacional</h2>
+    <p>SELECT nombre FROM clientes WHERE edad > 18;</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Operador Lógico</h2>
+    <p>SELECT * FROM empleados WHERE departamento = 'Ventas' AND activo = TRUE;</p>
+</section>
+
+<section class="slide">
+    <h2>Operadores de Comparación</h2>
+    <ul>
+        <li>LIKE: Busca patrones en cadenas</li>
+        <li>BETWEEN: Busca valores dentro de un rango</li>
+        <li>IN: Busca múltiples valores</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Operador LIKE</h2>
+    <p>SELECT nombre FROM clientes WHERE nombre LIKE 'J%';</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Operador BETWEEN</h2>
+    <p>SELECT fecha FROM ventas WHERE fecha BETWEEN '2023-01-01' AND '2023-12-31';</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Operador IN</h2>
+    <p>SELECT * FROM productos WHERE categoria IN ('Electrónica', 'Computadoras');</p>
+</section>
+
+<section class="slide">
+    <h2>Estructuras de Control en Bases de Datos</h2>
+    <ul>
+        <li>IF...ELSE</li>
+        <li>CASE</li>
+        <li>LOOP</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de IF...ELSE</h2>
+    <p>SELECT nombre, CASE WHEN edad >= 18 THEN 'Mayor de edad' ELSE 'Menor de edad' END AS estado FROM clientes;</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de CASE</h2>
+    <p>SELECT categoria, precio, CASE 
+        WHEN precio < 50 THEN 'Bajo'
+        WHEN precio BETWEEN 50 AND 100 THEN 'Medio'
+        ELSE 'Alto' END AS rango_precio
+    FROM productos;</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de LOOP</h2>
+    <p>CREATE PROCEDURE actualizar_precios()
+    BEGIN
+        DECLARE i INT DEFAULT 1;
+        WHILE i <= 10 DO
+            UPDATE productos SET precio = precio * 1.1 WHERE id = i;
+            SET i = i + 1;
+        END WHILE;
+    END;</p>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas</h2>
+    <ul>
+        <li>Usar nombres descriptivos para columnas y tablas</li>
+        <li>Evitar operadores complejos en consultas</li>
+        <li>Optimizar bucles y estructuras de control</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes</h2>
+    <ul>
+        <li>Olvidar el uso de comillas alrededor de cadenas</li>
+        <li>No usar paréntesis en operaciones aritméticas</li>
+        <li>Bucles infinitos con estructuras de control</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz</h2>
+    <p>¿Cuál es el resultado de la siguiente consulta?</p>
+    <p>SELECT nombre FROM clientes WHERE edad > 18 AND ciudad = 'Madrid';</p>
+    <ol>
+        <li>Todos los clientes mayores de 18 años en Madrid</li>
+        <li>Solo los clientes de Madrid</li>
+        <li>Solo los clientes mayores de 18 años</li>
+        <li>Error de sintaxis</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist</h2>
+    <ul>
+        <li>Verificar la sintaxis de las consultas SQL</li>
+        <li>Asegurarse de que los operadores sean correctos</li>
+        <li>Optimizar el uso de estructuras de control</li>
+        <li>Probar las consultas en un entorno de desarrollo</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad</h2>
+    <p>Escribir una consulta SQL que seleccione los productosuya categoría sea 'Electrónica' y su precio esté entre 100 y 500 euros.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Operadores aritméticos, relacionales y lógicos en SQL</li>
+        <li>Estructuras de control como IF...ELSE, CASE y LOOP</li>
+        <li>Buenas prácticas y errores comunes al usar operadores y estructuras de control</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa General</h2>
+    <p>No hay normativas específicas sobre el uso de operadores y estructuras de control en SQL, pero es importante seguir buenas prácticas para mantener la eficiencia y legibilidad del código.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0372 Gestión de bases de datos.md · Construcción de guiones: → Operadores. Estructuras de control.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 02:38:30</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

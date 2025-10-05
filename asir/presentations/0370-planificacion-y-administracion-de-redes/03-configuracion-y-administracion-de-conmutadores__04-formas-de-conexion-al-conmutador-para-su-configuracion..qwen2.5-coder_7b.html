@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Formas de conexión al conmutador para su configuración. — Configuración y administración de conmutadores: — 0370 Planificación y administración de redes.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="formas-de-conexion-al-conmutador-para-su-configuracion.">
+<h1>Formas de conexión al conmutador para su configuración.</h1>
+<p><strong>Unidad:</strong> Configuración y administración de conmutadores:<br><strong>Documento:</strong> 0370 Planificación y administración de redes.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Configuración y administración de conmutadores</h1>
+    <p><strong>Objetivo:</strong> Comprender las formas de conexión al conmutador para su configuración.</p>
+</section>
+
+<section class="slide">
+    <h2>Introducción a la Configuración de Conmutadores</h2>
+    <p>Los conmutadores son dispositivos esenciales en redes locales (LANs) que gestionan el tráfico de datos entre los dispositivos.</p>
+</section>
+
+<section class="slide">
+    <h2>Formas de Conexión al Conmutador</h2>
+    <ul>
+        <li>Conexión directa mediante cable Ethernet</li>
+        <li>Conexión a través de una consola serie</li>
+        <li>Conexión remota mediante SSH o Telnet</li>
+        <li>Conexión a través de una interfaz web (Web-based Management)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión Directa mediante Cable Ethernet</h2>
+    <p>Se utiliza un cable Ethernet para conectar directamente el dispositivo al conmutador.</p>
+    <img src="able_ethernet.jpg" alt="able Ethernet">
+</section>
+
+<section class="slide">
+    <h2>Conexión a través de una Consola Serie</h2>
+    <p>Involucra la conexión física mediante un cable RS-232 al puerto de consola del conmutador.</p>
+    <img src="consola_serie.jpg" alt="Consola Serie">
+</section>
+
+<section class="slide">
+    <h2>Conexión Remota mediante SSH o Telnet</h2>
+    <p>Permite el acceso remoto al conmutador a través de una red.</p>
+    <ul>
+        <li>SSH (Secure Shell)</li>
+        <li>Telnet (Protocolo de Control de Terminal)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión a través de una Interfaz Web (Web-based Management)</h2>
+    <p>Se accede al conmutador mediante un navegador web.</p>
+    <img src="web_based_management.jpg" alt="Interfaz Web">
+</section>
+
+<section class="slide">
+    <h2>Ejemplo: Conexión a través de SSH</h2>
+    <pre><code>ssh usuario@direccion_ip_conmutador
+Contraseña: ********</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico: Configuración Inicial del Conmutador</h2>
+    <p>Después de la conexión, se realiza una configuración inicial básica.</p>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas en la Configuración de Conmutadores</h2>
+    <ul>
+        <li>Utilizar contraseñas fuertes y cambiarlas regularmente</li>
+        <li>Habilitar el acceso SSH y deshabilitar Telnet</li>
+        <li>Configurar correctamente los puertos y VLANs</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en la Configuración de Conmutadores</h2>
+    <ul>
+        <li>No configurar correctamente las direcciones IP</li>
+        <li>Habilitar SSH sin configurar el acceso</li>
+        <li>No realizar copias de seguridad periódicas de la configuración</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: Conexiones Locales vs. Remotas</h2>
+    <table>
+        <tr>
+            <th>Conexión Local</th>
+            <th>Conexión Remota</th>
+        </tr>
+        <tr>
+            <td>Requiere cableado físico</td>
+            <td>No requiere cableado físico</td>
+        </tr>
+        <tr>
+            <td>Más rápida</td>
+            <td>Más lenta (depende de la velocidad de la red)</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Formas de Conexión al Conmutador</h2>
+    <p>¿Cuál de las siguientes opciones no es una forma común de conexión a un conmutador?</p>
+    <ul>
+        <li>a) Conexión directa mediante cable Ethernet</li>
+        <li>b) Conexión a través de una consola serie</li>
+        <li>c) Conexión remota mediante USB</li>
+        <li>d) Conexión a través de una interfaz web (Web-based Management)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Pasos para la Configuración Inicial del Conmutador</h2>
+    <ol>
+        <li>Conectar el conmutador a la red</li>
+        <li>Iniciar sesión en el conmutador</li>
+        <li>Cambiar la contraseña por defecto</li>
+        <li>Habilitar SSH y deshabilitar Telnet</li>
+        <li>Configurar las interfaces de red</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Configuración Remota del Conmutador</h2>
+    <p>Realizar una conexión remota al conmutador utilizando SSH y configurar un nuevo puerto.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Existen varias formas de conectar a un conmutador para su configuración.</li>
+        <li>Se deben seguir buenas prácticas y evitar errores comunes.</li>
+        <li>La configuración remota es una opción práctica para administrar redes grandes.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa General</h2>
+    <p>Seguir las políticas de seguridad de la organización al acceder y configurar dispositivos de red.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0370 Planificación y administración de redes.md · Configuración y administración de conmutadores: → Formas de conexión al conmutador para su configuración.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-04 23:55:22</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

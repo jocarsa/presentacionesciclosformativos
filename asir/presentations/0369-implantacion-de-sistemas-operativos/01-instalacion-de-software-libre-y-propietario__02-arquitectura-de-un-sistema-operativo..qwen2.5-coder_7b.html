@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Arquitectura de un sistema operativo. — Instalación de software libre y propietario: — 0369 Implantación de sistemas operativos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="arquitectura-de-un-sistema-operativo.">
+<h1>Arquitectura de un sistema operativo.</h1>
+<p><strong>Unidad:</strong> Instalación de software libre y propietario:<br><strong>Documento:</strong> 0369 Implantación de sistemas operativos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Arquitectura de un Sistema Operativo</h1>
+    <p>Objetivo: Comprender la estructura y componentes básicos de un sistema operativo.</p>
+</section>
+
+<section class="slide">
+    <h2>Definición del Sistema Operativo</h2>
+    <p>El Sistema Operativo (SO) es el software fundamental que gestiona los recursos del hardware y proporciona una interfaz entre el usuario y el hardware.</p>
+</section>
+
+<section class="slide">
+    <h2>Estructura Básica de un SO</h2>
+    <ul>
+        <li>Kernel: Controlador central que administra los recursos del sistema.</li>
+        <li>Shell: Interfaz de línea de comandos para interactuar con el kernel.</li>
+        <li>Servicios y Daemons: Procesos en segundo plano que realizan tareas específicas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Componentes del Kernel</h2>
+    <ul>
+        <li>Administración de memoria</li>
+        <li>Gestión de procesos</li>
+        <li>Control de dispositivos</li>
+        <li>Interfaz de red</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Shell y Interpretes de Comandos</h2>
+    <p>Los shells como o Z interpretan los comandos del usuario y ejecutan programas.</p>
+</section>
+
+<section class="slide">
+    <h2>Servicios y Daemons</h2>
+    <ul>
+        <li>Apache: Servidor web</li>
+        <li>Mysql: Servidor de bases de datos</li>
+        <li>Cron: Programador de tareas en segundo plano</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo Práctico</h2>
+    <p>Instalación del servidor web Apache en Ubuntu:</p>
+    <pre><code>sudo apt update
+sudo apt install apache2</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Caso de Uso: Configuración de Red</h2>
+    <p>Configurar una interfaz de red en Linux:</p>
+    <pre><code>ip addr add 192.168.1.100/24 dev eth0
+ip link set eth0 up</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Proceso de Instalación de SO</h2>
+    <ol>
+        <li>Selección del SO</li>
+        <li>Preparación del hardware</li>
+        <li>Descarga del instalador</li>
+        <li>Ejecución del instalador</li>
+        <li>Configuración inicial</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas en Instalación</h2>
+    <ul>
+        <li>Usar discos separados para sistemas y datos</li>
+        <li>Copiar configuraciones importantes antes de la instalación</li>
+        <li>Verificar actualizaciones del SO después de la instalación</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en Instalación</h2>
+    <ul>
+        <li>No asignar suficiente espacio a los sistemas críticos</li>
+        <li>No configurar correctamente el firewall</li>
+        <li>No instalar actualizaciones del SO y software</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: SO Propietario vs. Software Libre</h2>
+    <table>
+        <tr>
+            <th></th>
+            <th>Propietario</th>
+            <th>Libre</th>
+        </tr>
+        <tr>
+            <td>Precio</td>
+            <td>Suele ser más caro</td>
+            <td>Generalmente gratuito</td>
+        </tr>
+        <tr>
+            <td>Personalización</td>
+            <td>Menos personalizable</td>
+            <td>Más personalizable</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: ¿Qué es el Kernel?</h2>
+    <p>¿Cuál de las siguientes opciones describe mejor al kernel de un SO?</p>
+    <ul>
+        <li>Interfaz gráfica del usuario</li>
+        <li>Controlador central que gestiona los recursos del sistema</li>
+        <li>Servicio web</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Instalación de SO</h2>
+    <ol>
+        <li>Verificar compatibilidad del hardware con el SO</li>
+        <li>Descargar la versión correcta del instalador</li>
+        <li>Ejecutar el instalador en modo seguro (boot from USB/CD)</li>
+        <li>Seleccionar opciones de partición cuidadosamente</li>
+        <li>Realizar una copia de seguridad antes de la instalación</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Configuración de Servicios</h2>
+    <p>Configura el servicio SSH en tu sistema Linux y verifica su estado.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Sistema Operativo (SO) es el software que gestiona los recursos del hardware.</li>
+        <li>Estructura básica: Kernel, Shell, Servicios y Daemons.</li>
+        <li>Proceso de instalación y buenas prácticas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa General</h2>
+    <p>No hay normativas específicas para la arquitectura de SO, pero se recomienda seguir estándares de seguridad y compatibilidad.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0369 Implantación de sistemas operativos.md · Instalación de software libre y propietario: → Arquitectura de un sistema operativo.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-04 21:25:58</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

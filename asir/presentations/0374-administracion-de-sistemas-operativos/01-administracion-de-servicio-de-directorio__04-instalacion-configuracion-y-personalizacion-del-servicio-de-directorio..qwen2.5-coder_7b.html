@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Instalación, configuración y personalización del servicio de directorio. — Administración de servicio de directorio: — 0374 Administración de sistemas operativos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="instalacion-configuracion-y-personalizacion-del-servicio-de-directorio.">
+<h1>Instalación, configuración y personalización del servicio de directorio.</h1>
+<p><strong>Unidad:</strong> Administración de servicio de directorio:<br><strong>Documento:</strong> 0374 Administración de sistemas operativos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Administración de Sistemas Operativos</h1>
+    <h3>Instalación, Configuración y Personalización del Servicio de Directorio</h3>
+    <p><strong>Objetivo:</strong> Comprender los pasos para instalar, configurar y personalizar un servicio de directorio en sistemas operativos.</p>
+</section>
+
+<section class="slide">
+    <h2>¿Qué es un Servicio de Directorio?</h2>
+    <ul>
+        <li>Almacena información sobre usuarios, grupos y recursos del sistema.</li>
+        <li>Sirve como base de datos centralizada para la gestión de identidades y permisos.</li>
+        <li>Ejemplos: LDAP, Active Directory, NIS.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Instalación del Servicio de Directorio</h2>
+    <ol>
+        <li>Descarga e instala el software del servicio de directorio.</li>
+        <li>Configura la base de datos y los parámetros iniciales.</li>
+        <li>Crea los grupos administrativos necesarios.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Configuración Básica del Servicio</h2>
+    <ul>
+        <li>Define políticas de acceso y autenticación.</li>
+        <li>Configura la replicación para alta disponibilidad.</li>
+        <li>Ajusta los parámetros de rendimiento según las necesidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Personalización del Servicio</h2>
+    <ol>
+        <li>Crea plantillas de usuarios y grupos predefinidas.</li>
+        <li>Configura atributos adicionales según las necesidades organizacionales.</li>
+        <li>Implementa políticas de cumplimiento y seguridad.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo: Configuración de LDAP en Linux</h2>
+    <ul>
+        <li>Instala el servidor LDAP (`sudo apt-get install slapd`)</li>
+        <li>Configura la base de datos inicial (`dpkg-reconfigure slapd`)</li>
+        <li>Añade usuarios y grupos mediante LDIF (`ldapadd -x -D "cn=admin,dc=example,dc=com" -W -f archivo.ldif`)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico: Implementación de Active Directory en Windows Server</h2>
+    <ol>
+        <li>Instala el rol de Servidor de Dominio (`Server Manager > Roles and Features`)</li>
+        <li>Configura el dominio y los controladores de dominio (`Active Directory Users and Computers`)</li>
+        <li>Añade usuarios y grupos mediante la interfaz gráfica</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas en la Administración del Servicio de Directorio</h2>
+    <ul>
+        <li>Realiza copias de seguridad periódicas.</li>
+        <li>Mantén los sistemas actualizados y parcheados.</li>
+        <li>Monitorea el rendimiento y la salud del servicio.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en la Configuración del Servicio de Directorio</h2>
+    <ul>
+        <li>No configurar correctamente las políticas de acceso.</li>
+        <li>No replicar adecuadamente la base de datos.</li>
+        <li>No mantener actualizados los sistemas y parches.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: LDAP vs Active Directory</h2>
+    <table>
+        <tr>
+            <th></th>
+            <th>LDAP</th>
+            <th>Active Directory</th>
+        </tr>
+        <tr>
+            <td>Sistema Operativo</td>
+            <td>Cross-platform (Linux, Unix, Windows)</td>
+            <td>Windows Server</td>
+        </tr>
+        <tr>
+            <td>Funcionalidad</td>
+            <td>Más ligero y flexible</td>
+            <td>Más completo con características de gestión corporativa</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: ¿Qué es LDAP?</h2>
+    <p>¿Cuál de las siguientes opciones describe mejor qué es un servicio de directorio?</p>
+    <ul>
+        <li>a) Almacena información sobre usuarios, grupos y recursos del sistema.</li>
+        <li>b) Es un lenguaje de programación para sistemas operativos.</li>
+        <li>c) Es una herramienta de análisis de rendimiento del sistema.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Instalación y Configuración de LDAP</h2>
+    <ol>
+        <li>Instalar el software del servicio de directorio.</li>
+        <li>Configurar la base de datos inicial.</li>
+        <li>Crea los grupos administrativos necesarios.</li>
+        <li>Define políticas de acceso y autenticación.</li>
+        <li>Configura la replicación para alta disponibilidad.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Configuración de NIS en Red Hat Enterprise Linux</h2>
+    <p>Realiza una configuración básica de NIS en un sistema RHEL y añade usuarios y grupos.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Instalación, configuración y personalización del servicio de directorio son procesos cruciales.</li>
+        <li>Se deben seguir buenas prácticas para garantizar la seguridad y eficiencia del sistema.</li>
+        <li>Caso prácticos ilustran aplicaciones reales en entornos empresariales.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa General</h2>
+    <p>La administración de sistemas operativos debe seguir normativas de seguridad y cumplimiento, como GDPR, PCI-DSS, etc.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0374 Administración de sistemas operativos.md · Administración de servicio de directorio: → Instalación, configuración y personalización del servicio de directorio.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 04:44:06</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

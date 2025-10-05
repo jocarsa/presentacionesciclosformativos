@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>El modelo relacional: Terminología del modelo relacional. Características de una relación. Claves primarias y claves ajenas. — Diseño lógico de bases de datos: — 0372 Gestión de bases de datos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="el-modelo-relacional-terminologia-del-modelo-relacional.-caracteristicas-de-una-relacion.-claves-primarias-y-claves-ajenas.">
+<h1>El modelo relacional: Terminología del modelo relacional. Características de una relación. Claves primarias y claves ajenas.</h1>
+<p><strong>Unidad:</strong> Diseño lógico de bases de datos:<br><strong>Documento:</strong> 0372 Gestión de bases de datos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Diseño lógico de bases de datos</h1>
+    <p><strong>Objetivo:</strong> Comprender el modelo relacional, su terminología y características.</p>
+</section>
+
+<section class="slide">
+    <h2>Modelo Relacional: Terminología</h2>
+    <ul>
+        <li>Relación (Tabla)</li>
+        <li>Tupla (Fila)</li>
+        <li>Atributo (Columna)</li>
+        <li>Domino (Tipo de dato)</li>
+        <li>Cardinalidad (Número de tuplas)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Modelo Relacional: Características</h2>
+    <ul>
+        <li>No redundancia de datos</li>
+        <li>Integridad referencial</li>
+        <li>Independencia física y lógica</li>
+        <li>Consistencia semántica</li>
+        <li>Uniformidad en la organización de los datos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Claves Primarias</h2>
+    <p><strong>Definición:</strong> Identifica de manera única cada tupla en una relación.</p>
+    <ul>
+        <li>No puede ser nula</li>
+        <li>No puede repetirse</li>
+        <li>Única por relación</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Claves Ajenas</h2>
+    <p><strong>Definición:</strong> Referencia a una clave primaria de otra relación.</p>
+    <ul>
+        <li>No puede ser nula (excepto en relaciones que permitan)</li>
+        <li>Puede repetirse</li>
+        <li>Referencia única a una tupla en la relación referenciada</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Relación</h2>
+    <table border="1">
+        <tr><th>ID Empleado</th><th>Nombre</th><th>Departamento ID</th></tr>
+        <tr><td>101</td><td>Juan</td><td>5</td></tr>
+        <tr><td>102</td><td>Maria</td><td>3</td></tr>
+    </table>
+    <p>ID Empleado es clave primaria, Departamento ID es clave ajena.</p>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico: Diseño de una Relación</h2>
+    <ul>
+        <li>Relación: Alumnos</li>
+        <li>Atributos: ID, Nombre, Edad, Carrera</li>
+        <li>Clave Primaria: ID</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas en Claves</h2>
+    <ul>
+        <li>Usar tipos de datos adecuados (numéricos, texto)</li>
+        <li>Asegurar la unicidad con índices</li>
+        <li>No permitir claves nulas donde no sea necesario</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en Claves</h2>
+    <ul>
+        <li>Usar claves que pueden repetirse (por ejemplo, números de teléfono)</li>
+        <li>No definir claves primarias adecuadas</li>
+        <li>No considerar la integridad referencial al crear claves ajenas</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: Clave Primaria vs Clave Ajena</h2>
+    <table border="1">
+        <tr><th></th><th>Clave Primaria</th><th>Clave Ajena</th></tr>
+        <tr><td>Unicidad</td><td>Sí</td><td>No (excepto en relaciones que permitan)</td></tr>
+        <tr><td>Nulidad</td><td>No puede ser nula</td><td>No puede ser nula (excepto en relaciones que permitan)</td></tr>
+        <tr><td>Referencia</td><td>No</td><td>Sí, a otra clave primaria</td></tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Claves Relacionales</h2>
+    <p>¿Cuál de las siguientes no es una característica del modelo relacional?</p>
+    <ul>
+        <li>No redundancia de datos</li>
+        <li>Integridad referencial</li>
+        <li>Independencia física y lógica</li>
+        <li>Consistencia semántica (x)</li>
+        <li>Uniformidad en la organización de los datos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Diseño de Claves Relacionales</h2>
+    <ul>
+        <li>Identificar claves primarias y ajenas</li>
+        <li>Asegurar unicidad con índices</li>
+        <li>No permitir nulos donde no sea necesario</li>
+        <li>Considerar integridad referencial al crear claves ajenas</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Diseño de Relaciones</h2>
+    <p>Diseña una relación para almacenar información sobre libros. Incluye atributos y determina las claves primarias y ajenas.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Modelo relacional: terminología y características</li>
+        <li>Claves primarias y ajenas: definición, características y uso</li>
+        <li>Buenas prácticas y errores comunes en el diseño de claves</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa Relacional</h2>
+    <p><strong>ACID:</strong> Atomicidad, Coherencia, Isolación, Durabilidad.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0372 Gestión de bases de datos.md · Diseño lógico de bases de datos: → El modelo relacional: Terminología del modelo relacional. Características de una relación. Claves primarias y claves ajenas.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 02:17:44</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

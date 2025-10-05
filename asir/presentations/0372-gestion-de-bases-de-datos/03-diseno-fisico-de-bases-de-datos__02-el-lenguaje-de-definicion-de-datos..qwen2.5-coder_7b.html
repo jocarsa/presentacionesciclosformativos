@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>El lenguaje de definición de datos. — Diseño físico de bases de datos: — 0372 Gestión de bases de datos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="el-lenguaje-de-definicion-de-datos.">
+<h1>El lenguaje de definición de datos.</h1>
+<p><strong>Unidad:</strong> Diseño físico de bases de datos:<br><strong>Documento:</strong> 0372 Gestión de bases de datos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Diseño físico de bases de datos</h1>
+    <p><strong>Objetivo:</strong> Comprender el lenguaje de definición de datos (DDL) y su uso en la creación y gestión de esquemas de base de datos.</p>
+</section>
+
+<section class="slide">
+    <h2>Introducción al Lenguaje de Definición de Datos (DDL)</h2>
+    <ul>
+        <li>DDL es un conjunto de comandos utilizados para definir y gestionar la estructura de una base de datos.</li>
+        <li>Incluye operaciones como crear, modificar y eliminar objetos de la base de datos.</li>
+        <li>Ejemplos: CREATE TABLE, ALTER TABLE, DROP TABLE.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comando CREATE TABLE</h2>
+    <p>Crea una nueva tabla en la base de datos.</p>
+    <pre><code>CREATE TABLE empleados (
+        id INT PRIMARY KEY,
+        nombre VARCHAR(100),
+        apellido VARCHAR(100),
+        email VARCHAR(100)
+    );</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Definición de Tipos de Datos</h2>
+    <ul>
+        <li>INT: Entero.</li>
+        <li>VARCHAR(n): Cadena de caracteres con longitud máxima n.</li>
+        <li>DATE: Fecha.</li>
+        <li>DECIMAL(p, s): Número decimal con p dígitos en total y s decimales.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Definición de Restriciones</h2>
+    <ul>
+        <li>PRIMARY KEY: Identifica únicamente cada fila.</li>
+        <li>FOREIGN KEY: Relaciona dos tablas.</li>
+        <li>UNIQUE: Asegura que los valores en una columna sean únicos.</li>
+        <li>NOT NULL: Impide que una columna tenga valores nulos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Tabla con Restriciones</h2>
+    <pre><code>CREATE TABLE departamentos (
+        id INT PRIMARY KEY,
+        nombre VARCHAR(100) NOT NULL
+    );
+
+    CREATE TABLE empleados (
+        id INT PRIMARY KEY,
+        nombre VARCHAR(100),
+        apellido VARCHAR(100),
+        email VARCHAR(100),
+        departamento_id INT,
+        FOREIGN KEY (departamento_id) REFERENCES departamentos(id)
+    );</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Comando ALTER TABLE</h2>
+    <p>Modifica la estructura de una tabla existente.</p>
+    <ul>
+        <li>Añadir columna: ALTER TABLE table_name ADD column_name datatype.</li>
+        <li>Modificar columna: ALTER TABLE table_name MODIFY COLUMN column_name datatype.</li>
+        <li>Borrar columna: ALTER TABLE table_name DROP COLUMN column_name.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de ALTER TABLE</h2>
+    <pre><code>ALTER TABLE empleados ADD COLUMN edad INT;
+    ALTER TABLE empleados MODIFY COLUMN email VARCHAR(150);
+    ALTER TABLE empleados DROP COLUMN edad;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Comando DROP TABLE</h2>
+    <p>Borra una tabla completamente de la base de datos.</p>
+    <pre><code>DROP TABLE table_name;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de DROP TABLE</h2>
+    <pre><code>DROP TABLE empleados;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas en DDL</h2>
+    <ul>
+        <li>Usar nombres descriptivos para tablas y columnas.</li>
+        <li>Definir claves primarias y foráneas adecuadamente.</li>
+        <li>Utilizar tipos de datos apropiados.</li>
+        <li>Añadir restricciones como NOT NULL y UNIQUE cuando sea necesario.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en DDL</h2>
+    <ul>
+        <li>No definir claves primarias o foráneas.</li>
+        <li>Usar tipos de datos incorrectos.</li>
+        <li>No añadir restricciones necesarias.</li>
+        <li>Borrar tablas sin antes hacer una copia de seguridad.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Caso Práctico</h2>
+    <p>Se necesita crear una base de datos para un sistema de gestión de tiendas en línea. Diseña la estructura inicial de las tablas.</p>
+    <pre><code>CREATE TABLE productos (
+        id INT PRIMARY KEY,
+        nombre VARCHAR(100),
+        precio DECIMAL(10, 2)
+    );
+
+    CREATE TABLE clientes (
+        id INT PRIMARY KEY,
+        nombre VARCHAR(100),
+        email VARCHAR(100) UNIQUE
+    );
+
+    CREATE TABLE pedidos (
+        id INT PRIMARY KEY,
+        cliente_id INT,
+        fecha DATE,
+        FOREIGN KEY (cliente_id) REFERENCES clientes(id)
+    );
+
+    CREATE TABLE pedido_items (
+        id INT PRIMARY KEY,
+        pedido_id INT,
+        producto_id INT,
+        cantidad INT,
+        FOREIGN KEY (pedido_id) REFERENCES pedidos(id),
+        FOREIGN KEY (producto_id) REFERENCES productos(id)
+    );</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz</h2>
+    <p>¿Cuál de los siguientes comandos es correcto para crear una tabla con una clave primaria?</p>
+    <ul>
+        <li>A) CREATE TABLE table_name (id INT);</li>
+        <li>B) CREATE TABLE table_name (id INT PRIMARY KEY);</li>
+        <li>C) CREATE TABLE table_name (id INT UNIQUE);</li>
+        <li>D) CREATE TABLE table_name (id INT NOT NULL);</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>DDL es el lenguaje utilizado para definir y gestionar la estructura de una base de datos.</li>
+        <li>Comandos principales: CREATE TABLE, ALTER TABLE, DROP TABLE.</li>
+        <li>Buenas prácticas y errores comunes en DDL.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa General</h2>
+    <p>No hay normativas específicas para DDL. Sin embargo, es importante seguir buenas prácticas de diseño y seguridad al definir la estructura de las bases de datos.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0372 Gestión de bases de datos.md · Diseño físico de bases de datos: → El lenguaje de definición de datos.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 02:21:44</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

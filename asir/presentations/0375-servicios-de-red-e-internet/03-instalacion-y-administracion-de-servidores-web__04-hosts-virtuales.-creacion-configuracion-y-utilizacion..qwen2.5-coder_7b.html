@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>«Hosts» virtuales. Creación, configuración y utilización. — Instalación y administración de servidores Web: — 0375 Servicios de red e Internet.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="hosts-virtuales.-creacion-configuracion-y-utilizacion.">
+<h1>«Hosts» virtuales. Creación, configuración y utilización.</h1>
+<p><strong>Unidad:</strong> Instalación y administración de servidores Web:<br><strong>Documento:</strong> 0375 Servicios de red e Internet.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Hosts virtuales. Creación, configuración y utilización.</h1>
+    <p>Objetivo: Aprender a crear, configurar y utilizar hosts virtuales en servidores Web.</p>
+</section>
+
+<section class="slide">
+    <h2>¿Qué son los Hosts Virtuales?</h2>
+    <ul>
+        <li>Servicios web que comparten el mismo servidor físico.</li>
+        <li>Cada host virtual puede tener su propia dirección IP y dominio.</li>
+        <li>Permiten alojar múltiples sitios web en un solo servidor.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Beneficios de los Hosts Virtuales</h2>
+    <ul>
+        <li>Eficiencia económica al compartir recursos del servidor.</li>
+        <li>Facilita la gestión y escalabilidad de múltiples sitios web.</li>
+        <li>Mejora el uso del espacio en disco y memoria.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Estructura de un Host Virtual</h2>
+    <ul>
+        <li><strong>Directorio raíz:</strong> Ubicación principal del sitio web.</li>
+        <li><strong>Archivos de configuración:</strong> Define las propiedades del host virtual.</li>
+        <li><strong>Base de datos:</strong> Almacena información específica del sitio.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Crea un Host Virtual</h2>
+    <ol>
+        <li>Configura el archivo de configuración del servidor (por ejemplo, Apache).</li>
+        <li>Define las opciones específicas para el host virtual.</li>
+        <li>Reinicia el servicio del servidor para aplicar los cambios.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Configuración</h2>
+    <pre><code>&lt;VirtualHost *:80&gt;
+    ServerName www.ejemplo.com
+    DocumentRoot /var/www/ejemplo
+&lt;/VirtualHost&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Configuración Avanzada</h2>
+    <ul>
+        <li><strong>Alias:</strong> Asigna un nombre alternativo a un directorio.</li>
+        <li><strong>Rewrite Rules:</strong> Redirige solicitudes según ciertas reglas.</li>
+        <li><strong>SSL/TLS:</strong> Configura seguridad para el tráfico HTTPS.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Utilización de Hosts Virtuales</h2>
+    <ul>
+        <li>Cada host virtual puede tener su propio contenido y configuración.</li>
+        <li>Permite a los usuarios acceder a diferentes sitios web desde la misma dirección IP.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas</h2>
+    <ul>
+        <li>Mantén las configuraciones limpias y organizadas.</li>
+        <li>Realiza copias de seguridad periódicas.</li>
+        <li>Monitorea el rendimiento y la seguridad de los hosts virtuales.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes</h2>
+    <ul>
+        <li>No asignar correctamente las direcciones IP o dominios.</li>
+        <li>No reiniciar el servicio del servidor después de cambios.</li>
+        <li>No configurar correctamente los permisos de acceso a los directorios.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa con Servidores Virtuales</h2>
+    <table>
+        <tr>
+            <th>Servidor Virtual</th>
+            <th>Host Virtual</th>
+        </tr>
+        <tr>
+            <td>Instancia completa del sistema operativo.</td>
+            <td>Configuración dentro de un servidor existente.</td>
+        </tr>
+        <tr>
+            <td>Más recursos y costoso.</td>
+            <td>Eficiente en recursos, más económico.</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz</h2>
+    <p>¿Cuáles son los beneficios principales de usar hosts virtuales?</p>
+    <ul>
+        <li>Eficiencia económica al compartir recursos del servidor.</li>
+        <li>Facilita la gestión y escalabilidad de múltiples sitios web.</li>
+        <li>Mejora el uso del espacio en disco y memoria.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist</h2>
+    <ul>
+        <li>Configurar el archivo de configuración del servidor.</li>
+        <li>Definir las opciones específicas para el host virtual.</li>
+        <li>Reiniciar el servicio del servidor para aplicar los cambios.</li>
+        <li>Mantener las configuraciones limpias y organizadas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad</h2>
+    <p>Crea un host virtual en tu servidor local utilizando Apache. Configura el directorio raíz y prueba acceso desde un navegador.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Los hosts virtuales permiten alojar múltiples sitios web en un solo servidor.</li>
+        <li>Se configuran dentro del archivo de configuración del servidor.</li>
+        <li>Son eficientes y facilitan la gestión de múltiples sitios web.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa General</h2>
+    <p>No hay normativas específicas, pero es importante seguir buenas prácticas de seguridad y mantenimiento.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0375 Servicios de red e Internet.md · Instalación y administración de servidores Web: → «Hosts» virtuales. Creación, configuración y utilización.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 06:40:59</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

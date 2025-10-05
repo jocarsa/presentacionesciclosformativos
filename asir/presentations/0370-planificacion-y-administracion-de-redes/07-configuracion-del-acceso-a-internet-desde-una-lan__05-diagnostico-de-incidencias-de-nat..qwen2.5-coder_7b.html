@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Diagnóstico de incidencias de NAT. — Configuración del acceso a Internet desde una LAN: — 0370 Planificación y administración de redes.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="diagnostico-de-incidencias-de-nat.">
+<h1>Diagnóstico de incidencias de NAT.</h1>
+<p><strong>Unidad:</strong> Configuración del acceso a Internet desde una LAN:<br><strong>Documento:</strong> 0370 Planificación y administración de redes.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Diagnóstico de incidencias de NAT</h1>
+    <p>Objetivo: Aprender a identificar y solucionar problemas comunes en el funcionamiento del NAT.</p>
+</section>
+
+<section class="slide">
+    <h2>¿Qué es NAT?</h2>
+    <ul>
+        <li>NAT (Network Address Translation)</li>
+        <li>Traduce direcciones IP internas a direcciones IP públicas</li>
+        <li>Permite que múltiples dispositivos compartan una única dirección IP</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Tipos de NAT</h2>
+    <ul>
+        <li>NAT estándar (PAT)</li>
+        <li>NAT puerta única</li>
+        <li>NAT por puerto múltiple</li>
+        <li>NAT tradicional</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Problemas comunes en NAT</h2>
+    <ul>
+        <li>No se puede acceder a los dispositivos internos desde Internet</li>
+        <li>Puertos bloqueados o no respondiendo</li>
+        <li>Direcciones IP incorrectas asignadas</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Diagnóstico de problemas</h2>
+    <ol>
+        <li>Verificar configuración del router</li>
+        <li>Comprobar puertos abiertos con herramientas como <code>nmap</code></li>
+        <li>Revisar logs del router para errores</li>
+        <li>Probar conexión desde una máquina externa</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de diagnóstico</h2>
+    <p>Supongamos que no se puede acceder a un servidor web en el interior de la LAN.</p>
+    <ul>
+        <li>Verificar que el puerto 80 está abierto en el router</li>
+        <li>Probar conexión desde una máquina externa usando <code>telnet [dirección IP] 80</code></li>
+        <li>Revisar logs del servidor web para errores de configuración</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Caso práctico: NAT puerta única</h2>
+    <p>Un usuario no puede acceder a su servidor FTP desde Internet.</p>
+    <ol>
+        <li>Configurar el router para abrir el puerto 21 (FTP)</li>
+        <li>Verificar que el firewall del servidor permite conexiones entrantes en el puerto 21</li>
+        <li>Probar conexión desde una máquina externa usando FTP client</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas en NAT</h2>
+    <ul>
+        <li>Usar NAT estándar (PAT) para mayor eficiencia</li>
+        <li>Mantener actualizado el firmware del router</li>
+        <li>Configurar correctamente los puertos y direcciones IP</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes en NAT</h2>
+    <ul>
+        <li>Configuración incorrecta de puertos</li>
+        <li>No asignar una dirección IP interna correcta</li>
+        <li>No habilitar el puerto forwarding en el router</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: NAT</h2>
+    <p>¿Cuál de los siguientes es un ejemplo de NAT puerta única?</p>
+    <ol type="A">
+        <li>NAT estándar (PAT)</li>
+        <li>NAT por puerto múltiple</li>
+        <li>NAT tradicional</li>
+        <li>NAT puerta única</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist de diagnóstico NAT</h2>
+    <ul>
+        <li>Verificar configuración del router</li>
+        <li>Comprobar puertos abiertos con herramientas como <code>nmap</code></li>
+        <li>Revisar logs del router para errores</li>
+        <li>Probar conexión desde una máquina externa</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Diagnóstico de NAT</h2>
+    <p>Realizar el diagnóstico de un problema de acceso a Internet desde la LAN.</p>
+    <ol>
+        <li>Identificar el problema (no se puede acceder a un servidor web)</li>
+        <li>Diagnóstico paso a paso</li>
+        <li>Corregir el problema y verificar solución</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>NAT es una técnica de traducción de direcciones IP</li>
+        <li>Problemas comunes incluyen no acceso a dispositivos internos y puertos bloqueados</li>
+        <li>Diagnóstico implica verificar configuración, puertos abiertos y logs del router</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa</h2>
+    <p>No hay normativas específicas para NAT en español.</p>
+    <p>Se recomienda seguir las mejores prácticas recomendadas por fabricantes de dispositivos y organizaciones de seguridad informática.</p>
+</section>
+
+<section class="slide">
+    <h2>Preguntas frecuentes</h2>
+    <ul>
+        <li>¿Qué es NAT?</li>
+        <li>¿Cuáles son los tipos de NAT?</li>
+        <li>¿Cómo puedo diagnosticar problemas en el funcionamiento del NAT?</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Contacto</h2>
+    <p>Preguntas o dudas: [Tu correo electrónico]</p>
+    <p>Más información en: [Enlace a recursos adicionales]</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0370 Planificación y administración de redes.md · Configuración del acceso a Internet desde una LAN: → Diagnóstico de incidencias de NAT.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 01:32:25</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

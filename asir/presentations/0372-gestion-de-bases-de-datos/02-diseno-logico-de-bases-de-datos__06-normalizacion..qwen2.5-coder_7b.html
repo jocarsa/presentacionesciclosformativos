@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Normalización. — Diseño lógico de bases de datos: — 0372 Gestión de bases de datos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="normalizacion.">
+<h1>Normalización.</h1>
+<p><strong>Unidad:</strong> Diseño lógico de bases de datos:<br><strong>Documento:</strong> 0372 Gestión de bases de datos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Diseño lógico de bases de datos</h1>
+    <h3>Normalización</h3>
+    <p>Objetivo: Comprender los conceptos básicos y principios de normalización en la gestión de bases de datos.</p>
+</section>
+
+<section class="slide">
+    <h2>Definición de Normalización</h2>
+    <p>La normalización es el proceso de diseñar una base de datos para eliminar redundancia y dependencias no funcionales, asegurando que cada dato esté almacenado en un lugar único.</p>
+</section>
+
+<section class="slide">
+    <h2>Principios de Normalización</h2>
+    <ul>
+        <li><strong>1NF (First Normal Form):</strong> Elimina duplicados y asegura que todos los valores sean atómicos.</li>
+        <li><strong>2NF (Second Normal Form):</strong> Cumple con 1NF y elimina dependencias parciales.</li>
+        <li><strong>3NF (Third Normal Form):</strong> Cumple con 2NF y evita dependencias transitivas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de 1NF</h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Dirección</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Juan Pérez</td>
+            <td>Calle 1, Ciudad A</td>
+        </tr>
+    </table>
+    <p><strong>Problema:</strong> La dirección está dividida en dos columnas.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de 2NF</h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Calle</th>
+            <th>Ciudad</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Juan Pérez</td>
+            <td>Calle 1</td>
+            <td>Ciudad A</td>
+        </tr>
+    </table>
+    <p><strong>Problema:</strong> La ciudad está repetida.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de 3NF</h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Calle</th>
+            <th>Ciudad</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Juan Pérez</td>
+            <td>Calle 1</td>
+            <td>Ciudad A</td>
+        </tr>
+    </table>
+    <p><strong>Problema:</strong> No hay dependencias transitivas.</p>
+</section>
+
+<section class="slide">
+    <h2>Dependencias Funcionales</h2>
+    <p>Una dependencia funcional es una relación entre un atributo (o conjunto de atributos) y otro atributo en la misma tabla. Se expresa como A → B, donde A es el conjunto de atributos determinantes y B es el atributo determinado.</p>
+</section>
+
+<section class="slide">
+    <h2>Dependencias No Funcionales</h2>
+    <ul>
+        <li><strong>Integridad Referencial:</strong> Relación entre tablas para mantener consistencia de datos.</li>
+        <li><strong>Unicidad:</strong>ada valor en una columna debe ser único.</li>
+        <li><strong>No Nulos:</strong> Atributos no pueden tener valores nulos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Dependencia Funcional</h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Calle</th>
+            <th>Ciudad</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Juan Pérez</td>
+            <td>Calle 1</td>
+            <td>Ciudad A</td>
+        </tr>
+    </table>
+    <p><strong>Ejemplo:</strong> ID → Nombre, Calle, Ciudad.</p>
+</section>
+
+<section class="slide">
+    <h2>Dependencias Transitivas</h2>
+    <p>Una dependencia transitiva ocurre cuando A → B y B →, pero no existe una relación directa entre A y. Esto puede causar redundancia y problemas de integridad.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Dependencia Transitiva</h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Calle</th>
+            <th>Ciudad</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Juan Pérez</td>
+            <td>Calle 1</td>
+            <td>Ciudad A</td>
+        </tr>
+    </table>
+    <p><strong>Ejemplo:</strong> ID → Nombre, Nombre → Ciudad.</p>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas de Normalización</h2>
+    <ul>
+        <li>Minimizar la redundancia de datos.</li>
+        <li>Asegurar la integridad referencial.</li>
+        <li>Evitar dependencias no funcionales.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en Normalización</h2>
+    <ul>
+        <li>No eliminar completamente las redundancias.</li>
+        <li>No considerar todas las dependencias funcionales.</li>
+        <li>No aplicar el nivel adecuado de normalización.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz</h2>
+    <p><strong>Pregunta:</strong> ¿Cuál es la principal ventaja de la normalización en una base de datos?</p>
+    <ol>
+        <li>Aumenta el tamaño del archivo.</li>
+        <li>Reduce la redundancia y mejora la integridad de los datos.</li>
+        <li>Permite almacenar más información en una sola tabla.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist de Normalización</h2>
+    <ul>
+        <li>Verificar que la base de datos cumpla con 1NF, 2NF y 3NF.</li>
+        <li>Asegurar que no haya dependencias transitivas.</li>
+        <li>Comprobar la integridad referencial entre tablas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejercicio Práctico</h2>
+    <p>Diseña una base de datos para un sistema de gestión de bibliotecas que incluya las entidades: Libro, Autor y Prestamo. Aplica los principios de normalización hasta el nivel 3NF.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>La normalización es crucial para la gestión eficiente de bases de datos.</li>
+        <li>Se basa en principios como 1NF, 2NF y 3NF.</li>
+        <li>Asegura la integridad y reducción de redundancia.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa Relacionada</h2>
+    <p>No hay normativas específicas, pero se aplican principios de diseño de sistemas de información y bases de datos.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0372 Gestión de bases de datos.md · Diseño lógico de bases de datos: → Normalización.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 02:19:45</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

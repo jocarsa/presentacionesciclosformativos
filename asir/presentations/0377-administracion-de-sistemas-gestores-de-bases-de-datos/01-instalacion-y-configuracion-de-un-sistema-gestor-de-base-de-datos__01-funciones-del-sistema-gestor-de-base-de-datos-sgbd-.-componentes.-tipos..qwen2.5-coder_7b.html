@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Funciones del sistema gestor de base de datos (SGBD). Componentes. Tipos. — Instalación y configuración de un sistema gestor de base de datos: — 0377 Administración de sistemas gestores de bases de datos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="funciones-del-sistema-gestor-de-base-de-datos-sgbd-.-componentes.-tipos.">
+<h1>Funciones del sistema gestor de base de datos (SGBD). Componentes. Tipos.</h1>
+<p><strong>Unidad:</strong> Instalación y configuración de un sistema gestor de base de datos:<br><strong>Documento:</strong> 0377 Administración de sistemas gestores de bases de datos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Funciones del Sistema Gestor de Bases de Datos (SGBD)</h1>
+    <p>Objetivo: Comprender las funciones principales, componentes y tipos de SGBDs.</p>
+</section>
+
+<section class="slide">
+    <h2>Definición de Sistema Gestor de Bases de Datos (SGBD)</h2>
+    <p>SGBD es un software que permite crear, gestionar, manipular y mantener las bases de datos.</p>
+</section>
+
+<section class="slide">
+    <h2>Funciones Principales del SGBD</h2>
+    <ul>
+        <li>Definición de esquemas de datos</li>
+        <li>Almacenamiento de datos</li>
+        <li>Procesamiento y recuperación de datos</li>
+        <li>Control de concurrencia</li>
+        <li>Seguridad y control de acceso</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo: Creación de una Base de Datos en MySQL</h2>
+    <pre><code>CREATE DATABASE biblioteca;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Componentes del SGBD</h2>
+    <ul>
+        <li>Interfaz de usuario (GUI)</li>
+        <li>Servidor de bases de datos</li>
+        <li>Lenguaje de definición de datos (DDL)</li>
+        <li>Lenguaje de manipulación de datos (DML)</li>
+        <li>Lenguaje de control de acceso (ACL)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Tipos de Sistemas Gestores de Bases de Datos</h2>
+    <ul>
+        <li>SGBDs Relacionales (RDBMS)</li>
+        <li>SGBDs No Relacionales (NoSQL)</li>
+        <li>SGBDs Orientados a Objetos (ODBMS)</li>
+        <li>SGBDs Orientados a Documentos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de SGBD Relacional: PostgreSQL</h2>
+    <p>PostgreSQL es un RDBMS popular conocido por su robustez y funcionalidad.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de SGBD No Relacional: MongoDB</h2>
+    <p>MongoDB es un SGBD NoSQL basado en documentos, ideal para aplicaciones web.</p>
+</section>
+
+<section class="slide">
+    <h2>Características de los SGBDs Orientados a Objetos (ODBMS)</h2>
+    <ul>
+        <li>Soportan objetos y relaciones entre ellos</li>
+        <li>Facilitan la programación orientada a objetos</li>
+        <li>Menos eficientes en comparación con RDBMS</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de SGBD Orientado a Objetos: db4o</h2>
+    <p>db4o es un ODBMS que permite almacenar objetos .NET directamente en la base de datos.</p>
+</section>
+
+<section class="slide">
+    <h2>Características de los SGBDs Orientados a Documentos</h2>
+    <ul>
+        <li>Almacenan datos en formato o BSON</li>
+        <li>Fáciles de escalar horizontalmente</li>
+        <li>No requieren esquemas rígidos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de SGBD Orientado a Documentos: Couchbase</h2>
+    <p>Couchbase es un SGBD NoSQL orientado a documentos que ofrece escalabilidad y alta disponibilidad.</p>
+</section>
+
+<section class="slide">
+    <h2>Comparación RDBMS vs. NoSQL</h2>
+    <table>
+        <tr>
+            <th>RDBMS</th>
+            <th>NoSQL</th>
+        </tr>
+        <tr>
+            <td>Estructura de datos tabular</td>
+            <td>Estructura de datos flexible (, BSON)</td>
+        </tr>
+        <tr>
+            <td>Relaciones entre tablas</td>
+            <td>No relaciones predefinidas</td>
+        </tr>
+        <tr>
+            <td>Escalabilidad vertical</td>
+            <td>Escalabilidad horizontal</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas en la Selección de SGBD</h2>
+    <ul>
+        <li>Evaluación de requisitos funcionales y no funcionales</li>
+        <li>Consideración del tipo de datos a almacenar</li>
+        <li>Factoría de rendimiento y escalabilidad</li>
+        <li>Seguridad y cumplimiento normativo</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico: Selección de SGBD para una Aplicación E-commerce</h2>
+    <p>Para aplicaciones e-commerce, un RDBMS como PostgreSQL o MySQL suele ser la mejor opción.</p>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes al Seleccionar un SGBD</h2>
+    <ul>
+        <li>No considerar el tipo de datos a almacenar</li>
+        <li>No evaluar las necesidades de escalabilidad</li>
+        <li>No tener en cuenta la seguridad y cumplimiento normativo</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: ¿Qué tipo de SGBD es MongoDB?</h2>
+    <ol>
+        <li>RDBMS</li>
+        <li>NoSQL</li>
+        <li>Orientado a Objetos</li>
+        <li>Orientado a Documentos</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist para la Selección de un SGBD</h2>
+    <ul>
+        <li>Evaluación de requisitos funcionales y no funcionales</li>
+        <li>Consideración del tipo de datos a almacenar</li>
+        <li>Factoría de rendimiento y escalabilidad</li>
+        <li>Seguridad y cumplimiento normativo</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Identificar el Tipo de SGBD</h2>
+    <p>Identifica el tipo de SGBD para cada una de las siguientes bases de datos:</p>
+    <ol>
+        <li>MySQL</li>
+        <li>Couchbase</li>
+        <li>MongoDB</li>
+        <li>db4o</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <p>Los SGBDs desempeñan un papel crucial en la gestión de datos en aplicaciones modernas. Comprendiendo sus funciones, componentes y tipos, se pueden seleccionar los más adecuados para cada proyecto.</p>
+</section>
+
+<section class="slide">
+    <h2>Normativa y Regulaciones</h2>
+    <p>Es importante cumplir con las regulaciones de protección de datos (como GDPR) al seleccionar y utilizar SGBDs.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0377 Administración de sistemas gestores de bases de datos.md · Instalación y configuración de un sistema gestor de base de datos: → Funciones del sistema gestor de base de datos (SGBD). Componentes. Tipos.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 08:44:45</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

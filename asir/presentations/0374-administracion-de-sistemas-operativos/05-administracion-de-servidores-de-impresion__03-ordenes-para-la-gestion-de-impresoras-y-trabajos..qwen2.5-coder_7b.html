@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Órdenes para la gestión de impresoras y trabajos. — Administración de servidores de impresión: — 0374 Administración de sistemas operativos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="ordenes-para-la-gestion-de-impresoras-y-trabajos.">
+<h1>Órdenes para la gestión de impresoras y trabajos.</h1>
+<p><strong>Unidad:</strong> Administración de servidores de impresión:<br><strong>Documento:</strong> 0374 Administración de sistemas operativos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Administración de servidores de impresión</h1>
+    <p><strong>Objetivo:</strong> Comprender las órdenes para la gestión de impresoras y trabajos en sistemas operativos.</p>
+</section>
+
+<section class="slide">
+    <h2>Introducción a la administración de impresoras</h2>
+    <ul>
+        <li>Definición de impresión y servidores de impresión.</li>
+        <li>Importancia de la gestión eficiente de impresoras en entornos corporativos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comandos básicos para gestionar impresoras</h2>
+    <ul>
+        <li><code>lpstat -p</code>: Muestra el estado de las impresoras.</li>
+        <li><code>lpstat -o</code>: Muestra los trabajos en cola.</li>
+        <li><code>lpr -P nombre_impresora archivo</code>: Envía un trabajo a una impresora específica.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comandos para gestionar trabajos de impresión</h2>
+    <ul>
+        <li><code>cancel trabajo_id</code>: Cancela un trabajo específico.</li>
+        <li><code>lprm -P nombre_impresora trabajo_id</code>: Elimina un trabajo en cola de una impresora específica.</li>
+        <li><code>lpq -P nombre_impresora</code>: Muestra la cola de trabajos de una impresora específica.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas para la gestión de impresoras</h2>
+    <ul>
+        <li>Monitorear regularmente el estado de las impresoras y sus colas.</li>
+        <li>Asignar prioridades a los trabajos según su urgencia.</li>
+        <li>Mantener actualizados los drivers e impresoras.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes en la gestión de impresoras</h2>
+    <ul>
+        <li>Olvidar el nombre de la impresora al enviar un trabajo.</li>
+        <li>No cancelar trabajos en cola cuando ya no son necesarios.</li>
+        <li>No mantener actualizados los drivers y firmware de las impresoras.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comando para agregar una nueva impresora</h2>
+    <p><code>lpadmin -p nombre_impresora -v uri_de_impresora -E</code></p>
+</section>
+
+<section class="slide">
+    <h2>Comando para eliminar una impresora</h2>
+    <p><code>lpadmin -x nombre_impresora</code></p>
+</section>
+
+<section class="slide">
+    <h2>Comando para cambiar la prioridad de un trabajo</h2>
+    <p><code>lpr -P nombre_impresora -o job-priority=nivel archivo</code></p>
+</section>
+
+<section class="slide">
+    <h2>Comando para enviar trabajos a una impresora por defecto</h2>
+    <p><code>lp archivo</code></p>
+</section>
+
+<section class="slide">
+    <h2>Comando para ver la configuración de una impresora</h2>
+    <p><code>lpstat -p nombre_impresora -l</code></p>
+</section>
+
+<section class="slide">
+    <h2>Comando para enviar trabajos a múltiples impresoras</h2>
+    <p><code>lp -d impresora1,impresora2 archivo</code></p>
+</section>
+
+<section class="slide">
+    <h2>Comando para ver la lista de impresoras disponibles</h2>
+    <p><code>lpstat -a</code></p>
+</section>
+
+<section class="slide">
+    <h2>Comando para enviar trabajos en formato PDF</h2>
+    <p><code>lpr -P nombre_impresora archivo.pdf</code></p>
+</section>
+
+<section class="slide">
+    <h2>Comando para enviar trabajos en formato PostScript</h2>
+    <p><code>lpr -P nombre_impresora archivo.ps</code></p>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: Comandos de impresión</h2>
+    <ul>
+        <li>¿Qué comando se usa para enviar un trabajo a una impresora específica?</li>
+        <li>¿Cómo puedes cancelar un trabajo en cola?</li>
+        <li>¿Qué comando muestra la lista de impresoras disponibles?</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Administración de impresoras</h2>
+    <ul>
+        <li>Verificar el estado de las impresoras.</li>
+        <li>Monitorear la cola de trabajos.</li>
+        <li>Asegurarse de que los drivers estén actualizados.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Práctica con comandos de impresión</h2>
+    <p>Ejecute los siguientes comandos y registre los resultados:</p>
+    <ul>
+        <li><code>lpstat -p</code></li>
+        <li><code>lpr -P nombre_impresora archivo.txt</code></li>
+        <li><code>cancel trabajo_id</code></li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Resumen de órdenes para gestión de impresoras y trabajos</h2>
+    <ul>
+        <li><code>lpstat -p</code>: Estado de las impresoras.</li>
+        <li><code>lpr -P nombre_impresora archivo</code>: Enviar trabajo a impresora específica.</li>
+        <li><code>cancel trabajo_id</code>: Cancelar trabajo en cola.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa y políticas de gestión de impresoras</h2>
+    <p>Es importante establecer políticas claras sobre el uso de los servidores de impresión para evitar problemas técnicos y de seguridad.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0374 Administración de sistemas operativos.md · Administración de servidores de impresión: → Órdenes para la gestión de impresoras y trabajos.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 05:05:28</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

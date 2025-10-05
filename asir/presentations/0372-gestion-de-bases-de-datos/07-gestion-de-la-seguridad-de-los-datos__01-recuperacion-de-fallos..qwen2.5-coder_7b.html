@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Recuperación de fallos. — Gestión de la seguridad de los datos: — 0372 Gestión de bases de datos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="recuperacion-de-fallos.">
+<h1>Recuperación de fallos.</h1>
+<p><strong>Unidad:</strong> Gestión de la seguridad de los datos:<br><strong>Documento:</strong> 0372 Gestión de bases de datos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Gestión de la seguridad de los datos</h1>
+    <p><strong>Objetivo:</strong> Comprender las técnicas y procesos para recuperar fallos en bases de datos.</p>
+</section>
+
+<section class="slide">
+    <h2>Recuperación de Fallos: Concepto Básico</h2>
+    <ul>
+        <li>Es el proceso de restaurar los datos a su estado anterior después de un fallo o pérdida.</li>
+        <li>Incluye la recuperación física y lógica de los datos.</li>
+        <li>Objetivos: minimizar el tiempo de inactividad, proteger la integridad de los datos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Técnicas de Recuperación de Fallos</h2>
+    <ul>
+        <li><strong>Backup:</strong> Copia de seguridad periódica de los datos.</li>
+        <li><strong>Replicación:</strong> Duplicado de los datos en diferentes ubicaciones.</li>
+        <li><strong>Log de Transacciones:</strong> Registro de cambios para restaurar el estado anterior.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Recuperación</h2>
+    <p>Supongamos un fallo en la base de datos del sistema bancario. Se realiza una recuperación a partir del último backup diario.</p>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico: Incidente de Datos Perdidos</h2>
+    <p>Una empresa perdio todos sus datos debido a un fallo en el servidor. La recuperación fue exitosa gracias a los backups diarios.</p>
+</section>
+
+<section class="slide">
+    <h2>Proceso de Recuperación</h2>
+    <ol>
+        <li>Detección del fallo.</li>
+        <li>Identificación de la causa.</li>
+        <li>Selección del método de recuperación (backup, replicación, log).</li>
+        <li>Ejecución del proceso de recuperación.</li>
+        <li>Verificación y pruebas post-recuperación.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas en Recuperación</h2>
+    <ul>
+        <li>Frecuencia adecuada de los backups (diarios, semanales).</li>
+        <li>Almacenamiento seguro y accesible de los backups.</li>
+        <li>Pruebas periódicas de recuperación para validar la eficacia.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en Recuperación</h2>
+    <ul>
+        <li>No realizar backups regulares.</li>
+        <li>No almacenar los backups en ubicaciones seguras.</li>
+        <li>No probar periódicamente el proceso de recuperación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: Recuperación vs. Prevención</h2>
+    <table>
+        <tr>
+            <th></th>
+            <th>Recuperación</th>
+            <th>Prevención</th>
+        </tr>
+        <tr>
+            <td>Costo</td>
+            <td>Alto (post-fallo)</td>
+            <td>Bajo (previamente)</td>
+        </tr>
+        <tr>
+            <td>Tiempo de Inactividad</td>
+            <td>Varía según el fallo</td>
+            <td>Cero o mínimo</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Recuperación de Fallos</h2>
+    <p>¿Qué es la recuperación de fallos?</p>
+    <ol type="A">
+        <li>Copiar los datos a otro servidor.</li>
+        <li>Restaurar los datos desde una copia de seguridad.</li>
+        <li>Reemplazar los discos duros dañados.</li>
+        <li>Realizar un análisis del fallo para prevenirlo en el futuro.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Recuperación de Fallos</h2>
+    <ul>
+        <li>¿Se han realizado backups regulares?</li>
+        <li>¿Los backups están almacenados en ubicaciones seguras?</li>
+        <li>¿Se ha probado el proceso de recuperación recientemente?</li>
+        <li>¿Se tienen procedimientos claros para la recuperación?</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Planificación de Recuperación</h2>
+    <p>Crea un plan de recuperación para una base de datos pequeña.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen: Recuperación de Fallos</h2>
+    <ul>
+        <li>Recuperación es el proceso de restaurar los datos a su estado anterior después de un fallo.</li>
+        <li>Incluye técnicas como backup, replicación y log de transacciones.</li>
+        <li>Buenas prácticas: frecuencia adecuada de backups, almacenamiento seguro, pruebas periódicas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa en Recuperación de Fallos</h2>
+    <p>Normativas como GDPR y ISO 27035 requieren la implementación de procesos de recuperación efectivos.</p>
+</section>
+
+<section class="slide">
+    <h2>Cierre: Reflexión Final</h2>
+    <p>¿Qué aspectos consideras más importantes para una buena gestión de la recuperación de fallos?</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0372 Gestión de bases de datos.md · Gestión de la seguridad de los datos: → Recuperación de fallos.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 02:39:24</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

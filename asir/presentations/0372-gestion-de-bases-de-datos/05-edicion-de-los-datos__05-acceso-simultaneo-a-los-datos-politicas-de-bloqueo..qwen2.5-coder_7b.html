@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Acceso simultáneo a los datos: políticas de bloqueo. — Edición de los datos: — 0372 Gestión de bases de datos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="acceso-simultaneo-a-los-datos-politicas-de-bloqueo.">
+<h1>Acceso simultáneo a los datos: políticas de bloqueo.</h1>
+<p><strong>Unidad:</strong> Edición de los datos:<br><strong>Documento:</strong> 0372 Gestión de bases de datos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Acceso simultáneo a los datos: políticas de bloqueo</h1>
+    <p>Objetivo: Comprender las políticas de bloqueo y su importancia en la gestión de bases de datos.</p>
+</section>
+
+<section class="slide">
+    <h2>Definición de Políticas de Bloqueo</h2>
+    <p>Las políticas de bloqueo son reglas que controlan cómo los usuarios pueden acceder, modificar y eliminar datos simultáneamente en una base de datos.</p>
+</section>
+
+<section class="slide">
+    <h2>Tipos de Políticas de Bloqueo</h2>
+    <ul>
+        <li>Bloqueo de lectura (Read Lock): Evita que otros usuarios modifiquen los datos mientras se están leyendo.</li>
+        <li>Bloqueo de escritura (Write Lock): Evita que otros usuarios lean o modifiquen los datos mientras se está modificando.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Beneficios del Bloqueo</h2>
+    <ul>
+        <li>Consistencia de datos: Asegura que los datos no sean inconsistentes durante la modificación.</li>
+        <li>Integridad de datos: Previene la pérdida o corrupción de datos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo Práctico</h2>
+    <p>Caso: Un sistema bancario que bloquea el saldo de una cuenta mientras se realiza un retiro para evitar inconsistencias financieras.</p>
+</section>
+
+<section class="slide">
+    <h2>Desventajas del Bloqueo</h2>
+    <ul>
+        <li>Baja concurrencia: Puede reducir la capacidad de procesamiento simultáneo.</li>
+        <li>Efectividad limitada: No siempre previene todos los problemas de concurrencia.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Políticas de Bloqueo en SQL Server</h2>
+    <p>SQL Server utiliza dos tipos principales de bloqueos: bloqueos de fila y bloqueos de página.</p>
+</section>
+
+<section class="slide">
+    <h2>Bloqueos de Fila</h2>
+    <p>Se aplican a filas específicas en la tabla, lo que permite una mayor concurrencia pero puede aumentar el consumo de recursos.</p>
+</section>
+
+<section class="slide">
+    <h2>Bloqueos de Página</h2>
+    <p>Se aplican a páginas de datos contiguas, reduciendo el consumo de recursos pero limitando la concurrencia.</p>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Políticas de Bloqueo en SQL Server</h2>
+    <ul>
+        <li>MAXDOP (Degree of Parallelism): Controla el grado de paralelismo para las consultas.</li>
+        <li>Isolation Level: Define la consistencia de los datos leídos por una transacción.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Configuración en SQL Server</h2>
+    <pre><code>SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
+GO
+SELECT * FROM MiTabla WITH (ROWLOCK);</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas</h2>
+    <ul>
+        <li>Usar el nivel de aislamiento más bajo necesario para la aplicación.</li>
+        <li>Optimizar consultas para reducir el tiempo de bloqueo.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes</h2>
+    <ul>
+        <li>No configurar adecuadamente los niveles de aislamiento.</li>
+        <li>No optimizar consultas, lo que puede aumentar el tiempo de bloqueo.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz</h2>
+    <p>¿Cuál es la principal ventaja del bloqueo de lectura?</p>
+    <ol>
+        <li>Aumenta la concurrencia</li>
+        <li>Previenen inconsistencias de datos</li>
+        <li>Reducen el consumo de recursos</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist</h2>
+    <ul>
+        <li>Identificar las áreas críticas que requieren bloqueo.</li>
+        <li>Elegir el tipo de bloqueo más adecuado (bloqueo de fila o página).</li>
+        <li>Configurar los niveles de aislamiento y MAXDOP según sea necesario.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad</h2>
+    <p>Ejercicio: Diseña una política de bloqueo para un sistema de gestión de inventario que requiere alta concurrencia.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Políticas de bloqueo controlan el acceso simultáneo a los datos en una base de datos.</li>
+        <li>Tienen beneficios y desventajas, y su configuración depende del nivel de concurrencia requerido.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa General</h2>
+    <p>La normativa establece estándares para la gestión de bases de datos, incluyendo políticas de bloqueo y aislamiento.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0372 Gestión de bases de datos.md · Edición de los datos: → Acceso simultáneo a los datos: políticas de bloqueo.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 02:35:24</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

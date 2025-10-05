@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>El modelo E/R ampliado. — Diseño lógico de bases de datos: — 0372 Gestión de bases de datos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="el-modelo-e-r-ampliado.">
+<h1>El modelo E/R ampliado.</h1>
+<p><strong>Unidad:</strong> Diseño lógico de bases de datos:<br><strong>Documento:</strong> 0372 Gestión de bases de datos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Diseño lógico de bases de datos</h1>
+    <p><strong>Objetivo:</strong> Comprender el modelo E/R ampliado y su importancia en la gestión de bases de datos.</p>
+</section>
+
+<section class="slide">
+    <h2>Modelo E/R Ampliado</h2>
+    <p>El Modelo E/R Ampliado es una extensión del modelo E/R tradicional que incluye elementos adicionales para mejorar su precisión y expresividad.</p>
+</section>
+
+<section class="slide">
+    <h3>Nuevos Elementos del Modelo E/R Ampliado</h3>
+    <ul>
+        <li>Relaciones de tipo "n a n" (muchos a muchos)</li>
+        <li>Relaciones transitivas</li>
+        <li>Relaciones reflexivas</li>
+        <li>Relaciones de tipo "1 a 0..1"</li>
+        <li>Relaciones de tipo "0..1 a 0..1"</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Modelo E/R Ampliado</h2>
+    <p><img src="ejemplo_er_ampliado.png" alt="Ejemplo de Modelo E/R Ampliado"></p>
+</section>
+
+<section class="slide">
+    <h3>Relaciones de Tipo "n a n"</h3>
+    <p>Ejemplo: Alumnos yursos. Un alumno puede inscribirse en varios cursos, y un curso puede tener varios alumnos.</p>
+</section>
+
+<section class="slide">
+    <h3>Relaciones Transitivas</h3>
+    <p>Ejemplo: Empleados, Jefes y Departamentos. Un empleado puede ser jefe de otro empleado, que a su vez puede ser jefe de otro empleado.</p>
+</section>
+
+<section class="slide">
+    <h3>Relaciones Reflexivas</h3>
+    <p>Ejemplo: Alumnos. Un alumno puede ser amigo de otro alumno.</p>
+</section>
+
+<section class="slide">
+    <h3>Relaciones de Tipo "1 a 0..1"</h3>
+    <p>Ejemplo: Empleados y Departamentos. Un empleado debe estar asignado a un departamento, pero no todos los departamentos necesitan tener un jefe.</p>
+</section>
+
+<section class="slide">
+    <h3>Relaciones de Tipo "0..1 a 0..1"</h3>
+    <p>Ejemplo: Empleados y Jefes. Un empleado puede o no tener un jefe, y un jefe puede o no ser el jefe de otro empleado.</p>
+</section>
+
+<section class="slide">
+    <h2>Beneficios del Modelo E/R Ampliado</h2>
+    <ul>
+        <li>Más precisión en la representación de relaciones entre entidades</li>
+        <li>Mejor expresividad para modelar situaciones complejas</li>
+        <li>Simplifica el proceso de diseño y normalización de bases de datos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico: Diseño de una Base de Datos de Biblioteca</h2>
+    <p><img src="caso_biblioteca.png" alt="aso Práctico: Diseño de una Base de Datos de Biblioteca"></p>
+</section>
+
+<section class="slide">
+    <h3>Entidades en el Caso Práctico</h3>
+    <ul>
+        <li>Libros</li>
+        <li>Autores</li>
+        <li>Ejemplares</li>
+        <li>Prestamos</li>
+        <li>Estudiantes</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Relaciones en el Caso Práctico</h3>
+    <ul>
+        <li>Un libro tiene varios ejemplares</li>
+        <li>Un autor ha escrito varios libros</li>
+        <li>Un estudiante puede prestar varios ejemplares</li>
+        <li>Un ejemplar puede ser prestado a un estudiante</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Relaciones E/R Ampliado</h2>
+    <p>¿Cuál de las siguientes relaciones no es válida en el Modelo E/R Ampliado?</p>
+    <ol>
+        <li>1 a 0..1</li>
+        <li>n a n</li>
+        <li>0..1 a 0..1</li>
+        <li>m a n (donde m > 1)</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Consideraciones al Diseñar con el Modelo E/R Ampliado</h2>
+    <ul>
+        <li>Identificar todas las entidades y sus atributos</li>
+        <li>Determinar las relaciones entre entidades</li>
+        <li>Considerar los tipos de relaciones válidos en el Modelo E/R Ampliado</li>
+        <li>Verificar la consistencia del modelo</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Diseño de un Modelo E/R Ampliado</h2>
+    <p>Diseña un modelo E/R ampliado para una base de datos de tienda en línea. Identifica las entidades, sus atributos y las relaciones entre ellas.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen: Modelo E/R Ampliado</h2>
+    <ul>
+        <li>Extensión del modelo E/R tradicional</li>
+        <li>Nuevos tipos de relaciones</li>
+        <li>Más precisión y expresividad en el diseño de bases de datos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Diseño de Bases de Datos</h2>
+    <p><strong>Norma ISO/IE 9075-1:2016:</strong> Estándar para el lenguaje SQL, que incluye recomendaciones sobre la normalización y diseño de bases de datos.</p>
+</section>
+
+<section class="slide">
+    <h2>Preguntas Frecuentes</h2>
+    <ul>
+        <li>¿Qué es el Modelo E/R Ampliado?</li>
+        <li>Cómo se diferencian las relaciones en el Modelo E/R Ampliado?</li>
+        <li>¿Cuáles son los beneficios del uso del Modelo E/R Ampliado?</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Contacto</h2>
+    <p><strong>Autor:</strong> [Nombre del Autor]</p>
+    <p><strong>Email:</strong> [Correo Electrónico]</p>
+    <p><strong>Fecha:</strong> [Fecha de Creación]</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0372 Gestión de bases de datos.md · Diseño lógico de bases de datos: → El modelo E/R ampliado.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 02:16:45</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

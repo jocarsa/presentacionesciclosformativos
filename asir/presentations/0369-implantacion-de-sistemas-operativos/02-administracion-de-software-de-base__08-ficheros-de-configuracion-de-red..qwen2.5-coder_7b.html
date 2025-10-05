@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Ficheros de configuración de red. — Administración de software de base: — 0369 Implantación de sistemas operativos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="ficheros-de-configuracion-de-red.">
+<h1>Ficheros de configuración de red.</h1>
+<p><strong>Unidad:</strong> Administración de software de base:<br><strong>Documento:</strong> 0369 Implantación de sistemas operativos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Ficheros de configuración de red</h1>
+    <p>Objetivo: Comprender los conceptos y prácticas relacionados con los ficheros de configuración de red.</p>
+</section>
+
+<section class="slide">
+    <h2>Concepto de Fichero de Configuración de Red</h2>
+    <p>Un fichero de configuración de red es un archivo que contiene información necesaria para la correcta operación del sistema operativo en una red.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplos de Ficheros de Configuración de Red</h2>
+    <ul>
+        <li><code>/etc/network/interfaces</code> (Debian/Ubuntu)</li>
+        <li><code>/etc/sysconfig/network-scripts/ifcfg-eth0</code> (Red Hat/CentOS)</li>
+        <li><code>C:\Windows\System32\drivers\etc\hosts</code> (Windows)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Estructura de un Fichero de Configuración de Red</h2>
+    <p>Incluye información como:</p>
+    <ul>
+        <li>Dirección IP</li>
+        <li>Máscara de subred</li>
+        <li>Puerta de enlace predeterminada</li>
+        <li>Servidores DNS</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Proceso de Edición de un Fichero de Configuración de Red</h2>
+    <ol>
+        <li>Identificar el fichero correcto para la interfaz deseada.</li>
+        <li>Modificar las líneas correspondientes con los valores deseados.</li>
+        <li>Guardar los cambios y reiniciar el servicio de red.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas al Editar Ficheros de Configuración de Red</h2>
+    <ul>
+        <li>Hacer una copia de seguridad del fichero original.</li>
+        <li>Comprobar la sintaxis antes de guardar los cambios.</li>
+        <li>Reiniciar el servicio de red para aplicar los cambios.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes al Editar Ficheros de Configuración de Red</h2>
+    <ul>
+        <li>Sintaxis incorrecta.</li>
+        <li>Direcciones IP inválidas.</li>
+        <li>No reiniciar el servicio de red.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Identificación de Ficheros de Configuración de Red</h2>
+    <p>¿Cuál es el fichero de configuración de red en Debian/Ubuntu para la interfaz eth0?</p>
+    <ol>
+        <li>/etc/network/interfaces</li>
+        <li>/etc/sysconfig/network-scripts/ifcfg-eth0</li>
+        <li>C:\Windows\System32\drivers\etc\hosts</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Edición de Ficheros de Configuración de Red</h2>
+    <ul>
+        <li>Hacer una copia de seguridad del fichero original.</li>
+        <li>Comprobar la sintaxis antes de guardar los cambios.</li>
+        <li>Reiniciar el servicio de red para aplicar los cambios.</li>
+        <li>Verificar que la configuración es correcta después del reinicio.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Configuración de una Interfaz de Red</h2>
+    <p>Configura la interfaz eth0 en un sistema Debian/Ubuntu con las siguientes características:</p>
+    <ul>
+        <li>Dirección IP: 192.168.1.100</li>
+        <li>Máscara de subred: 255.255.255.0</li>
+        <li>Puerta de enlace predeterminada: 192.168.1.1</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Resumen: Ficheros de Configuración de Red</h2>
+    <p>Los ficheros de configuración de red son esenciales para la correcta operación del sistema en una red. Es importante conocer su estructura, cómo editarlos y seguir buenas prácticas para evitar errores.</p>
+</section>
+
+<section class="slide">
+    <h2>Normativa Relacionada con Ficheros de Configuración de Red</h2>
+    <ul>
+        <li>Seguridad en la red: Protección contra modificaciones no autorizadas.</li>
+        <li>Compliance: Cumplimiento con regulaciones de seguridad y privacidad.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico: Problema de Conexión a Internet</h2>
+    <p>Un usuario no puede conectarse a internet. Analiza el fichero de configuración de red para identificar el problema.</p>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Solución de Problemas con Ficheros de Configuración de Red</h2>
+    <p>¿Qué comando se debe usar para reiniciar el servicio de red en Debian/Ubuntu?</p>
+    <ol>
+        <li><code>service network restart</code></li>
+        <li><code>systemctl restart networking</code></li>
+        <li><code>net interface ip set address "eth0" static 192.168.1.100 255.255.255.0 192.168.1.1</code></li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Solución de Problemas con Ficheros de Configuración de Red</h2>
+    <ul>
+        <li>Verificar la sintaxis del fichero.</li>
+        <li>Reiniciar el servicio de red.</li>
+        <li>Comprobar la conexión a internet.</li>
+        <li>Si persiste, verificar los registros de sistema.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Diagnóstico y Solución de Problemas con Ficheros de Configuración de Red</h2>
+    <p>Diagnostica y soluciona el problema de conexión a internet en un sistema que no puede acceder a la red.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen: Diagnóstico y Solución de Problemas con Ficheros de Configuración de Red</h2>
+    <p>El diagnóstico y solución de problemas con ficheros de configuración de red requiere habilidades técnicas y atención a los detalles. Es crucial seguir un enfoque sistemático para identificar y resolver el problema.</p>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico: Actualización del Servidor DNS</h2>
+    <p>Un servidor necesita actualizar su configuración de DNS. Realiza los cambios necesarios en el fichero de configuración correspondiente.</p>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Actualización del Servidor DNS</h2>
+    <p>¿Qué comando se debe usar para reiniciar el servicio de red en Red Hat/CentOS?</p>
+    <ol>
+        <li><code>service network restart</code></li>
+        <li><code>systemctl restart networking</code></li>
+        <li><code>net interface ip set address "eth0" static 192.168.1.100 255.255.255.0 192.168.1.1</code></li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Actualización del Servidor DNS</h2>
+    <ul>
+        <li>Modificar el fichero de configuración correspondiente.</li>
+        <li>Reiniciar el servicio de red.</li>
+        <li>Comprobar la resolución de nombres.</li>
+        <li>Si persiste, verificar los registros de sistema.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Actualización del Servidor DNS</h2>
+    <p>Actualiza el servidor DNS en un sistema Red Hat/CentOS con las siguientes configuraciones:</p>
+    <ul>
+        <li>Servidor DNS principal: 8.8.8.8</li>
+        <li>Servidor DNS secundario: 8.8.4.4</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Resumen: Actualización del Servidor DNS</h2>
+    <p>La actualización del servidor DNS es una tarea común en la administración de redes. Es importante seguir un enfoque sistemático para asegurar que los cambios se apliquen correctamente y que el sistema funcione como se espera.</p>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico: Configuración de Red Móvil</h2>
+    <p>Un usuario necesita configurar su dispositivo móvil para conectarse a una red empresarial. Proporciona los pasos necesarios y el fichero de configuración correspondiente.</p>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Configuración de Red Móvil</h2>
+    <p>¿Qué tipo de fichero se utiliza en Windows para configurar la red móvil?</p>
+    <ol>
+        <li><code>/etc/network/interfaces</code></li>
+        <li><code>C:\Windows\System32\drivers\etc\hosts</code></li>
+        <li><code>resolv.conf</code></li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Configuración de Red Móvil</h2>
+    <ul>
+        <li>Configurar la red móvil en el dispositivo.</li>
+        <li>Modificar el fichero <code>C:\Windows\System32\drivers\etc\hosts</code> si es necesario.</li>
+        <li>Comprobar la conexión a internet.</li>
+        <li>Si persiste, verificar los registros de sistema.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Configuración de Red Móvil</h2>
+    <p>Configura tu dispositivo móvil para conectarte a una red empresarial con las siguientes características:</p>
+    <ul>
+        <li>Dirección IP asignada por DHCP</li>
+        <li>Servidores DNS: 8.8.8.8 y 8.8.4.4</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Resumen: Configuración de Red Móvil</h2>
+    <p>La configuración de red móvil requiere habilidades técnicas y atención a los detalles. Es crucial seguir un enfoque sistemático para asegurar que el dispositivo funcione correctamente en la red empresarial.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0369 Implantación de sistemas operativos.md · Administración de software de base: → Ficheros de configuración de red.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-04 21:47:47</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

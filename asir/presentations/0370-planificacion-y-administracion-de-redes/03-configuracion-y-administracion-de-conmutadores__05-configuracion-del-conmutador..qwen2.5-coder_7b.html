@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Configuración del conmutador. — Configuración y administración de conmutadores: — 0370 Planificación y administración de redes.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="configuracion-del-conmutador.">
+<h1>Configuración del conmutador.</h1>
+<p><strong>Unidad:</strong> Configuración y administración de conmutadores:<br><strong>Documento:</strong> 0370 Planificación y administración de redes.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Configuración y administración de conmutadores</h1>
+    <p>Objetivo: Comprender los pasos básicos para configurar y administrar un conmutador.</p>
+</section>
+
+<section class="slide">
+    <h2>Introducción a la Configuración del Conmutador</h2>
+    <ul>
+        <li>Definición de conmutador</li>
+        <li>Funciones principales de un conmutador</li>
+        <li>Ejemplos de tipos de conmutadores</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conectando el Conmutador a la Red</h2>
+    <p>Pasos para conectar un conmutador a una red existente:</p>
+    <ol>
+        <li>Encender el conmutador</li>
+        <li>Configurar la conexión Ethernet</li>
+        <li>Asignar una dirección IP</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Configuración Básica del Conmutador</h2>
+    <p>Comandos básicos para configurar un conmutador:</p>
+    <ul>
+        <li>Entrada en modo privilegiado: enable</li>
+        <li>Cambio de nombre del conmutador: hostname</li>
+        <li>Configuración de la contraseña: enable secret</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Interfaz de Red del Conmutador</h2>
+    <p>Concepto y tipos de interfaces:</p>
+    <ul>
+        <li>Ethernet</li>
+        <li>FastEthernet</li>
+        <li>GigabitEthernet</li>
+        <li>Serial</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Interfaces del Conmutador</h2>
+    <p>Pasos para configurar una interfaz:</p>
+    <ol>
+        <li>Entrada en modo de configuración de interfaz: interface</li>
+        <li>Asignación de dirección IP</li>
+        <li>Habilitación de la interfaz: no shutdown</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Puertos del Conmutador</h2>
+    <p>Tipos de puertos y sus funciones:</p>
+    <ul>
+        <li>Puerto Access</li>
+        <li>Puerto Trunk</li>
+        <li>Puerto Hybrid</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de VLANs en el Conmutador</h2>
+    <p>Pasos para configurar VLANs:</p>
+    <ol>
+        <li>Crear una VLAN: vlan</li>
+        <li>Asignar puertos a una VLAN: switchport mode access/trunk/hybrid</li>
+        <li>Configurar el nombre de la VLAN: name</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Protocolos de Enrutamiento en el Conmutador</h2>
+    <p>Protocolos comunes y sus funciones:</p>
+    <ul>
+        <li>STP (Spanning Tree Protocol)</li>
+        <li>RIP (Routing Information Protocol)</li>
+        <li>EIGRP (Enhanced Interior Gateway Routing Protocol)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Seguridad en el Conmutador</h2>
+    <p>Pasos para mejorar la seguridad del conmutador:</p>
+    <ol>
+        <li>Habilitar la autenticación SSH/Telnet</li>
+        <li>Crear listas de acceso (ACL)</li>
+        <li>Configurar el firewall</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Verificación y Diagnóstico del Conmutador</h2>
+    <p>Comandos para verificar el estado del conmutador:</p>
+    <ul>
+        <li>show ip interface brief</li>
+        <li>show vlan</li>
+        <li>show spanning-tree</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas en la Configuración del Conmutador</h2>
+    <ul>
+        <li>Documentar todas las configuraciones</li>
+        <li>Hacer copias de seguridad periódicas</li>
+        <li>Mantener actualizadas las firmas del software</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en la Configuración del Conmutador</h2>
+    <ul>
+        <li>No asignar una dirección IP a la interfaz</li>
+        <li>Habilitar el conmutador sin configurar las interfaces</li>
+        <li>No habilitar puertos necesarios</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Configuración del Conmutador</h2>
+    <p>Pregunta: ¿Qué comando se utiliza para cambiar el nombre de un conmutador?</p>
+    <ol>
+        <li>hostname</li>
+        <li>rename</li>
+        <li>set name</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Configuración del Conmutador</h2>
+    <ul>
+        <li>Conectar el conmutador a la red</li>
+        <li>Configurar la dirección IP</li>
+        <li>Habilitar las interfaces necesarias</li>
+        <li>Crear y configurar VLANs</li>
+        <li>Configurar protocolos de enrutamiento</li>
+        <li>Implementar seguridad</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Configuración Práctica del Conmutador</h2>
+    <p>Tarea: Configurar un conmutador en el laboratorio utilizando los pasos y comandos aprendidos.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen de la Configuración del Conmutador</h2>
+    <ul>
+        <li>Paso a paso para configurar un conmutador</li>
+        <li>Importancia de la seguridad y verificación</li>
+        <li>Buenas prácticas y errores comunes</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa y Reglamentos</h2>
+    <p>Reglas éticas y legales en la administración de redes:</p>
+    <ul>
+        <li>Confidencialidad de los datos</li>
+        <li>No autorización para cambios sin permiso</li>
+        <li>Seguridad física del conmutador</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Preguntas y Respuestas</h2>
+    <p>Abierto a preguntas sobre la configuración y administración de conmutadores.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0370 Planificación y administración de redes.md · Configuración y administración de conmutadores: → Configuración del conmutador.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-04 23:56:31</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

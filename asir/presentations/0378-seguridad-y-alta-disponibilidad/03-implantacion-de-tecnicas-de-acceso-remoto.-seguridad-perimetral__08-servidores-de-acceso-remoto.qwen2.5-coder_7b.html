@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Servidores de acceso remoto: — Implantación de técnicas de acceso remoto. Seguridad perimetral: — 0378 Seguridad y alta disponibilidad.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="servidores-de-acceso-remoto">
+<h1>Servidores de acceso remoto:</h1>
+<p><strong>Unidad:</strong> Implantación de técnicas de acceso remoto. Seguridad perimetral:<br><strong>Documento:</strong> 0378 Seguridad y alta disponibilidad.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+  <h2>Portada</h2>
+  <h1>Implantación de técnicas de acceso remoto. Seguridad perimetral: Servidores de acceso remoto</h1>
+  <p>Objetivo: Aprender los protocolos de autenticación, configurar parámetros de acceso y entender servidores de autenticación.</p>
+</section>
+
+<section class="slide">
+  <h2>Protocolos de autenticación</h2>
+  <ul>
+    <li>SSH (Secure Shell)</li>
+    <li>Telnet</li>
+    <li>RDP (Remote Desktop Protocol)</li>
+    <li>VNC (Virtual Network Computing)</li>
+    <li>Kerberos</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Ejemplo de protocolo seguro: SSH</h2>
+  <p>SSH utiliza cifrado asimétrico para autenticar tanto el cliente como el servidor.</p>
+</section>
+
+<section class="slide">
+  <h2>Caso práctico: Configuración de SSH</h2>
+  <ul>
+    <li>Generar claves RSA</li>
+    <li>Configurar archivo /etc/ssh/sshd_config</li>
+    <li>Reiniciar servicio SSH</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Buenas prácticas en autenticación</h2>
+  <ul>
+    <li>Usar claves públicas y privadas</li>
+    <li>Desactivar el acceso root remoto</li>
+    <li>Utilizar autenticación multifactor</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Errores comunes en autenticación</h2>
+  <ul>
+    <li>Usar contraseñas simples</li>
+    <li>Habilitar el acceso root remoto</li>
+    <li>No utilizar autenticación multifactor</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Comparativa de protocolos</h2>
+  <table>
+    <tr><th>Protocolo</th><th>Cifrado</th><th>Autenticación</th></tr>
+    <tr><td>SSH</td><td>Asimétrico</td><td>Claves públicas/privadas</td></tr>
+    <tr><td>Telnet</td><td>No cifrado</td><td>Contraseñas planas</td></tr>
+  </table>
+</section>
+
+<section class="slide">
+  <h2>Mini-quiz: Protocolos de autenticación</h2>
+  <p>¿Cuál protocolo utiliza cifrado asimétrico para la autenticación?</p>
+  <ul>
+    <li>A) Telnet</li>
+    <li>B) SSH</li>
+    <li>C) RDP</li>
+    <li>D) VNC</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Checklist de configuración SSH</h2>
+  <ol>
+    <li>Generar claves RSA</li>
+    <li>Configurar archivo /etc/ssh/sshd_config</li>
+    <li>Reiniciar servicio SSH</li>
+    <li>Desactivar el acceso root remoto</li>
+    <li>Utilizar autenticación multifactor</li>
+  </ol>
+</section>
+
+<section class="slide">
+  <h2>Actividad: Configurar SSH en un servidor</h2>
+  <p>Configura SSH en tu servidor y asegúrate de que esté configurado correctamente.</p>
+</section>
+
+<section class="slide">
+  <h2>Resumen: Protocolos de autenticación</h2>
+  <ul>
+    <li>SSH, Telnet, RDP, VNC, Kerberos</li>
+    <li>SSH es el más seguro</li>
+    <li>Buenas prácticas y errores comunes</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Normativa: Seguridad en la nube</h2>
+  <p>Reglamento General de Protección de Datos (RGPD)</p>
+</section>
+
+<section class="slide">
+  <h2>Configuración de parámetros de acceso</h2>
+  <ul>
+    <li>Timeouts inactividad</li>
+    <li>Número máximo de intentos fallidos</li>
+    <li>Caducidad de contraseñas</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Ejemplo: Configuración de timeouts inactividad</h2>
+  <p>Configurar el archivo /etc/ssh/sshd_config para establecer un timeout de 30 minutos.</p>
+</section>
+
+<section class="slide">
+  <h2>Caso práctico: Ajustar número máximo de intentos fallidos</h2>
+  <ul>
+    <li>Modificar /etc/pam.d/common-auth</li>
+    <li>Reiniciar servicio SSH</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Buenas prácticas en configuración de acceso</h2>
+  <ul>
+    <li>Establecer timeouts inactividad</li>
+    <li>Limitar número máximo de intentos fallidos</li>
+    <li>Caducidad de contraseñas</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Errores comunes en configuración de acceso</h2>
+  <ul>
+    <li>No establecer timeouts inactividad</li>
+    <li>No limitar número máximo de intentos fallidos</li>
+    <li>No establecer caducidad de contraseñas</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Mini-quiz: Configuración de acceso</h2>
+  <p>¿Cuál es la ventaja de establecer timeouts inactividad en SSH?</p>
+  <ul>
+    <li>A) Mejora el rendimiento del servidor</li>
+    <li>B) Aumenta la seguridad al desconectar usuarios inactivos</li>
+    <li>C) Reduce el uso de recursos</li>
+    <li>D) Facilita la gestión de sesiones</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Checklist de configuración de acceso</h2>
+  <ol>
+    <li>Establecer timeouts inactividad</li>
+    <li>Limitar número máximo de intentos fallidos</li>
+    <li>Caducidad de contraseñas</li>
+  </ol>
+</section>
+
+<section class="slide">
+  <h2>Actividad: Configurar parámetros de acceso en un servidor</h2>
+  <p>Configura los parámetros de acceso en tu servidor y asegúrate de que estén configurados correctamente.</p>
+</section>
+
+<section class="slide">
+  <h2>Resumen: Configuración de parámetros de acceso</h2>
+  <ul>
+    <li>Timeouts inactividad, número máximo de intentos fallidos, caducidad de contraseñas</li>
+    <li>Buenas prácticas y errores comunes</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Normativa: Seguridad en la nube</h2>
+  <p>Reglamento General de Protección de Datos (RGPD)</p>
+</section>
+
+<section class="slide">
+  <h2>Servidores de autenticación</h2>
+  <ul>
+    <li>LDAP (Lightweight Directory Access Protocol)</li>
+    <li>AD (Active Directory)</li>
+    <li>PAM (Pluggable Authentication Modules)</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Ejemplo de servidor de autenticación: LDAP</h2>
+  <p>LDAP es un protocolo de directorio que permite almacenar y gestionar información de usuarios y grupos.</p>
+</section>
+
+<section class="slide">
+  <h2>Caso práctico: Configuración de LDAP en un servidor</h2>
+  <ul>
+    <li>Instalar e instanciar el servicio LDAP</li>
+    <li>Configurar clientes para usar el servidor LDAP</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Buenas prácticas en servidores de autenticación</h2>
+  <ul>
+    <li>Usar un servidor centralizado</li>
+    <li>Cifrar la comunicación entre el cliente y el servidor</li>
+    <li>Asegurar la seguridad del directorio</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Errores comunes en servidores de autenticación</h2>
+  <ul>
+    <li>No usar un servidor centralizado</li>
+    <li>No cifrar la comunicación</li>
+    <li>No asegurar el directorio</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Mini-quiz: Servidores de autenticación</h2>
+  <p>¿Cuál es la ventaja de usar un servidor centralizado para la autenticación?</p>
+  <ul>
+    <li>A) Mejora el rendimiento del servidor</li>
+    <li>B) Aumenta la seguridad al gestionar usuarios en un solo lugar</li>
+    <li>C) Reduce el uso de recursos</li>
+    <li>D) Facilita la gestión de sesiones</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Checklist de configuración de servidores de autenticación</h2>
+  <ol>
+    <li>Usar un servidor centralizado</li>
+    <li>Cifrar la comunicación entre el cliente y el servidor</li>
+    <li>Asegurar la seguridad del directorio</li>
+  </ol>
+</section>
+
+<section class="slide">
+  <h2>Actividad: Configurar un servidor de autenticación en un entorno empresarial</h2>
+  <p>Configura un servidor de autenticación en tu entorno empresarial y asegúrate de que esté configurado correctamente.</p>
+</section>
+
+<section class="slide">
+  <h2>Resumen: Servidores de autenticación</h2>
+  <ul>
+    <li>LDAP, AD, PAM</li>
+    <li>Buenas prácticas y errores comunes</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Normativa: Seguridad en la nube</h2>
+  <p>Reglamento General de Protección de Datos (RGPD)</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0378 Seguridad y alta disponibilidad.md · Implantación de técnicas de acceso remoto. Seguridad perimetral: → Servidores de acceso remoto:</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 10:12:54</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

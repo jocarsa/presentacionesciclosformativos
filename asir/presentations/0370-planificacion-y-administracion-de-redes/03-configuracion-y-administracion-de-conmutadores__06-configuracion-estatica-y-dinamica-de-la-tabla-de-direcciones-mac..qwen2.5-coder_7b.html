@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Configuración estática y dinámica de la tabla de direcciones MAC. — Configuración y administración de conmutadores: — 0370 Planificación y administración de redes.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="configuracion-estatica-y-dinamica-de-la-tabla-de-direcciones-mac.">
+<h1>Configuración estática y dinámica de la tabla de direcciones MAC.</h1>
+<p><strong>Unidad:</strong> Configuración y administración de conmutadores:<br><strong>Documento:</strong> 0370 Planificación y administración de redes.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Configuración y administración de conmutadores</h1>
+    <p>Objetivo: Aprender la configuración estática y dinámica de la tabla de direcciones MAC en conmutadores.</p>
+</section>
+
+<section class="slide">
+    <h2>Tabla de direcciones MAC</h2>
+    <p>La tabla de direcciones MAC es una estructura interna del conmutador que mapea las direcciones MAC a los puertos de salida.</p>
+</section>
+
+<section class="slide">
+    <h2>Configuración estática de la tabla de direcciones MAC</h2>
+    <ul>
+        <li>Añade manualmente entradas en la tabla.</li>
+        <li>Se realiza mediante comandos de configuración del conmutador.</li>
+        <li>Permite control preciso pero requiere mantenimiento constante.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración estática</h2>
+    <pre><code>mac address-table static 00:1A:2B:3:4D:5E vlan 1 interface GigabitEthernet0/1</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Configuración dinámica de la tabla de direcciones MAC</h2>
+    <ul>
+        <li>Añade entradas automáticamente cuando se detectan dispositivos.</li>
+        <li>No requiere intervención manual, pero puede llenar rápidamente la tabla.</li>
+        <li>Se realiza mediante el protocolo de aprendizaje de direcciones MAC.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración dinámica</h2>
+    <p>La tabla se llena automáticamente cuando dispositivos conectan al conmutador.</p>
+</section>
+
+<section class="slide">
+    <h2>Ventajas de la configuración estática</h2>
+    <ul>
+        <li>Control preciso sobre el tráfico de red.</li>
+        <li>Reducción del uso de memoria en la tabla.</li>
+        <li>Mejor rendimiento para redes con un número limitado de dispositivos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ventajas de la configuración dinámica</h2>
+    <ul>
+        <li>No requiere intervención manual.</li>
+        <li>Se ajusta automáticamente a cambios en el entorno de red.</li>
+        <li>Más eficiente para redes con un número grande de dispositivos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes en la configuración de la tabla de direcciones MAC</h2>
+    <ul>
+        <li>Configuración incorrecta de las direcciones MAC.</li>
+        <li>No actualización de entradas cuando dispositivos cambian de puerto.</li>
+        <li>Sobrecarga de la tabla debido a configuraciones dinámicas innecesarias.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist para la administración de la tabla de direcciones MAC</h2>
+    <ul>
+        <li>Verificar regularmente el tamaño de la tabla.</li>
+        <li>Ajustar las políticas de aprendizaje según el tamaño de la red.</li>
+        <li>Realizar respaldos periódicos de la configuración.</li>
+        <li>Monitorear el rendimiento del conmutador para identificar problemas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Caso práctico: Optimización de la tabla de direcciones MAC</h2>
+    <p>Un conmutador con una red pequeña puede beneficiarse de una configuración estática para mejorar el rendimiento.</p>
+</section>
+
+<section class="slide">
+    <h2>Caso práctico: Red grande y configuración dinámica</h2>
+    <p>En una red grande, la configuración dinámica es más eficiente y requiere menos mantenimiento.</p>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz</h2>
+    <p>¿Cuándo sería recomendable usar la configuración estática en lugar de la dinámica?</p>
+    <ul>
+        <li>a) En redes con un número limitado de dispositivos.</li>
+        <li>b) En redes con un número grande de dispositivos.</li>
+        <li>c) Siempre es mejor usar la configuración dinámica.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <p>La tabla de direcciones MAC es crucial para el funcionamiento de los conmutadores. La configuración estática ofrece control preciso, mientras que la dinámica es más eficiente pero requiere monitoreo.</p>
+</section>
+
+<section class="slide">
+    <h2>Normativa general</h2>
+    <p>No hay normativas específicas sobre la configuración de la tabla de direcciones MAC. Sin embargo, se recomienda seguir buenas prácticas para mantener el rendimiento y la seguridad de la red.</p>
+</section>
+
+<section class="slide">
+    <h2>Actividad práctica</h2>
+    <p>Configurar la tabla de direcciones MAC estática en un conmutador virtual y verificar su funcionamiento.</p>
+</section>
+
+<section class="slide">
+    <h2>Preguntas frecuentes</h2>
+    <ul>
+        <li>¿Qué es la tabla de direcciones MAC?</li>
+        <li>Cuándo usar la configuración estática en lugar de dinámica?</li>
+        <li>¿Cómo monitorear el rendimiento del conmutador?</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Contacto</h2>
+    <p>Preguntas o dudas: [Tu correo electrónico]</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0370 Planificación y administración de redes.md · Configuración y administración de conmutadores: → Configuración estática y dinámica de la tabla de direcciones MAC.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-04 23:57:28</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

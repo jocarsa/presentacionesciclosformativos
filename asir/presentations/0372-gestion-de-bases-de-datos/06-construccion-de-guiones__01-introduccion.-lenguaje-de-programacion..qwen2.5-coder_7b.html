@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Introducción. Lenguaje de programación. — Construcción de guiones: — 0372 Gestión de bases de datos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="introduccion.-lenguaje-de-programacion.">
+<h1>Introducción. Lenguaje de programación.</h1>
+<p><strong>Unidad:</strong> Construcción de guiones:<br><strong>Documento:</strong> 0372 Gestión de bases de datos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Introducción a la Gestión de Bases de Datos</h1>
+    <p><strong>Objetivo:</strong> Comprender los fundamentos del lenguaje de programación utilizado en la gestión de bases de datos.</p>
+</section>
+
+<section class="slide">
+    <h2>¿Qué es el Lenguaje de Programación?</h2>
+    <p>El lenguaje de programación es un conjunto de reglas y sintaxis que permite a los programadores escribir instrucciones que pueden ser ejecutadas por una computadora.</p>
+</section>
+
+<section class="slide">
+    <h2>Tipos de Lenguajes de Programación</h2>
+    <ul>
+        <li>Lenguajes de alto nivel (interpretados)</li>
+        <li>Lenguajes de bajo nivel (compilados)</li>
+        <li>Lenguajes de scripting</li>
+        <li>Lenguajes de compilación</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Características del Lenguaje de Programación para Bases de Datos</h2>
+    <ul>
+        <li>Estructurado y orientado a objetos</li>
+        <li>Facilita la manipulación de datos estructurados</li>
+        <li>Soporta consultas complejas</li>
+        <li>Permite la definición de esquemas y restricciones</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplos de Lenguajes para Bases de Datos</h2>
+    <ul>
+        <li>SQL (Structured Query Language)</li>
+        <li>NoSQL (No Structured Query Language)</li>
+        <li>MongoDB</li>
+        <li>Cassandra</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Características de SQL</h2>
+    <ul>
+        <li>Estructurado y declarativo</li>
+        <li>Soporta consultas complejas (JOINs, subconsultas)</li>
+        <li>Facilita la manipulación de datos estructurados</li>
+        <li>Permite la definición de esquemas y restricciones</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplos de Consultas SQL</h2>
+    <pre><code>
+SELECT nombre, edad FROM usuarios WHERE edad > 18;
+INSERT INTO productos (nombre, precio) VALUES ('Laptop', 999);
+UPDATE clientes SET email = 'nuevoemail@example.com' WHERE id = 123;
+DELETE FROM pedidos WHERE estado = 'cancelado';
+    </code></pre>
+</section>
+
+<section class="slide">
+    <h2>Características de NoSQL</h2>
+    <ul>
+        <li>No es estructurado (schema-less)</li>
+        <li>Soporta consultas simples y complejas</li>
+        <li>Facilita la escala horizontal</li>
+        <li>Permite el almacenamiento de datos heterogéneos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplos de Consultas NoSQL (MongoDB)</h2>
+    <pre><code>
+db.usuarios.find({ edad: { $gt: 18 } });
+db.productos.insertOne({ nombre: 'Laptop', precio: 999 });
+db.clientes.updateOne({ id: 123 }, { $set: { email: 'nuevoemail@example.com' } });
+db.pedidos.deleteMany({ estado: 'cancelado' });
+    </code></pre>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas en Lenguaje de Programación para Bases de Datos</h2>
+    <ul>
+        <li>Usar consultas parametrizadas para evitar inyecciones SQL</li>
+        <li>Validar y sanitizar datos antes de almacenarlos</li>
+        <li>Realizar copias de seguridad periódicas</li>
+        <li>Monitorear el rendimiento y optimizar las consultas</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en Lenguaje de Programación para Bases de Datos</h2>
+    <ul>
+        <li>Inyecciones SQL</li>
+        <li>No cerrar conexiones a la base de datos</li>
+        <li>No manejar excepciones adecuadamente</li>
+        <li>Consultas no optimizadas</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa SQL vs NoSQL</h2>
+    <table>
+        <tr>
+            <th>Categoría</th>
+            <th>SQL</th>
+            <th>NoSQL</th>
+        </tr>
+        <tr>
+            <td>Estructura de Datos</td>
+            <td>Estructurado (schema)</td>
+            <td>No estructurado (schema-less)</td>
+        </tr>
+        <tr>
+            <td>Escalabilidad</td>
+            <td>Vertical (escalar más potenciales)</td>
+            <td>Horizontal (agregar más servidores)</td>
+        </tr>
+        <tr>
+            <td>Consultas</td>
+            <td>Estructuradas y complejas</td>
+            <td>Simples y complejas</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Lenguajes de Programación para Bases de Datos</h2>
+    <p>¿Cuál de los siguientes lenguajes es un ejemplo de NoSQL?</p>
+    <ul>
+        <li>A) SQL</li>
+        <li>B) MongoDB</li>
+        <li>C) PostgreSQL</li>
+        <li>D) Oracle</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Consideraciones al Elegir un Lenguaje de Programación para Bases de Datos</h2>
+    <ul>
+        <li>Estructura de datos necesaria</li>
+        <li>Tamaño y escala del proyecto</li>
+        <li>Necesidad de consultas complejas</li>
+        <li>Requisitos de rendimiento</li>
+        <li>Disponibilidad de herramientas y comunidad</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Diseño de una Consulta SQL</h2>
+    <p>Diseña una consulta SQL que retorne el nombre, edad y dirección de los clientes mayores a 30 años.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>El lenguaje de programación es crucial para la gestión de bases de datos</li>
+        <li>SQL y NoSQL son los principales tipos de lenguajes utilizados</li>
+        <li>Buenas prácticas y evitar errores comunes son fundamentales</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa General</h2>
+    <p>No se aplican normativas específicas para este tema, pero es importante seguir buenas prácticas de seguridad y rendimiento.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0372 Gestión de bases de datos.md · Construcción de guiones: → Introducción. Lenguaje de programación.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 02:36:32</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

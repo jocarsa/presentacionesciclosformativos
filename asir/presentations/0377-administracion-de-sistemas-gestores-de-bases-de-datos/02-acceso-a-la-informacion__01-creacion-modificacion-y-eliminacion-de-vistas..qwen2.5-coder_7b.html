@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Creación, modificación y eliminación de vistas. — Acceso a la información: — 0377 Administración de sistemas gestores de bases de datos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="creacion-modificacion-y-eliminacion-de-vistas.">
+<h1>Creación, modificación y eliminación de vistas.</h1>
+<p><strong>Unidad:</strong> Acceso a la información:<br><strong>Documento:</strong> 0377 Administración de sistemas gestores de bases de datos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Creación, modificación y eliminación de vistas en sistemas gestores de bases de datos</h1>
+    <p>Objetivo: Aprender a crear, modificar y eliminar vistas para mejorar la accesibilidad y eficiencia del acceso a los datos.</p>
+</section>
+
+<section class="slide">
+    <h2>¿Qué son las vistas?</h2>
+    <ul>
+        <li>Vistas son objetos virtuales que representan una consulta SQL predefinida.</li>
+        <li>No almacenan datos físicamente, sino que se generan en tiempo real basándose en consultas subyacentes.</li>
+        <li>Permiten a los usuarios interactuar con los datos de manera más sencilla y segura.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Crea una vista</h2>
+    <p>Sintaxis básica:</p>
+    <pre><code>CREATE VIEW nombre_vista AS
+SELECT columna1, columna2, ...
+FROM tabla
+WHERE condicion;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de creación de vista</h2>
+    <pre><code>CREATE VIEW empleados_jefe AS
+SELECT e.id_empleado, e.nombre, j.nombre AS nombre_jefe
+FROM empleados e
+JOIN empleados j ON e.jefe_id = j.id_empleado;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Modifica una vista</h2>
+    <p>Sintaxis básica:</p>
+    <pre><code>ALTER VIEW nombre_vista AS
+SELECT columna1, columna2, ...
+FROM tabla
+WHERE condicion_nueva;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de modificación de vista</h2>
+    <pre><code>ALTER VIEW empleados_jefe AS
+SELECT e.id_empleado, e.nombre, j.nombre AS nombre_jefe
+FROM empleados e
+JOIN empleados j ON e.jefe_id = j.id_empleado
+WHERE e.activo = TRUE;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Elimina una vista</h2>
+    <p>Sintaxis básica:</p>
+    <pre><code>DROP VIEW nombre_vista;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de eliminación de vista</h2>
+    <pre><code>DROP VIEW empleados_jefe;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Ventajas de usar vistas</h2>
+    <ul>
+        <li>Simplifican las consultas complejas.</li>
+        <li>Protegen los datos ocultando la estructura interna del esquema.</li>
+        <li>Pueden mejorar el rendimiento al cachear resultados frecuentemente solicitados.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Desventajas de usar vistas</h2>
+    <ul>
+        <li>No almacenan datos, solo la definición de la consulta.</li>
+        <li>Pueden afectar el rendimiento si no están optimizadas adecuadamente.</li>
+        <li>Requieren permisos adicionales para crear, modificar y eliminar vistas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas al trabajar con vistas</h2>
+    <ul>
+        <li>Documenta las vistas con comentarios en la definición SQL.</li>
+        <li>Mantén las vistas actualizadas y optimizadas según los cambios en el esquema de datos.</li>
+        <li>Limita el acceso a las vistas solo para usuarios autorizados.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes al trabajar con vistas</h2>
+    <ul>
+        <li>No considerar la actualización de las vistas cuando cambia el esquema subyacente.</li>
+        <li>No optimizar las consultas que forman parte de las vistas.</li>
+        <li>Dar acceso a vistas sin control adecuado, lo que puede comprometer la seguridad de los datos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: Vistas vs. Tablas Virtuales</h2>
+    <table>
+        <tr>
+            <th>Vistas</th>
+            <th>Tablas Virtuales</th>
+        </tr>
+        <tr>
+            <td>No almacenan datos físicamente.</td>
+            <td>Almacenan datos en memoria o disco.</td>
+        </tr>
+        <tr>
+            <td>Se generan dinámicamente.</td>
+            <td>Son objetos estáticos.</td>
+        </tr>
+        <tr>
+            <td>No pueden ser modificadas directamente.</td>
+            <td>Pueden ser modificadas directamente.</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz</h2>
+    <p>¿Cuáles son las principales ventajas de usar vistas en sistemas gestores de bases de datos?</p>
+    <ul>
+        <li>Simplificar consultas complejas.</li>
+        <li>Proteger los datos ocultando la estructura interna del esquema.</li>
+        <li>Pueden mejorar el rendimiento al cachear resultados frecuentemente solicitados.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist de creación y gestión de vistas</h2>
+    <ol>
+        <li>Definir claramente la finalidad de la vista.</li>
+        <li>Optimizar la consulta subyacente para mejorar el rendimiento.</li>
+        <li>Documentar la vista con comentarios en la definición SQL.</li>
+        <li>Mantener los permisos adecuados para acceder a la vista.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Actividad práctica</h2>
+    <p>Crea una vista que muestre el nombre del cliente, su dirección y el número de pedidos realizados por cada cliente. Utiliza las tablas 'clientes' y 'pedidos'.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Vistas son objetos virtuales que representan consultas SQL predefinidas.</li>
+        <li>Sirven para simplificar consultas, proteger datos y mejorar rendimiento.</li>
+        <li>Se pueden crear, modificar y eliminar usando las sentencias CREATE VIEW, ALTER VIEW y DROP VIEW respectivamente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa general</h2>
+    <p>La creación y gestión de vistas deben seguir las mejores prácticas estableidas por el sistema gestor de bases de datos y las políticas de seguridad de la organización.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0377 Administración de sistemas gestores de bases de datos.md · Acceso a la información: → Creación, modificación y eliminación de vistas.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 08:53:26</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Alta disponibilidad y virtualización. — Implantación de soluciones de alta disponibilidad: — 0378 Seguridad y alta disponibilidad.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="alta-disponibilidad-y-virtualizacion.">
+<h1>Alta disponibilidad y virtualización.</h1>
+<p><strong>Unidad:</strong> Implantación de soluciones de alta disponibilidad:<br><strong>Documento:</strong> 0378 Seguridad y alta disponibilidad.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Implantación de soluciones de alta disponibilidad</h1>
+    <p>Objetivo: Comprender los conceptos básicos y técnicas para implementar sistemas altamente disponibles utilizando virtualización.</p>
+</section>
+
+<section class="slide">
+    <h2>Alta Disponibilidad (HA)</h2>
+    <ul>
+        <li>Definición: Estado en el que un sistema o servicio está disponible al 100% del tiempo.</li>
+        <li>Objetivos: Reducir tiempos de inactividad, aumentar la confiabilidad y evitar el fallo total del sistema.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Virtualización</h2>
+    <ul>
+        <li>Definición: Técnica que permite compartir los recursos de un servidor físico entre varios sistemas operativos o aplicaciones.</li>
+        <li>Ventajas: Economía, escalabilidad, flexibilidad y simplificación del mantenimiento.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Tipos de Virtualización</h2>
+    <ul>
+        <li>Hypervisor tipo 1 (bare-metal): Ejecuta directamente en el hardware. Ej: VMware ESXi, Hyper-V.</li>
+        <li>Hypervisor tipo 2 (hosted): Ejecuta sobre un sistema operativo host. Ej: VirtualBox, Parallels Desktop.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Principales Conceptos de HA en Virtualización</h2>
+    <ul>
+        <li>Falure Tolerance (FT): Replicación de datos y procesos para garantizar la continuidad del servicio.</li>
+        <li>Failover: Automatización del cambio a un sistema redundante cuando ocurre un fallo.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Implementación HA</h2>
+    <p>Configuración de una máquina virtual con replicación de datos y failover automático usando VMware vSphere High Availability (vHA).</p>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico: Implementación de HA en un Servidor Web</h2>
+    <ul>
+        <li>Configuración de dos servidores web con Apache.</li>
+        <li>Implementación de una configuración de replicación de contenido usando NFS.</li>
+        <li>Configuración de failover automático usando Heartbeat o Pacemaker.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Proceso de Implementación HA</h2>
+    <ol>
+        <li>Evaluación del entorno y requisitos.</li>
+        <li>Diseño de la arquitectura de alta disponibilidad.</li>
+        <li>Configuración del hardware y software.</li>
+        <li>Pruebas de funcionamiento y validación.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas en HA Virtualizada</h2>
+    <ul>
+        <li>Monitoreo continuo del estado del sistema.</li>
+        <li>Copias de seguridad regulares y planificación de recuperación ante desastres (DR).</li>
+        <li>Actualizaciones y parches aplicados a tiempo.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en HA Virtualizada</h2>
+    <ul>
+        <li>No configuración adecuada de la replicación de datos.</li>
+        <li>Fallos en el hardware sin planificación de failover.</li>
+        <li>Ausencia de monitoreo y alertas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: HA vs. Redundancia</h2>
+    <table>
+        <tr>
+            <th></th>
+            <th>Alta Disponibilidad (HA)</th>
+            <th>Redundancia</th>
+        </tr>
+        <tr>
+            <td>Definición</td>
+            <td>Sistema disponible al 100% del tiempo.</td>
+            <td>Duplicación de recursos para mitigar fallos.</td>
+        </tr>
+        <tr>
+            <td>Mecanismos</td>
+            <td>Falure Tolerance, Failover.</td>
+            <td>Redundancia física o lógica.</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Conceptos Básicos de HA</h2>
+    <p>¿Cuál es la diferencia entre Failover y Failure Tolerance?</p>
+    <ul>
+        <li><input type="radio" name="quiz1"> A) Failover es la redundancia física, mientras que Failure Tolerance es la replicación de datos.</li>
+        <li><input type="radio" name="quiz1"> B) Failover es la replicación de datos, mientras que Failure Tolerance es la redundancia física.</li>
+        <li><input type="radio" name="quiz1">) Ambos son sinónimos y se refieren a la misma técnica.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist para Implementación de HA Virtualizada</h2>
+    <ol>
+        <li>Evaluación del entorno y requisitos.</li>
+        <li>Diseño de la arquitectura de alta disponibilidad.</li>
+        <li>Configuración del hardware y software.</li>
+        <li>Pruebas de funcionamiento y validación.</li>
+        <li>Mantenimiento continuo y actualizaciones.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Diseño de una Arquitectura HA Virtualizada</h2>
+    <p>Diseña una arquitectura de alta disponibilidad para un servicio web utilizando virtualización. Incluye componentes y configuraciones clave.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen: Alta Disponibilidad en Virtualización</h2>
+    <ul>
+        <li>Alta Disponibilidad es el estado de estar disponible al 100% del tiempo.</li>
+        <li>Virtualización permite compartir recursos y mejorar la confiabilidad.</li>
+        <li>Principales conceptos: Falure Tolerance, Failover.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa en Alta Disponibilidad</h2>
+    <p>Normativas como ISO 9001 y EN 50140 establecen requisitos para la gestión de sistemas altamente disponibles.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0378 Seguridad y alta disponibilidad.md · Implantación de soluciones de alta disponibilidad: → Alta disponibilidad y virtualización.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 11:09:05</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

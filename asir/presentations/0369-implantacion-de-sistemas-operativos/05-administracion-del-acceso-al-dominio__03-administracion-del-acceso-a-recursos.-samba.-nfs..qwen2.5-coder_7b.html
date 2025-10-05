@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Administración del acceso a recursos. SAMBA. NFS. — Administración del acceso al dominio: — 0369 Implantación de sistemas operativos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="administracion-del-acceso-a-recursos.-samba.-nfs.">
+<h1>Administración del acceso a recursos. SAMBA. NFS.</h1>
+<p><strong>Unidad:</strong> Administración del acceso al dominio:<br><strong>Documento:</strong> 0369 Implantación de sistemas operativos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Administración del acceso a recursos. SAMBA. NFS.</h1>
+    <p>Objetivo: Comprender los métodos de administración del acceso a recursos en entornos de red, con énfasis en SAMBA y NFS.</p>
+</section>
+
+<section class="slide">
+    <h2>Administración del Acceso al Dominio</h2>
+    <p>Definición: Conjunto de procesos que controlan quién puede acceder a qué recursos dentro de una red.</p>
+</section>
+
+<section class="slide">
+    <h2>Acceso a Recursos en Redes</h2>
+    <ul>
+        <li>Control de usuarios y permisos</li>
+        <li>Gestión de compartimentos de archivos</li>
+        <li>Autenticación y autorización</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>SAMBA: Sistemas de Archivos y Manejo de Bases de Datos para Windows</h2>
+    <p>Software que permite a los sistemas Linux compartir archivos y recursos con Windows.</p>
+</section>
+
+<section class="slide">
+    <h2>Funciones principales de SAMBA</h2>
+    <ul>
+        <li>Autenticación de usuarios</li>
+        <li>Gestión de compartimentos de archivos</li>
+        <li>Compartir impresoras</li>
+        <li>Sincronización de directorios</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>NFS: Network File System</h2>
+    <p>Protocolo de red que permite a los sistemas compartir archivos y directorios.</p>
+</section>
+
+<section class="slide">
+    <h2>Características de NFS</h2>
+    <ul>
+        <li>Basado en protocolos TCP/IP</li>
+        <li>Soporta transacciones de red asincrónicas</li>
+        <li>Facilita la colaboración entre usuarios y equipos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración básica de SAMBA</h2>
+    <p>Involucra edición del archivo smb.conf y creación de compartimentos.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración Samba</h2>
+    <pre><code>[shared]
+   path = /srv/samba/shared
+   writable = yes
+   browsable = yes
+   read only = no</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Configuración básica de NFS</h2>
+    <p>Involucra edición del archivo /etc/exports y reinicio del servicio nfs-kernel-server.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración NFS</h2>
+    <pre><code>/srv/nfs/shared *(rw,sync,no_subtree_check)</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas en SAMBA</h2>
+    <ul>
+        <li>Usar contraseñas fuertes para usuarios</li>
+        <li>Limitar los permisos de acceso a recursos</li>
+        <li>Realizar copias de seguridad periódicas</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas en NFS</h2>
+    <ul>
+        <li>Monitorear el uso del espacio en disco</li>
+        <li>Configurar políticas de acceso controladas</li>
+        <li>Auditar accesos y cambios en los recursos compartidos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en SAMBA</h2>
+    <ul>
+        <li>Configuración incorrecta del archivo smb.conf</li>
+        <li>No se crean correctamente los compartimentos de archivos</li>
+        <li>Problemas de autenticación</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en NFS</h2>
+    <ul>
+        <li>No se montan correctamente los directorios compartidos</li>
+        <li>Problemas de permisos al acceder a recursos</li>
+        <li>Desempeño lento debido a configuraciones incorrectas</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa SAMBA vs. NFS</h2>
+    <table>
+        <tr>
+            <th>SAMBA</th>
+            <th>NFS</th>
+        </tr>
+        <tr>
+            <td>Compatible con Windows</td>
+            <td>No compatible con Windows (requiere clientes NFS)</td>
+        </tr>
+        <tr>
+            <td>Facilidad de uso para usuarios finales</td>
+            <td>Más complejo para usuarios finales</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: ¿Qué es SAMBA?</h2>
+    <p>¿Qué software permite a los sistemas Linux compartir archivos y recursos con Windows?</p>
+    <ol>
+        <li>SAMBA</li>
+        <li>FTP</li>
+        <li>SSH</li>
+        <li>HTTP</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: ¿Qué es NFS?</h2>
+    <p>¿Qué protocolo de red permite a los sistemas compartir archivos y directorios?</p>
+    <ol>
+        <li>SAMBA</li>
+        <li>NFS</li>
+        <li>FTP</li>
+        <li>SSH</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Configuración de SAMBA</h2>
+    <ul>
+        <li>Instalar el paquete Samba</li>
+        <li>Configurar el archivo smb.conf</li>
+        <li>Crear compartimentos de archivos</li>
+        <li>Reiniciar el servicio Samba</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Configuración de NFS</h2>
+    <ul>
+        <li>Instalar el paquete NFS</li>
+        <li>Configurar el archivo /etc/exports</li>
+        <li>Reiniciar el servicio nfs-kernel-server</li>
+        <li>Montar los directorios compartidos en clientes</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Configuración de SAMBA</h2>
+    <p>Configurar un compartimento Samba llamado "proyectos" con permisos de escritura para todos los usuarios.</p>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Configuración de NFS</h2>
+    <p>Exportar el directorio "/srv/nfs/proyectos" y montarlo en un cliente Linux.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>SAMBA: Compartir archivos con Windows</li>
+        <li>NFS: Compartir archivos entre sistemas Linux</li>
+        <li>Buenas prácticas y errores comunes en ambos sistemas</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa General</h2>
+    <p>Seguir políticas de seguridad y cumplimiento normativo al configurar sistemas de acceso a recursos.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0369 Implantación de sistemas operativos.md · Administración del acceso al dominio: → Administración del acceso a recursos. SAMBA. NFS.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-04 22:21:55</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

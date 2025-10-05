@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Configuración del intérprete. — Programación de documentos Web utilizando lenguajes de «script» de servidor: — 0376 Implantación de aplicaciones web.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="configuracion-del-interprete.">
+<h1>Configuración del intérprete.</h1>
+<p><strong>Unidad:</strong> Programación de documentos Web utilizando lenguajes de «script» de servidor:<br><strong>Documento:</strong> 0376 Implantación de aplicaciones web.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Configuración del intérprete para aplicaciones web</h1>
+    <p>Objetivo: Aprender cómo configurar correctamente el entorno de ejecución para desarrollar y ejecutar aplicaciones web.</p>
+</section>
+
+<section class="slide">
+    <h2>Introducción a la Configuración del Intérprete</h2>
+    <ul>
+        <li>Definición de intérprete en el contexto de aplicaciones web</li>
+        <li>Importancia de una configuración correcta para el desarrollo y despliegue</li>
+        <li>Ejemplos de lenguajes de script utilizados en aplicaciones web (,, Ruby)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración del intérprete</h2>
+    <p> es uno de los lenguajes más populares para el desarrollo de aplicaciones web. Su configuración implica:</p>
+    <ul>
+        <li>Instalación del servidor web (Apache, Nginx)</li>
+        <li>Configuración del módulo en el servidor</li>
+        <li>Verificación de la instalación y versión de</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Configuración</h2>
+    <pre><code>&lt;?
+// Ejemplo básico de configuración
+echo "Hola, mundo!";
+?&gt;</code></pre>
+    <p>Este código muestra la salida "Hola, mundo!" en el navegador.</p>
+</section>
+
+<section class="slide">
+    <h2>Configuración del intérprete</h2>
+    <p> es otro lenguaje popular para aplicaciones web. Su configuración implica:</p>
+    <ul>
+        <li>Instalación de un servidor web (Apache, Nginx)</li>
+        <li>Configuración del módulo WSGI en el servidor</li>
+        <li>Verificación de la instalación y versión de</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Configuración</h2>
+    <pre><code>&lt;?
+# Ejemplo básico de configuración con Flask
+from flask import Flask
+app = Flask(__name__)
+
+@app.route('/')
+def hello_world():
+    return 'Hello, World!'
+
+if __name__ == '__main__':
+    app.run()
+?&gt;</code></pre>
+    <p>Este código muestra una aplicación web básica utilizando Flask.</p>
+</section>
+
+<section class="slide">
+    <h2>Configuración del intérprete Ruby</h2>
+    <p>Ruby es un lenguaje de script utilizado en aplicaciones web. Su configuración implica:</p>
+    <ul>
+        <li>Instalación de un servidor web (Apache, Nginx)</li>
+        <li>Configuración del módulo Passenger o Unicorn</li>
+        <li>Verificación de la instalación y versión de Ruby</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Configuración Ruby</h2>
+    <pre><code>&lt;?ruby
+# Ejemplo básico de configuración Ruby con Sinatra
+require 'sinatra'
+
+get '/' do
+  "Hello, World!"
+end
+?&gt;</code></pre>
+    <p>Este código muestra una aplicación web básica utilizando Sinatra.</p>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas en la Configuración del Intérprete</h2>
+    <ul>
+        <li>Uso de versiones actualizadas y seguras de los lenguajes</li>
+        <li>Configuración adecuada de permisos de archivos y directorios</li>
+        <li>Optimización de la configuración para el rendimiento</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en la Configuración del Intérprete</h2>
+    <ul>
+        <li>No instalación o mal funcionamiento del servidor web</li>
+        <li>Error de configuración del módulo/WSGI/Ruby</li>
+        <li>Permisos incorrectos en archivos y directorios</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico: Despliegue de una Aplicación Web con</h2>
+    <p>Desplegar una aplicación web simple utilizando Flask y el módulo WSGI en Apache.</p>
+</section>
+
+<section class="slide">
+    <h2>Proceso de Configuración</h2>
+    <ol>
+        <li>Instalar Apache y</li>
+        <li>Configurar Apache para ejecutar aplicaciones</li>
+        <li>Escribir el código de la aplicación Flask</li>
+        <li>Desplegar la aplicación en el servidor web</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Configuración del Intérprete</h2>
+    <p>¿Cuál es el propósito de configurar correctamente el intérprete para aplicaciones web?</p>
+    <ul>
+        <li>a) Mejorar la velocidad de carga de las páginas</li>
+        <li>b) Asegurar la seguridad y estabilidad del sistema</li>
+        <li>c) Facilitar el desarrollo y depuración</li>
+        <li>d) Todas las anteriores</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist de Configuración del Intérprete</h2>
+    <ul>
+        <li>Instalar el servidor web</li>
+        <li>Configurar el módulo correspondiente para el lenguaje</li>
+        <li>Verificar la instalación y versión del intérprete</li>
+        <li>Optimizar la configuración según las necesidades</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Configuración de un Entorno de Desarrollo</h2>
+    <p>Cree un entorno de desarrollo local para utilizando XAMPP o WAMP.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Configuración del intérprete es crucial para el desarrollo y despliegue de aplicaciones web</li>
+        <li>Diferentes lenguajes requieren configuraciones específicas</li>
+        <li>Buenas prácticas y evitar errores comunes son fundamentales</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa y Recursos Adicionales</h2>
+    <p>Para más información, consulte:</p>
+    <ul>
+        <li><a href="https://www.php.net/manual/es/install.php">Documentación de instalación de</a></li>
+        <li><a href="https://docs.python.org/3/howto/deployment.wsgi/index.html">Guía de despliegue WSGI en</a></li>
+        <li><a href="https://www.ruby-lang.org/en/documentation/installation/">Documentación de instalación de Ruby</a></li>
+    </ul>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0376 Implantación de aplicaciones web.md · Programación de documentos Web utilizando lenguajes de «script» de servidor: → Configuración del intérprete.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 08:28:31</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

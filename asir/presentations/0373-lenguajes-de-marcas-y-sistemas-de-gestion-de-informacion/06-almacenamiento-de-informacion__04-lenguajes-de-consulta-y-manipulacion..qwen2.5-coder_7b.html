@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Lenguajes de consulta y manipulación. — Almacenamiento de información: — 0373 Lenguajes de marcas y sistemas de gestión de información.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="lenguajes-de-consulta-y-manipulacion.">
+<h1>Lenguajes de consulta y manipulación.</h1>
+<p><strong>Unidad:</strong> Almacenamiento de información:<br><strong>Documento:</strong> 0373 Lenguajes de marcas y sistemas de gestión de información.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Lenguajes de consulta y manipulación en almacenamiento de información</h1>
+    <p>Objetivo: Comprender los lenguajes utilizados para consultar y manipular datos en sistemas de gestión de información.</p>
+</section>
+
+<section class="slide">
+    <h2>Introducción a los Lenguajes de Consulta</h2>
+    <ul>
+        <li>Lenguaje de consulta esencial para acceder a datos almacenados.</li>
+        <li>Ejemplos: SQL, XPath, XQuery.</li>
+        <li>Permite filtrar, ordenar y seleccionar información específica.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Lenguaje de Consulta SQL (Structured Query Language)</h2>
+    <p>SQL es el lenguaje estándar para gestionar bases de datos relacional.</p>
+    <ul>
+        <li><strong>SELECT</strong>: Recupera datos.</li>
+        <li><strong>INSERT</strong>: Añade nuevos registros.</li>
+        <li><strong>UPDATE</strong>: Modifica registros existentes.</li>
+        <li><strong>DELETE</strong>: Elimina registros.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Consulta SQL</h2>
+    <pre><code>
+SELECT nombre, edad FROM usuarios WHERE edad > 18;
+    </code></pre>
+    <p>Recupera el nombre y la edad de todos los usuarios mayores de 18 años.</p>
+</section>
+
+<section class="slide">
+    <h2>Lenguaje de Consulta XPath</h2>
+    <p>XPath es utilizado para navegar y seleccionar nodos en documentos o.</p>
+    <ul>
+        <li><strong>/elemento</strong>: Selecciona el primer hijo del elemento.</li>
+        <li><strong>//elemento</strong>: Selecciona todos los elementos con ese nombre, independientemente de la profundidad.</li>
+        <li><strong>@atributo</strong>: Selecciona un atributo específico.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Consulta XPath</h2>
+    <pre><code>
+//usuario[@edad &gt; 18]
+    </code></pre>
+    <p>Selecciona todos los elementos "usuario" con un atributo "edad" mayor a 18.</p>
+</section>
+
+<section class="slide">
+    <h2>Lenguaje de Consulta XQuery</h2>
+    <p>XQuery es una extensión de XPath que permite consultas más complejas y potentes sobre datos.</p>
+    <ul>
+        <li><strong>for</strong>: Itera sobre elementos seleccionados.</li>
+        <li><strong>where</strong>: Filtra resultados según condiciones.</li>
+        <li><strong>return</strong>: Especifica qué se devuelve en la consulta.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Consulta XQuery</h2>
+    <pre><code>
+for $u in //usuario
+where $u/edad &gt; 18
+return $u/nombre
+    </code></pre>
+    <p>Devuelve el nombre de todos los usuarios mayores de 18 años.</p>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas en Lenguajes de Consulta</h2>
+    <ul>
+        <li>Optimizar consultas para mejorar rendimiento.</li>
+        <li>Utilizar índices donde sea necesario.</li>
+        <li>Avoidar consultas complejas y anidadas innecesarias.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en Lenguajes de Consulta</h2>
+    <ul>
+        <li>Sintaxis incorrecta: Verifica los paréntesis, comas y cláusulas.</li>
+        <li>No se encuentra el elemento deseado: Revisa la estructura del documento.</li>
+        <li>Consultas lentas: Analiza las condiciones de filtrado y índices.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa entre SQL, XPath y XQuery</h2>
+    <table>
+        <tr>
+            <th>Lenguaje</th>
+            <th>Uso Principal</th>
+            <th>Ejemplo</th>
+        </tr>
+        <tr>
+            <td>SQL</td>
+            <td>Bases de datos relacional</td>
+            <td><code>SELECT nombre FROM usuarios WHERE edad > 18;</code></td>
+        </tr>
+        <tr>
+            <td>XPath</td>
+            <td>Documentos/</td>
+            <td><code>//usuario[@edad &gt; 18]</code></td>
+        </tr>
+        <tr>
+            <td>XQuery</td>
+            <td>Consultas complejas en documentos</td>
+            <td><code>for $u in //usuario where $u/edad &gt; 18 return $u/nombre</code></td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Lenguajes de Consulta</h2>
+    <p>¿Cuál lenguaje se utiliza para gestionar bases de datos relacional?</p>
+    <ul>
+        <li>A)</li>
+        <li>B) SQL</li>
+        <li>C)</li>
+        <li>D)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist de Consultas SQL</h2>
+    <ul>
+        <li>¿Se ha verificado la sintaxis?</li>
+        <li>¿Se han optimizado las consultas?</li>
+        <li>¿Se han utilizado índices donde sea necesario?</li>
+        <li>¿Se han evitado consultas complejas innecesarias?</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejercicios Prácticos</h2>
+    <p>Realiza las siguientes consultas SQL:</p>
+    <ol>
+        <li>Listar todos los usuarios con edad mayor a 30 años.</li>
+        <li>Actualizar la edad de un usuario específico.</li>
+        <li>Borrar un usuario por su nombre.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Lenguajes de consulta esenciales para el almacenamiento y gestión de información.</li>
+        <li>SQL, XPath y XQuery son herramientas poderosas para manipular diferentes tipos de datos.</li>
+        <li>Buenas prácticas y evitar errores comunes son fundamentales para una consultas eficientes.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa y Estándares</h2>
+    <p>ISO/IE 9075:2016 estándar para SQL.</p>
+    <p>W3 XPath 3.1 y XQuery 3.1 definiciones oficiales de estos lenguajes.</p>
+</section>
+
+<section class="slide">
+    <h2>Preguntas Finales</h2>
+    <ul>
+        <li>¿Qué lenguaje utilizas para gestionar bases de datos relacional?</li>
+        <li>¿Cuáles son los principales errores comunes en consultas SQL?</li>
+        <li>¿Cómo puedes optimizar una consulta SQL para mejorar su rendimiento?</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Agradecimientos</h2>
+    <p>Muchas gracias por su atención.</p>
+    <p>Preguntas o comentarios: [Contacto]</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0373 Lenguajes de marcas y sistemas de gestión de información.md · Almacenamiento de información: → Lenguajes de consulta y manipulación.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 04:31:47</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

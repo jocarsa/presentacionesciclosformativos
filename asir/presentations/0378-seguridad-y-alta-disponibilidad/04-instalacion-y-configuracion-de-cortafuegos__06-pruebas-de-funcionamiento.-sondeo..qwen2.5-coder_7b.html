@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Pruebas de funcionamiento. Sondeo. — Instalación y configuración de cortafuegos: — 0378 Seguridad y alta disponibilidad.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="pruebas-de-funcionamiento.-sondeo.">
+<h1>Pruebas de funcionamiento. Sondeo.</h1>
+<p><strong>Unidad:</strong> Instalación y configuración de cortafuegos:<br><strong>Documento:</strong> 0378 Seguridad y alta disponibilidad.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Pruebas de funcionamiento. Sondeo.</h1>
+    <p>Objetivo: Aprender a realizar pruebas de funcionamiento y sondeo en cortafuegos para asegurar su correcto funcionamiento y alta disponibilidad.</p>
+</section>
+
+<section class="slide">
+    <h2>Pruebas de Funcionamiento</h2>
+    <ul>
+        <li>Verificar la conectividad entre los equipos</li>
+        <li>Comprobar el estado del cortafuegos</li>
+        <li>Ejecutar pruebas de penetración</li>
+        <li>Realizar auditorías de seguridad</li>
+        <li>Monitorear el rendimiento del cortafuegos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Sondeo (Ping)</h2>
+    <p>Es una herramienta utilizada para verificar la conectividad entre dos equipos en una red.</p>
+    <pre><code>ping www.ejemplo.com</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Prueba de Funcionamiento</h2>
+    <ol>
+        <li>Conectar a la consola del cortafuegos</li>
+        <li>Ingresar al modo de comandos</li>
+        <li>Ejecutar el comando: <code>show ip interface brief</code></li>
+        <li>Verificar que todas las interfaces estén en estado UP</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico</h2>
+    <p>Un cortafuegos no permite el tráfico ICMP (ping) a un servidor web. ¿Qué podría causar esto?</p>
+</section>
+
+<section class="slide">
+    <h2>Proceso de Diagnóstico</h2>
+    <ol>
+        <li>Verificar las reglas del cortafuegos</li>
+        <li>Comprobar la configuración de los grupos de seguridad</li>
+        <li>Ejecutar pruebas de ruta con <code>traceroute</code></li>
+        <li>Revisar los logs del cortafuegos</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas</h2>
+    <ul>
+        <li>Realizar pruebas periódicas de funcionamiento</li>
+        <li>Mantener registros detallados de las pruebas</li>
+        <li>Documentar cualquier anomalía o error encontrado</li>
+        <li>Implementar alertas para problemas críticos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes</h2>
+    <ul>
+        <li>No realizar pruebas de funcionamiento periódicas</li>
+        <li>No documentar los resultados de las pruebas</li>
+        <li>No revisar regularmente las reglas del cortafuegos</li>
+        <li>Ignorar alertas de problemas críticos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa</h2>
+    <table>
+        <tr>
+            <th>Método</th>
+            <th>Ventajas</th>
+            <th>Inconvenientes</th>
+        </tr>
+        <tr>
+            <td>Ping</td>
+            <td>Sencillo y rápido</td>
+            <td>No proporciona información detallada sobre el estado del cortafuegos</td>
+        </tr>
+        <tr>
+            <td>Traceroute</td>
+            <td>Muestra la ruta de red completa</td>
+            <td>Puede ser lento si hay muchos saltos en la ruta</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz</h2>
+    <p>¿Cuál es el comando utilizado para realizar un sondeo ICMP a un servidor?</p>
+    <ol type="A">
+        <li>ping</li>
+        <li>traceroute</li>
+        <li>show ip interface brief</li>
+        <li>display firewall rules</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist de Pruebas</h2>
+    <ul>
+        <li>Verificar conectividad con ping</li>
+        <li>Ejecutar traceroute para rastrear la ruta</li>
+        <li>Comprobar estado del cortafuegos con show ip interface brief</li>
+        <li>Auditar reglas de firewall</li>
+        <li>Monitorear rendimiento con show performance counters</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad Práctica</h2>
+    <p>Realizar una prueba de funcionamiento y sondeo a un cortafuegos en su entorno de laboratorio.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Pruebas de funcionamiento es crucial para asegurar la alta disponibilidad del cortafuegos</li>
+        <li>Sondeo (ping) es una herramienta fundamental para verificar conectividad</li>
+        <li>Realizar pruebas periódicas y documentar los resultados es una buena práctica</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa General</h2>
+    <p>Seguridad en redes: Normativas como NIST, ISO/IE 27001 y GDPR deben ser consideradas al realizar pruebas de funcionamiento.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0378 Seguridad y alta disponibilidad.md · Instalación y configuración de cortafuegos: → Pruebas de funcionamiento. Sondeo.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 10:18:05</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Configuración de filtros. — Instalación y configuración de servidores «proxy»: — 0378 Seguridad y alta disponibilidad.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="configuracion-de-filtros.">
+<h1>Configuración de filtros.</h1>
+<p><strong>Unidad:</strong> Instalación y configuración de servidores «proxy»:<br><strong>Documento:</strong> 0378 Seguridad y alta disponibilidad.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Configuración de filtros en servidores proxy</h1>
+    <p>Objetivo: Aprender a configurar y administrar filtros en servidores proxy para mejorar la seguridad y alta disponibilidad.</p>
+</section>
+
+<section class="slide">
+    <h2>Concepto de Filtros en Proxy</h2>
+    <p>Los filtros en proxy son herramientas que permiten controlar el tráfico de red pasando por el servidor proxy. Estos filtros pueden ser configurados para bloquear o permitir ciertos tipos de contenido.</p>
+</section>
+
+<section class="slide">
+    <h2>Tipos de Filtros</h2>
+    <ul>
+        <li>Filtros basados en URL</li>
+        <li>Filtros basados en palabras clave</li>
+        <li>Filtros basados en MIME type</li>
+        <li>Filtros basados en tiempo de acceso</li>
+        <li>Filtros basados en usuarios o grupos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Configuración de Filtro URL</h2>
+    <p>Para bloquear el acceso a un sitio específico, se puede configurar un filtro URL como:</p>
+    <pre><code>url denylist = www.example.com</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico: Filtro de Palabras Clave</h2>
+    <p>Un filtro de palabras clave puede ser útil para bloquear contenido inapropiado. Ejemplo:</p>
+    <pre><code>keyword denylist = "palabra_inapropiada"</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Proceso de Configuración</h2>
+    <ol>
+        <li>Iniciar sesión en el servidor proxy.</li>
+        <li>Navegar hasta la sección de configuración de filtros.</li>
+        <li>Elegir el tipo de filtro que se desea configurar.</li>
+        <li>Introducir las reglas de filtro correspondientes.</li>
+        <li>Guardar y aplicar los cambios.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas en Filtros</h2>
+    <ul>
+        <li>Mantener actualizados los filtros para cubrir nuevas amenazas.</li>
+        <li>Usar listas de bloqueo y permitir solo lo necesario.</li>
+        <li>Realizar pruebas periódicas del sistema para asegurar su funcionamiento.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en Filtros</h2>
+    <ul>
+        <li>Bloquear accidentalmente sitios necesarios.</li>
+        <li>No mantener actualizados los filtros, lo que puede dejar vulnerables al tráfico no deseado.</li>
+        <li>No realizar pruebas adecuadas antes de aplicar cambios.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: Filtros vs. Firewall</h2>
+    <table>
+        <tr>
+            <th>Filtros en Proxy</th>
+            <th>Firewall</th>
+        </tr>
+        <tr>
+            <td>Controla el tráfico de red pasando por él.</td>
+            <td>Controla el acceso a la red desde dentro.</td>
+        </tr>
+        <tr>
+            <td>Puede aplicar reglas basadas en contenido.</td>
+            <td>Solo puede aplicar reglas basadas en dirección IP y puerto.</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Tipos de Filtros</h2>
+    <p>¿Cuál es el tipo de filtro que se utiliza para bloquear contenido específico basado en palabras clave?</p>
+    <ol>
+        <li>Filtro basado en URL</li>
+        <li>Filtro basado en palabras clave</li>
+        <li>Filtro basado en MIME type</li>
+        <li>Filtro basado en tiempo de acceso</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Configuración de Filtros</h2>
+    <ul>
+        <li>Iniciar sesión en el servidor proxy.</li>
+        <li>Navegar hasta la sección de configuración de filtros.</li>
+        <li>Elegir el tipo de filtro que se desea configurar.</li>
+        <li>Introducir las reglas de filtro correspondientes.</li>
+        <li>Guardar y aplicar los cambios.</li>
+        <li>Realizar pruebas periódicas del sistema.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Crear un Filtro Personalizado</h2>
+    <p>Cree un filtro personalizado para bloquear el acceso a sitios que contengan contenido inapropiado. Incluya las reglas correspondientes en su configuración.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen: Configuración de Filtros en Proxy</h2>
+    <p>La configuración de filtros en servidores proxy es crucial para mejorar la seguridad y alta disponibilidad. Se pueden usar diferentes tipos de filtros, como URL, palabras clave, MIME type, etc., para controlar el tráfico de red.</p>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Seguridad en Servidores Proxy</h2>
+    <p>Según la normativa vigente, es obligatorio implementar medidas de seguridad adecuadas en los servidores proxy para proteger contra amenazasibernéticas.</p>
+</section>
+
+<section class="slide">
+    <h2>Preguntas Frecuentes</h2>
+    <ul>
+        <li>¿Qué tipo de filtro se utiliza para bloquear contenido específico basado en palabras clave?</li>
+        <li>Cómo puedo verificar si mis filtros están funcionando correctamente?</li>
+        <li>¿Cuáles son las mejores prácticas al configurar filtros en servidores proxy?</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Contacto</h2>
+    <p>Preguntas o dudas: [Su correo electrónico]</p>
+    <p>Gracias por su atención.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0378 Seguridad y alta disponibilidad.md · Instalación y configuración de servidores «proxy»: → Configuración de filtros.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 10:24:04</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Servicio de directorio. Definición, elementos y nomenclatura. LDAP. — Administración de servicio de directorio: — 0374 Administración de sistemas operativos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="servicio-de-directorio.-definicion-elementos-y-nomenclatura.-ldap.">
+<h1>Servicio de directorio. Definición, elementos y nomenclatura. LDAP.</h1>
+<p><strong>Unidad:</strong> Administración de servicio de directorio:<br><strong>Documento:</strong> 0374 Administración de sistemas operativos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Servicio de directorio. Definición, elementos y nomenclatura. LDAP</h2>
+    <p>Objetivo: Comprender la definición, los elementos y la nomenclatura del servicio de directorio y conocer las principales características de LDAP.</p>
+</section>
+
+<section class="slide">
+    <h3>Definición del Servicio de Directorio</h3>
+    <p>Un servicio de directorio es una base de datos centralizada que almacena información sobre los usuarios, grupos y recursos de red.</p>
+</section>
+
+<section class="slide">
+    <h3>Elementos del Servicio de Directorio</h3>
+    <ul>
+        <li>Objetos (Users, Groups, Computers)</li>
+        <li>Atributos (Name, Email, Password, etc.)</li>
+        <li>Hierarquía (Organizational Units)</li>
+        <li>Reglas de acceso y autenticación</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Nomenclatura del Servicio de Directorio</h3>
+    <p>Los objetos en un servicio de directorio se organizan en una estructura jerárquica, similar a un árbol.</p>
+</section>
+
+<section class="slide">
+    <h3>Ejemplo de Estructura Jerárquica</h3>
+    <ul>
+        <li>DC=example, DC=com (Dominio)</li>
+        <li>OU=Users (Unidad Organizativa)</li>
+        <li>CN=john.doe (Nombre Común)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Características de LDAP</h3>
+    <ul>
+        <li>Protocolo de acceso distribuido</li>
+        <li>Búsqueda y recuperación rápida de datos</li>
+        <li>Soporte para diferentes tipos de objetos</li>
+        <li>Seguridad mediante encriptación SSL/TLS</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Ejemplo de LDAP Query</h3>
+    <pre><code>
+ldapsearch -x -b "dc=example,dc=com" "(uid=john.doe)"
+    </code></pre>
+</section>
+
+<section class="slide">
+    <h3>Caso Práctico: Implementación de LDAP en una Empresa</h3>
+    <p>Una empresa decide implementar un servicio de directorio basado en LDAP para gestionar la información de sus usuarios y recursos.</p>
+</section>
+
+<section class="slide">
+    <h3>Buenas Prácticas en el Uso de LDAP</h3>
+    <ul>
+        <li>Seguridad: Implementar SSL/TLS</li>
+        <li>Mantenimiento: Regularmente actualizar y parchear el sistema</li>
+        <li>Backup: Realizar copias de seguridad periódicas</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Errores Comunes en la Implementación de LDAP</h3>
+    <ul>
+        <li>No implementar SSL/TLS, exponiendo información sensible</li>
+        <li>No realizar copias de seguridad, perdiendo datos importantes</li>
+        <li>No mantener el sistema actualizado, expuesto a vulnerabilidades</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Comparativa: LDAP vs. Active Directory</h3>
+    <table>
+        <tr>
+            <th>LDAP</th>
+            <th>Active Directory</th>
+        </tr>
+        <tr>
+            <td>Protocolo de acceso distribuido</td>
+            <td>Sistema gestionado por Microsoft</td>
+        </tr>
+        <tr>
+            <td>Open source y multiplataforma</td>
+            <td>Closed source, Windows Server requerido</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h3>Mini-Quiz: LDAP vs. Active Directory</h3>
+    <p>¿Cuál de los siguientes es un beneficio de usar Active Directory sobre LDAP?</p>
+    <ul>
+        <li>Soporte nativo para Windows</li>
+        <li>Menos configuración requerida</li>
+        <li>Más opciones de seguridad avanzadas</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Checklist: Implementación de LDAP</h3>
+    <ol>
+        <li>Definir la estructura del directorio</li>
+        <li>Configurar el servidor LDAP</li>
+        <li>Implementar seguridad SSL/TLS</li>
+        <li>Cargar los datos iniciales</li>
+        <li>Probar la funcionalidad</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h3>Actividad: Diseño de Estructura LDAP</h3>
+    <p>Diseña una estructura jerárquica para un servicio de directorio basado en LDAP para una empresa ficticia.</p>
+</section>
+
+<section class="slide">
+    <h3>Resumen</h3>
+    <ul>
+        <li>Servicio de directorio: Base de datos centralizada</li>
+        <li>LDAP: Protocolo distribuido, seguridad y accesibilidad</li>
+        <li>Buenas prácticas: Seguridad, mantenimiento y backup</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Normativa General</h3>
+    <p>La normativa vigente en España para la gestión de datos personales (LGPD) debe ser considerada al implementar cualquier sistema de gestión de directorios.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0374 Administración de sistemas operativos.md · Administración de servicio de directorio: → Servicio de directorio. Definición, elementos y nomenclatura. LDAP.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 04:41:05</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

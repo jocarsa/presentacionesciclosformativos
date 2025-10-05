@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Administración de grupos. Tipos. Estrategias de anidamiento. Grupos predeterminados. — Administración de dominios: — 0369 Implantación de sistemas operativos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="administracion-de-grupos.-tipos.-estrategias-de-anidamiento.-grupos-predeterminados.">
+<h1>Administración de grupos. Tipos. Estrategias de anidamiento. Grupos predeterminados.</h1>
+<p><strong>Unidad:</strong> Administración de dominios:<br><strong>Documento:</strong> 0369 Implantación de sistemas operativos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Administración de grupos. Tipos. Estrategias de anidamiento. Grupos predeterminados.</h1>
+    <p>Objetivo: Comprender los tipos de grupos, estrategias de anidamiento y grupos predeterminados en el contexto de la administración de dominios.</p>
+</section>
+
+<section class="slide">
+    <h2>Tipos de Grupos</h2>
+    <ul>
+        <li>Grupos locales: Se crean dentro del dominio local.</li>
+        <li>Grupos globales: Se crean en un dominio y pueden ser utilizados en otros dominios.</li>
+        <li>Grupos distribuidos: Se crean en una ubicación física diferente al dominio.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Estrategias de Anidamiento</h2>
+    <ul>
+        <li>Anidamiento por jerarquía: Grupos se organizan en una estructura jerárquica.</li>
+        <li>Anidamiento por funcionalidad: Grupos se crean según la función o tarea específica.</li>
+        <li>Anidamiento por geografía: Grupos se organizan según la ubicación geográfica.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Grupos Predeterminados</h2>
+    <p>Los grupos predeterminados son grupos que se crean automáticamente al crear un dominio. Incluyen:</p>
+    <ul>
+        <li>Administradores del dominio (Domain Admins)</li>
+        <li>Administradores de seguridad (Security Admins)</li>
+        <li>Administradores del sistema (System Admins)</li>
+        <li>Usuarios del dominio (Domain Users)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico: Creación de Grupos Locales</h2>
+    <p>Pasos para crear un grupo local en Windows:</p>
+    <ol>
+        <li>Ir a "Administrador del dominio y servidores".</li>
+        <li>Elegir el servidor.</li>
+        <li>Seleccionar "Grupos locales".</li>
+        <li>Hacer clic derecho y seleccionar "Nuevo grupo local".</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas: Uso de Grupos Locales</h2>
+    <ul>
+        <li>Limitar el uso de grupos globales para evitar problemas de rendimiento.</li>
+        <li>Usar grupos locales para tareas específicas y limitadas.</li>
+        <li>Mantener los grupos predeterminados como mínimo necesarios.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en la Administración de Grupos</h2>
+    <ul>
+        <li>Usar grupos globales para tareas específicas.</li>
+        <li>No gestionar adecuadamente los grupos predeterminados.</li>
+        <li>No realizar auditorías periódicas de los grupos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: Grupos Locales vs. Grupos Globales</h2>
+    <table>
+        <tr>
+            <th>Grupos Locales</th>
+            <th>Grupos Globales</th>
+        </tr>
+        <tr>
+            <td>Creados dentro del dominio local.</td>
+            <td>Creados en un dominio y utilizados en otros.</td>
+        </tr>
+        <tr>
+            <td>No pueden ser usados en dominios remotos.</td>
+            <td>Pueden ser usados en dominios remotos.</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Tipos de Grupos</h2>
+    <p>¿Cuáles son los tipos principales de grupos en el contexto de la administración de dominios?</p>
+    <ol type="A">
+        <li>Grupos locales, grupos globales y grupos distribuidos.</li>
+        <li>Administradores del dominio, usuarios del dominio y visitantes.</li>
+        <li>Grupos por jerarquía, por funcionalidad y por geografía.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Administración de Grupos Locales</h2>
+    <ul>
+        <li>Crea grupos locales según las necesidades específicas del dominio.</li>
+        <li>No utilices grupos globales para tareas limitadas.</li>
+        <li>Audita regularmente los grupos locales.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Crear un Grupo Local</h2>
+    <p>Crea un grupo local en tu entorno de prueba y añade usuarios a él. Documenta el proceso y cualquier error que surja.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Tipos de grupos: locales, globales y distribuidos.</li>
+        <li>Estrategias de anidamiento: jerarquía, funcionalidad y geografía.</li>
+        <li>Grupos predeterminados: administradores del dominio, usuarios del dominio, etc.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa General</h2>
+    <p>Seguir las mejores prácticas de seguridad y gestión de grupos es crucial para mantener la integridad y la confidencialidad del sistema.</p>
+</section>
+
+<section class="slide" data-id="extra-conceptos-clave-ampliacion-0">
+<h2>Conceptos clave (ampliación)</h2>
+<p>Profundiza en los fundamentos de <strong>Administración de grupos. Tipos. Estrategias de anidamiento. Grupos predeterminados.</strong> con definiciones operativas y límites de aplicación.</p><ul><li>Concepto A vs B</li><li>Variables implicadas</li><li>Supuestos habituales</li><li>Cuándo NO aplicar</li></ul>
+
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0369 Implantación de sistemas operativos.md · Administración de dominios: → Administración de grupos. Tipos. Estrategias de anidamiento. Grupos predeterminados.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-04 22:19:04</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

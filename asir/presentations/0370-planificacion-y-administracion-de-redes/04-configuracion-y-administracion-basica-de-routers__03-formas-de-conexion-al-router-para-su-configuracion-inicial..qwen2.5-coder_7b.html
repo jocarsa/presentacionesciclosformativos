@@ -1,0 +1,4086 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Formas de conexión al «router» para su configuración inicial. — Configuración y administración básica de «routers»: — 0370 Planificación y administración de redes.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="formas-de-conexion-al-router-para-su-configuracion-inicial.">
+<h1>Formas de conexión al «router» para su configuración inicial.</h1>
+<p><strong>Unidad:</strong> Configuración y administración básica de «routers»:<br><strong>Documento:</strong> 0370 Planificación y administración de redes.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Formas de conexión al router para su configuración inicial</h1>
+    <p>Objetivo: Aprender las diferentes formas de conectarse a un router para realizar su configuración inicial.</p>
+</section>
+
+<section class="slide">
+    <h2>Conexión por consola (Console)</h2>
+    <ul>
+        <li>Usa un cable Ethernet o RS-232.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Se utiliza para configuraciones básicas y diagnóstico.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un cable Ethernet o Wi-Fi.</li>
+        <li>Permite una conexión segura a través de Internet.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Telnet</h2>
+    <ul>
+        <li>Usa un cable Ethernet o Wi-Fi.</li>
+        <li>Permite una conexión insegura a través de Internet.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH (Secure Shell)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión segura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Necesita configuración previa del router y equipo cliente.</li>
+        <li>Más flexible que la consola, pero requiere conocimientos técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Web (Web Interface)</h2>
+    <ul>
+        <li>Accede mediante un navegador web.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por USB (USB to Serial)</h2>
+    <ul>
+        <li>Usa un adaptador USB a serial.</li>
+        <li>Permite una conexión directa y segura al router.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Más costoso que la consola, pero ofrece más funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por Wi-Fi (Wireless)</h2>
+    <ul>
+        <li>Usa una conexión inalámbrica.</li>
+        <li>No requiere cableado físico.</li>
+        <li>Puede requerir configuración previa de IP en el equipo cliente.</li>
+        <li>Más accesible para usuarios no técnicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SNMP (Simple Network Management Protocol)</h2>
+    <ul>
+        <li>Usa un protocolo de gestión de red.</li>
+        <li>No requiere conexión física al router.</li>
+        <li>Más complejo que la interfaz web.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por TELNET (Telnet)</h2>
+    <ul>
+        <li>Usa un protocolo de conexión insegura.</li>
+        <li>No requiere configuración de IP en el equipo cliente.</li>
+        <li>Puede requerir configuración previa del router y equipo cliente.</li>
+        <li>No recomendado para producción debido a la falta de encriptación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conexión por SSH
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0370 Planificación y administración de redes.md · Configuración y administración básica de «routers»: → Formas de conexión al «router» para su configuración inicial.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 00:36:45</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

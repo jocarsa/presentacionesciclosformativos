@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Configuración del enrutamiento estático. — Configuración y administración básica de «routers»: — 0370 Planificación y administración de redes.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="configuracion-del-enrutamiento-estatico.">
+<h1>Configuración del enrutamiento estático.</h1>
+<p><strong>Unidad:</strong> Configuración y administración básica de «routers»:<br><strong>Documento:</strong> 0370 Planificación y administración de redes.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Configuración del enrutamiento estático</h1>
+    <p>Objetivo: Aprender los conceptos básicos y procedimientos para configurar el enrutamiento estático en routers.</p>
+</section>
+
+<section class="slide">
+    <h2>Enrutamiento Estático vs Dinámico</h2>
+    <ul>
+        <li><strong>Enrutamiento Estático:</strong> Configurado manualmente por un administrador.</li>
+        <li><strong>Enrutamiento Dinámico:</strong> Se aprende automáticamente a través de protocolos como OSPF, BGP, etc.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ventajas del Enrutamiento Estático</h2>
+    <ul>
+        <li>Predicción exacta de la ruta.</li>
+        <li>Reducción de carga en el router.</li>
+        <li>Control total sobre las rutas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Desventajas del Enrutamiento Estático</h2>
+    <ul>
+        <li>No se actualiza automáticamente.</li>
+        <li>Puede requerir intervención manual si ocurren cambios en la red.</li>
+        <li>No es escalable para redes grandes.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración Básica de Enrutamiento Estático</h2>
+    <p>Se configura utilizando comandos como:</p>
+    <ul>
+        <li><code>ip route [red] [máscara] [gateway]</code></li>
+        <li><code>ip route [red] [máscara] [next-hop]</code></li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Configuración Estática</h2>
+    <pre><code>Router(config)# ip route 192.168.2.0 255.255.255.0 192.168.1.1
+Router(config)# ip route 172.16.0.0 255.255.0.0 10.0.0.1</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Verificación del Enrutamiento Estático</h2>
+    <p>Se puede verificar con los siguientes comandos:</p>
+    <ul>
+        <li><code>show ip route static</code></li>
+        <li><code>show ip route</code></li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico: Configuración de Enrutamiento Estático en una Red Pequeña</h2>
+    <p>Configurar el enrutamiento estático en tres routers para conectarse entre sí y a una red remota.</p>
+</section>
+
+<section class="slide">
+    <h2>Proceso de Configuración</h2>
+    <ol>
+        <li>Determinar las redes y puertos necesarios.</li>
+        <li>Configurar la dirección IP en cada router.</li>
+        <li>Definir las rutas estáticas entre los routers.</li>
+        <li>Verificar la configuración con comandos como <code>show ip route</code>.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas en Enrutamiento Estático</h2>
+    <ul>
+        <li>Usar prefijos de red correctos.</li>
+        <li>Configurar rutas alternativas para redundancia.</li>
+        <li>Mantener un registro de las configuraciones.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en Enrutamiento Estático</h2>
+    <ul>
+        <li>Configurar rutas incorrectas o redundantes.</li>
+        <li>No definir rutas para todas las redes.</li>
+        <li>No tener configurada la ruta predeterminada.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Enrutamiento Estático</h2>
+    <p>¿Cuáles son los dos tipos principales de enrutamiento?</p>
+    <ol type="A">
+        <li>Enrutamiento estático y dinámico.</li>
+        <li>Enrutamiento directo y indirecto.</li>
+        <li>Enrutamiento por distancia y por costo.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist de Configuración Estática</h2>
+    <ul>
+        <li>Verificar la configuración de las interfaces.</li>
+        <li>Comprobar las rutas estáticas con <code>show ip route static</code>.</li>
+        <li>Asegurarse de que todas las redes estén cubiertas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Configuración Estática en un Laboratorio</h2>
+    <p>Configurar el enrutamiento estático en tres routers simulados para conectarse entre sí y a una red remota.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen del Enrutamiento Estático</h2>
+    <ul>
+        <li>Enrutamiento estático es manual y predeterminado.</li>
+        <li>Ventajas: control total, reducción de carga.</li>
+        <li>Desventajas: no se actualiza automáticamente, no escalable.</li>
+        <li>Se configura con comandos como <code>ip route</code>.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa y Seguridad en Enrutamiento Estático</h2>
+    <p>Seguir las normativas de seguridad al configurar el enrutamiento estático, incluyendo:</p>
+    <ul>
+        <li>Uso de contraseñas fuertes.</li>
+        <li>Configuración de access-lists para controlar el tráfico.</li>
+        <li>Mantenimiento regular de las configuraciones.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Preguntas Finales</h2>
+    <p>¿Qué es el enrutamiento estático? ¿Cuáles son sus ventajas y desventajas?</p>
+    <p>¿Cómo se configura el enrutamiento estático en un router?</p>
+</section>
+
+<section class="slide">
+    <h2>Gracias por su atención</h2>
+    <p>Preguntas o comentarios? ¡Estoy aquí para ayudar!</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0370 Planificación y administración de redes.md · Configuración y administración básica de «routers»: → Configuración del enrutamiento estático.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 00:39:59</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

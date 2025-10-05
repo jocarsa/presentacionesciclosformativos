@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Consulta distribuida. — Aplicación de criterios de disponibilidad a bases de datos distribuidas y replicadas: — 0377 Administración de sistemas gestores de bases de datos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="consulta-distribuida.">
+<h1>Consulta distribuida.</h1>
+<p><strong>Unidad:</strong> Aplicación de criterios de disponibilidad a bases de datos distribuidas y replicadas:<br><strong>Documento:</strong> 0377 Administración de sistemas gestores de bases de datos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Aplicación de criterios de disponibilidad a bases de datos distribuidas y replicadas</h1>
+    <h3>Consulta distribuida</h3>
+    <p>Objetivo: Comprender cómo se manejan las consultas en sistemas de bases de datos distribuidas y replicadas.</p>
+</section>
+
+<section class="slide">
+    <h2>Definición de Consulta Distribuida</h2>
+    <p>Una consulta distribuida es una operación que involucra la ejecución de comandos SQL en múltiples bases de datos distribuidas o replicadas.</p>
+</section>
+
+<section class="slide">
+    <h2>Estructura de una Consulta Distribuida</h2>
+    <ul>
+        <li>Identificación del esquema y tabla</li>
+        <li>Definición de las condiciones de búsqueda</li>
+        <li>Selección de los campos a recuperar</li>
+        <li>Ordenación de los resultados</li>
+        <li>Límites de la consulta (LIMIT)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Consulta Distribuida</h2>
+    <pre><code>SELECT nombre, edad FROM usuarios WHERE ciudad = 'Madrid' LIMIT 10;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Desafíos en Consultas Distribuidas</h2>
+    <ul>
+        <li>Sincronización de datos entre réplicas</li>
+        <li>Consistencia de los resultados</li>
+        <li>Latencia y rendimiento</li>
+        <li>Manejo de transacciones distribuidas</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Técnicas para Mejorar la Eficiencia</h2>
+    <ul>
+        <li>Indexación en réplicas secundarias</li>
+        <li>Caching de resultados frecuentes</li>
+        <li>Optimización del esquema y consultas</li>
+        <li>Uso de particiones distribuidas</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Optimización</h2>
+    <p>Crear índices en las columnas utilizadas en las cláusulas WHERE y ORDER BY para mejorar el rendimiento.</p>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico: Consulta Distribuida en una Aplicación E-commerce</h2>
+    <p>Una aplicación e-commerce necesita buscar productos por nombre, categoría y precio en múltiples tiendas físicas distribuidas.</p>
+</section>
+
+<section class="slide">
+    <h2>Manejo de Transacciones Distribuidas</h2>
+    <ul>
+        <li>ACID (Atomicidad, Consistencia, Isolación, Durabilidad)</li>
+        <li>Protocolos como 2PC (Tres Fases Preparadas)</li>
+        <li>Consistencias de eventualidad (Eventual Consistency)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Transacción Distribuida</h2>
+    <p>Transferencia de fondos entre dos cuentas bancarias distribuidas.</p>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas en Consultas Distribuidas</h2>
+    <ul>
+        <li>Minimizar el uso de funciones complejas en las consultas</li>
+        <li>Avoidar consultas que requieren un alto nivel de consistencia</li>
+        <li>Monitoreo y optimización constante del rendimiento</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en Consultas Distribuidas</h2>
+    <ul>
+        <li>No indexar adecuadamente las columnas utilizadas en consultas frecuentes</li>
+        <li>No considerar la consistencia de los resultados entre réplicas</li>
+        <li>No optimizar las consultas para minimizar el uso de recursos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Consultas Distribuidas</h2>
+    <p>¿Cuál es la ventaja principal de usar índices en réplicas secundarias?</p>
+    <ol>
+        <li>Aumentar la velocidad de lectura</li>
+        <li>Mejorar la consistencia de los datos</li>
+        <li>Reducir el espacio de almacenamiento</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist para Consultas Distribuidas</h2>
+    <ul>
+        <li>Definir claramente las necesidades del usuario</li>
+        <li>Elegir el esquema y tablas adecuadas</li>
+        <li>Optimizar las consultas SQL</li>
+        <li>Monitorear y ajustar el rendimiento</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Diseño de una Consulta Distribuida</h2>
+    <p>Diseña una consulta distribuida para un sistema de reservas en múltiples ciudades.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Consultas distribuidas son operaciones que involucran múltiples bases de datos.</li>
+        <li>Se enfrentan desafíos como sincronización, consistencia y latencia.</li>
+        <li>Técnicas como indexación y optimización pueden mejorar el rendimiento.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa y Reglamentos</h2>
+    <p>No hay normativas específicas para consultas distribuidas, pero se deben seguir las mejores prácticas de seguridad y privacidad.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0377 Administración de sistemas gestores de bases de datos.md · Aplicación de criterios de disponibilidad a bases de datos distribuidas y replicadas: → Consulta distribuida.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 09:49:09</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

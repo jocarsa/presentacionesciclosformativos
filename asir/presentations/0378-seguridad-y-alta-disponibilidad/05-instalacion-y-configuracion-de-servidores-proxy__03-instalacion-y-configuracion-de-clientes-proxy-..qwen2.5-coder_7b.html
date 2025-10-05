@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Instalación y configuración de clientes «proxy». — Instalación y configuración de servidores «proxy»: — 0378 Seguridad y alta disponibilidad.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="instalacion-y-configuracion-de-clientes-proxy-.">
+<h1>Instalación y configuración de clientes «proxy».</h1>
+<p><strong>Unidad:</strong> Instalación y configuración de servidores «proxy»:<br><strong>Documento:</strong> 0378 Seguridad y alta disponibilidad.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Instalación y configuración de clientes «proxy»</h1>
+    <p>Objetivo: Aprender a instalar, configurar y optimizar clientes proxy para mejorar la seguridad y alta disponibilidad en entornos empresariales.</p>
+</section>
+
+<section class="slide">
+    <h2>¿Qué es un cliente proxy?</h2>
+    <ul>
+        <li>Servicio que actúa como intermediario entre el usuario final y los servidores web.</li>
+        <li>Permite ocultar la dirección IP del usuario, protegiendo su identidad en Internet.</li>
+        <li>Optimiza el acceso a recursos web mediante la caché de páginas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Tipos de clientes proxy</h2>
+    <ul>
+        <li><strong>Proxy transparente:</strong> No requiere ninguna configuración especial en el cliente final.</li>
+        <li><strong>Proxy anónimo:</strong> Oculta la dirección IP del usuario, pero no su navegador.</li>
+        <li><strong>Proxy distorsionado:</strong> Oculta tanto la dirección IP del usuario como su navegador.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de instalación en Windows</h2>
+    <ol>
+        <li>Descarga e instala el software del cliente proxy (por ejemplo, CCProxy).</li>
+        <li>Configura las preferencias generales.</li>
+        <li>Define las reglas de filtrado según tus necesidades.</li>
+        <li>Inicia el servicio y configura los clientes para usarlo como proxy.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de instalación en Linux</h2>
+    <ol>
+        <li>Instala el software del cliente proxy (por ejemplo, Polipo).</li>
+        <li>Configura el archivo de configuración (`/etc/polipo/config`).</li>
+        <li>Inicia el servicio con `sudo systemctl start polipo`.</li>
+        <li>Configura los clientes para usarlo como proxy.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Configuración básica de un cliente proxy</h2>
+    <ul>
+        <li><strong>Dirección IP del servidor proxy:</strong> 192.168.1.100.</li>
+        <li><strong>Puerto:</strong> 8080.</li>
+        <li><strong>Autenticación (si es necesario):</strong> Nombre de usuario y contraseña.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas en la configuración de clientes proxy</h2>
+    <ul>
+        <li>Utiliza un cliente proxy confiable y actualizado.</li>
+        <li>Configura reglas de filtrado para controlar el tráfico web.</li>
+        <li>Implementa autenticación para limitar el acceso.</li>
+        <li>Mantén los registros del cliente proxy en caso de auditoría.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes al configurar clientes proxy</h2>
+    <ul>
+        <li>No configurar correctamente las reglas de filtrado.</li>
+        <li>No autenticar el acceso a los clientes proxy.</li>
+        <li>No mantener actualizado el software del cliente proxy.</li>
+        <li>Configurar el puerto incorrecto.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Caso de estudio: Implementación de un cliente proxy en una empresa</h2>
+    <p>Una empresa pequeña implementó un cliente proxy para mejorar la seguridad y velocidad del acceso a Internet. El resultado fue un aumento significativo en la productividad y una reducción en los costos de mantenimiento.</p>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: ¿Cuál es el propósito principal de un cliente proxy?</h2>
+    <ul>
+        <li><input type="radio" name="q1"> Proteger la identidad del usuario en Internet.</li>
+        <li><input type="radio" name="q1"> Aumentar la velocidad de conexión a Internet.</li>
+        <li><input type="radio" name="q1"> Mejorar la seguridad y alta disponibilidad.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist para la instalación y configuración de clientes proxy</h2>
+    <ol>
+        <li>Elige un cliente proxy confiable.</li>
+        <li>Descarga e instala el software.</li>
+        <li>Configura las preferencias generales.</li>
+        <li>Define reglas de filtrado.</li>
+        <li>Inicia el servicio y configura los clientes.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Configuración práctica de un cliente proxy</h2>
+    <p>Configura un cliente proxy en tu entorno local o virtual. Documenta los pasos realizados y cualquier configuración específica que hayas realizado.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Un cliente proxy es un servicio intermediario entre el usuario final y los servidores web.</li>
+        <li>Existen diferentes tipos de clientes proxy, cada uno con sus propias características.</li>
+        <li>La instalación y configuración correcta de un cliente proxy mejora la seguridad y alta disponibilidad en entornos empresariales.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa general sobre clientes proxy</h2>
+    <p>Es importante cumplir con las leyes de privacidad y protección de datos al utilizar clientes proxy. Asegúrate de que el cliente proxy que uses cumpla con estas regulaciones.</p>
+</section>
+
+<section class="slide">
+    <h2>Preguntas frecuentes</h2>
+    <ul>
+        <li><strong>¿Qué es un cliente proxy?</strong> Un servicio que actúa como intermediario entre el usuario final y los servidores web.</li>
+        <li><strong>¿Cómo puedo configurar un cliente proxy en mi sistema operativo?</strong> Dependerá del sistema operativo, pero generalmente implica descargar e instalar el software, configurar las preferencias generales y definir reglas de filtrado.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Contacto</h2>
+    <p>Puedes contactarme para cualquier duda o aclaración sobre la instalación y configuración de clientes proxy. ¡Estoy aquí para ayudarte!</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0378 Seguridad y alta disponibilidad.md · Instalación y configuración de servidores «proxy»: → Instalación y configuración de clientes «proxy».</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 10:21:57</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Almacenamiento XML nativo. — Almacenamiento de información: — 0373 Lenguajes de marcas y sistemas de gestión de información.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="almacenamiento-xml-nativo.">
+<h1>Almacenamiento XML nativo.</h1>
+<p><strong>Unidad:</strong> Almacenamiento de información:<br><strong>Documento:</strong> 0373 Lenguajes de marcas y sistemas de gestión de información.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Almacenamiento nativo</h2>
+    <p>El almacenamiento nativo permite almacenar y gestionar datos en formato directamente en la base de datos.</p>
+</section>
+
+<section class="slide">
+    <h3>Ventajas del almacenamiento nativo</h3>
+    <ul>
+        <li>Integración nativa con el modelo de datos</li>
+        <li>Soporte para consultas XPath y XQuery</li>
+        <li>Almacenamiento eficiente de documentos jerárquicos</li>
+        <li>Facilita la indexación y búsqueda de contenido</li>
+        <li>Mejora el rendimiento en consultas complejas</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Ejemplos de bases de datos que soportan nativo</h3>
+    <ul>
+        <li>MongoDB</li>
+        <li>Microsoft SQL Server</li>
+        <li>Oracle Database</li>
+        <li>IBM DB2</li>
+        <li>Amazon DynamoDB</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Estructura de un documento nativo</h3>
+    <p>Un documento nativo se compone de elementos, atributos y valores.</p>
+    <pre><code>&lt;libro&gt;
+  &lt;título&gt;El Quijote&lt;/título&gt;
+  &lt;autor&gt;Miguel deervantes&lt;/autor&gt;
+  &lt;año&gt;1605&lt;/año&gt;
+&lt;/libro&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h3>Consultas en bases de datos nativas</h3>
+    <p>Se pueden realizar consultas complejas utilizando XPath o XQuery.</p>
+    <pre><code>xquery version "1.0";
+for $libro in doc("biblioteca.xml")/libros/libro
+where $libro/año &gt; 1600
+return $libro/título</code></pre>
+</section>
+
+<section class="slide">
+    <h3>Desventajas del almacenamiento nativo</h3>
+    <ul>
+        <li>Puede ser menos eficiente en consultas simples</li>
+        <li>No es tan adecuado para datos tabulares complejos</li>
+        <li>Puede requerir más recursos de hardware</li>
+        <li>La curva de aprendizaje puede ser mayor</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Casos de uso comunes del almacenamiento nativo</h3>
+    <ul>
+        <li>Gestión de contenido web dinámico</li>
+        <li>Almacenamiento de configuraciones y preferencias de usuarios</li>
+        <li>Integración con sistemas de gestión de contenidos (CMS)</li>
+        <li>Almacenamiento de datos semi-estructurados</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Buenas prácticas en el almacenamiento nativo</h3>
+    <ul>
+        <li>Definir un esquema para la estructura de los documentos</li>
+        <li>Validar los documentos contra el esquema antes del almacenamiento</li>
+        <li>Utilizar índices eficientes para mejorar el rendimiento de las consultas</li>
+        <li>Mantener una buena organización y normalización de los datos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Errores comunes en el almacenamiento nativo</h3>
+    <ul>
+        <li>No validar adecuadamente los documentos contra el esquema</li>
+        <li>No utilizar índices eficientes, lo que reduce el rendimiento</li>
+        <li>Mantener una estructura de datos desorganizada y poco normalizada</li>
+        <li>No realizar consultas optimizadas, lo que puede llevar a tiempos de respuesta lentos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Comparación con otros métodos de almacenamiento</h3>
+    <table>
+        <tr>
+            <th>Método</th>
+            <th>Ventajas</th>
+            <th>Desventajas</th>
+        </tr>
+        <tr>
+            <td>Almacenamiento relacional</td>
+            <td>Rendimiento alto, escalabilidad</td>
+            <td>No soporta datos semi-estructurados</td>
+        </tr>
+        <tr>
+            <td>Almacenamiento NoSQL</td>
+            <td>Escala bien con grandes volúmenes de datos</td>
+            <td>No soporta consultas complejas</td>
+        </tr>
+        <tr>
+            <td>Almacenamiento nativo</td>
+            <td>Integración nativa con el modelo de datos, soporte para consultas XPath/XQuery</td>
+            <td>Puede ser menos eficiente en consultas simples, no adecuado para datos tabulares complejos</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h3>Mini-quiz: ¿Cuál es la principal ventaja del almacenamiento nativo?</h3>
+    <ul>
+        <li>a) Alta escalabilidad</li>
+        <li>b) Soporte para consultas complejas</li>
+        <li>c) Integración con sistemas de gestión de contenidos (CMS)</li>
+        <li>d) Rendimiento alto en consultas simples</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Checklist: Consideraciones al seleccionar un método de almacenamiento</h3>
+    <ul>
+        <li>¿Necesitas almacenar datos semi-estructurados?</li>
+        <li>¿Requiere consultas complejas y XPath/XQuery?</li>
+        <li>¿Es importante la escalabilidad del sistema?</li>
+        <li>¿La velocidad de las consultas es un factor crítico?</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Actividad: Diseña una estructura para almacenar información sobre productos en una tienda online</h3>
+    <p>Define los elementos, atributos y relaciones que consideres necesarios.</p>
+</section>
+
+<section class="slide">
+    <h3>Resumen</h3>
+    <ul>
+        <li>El almacenamiento nativo permite almacenar y gestionar datos en formato directamente en la base de datos.</li>
+        <li>Ventajas: integración nativa, soporte para consultas XPath/XQuery, eficiencia en almacenamiento y búsqueda.</li>
+        <li>Ejemplos de bases de datos que lo soportan: MongoDB, SQL Server, Oracle Database, IBM DB2, DynamoDB.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Normativa general</h3>
+    <p>No hay normativas específicas para el almacenamiento nativo, pero se recomienda seguir buenas prácticas de diseño y seguridad al almacenar datos sensibles.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0373 Lenguajes de marcas y sistemas de gestión de información.md · Almacenamiento de información: → Almacenamiento XML nativo.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 04:32:54</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

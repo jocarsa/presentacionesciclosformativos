@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Copias de seguridad. — Administración de gestores de contenidos: — 0376 Implantación de aplicaciones web.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="copias-de-seguridad.">
+<h1>Copias de seguridad.</h1>
+<p><strong>Unidad:</strong> Administración de gestores de contenidos:<br><strong>Documento:</strong> 0376 Implantación de aplicaciones web.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Copias de seguridad en aplicaciones web</h2>
+    <p>Objetivo: Comprender los conceptos básicos y prácticas recomendadas para la implementación de copias de seguridad en aplicaciones web.</p>
+</section>
+
+<section class="slide">
+    <h3>Definición de copia de seguridad</h3>
+    <ul>
+        <li>Copia exacta de todos los datos almacenados en un sistema o aplicación.</li>
+        <li>Permite recuperación rápida ante pérdida de datos.</li>
+        <li>Se realiza periódicamente para garantizar integridad y disponibilidad.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Tipo de copias de seguridad</h3>
+    <ul>
+        <li>Copia completa: Todo el contenido del sistema.</li>
+        <li>Copia diferencial: Cambios desde la última copia completa.</li>
+        <li>Copia incremental: Cambios desde la última copia realizada, independientemente del tipo.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Planes de recuperación (RPO)</h3>
+    <p>RPO define cuánto tiempo puede pasar entre una falla y la restauración operativa.</p>
+    <ul>
+        <li>Minimizar el RPO para minimizar el impacto en los negocios.</li>
+        <li>Ejemplos: 15 minutos, 1 hora, 24 horas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Tiempo de recuperación esperado (RTO)</h3>
+    <p>RTO define cuánto tiempo debe tardar en restaurarse el sistema después de una falla.</p>
+    <ul>
+        <li>Minimizar el RTO para minimizar la interrupción del negocio.</li>
+        <li>Ejemplos: 1 hora, 4 horas, 24 horas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Medios de almacenamiento de copias de seguridad</h3>
+    <ul>
+        <li>Almacenamiento local en el mismo centro de datos.</li>
+        <li>Almacenamiento remoto en un proveedor de servicios.</li>
+        <li>Almacenamiento en la nube (backup en la nube).</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Estrategias de copia de seguridad</h3>
+    <ul>
+        <li>Copia diaria con almacenamiento remoto.</li>
+        <li>Copia semanal completa y copias diarias diferenciales.</li>
+        <li>Copia diaria completa y copias semanales diferenciales.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Automatización de copias de seguridad</h3>
+    <p>Uso de herramientas y software para automatizar el proceso de creación y almacenamiento de copias de seguridad.</p>
+    <ul>
+        <li>Reducción del tiempo humano requerido.</li>
+        <li>Mantenimiento constante y consistencia en las copias.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Buenas prácticas para copias de seguridad</h3>
+    <ul>
+        <li>Realizar pruebas periódicas de recuperación.</li>
+        <li>Verificar la integridad y consistencia de las copias.</li>
+        <li>Seguridad física y digital de los medios de almacenamiento.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Errores comunes en copias de seguridad</h3>
+    <ul>
+        <li>No realizar copias de seguridad periódicamente.</li>
+        <li>No verificar la integridad y consistencia de las copias.</li>
+        <li>No tener un plan de recuperación definido.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Normativa y regulaciones</h3>
+    <p>Reglamentos como GDPR, HIPAA y PCI DSS requieren políticas de copias de seguridad robustas.</p>
+    <ul>
+        <li>Seguridad de los datos sensibles.</li>
+        <li>Compliance legal y regulatorio.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Caso práctico: Implementación de copias de seguridad en una aplicación web</h3>
+    <p>Ejemplo de cómo configurar una estrategia de copias de seguridad para una aplicación web específica.</p>
+</section>
+
+<section class="slide">
+    <h3>Mini-quiz sobre copias de seguridad</h3>
+    <ul>
+        <li>¿Qué es RPO?</li>
+        <li>¿Cuáles son los tipos principales de copias de seguridad?</li>
+        <li>¿Qué significa RTO?</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Checklist para la implementación de copias de seguridad</h3>
+    <ol>
+        <li>Definir el plan de recuperación.</li>
+        <li>Elegir el tipo y medio de almacenamiento.</li>
+        <li>Configurar la automatización del proceso.</li>
+        <li>Realizar pruebas periódicas.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h3>Actividad práctica: Crear una copia de seguridad</h3>
+    <p>Ejercicio para practicar la creación y almacenamiento de una copia de seguridad en un entorno virtual.</p>
+</section>
+
+<section class="slide">
+    <h3>Resumen</h3>
+    <ul>
+        <li>Copias de seguridad es crucial para la protección de datos en aplicaciones web.</li>
+        <li>Estrategias y mejores prácticas deben ser implementadas con regularidad.</li>
+        <li>Seguimiento y verificación son fundamentales para el éxito del proceso.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Preguntas y dudas</h3>
+    <p>Abertura para preguntas adicionales o aclaraciones sobre el tema de copias de seguridad en aplicaciones web.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0376 Implantación de aplicaciones web.md · Administración de gestores de contenidos: → Copias de seguridad.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 08:06:26</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

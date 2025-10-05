@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Paso del diagrama E/R al modelo relacional. — Diseño lógico de bases de datos: — 0372 Gestión de bases de datos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="paso-del-diagrama-e-r-al-modelo-relacional.">
+<h1>Paso del diagrama E/R al modelo relacional.</h1>
+<p><strong>Unidad:</strong> Diseño lógico de bases de datos:<br><strong>Documento:</strong> 0372 Gestión de bases de datos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Diseño lógico de bases de datos</h2>
+    <p>Objetivo: Convertir diagramas E/R en modelos relacionales.</p>
+</section>
+
+<section class="slide">
+    <h3>Paso del diagrama E/R al modelo relacional</h3>
+    <ul>
+        <li>Identificar entidades y atributos</li>
+        <li>Determinar relaciones entre entidades</li>
+        <li>Definir cardinalidad de las relaciones</li>
+        <li>Convertir atributos simples en columnas</li>
+        <li>Crear claves primarias y foráneas</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Ejemplo: Conversión de diagrama E/R a modelo relacional</h3>
+    <img src="diagrama_er.png" alt="Diagrama E/R">
+</section>
+
+<section class="slide">
+    <h3>Entidad "Alumno"</h3>
+    <ul>
+        <li>ID_Alumno (PK)</li>
+        <li>Nombre</li>
+        <li>Apellido</li>
+        <li>DNI</li>
+        <li>Email</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Entidad "Materia"</h3>
+    <ul>
+        <li>ID_Materia (PK)</li>
+        <li>Nombre</li>
+        <li>Creditos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Relación "Matricula"</h3>
+    <ul>
+        <li>ID_Alumno (FK)</li>
+        <li>ID_Materia (FK)</li>
+        <li>Fecha</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Caso: Normalización</h3>
+    <p>Convertir el modelo relacional en uno normalizado para evitar redundancias y anomalías.</p>
+</section>
+
+<section class="slide">
+    <h3>Buenas prácticas</h3>
+    <ul>
+        <li>Usar nombres descriptivos para tablas y columnas</li>
+        <li>Definir tipos de datos adecuados</li>
+        <li>Asegurar integridad referencial</li>
+        <li>Optimizar el diseño para la eficiencia</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Errores comunes</h3>
+    <ul>
+        <li>No definir claves primarias</li>
+        <li>Usar tipos de datos incorrectos</li>
+        <li>No normalizar el modelo</li>
+        <li>No considerar la eficiencia en el diseño</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Comparativa: Modelo E/R vs. Modelo Relacional</h3>
+    <table>
+        <tr>
+            <th>E/R</th>
+            <th>Relacional</th>
+        </tr>
+        <tr>
+            <td>Diagramas visuales</td>
+            <td>Tablas y columnas</td>
+        </tr>
+        <tr>
+            <td>Entidades, atributos, relaciones</td>
+            <td>Tablas, columnas, claves primarias y foráneas</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h3>Mini-quiz: Identificación de entidades y relaciones</h3>
+    <p>¿Cuáles son las entidades y relaciones en el siguiente diagrama E/R?</p>
+    <img src="diagrama_er_mini_quiz.png" alt="Diagrama E/R Mini Quiz">
+</section>
+
+<section class="slide">
+    <h3>Checklist: Pasos para convertir un diagrama E/R a modelo relacional</h3>
+    <ol>
+        <li>Identificar entidades y atributos</li>
+        <li>Determinar relaciones entre entidades</li>
+        <li>Definir cardinalidad de las relaciones</li>
+        <li>Convertir atributos simples en columnas</li>
+        <li>Crear claves primarias y foráneas</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h3>Actividad: Conversión de diagrama E/R a modelo relacional</h3>
+    <p>Convierte el siguiente diagrama E/R en un modelo relacional.</p>
+    <img src="diagrama_er_actividad.png" alt="Diagrama E/R Actividad">
+</section>
+
+<section class="slide">
+    <h3>Resumen: Paso del diagrama E/R al modelo relacional</h3>
+    <ul>
+        <li>Identificar entidades y atributos</li>
+        <li>Determinar relaciones y cardinalidad</li>
+        <li>Convertir a tablas y columnas</li>
+        <li>Definir claves primarias y foráneas</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Normativa: Diseño de bases de datos</h3>
+    <p>Seguir estándares como 1NF, 2NF, 3NF para garantizar la calidad del diseño.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0372 Gestión de bases de datos.md · Diseño lógico de bases de datos: → Paso del diagrama E/R al modelo relacional.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 02:18:31</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

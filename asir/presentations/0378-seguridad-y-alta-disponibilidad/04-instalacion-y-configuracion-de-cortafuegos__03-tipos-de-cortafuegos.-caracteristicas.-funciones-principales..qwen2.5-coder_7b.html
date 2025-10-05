@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Tipos de cortafuegos. Características. Funciones principales. — Instalación y configuración de cortafuegos: — 0378 Seguridad y alta disponibilidad.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="tipos-de-cortafuegos.-caracteristicas.-funciones-principales.">
+<h1>Tipos de cortafuegos. Características. Funciones principales.</h1>
+<p><strong>Unidad:</strong> Instalación y configuración de cortafuegos:<br><strong>Documento:</strong> 0378 Seguridad y alta disponibilidad.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Tipos de cortafuegos. Características. Funciones principales.</h1>
+    <p>Objetivo: Comprender los diferentes tipos de cortafuegos, sus características y funciones principales.</p>
+</section>
+
+<section class="slide">
+    <h2>Definición de Cortafuegos</h2>
+    <p>Cortafuegos son sistemas de seguridad informática que controlan el tráfico de datos entre una red interna y la red externa.</p>
+</section>
+
+<section class="slide">
+    <h2>Tipo 1: Cortafuegos de Aplicación</h2>
+    <ul>
+        <li>Se basan en software.</li>
+        <li>Filtran el tráfico a nivel de aplicaciones.</li>
+        <li>Ejemplos: iptables, pfSense.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Tipo 2: Cortafuegos de Paquete</h2>
+    <ul>
+        <li>Se basan en hardware o software.</li>
+        <li>Filtran el tráfico a nivel de paquetes.</li>
+        <li>Ejemplos: Cisco ASA, Fortinet.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Tipo 3: Cortafuegos de Aplicación y Paquete</h2>
+    <ul>
+        <li>Combinan características de ambos tipos.</li>
+        <li>Filtran tanto el tráfico a nivel de aplicaciones como de paquetes.</li>
+        <li>Ejemplos: Palo Alto Networks, Check Point.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Características Generales</h2>
+    <ul>
+        <li>Filtración del tráfico entrante y saliente.</li>
+        <li>Control de acceso a recursos internos.</li>
+        <li>Monitoreo y registro del tráfico.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Funciones Principales</h2>
+    <ul>
+        <li>Seguridad contra amenazas externas.</li>
+        <li>Optimización de rendimiento de la red.</li>
+        <li>Control de acceso basado en políticas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo: Configuración Básica de iptables</h2>
+    <pre><code>iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+iptables -A INPUT -p tcp --dport 443 -j ACCEPT
+iptables -A INPUT -j DROP</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico: Implementación de un Cortafuego</h2>
+    <p>Se implementa un cortafuego de paquete para una pequeña empresa con 10 usuarios.</p>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas</h2>
+    <ul>
+        <li>Definir políticas claras y actualizadas.</li>
+        <li>Monitorear y analizar el tráfico regularmente.</li>
+        <li>Realizar copias de seguridad periódicas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes</h2>
+    <ul>
+        <li>No definir políticas adecuadas.</li>
+        <li>No monitorear el cortafuego.</li>
+        <li>No realizar copias de seguridad.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: Cortafuegos vs. Firewall Virtual</h2>
+    <table>
+        <tr>
+            <th>Cortafuegos</th>
+            <th>Firewall Virtual</th>
+        </tr>
+        <tr>
+            <td>Hardware o software.</td>
+            <td>Solo software.</td>
+        </tr>
+        <tr>
+            <td>Filtrado de paquetes y aplicaciones.</td>
+            <td>Filtrado de paquetes.</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz</h2>
+    <p>¿Qué tipo de cortafuego permite filtrar el tráfico a nivel de aplicaciones?</p>
+    <ol>
+        <li>Cortafuegos de paquete.</li>
+        <li>Cortafuegos de aplicación.</li>
+        <li>Cortafuegos de aplicación y paquete.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Configuración de un Cortafuego</h2>
+    <ul>
+        <li>Definir políticas de entrada y salida.</li>
+        <li>Configurar reglas para servicios necesarios.</li>
+        <li>Monitorear el cortafuego regularmente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Diseño de una Política de Cortafuegos</h2>
+    <p>Diseña una política de cortafuegos para una red interna con 50 usuarios.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Cortafuegos: sistemas que controlan el tráfico entre redes.</li>
+        <li>Tipo de cortafuegos: aplicación, paquete y combinado.</li>
+        <li>Características principales: filtración, control de acceso, monitoreo.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa General</h2>
+    <p>Normativas como GDPR requieren el uso de cortafuegos para proteger la privacidad y seguridad de los datos.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0378 Seguridad y alta disponibilidad.md · Instalación y configuración de cortafuegos: → Tipos de cortafuegos. Características. Funciones principales.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 10:15:29</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

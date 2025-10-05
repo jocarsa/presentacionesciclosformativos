@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Implementación de restricciones. — Diseño físico de bases de datos: — 0372 Gestión de bases de datos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="implementacion-de-restricciones.">
+<h1>Implementación de restricciones.</h1>
+<p><strong>Unidad:</strong> Diseño físico de bases de datos:<br><strong>Documento:</strong> 0372 Gestión de bases de datos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Diseño físico de bases de datos</h1>
+    <p><strong>Objetivo:</strong> Comprender y aplicar las restricciones en el diseño físico de bases de datos.</p>
+</section>
+
+<section class="slide">
+    <h2>Definición de Restriciones</h2>
+    <ul>
+        <li>Reglas que limitan los valores que pueden almacenarse en una columna o en la relación entre tablas.</li>
+        <li>Proporcionan integridad y consistencia a la base de datos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Tipo de Restriciones</h2>
+    <ul>
+        <li><strong>Restriciones de dominio:</strong> Limitan los valores que pueden almacenarse en una columna.</li>
+        <li><strong>Restriciones de integridad referencial:</strong> Mantienen la consistencia entre tablas relacionadas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Restricción de Dominio</h2>
+    <p>La columna "Edad" en una tabla "Clientes" puede tener una restricción que solo acepte valores numéricos entre 18 y 90.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Restricción de Integridad Referencial</h2>
+    <p>La columna "ID_Cliente" en una tabla "Pedidos" debe ser una clave foránea que se refiera a la columna "ID_Cliente" en la tabla "Clientes".</p>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas</h2>
+    <ul>
+        <li>Definir restricciones lo más específicas posible.</li>
+        <li>Documentar todas las restricciones aplicadas a la base de datos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes</h2>
+    <ul>
+        <li>No definir restricciones suficientes, lo que puede llevar a inconsistencias en los datos.</li>
+        <li>No documentar las restricciones, dificultando la comprensión y mantenimiento del sistema.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz</h2>
+    <p>¿Cuáles de las siguientes opciones es una restricción de integridad referencial?</p>
+    <ol>
+        <li>Aceptar solo valores numéricos en una columna.</li>
+        <li>Mantener la consistencia entre tablas relacionadas.</li>
+        <li>Definir un valor predeterminado para una columna.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist</h2>
+    <ul>
+        <li>¿Se han definido restricciones de dominio en todas las columnas necesarias?</li>
+        <li>¿Las restricciones de integridad referencial mantienen la consistencia entre tablas?</li>
+        <li>¿Se ha documentado todas las restricciones aplicadas a la base de datos?</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad</h2>
+    <p>Identifique y defina las restricciones necesarias para una tabla "Empleados" que incluya columnas como "ID_Empleado", "Nombre", "Departamento", "Salario".</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Las restricciones son fundamentales para el diseño físico de bases de datos.</li>
+        <li>Serven para garantizar la integridad y consistencia de los datos.</li>
+        <li>Se pueden definir tanto en el nivel de dominio como en el nivel de integridad referencial.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa General</h2>
+    <p><strong>ISO/IE 9001:</strong> Menciona la importancia de la gestión del conocimiento y las prácticas de calidad en el diseño de sistemas.</p>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico</h2>
+    <p><strong>Ejemplo:</strong> Implementación de restricciones en una base de datos para un sistema de gestión de inventario.</p>
+</section>
+
+<section class="slide">
+    <h2>Proceso</h2>
+    <ol>
+        <li>Identificar las columnas y sus tipos de datos.</li>
+        <li>Determinar las restricciones necesarias (dominio e integridad referencial).</li>
+        <li>Aplicar las restricciones en el diseño físico de la base de datos.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Conclusión</h2>
+    <p><strong>Implementación efectiva de restricciones:</strong> Es esencial para mantener la calidad y confiabilidad de los sistemas de gestión de bases de datos.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0372 Gestión de bases de datos.md · Diseño físico de bases de datos: → Implementación de restricciones.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 02:24:32</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

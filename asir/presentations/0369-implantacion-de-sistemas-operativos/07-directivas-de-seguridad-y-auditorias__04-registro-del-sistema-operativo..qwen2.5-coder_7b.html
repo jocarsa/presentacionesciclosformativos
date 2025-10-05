@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Registro del sistema operativo. — Directivas de seguridad y auditorías: — 0369 Implantación de sistemas operativos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="registro-del-sistema-operativo.">
+<h1>Registro del sistema operativo.</h1>
+<p><strong>Unidad:</strong> Directivas de seguridad y auditorías:<br><strong>Documento:</strong> 0369 Implantación de sistemas operativos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Implantación de sistemas operativos</h1>
+    <p><strong>Unidad:</strong> Directivas de seguridad y auditorías</p>
+    <p><strong>Subunidad:</strong> Registro del sistema operativo</p>
+    <p><strong>Objetivo:</strong> Comprender los principios básicos del registro del sistema operativo y su importancia en la seguridad.</p>
+</section>
+
+<section class="slide">
+    <h2>¿Qué es el registro del sistema operativo?</h2>
+    <p>El registro del sistema operativo (Syslog) es un mecanismo que permite registrar eventos importantes que ocurren dentro de un sistema operativo.</p>
+</section>
+
+<section class="slide">
+    <h2>Beneficios del registro del sistema operativo</h2>
+    <ul>
+        <li>Monitoreo continuo de actividades del sistema.</li>
+        <li>Detección y respuesta a amenazas.</li>
+        <li>Auditoría y cumplimiento normativo.</li>
+        <li>Diagnóstico y solución de problemas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplos de eventos registrados</h2>
+    <ul>
+        <li>Inicios yierres de sesión.</li>
+        <li>Accesos a archivos sensibles.</li>
+        <li>Intentos de inicio de sesión fallidos.</li>
+        <li>Instalación o desinstalación de software.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración del registro del sistema operativo</h2>
+    <p>La configuración del registro depende del sistema operativo utilizado. Por ejemplo, en Linux se puede usar el comando `logger` o editar archivos como `/etc/rsyslog.conf`.</p>
+</section>
+
+<section class="slide">
+    <h2>Niveles de severidad en el registro</h2>
+    <ul>
+        <li>Emergencia (0): Sistema inutilizable.</li>
+        <li>Alerta (1): Condición crítica.</li>
+        <li>Critico (2): Condiciones críticas que afectan la operación del sistema.</li>
+        <li>Error (3): Errores que no afectan la operación normal.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Formato de los registros</h2>
+    <p>Cada entrada en el registro generalmente incluye:</p>
+    <ul>
+        <li>Timestamp (fecha y hora).</li>
+        <li>Nivel de severidad.</li>
+        <li>Mensaje del evento.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Almacenamiento del registro</h2>
+    <p>El registro puede almacenarse en diferentes formatos y ubicaciones:</p>
+    <ul>
+        <li>Archivos de texto en el sistema local.</li>
+        <li>Servidores remotos para centralizar la auditoría.</li>
+        <li>Bases de datos para análisis avanzado.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Seguridad del registro</h2>
+    <p>Es crucial proteger el acceso al registro para evitar:</p>
+    <ul>
+        <li>Acceso no autorizado a información sensible.</li>
+        <li>Modificación o eliminación de registros por parte de usuarios malintencionados.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas en el registro del sistema operativo</h2>
+    <ul>
+        <li>Habilitar el registro para todos los eventos importantes.</li>
+        <li>Configurar niveles de severidad adecuados.</li>
+        <li>Almacenar registros en ubicaciones seguras y accesibles.</li>
+        <li>Realizar copias de seguridad periódicas del registro.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes en la configuración del registro</h2>
+    <ul>
+        <li>No habilitar el registro para eventos importantes.</li>
+        <li>Configurar niveles de severidad demasiado bajos.</li>
+        <li>No almacenar registros en ubicaciones seguras.</li>
+        <li>No realizar copias de seguridad del registro.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa entre sistemas operativos</h2>
+    <table>
+        <tr>
+            <th>Sistema Operativo</th>
+            <th>Registro por defecto</th>
+            <th>Niveles de severidad</th>
+            <th>Almacenamiento predeterminado</th>
+        </tr>
+        <tr>
+            <td>Linux</td>
+            <td>rsyslog</td>
+            <td>8 niveles (0-7)</td>
+            <td>/var/log/</td>
+        </tr>
+        <tr>
+            <td>Windows</td>
+            <td>Event Viewer</td>
+            <td>5 niveles (1-4)</td>
+            <td>C:\Windows\System32\winevt\Logs\</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: Registro del sistema operativo</h2>
+    <p>¿Cuál es el propósito principal del registro del sistema operativo?</p>
+    <ul>
+        <li>a) Almacenar información de usuario.</li>
+        <li>b) Registrar eventos importantes para la seguridad y auditoría.</li>
+        <li>c) Mostrar gráficos estadísticos del sistema.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Configuración del registro del sistema operativo</h2>
+    <ol>
+        <li>Habilitar el registro para todos los eventos importantes.</li>
+        <li>Configurar niveles de severidad adecuados.</li>
+        <li>Almacenar registros en ubicaciones seguras y accesibles.</li>
+        <li>Realizar copias de seguridad periódicas del registro.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Análisis de registros</h2>
+    <p>Analiza un fragmento de registro del sistema operativo y clasifica los eventos según su nivel de severidad.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>El registro del sistema operativo es crucial para la seguridad y auditoría.</li>
+        <li>Es importante configurarlo adecuadamente y proteger su acceso.</li>
+        <li>Buenas prácticas incluyen habilitar eventos importantes, usar niveles de severidad correctos y almacenar registros seguros.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa (general)</h2>
+    <p>La normativa vigente requiere la implementación de sistemas de registro adecuados para garantizar la seguridad y cumplimiento en entornos empresariales.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0369 Implantación de sistemas operativos.md · Directivas de seguridad y auditorías: → Registro del sistema operativo.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-04 22:37:40</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

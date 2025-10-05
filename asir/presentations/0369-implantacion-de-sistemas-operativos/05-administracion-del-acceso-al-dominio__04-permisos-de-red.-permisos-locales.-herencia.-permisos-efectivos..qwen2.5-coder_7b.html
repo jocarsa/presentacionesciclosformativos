@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Permisos de red. Permisos locales. Herencia. Permisos efectivos. — Administración del acceso al dominio: — 0369 Implantación de sistemas operativos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="permisos-de-red.-permisos-locales.-herencia.-permisos-efectivos.">
+<h1>Permisos de red. Permisos locales. Herencia. Permisos efectivos.</h1>
+<p><strong>Unidad:</strong> Administración del acceso al dominio:<br><strong>Documento:</strong> 0369 Implantación de sistemas operativos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Administración del acceso al dominio</h1>
+    <p>Objetivo: Comprender los conceptos básicos y aplicaciones de permisos de red, permisos locales y herencia en sistemas operativos.</p>
+</section>
+
+<section class="slide">
+    <h2>Permisos de Red</h2>
+    <ul>
+        <li>Definición: Control sobre el acceso a recursos compartidos en una red.</li>
+        <li>Ejemplos: Acceso a archivos, impresoras, bases de datos.</li>
+        <li>Tipos: Lectura, escritura, ejecución.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Permisos Locales</h2>
+    <ul>
+        <li>Definición: Control sobre el acceso a recursos locales del sistema operativo.</li>
+        <li>Ejemplos: Archivos, directorios, dispositivos.</li>
+        <li>Tipos: Lectura, escritura, ejecución.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Herencia de Permisos</h2>
+    <ul>
+        <li>Definición: Transmisión de permisos desde un objeto padre a sus hijos.</li>
+        <li>Ejemplos: Carpetas y archivos dentro de una carpeta principal.</li>
+        <li>Importancia: Simplifica la gestión de permisos en estructuras jerárquicas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Permisos Efectivos</h2>
+    <ul>
+        <li>Definición: Conjunto real de permisos que un usuario tiene sobre un recurso.</li>
+        <li>Ejemplos: Permisos heredados, permisos específicos del usuario.</li>
+        <li>Cálculo: Combina permisos locales y de red.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Aplicación Práctica</h2>
+    <p>Ejemplo: Configuración de permisos en un servidor web Apache.</p>
+    <ol>
+        <li>Cambiar propietario del directorio con `chown`.</li>
+        <li>Modificar permisos con `chmod`.</li>
+        <li>Verificar permisos actuales con `ls -l`.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas</h2>
+    <ul>
+        <li>Minimizar privilegios: Usar cuentas de usuario limitadas para tareas no administrativas.</li>
+        <li>Auditoría: Monitorear cambios en permisos y acceso a recursos.</li>
+        <li>Documentación: Mantener registros de configuraciones y cambios de permisos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes</h2>
+    <ul>
+        <li>No definir permisos adecuados: Resulta en accesos no autorizados.</li>
+        <li>Ignorar cambios de propietario: Puede comprometer la seguridad del sistema.</li>
+        <li>No auditar cambios: Dificulta el seguimiento y respuesta a incidentes de seguridad.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa</h2>
+    <table>
+        <tr>
+            <th>Permisos de Red</th>
+            <th>Permisos Locales</th>
+        </tr>
+        <tr>
+            <td>Control sobre recursos compartidos en red.</td>
+            <td>Control sobre recursos locales del sistema operativo.</td>
+        </tr>
+        <tr>
+            <td>Ejemplos: Acceso a archivos, impresoras.</td>
+            <td>Ejemplos: Archivos, directorios, dispositivos.</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz</h2>
+    <p>¿Cuál es la diferencia entre permisos de red y permisos locales?</p>
+    <ol type="a">
+        <li>Permisos de red controlan el acceso a recursos compartidos en una red.</li>
+        <li>Permisos locales controlan el acceso a recursos locales del sistema operativo.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist</h2>
+    <ul>
+        <li>Definir permisos adecuados para cada recurso.</li>
+        <li>Auditar cambios en permisos y acceso a recursos.</li>
+        <li>Mantener registros de configuraciones y cambios de permisos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad</h2>
+    <p>Ejercicio: Configurar los permisos adecuados para un proyecto en una red local.</p>
+    <ol>
+        <li>Cambiar propietario del directorio con `chown`.</li>
+        <li>Modificar permisos con `chmod`.</li>
+        <li>Verificar permisos actuales con `ls -l`.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Permisos de red: Control sobre recursos compartidos en una red.</li>
+        <li>Permisos locales: Control sobre recursos locales del sistema operativo.</li>
+        <li>Herencia: Transmisión de permisos desde un objeto padre a sus hijos.</li>
+        <li>Permisos efectivos: Conjunto real de permisos que un usuario tiene sobre un recurso.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa General</h2>
+    <p>Seguridad en sistemas operativos: Normativas y mejores prácticas para la gestión de permisos.</p>
+    <ul>
+        <li>NIST SP 800-53: Directrices para el control de acceso basado en roles (RBAC).</li>
+        <li>CIS Benchmarks: Estándares de seguridad para sistemas operativos y aplicaciones.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conclusión</h2>
+    <p>Comprendiendo los conceptos de permisos de red, permisos locales y herencia es crucial para la administración segura del acceso al dominio en sistemas operativos.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0369 Implantación de sistemas operativos.md · Administración del acceso al dominio: → Permisos de red. Permisos locales. Herencia. Permisos efectivos.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-04 22:22:56</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

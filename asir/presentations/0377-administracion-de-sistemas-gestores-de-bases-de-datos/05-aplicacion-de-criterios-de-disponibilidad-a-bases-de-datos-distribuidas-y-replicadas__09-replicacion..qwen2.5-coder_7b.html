@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Replicación. — Aplicación de criterios de disponibilidad a bases de datos distribuidas y replicadas: — 0377 Administración de sistemas gestores de bases de datos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="replicacion.">
+<h1>Replicación.</h1>
+<p><strong>Unidad:</strong> Aplicación de criterios de disponibilidad a bases de datos distribuidas y replicadas:<br><strong>Documento:</strong> 0377 Administración de sistemas gestores de bases de datos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Aplicación de criterios de disponibilidad a bases de datos distribuidas y replicadas</h1>
+    <h3>Replicación</h3>
+    <p>Objetivo: Comprender los principios básicos de la replicación en sistemas de bases de datos distribuidos.</p>
+</section>
+
+<section class="slide">
+    <h2>Definición de Replicación</h2>
+    <p>La replicación es una técnica que permite crear copias de un conjunto de datos en diferentes ubicaciones físicas o lógicas.</p>
+</section>
+
+<section class="slide">
+    <h2>Ventajas de la Replicación</h2>
+    <ul>
+        <li>Aumento de la disponibilidad</li>
+        <li>Reducción del tiempo de recuperación ante fallos</li>
+        <li>Mejora la capacidad de procesamiento distribuido</li>
+        <li>Soporte para lecturas concurrentes</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Tipo de Replicación</h2>
+    <ul>
+        <li><strong>Total (Full):</strong> Se replican todos los datos.</li>
+        <li><strong>Parcial (Partial):</strong> Se replican partes específicas de los datos.</li>
+        <li><strong>Geográfica (Geo-replication):</strong> Replicación entre diferentes ubicaciones geográficas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Métodos de Replicación</h2>
+    <ul>
+        <li><strong>Sincronización:</strong> Los datos se actualizan simultáneamente en todas las copias.</li>
+        <li><strong>Asincrónica:</strong> Los cambios se propagan a los réplicas con un retraso.</li>
+        <li><strong>Master-Slave (Maestro-Escavo):</strong> Un nodo principal y varios secundarios.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Replicación</h2>
+    <p>Una tienda en línea podría replicar su base de datos principal en múltiples centros de datos para garantizar alta disponibilidad y reducir el tiempo de respuesta.</p>
+</section>
+
+<section class="slide">
+    <h2>Casos de Uso Comunes</h2>
+    <ul>
+        <li>Aplicaciones financieras</li>
+        <li>Sistemas de comercio electrónico</li>
+        <li>Bases de datos geográficas distribuidas</li>
+        <li>Sistemas con altas cargas de lectura</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Desafíos de la Replicación</h2>
+    <ul>
+        <li>Consistencia entre réplicas</li>
+        <li>Sincronización en tiempo real</li>
+        <li>Gestión del almacenamiento adicional</li>
+        <li>Costo operativo aumentado</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas de Replicación</h2>
+    <ul>
+        <li>Uso de algoritmos de sincronización eficientes</li>
+        <li>Implementación de mecanismos de detección y recuperación ante fallos</li>
+        <li>Monitoreo continuo del estado de las réplicas</li>
+        <li>Planificación de pruebas periódicas</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en la Replicación</h2>
+    <ul>
+        <li>Diferencias entre réplicas debido a inconsistencias</li>
+        <li>Perdida de datos durante fallos de sincronización</li>
+        <li>Problemas de latencia en consultas distribuidas</li>
+        <li>Costos operativos no gestionados adecuadamente</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Replicación</h2>
+    <p>¿Cuál es el principal beneficio de la replicación en sistemas de bases de datos distribuidas?</p>
+    <ol>
+        <li>Aumento del rendimiento de las consultas</li>
+        <li>Reducción del tiempo de recuperación ante fallos</li>
+        <li>Mejora de la seguridad de los datos</li>
+        <li>Disminución del costo operativo</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist para Implementar Replicación</h2>
+    <ul>
+        <li>Evaluación de las necesidades de disponibilidad</li>
+        <li>Selección del tipo y método de replicación</li>
+        <li>Diseño de la estrategia de sincronización</li>
+        <li>Implementación de mecanismos de detección y recuperación ante fallos</li>
+        <li>Monitoreo y mantenimiento continuo</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejercicio Práctico: Diseño de una Estrategia de Replicación</h2>
+    <p>Elabora una estrategia de replicación para un sistema de comercio electrónico con alta carga de lectura.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <p>La replicación es una técnica crucial en sistemas de bases de datos distribuidas, proporcionando alta disponibilidad y escalabilidad. Sin embargo, requiere un diseño cuidadoso y gestión adecuada para evitar problemas de consistencia y costos operativos elevados.</p>
+</section>
+
+<section class="slide">
+    <h2>Normativa y Regulaciones</h2>
+    <p>Es importante conocer las regulaciones locales y nacionales que afectan la implementación de sistemas de bases de datos, especialmente en sectores como el financiero y los gobiernos.</p>
+</section>
+
+<section class="slide">
+    <h2>Recursos Adicionales</h2>
+    <ul>
+        <li><a href="https://www.oracle.com/database/technologies/high-availability.html">Oracle High Availability</a></li>
+        <li><a href="https://docs.microsoft.com/en-us/sql/sql-server/failover-clusters/high-availability-solutions-for-sql-server?view=sql-server-ver15">Microsoft SQL Server High Availability</a></li>
+        <li><a href="https://www.postgresql.org/docs/current/wal.html">PostgreSQL Write-Ahead Logging (WAL)</a></li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conclusión</h2>
+    <p>La replicación es una herramienta poderosa para mejorar la disponibilidad y escalabilidad de sistemas de bases de datos distribuidas. Sin embargo, su implementación debe ser cuidadosa y considerar los desafíos asociados.</p>
+</section>
+
+<section class="slide">
+    <h2>Preguntas y Respuestas</h2>
+    <p>¿Tienes alguna pregunta sobre la replicación en sistemas de bases de datos distribuidas?</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0377 Administración de sistemas gestores de bases de datos.md · Aplicación de criterios de disponibilidad a bases de datos distribuidas y replicadas: → Replicación.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 09:52:26</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

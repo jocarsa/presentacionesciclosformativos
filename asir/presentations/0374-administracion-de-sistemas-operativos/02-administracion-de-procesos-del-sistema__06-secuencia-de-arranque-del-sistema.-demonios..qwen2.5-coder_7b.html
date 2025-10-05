@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Secuencia de arranque del sistema. Demonios. — Administración de procesos del sistema: — 0374 Administración de sistemas operativos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="secuencia-de-arranque-del-sistema.-demonios.">
+<h1>Secuencia de arranque del sistema. Demonios.</h1>
+<p><strong>Unidad:</strong> Administración de procesos del sistema:<br><strong>Documento:</strong> 0374 Administración de sistemas operativos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Administración de procesos del sistema</h1>
+    <p><strong>Objetivo:</strong> Comprender la secuencia de arranque del sistema y los demonios.</p>
+</section>
+
+<section class="slide">
+    <h2>Secuencia de Arranque del Sistema</h2>
+    <ul>
+        <li>Inicio del hardware</li>
+        <li>Carga del BIOS/UEFI</li>
+        <li>Arranque del bootloader (GRUB, UEFI Shell)</li>
+        <li>Carga del kernel</li>
+        <li>Montaje de los sistemas de archivos</li>
+        <li>Inicialización de servicios y demonios</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Arranque del Hardware</h2>
+    <p>El sistema comienza con la encendida del hardware, iniciando desde los componentes más básicos.</p>
+</section>
+
+<section class="slide">
+    <h2>Carga del BIOS/UEFI</h2>
+    <p>El BIOS (Basic Input Output System) o UEFI (Unified Extensible Firmware Interface) inicia el proceso de arranque.</p>
+</section>
+
+<section class="slide">
+    <h2>Arranque del Bootloader</h2>
+    <p>El bootloader, como GRUB o UEFI Shell, se encarga de cargar el kernel del sistema operativo.</p>
+</section>
+
+<section class="slide">
+    <h2>Carga del Kernel</h2>
+    <p>Una vez cargado el kernel, este inicia la gestión del hardware y prepara el sistema para el arranque completo.</p>
+</section>
+
+<section class="slide">
+    <h2>Montaje de los Sistemas de Archivos</h2>
+    <p>El kernel monta los sistemas de archivos necesarios para que el sistema operativo pueda acceder a sus datos.</p>
+</section>
+
+<section class="slide">
+    <h2>Inicialización de Servicios y Demonios</h2>
+    <p>Después del arranque básico, se inician servicios y demonios que mantienen el sistema funcionando.</p>
+</section>
+
+<section class="slide">
+    <h2>Demonios en Sistemas Operativos</h2>
+    <ul>
+        <li>Servicios de red (ej: DHCP, DNS)</li>
+        <li>Procesos de gestión del hardware</li>
+        <li>Servicios de seguridad (ej: firewalls)</li>
+        <li>Servicios de almacenamiento (ej: RAID)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Demonio</h2>
+    <p>El demonio "sshd" es un ejemplo común en sistemas Linux, encargado del servicio SSH.</p>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico: Configuración de Demonios</h2>
+    <p>Configurar correctamente los demonios es crucial para el funcionamiento óptimo del sistema.</p>
+</section>
+
+<section class="slide">
+    <h2>Proceso de Inicio de un Sistema Operativo</h2>
+    <ol>
+        <li>Encendido del hardware</li>
+        <li>Carga del BIOS/UEFI</li>
+        <li>Arranque del bootloader</li>
+        <li>Carga del kernel</li>
+        <li>Montaje de sistemas de archivos</li>
+        <li>Inicialización de demonios</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas en la Administración de Demonios</h2>
+    <ul>
+        <li>Mantener los demonios actualizados</li>
+        <li>Configurar correctamente los parámetros</li>
+        <li>Monitorear el rendimiento y la salud de los demonios</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en la Administración de Demonios</h2>
+    <ul>
+        <li>No mantener actualizados los demonios</li>
+        <li>Configurar parámetros incorrectamente</li>
+        <li>No monitorear adecuadamente el rendimiento</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa de Demonios en Sistemas Operativos</h2>
+    <table>
+        <tr>
+            <th>Sistema Operativo</th>
+            <th>Demonio Ejemplo</th>
+        </tr>
+        <tr>
+            <td>Linux</td>
+            <td>sshd, cron</td>
+        </tr>
+        <tr>
+            <td>Windows</td>
+            <td>Spooler, EventLog</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Identificación de Demonios</h2>
+    <p>¿Cuál es el demonio que gestiona los servicios de red en sistemas Linux?</p>
+    <ul>
+        <li>a) sshd</li>
+        <li>b) httpd</li>
+        <li>c) ntpd</li>
+        <li>d) dhcpd</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist de Administración de Demonios</h2>
+    <ol>
+        <li>Verificar la configuración del demonio</li>
+        <li>Mantener el demonio actualizado</li>
+        <li>Monitorear el rendimiento del demonio</li>
+        <li>Revisar los logs del demonio</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Configuración de un Demonio</h2>
+    <p>Configura y verifica la configuración de un demonio en tu sistema operativo.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Secuencia de arranque del sistema: hardware, BIOS/UEFI, bootloader, kernel, sistemas de archivos, demonios.</li>
+        <li>Demonios son procesos que se ejecutan en segundo plano para mantener el sistema funcionando.</li>
+        <li>Buenas prácticas y errores comunes en la administración de demonios.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa General</h2>
+    <p>No hay normativas específicas sobre la administración de demonios, pero es crucial seguir buenas prácticas para garantizar el rendimiento y seguridad del sistema.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0374 Administración de sistemas operativos.md · Administración de procesos del sistema: → Secuencia de arranque del sistema. Demonios.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 04:53:45</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Asociación con documentos XML. — Definición de esquemas y vocabularios en XML: — 0373 Lenguajes de marcas y sistemas de gestión de información.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="asociacion-con-documentos-xml.">
+<h1>Asociación con documentos XML.</h1>
+<p><strong>Unidad:</strong> Definición de esquemas y vocabularios en XML:<br><strong>Documento:</strong> 0373 Lenguajes de marcas y sistemas de gestión de información.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Definición de esquemas y vocabularios en</h1>
+    <p>Objetivo: Comprender cómo los esquemas y vocabularios asocian con documentos.</p>
+</section>
+
+<section class="slide">
+    <h2>¿Qué son los esquemas?</h2>
+    <ul>
+        <li>Estructura que define la forma de un documento.</li>
+        <li>Define qué elementos y atributos pueden aparecer en el documento.</li>
+        <li>Garantiza la consistencia y la validez del contenido del documento.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>¿Qué son los vocabularios?</h2>
+    <ul>
+        <li>Conjunto de elementos y atributos que se pueden usar en un documento.</li>
+        <li>Define el significado y la estructura de los datos.</li>
+        <li>Permite la creación de documentos con una semántica específica.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de esquema (XSD)</h2>
+    <pre><code>&lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;xs:element name="libro"&gt;
+    &lt;xs:complexType&gt;
+      &lt;xs:sequence&gt;
+        &lt;xs:element name="titulo" type="xs:string"/&gt;
+        &lt;xs:element name="autor" type="xs:string"/&gt;
+        &lt;xs:element name="año" type="xs:int"/&gt;
+      &lt;/xs:sequence&gt;
+    &lt;/xs:complexType&gt;
+  &lt;/xs:element&gt;
+&lt;/xs:schema&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de vocabulario (DTD)</h2>
+    <pre><code>&lt;!ELEMENT libro (titulo, autor, año)&gt;
+&lt;!ELEMENT titulo (#PCDATA)&gt;
+&lt;!ELEMENT autor (#PCDATA)&gt;
+&lt;!ELEMENT año (#PCDATA)&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Asociación de esquemas con documentos</h2>
+    <ul>
+        <li>Se asocian mediante la declaración del namespace en el documento.</li>
+        <li>Ejemplo: &lt;libro xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="libro.xsd"&gt;</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Asociación de vocabularios con documentos</h2>
+    <ul>
+        <li>Se asocian mediante la declaración del namespace en el documento.</li>
+        <li>Ejemplo: &lt;libro xmlns="http://www.ejemplo.com/libros"&gt;</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas al asociar esquemas y vocabularios</h2>
+    <ul>
+        <li>Usar namespaces para evitar conflictos.</li>
+        <li>Definir schemas y vocabularios en archivos separados.</li>
+        <li>Validar documentos contra sus esquemas/vocabularios.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes al asociar esquemas y vocabularios</h2>
+    <ul>
+        <li>No declarar el namespace en el documento.</li>
+        <li>Error de ortografía en los nombres de elementos o atributos.</li>
+        <li>No validar el documento contra su esquema/vocabulario.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparación: Esquemas vs. Vocabularios</h2>
+    <table>
+        <tr>
+            <th></th>
+            <th>Esquemas (XSD)</th>
+            <th>Vocabularios (DTD)</th>
+        </tr>
+        <tr>
+            <td>Estructura</td>
+            <td>Más compleja y flexible.</td>
+            <td>Simpler, pero menos flexible.</td>
+        </tr>
+        <tr>
+            <td>Validación</td>
+            <td>Más robusta y precisa.</td>
+            <td>Menos precisa, pero más sencilla.</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: Asociación de esquemas/vocabularios</h2>
+    <p>¿Qué atributo se usa en un documento para asociar un esquema XSD?</p>
+    <ul>
+        <li>a) schemaLocation</li>
+        <li>b) noNamespaceSchemaLocation</li>
+        <li>c) xmlns:xsi</li>
+        <li>d) namespace</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Asociación de esquemas/vocabularios</h2>
+    <ol>
+        <li>¿Se ha declarado el namespace en el documento?</li>
+        <li>¿El nombre del elemento y atributo coincide con el definido en el esquema/vocabulario?</li>
+        <li>¿Se ha validado el documento contra su esquema/vocabulario?</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Crear un esquema y asociarlo con un documento</h2>
+    <p>Crea un esquema XSD para un documento que represente una lista de libros, incluyendo elementos como título, autor y año. Luego, crea un documento válido según ese esquema.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen: Asociación de esquemas/vocabularios con documentos</h2>
+    <ul>
+        <li>Esquemas (XSD) y vocabularios (DTD) definen la estructura y semántica de los documentos.</li>
+        <li>Se asocian mediante el uso de namespaces en los documentos.</li>
+        <li>Buenas prácticas: usar namespaces, definir esquemas/vocabularios separados, validar documentos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Recomendaciones para la creación de esquemas y vocabularios</h2>
+    <ul>
+        <li>W3 Recommendations (https://www.w3.org/TR/)</li>
+        <li> Schema Part 1: Structures (https://www.w3.org/TR/xmlschema-1/)</li>
+        <li>Document Type Definition (DTD) Specification (https://www.w3.org/TR/REC--dtd-3/)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Preguntas y discusión</h2>
+    <p>¿Tienes alguna pregunta o duda sobre la asociación de esquemas/vocabularios con documentos?</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0373 Lenguajes de marcas y sistemas de gestión de información.md · Definición de esquemas y vocabularios en XML: → Asociación con documentos XML.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 03:43:08</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Utilización de herramientas de procesamiento. — Conversión y adaptación de documentos XML: — 0373 Lenguajes de marcas y sistemas de gestión de información.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="utilizacion-de-herramientas-de-procesamiento.">
+<h1>Utilización de herramientas de procesamiento.</h1>
+<p><strong>Unidad:</strong> Conversión y adaptación de documentos XML:<br><strong>Documento:</strong> 0373 Lenguajes de marcas y sistemas de gestión de información.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Conversión y adaptación de documentos</h1>
+    <p><strong>Objetivo:</strong> Comprender las herramientas utilizadas para procesar, convertir y adaptar documentos.</p>
+</section>
+
+<section class="slide">
+    <h2>Herramientas de Procesamiento</h2>
+    <ul>
+        <li>XSLT (Extensible Stylesheet Language Transformations)</li>
+        <li>DTD (Document Type Definition)</li>
+        <li>Schematron</li>
+        <li> Schema Definition (XSD)</li>
+        <li>CSS para</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>XSLT: Transformación de Documentos</h2>
+    <p><strong>Concepto:</strong> XSLT es un lenguaje utilizado para transformar documentos en otros formatos, como o PDF.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Uso de XSLT</h2>
+    <pre><code>&lt;? version="1.0" encoding="UTF-8"?&gt;
+&lt;xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&gt;
+  &lt;xsl:output method=""/&gt;
+  &lt;xsl:template match="/"&gt;
+    &lt;&gt;&lt;body&gt;
+      &lt;h2&gt;Libros&lt;/h2&gt;
+      &lt;ul&gt;
+        &lt;xsl:for-each select="biblioteca/libro"&gt;
+          &lt;li&gt;&lt;xsl:value-of select="titulo"/&gt; - &lt;xsl:value-of select="autor"/&gt;</li&gt;
+        &lt;/xsl:for-each&gt;
+      &lt;/ul&gt;
+    &lt;/body&gt;&lt;/&gt;
+  &lt;/xsl:template&gt;
+&lt;/xsl:stylesheet&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>DTD (Document Type Definition)</h2>
+    <p><strong>Concepto:</strong> DTD es un conjunto de reglas que define la estructura y el contenido de un documento.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de DTD</h2>
+    <pre><code>&lt;!ELEMENT biblioteca (libro+)&gt;
+&lt;!ELEMENT libro (titulo, autor, año)&gt;
+&lt;!ELEMENT titulo (#PCDATA)&gt;
+&lt;!ELEMENT autor (#PCDATA)&gt;
+&lt;!ELEMENT año (#PCDATA)&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Schematron: Validación de Documentos</h2>
+    <p><strong>Concepto:</strong> Schematron es un lenguaje utilizado para validar documentos basándose en reglas específicas.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Regla Schematron</h2>
+    <pre><code>&lt;rule context="/biblioteca/libro"&gt;
+  &lt;assert test="@año[number() &gt; 1900]"/&gt;
+&lt;/rule&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2> Schema Definition (XSD)</h2>
+    <p><strong>Concepto:</strong> XSD es un lenguaje utilizado para definir la estructura y el contenido de un documento.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de XSD</h2>
+    <pre><code>&lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;xs:element name="biblioteca"&gt;
+    &lt;xs:complexType&gt;
+      &lt;xs:sequence&gt;
+        &lt;xs:element name="libro" maxOccurs="unbounded"&gt;
+          &lt;xs:complexType&gt;
+            &lt;xs:sequence&gt;
+              &lt;xs:element name="titulo" type="xs:string"/&gt;
+              &lt;xs:element name="autor" type="xs:string"/&gt;
+              &lt;xs:element name="año" type="xs:gYear"/&gt;
+            &lt;/xs:sequence&gt;
+          &lt;/xs:complexType&gt;
+        &lt;/xs:element&gt;
+      &lt;/xs:sequence&gt;
+    &lt;/xs:complexType&gt;
+  &lt;/xs:element&gt;
+&lt;/xs:schema&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>CSS para</h2>
+    <p><strong>Concepto:</strong> CSS puede ser utilizado para aplicar estilos a documentos.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Estilo CSS para</h2>
+    <pre><code>&lt;?-stylesheet type="text/css" href="estilos.css"?&gt;
+&lt;biblioteca&gt;
+  &lt;libro&gt;
+    &lt;titulo&gt;Libro 1&lt;/titulo&gt;
+    &lt;autor&gt;Autor 1&lt;/autor&gt;
+    &lt;año&gt;2000&lt;/año&gt;
+  &lt;/libro&gt;
+  &lt;libro&gt;
+    &lt;titulo&gt;Libro 2&lt;/titulo&gt;
+    &lt;autor&gt;Autor 2&lt;/autor&gt;
+    &lt;año&gt;1995&lt;/año&gt;
+  &lt;/libro&gt;
+&lt;/biblioteca&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Herramientas de Procesamiento</h2>
+    <p>¿Cuál de las siguientes herramientas no es una herramienta común para procesar documentos?</p>
+    <ul>
+        <li>XSLT</li>
+        <li>CSS</li>
+        <li>DTD</li>
+        <li>Schematron</li>
+        <li> Schema Definition (XSD)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Herramientas de Procesamiento</h2>
+    <ul>
+        <li>¿Conoces XSLT?</li>
+        <li>¿Sabes cómo definir una DTD?</li>
+        <li>¿Has utilizado Schematron antes?</li>
+        <li>¿Estás familiarizado con XSD?</li>
+        <li>¿Puedes aplicar CSS a documentos?</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas en el Uso de Herramientas</h2>
+    <ul>
+        <li>Validación exhaustiva de los documentos.</li>
+        <li>Uso de DTD o XSD para definir la estructura.</li>
+        <li>Aplicación de estilos consistentes con CSS para.</li>
+        <li>Pruebas unitarias y de integración.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en el Procesamiento</h2>
+    <ul>
+        <li>No validación exhaustiva de los documentos.</li>
+        <li>Ignorar errores de sintaxis o semántica.</li>
+        <li>Ausencia de estilos consistentes para.</li>
+        <li>Falta de pruebas unitarias y de integración.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: XSLT vs. CSS para</h2>
+    <table>
+        <tr>
+            <th>Herramienta</th>
+            <th>XSLT</th>
+            <th>CSS para</th>
+        </tr>
+        <tr>
+            <td>Potencia de transformación</td>
+            <td>Alta</td>
+            <td>Baja</td>
+        </tr>
+        <tr>
+            <td>Uso en navegadores web</td>
+            <td>No</td>
+            <td>Sí</td>
+        </tr>
+        <tr>
+            <td>Aplicación de estilos</td>
+            <td>Completa</td>
+            <td>Limitada</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Crear una Transformación XSLT</h2>
+    <p>Crea un archivo con la siguiente estructura:</p>
+    <pre><code>&lt;biblioteca&gt;
+  &lt;libro&gt;
+    &lt;titulo&gt;Libro 1&lt;/titulo&gt;
+    &lt;autor&gt;Autor 1&lt;/autor&gt;
+    &lt;año&gt;2000&lt;/año&gt;
+  &lt;/libro&gt;
+  &lt;libro&gt;
+    &lt;titulo&gt;Libro 2&lt;/titulo&gt;
+    &lt;autor&gt;Autor 2&lt;/autor&gt;
+    &lt;año&gt;1995&lt;/año&gt;
+  &lt;/libro&gt;
+&lt;/biblioteca&gt;</code></pre>
+    <p>Desarrolla una transformación XSLT que genere un documento con la lista de libros.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen: Herramientas de Procesamiento</h2>
+    <ul>
+        <li>XSLT, DTD, Schematron y XSD son herramientas comunes para procesar documentos.</li>
+        <li>CSS puede aplicarse a documentos para estilos adicionales.</li>
+        <li>Se deben seguir buenas prácticas y evitar errores comunes en el procesamiento de.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Recomendaciones para la Gestión de Información</h2>
+    <p><strong>Norma:</strong> ISO/IE 19757-3:2016 - Schema Definition (XSD)</p>
+    <p><strong>Recomendación:</strong> Utilizar XSD para definir la estructura y el contenido de los documentos.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0373 Lenguajes de marcas y sistemas de gestión de información.md · Conversión y adaptación de documentos XML: → Utilización de herramientas de procesamiento.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 04:26:14</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

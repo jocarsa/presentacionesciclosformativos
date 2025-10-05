@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Instalación y configuración de soluciones de alta disponibilidad. — Implantación de soluciones de alta disponibilidad: — 0378 Seguridad y alta disponibilidad.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="instalacion-y-configuracion-de-soluciones-de-alta-disponibilidad.">
+<h1>Instalación y configuración de soluciones de alta disponibilidad.</h1>
+<p><strong>Unidad:</strong> Implantación de soluciones de alta disponibilidad:<br><strong>Documento:</strong> 0378 Seguridad y alta disponibilidad.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Implantación de soluciones de alta disponibilidad</h1>
+    <p><strong>Objetivo:</strong> Comprender los pasos para instalar y configurar soluciones de alta disponibilidad.</p>
+</section>
+
+<section class="slide">
+    <h2>Definición de Alta Disponibilidad</h2>
+    <ul>
+        <li>Sistema operativo que garantiza un tiempo de inactividad mínimo.</li>
+        <li>Redundancia y failover para minimizar el tiempo de downtime.</li>
+        <li>Uso de múltiples componentes para distribuir la carga.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Tecnologías de Alta Disponibilidad</h2>
+    <ul>
+        <li>Clustering: Replicación de recursos entre nodos.</li>
+        <li>Virtualización: Creación de máquinas virtuales independientes.</li>
+        <li>Balancers de carga: Distribución equitativa del tráfico.</li>
+        <li>Almacenamiento distribuido: Redundancia y acceso concurrente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Implementación</h2>
+    <p><strong>Sistema:</strong> Servidor web Apache en clúster.</p>
+    <ul>
+        <li>Dos servidores web replicados.</li>
+        <li>Balancer de carga para distribuir las solicitudes.</li>
+        <li>Almacenamiento compartido para los archivos del sitio.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico: Implementación en una Empresa</h2>
+    <p><strong>Empresa:</strong> Tienda en línea.</p>
+    <ul>
+        <li>Implementaron un clúster de servidores web.</li>
+        <li>Configuraron un balanceador de carga NGINX.</li>
+        <li>Usaron RAID 10 para almacenamiento redundante.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Proceso de Instalación</h2>
+    <ol>
+        <li>Configuración del entorno virtual.</li>
+        <li>Instalación del software necesario.</li>
+        <li>Configuración del clúster.</li>
+        <li>Configuración del balanceador de carga.</li>
+        <li>Configuración del almacenamiento compartido.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas</h2>
+    <ul>
+        <li>Monitoreo continuo del sistema.</li>
+        <li>Copias de seguridad regulares.</li>
+        <li>Pruebas periódicas de failover.</li>
+        <li>Actualizaciones y parches frecuentes.</li>
+        <li>Capacitación del personal técnico.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes</h2>
+    <ul>
+        <li>No configurar el clúster correctamente.</li>
+        <li>No realizar pruebas de failover.</li>
+        <li>No mantener actualizadas las copias de seguridad.</li>
+        <li>No monitorear el sistema regularmente.</li>
+        <li>No capacitar al personal técnico.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: Clustering vs. Redundancia Física</h2>
+    <table>
+        <tr>
+            <th></th>
+            <th>Clustering</th>
+            <th>Redundancia Física</th>
+        </tr>
+        <tr>
+            <td>Costo</td>
+            <td>Más económico</td>
+            <td>Más costoso</td>
+        </tr>
+        <tr>
+            <td>Escalabilidad</td>
+            <td>Buena</td>
+            <td>Pobre</td>
+        </tr>
+        <tr>
+            <td>Flexibilidad</td>
+            <td>Buena</td>
+            <td>Pobre</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Conceptos Básicos de Alta Disponibilidad</h2>
+    <ol>
+        <li>¿Qué es el failover en un sistema de alta disponibilidad?</li>
+        <li>¿Cuáles son las principales tecnologías utilizadas para implementar alta disponibilidad?</li>
+        <li>¿Qué ventajas ofrece la redundancia física sobre el clustering?</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist de Implementación</h2>
+    <ul>
+        <li>Configurar entorno virtual.</li>
+        <li>Instalar software necesario.</li>
+        <li>Configurar clúster.</li>
+        <li>Configurar balanceador de carga.</li>
+        <li>Configurar almacenamiento compartido.</li>
+        <li>Monitorear sistema continuamente.</li>
+        <li>Copias de seguridad regulares.</li>
+        <li>Pruebas periódicas de failover.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Diseño de un Clúster de Alta Disponibilidad</h2>
+    <p>Elabora un plan para implementar una solución de alta disponibilidad para un servicio web.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Definición y conceptos básicos de alta disponibilidad.</li>
+        <li>Tecnologías utilizadas para implementar alta disponibilidad.</li>
+        <li>Proceso de instalación y configuración.</li>
+        <li>Buenas prácticas y errores comunes a evitar.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa General</h2>
+    <p><strong>Reglamento Técnico para la Seguridad de los Sistemas Informáticos (RTSSI):</strong></p>
+    <ul>
+        <li>Requisitos de disponibilidad y continuidad.</li>
+        <li>Certificaciones y normativas aplicables.</li>
+        <li>Obligaciones del responsable de la seguridad informática.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Preguntas Frecuentes</h2>
+    <ol>
+        <li>¿Qué es el failover en un sistema de alta disponibilidad?</li>
+        <li>¿Cuáles son las principales tecnologías utilizadas para implementar alta disponibilidad?</li>
+        <li>¿Qué ventajas ofrece la redundancia física sobre el clustering?</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Contacto</h2>
+    <p><strong>Autor:</strong> [Nombre del Autor]</p>
+    <p><strong>Email:</strong> [Correo Electrónico]</p>
+    <p><strong>Fecha:</strong> [Fecha de Creación]</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0378 Seguridad y alta disponibilidad.md · Implantación de soluciones de alta disponibilidad: → Instalación y configuración de soluciones de alta disponibilidad.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 11:04:17</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

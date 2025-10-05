@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Configuración del almacenamiento en la caché de un «proxy». — Instalación y configuración de servidores «proxy»: — 0378 Seguridad y alta disponibilidad.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="configuracion-del-almacenamiento-en-la-cache-de-un-proxy-.">
+<h1>Configuración del almacenamiento en la caché de un «proxy».</h1>
+<p><strong>Unidad:</strong> Instalación y configuración de servidores «proxy»:<br><strong>Documento:</strong> 0378 Seguridad y alta disponibilidad.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Configuración del almacenamiento en la caché de un «proxy»</h1>
+    <p>Objetivo: Aprender cómo configurar el almacenamiento en la caché de un servidor proxy para mejorar la seguridad y alta disponibilidad.</p>
+</section>
+
+<section class="slide">
+    <h2>Concepto deaché</h2>
+    <p>Caché es una memoria temporal utilizada por los servidores proxy para almacenar copias de datos que se solicitan con frecuencia. Esto reduce el tiempo de respuesta y la carga en el servidor principal.</p>
+</section>
+
+<section class="slide">
+    <h2>Tipos deaché</h2>
+    <ul>
+        <li>Caché de objetos: Almacena páginas web completas.</li>
+        <li>Caché de respuestas: Guarda solo partes específicas de las respuestas HTTP.</li>
+        <li>Caché de datos: Almacena información dinámica que se actualiza con frecuencia.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración Básica</h2>
+    <p>Para configurar la caché en un servidor proxy, es necesario editar el archivo de configuración (generalmente `squid.conf` para Squid). Se deben definir las políticas de almacenamiento y expiración.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Configuración</h2>
+    <pre><code>cache_dir ufs /var/spool/squid 100 16 256
+maximum_object_size 4MB
+minimum_object_size 0 KB
+maximum_object_size_in_memory 8MB
+memory_pools on
+cache_mem 256 MB</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Políticas deaché</h2>
+    <ul>
+        <li><strong>ttl_access:</strong> Define la duración de los objetos en caché.</li>
+        <li><strong>cache_peer:</strong> Configura el servidor proxy principal.</li>
+        <li><strong>acl:</strong> Define listas de control de acceso para determinar qué contenido se almacena en caché.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas</h2>
+    <ul>
+        <li>Configurar políticas de expiración adecuadas.</li>
+        <li>Monitorear el uso de la caché y ajustar los parámetros según sea necesario.</li>
+        <li>Evitar almacenar contenido sensible en caché.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes</h2>
+    <ul>
+        <li>No configurar políticas de expiración adecuadas, lo que puede causar una sobrecarga del servidor principal.</li>
+        <li>Almacenar contenido sensible en caché sin consideraciones de seguridad.</li>
+        <li>No monitorear el uso de la caché y no ajustar los parámetros según sea necesario.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico</h2>
+    <p>Un sitio web con alta tráfico puede mejorar su rendimiento al configurar una caché eficiente en un servidor proxy. Esto reduce la carga en el servidor principal y mejora la velocidad de respuesta para los usuarios.</p>
+</section>
+
+<section class="slide">
+    <h2>Proceso de Configuración</h2>
+    <ol>
+        <li>Edita el archivo de configuración del servidor proxy.</li>
+        <li>Define políticas de almacenamiento y expiración.</li>
+        <li>Configura listas de control de acceso si es necesario.</li>
+        <li>Reinicia el servicio del servidor proxy para aplicar los cambios.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz</h2>
+    <p>¿Qué tipo de caché almacena páginas web completas?</p>
+    <ul>
+        <li><input type="radio" name="q1">aché de objetos</li>
+        <li><input type="radio" name="q1">aché de respuestas</li>
+        <li><input type="radio" name="q1">aché de datos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist</h2>
+    <ul>
+        <li>Configurar políticas de expiración adecuadas.</li>
+        <li>Monitorear el uso de la caché y ajustar los parámetros según sea necesario.</li>
+        <li>Evitar almacenar contenido sensible en caché.</li>
+        <li>Revisar y ajustar las políticas de ACL si es necesario.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad</h2>
+    <p>Configura la caché en un servidor proxy para un sitio web con alta tráfico. Define políticas de almacenamiento y expiración, y configura una lista de control de acceso si es necesario.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <p>La configuración del almacenamiento en la caché de un servidor proxy es crucial para mejorar la seguridad y alta disponibilidad. Al definir políticas de expiración adecuadas, monitorear el uso de la caché y evitar almacenar contenido sensible, se puede optimizar el rendimiento del sitio web.</p>
+</section>
+
+<section class="slide">
+    <h2>Normativa General</h2>
+    <p>No existe una normativa específica para la configuración de servidores proxy. Sin embargo, es importante seguir buenas prácticas de seguridad y cumplir con las regulaciones locales y nacionales en materia de protección de datos.</p>
+</section>
+
+<section class="slide">
+    <h2>Conclusión</h2>
+    <p>La configuración del almacenamiento en la caché de un servidor proxy es una tarea importante para mejorar el rendimiento, seguridad y alta disponibilidad de un sitio web. Al seguir buenas prácticas y monitorear regularmente el uso de la caché, se puede optimizar eficazmente los recursos del servidor.</p>
+</section>
+
+<section class="slide">
+    <h2>Preguntas Frecuentes</h2>
+    <ul>
+        <li><strong>¿Qué es la caché?</strong> Es una memoria temporal utilizada por los servidores proxy para almacenar copias de datos que se solicitan con frecuencia.</li>
+        <li><strong>¿Cómo se configura la caché en un servidor proxy?</strong> Se edita el archivo de configuración y se definen políticas de almacenamiento y expiración.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Agradecimientos</h2>
+    <p>Muchas gracias por su atención. Si tienen alguna pregunta o duda, no dudes en contactar conmigo.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0378 Seguridad y alta disponibilidad.md · Instalación y configuración de servidores «proxy»: → Configuración del almacenamiento en la caché de un «proxy».</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 10:23:04</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

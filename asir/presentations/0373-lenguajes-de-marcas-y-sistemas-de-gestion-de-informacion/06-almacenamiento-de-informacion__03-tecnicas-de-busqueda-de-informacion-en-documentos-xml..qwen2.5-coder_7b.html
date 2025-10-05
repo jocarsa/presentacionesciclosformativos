@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Técnicas de búsqueda de información en documentos XML. — Almacenamiento de información: — 0373 Lenguajes de marcas y sistemas de gestión de información.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="tecnicas-de-busqueda-de-informacion-en-documentos-xml.">
+<h1>Técnicas de búsqueda de información en documentos XML.</h1>
+<p><strong>Unidad:</strong> Almacenamiento de información:<br><strong>Documento:</strong> 0373 Lenguajes de marcas y sistemas de gestión de información.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Técnicas de búsqueda de información en documentos</h2>
+    <p>Objetivo: Comprender las técnicas utilizadas para buscar y recuperar información en documentos.</p>
+</section>
+
+<section class="slide">
+    <h3>Introducción a los documentos</h3>
+    <ul>
+        <li>Estructura basada en etiquetas jerárquicas.</li>
+        <li>Formato de texto legible y fácilmente procesable por computadora.</li>
+        <li>Utilizado ampliamente para interambiar datos entre sistemas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Tipos de búsquedas en</h3>
+    <ul>
+        <li>Búsqueda por etiquetas: Identificar elementos específicos.</li>
+        <li>Búsqueda por atributos: Filtrar elementos según sus atributos.</li>
+        <li>Búsqueda por contenido: Buscar texto dentro de los elementos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Uso de XPath para búsqueda</h3>
+    <p>XPath (eXtensible Path Language) es un lenguaje utilizado para navegar y seleccionar nodos en documentos.</p>
+</section>
+
+<section class="slide">
+    <h3>Ejemplo básico de XPath</h3>
+    <pre><code>/libro/título/text()</code></pre>
+    <p>Selecciona el texto del elemento "título" dentro del elemento "libro".</p>
+</section>
+
+<section class="slide">
+    <h3>Búsqueda condicional con XPath</h3>
+    <pre><code>/libro[título='El Quijote']/autor/text()</code></pre>
+    <p>Selecciona el autor del librouyo título es "El Quijote".</p>
+</section>
+
+<section class="slide">
+    <h3>Búsqueda por atributos con XPath</h3>
+    <pre><code>/libro[@categoria='Ficción']/título/text()</code></pre>
+    <p>Selecciona los títulos de todos los libros que pertenecen a la categoría "Ficción".</p>
+</section>
+
+<section class="slide">
+    <h3>Búsqueda recursiva con XPath</h3>
+    <pre><code>/libro/*</code></pre>
+    <p>Selecciona todos los elementos hijos de los elementos "libro".</p>
+</section>
+
+<section class="slide">
+    <h3>Uso de XQuery para búsqueda avanzada</h3>
+    <p>XQuery es un lenguaje de consulta y manipulación de datos basado en XPath.</p>
+</section>
+
+<section class="slide">
+    <h3>Ejemplo básico de XQuery</h3>
+    <pre><code>for $libro in doc('biblioteca.xml')/libros/libro
+where $libro/categoría = 'Ficción'
+return $libro/título/text()</code></pre>
+    <p>Selecciona los títulos de todos los libros que pertenecen a la categoría "Ficción".</p>
+</section>
+
+<section class="slide">
+    <h3>Búsqueda por contenido con XQuery</h3>
+    <pre><code>for $libro in doc('biblioteca.xml')/libros/libro
+where contains($libro/título, 'El')
+return $libro/título/text()</code></pre>
+    <p>Selecciona los títulos que contienen la palabra "El".</p>
+</section>
+
+<section class="slide">
+    <h3>Búsqueda por atributo con XQuery</h3>
+    <pre><code>for $libro in doc('biblioteca.xml')/libros/libro
+where $libro/@categoria = 'Ficción'
+return $libro/título/text()</code></pre>
+    <p>Selecciona los títulos de todos los libros que pertenecen a la categoría "Ficción".</p>
+</section>
+
+<section class="slide">
+    <h3>Búsqueda recursiva con XQuery</h3>
+    <pre><code>for $elemento in doc('biblioteca.xml')//*
+return $elemento/name()</code></pre>
+    <p>Selecciona el nombre de todos los elementos en el documento.</p>
+</section>
+
+<section class="slide">
+    <h3>Buenas prácticas en búsqueda de información</h3>
+    <ul>
+        <li>Utilizar XPath o XQuery según la complejidad de la consulta.</li>
+        <li>Optimizar las consultas para mejorar el rendimiento.</li>
+        <li>Validar los documentos antes de realizar búsquedas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Caso práctico: Búsqueda en un sistema de gestión de bibliotecas</h3>
+    <p>Un sistema de gestión de bibliotecas utiliza para almacenar información sobre los libros. Se requiere una búsqueda rápida y precisa de títulos y autores.</p>
+</section>
+
+<section class="slide">
+    <h3>Ejercicio: Crear una consulta XPath</h3>
+    <p>Crear una consulta XPath que seleccione todos los títulos de los libros en la categoría "Non-Ficción" con más de 50 páginas.</p>
+</section>
+
+<section class="slide">
+    <h3>Chequeo de errores comunes en búsqueda</h1>
+    <ul>
+        <li>Olvidar el uso del prefijo "ns:" si se utiliza un espacio de nombres.</li>
+        <li>No considerar la distinción entre mayúsculas y minúsculas en los atributos o contenido.</li>
+        <li>No validar correctamente los documentos antes de realizar búsquedas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Resumen</h3>
+    <p>Las técnicas de búsqueda en documentos son esenciales para el acceso y recuperación de información. XPath y XQuery ofrecen herramientas poderosas para realizar consultas complejas.</p>
+</section>
+
+<section class="slide">
+    <h3>Normativa relevante</h3>
+    <ul>
+        <li>ISO/IE 9075:2016 - SQL:2016 (para consultas en bases de datos relacionales).</li>
+        <li>W3 Schema Definition Language (XSD) para validar documentos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Preguntas y discusión</h3>
+    <p>¿Tienen preguntas sobre técnicas de búsqueda en documentos? ¿Hay aspectos específicos que quieran explorar más a fondo?</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0373 Lenguajes de marcas y sistemas de gestión de información.md · Almacenamiento de información: → Técnicas de búsqueda de información en documentos XML.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 04:30:32</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

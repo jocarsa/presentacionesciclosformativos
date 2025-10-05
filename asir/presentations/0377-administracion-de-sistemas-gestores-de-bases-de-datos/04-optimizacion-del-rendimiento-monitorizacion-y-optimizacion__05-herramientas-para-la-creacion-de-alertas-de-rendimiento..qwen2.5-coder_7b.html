@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Herramientas para la creación de alertas de rendimiento. — Optimización del rendimiento: monitorización y optimización: — 0377 Administración de sistemas gestores de bases de datos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="herramientas-para-la-creacion-de-alertas-de-rendimiento.">
+<h1>Herramientas para la creación de alertas de rendimiento.</h1>
+<p><strong>Unidad:</strong> Optimización del rendimiento: monitorización y optimización:<br><strong>Documento:</strong> 0377 Administración de sistemas gestores de bases de datos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Herramientas para la creación de alertas de rendimiento</h2>
+    <p>Objetivo: Familiarizarse con las herramientas disponibles para monitorear y optimizar el rendimiento de sistemas gestores de bases de datos.</p>
+</section>
+
+<section class="slide">
+    <h3>Introducción a las alertas de rendimiento</h3>
+    <ul>
+        <li>Definición: Notificaciones automáticas generadas por sistemas para indicar problemas o condiciones críticas.</li>
+        <li>Propósito: Ayudar a identificar y resolver problemas rápidamente, mejorando la disponibilidad del sistema.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Herramientas populares para creación de alertas</h3>
+    <ul>
+        <li>DBMS nativas (por ejemplo, SQL Server Management Studio, MySQL Workbench)</li>
+        <li>Agentes de monitoreo especializados (Prometheus, Nagios, Zabbix)</li>
+        <li>Herramientas basadas en la nube (AWS CloudWatch, Azure Monitor, Google Cloud Monitoring)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Ejemplo práctico: Creación de alerta en Prometheus</h3>
+    <p>Prometheus es una herramienta de monitorización y alertas de código abierto.</p>
+    <ul>
+        <li>Configuración de un alertmanager para enviar notificaciones por correo electrónico.</li>
+        <li>Escribir consultas PromQL para definir las condiciones de alerta.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Caso de estudio: Optimización mediante alertas en MongoDB</h3>
+    <p>MongoDB es un gestor de bases de datos NoSQL popular.</p>
+    <ul>
+        <li>Configuración de alertas para monitorear el uso del espacio en disco y la latencia de consulta.</li>
+        <li>Implementación de acciones correctivas basadas en las alertas generadas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Buenas prácticas en la creación de alertas</h3>
+    <ul>
+        <li>Definir alertas específicas para diferentes niveles de severidad (CRITICAL, WARNING, INFO).</li>
+        <li>Incluir contexto relevante en las descripciones de las alertas.</li>
+        <li>Configurar notificaciones a múltiples destinatarios según el nivel de urgencia.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Errores comunes al configurar alertas</h3>
+    <ul>
+        <li>No definir suficientes niveles de severidad.</li>
+        <li>No incluir contexto relevante en las descripciones.</li>
+        <li>No enviar notificaciones a los destinatarios adecuados.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Comparativa: Herramientas vs. Agentes de Monitoreo</h3>
+    <table>
+        <tr>
+            <th>Herramienta</th>
+            <th>Agentes de Monitoreo</th>
+        </tr>
+        <tr>
+            <td>Configuración sencilla</td>
+            <td>Más configuración necesaria</td>
+        </tr>
+        <tr>
+            <td>Costos bajos</td>
+            <td>Puede ser más costoso en escala</td>
+        </tr>
+        <tr>
+            <td>Flexibilidad limitada</td>
+            <td>Más flexibilidad y personalización</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h3>Mini-quiz: Herramientas de alertas</h3>
+    <p>¿Cuál de las siguientes herramientas es una opción popular para la creación de alertas en sistemas gestores de bases de datos?</p>
+    <ul>
+        <li>A) Microsoft Excel</li>
+        <li>B) Prometheus</li>
+        <li>C) Notepad++</li>
+        <li>D) Google Sheets</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Checklist: Configuración de alertas en SQL Server</h3>
+    <ol>
+        <li>Instalar y configurar el Agente de SQL Server.</li>
+        <li>Crear una nueva regla de alerta.</li>
+        <li>Especificar la condición que desencadenará la alerta.</li>
+        <li>Configurar las acciones a realizar cuando se active la alerta.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h3>Actividad: Crear una alerta en MySQL</h3>
+    <p>Crea una nueva alerta en tu entorno de MySQL para monitorear el uso del espacio en disco.</p>
+    <ul>
+        <li>Escribir la consulta SQL que detectará cuando el espacio en disco esté por debajo del 10%.</li>
+        <li>Configurar las acciones a realizar cuando se active la alerta.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Resumen: Herramientas para la creación de alertas de rendimiento</h3>
+    <p>Herramientas como Prometheus, Nagios y Zabbix son esenciales para monitorear y optimizar el rendimiento de sistemas gestores de bases de datos.</p>
+    <ul>
+        <li>Configurar alertas específicas para diferentes niveles de severidad.</li>
+        <li>Incluir contexto relevante en las descripciones de las alertas.</li>
+        <li>Implementar acciones correctivas basadas en las alertas generadas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Normativa: Cumplimiento con estándares de seguridad</h3>
+    <p>Cuando se crean alertas, es importante cumplir con los estándares de seguridad y privacidad aplicables.</p>
+    <ul>
+        <li>No compartir información sensible en las descripciones de las alertas.</li>
+        <li>Configurar notificaciones solo para usuarios autorizados.</li>
+        <li>Auditar el uso de las herramientas de alertas periódicamente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Preguntas y discusión</h3>
+    <p>¿Tienes alguna pregunta sobre la creación de alertas de rendimiento? Comparte tus dudas y experiencias en el chat.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0377 Administración de sistemas gestores de bases de datos.md · Optimización del rendimiento: monitorización y optimización: → Herramientas para la creación de alertas de rendimiento.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 09:43:15</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

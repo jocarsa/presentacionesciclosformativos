@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Mecanismos de seguridad y control de accesos. — Acceso a bases de datos desde lenguajes de «script» de servidor: — 0376 Implantación de aplicaciones web.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="mecanismos-de-seguridad-y-control-de-accesos.">
+<h1>Mecanismos de seguridad y control de accesos.</h1>
+<p><strong>Unidad:</strong> Acceso a bases de datos desde lenguajes de «script» de servidor:<br><strong>Documento:</strong> 0376 Implantación de aplicaciones web.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Mecanismos de seguridad y control de accesos en aplicaciones web</h1>
+    <p>Objetivo: Comprender los principios básicos de seguridad y control de accesos en aplicaciones web.</p>
+</section>
+
+<section class="slide">
+    <h2>Concepto de seguridad en aplicaciones web</h2>
+    <ul>
+        <li>Protección contra ataquesibernéticos</li>
+        <li>Integridad y confidencialidad de los datos</li>
+        <li>Autenticación y autorización de usuarios</li>
+        <li>Prevención de inyecciones SQL y XSS</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Tipos de ataquesibernéticos comunes</h2>
+    <ul>
+        <li>Inyección SQL</li>
+        <li>Cross-Site Scripting (XSS)</li>
+        <li>Hacking de bases de datos</li>
+        <li>Phishing y engaño social</li>
+        <li>Denegación de Servicio (DoS)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Mecanismos de autenticación en aplicaciones web</h2>
+    <ul>
+        <li>Formularios de inicio de sesión</li>
+        <li>Cookies seguras y HttpOnly</li>
+        <li>Tokens JWT ( Web Tokens)</li>
+        <li>Doble factor de autenticación (2FA)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Control de accesos en aplicaciones web</h2>
+    <ul>
+        <li>Rol basado en el acceso (RBAC)</li>
+        <li>Permisos y privilegios específicos</li>
+        <li>Listas blancas y negras</li>
+        <li>Auditoría de accesos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas de seguridad en aplicaciones web</h2>
+    <ul>
+        <li>Actualizaciones regulares del software y parches</li>
+        <li>Cifrado de datos sensibles (SSL/TLS)</li>
+        <li>Validación y sanitización de entradas</li>
+        <li>Uso de frameworks seguros</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes en la seguridad de aplicaciones web</h2>
+    <ul>
+        <li>No actualizaciones del software</li>
+        <li>Cifrado débil o ausente</li>
+        <li>Inyecciones SQL no preventivas</li>
+        <li>Ausencia de autenticación y autorización</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa y regulaciones en seguridad web</h2>
+    <ul>
+        <li>Cybersecurity Framework (NIST)</li>
+        <li>GDPR (Reglamento General de Protección de Datos)</li>
+        <li>CIS Benchmarks</li>
+        <li>NIST SP 800-53</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de implementación de seguridad en una aplicación web</h2>
+    <ul>
+        <li>Uso de HTTPS para cifrar las comunicaciones</li>
+        <li>Implementación de autenticación con OAuth 2.0</li>
+        <li>Configuración de roles y permisos basados en el rol (RBAC)</li>
+        <li>Validación de entradas usando expresiones regulares</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Caso práctico: Implementación de seguridad en una aplicación web</h2>
+    <p>Desarrollar una funcionalidad que permita a los usuarios cambiar su contraseña seguramente.</p>
+</section>
+
+<section class="slide">
+    <h2>Proceso de implementación de seguridad en aplicaciones web</h2>
+    <ol>
+        <li>Evaluación de riesgos y vulnerabilidades</li>
+        <li>Diseño de políticas de seguridad</li>
+        <li>Implementación de medidas de protección</li>
+        <li>Pruebas de penetración (pen testing)</li>
+        <li>Mantenimiento y actualizaciones periódicas</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: Seguridad en aplicaciones web</h2>
+    <p>¿Cuál es el objetivo principal de la autenticación en una aplicación web?</p>
+    <ul>
+        <li>Asegurar la confidencialidad de los datos</li>
+        <li>Permitir el acceso a recursos restringidos</li>
+        <li>Validar la identidad del usuario</li>
+        <li>Todas las anteriores</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist de seguridad en aplicaciones web</h2>
+    <ul>
+        <li>Implementar HTTPS</li>
+        <li>Validar y sanitizar entradas</li>
+        <li>Usar autenticación segura (OAuth, JWT)</li>
+        <li>Auditar accesos y actividades</li>
+        <li>Mantener software actualizado</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Análisis de seguridad en una aplicación web</h2>
+    <p>Evaluación del nivel de seguridad de una aplicación web ficticia proporcionada.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Mecanismos de seguridad y control de accesos en aplicaciones web</li>
+        <li>Buenas prácticas y errores comunes</li>
+        <li>Normativa y regulaciones importantes</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Preguntas y dudas</h2>
+    <p>¿Tienes alguna pregunta o duda sobre la seguridad en aplicaciones web?</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0376 Implantación de aplicaciones web.md · Acceso a bases de datos desde lenguajes de «script» de servidor: → Mecanismos de seguridad y control de accesos.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 08:36:49</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Descripción de la estructura y de la sintaxis. — Conversión y adaptación de documentos XML: — 0373 Lenguajes de marcas y sistemas de gestión de información.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="descripcion-de-la-estructura-y-de-la-sintaxis.">
+<h1>Descripción de la estructura y de la sintaxis.</h1>
+<p><strong>Unidad:</strong> Conversión y adaptación de documentos XML:<br><strong>Documento:</strong> 0373 Lenguajes de marcas y sistemas de gestión de información.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Conversión y adaptación de documentos</h1>
+    <p>Objetivo: Comprender la estructura y sintaxis de los documentos.</p>
+</section>
+
+<section class="slide">
+    <h2>Estructura de un Documento</h2>
+    <ul>
+        <li><strong>Declaración del Prologo:</strong> Define la versión de y codificación.</li>
+        <li><strong>Elementos:</strong> Representan datos en el documento.</li>
+        <li><strong>Atributos:</strong> Proporcionan información adicional sobre los elementos.</li>
+        <li><strong>Texto:</strong> Contenido dentro de los elementos.</li>
+        <li><strong>Comentarios:</strong> Información no procesada por el parser.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Sintaxis Básica de</h2>
+    <p> sigue una sintaxis estricta que incluye:</p>
+    <ul>
+        <li><strong>Cierre de Etiquetas:</strong> Todos los elementos deben cerrarse.</li>
+        <li><strong>Etiquetas Mayúsculas:</strong> Las etiquetas deben estar en mayúsculas.</li>
+        <li><strong>No Espacios Adicionales:</strong> No se permiten espacios adicionales entre las etiquetas.</li>
+        <li><strong>Caracteres Especiales:</strong> Deben ser codificados usando entidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Documento</h2>
+    <pre><code>&lt;? version="1.0" encoding="UTF-8"?&gt;
+&lt;libro&gt;
+    &lt;título&gt;El Quijote&lt;/título&gt;
+    &lt;autor&gt;Miguel deervantes&lt;/autor&gt;
+    &lt;año&gt;1605&lt;/año&gt;
+&lt;/libro&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Características Importantes de</h2>
+    <ul>
+        <li><strong>Extensibilidad:</strong> Permite la definición de nuevos elementos y atributos.</li>
+        <li><strong>Interoperabilidad:</strong> Facilita el interambio de datos entre sistemas diferentes.</li>
+        <li><strong>Validación:</strong> Permite verificar la estructura y contenido del documento.</li>
+        <li><strong>Tipado Estricto:</strong> Todos los elementos y atributos deben tener un tipo definido.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Validación</h2>
+    <p>Se utiliza DTD (Document Type Definition) o XSD ( Schema Definition).</p>
+    <pre><code>&lt;!ELEMENT libro (título, autor, año)&gt;
+&lt;!ELEMENT título (#PCDATA)&gt;
+&lt;!ELEMENT autor (#PCDATA)&gt;
+&lt;!ELEMENT año (#PCDATA)&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en</h2>
+    <ul>
+        <li><strong>Falta deierre de Etiquetas:</strong> &lt;etiqueta&gt;Sin cerrar&lt;/etiqueta&gt;</li>
+        <li><strong>Error en la Codificación:</strong> Caracteres no codificados correctamente.</li>
+        <li><strong>Atributos Sin Valor:</strong> &lt;elemento atributo=&gt;</li>
+        <li><strong>Espacios Adicionales:</strong> Espacios entre etiquetas o dentro de ellas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas en</h2>
+    <ul>
+        <li>Usar nombres descriptivos para elementos y atributos.</li>
+        <li>Mantener una estructura jerárquica clara.</li>
+        <li>Validar el documento con un DTD o XSD.</li>
+        <li>Evitar caracteres especiales sin codificación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico: Conversión de a</h2>
+    <p>Ejemplo de cómo convertir un fragmento de a su equivalente en:</p>
+    <pre><code>&lt;&gt;
+&lt;head&gt;&lt;title&gt;Mi Página&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;&lt;p&gt;Contenido del cuerpo.&lt;/p&gt;&lt;/body&gt;
+&lt;/&gt;</code></pre>
+    <pre><code>&lt;? version="1.0" encoding="UTF-8"?&gt;
+&lt;&gt;
+    &lt;head&gt;&lt;title&gt;Mi Página&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;&lt;p&gt;Contenido del cuerpo.&lt;/p&gt;&lt;/body&gt;
+&lt;/&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Identificación de Errores</h2>
+    <p>Identifica los errores en el siguiente fragmento de:</p>
+    <pre><code>&lt;? version="1.0" encoding="UTF-8"?&gt;
+&lt;libro&gt;
+    &lt;título&gt;El Quijote&lt;/título&gt;
+    &lt;autor&gt;Miguel deervantes&lt;/autor&gt;
+    &lt;año&gt;1605&lt;/año&gt;
+&lt;/libro&gt;</code></pre>
+    <p>Respuesta: No hay errores visibles.</p>
+</section>
+
+<section class="slide">
+    <h2>Checklist de Verificación</h2>
+    <ul>
+        <li>Declaración del Prologo correcta?</li>
+        <li>Todos los elementos cerrados?</li>
+        <li>No caracteres especiales sin codificación?</li>
+        <li>Estructura jerárquica clara?</li>
+        <li>Validado con DTD o XSD?</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Crear un Documento</h2>
+    <p>Crea un documento que represente una biblioteca con varios libros.</p>
+    <p>Requisitos:</p>
+    <ul>
+        <li>Incluir al menos tres elementos (título, autor, año).</li>
+        <li>Validar el documento con un DTD o XSD.</li>
+        <li>No cometer errores comunes en.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Resumen de Estructura y Sintaxis</h2>
+    <p> es una estructura de datos que permite:</p>
+    <ul>
+        <li>Interoperabilidad entre sistemas.</li>
+        <li>Extensibilidad para nuevos elementos.</li>
+        <li>Validación para garantizar la calidad del contenido.</li>
+        <li>Codificación estricta para evitar errores.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa</h2>
+    <p> es un estándar de la W3 (World Wide Web Consortium).</p>
+    <p>Recomendaciones:</p>
+    <ul>
+        <li><a href="https://www.w3.org/TR/xml/"> 1.0 Specification</a></li>
+        <li><a href="https://www.w3.org/TR/xmlschema-1/"> Schema Part 1: Structures</a></li>
+        <li><a href="https://www.w3.org/TR/2008/REC--dtd-20080609/">Document Type Definition (DTD) Specification</a></li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Recursos Adicionales</h2>
+    <p>Para profundizar en el tema:</p>
+    <ul>
+        <li><a href="https://www.w3schools.com/xml/">W3Schools Tutorial</a></li>
+        <li><a href="https://docs.oracle.com/javase/tutorial/jaxp/dom/index.html"> DOM API Documentation</a></li>
+        <li><a href="https://www.tutorialspoint.com/xml/index.htm"> Tutorials Point</a></li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Preguntas Finales</h2>
+    <p>¿Tienes preguntas sobre la estructura y sintaxis de?</p>
+    <p>Deja tus dudas en los comentarios.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0373 Lenguajes de marcas y sistemas de gestión de información.md · Conversión y adaptación de documentos XML: → Descripción de la estructura y de la sintaxis.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 04:23:39</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

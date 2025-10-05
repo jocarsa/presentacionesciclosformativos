@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Creación, modificación y eliminación de tablas. Tipos de datos. — Diseño físico de bases de datos: — 0372 Gestión de bases de datos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="creacion-modificacion-y-eliminacion-de-tablas.-tipos-de-datos.">
+<h1>Creación, modificación y eliminación de tablas. Tipos de datos.</h1>
+<p><strong>Unidad:</strong> Diseño físico de bases de datos:<br><strong>Documento:</strong> 0372 Gestión de bases de datos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Diseño físico de bases de datos</h1>
+    <p>Objetivo: Creación, modificación y eliminación de tablas. Tipos de datos.</p>
+</section>
+
+<section class="slide">
+    <h2>Creación de Tablas</h2>
+    <ul>
+        <li>Estructura básica de una tabla</li>
+        <li>Sintaxis SQL para crear tablas</li>
+        <li>Ejemplo: Crear una tabla de empleados</li>
+        <li>Definición de columnas y tipos de datos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Tipos de Datos en Bases de Datos</h2>
+    <ul>
+        <li>Numericos: INT, FLOAT, DOUBLE</li>
+        <li>Cadenas de texto: VARCHAR, CHAR</li>
+        <li>Fecha y hora: DATE, TIME, DATETIME</li>
+        <li>Lógicos: BOOLEAN</li>
+        <li>Enumerados: ENUM</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Creación de Tabla</h2>
+    <pre><code>CREATE TABLE empleados (
+    id INT PRIMARY KEY,
+    nombre VARCHAR(100),
+    apellido VARCHAR(100),
+    fecha_nacimiento DATE,
+    salario FLOAT
+);</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Modificación de Tablas</h2>
+    <ul>
+        <li>Sintaxis SQL para modificar tablas</li>
+        <li>Añadir columnas: ALTER TABLE ... ADD COLUMN</li>
+        <li>Modificar columnas: ALTER TABLE ... MODIFY COLUMN</li>
+        <li>Borrar columnas: ALTER TABLE ... DROP COLUMN</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Modificación de Tabla</h2>
+    <pre><code>ALTER TABLE empleados
+ADD COLUMN email VARCHAR(100);
+</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Borrado de Tablas</h2>
+    <ul>
+        <li>Sintaxis SQL para eliminar tablas</li>
+        <li>Ejemplo: Borrar una tabla de empleados</li>
+        <li>Consideraciones antes de borrar una tabla</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Borrado de Tabla</h2>
+    <pre><code>DROP TABLE IF EXISTS empleados;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas al Crear Tablas</h2>
+    <ul>
+        <li>Nombre descriptivo para las tablas y columnas</li>
+        <li>Tipos de datos adecuados</li>
+        <li>Restriciones de integridad (PK, FK)</li>
+        <li>Normalización de la base de datos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes al Crear Tablas</h2>
+    <ul>
+        <li>No definir claves primarias</li>
+        <li>Usar tipos de datos incorrectos</li>
+        <li>No considerar restricciones de integridad</li>
+        <li>Omitir índices importantes</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa entre Tipos de Datos</h2>
+    <table>
+        <tr><th>Tipo</th><th>Ejemplo</th><th>Descripción</th></tr>
+        <tr><td>INT</td><td>100</td><td>Número entero</td></tr>
+        <tr><td>VARCHAR(100)</td><td>'Juan'</td><td>Cadena de texto con longitud máxima 100</td></tr>
+        <tr><td>DATE</td><td>'2023-04-30'</td><td>Fecha</td></tr>
+        <tr><td>FLOAT</td><td>10.5</td><td>Número flotante</td></tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Tipos de Datos</h2>
+    <p>¿Cuál es el tipo de dato adecuado para almacenar una edad?</p>
+    <ul>
+        <li>A) INT</li>
+        <li>B) VARCHAR</li>
+        <li>C) DATE</li>
+        <li>D) FLOAT</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Creación de Tablas</h2>
+    <ul>
+        <li>Nombre descriptivo para la tabla</li>
+        <li>Definir columnas y tipos de datos</li>
+        <li>Añadir claves primarias si es necesario</li>
+        <li>Considerar restricciones de integridad</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Creación de Tablas</h2>
+    <p>Crea una tabla llamada 'productos' con las siguientes columnas:</p>
+    <ul>
+        <li>ID (PK)</li>
+        <li>Nombre</li>
+        <li>Precio</li>
+        <li>Cantidad en stock</li>
+        <li>Fabricante</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Resumen: Creación, Modificación y Eliminación de Tablas</h2>
+    <ul>
+        <li>Creación de tablas con SQL</li>
+        <li>Tipos de datos disponibles en bases de datos</li>
+        <li>Modificación y borrado de tablas</li>
+        <li>Buenas prácticas y errores comunes</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Normalización</h2>
+    <p>La normalización es un proceso que se realiza en la creación de tablas para evitar redundancia y dependencias no funcionales.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0372 Gestión de bases de datos.md · Diseño físico de bases de datos: → Creación, modificación y eliminación de tablas. Tipos de datos.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 02:23:45</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

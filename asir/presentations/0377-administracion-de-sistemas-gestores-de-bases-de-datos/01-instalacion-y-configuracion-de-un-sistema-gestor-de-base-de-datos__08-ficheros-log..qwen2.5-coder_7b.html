@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Ficheros LOG. — Instalación y configuración de un sistema gestor de base de datos: — 0377 Administración de sistemas gestores de bases de datos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="ficheros-log.">
+<h1>Ficheros LOG.</h1>
+<p><strong>Unidad:</strong> Instalación y configuración de un sistema gestor de base de datos:<br><strong>Documento:</strong> 0377 Administración de sistemas gestores de bases de datos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Ficheros LOG en Sistemas Gestores de Bases de Datos</h1>
+    <p>Objetivo: Comprender la importancia y funciones de los ficheros LOG en el funcionamiento de un sistema gestor de bases de datos.</p>
+</section>
+
+<section class="slide">
+    <h2>¿Qué son los Ficheros LOG?</h2>
+    <ul>
+        <li>Registros de eventos importantes que ocurren durante la operación del SGBD.</li>
+        <li>Permiten el seguimiento y diagnóstico de problemas.</li>
+        <li>Almacenan información sobre transacciones, errores y cambios en los datos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Tipos de Ficheros LOG</h2>
+    <ul>
+        <li><strong>Fichero de Registro General (General Log):</strong> Registra todas las consultas SQL ejecutadas.</li>
+        <li><strong>Fichero de Error (Error Log):</strong> Almacena mensajes de error y advertencias.</li>
+        <li><strong>Fichero de Bitácora de Transacciones (Transaction Log):</strong> Registra cambios en los datos para operaciones de recuperación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Importancia de los Ficheros LOG</h2>
+    <ul>
+        <li><strong>Diagnóstico:</strong> Ayudan a identificar problemas y causas de errores.</li>
+        <li><strong>Seguridad:</strong> Almacenan auditorías que pueden ser utilizadas para cumplir con normativas de seguridad.</li>
+        <li><strong>Recuperación:</strong> Son esenciales para la restauración de datos en caso de fallos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de los Ficheros LOG</h2>
+    <ul>
+        <li>Ubicación y tamaño del fichero.</li>
+        <li>Nivel de detalle (verbosidad).</li>
+        <li>Rotación automática para evitar el llenado del disco.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Configuración en MySQL</h2>
+    <pre><code>
+[mysqld]
+log_error=/var/log/mysql/error.log
+general_log=1
+general_log_file=/var/log/mysql/general.log
+innodb_log_file_size=1G
+innodb_log_files_in_group=2
+    </code></pre>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en Ficheros LOG</h2>
+    <ul>
+        <li>No se encuentra el fichero de log.</li>
+        <li>Fichero de log lleno o sin espacio.</li>
+        <li>Nivel de detalle incorrecto.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas para Ficheros LOG</h2>
+    <ul>
+        <li>Configurar el tamaño y rotación adecuados.</li>
+        <li>Ajustar el nivel de detalle según las necesidades.</li>
+        <li>Monitorear regularmente los ficheros de log.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico: Análisis de Logs para Diagnóstico</h2>
+    <p>Ejemplo de cómo analizar un fichero de error para identificar y solucionar problemas en una base de datos.</p>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz</h2>
+    <ul>
+        <li>¿Qué tipo de log almacena cambios en los datos?</li>
+        <li>¿Cuál es la función principal del fichero de error?</li>
+        <li>¿Cómo se configura el tamaño del fichero de registro general en MySQL?</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist Configuración Ficheros LOG</h2>
+    <ol>
+        <li>Verificar la ubicación y permisos del fichero.</li>
+        <li>Ajustar el nivel de detalle según las necesidades.</li>
+        <li>Habilitar la rotación automática.</li>
+        <li>Monitorear regularmente los ficheros de log.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Análisis de Logs</h2>
+    <p>Realizar un análisis de un fichero de log para identificar problemas y sugerir mejoras en la configuración.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Ficheros LOG son cruciales para el diagnóstico, seguridad y recuperación en SGBD.</li>
+        <li>Se deben configurar adecuadamente según las necesidades del sistema.</li>
+        <li>Monitoreo regular es fundamental para mantener la salud del sistema.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa y Reglamentos</h2>
+    <p>Cumplir con normativas de seguridad y privacidad requiere el uso adecuado de ficheros LOG.</p>
+</section>
+
+<section class="slide">
+    <h2>Preguntas Finales</h2>
+    <ul>
+        <li>¿Qué tipo de log almacena cambios en los datos?</li>
+        <li>¿Cuál es la función principal del fichero de error?</li>
+        <li>¿Cómo se configura el tamaño del fichero de registro general en MySQL?</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Gracias</h2>
+    <p>Preguntas o comentarios?</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0377 Administración de sistemas gestores de bases de datos.md · Instalación y configuración de un sistema gestor de base de datos: → Ficheros LOG.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 08:52:22</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

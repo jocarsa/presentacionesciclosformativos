@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Utilización de cortafuegos. — Instalación y configuración de cortafuegos: — 0378 Seguridad y alta disponibilidad.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="utilizacion-de-cortafuegos.">
+<h1>Utilización de cortafuegos.</h1>
+<p><strong>Unidad:</strong> Instalación y configuración de cortafuegos:<br><strong>Documento:</strong> 0378 Seguridad y alta disponibilidad.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Instalación y configuración de cortafuegos</h1>
+    <p><strong>Objetivo:</strong> Comprender la utilización de cortafuegos para mejorar la seguridad y alta disponibilidad en redes.</p>
+</section>
+
+<section class="slide">
+    <h2>¿Qué es un cortafuego?</h2>
+    <p>Un cortafuego (firewall) es un sistema de seguridad que controla el tráfico de red entrante y saliente, permitiendo o denegando el acceso a recursos basándose en reglas predefinidas.</p>
+</section>
+
+<section class="slide">
+    <h2>Tipos de cortafuegos</h2>
+    <ul>
+        <li>Cortafuegos de estado (Stateful firewalls)</li>
+        <li>Cortafuegos de aplicación (Application firewalls)</li>
+        <li>Cortafuegos de red (Network firewalls)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Funciones principales del cortafuego</h2>
+    <ul>
+        <li>Filtrado de paquetes</li>
+        <li>Inspección de aplicaciones</li>
+        <li>Identificación de amenazas</li>
+        <li>Almacenamiento de estado</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo: Configuración básica en Linux</h2>
+    <pre><code>sudo ufw allow 80/tcp
+sudo ufw allow 443/tcp
+sudo ufw enable</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Caso práctico: Implementación de un cortafuego en una empresa</h2>
+    <p>Se implementó un cortafuego para proteger la red interna contra amenazas externas, reduciendo el tiempo de respuesta a incidentes.</p>
+</section>
+
+<section class="slide">
+    <h2>Proceso de configuración</h2>
+    <ol>
+        <li>Evaluación del entorno</li>
+        <li>Diseño de políticas</li>
+        <li>Instalación y configuración</li>
+        <li>Pruebas y ajustes</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas en la configuración de cortafuegos</h2>
+    <ul>
+        <li>Mantenimiento regular</li>
+        <li>Actualizaciones constantes</li>
+        <li>Monitoreo y análisis</li>
+        <li>Políticas claras</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes en la configuración de cortafuegos</h2>
+    <ul>
+        <li>No permitir el tráfico necesario</li>
+        <li>Mantener reglas demasiado amplias</li>
+        <li>No realizar pruebas adecuadas</li>
+        <li>Ignorar actualizaciones y parches</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: Cortafuegos vs. Software de seguridad</h2>
+    <table>
+        <tr>
+            <th>Cortafuegos</th>
+            <th>Software de seguridad</th>
+        </tr>
+        <tr>
+            <td>Controla tráfico de red</td>
+            <td>Protege aplicaciones específicas</td>
+        </tr>
+        <tr>
+            <td>Más eficiente en redes grandes</td>
+            <td>Mejor para aplicaciones individuales</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: ¿Qué es un cortafuego?</h2>
+    <p>¿Cuál de las siguientes opciones no es una función principal del cortafuego?</p>
+    <ul>
+        <li>Filtrado de paquetes</li>
+        <li>Inspección de aplicaciones</li>
+        <li>Identificación de amenazas</li>
+        <li>Almacenamiento de estado</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Configuración básica de un cortafuego</h2>
+    <ol>
+        <li>Evaluación del entorno</li>
+        <li>Diseño de políticas</li>
+        <li>Instalación y configuración</li>
+        <li>Pruebas y ajustes</li>
+        <li>Mantenimiento regular</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Crear una política de cortafuego</h2>
+    <p>Desarrolla una política de cortafuego para una pequeña empresa que tenga servidores web y correo electrónico.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <p>Los cortafuegos son herramientas cruciales para la seguridad y alta disponibilidad en redes. Su correcta configuración es fundamental para proteger contra amenazas externas y mantener el funcionamiento eficiente de los sistemas.</p>
+</section>
+
+<section class="slide">
+    <h2>Normativa general</h2>
+    <p>Es importante estar al tanto de las normativas y regulaciones que afectan la seguridad en redes, como la Ley General de Protección de Datos (LGPD) en España.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0378 Seguridad y alta disponibilidad.md · Instalación y configuración de cortafuegos: → Utilización de cortafuegos.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 10:13:43</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

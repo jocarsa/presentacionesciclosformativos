@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Transiciones de estados. — Administración de procesos del sistema: — 0374 Administración de sistemas operativos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="transiciones-de-estados.">
+<h1>Transiciones de estados.</h1>
+<p><strong>Unidad:</strong> Administración de procesos del sistema:<br><strong>Documento:</strong> 0374 Administración de sistemas operativos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Administración de procesos del sistema</h1>
+    <p><strong>Objetivo:</strong> Comprender los conceptos básicos y transiciones de estados en la administración de procesos del sistema.</p>
+</section>
+
+<section class="slide">
+    <h2>Definición de Proceso</h2>
+    <p>Un proceso es una instancia de un programa en ejecución. Incluye:</p>
+    <ul>
+        <li>Código ejecutable</li>
+        <li>Datos asociados</li>
+        <li>Estado actual</li>
+        <li>Recursos asignados</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Estados de un Proceso</h2>
+    <p>Los procesos pueden estar en uno de los siguientes estados:</p>
+    <ul>
+        <li>Nuevo (New)</li>
+        <li>Listo (Ready)</li>
+        <li>Ejecutando (Running)</li>
+        <li>Bloqueado (Blocked)</li>
+        <li>Terminado (Terminated)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ciclo de Vida de un Proceso</h2>
+    <p>El ciclo de vida de un proceso incluye:</p>
+    <ol>
+        <li>Nacimiento: El proceso se crea.</li>
+        <li>Listo: El sistema operativo elige procesos para ejecutar.</li>
+        <li>Ejecución: El proceso realiza sus tareas.</li>
+        <li>Bloqueo: El proceso espera por un recurso.</li>
+        <li>Terminación: El proceso finaliza su ejecución.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Transición de Estados</h2>
+    <p>Las transiciones entre estados ocurren debido a eventos específicos:</p>
+    <ul>
+        <li>Nuevo → Listo: El proceso se carga en memoria.</li>
+        <li>Listo → Ejecución: El procesador elige un proceso para ejecutar.</li>
+        <li>Ejecución → Bloqueado: El proceso espera por un recurso.</li>
+        <li>Bloqueado → Listo: El recurso se libera y el proceso vuelve a la lista de listos.</li>
+        <li>Terminación: El proceso finaliza su ejecución.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Transición</h2>
+    <p>Caso práctico:</p>
+    <ol>
+        <li>Un usuario inicia un programa (Nuevo → Listo).</li>
+        <li>El sistema elige este proceso para ejecutar (Listo → Ejecución).</li>
+        <li>El proceso necesita acceso a una base de datos (Ejecución → Bloqueado).</li>
+        <li>La base de datos se libera, el proceso vuelve a la lista de listos (Bloqueado → Listo).</li>
+        <li>El sistema elige este proceso nuevamente para ejecutar (Listo → Ejecución).</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico: Administración de Procesos</h2>
+    <p>Ejemplo real:</p>
+    <ul>
+        <li>Un servidor web maneja múltiples solicitudes simultáneas.</li>
+        <li>Cada solicitud crea un proceso nuevo (Nuevo).</li>
+        <li>Los procesos se ejecutan en orden de llegada (FIFO).</li>
+        <li>Si ocurre un error, el proceso pasa a estado bloqueado (Bloqueado).</li>
+        <li>Una vez resuelto el problema, el proceso vuelve a la lista de listos (Listo).</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Proceso de Administración de Procesos</h2>
+    <p>El sistema operativo realiza tareas como:</p>
+    <ul>
+        <li>Planificación: Decidir qué proceso ejecutar.</li>
+        <li>Sincronización: Coordinar el acceso a recursos compartidos.</li>
+        <li>Control de errores: Manejar excepciones y fallos.</li>
+        <li>Monitoreo: Seguimiento del estado de los procesos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas en Administración de Procesos</h2>
+    <p>Consideraciones:</p>
+    <ul>
+        <li>Eficiencia: Minimizar el tiempo de espera y la sobrecarga.</li>
+        <li>Seguridad: Proteger los recursos contra accesos no autorizados.</li>
+        <li>Escalabilidad: Manejar un creciente número de procesos.</li>
+        <li>Consistencia: Mantener el estado correcto de los procesos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en Administración de Procesos</h2>
+    <p>Fallas típicas:</p>
+    <ul>
+        <li>No planificación adecuada: Cola de procesos larga.</li>
+        <li>Sincronización fallida: Recursos compartidos corruptos.</li>
+        <li>Control de errores insuficiente: Procesos no responden.</li>
+        <li>Monitoreo ineficaz: Falta de información sobre el estado de los procesos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa entre Sistemas Operativos</h2>
+    <p>Diferencias en la administración de procesos:</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Sistema Operativo</th>
+                <th>Administración de Procesos</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Linux</td>
+                <td>Planificación por prioridad, sincronización mediante semáforos.</td>
+            </tr>
+            <tr>
+                <td>Windows</td>
+                <td>Planificación por tiempo de CPU, sincronización mediante eventos.</td>
+            </tr>
+            <tr>
+                <td>macOS</td>
+                <td>Planificación por prioridad, sincronización mediante barreras.</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Transiciones de Estados</h2>
+    <p>¿Cuál es el estado siguiente para un proceso que está en ejecución y necesita acceso a una base de datos?</p>
+    <ul>
+        <li>A) Nuevo</li>
+        <li>B) Listo</li>
+        <li>C) Ejecución</li>
+        <li>D) Bloqueado</li>
+        <li>E) Terminado</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Administración de Procesos</h2>
+    <p>Preguntas para revisar:</p>
+    <ol>
+        <li>¿Se ha planificado adecuadamente la ejecución de los procesos?</li>
+        <li>¿Se han sincronizado correctamente los recursos compartidos?</li>
+        <li>¿Se ha controlado eficazmente el manejo de errores?</li>
+        <li>¿Se ha monitoreado regularmente el estado de los procesos?</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Simulación de Transiciones</h2>
+    <p>Ejercicio práctico:</p>
+    <ul>
+        <li>Simular la transición de estados de un proceso a través de una lista de eventos.</li>
+        <li>Registrar el estado del proceso en cada paso.</li>
+        <li>Compartir resultados con compañeros y discutir los patrones observados.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Resumen: Transiciones de Estados</h2>
+    <p>Puntos clave:</p>
+    <ul>
+        <li>Procesos tienen estados distintos (Nuevo, Listo, Ejecución, Bloqueado, Terminado).</li>
+        <li>Las transiciones ocurren debido a eventos específicos.</li>
+        <li>El sistema operativo gestiona eficientemente la administración de procesos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa y Estándares</h2>
+    <p>Estándares relevantes:</p>
+    <ul>
+        <li>POSIX: Estandariza la interfaz del sistema operativo.</li>
+        <li>IEEE 1003.1: Define las especificaciones de los sistemas Unix/Linux.</li>
+        <li>ISO/IE 9899: Estándar para el lenguaje, utilizado en muchos sistemas operativos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Preguntas Finales</h2>
+    <p>¿Tienes preguntas sobre la administración de procesos?</p>
+    <p>¿Qué conceptos más te gustaría explorar en profundidad?</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0374 Administración de sistemas operativos.md · Administración de procesos del sistema: → Transiciones de estados.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 04:50:36</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

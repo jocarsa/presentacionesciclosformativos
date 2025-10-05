@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Eventos. — Automatización de tareas: construcción de guiones de administración: — 0377 Administración de sistemas gestores de bases de datos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="eventos.">
+<h1>Eventos.</h1>
+<p><strong>Unidad:</strong> Automatización de tareas: construcción de guiones de administración:<br><strong>Documento:</strong> 0377 Administración de sistemas gestores de bases de datos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Automatización de tareas: construcción de guiones de administración</h1>
+    <p><strong>Objetivo:</strong> Comprender y aplicar eventos en sistemas gestores de bases de datos para automatizar tareas.</p>
+</section>
+
+<section class="slide">
+    <h2>¿Qué son los eventos en SGBD?</h2>
+    <ul>
+        <li>Acciones específicas que ocurren dentro del sistema o sobre los objetos del mismo.</li>
+        <li>Permiten ejecutar scripts o procedimientos cuando ciertos eventos ocurren.</li>
+        <li>Ejemplos: INSERT, UPDATE, DELETE en tablas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Tipos de eventos en SGBD</h2>
+    <ul>
+        <li>DDL (Data Definition Language): CREATE, ALTER, DROP.</li>
+        <li>DML (Data Manipulation Language): INSERT, UPDATE, DELETE.</li>
+        <li>TRIGGER: Evento que se ejecuta automáticamente cuando ocurre un DDL o DML.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de evento TRIGGER</h2>
+    <pre><code>CREATE TRIGGER before_employee_insert
+BEFORE INSERT ON employees
+FOR EACH ROW
+BEGIN
+    SET NEW.created_at = NOW();
+END;</code></pre>
+    <p>Este trigger establece la fecha de creación automáticamente cuando se inserta un nuevo registro en la tabla `employees`.</p>
+</section>
+
+<section class="slide">
+    <h2>Caso práctico: Auditoría de cambios</h2>
+    <ul>
+        <li>Se crea un trigger que registra los cambios realizados en una tabla.</li>
+        <li>Permite rastrear quién, cuándo y qué cambió en la base de datos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Proceso de creación de un TRIGGER</h2>
+    <ol>
+        <li>Especificar el nombre del trigger.</li>
+        <li>Definir el evento que desencadenará el trigger (DDL o DML).</li>
+        <li>Especificar la acción a ejecutar (script o procedimiento).</li>
+        <li>Aplicar el trigger a una tabla específica.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas en TRIGGERS</h2>
+    <ul>
+        <li>Mantener los triggers lo más simples posible para evitar problemas de rendimiento.</li>
+        <li>Evitar bucles infinitos o recursividad innecesaria.</li>
+        <li>Documentar claramente el propósito y funcionamiento del trigger.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes en TRIGGERS</h2>
+    <ul>
+        <li>Modificar datos de forma accidental al intentar solo registrar cambios.</li>
+        <li>No considerar la posibilidad de desencadenar múltiples triggers en una sola operación.</li>
+        <li>No manejar adecuadamente los errores que puedan ocurrir durante la ejecución del trigger.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: TRIGGERS vs. PROCEDIMIENTOS ALMACENADOS</h2>
+    <table>
+        <tr>
+            <th></th>
+            <th>TRIGGERS</th>
+            <th>PROCEDIMIENTOS ALMACENADOS</th>
+        </tr>
+        <tr>
+            <td>Desencadenamiento automático</td>
+            <td>Sí</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td>Ubicación</td>
+            <td>Dentro de la definición de una tabla</td>
+            <td>Independiente de las tablas</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: ¿Cuál es el propósito principal de los TRIGGERS?</h2>
+    <ul>
+        <li><input type="radio" name="quiz1"> A) Optimizar consultas</li>
+        <li><input type="radio" name="quiz1"> B) Realizar tareas automáticas en respuesta a eventos</li>
+        <li><input type="radio" name="quiz1">) Proteger la integridad de los datos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Creación segura de TRIGGERS</h2>
+    <ol>
+        <li>Definir claramente el evento y la acción.</li>
+        <li>Probar exhaustivamente antes de implementar en producción.</li>
+        <li>Documentar todos los detalles del trigger.</li>
+        <li>Monitorear su funcionamiento regularmente.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Diseña un TRIGGER para una tabla de pedidos</h2>
+    <p>Crear un trigger que registre automáticamente la fecha y el usuario que realizó cada pedido en una tabla de auditoría.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Los TRIGGERS son herramientas poderosas para automatizar tareas en SGBD.</li>
+        <li>Permiten responder automáticamente a eventos específicos dentro del sistema.</li>
+        <li>Se deben diseñar con cuidado y considerar las mejores prácticas para evitar problemas de rendimiento y seguridad.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa (general)</h2>
+    <p><strong>ISO/IE 9001:</strong> Requisitos para un sistema de gestión de calidad que incluye la automatización de procesos.</p>
+    <p><strong>NIST SP 800-53:</strong> Directrices sobre el control de acceso y la seguridad en sistemas informáticos, que pueden aplicarse a SGBD.</p>
+</section>
+
+<section class="slide">
+    <h2>Preguntas Frecuentes</h2>
+    <ul>
+        <li><strong>¿Qué ocurre si un TRIGGER falla?</strong> El sistema puede dejar de funcionar correctamente hasta que se resuelva el problema.</li>
+        <li><strong>¿Puedo crear TRIGGERS en todas las tablas?</strong> Sí, pero es recomendable limitar su uso a tablas críticas para evitar problemas de rendimiento.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Recursos adicionales</h2>
+    <ul>
+        <li><a href="https://www.postgresql.org/docs/current/plpgsql-trigger.html">Documentación oficial de PostgreSQL sobre TRIGGERS</a></li>
+        <li><a href="https://docs.oracle.com/en/database/oracle/oracle-database/19/sqlrf/Create-Trigger.html#GUID-574F3D68-B02-4B2A-AE1-E5F06E66670">Documentación oficial de Oracle sobre TRIGGERS</a></li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Gracias por su atención</h2>
+    <p>Preguntas o comentarios? No dudes en contactar.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0377 Administración de sistemas gestores de bases de datos.md · Automatización de tareas: construcción de guiones de administración: → Eventos.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 09:36:20</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

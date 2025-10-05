@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Directivas de grupo. Derechos de usuarios. Directivas de seguridad. Objetos de directiva. Ámbito de las directivas. Plantillas. — Administración del acceso al dominio: — 0369 Implantación de sistemas operativos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="directivas-de-grupo.-derechos-de-usuarios.-directivas-de-seguridad.-objetos-de-directiva.-ambito-de-las-directivas.-plantillas.">
+<h1>Directivas de grupo. Derechos de usuarios. Directivas de seguridad. Objetos de directiva. Ámbito de las directivas. Plantillas.</h1>
+<p><strong>Unidad:</strong> Administración del acceso al dominio:<br><strong>Documento:</strong> 0369 Implantación de sistemas operativos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Administración del acceso al dominio</h1>
+    <p><strong>Objetivo:</strong> Comprender las directivas de grupo, derechos de usuarios y objetos de directiva en sistemas operativos.</p>
+</section>
+
+<section class="slide">
+    <h2>Directivas de Grupo</h2>
+    <ul>
+        <li>Son configuraciones que afectan a un conjunto de usuarios o computadoras.</li>
+        <li>Permiten la gestión masiva de políticas y preferencias.</li>
+        <li>Ejemplos: políticas de seguridad, configuración de aplicaciones.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Derechos de Usuarios</h2>
+    <ul>
+        <li>Definen las acciones que un usuario puede realizar en el sistema.</li>
+        <li>Incluyen permisos de lectura, escritura y ejecución.</li>
+        <li>Ejemplos: acceso a archivos, uso de aplicaciones.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Directivas de Seguridad</h2>
+    <ul>
+        <li>Establecen políticas para proteger el sistema y los datos.</li>
+        <li>Incluyen contraseñas, autenticación, cifrado.</li>
+        <li>Ejemplos: políticas de contraseñas fuertes, autenticación multifactor.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Objetos de Directiva</h2>
+    <ul>
+        <li>Son los elementos que pueden ser configurados mediante directivas.</li>
+        <li>Incluyen usuarios, grupos, computadoras, aplicaciones.</li>
+        <li>Ejemplos: usuarios individuales, grupos de trabajo, políticas específicas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ámbito de las Directivas</h2>
+    <ul>
+        <li>Determina la aplicabilidad de una directiva.</li>
+        <li>Puede ser global (aplica a todo el dominio) o local (solo a ciertos objetos).</li>
+        <li>Ejemplos: directivas globales para todos los usuarios, directivas locales para grupos específicos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Plantillas</h2>
+    <ul>
+        <li>Son configuraciones predefinidas que pueden ser aplicadas a objetos.</li>
+        <li>Aceleran la gestión y consistencia de políticas.</li>
+        <li>Ejemplos: plantilla para usuarios nuevos, plantilla para computadoras de oficina.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Directivas</h2>
+    <p><strong>Paso 1:</strong> Identificar el objeto a configurar (usuario, grupo, etc.).</p>
+    <p><strong>Paso 2:</strong> Seleccionar la directiva correspondiente.</p>
+    <p><strong>Paso 3:</strong> Configurar los parámetros según las necesidades.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Directiva</h2>
+    <ul>
+        <li><strong>Directiva:</strong> Políticas de contraseñas fuertes.</li>
+        <li><strong>Configuración:</strong> Longitud mínima, caracteres especiales requeridos.</li>
+        <li><strong>Efecto:</strong> Mejora la seguridad del sistema al forzar contraseñas más seguras.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico: Implementación de Directivas</h2>
+    <p><strong>Escenario:</strong> Configurar políticas de acceso a aplicaciones para un departamento específico.</p>
+    <p><strong>Pasos:</strong> Crear grupo, definir directiva de acceso, asignar al grupo.</p>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas</h2>
+    <ul>
+        <li>Aplicar directivas a grupos en lugar de usuarios individuales.</li>
+        <li>Usar plantillas para mantener consistencia.</li>
+        <li>Monitorear y auditar cambios en las directivas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes</h2>
+    <ul>
+        <li>No aplicar directivas a grupos, sino a usuarios individuales.</li>
+        <li>No usar plantillas, lo que lleva a inconsistencias.</li>
+        <li>No monitorear cambios en las directivas, lo que puede dejar vulnerables el sistema.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: Directivas vs. Permisos Locales</h2>
+    <table>
+        <tr><th></th><th>Directivas</th><th>Permisos Locales</th></tr>
+        <tr><td>Aplicabilidad</td><td>Masiva (grupos)</td><td>Específica (objetos individuales)</td></tr>
+        <tr><td>Consistencia</td><td>Baja (varios grupos diferentes)</td><td>Alta (todos los objetos iguales)</td></tr>
+        <tr><td>Mantenimiento</td><td>Alta (una vez configuradas)</td><td>Baja (ada objeto individualmente)</td></tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz</h2>
+    <p>¿Qué es una directiva de grupo?</p>
+    <ul>
+        <li>a) Una configuración personalizada para un usuario.</li>
+        <li>b) Una configuración que afecta a un conjunto de usuarios o computadoras.</li>
+        <li>c) Una aplicación específica del sistema operativo.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Configuración de Directivas</h2>
+    <ol>
+        <li>Identificar el objeto a configurar.</li>
+        <li>Seleccionar la directiva correspondiente.</li>
+        <li>Configurar los parámetros según las necesidades.</li>
+        <li>Aplazar la directiva al objeto seleccionado.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Creación de Directivas</h2>
+    <p><strong>Tarea:</strong> Crear una directiva para limitar el acceso a aplicaciones no autorizadas en un departamento específico.</p>
+    <p><strong>Pasos:</strong> Identificar grupo, definir directiva de acceso, asignar al grupo.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Directivas de grupo: configuraciones para grupos de usuarios.</li>
+        <li>Derechos de usuarios: permisos individuales.</li>
+        <li>Directivas de seguridad: políticas de protección.</li>
+        <li>Objetos de directiva: usuarios, grupos, computadoras.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa General</h2>
+    <p><strong>Norma:</strong> NIST SP 800-53 (Seguridad en sistemas operativos).</p>
+    <p><strong>Recomendación:</strong> Implementar directivas según las mejores prácticas estableidas por organizaciones de seguridad.</p>
+</section>
+
+<section class="slide">
+    <h2>Preguntas y Respuestas</h2>
+    <p>¿Tienes alguna pregunta sobre la administración del acceso al dominio?</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0369 Implantación de sistemas operativos.md · Administración del acceso al dominio: → Directivas de grupo. Derechos de usuarios. Directivas de seguridad. Objetos de directiva. Ámbito de las directivas. Plantillas.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-04 22:26:18</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

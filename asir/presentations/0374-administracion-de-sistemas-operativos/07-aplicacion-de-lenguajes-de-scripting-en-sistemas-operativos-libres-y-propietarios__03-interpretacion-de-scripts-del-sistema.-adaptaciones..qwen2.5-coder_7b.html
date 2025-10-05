@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Interpretación de «scripts» del sistema. Adaptaciones. — Aplicación de lenguajes de «scripting» en sistemas operativos libres y propietarios: — 0374 Administración de sistemas operativos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="interpretacion-de-scripts-del-sistema.-adaptaciones.">
+<h1>Interpretación de «scripts» del sistema. Adaptaciones.</h1>
+<p><strong>Unidad:</strong> Aplicación de lenguajes de «scripting» en sistemas operativos libres y propietarios:<br><strong>Documento:</strong> 0374 Administración de sistemas operativos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Aplicación de lenguajes de «scripting» en sistemas operativos libres y propietarios</h1>
+    <p><strong>Objetivo:</strong> Comprender la interpretación de scripts del sistema y sus adaptaciones en diferentes tipos de sistemas operativos.</p>
+</section>
+
+<section class="slide">
+    <h2>Interpretación de Scripts del Sistema</h2>
+    <ul>
+        <li>Definición: Script es un programa escrito en un lenguaje de scripting que se ejecuta dentro de otro programa o sistema.</li>
+        <li>Ejemplos comunes: (Unix/Linux), PowerShell (Windows).</li>
+        <li>Beneficios: Automatización, eficiencia y reducción de errores humanos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Adaptaciones en Sistemas Operativos Libres</h2>
+    <ul>
+        <li>Bash es el script más utilizado en sistemas operativos libres como Linux.</li>
+        <li>Ejemplo de comando: <code>ls -l</code> para listar archivos con detalles.</li>
+        <li>Adaptaciones específicas: Z, Fish, y otros shells personalizables.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Adaptaciones en Sistemas Operativos Propietarios</h2>
+    <ul>
+        <li>PowerShell es el script principal en Windows Server y Windows 10/11.</li>
+        <li>Ejemplo de comando: <code>Get-Process</code> para listar procesos actuales.</li>
+        <li>Adaptaciones específicas: PowerShell Core, ISE (Integrated Scripting Environment).</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas en Interpretación de Scripts</h2>
+    <ul>
+        <li>Escribir scripts legibles y bien organizados.</li>
+        <li>Utilizar comentarios para explicar el propósito de cada sección.</li>
+        <li>Probar scripts antes de implementarlos en producción.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en Interpretación de Scripts</h2>
+    <ul>
+        <li>Sintaxis incorrecta: Falta o sobra de comillas, paréntesis, etc.</li>
+        <li>Comandos no reconocidos: Verificar la sintaxis y el nombre del comando.</li>
+        <li>Variaciones entre sistemas operativos: Usar comandos compatibles con el sistema.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Script</h2>
+    <pre><code>#!/bin/bash
+# Este script lista los archivos en un directorio y cuenta cuántos hay
+
+# Comando para listar archivos
+ls -l /home/user/documents | wc -l
+</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Script PowerShell</h2>
+    <pre><code>Get-ChildItem -Path ":\Users\user\Documents" | Measure-Object
+# Este script cuenta los archivos en la carpeta:\Users\user\Documents
+</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico: Automatización de Tareas Diarias</h2>
+    <p>Un administrador de sistemas puede usar scripts para automatizar tareas diarias como la copia de seguridad, actualizaciones del sistema y limpieza de archivos temporales.</p>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico: Monitoreo del Sistema</h2>
+    <p>Scripts pueden ser utilizados para monitorear el rendimiento del sistema, detectar problemas y enviar alertas en caso de fallas.</p>
+</section>
+
+<section class="slide">
+    <h2>Proceso de Desarrollo de un Script</h2>
+    <ol>
+        <li>Definir la tarea que se desea automatizar.</li>
+        <li>Escribir el script utilizando el lenguaje de scripting adecuado.</li>
+        <li>Probar el script en un entorno de desarrollo seguro.</li>
+        <li>Implementar el script en producción y realizar pruebas adicionales.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Lenguajes de Scripting</h2>
+    <p>¿Cuál es el lenguaje de scripting predeterminado para sistemas operativos basados en Unix/Linux?</p>
+    <ul>
+        <li>A)</li>
+        <li>B)</li>
+        <li>C)++</li>
+        <li>D)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Comando de PowerShell</h2>
+    <p>¿Cuál comando de PowerShell se utiliza para obtener información sobre los procesos actuales?</p>
+    <ul>
+        <li>A) Get-Process</li>
+        <li>B) List-Processes</li>
+        <li>C) Show-Processes</li>
+        <li>D) Display-Processes</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Interpretación de Scripts</h2>
+    <ul>
+        <li>¿El script está bien organizado y legible?</li>
+        <li>¿Se han utilizado comentarios adecuados?</li>
+        <li>¿Se ha probado el script en un entorno seguro?</li>
+        <li>¿Se ha implementado el script en producción?</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Crear un Script Simple</h2>
+    <p>Crea un script que liste los archivos en un directorio específico y cuente cuántos hay.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Interpretación de scripts del sistema es fundamental para la automatización en sistemas operativos.</li>
+        <li>Diferencias entre sistemas libres y propietarios requieren adaptaciones específicas.</li>
+        <li>Buenas prácticas y atención a los errores son cruciales para un buen funcionamiento de los scripts.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa General</h2>
+    <p>No existe una normativa específica, pero se recomienda seguir las mejores prácticas de seguridad y eficiencia en la escritura y ejecución de scripts.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0374 Administración de sistemas operativos.md · Aplicación de lenguajes de «scripting» en sistemas operativos libres y propietarios: → Interpretación de «scripts» del sistema. Adaptaciones.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 05:12:13</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

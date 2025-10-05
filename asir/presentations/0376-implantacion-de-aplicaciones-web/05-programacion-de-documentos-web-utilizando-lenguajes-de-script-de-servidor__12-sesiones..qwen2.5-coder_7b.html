@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Sesiones. — Programación de documentos Web utilizando lenguajes de «script» de servidor: — 0376 Implantación de aplicaciones web.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="sesiones.">
+<h1>Sesiones.</h1>
+<p><strong>Unidad:</strong> Programación de documentos Web utilizando lenguajes de «script» de servidor:<br><strong>Documento:</strong> 0376 Implantación de aplicaciones web.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Sesiones en Programación Web</h1>
+    <p>Objetivo: Comprender el concepto y uso de sesiones en aplicaciones web.</p>
+</section>
+
+<section class="slide">
+    <h2>¿Qué son las Sesiones?</h2>
+    <ul>
+        <li>Son mecanismos para almacenar información del usuario entre diferentes solicitudes HTTP.</li>
+        <li>Permiten mantener el estado de una aplicación web a lo largo de una sesión del usuario.</li>
+        <li>Se utilizan para autenticación, personalización y seguimiento de actividades del usuario.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Cómo Funcionan las Sesiones?</h2>
+    <ol>
+        <li>El servidor genera un identificador único (ID) para la sesión.</li>
+        <li>Este ID se envía al cliente en una cookie de sesión.</li>
+        <li>Cada vez que el cliente realiza una solicitud, incluye la cookie con el ID de sesión.</li>
+        <li>El servidor usa este ID para recuperar los datos de la sesión asociados al usuario.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Ventajas de las Sesiones</h2>
+    <ul>
+        <li>Mantenimiento del estado del usuario entre solicitudes.</li>
+        <li>Almacenamiento seguro y eficiente de datos sensibles.</li>
+        <li>Facilita la implementación de funcionalidades como carritos de compras, favoritos, etc.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo Práctico: Carrito de Compras</h2>
+    <p>Un carrito de compras es una aplicación web que utiliza sesiones para almacenar los productos seleccionados por el usuario.</p>
+</section>
+
+<section class="slide">
+    <h2>Caso Real: Sistema de Autenticación</h2>
+    <p>Sistemas de autenticación como Facebook o Google utilizan sesiones para mantener la sesión del usuario activa durante su visita.</p>
+</section>
+
+<section class="slide">
+    <h2>Proceso de Creación de una Sesión</h2>
+    <ol>
+        <li>El cliente inicia sesión en el sitio web.</li>
+        <li>El servidor genera un ID de sesión y lo almacena en su base de datos junto con los datos del usuario.</li>
+        <li>El servidor envía una cookie con el ID de sesión al cliente.</li>
+        <li>Cada solicitud subsequente incluye la cookie, permitiendo al servidor recuperar la sesión.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas para Sesiones</h2>
+    <ul>
+        <li>Utilizar sesiones seguras (HTTPS).</li>
+        <li>Establecer un tiempo de expiración adecuado.</li>
+        <li>No almacenar datos sensibles en las cookies de sesión.</li>
+        <li>Validar y limpiar sesiones al cerrar la sesión del usuario.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes con Sesiones</h2>
+    <ul>
+        <li>No establecer un tiempo de expiración adecuado, lo que puede llevar a problemas de seguridad.</li>
+        <li>Almacenar datos sensibles en las cookies de sesión, lo que puede comprometer la seguridad del usuario.</li>
+        <li>No validar y limpiar sesiones al cerrar la sesión del usuario, lo que puede permitir el acceso no autorizado.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: Cookies vs. Sesiones</h2>
+    <table>
+        <tr>
+            <th>Cookies</th>
+            <th>Sesiones</th>
+        </tr>
+        <tr>
+            <td>Almacenan datos en el cliente.</td>
+            <td>Almacenan datos en el servidor.</td>
+        </tr>
+        <tr>
+            <td>Tamaño limitado (4KB).</td>
+            <td>No tiene límite de tamaño.</td>
+        </tr>
+        <tr>
+            <td>Pueden ser expiradas por el cliente.</td>
+            <td>Expiran cuando se cierra la sesión del usuario.</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: ¿Qué es una Sesión?</h2>
+    <p>¿Cuál de las siguientes opciones describe mejor qué es una sesión en un contexto web?</p>
+    <ol>
+        <li>Un archivo de texto que almacena datos del usuario.</li>
+        <li>Una cookie que contiene información sobre el estado del usuario entre solicitudes.</li>
+        <li>Un identificador único generado por el cliente para cada solicitud.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Consideraciones al Usar Sesiones</h2>
+    <ul>
+        <li>Usar HTTPS para proteger las sesiones.</li>
+        <li>Establecer un tiempo de expiración adecuado.</li>
+        <li>No almacenar datos sensibles en las cookies de sesión.</li>
+        <li>Validar y limpiar sesiones al cerrar la sesión del usuario.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Implementación de una Sesión Simple</h2>
+    <p>Crea un ejemplo sencillo de cómo implementar una sesión en para almacenar y recuperar datos del usuario.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Sesiones son mecanismos para mantener el estado del usuario entre solicitudes HTTP.</li>
+        <li>Funcionan mediante un ID de sesión almacenado en una cookie y recuperado por el servidor.</li>
+        <li>Se utilizan para autenticación, personalización y seguimiento de actividades del usuario.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa General</h2>
+    <p>Es importante seguir las mejores prácticas y normativas de seguridad al trabajar con sesiones en aplicaciones web para proteger la privacidad y seguridad de los usuarios.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0376 Implantación de aplicaciones web.md · Programación de documentos Web utilizando lenguajes de «script» de servidor: → Sesiones.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 08:27:23</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

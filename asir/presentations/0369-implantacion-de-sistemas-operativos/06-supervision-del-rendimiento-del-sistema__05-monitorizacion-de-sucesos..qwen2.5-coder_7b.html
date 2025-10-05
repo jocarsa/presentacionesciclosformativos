@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Monitorización de sucesos. — Supervisión del rendimiento del sistema: — 0369 Implantación de sistemas operativos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="monitorizacion-de-sucesos.">
+<h1>Monitorización de sucesos.</h1>
+<p><strong>Unidad:</strong> Supervisión del rendimiento del sistema:<br><strong>Documento:</strong> 0369 Implantación de sistemas operativos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Supervisión del rendimiento del sistema: Monitorización de sucesos</h1>
+    <p>Objetivo: Aprender los métodos y herramientas para monitorear y analizar eventos en sistemas operativos.</p>
+</section>
+
+<section class="slide">
+    <h2>Definición de la monitorización de sucesos</h2>
+    <p>La monitorización de sucesos es el proceso de recopilar, almacenar y analizar información sobre los eventos que ocurren en un sistema operativo.</p>
+</section>
+
+<section class="slide">
+    <h2>Importancia de la monitorización de sucesos</h2>
+    <ul>
+        <li>Detección temprana de problemas</li>
+        <li>Auditoría y cumplimiento normativo</li>
+        <li>Seguridad del sistema</li>
+        <li>Optimización del rendimiento</li>
+        <li>Diagnóstico de fallos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Herramientas de monitorización de sucesos</h2>
+    <ul>
+        <li>Sistemas operativos nativos (Windows Event Viewer, syslog en Linux)</li>
+        <li>Software especializado (Splunk, Nagios, Zabbix)</li>
+        <li>Herramientas de análisis de logs (ELK Stack, Graylog)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo: Configuración del Event Viewer en Windows</h2>
+    <p>1. Abrir el Event Viewer<br>2. Navegar por los diferentes tipos de eventos (Seguridad, Aplicaciones y Servicios, Sistemas)<br>3. Filtrar y buscar eventos específicos</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo: Configuración del syslog en Linux</h2>
+    <p>1. Editar el archivo /etc/rsyslog.conf<br>2. Configurar los niveles de registro deseados<br>3. Reiniciar el servicio rsyslog</p>
+</section>
+
+<section class="slide">
+    <h2>Caso: Análisis de un evento de seguridad</h2>
+    <p>Un usuario intentó iniciar sesión con credenciales incorrectas. El sistema debe registrar este evento para auditoría y análisis de riesgos.</p>
+</section>
+
+<section class="slide">
+    <h2>Proceso: Flujo básico de monitorización de sucesos</h2>
+    <ol>
+        <li>Recopilar eventos</li>
+        <li>Almacenar eventos</li>
+        <li>Analizar eventos</li>
+        <li>Generar alertas y reportes</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas en monitorización de sucesos</h2>
+    <ul>
+        <li>Configurar alertas para eventos críticos</li>
+        <li>Mantener políticas de retención de logs adecuadas</li>
+        <li>Realizar auditorías periódicas</li>
+        <li>Documentar los procesos y procedimientos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes en monitorización de sucesos</h2>
+    <ul>
+        <li>No configurar alertas suficientes</li>
+        <li>Mantener logs desactualizados o deshabilitados</li>
+        <li>No documentar procesos y procedimientos</li>
+        <li>Ignorar eventos no significativos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: Herramientas de monitorización de sucesos</h2>
+    <table>
+        <tr>
+            <th>Herramienta</th>
+            <th>Ventajas</th>
+            <th>Desventajas</th>
+        </tr>
+        <tr>
+            <td>Sistemas operativos nativos</td>
+            <td>Sencillos, integrados</td>
+            <td>Poca funcionalidad avanzada</td>
+        </tr>
+        <tr>
+            <td>Software especializado</td>
+            <td>Funcionalidades avanzadas, escalabilidad</td>
+            <td>Costeos, configuración compleja</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: Herramientas de monitorización de sucesos</h2>
+    <p>¿Cuál es la principal ventaja del uso de herramientas especializadas en comparación con los sistemas operativos nativos?</p>
+    <ol>
+        <li>Simplicidad de configuración</li>
+        <li>Funcionalidades avanzadas y escalabilidad</li>
+        <li>Precio reducido</li>
+        <li>No requiere mantenimiento</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Configuración básica de monitorización de sucesos</h2>
+    <ul>
+        <li>Identificar eventos críticos a monitorear</li>
+        <li>Configurar alertas para estos eventos</li>
+        <li>Mantener políticas de retención de logs adecuadas</li>
+        <li>Documentar los procesos y procedimientos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Crear una lista de alertas para un sistema operativo Linux</h2>
+    <p>Crea una lista de al menos 5 eventos críticos que deberían tener alertas configuradas en un sistema Linux.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen: Monitorización de sucesos</h2>
+    <ul>
+        <li>Es esencial para la supervisión del rendimiento del sistema</li>
+        <li>Utiliza herramientas adecuadas y sigue buenas prácticas</li>
+        <li>Mantén un enfoque proactivo en la gestión de eventos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Cumplimiento normativo</h2>
+    <p>La monitorización de sucesos es crucial para cumplir con las regulaciones de seguridad y privacidad, como GDPR en Europa.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0369 Implantación de sistemas operativos.md · Supervisión del rendimiento del sistema: → Monitorización de sucesos.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-04 22:31:39</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

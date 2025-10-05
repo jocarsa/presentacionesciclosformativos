@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Protocolo de transferencia de mensajes. — Instalación y administración del servicio de correo electrónico: — 0375 Servicios de red e Internet.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="protocolo-de-transferencia-de-mensajes.">
+<h1>Protocolo de transferencia de mensajes.</h1>
+<p><strong>Unidad:</strong> Instalación y administración del servicio de correo electrónico:<br><strong>Documento:</strong> 0375 Servicios de red e Internet.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Protocolo de transferencia de mensajes</h2>
+    <p>El protocolo de transferencia de mensajes (SMTP) es un estándar que permite la comunicación entre servidores de correo electrónico para enviar y recibir correos electrónicos.</p>
+</section>
+
+<section class="slide">
+    <h3>Estructura del mensaje SMTP</h3>
+    <ul>
+        <li>Encabezado: Información sobre el remitente, destinatario y otros detalles.</li>
+        <li>Cuerpo: Contenido del correo electrónico.</li>
+        <li>Pie de página: Opcional, puede incluir información adicional.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Flujo básico de SMTP</h3>
+    <ol>
+        <li>El cliente se conecta al servidor SMTP del remitente.</li>
+        <li>El cliente introduce sus credenciales para autenticarse.</li>
+        <li>El cliente envía el mensaje en formato MIME.</li>
+        <li>El servidor verifica los datos y acepta o rechaza el mensaje.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h3>Comandos SMTP comunes</h3>
+    <ul>
+        <li><code>HELO</code>: Identifica al cliente.</li>
+        <li><code>MAIL FROM:</code>: Indica el remitente.</li>
+        <li><code>RCPT TO:</code>: Indica el destinatario.</li>
+        <li><code>DATA</code>: Comienza la transmisión del cuerpo del mensaje.</li>
+        <li><code>QUIT</code>: Cierra la conexión.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Ejemplo de comando SMTP</h3>
+    <pre>
+HELO smtp.example.com
+MAIL FROM:<sender@example.com>
+RCPT TO:<recipient@example.com>
+DATA
+Subject: Prueba de correo electrónico
+
+Este es el cuerpo del mensaje.
+QUIT
+    </pre>
+</section>
+
+<section class="slide">
+    <h3>Seguridad en SMTP</h3>
+    <p>Para mejorar la seguridad, se utilizan protocolos como TLS (Transport Layer Security) o SSL (Secure Sockets Layer), que cifran las comunicaciones entre el cliente y el servidor.</p>
+</section>
+
+<section class="slide">
+    <h3>Certificados SSL/TLS en SMTP</h3>
+    <ul>
+        <li>Los certificados SSL/TLS garantizan la confidencialidad y autenticidad de las comunicaciones.</li>
+        <li>Se pueden obtener gratuitamente a través de servicios como Let's Encrypt.</li>
+        <li>El cliente debe verificar el certificado del servidor para asegurar la conexión segura.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Buenas prácticas en SMTP</h3>
+    <ul>
+        <li>Configurar correctamente los servidores de correo electrónico.</li>
+        <li>Implementar autenticación para prevenir spam.</li>
+        <li>Utilizar TLS/SSL para cifrar las comunicaciones.</li>
+        <li>Mantener actualizados los sistemas y parches.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Errores comunes en SMTP</h3>
+    <ul>
+        <li><code>550 User not local; please try <email></code>: El destinatario no existe o la cuenta está cerrada.</li>
+        <li><code>421 Service unavailable, closing transmission channel</code>: El servidor no puede procesar la solicitud en este momento.</li>
+        <li><code>530 Authentication required</code>: Falta autenticación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Caso práctico: Implementación de SMTP con TLS</h3>
+    <p>Para implementar SMTP con TLS, es necesario configurar el servidor para que utilice SSL/TLS y asegurar que los clientes estén conectados mediante un protocolo seguro.</p>
+</section>
+
+<section class="slide">
+    <h3>Chequeo de la configuración SMTP</h3>
+    <ul>
+        <li>Verificar que el servidor está escuchando en el puerto correcto (25, 465 o 587).</li>
+        <li>Asegurarse de que los certificados SSL/TLS están correctamente instalados.</li>
+        <li>Probar la conexión desde un cliente SMTP utilizando comandos como telnet o openssl.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Mini-quiz: Protocolo SMTP</h3>
+    <p>¿Cuál de los siguientes comandos SMTP se utiliza para iniciar una sesión segura con TLS?</p>
+    <ol type="A">
+        <li><code>STARTTLS</code></li>
+        <li><code>HELO</code></li>
+        <li><code>MAIL FROM:</code></li>
+        <li><code>QUIT</code></li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h3>Actividad: Configuración de SMTP con TLS</h3>
+    <p>Configura un servidor de correo electrónico para utilizar SMTP con TLS y prueba la conexión desde un cliente SMTP.</p>
+</section>
+
+<section class="slide">
+    <h3>Resumen</h3>
+    <ul>
+        <li>SMTP es el protocolo utilizado para transferir mensajes entre servidores de correo electrónico.</li>
+        <li>Los comandos SMTP permiten la comunicación entre cliente y servidor.</li>
+        <li>La seguridad en SMTP se asegura mediante el uso de TLS/SSL.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Normativa relacionada con SMTP</h3>
+    <p>El Reglamento General de Protección de Datos (RGPD) y la Ley Orgánica 15/1999, de 23 de octubre, sobre protección de datos personales requieren el uso seguro de los protocolos de comunicación en servicios de correo electrónico.</p>
+</section>
+
+<section class="slide">
+    <h3>Recursos adicionales</h3>
+    <ul>
+        <li><a href="https://www.rf-editor.org/rfc/rfc5321">RFC 5321: Simple Mail Transfer Protocol</a></li>
+        <li><a href="https://docs.microsoft.com/en-us/exchange/mail-flow-best-practices/transport-layer-security-tls">Microsoft TLS Best Practices for Exchange</a></li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h1>Protocolo de transferencia de mensajes</h1>
+    <p>Objetivo: Comprender los conceptos básicos y prácticas del protocolo SMTP para la transferencia segura de correos electrónicos.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0375 Servicios de red e Internet.md · Instalación y administración del servicio de correo electrónico: → Protocolo de transferencia de mensajes.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 06:49:47</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

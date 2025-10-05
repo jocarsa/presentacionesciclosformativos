@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Versiones de HTML y de XHTML. — Utilización de lenguajes de marcas en entornos Web: — 0373 Lenguajes de marcas y sistemas de gestión de información.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="versiones-de-html-y-de-xhtml.">
+<h1>Versiones de HTML y de XHTML.</h1>
+<p><strong>Unidad:</strong> Utilización de lenguajes de marcas en entornos Web:<br><strong>Documento:</strong> 0373 Lenguajes de marcas y sistemas de gestión de información.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Versiones de y XHTML en entornos Web</h1>
+    <p>Objetivo: Comprender las principales versiones de y XHTML, sus características y diferencias.</p>
+</section>
+
+<section class="slide">
+    <h2> 4.01</h2>
+    <ul>
+        <li>La versión más ampliamente utilizada hasta principios del siglo XXI.</li>
+        <li>Incluye 3.2 y 4.0.</li>
+        <li>Soporta tablas, formularios y elementos multimedia básicos.</li>
+        <li>No es estricto (permite etiquetas mal cerradas).</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>X 1.0</h2>
+    <ul>
+        <li>Versionado de que se ajusta a las reglas estrictas del lenguaje.</li>
+        <li>Todas las etiquetas deben estar correctamente cerradas y formateadas.</li>
+        <li>Mejora la estructura y semántica del código.</li>
+        <li>No es tan ampliamente utilizado como 4.01.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>5</h2>
+    <ul>
+        <li>Lanzado en 2012, reemplazando a 4.01 y XHTML 1.0.</li>
+        <li>Incluye nuevas etiquetas semánticas (header, footer, article, section).</li>
+        <li>Soporta multimedia nativo (video, audio), formularios avanzados y geolocalización.</li>
+        <li>Más estricto que 4.01 pero más flexible que XHTML 1.0.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparación5 vs XHTML 1.0</h2>
+    <table>
+        <tr>
+            <th>5</th>
+            <th>X 1.0</th>
+        </tr>
+        <tr>
+            <td>No estricto, permite etiquetas mal cerradas.</td>
+            <td>Estricto, todas las etiquetas deben estar correctamente cerradas.</td>
+        </tr>
+        <tr>
+            <td>Más semántica con nuevas etiquetas.</td>
+            <td>Menos semántica, basado en 4.01.</td>
+        </tr>
+        <tr>
+            <td>Más estricto pero más flexible que XHTML 1.0.</td>
+            <td>No tan ampliamente utilizado como 4.01.</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Principales diferencias entre y XHTML</h2>
+    <ul>
+        <li>Sintaxis: es más flexible, XHTML estricto.</li>
+        <li>Cierre de etiquetas: permite etiquetas mal cerradas, XHTML requiereierre correcto.</li>
+        <li>Caracteres especiales: interpreta caracteres especiales como &lt;, XHTML los codifica (&amp;lt;).</li>
+        <li>Validación: XHTML se puede validar con, no.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de código5</h2>
+    <pre><code>&lt;!DOCTYPE&gt;
+&lt; lang="es"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Ejemplo5&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;&lt;h1&gt;Encabezado&lt;/h1&gt;&lt;/header&gt;
+    &lt;nav&gt;&lt;a href="#">Enlace 1&lt;/a&gt; | &lt;a href="#">Enlace 2&lt;/a&gt;&lt;/nav&gt;
+    &lt;section&gt;&lt;p&gt;Contenido principal.&lt;/p&gt;&lt;/section&gt;
+    &lt;footer&gt;&lt;p&gt;Pie de página.&lt;/p&gt;&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de código XHTML 1.0</h2>
+    <pre><code>&lt;!DOCTYPE PUBLIC "-//W3//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+&lt; xmlns="http://www.w3.org/1999/xhtml" lang="es"&gt;
+&lt;head&gt;
+    &lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /&gt;
+    &lt;title&gt;Ejemplo XHTML 1.0&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;&lt;h1&gt;Encabezado&lt;/h1&gt;&lt;/header&gt;
+    &lt;nav&gt;&lt;a href="#">Enlace 1&lt;/a&gt; | &lt;a href="#">Enlace 2&lt;/a&gt;&lt;/nav&gt;
+    &lt;section&gt;&lt;p&gt;Contenido principal.&lt;/p&gt;&lt;/section&gt;
+    &lt;footer&gt;&lt;p&gt;Pie de página.&lt;/p&gt;&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes en5</h2>
+    <ul>
+        <li>No cerrar etiquetas correctamente.</li>
+        <li>Uso de caracteres especiales sin codificación.</li>
+        <li>Mixto uso de mayúsculas y minúsculas en etiquetas.</li>
+        <li>Falta de metaetiqueta charset.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes en XHTML 1.0</h2>
+    <ul>
+        <li>No cerrar etiquetas correctamente.</li>
+        <li>Uso de caracteres especiales sin codificación (&amp;lt;, &amp;gt;).</li>
+        <li>Mixto uso de mayúsculas y minúsculas en etiquetas.</li>
+        <li>Falta de metaetiqueta charset.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas para5</h2>
+    <ul>
+        <li>Uso de etiquetas semánticas.</li>
+        <li>Cierre correcto de todas las etiquetas.</li>
+        <li>Validación del código con herramientas online.</li>
+        <li>Compatibilidad con navegadores modernos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas para XHTML 1.0</h2>
+    <ul>
+        <li>Cierre correcto de todas las etiquetas.</li>
+        <li>Validación del código con herramientas online.</li>
+        <li>Compatibilidad con navegadores modernos.</li>
+        <li>Uso de caracteres especiales codificados.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: Versiones de y XHTML</h2>
+    <p>¿Cuál es la versión más estricta entre5 y XHTML 1.0?</p>
+    <ol>
+        <li>5</li>
+        <li>X 1.0</li>
+        <li>No hay diferencia</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: Versiones de y XHTML</h2>
+    <p>¿Cuál es la principal diferencia entre5 y XHTML?</p>
+    <ol>
+        <li>Sintaxis más estricta en XHTML.</li>
+        <li>Más semántica en5.</li>
+        <li>No hay diferencia significativa.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Versiones de y XHTML</h2>
+    <ul>
+        <li>Cerrar todas las etiquetas correctamente.</li>
+        <li>Validar el código con herramientas online.</li>
+        <li>Usar caracteres especiales codificados en XHTML.</li>
+        <li>Utilizar etiquetas semánticas en5.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Comparación de versiones</h2>
+    <p>Compara las principales características y diferencias entre4.01, XHTML 1.0 y5.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>4.01: Versión más ampliamente utilizada hasta principios del siglo XXI.</li>
+        <li>X 1.0: Versionado de que se ajusta a las reglas estrictas del lenguaje.</li>
+        <li>5: Lanzado en 2012, reemplazando a 4.01 y XHTML 1.0 con nuevas características.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa general</h2>
+    <p>La normativa W3 (World Wide Web Consortium) establece las recomendaciones y estándares para y XHTML.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0373 Lenguajes de marcas y sistemas de gestión de información.md · Utilización de lenguajes de marcas en entornos Web: → Versiones de HTML y de XHTML.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 02:55:13</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

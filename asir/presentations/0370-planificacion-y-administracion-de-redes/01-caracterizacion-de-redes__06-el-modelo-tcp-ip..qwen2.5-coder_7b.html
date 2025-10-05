@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>El modelo TCP/IP. — Caracterización de redes: — 0370 Planificación y administración de redes.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="el-modelo-tcp-ip.">
+<h1>El modelo TCP/IP.</h1>
+<p><strong>Unidad:</strong> Caracterización de redes:<br><strong>Documento:</strong> 0370 Planificación y administración de redes.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>El modelo TCP/IP</h1>
+    <p>Objetivo: Comprender la estructura y funcionamiento del modelo TCP/IP.</p>
+</section>
+
+<section class="slide">
+    <h2>Introducción al Modelo TCP/IP</h2>
+    <ul>
+        <li>Modelo de protocolos de red utilizado por Internet y muchas redes privadas.</li>
+        <li>Divide la comunicación en capas para facilitar su diseño, implementación y mantenimiento.</li>
+        <li>Cinco capas principales: Aplicación, Transporte, Internet, Enlace de datos y Física.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Capa 1: Capa de Aplicación</h2>
+    <ul>
+        <li>Se encarga de las aplicaciones que utilizan la red (ej. navegador web, correo electrónico).</li>
+        <li>No es un protocolo específico, sino una interfaz entre el software de aplicación y los protocolos de red.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Capa 2: Capa de Transporte</h2>
+    <ul>
+        <li>Gestiona la transmisión confiable de datos entre aplicaciones en diferentes dispositivos.</li>
+        <li>Protocolos comunes: TCP (orientado a conexión) y UDP (no orientado a conexión).</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Capa 3: Capa de Internet</h2>
+    <ul>
+        <li>Se encarga del enrutamiento de paquetes de datos entre diferentes redes.</li>
+        <li>Protocolo principal: IP (Internet Protocol).</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Capa 4: Capa de Enlace de Datos</h2>
+    <ul>
+        <li>Gestiona la transmisión de datos entre dispositivos conectados a la misma red.</li>
+        <li>Protocolos comunes: Ethernet, Wi-Fi.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Capa 5: Capa Física</h2>
+    <ul>
+        <li>Se encarga de la transmisión física de los datos a través del medio de comunicación.</li>
+        <li>Incluye el hardware que permite la conexión entre dispositivos (ables, adaptadores).</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo Práctico: Transferencia de un Archivo</h2>
+    <p>1. Aplicación envía datos al usuario.<br>
+       2. Transporte confirma la recepción y solicita retransmisión si es necesario.<br>
+       3. Internet enruta el paquete a través de diferentes enrutadores.<br>
+       4. Enlace de datos transmite los datos a través del cable Ethernet.<br>
+       5. Física envía los bits físicamente.</p>
+</section>
+
+<section class="slide">
+    <h2>Caso Real: Implementación de una Red Local</h2>
+    <ul>
+        <li>Configuración de la capa de aplicación (servicios web).</li>
+        <li>Configuración de la capa de transporte (protocolo TCP).</li>
+        <li>Configuración de la capa de internet (asignación de IP).</li>
+        <li>Configuración de la capa de enlace de datos (configuración de red local).</li>
+        <li>Configuración de la capa física (conexión de dispositivos).</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Proceso de Enrutamiento</h2>
+    <p>1. Paquete enviado desde el origen.<br>
+       2. Capa Internet examina la dirección IP del paquete.<br>
+       3. Selecciona el siguiente enrutador según las tablas de enrutamiento.<br>
+       4. El paquete se envía al siguiente enrutador.<br>
+       5. Este proceso se repite hasta que el paquete llega a su destino.</p>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas: Seguridad en TCP/IP</h2>
+    <ul>
+        <li>Uso de protocolos seguros (HTTPS, SSH).</li>
+        <li>Cifrado de datos en tránsito.</li>
+        <li>Autenticación y autorización de usuarios.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en TCP/IP</h2>
+    <ul>
+        <li>Puerto no disponible (Port Unreachable).</li>
+        <li>Dirección IP incorrecta (Destination Host Unreachable).</li>
+        <li>Tiempo de espera excedido (Time Exceeded).</li>
+        <li>Paquete corrupto (Bad Packet).</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: TCP vs UDP</h2>
+    <table>
+        <tr>
+            <th>TCP</th>
+            <th>UDP</th>
+        </tr>
+        <tr>
+            <td>Orientado a conexión.</td>
+            <td>No orientado a conexión.</td>
+        </tr>
+        <tr>
+            <td>Fiable (confiabilidad).</td>
+            <td>No confiable (no confiabilidad).</td>
+        </tr>
+        <tr>
+            <td>Reconoce errores y solicita retransmisión.</td>
+            <td>No reconoce errores, no solicita retransmisión.</td>
+        </tr>
+        <tr>
+            <td>Manejo de flujo de datos.</td>
+            <td>No maneja flujo de datos.</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Identificación de Capas</h2>
+    <p>¿Cuál capa es responsable de la transmisión confiable de datos entre aplicaciones?</p>
+    <ul>
+        <li>A. Capa Física</li>
+        <li>B. Capa de Aplicación</li>
+        <li>C. Capa de Transporte</li>
+        <li>D. Capa Internet</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Configuración Básica de TCP/IP</h2>
+    <ol>
+        <li>Configurar la dirección IP.</li>
+        <li>Configurar la máscara de subred.</li>
+        <li>Configurar la puerta de enlace predeterminada.</li>
+        <li>Configurar el servidor DNS.</li>
+        <li>Verificar la conectividad con ping.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Crear una Red Virtual</h2>
+    <p>Crea una red virtual utilizando software como VirtualBox o VMware, y configura las capas TCP/IP correspondientes.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen del Modelo TCP/IP</h2>
+    <ul>
+        <li>Modelo de cinco capas que divide la comunicación en partes para facilitar su diseño y implementación.</li>
+        <li>Cada capa tiene un protocolo específico encargado de una función particular.</li>
+        <li>La comunicación fluye desde la capa de aplicación hasta la capa física.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa y Reglamentos</h2>
+    <p>Reglas y estándares que gobiernan el funcionamiento del modelo TCP/IP, como los protocolos IP y TCP/UDP.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0370 Planificación y administración de redes.md · Caracterización de redes: → El modelo TCP/IP.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-04 23:35:26</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

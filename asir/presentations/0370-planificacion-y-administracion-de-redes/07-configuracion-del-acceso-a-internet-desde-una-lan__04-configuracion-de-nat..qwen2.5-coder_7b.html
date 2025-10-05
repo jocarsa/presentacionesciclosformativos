@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Configuración de NAT. — Configuración del acceso a Internet desde una LAN: — 0370 Planificación y administración de redes.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="configuracion-de-nat.">
+<h1>Configuración de NAT.</h1>
+<p><strong>Unidad:</strong> Configuración del acceso a Internet desde una LAN:<br><strong>Documento:</strong> 0370 Planificación y administración de redes.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Configuración de NAT en una LAN</h1>
+    <p>Objetivo: Aprender cómo configurar el Network Address Translation (NAT) para permitir el acceso a Internet desde una red local.</p>
+</section>
+
+<section class="slide">
+    <h2>Concepto básico de NAT</h2>
+    <ul>
+        <li>NAT es un proceso que permite que varios dispositivos en una red privada compartan una única dirección IP pública.</li>
+        <li>Es fundamental para el acceso a Internet desde redes locales pequeñas o medias.</li>
+        <li>Hay dos tipos principales de NAT: NAT basado en puertos y NAT estático.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo práctico</h2>
+    <p>Supongamos una LAN con 10 dispositivos y una única dirección IP pública 203.0.113.1.</p>
+    <ul>
+        <li>Cada dispositivo en la LAN tiene una dirección IP privada (por ejemplo, 192.168.1.2 a 192.168.1.11).</li>
+        <li>El router NAT traduce las direcciones IP internas a la única IP pública.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Caso de estudio: Implementación en una pequeña empresa</h2>
+    <p>Una pequeña empresa con 50 empleados necesita acceso a Internet. Se instala un router con NAT para compartir la única IP pública.</p>
+    <ul>
+        <li>El costo es bajo ya que solo se requiere el hardware del router.</li>
+        <li>La seguridad es adecuada si se configura correctamente las reglas de firewall.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Proceso de configuración de NAT</h2>
+    <ol>
+        <li>Conectar el router a la red eléctrica y configurar su dirección IP.</li>
+        <li>Ingresar al panel de administración del router.</li>
+        <li>Buscar la opción de "NAT" o "Firewall" en las configuraciones avanzadas.</li>
+        <li>Configurar el modo de NAT deseado (por ejemplo, PAT).</li>
+        <li>Asignar las direcciones IP privadas a los dispositivos correspondientes.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas en la configuración de NAT</h2>
+    <ul>
+        <li>Usar un firewall para controlar el tráfico entrante y saliente.</li>
+        <li>Configurar reglas específicas para permitir o denegar ciertos tipos de tráfico.</li>
+        <li>Mantener actualizado el firmware del router para seguridad.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes en la configuración de NAT</h2>
+    <ul>
+        <li>No asignar direcciones IP privadas a los dispositivos correctamente.</li>
+        <li>No configurar el firewall adecuadamente, lo que puede exponer la LAN al exterior.</li>
+        <li>No mantener actualizado el firmware del router.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa entre NAT y sin NAT</h2>
+    <table>
+        <tr>
+            <th>NAT</th>
+            <th>Sin NAT</th>
+        </tr>
+        <tr>
+            <td>Permite compartir una única IP pública.</td>
+            <td>Cada dispositivo necesita su propia dirección IP pública.</td>
+        </tr>
+        <tr>
+            <td>Costo económico más bajo.</td>
+            <td>Costo económico mayor debido a las direcciones IP públicas necesarias.</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: NAT y seguridad</h2>
+    <p>¿Qué es el NAT?</p>
+    <ul>
+        <li>a) Una tecnología que permite compartir una única dirección IP pública.</li>
+        <li>b) Un método de encriptación para proteger la red.</li>
+        <li>c) Una forma de asignar direcciones IP privadas a los dispositivos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist de configuración de NAT</h2>
+    <ol>
+        <li>Conectar el router a la red eléctrica.</li>
+        <li>Ingresar al panel de administración del router.</li>
+        <li>Configurar el modo de NAT deseado.</li>
+        <li>Asignar las direcciones IP privadas a los dispositivos.</li>
+        <li>Configurar el firewall para controlar el tráfico.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Configuración de NAT en un router</h2>
+    <p>Realizar la configuración de NAT en un router simulado utilizando las instrucciones proporcionadas.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>NAT es una tecnología crucial para el acceso a Internet desde redes locales.</li>
+        <li>Se configura en el router y permite compartir una única dirección IP pública.</li>
+        <li>Buenas prácticas incluyen la configuración de firewall y mantenimiento del firmware.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa general sobre NAT</h2>
+    <p>La normativa en materia de seguridad en Internet impone el uso de medidas como NAT para proteger las redes privadas.</p>
+    <ul>
+        <li>Es obligatorio en muchos países para evitar la exposición a amenazas externas.</li>
+        <li>Las empresas y organizaciones deben cumplir con estas regulaciones.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Preguntas frecuentes sobre NAT</h2>
+    <dl>
+        <dt>¿Qué es el PAT?</dt>
+        <dd>El Protocolo Address Translation (PAT) permite que varios dispositivos compartan una única dirección IP pública.</dd>
+        <dt>¿Es seguro usar NAT?</dt>
+        <dd>Sí, pero debe configurarse correctamente para evitar la exposición a amenazas.</dd>
+    </dl>
+</section>
+
+<section class="slide">
+    <h2>Recursos adicionales</h2>
+    <ul>
+        <li><a href="https://www.cisco.com/c/es_mx/support/docs/ip/network-address-translation-nat/10858.html">Cisco - NAT Overview</a></li>
+        <li><a href="https://www.techopedia.com/definition/3697/nat-network-address-translation/">Techopedia - NAT (Network Address Translation)</a></li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Gracias por su atención</h2>
+    <p>Preguntas o comentarios? No dudes en contactar.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0370 Planificación y administración de redes.md · Configuración del acceso a Internet desde una LAN: → Configuración de NAT.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 01:31:27</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

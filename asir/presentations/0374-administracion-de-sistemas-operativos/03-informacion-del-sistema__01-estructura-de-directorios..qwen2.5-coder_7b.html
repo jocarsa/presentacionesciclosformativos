@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Estructura de directorios. — Información del sistema: — 0374 Administración de sistemas operativos.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="estructura-de-directorios.">
+<h1>Estructura de directorios.</h1>
+<p><strong>Unidad:</strong> Información del sistema:<br><strong>Documento:</strong> 0374 Administración de sistemas operativos.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Estructura de directorios en sistemas operativos</h2>
+    <p>La estructura de directorios es fundamental para organizar y gestionar los archivos en un sistema operativo.ada sistema operativo tiene su propia convención de organización.</p>
+</section>
+
+<section class="slide">
+    <h3>Ejemplo: Estructura típica de Linux</h3>
+    <ul>
+        <li>/bin - Comandos esenciales del sistema</li>
+        <li>/boot - Archivos necesarios para el arranque</li>
+        <li>/dev - Dispositivos del sistema</li>
+        <li>/etc - Configuración del sistema</li>
+        <li>/home - Directorios de los usuarios</li>
+        <li>/lib - Bibliotecas del sistema</li>
+        <li>/media - Montaje de dispositivos remotos</li>
+        <li>/mnt - Montaje temporal de sistemas de archivos</li>
+        <li>/opt - Software adicional opcional</li>
+        <li>/proc - Información sobre el sistema en ejecución</li>
+        <li>/root - Directorio del usuario root</li>
+        <li>/run - Información dinámica del sistema</li>
+        <li>/sbin - Comandos de administrador del sistema</li>
+        <li>/srv - Servicios del sistema</li>
+        <li>/tmp - Archivos temporales</li>
+        <li>/usr - Software y recursos del usuario</li>
+        <li>/var - Datos variables del sistema</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Ejemplo: Estructura típica de Windows</h3>
+    <ul>
+        <li>C:\Windows - Sistema operativo y archivos del sistema</li>
+        <li>C:\Users - Directorios de los usuarios</li>
+        <li>C:\Program Files - Software instalado</li>
+        <li>C:\ProgramData - Datos compartidos entre aplicaciones</li>
+        <li>C:\Temp - Archivos temporales</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Concepto: Directorio raíz</h3>
+    <p>El directorio raíz es el punto de partida en la jerarquía de directorios. En Linux y Unix, se representa como /, mientras que en Windows como:\.</p>
+</section>
+
+<section class="slide">
+    <h3>Concepto: Subdirectorios</h3>
+    <p>Los subdirectorios son directorios dentro de otros directorios. Permiten una organización jerárquica y más eficiente de los archivos.</p>
+</section>
+
+<section class="slide">
+    <h3>Concepto: Archivos ocultos</h3>
+    <p>Algunos sistemas operativos ocultan ciertos archivos que comienzan con un punto (.). Estos archivos contienen información importante del sistema o de los usuarios.</p>
+</section>
+
+<section class="slide">
+    <h3>Ejemplo: Archivos ocultos en Linux</h3>
+    <ul>
+        <li>.rc - Configuración del shell para el usuario actual</li>
+        <li>.ssh - Directorio de claves SSH del usuario</li>
+        <li>.config - Directorio de configuraciones de aplicaciones</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Concepto: Enlaces simbólicos (symlinks)</h3>
+    <p>Un enlace simbólico es un tipo de archivo que apunta a otro archivo o directorio. Permite crear una referencia rápida y flexible.</p>
+</section>
+
+<section class="slide">
+    <h3>Ejemplo: Creación de un enlace simbólico en Linux</h3>
+    <pre>ln -s /ruta/destino /ruta/enlace</pre>
+</section>
+
+<section class="slide">
+    <h3>Buenas prácticas: Organización del sistema</h3>
+    <ul>
+        <li>Mantén la estructura de directorios limpia y ordenada.</li>
+        <li>Evita crear demasiados subdirectorios anidados.</li>
+        <li>Usa nombres descriptivos para los directorios y archivos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Errores comunes: Confusión entre directorios</h3>
+    <ul>
+        <li>Mixing up /usr y /opt.</li>
+        <li>Confusion between /home and /root.</li>
+        <li>Forgetting to use the correct case in directory names.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Caso: Problema de acceso a archivos ocultos</h3>
+    <p>Un usuario intenta acceder a un archivo oculto en su directorio personal, pero no lo encuentra. ¿Por qué?</p>
+</section>
+
+<section class="slide">
+    <h3>Mini-quiz: Identificación de directorios</h3>
+    <ul>
+        <li>¿Qué directorio contiene los archivos del sistema operativo en Linux?</li>
+        <li>¿Dónde se almacenan las configuraciones del usuario en Windows?</li>
+        <li>¿Qué tipo de archivo es un enlace simbólico?</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Checklist: Organización de directorios</h3>
+    <ol>
+        <li>Crea una estructura jerárquica clara.</li>
+        <li>Usa nombres descriptivos para los directorios y archivos.</li>
+        <li>Mantén la organización limpia y ordenada.</li>
+        <li>Evita crear demasiados subdirectorios anidados.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h3>Actividad: Creación de estructura de directorios</h3>
+    <p>Crea una estructura de directorios para un proyecto personal, siguiendo las mejores prácticas.</p>
+</section>
+
+<section class="slide">
+    <h3>Resumen</h3>
+    <ul>
+        <li>La estructura de directorios es crucial para la organización del sistema operativo.</li>
+        <li>Linux y Windows tienen diferentes convenciones de organización.</li>
+        <li>Buenas prácticas incluyen nombres descriptivos, organización limpia y evitar anidamiento profundo.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Normativa: Seguridad en la gestión de directorios</h3>
+    <p>Es importante establecer políticas de seguridad para el acceso a los directorios, especialmente aquellos que contienen información sensible.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0374 Administración de sistemas operativos.md · Información del sistema: → Estructura de directorios.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 04:54:47</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>
