@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Elaboración de documentos utilizando macros — Elaboración de documentos y plantillas mediante procesadores de texto — Aplicaciones ofimáticas.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="elaboracion-de-documentos-utilizando-macros">
+<h1>Elaboración de documentos utilizando macros</h1>
+<p><strong>Unidad:</strong> Elaboración de documentos y plantillas mediante procesadores de texto<br><strong>Documento:</strong> Aplicaciones ofimáticas.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Elaboración de documentos y plantillas mediante procesadores de texto</h1>
+    <p><strong>Objetivo:</strong> Aprender a utilizar macros en procesadores de texto para automatizar tareas repetitivas.</p>
+</section>
+
+<section class="slide">
+    <h2>¿Qué son las macros?</h2>
+    <p>Macros son secuencias de comandos predefinidos que pueden ser ejecutados con un solo comando o atajo de teclado.</p>
+</section>
+
+<section class="slide">
+    <h2>Beneficios de usar macros</h2>
+    <ul>
+        <li>Eficiencia en el trabajo diario</li>
+        <li>Reducción de errores humanos</li>
+        <li>Consistencia en la formato de documentos</li>
+        <li>Ahorro de tiempo y recursos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplos comunes de macros</h2>
+    <ul>
+        <li>Formato de encabezados y pie de página</li>
+        <li>Cálculos automáticos en hojas deálculo</li>
+        <li>Generación automática de informes</li>
+        <li>Creación de plantillas estándar</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Cómo crear una macro en Microsoft Word</h2>
+    <ol>
+        <li>Escribe el código VBA (Visual Basic for Applications)</li>
+        <li>Guarda el documento como un archivo de macro (.docm)</li>
+        <li>Asigna un atajo de teclado a la macro</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo práctico: Crear una macro para insertar una firma digital</h2>
+    <p>Código VBA básico:</p>
+    <pre><code>Sub InsertSignature()
+        ActiveDocument.Signatures.Add Location:=Selection.Range, _
+            Signer:="Nombre del firmante", SignatureProvider:="Microsoft Office Digital Certificate"
+    End Sub</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Cómo ejecutar una macro en Microsoft Word</h2>
+    <ol>
+        <li>Ve a la pestaña "Desarrollador"</li>
+        <li>Haz clic en "Macros" y selecciona la macro deseada</li>
+        <li>Ejecuta la macro con el botón "Ejecutar"</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes al crear macros</h2>
+    <ul>
+        <li>No guardar el documento como archivo de macro (.docm)</li>
+        <li>Sintaxis incorrecta en el código VBA</li>
+        <li>No asignar un atajo de teclado a la macro</li>
+        <li>Problemas con los permisos de seguridad del sistema</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas al crear macros</h2>
+    <ul>
+        <li>Comentar el código para facilitar su mantenimiento</li>
+        <li>Probar el código en un documento de prueba antes de usarlo en producción</li>
+        <li>Asegurarse de que los permisos de seguridad del sistema permitan la ejecución de macros</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Caso práctico: Automatización de un informe semanal</h2>
+    <p>Macros pueden ser utilizadas para automatizar el proceso de generación de informes semanales, incluyendo la recopilación de datos y su formato.</p>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: ¿Qué es una macro?</h2>
+    <ol>
+        <li>Un programa que ejecuta comandos automáticamente</li>
+        <li>Una hoja deálculo en Excel</li>
+        <li>Un tipo de archivo de texto</li>
+        <li>Una función matemática en una hoja deálculo</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist para crear macros eficientes</h2>
+    <ul>
+        <li>Identificar las tareas repetitivas</li>
+        <li>Diseñar el código VBA</li>
+        <li>Probar el código en un documento de prueba</li>
+        <li>Asegurarse de que los permisos de seguridad del sistema permitan la ejecución de macros</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Crear una macro personalizada</h2>
+    <p>Crea una macro en Microsoft Word que realice una tarea específica que te resulte útil en tu trabajo diario.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Macros son secuencias de comandos predefinidos que pueden ser ejecutados con un solo comando o atajo de teclado.</li>
+        <li>Se utilizan para automatizar tareas repetitivas y mejorar la eficiencia en el trabajo diario.</li>
+        <li>Existen diferentes procesadores de texto, como Microsoft Word, que permiten crear macros.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa sobre seguridad de macros</h2>
+    <p>Es importante seguir las normativas de seguridad al trabajar con macros para evitar problemas de seguridad y garantizar la confidencialidad de los datos.</p>
+</section>
+
+<section class="slide">
+    <h2>Recursos adicionales</h2>
+    <ul>
+        <li><a href="https://support.microsoft.com/es-es/office/introducción-a-los-macros-en-office-f1b02f31-9acc-46d8-8bad-e75e494365">Microsoft Office Support: Introducción a los macros en Office</a></li>
+        <li><a href="https://www.youtube.com/results?search_query=macro+word+tutorial">Tutoriales de macros en Word</a></li>
+    </ul>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">Aplicaciones ofimáticas.md · Elaboración de documentos y plantillas mediante procesadores de texto → Elaboración de documentos utilizando macros</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 13:14:03</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

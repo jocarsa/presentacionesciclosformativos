@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Zonas primarias y secundarias — Instalación de servicios de resolución de nombres — Servicios en red.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="zonas-primarias-y-secundarias">
+<h1>Zonas primarias y secundarias</h1>
+<p><strong>Unidad:</strong> Instalación de servicios de resolución de nombres<br><strong>Documento:</strong> Servicios en red.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Zonas primarias y secundarias en DNS</h2>
+    <p>Las zonas primarias y secundarias son fundamentales para la gestión del dominio en el sistema DNS (Domain Name System). Las zonas primarias contienen la información más actualizada sobre un dominio, mientras que las zonas secundarias son copias de estas informaciones.</p>
+</section>
+
+<section class="slide">
+    <h2>Características de las zonas primarias</h2>
+    <ul>
+        <li>Contienen la información más reciente y precisa sobre un dominio.</li>
+        <li>Son gestionadas directamente por el administrador del dominio.</li>
+        <li>Almacenan registros DNS como A,NAME, MX, entre otros.</li>
+        <li>Permiten la autoridad total sobre los datos del dominio.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Características de las zonas secundarias</h2>
+    <ul>
+        <li>Son copias de las zonas primarias y no contienen la información original.</li>
+        <li>Son gestionadas por servidores DNS confiables (esclavos).</li>
+        <li>Proporcionan redundancia y distribución del tráfico DNS.</li>
+        <li>No pueden ser modificados directamente, solo actualizadas por los esclavos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Proceso de creación de una zona primaria</h2>
+    <ol>
+        <li>Configurar el servidor DNS para que gestione la zona primaria.</li>
+        <li>Cargar los registros DNS necesarios en el archivo de zona.</li>
+        <li>Verificar la sintaxis del archivo de zona con herramientas como `named-checkzone`.</li>
+        <li>Reiniciar el servicio DNS para aplicar los cambios.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Proceso de creación de una zona secundaria</h2>
+    <ol>
+        <li>Configurar el servidor DNS para que gestione la zona secundaria.</li>
+        <li>Especificar la dirección IP del servidor primario en el archivo de configuración.</li>
+        <li>Verificar la configuración con herramientas como `named-checkconf`.</li>
+        <li>Reiniciar el servicio DNS para aplicar los cambios.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas en zonas primarias y secundarias</h2>
+    <ul>
+        <li>Mantener las zonas actualizadas regularmente.</li>
+        <li>Utilizar herramientas de monitorización para detectar problemas.</li>
+        <li>Realizar copias de seguridad periódicas de los archivos de zona.</li>
+        <li>Implementar políticas de acceso controlados a los servidores DNS.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes en zonas primarias y secundarias</h2>
+    <ul>
+        <li>Sintaxis incorrecta en el archivo de zona.</li>
+        <li>No actualización de las zonas secundarias.</li>
+        <li>Fallo en la replicación entre servidores.</li>
+        <li>Permisos insuficientes para modificar los archivos de zona.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: Zona primaria vs. Zona secundaria</h2>
+    <table>
+        <tr>
+            <th>Zona Primaria</th>
+            <th>Zona Secundaria</th>
+        </tr>
+        <tr>
+            <td>Información original y actualizada.</td>
+            <td>Copia de la zona primaria.</td>
+        </tr>
+        <tr>
+            <td>Gestionada por el administrador del dominio.</td>
+            <td>Gestionada por servidores confiables (esclavos).</td>
+        </tr>
+        <tr>
+            <td>Permite modificaciones directas.</td>
+            <td>No puede ser modificada directamente.</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: Zonas primarias y secundarias</h2>
+    <p>¿Cuál de las siguientes afirmaciones es verdadera sobre las zonas secundarias?</p>
+    <ol type="A">
+        <li>Son gestionadas directamente por el administrador del dominio.</li>
+        <li>No pueden ser modificadas directamente, solo actualizadas por los esclavos.</li>
+        <li>Contienen la información más reciente y precisa sobre un dominio.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Configuración de zonas primarias y secundarias</h2>
+    <ul>
+        <li>Configurar el servidor DNS para gestionar la zona.</li>
+        <li>Cargar los registros DNS necesarios en el archivo de zona.</li>
+        <li>Especificar la dirección IP del servidor primario (en caso de zona secundaria).</li>
+        <li>Verificar la sintaxis y configuración con herramientas como `named-checkzone` y `named-checkconf`.</li>
+        <li>Reiniciar el servicio DNS para aplicar los cambios.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Creación de una zona secundaria</h2>
+    <p>Crea una zona secundaria para un dominio específico, utilizando un servidor DNS confiable como esclavo. Verifica la configuración y actualiza las zonas según sea necesario.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen: Zonas primarias y secundarias</h2>
+    <ul>
+        <li>Zonas primarias contienen la información original y son gestionadas directamente por el administrador del dominio.</li>
+        <li>Zonas secundarias son copias de las zonas primarias, gestionadas por servidores confiables (esclavos).</li>
+        <li>Las zonas secundarias proporcionan redundancia y distribución del tráfico DNS.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Gestión de zonas primarias y secundarias</h2>
+    <p>Seguir las mejores prácticas y políticas estableidas por la organización para la gestión segura y eficiente de las zonas primarias y secundarias en el sistema DNS.</p>
+</section>
+
+<section class="slide">
+    <h1>Instalación de servicios de resolución de nombres</h1>
+    <h2>Zonas primarias y secundarias</h2>
+    <p>Objetivo: Comprender las diferencias y funciones de las zonas primarias y secundarias en el sistema DNS.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">Servicios en red.md · Instalación de servicios de resolución de nombres → Zonas primarias y secundarias</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 18:42:21</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

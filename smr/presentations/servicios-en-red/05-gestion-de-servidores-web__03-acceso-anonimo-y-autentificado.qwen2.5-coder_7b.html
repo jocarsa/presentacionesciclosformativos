@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Acceso anónimo y autentificado — Gestión de servidores web — Servicios en red.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="acceso-anonimo-y-autentificado">
+<h1>Acceso anónimo y autentificado</h1>
+<p><strong>Unidad:</strong> Gestión de servidores web<br><strong>Documento:</strong> Servicios en red.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Gestión de servidores web</h1>
+    <p>Objetivo: Comprender los métodos de acceso anónimo y autentificado a servidores web.</p>
+</section>
+
+<section class="slide">
+    <h2>Acceso anónimo a servidores web</h2>
+    <p>El acceso anónimo permite acceder a recursos sin identificación previa.</p>
+    <ul>
+        <li>No se requiere registro ni autenticación.</li>
+        <li>Ejemplos: Búsqueda en motores de búsqueda, descarga de contenido público.</li>
+        <li>Desventajas: Falta de control sobre el uso del recurso.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Autenticación a servidores web</h2>
+    <p>La autenticación implica la verificación de identidad antes del acceso.</p>
+    <ul>
+        <li>Necesita credenciales como usuario y contraseña.</li>
+        <li>Ejemplos: Acceso a cuentas bancarias, correo electrónico corporativo.</li>
+        <li>Ventajas: Mayor control y seguridad sobre el uso del recurso.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Tipos de autenticación web</h2>
+    <ul>
+        <li><strong>Básica:</strong> Envía credenciales en texto plano.</li>
+        <li><strong>Digest:</strong> Encripta las credenciales antes de enviarlas.</li>
+        <li><strong>Cookies:</strong> Usa cookies para almacenar la sesión del usuario.</li>
+        <li><strong>Tokens JWT ( Web Tokens):</strong> Codifica información de autenticación en un token.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de autenticación básica</h2>
+    <p>Credenciales enviadas en la cabecera HTTP:</p>
+    <pre><code>Authorization: Basic dXNlcm5hbWU6GFzc3dvcmQ=</code></pre>
+    <p>(dXNlcm5hbWU6GFzc3dvcmQ = usuario:contraseña en base64)</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de autenticación con cookies</h2>
+    <p>El servidor establece una cookie que el cliente envía en cada solicitud:</p>
+    <pre><code>Set-Cookie: sessionId=abc123; Path=/; HttpOnly</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Caso de estudio: Seguridad en redes sociales</h2>
+    <p>Redes sociales utilizan autenticación para proteger cuentas y contenido.</p>
+    <ul>
+        <li>Autenticación social (Google, Facebook).</li>
+        <li>Autenticación multifactor.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas de autenticación</h2>
+    <ul>
+        <li>Usar contraseñas fuertes y únicas.</li>
+        <li>Habilitar autenticación multifactor.</li>
+        <li>Actualizar regularmente las credenciales.</li>
+        <li>Utilizar HTTPS para proteger la transmisión de datos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes en autenticación</h2>
+    <ul>
+        <li>Uso de contraseñas débiles o fáciles de adivinar.</li>
+        <li>No habilitar autenticación multifactor.</li>
+        <li>No actualizar las credenciales regularmente.</li>
+        <li>Usar protocolos inseguros (HTTP) para la transmisión de datos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: Autenticación vs. Autorización</h2>
+    <p><strong>Autenticación:</strong> Verificación de identidad del usuario.</p>
+    <p><strong>Autorización:</strong> Determinación de los permisos del usuario.</p>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: Autenticación web</h2>
+    <ul>
+        <li>¿Qué tipo de autenticación envía credenciales en texto plano?</li>
+        <li>¿Cuáles son los beneficios de la autenticación multifactor?</li>
+        <li>¿Qué protocolo debe usarse para proteger las credenciales durante el tráfico web?</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Seguridad en acceso a servidores web</h2>
+    <ul>
+        <li>Usar autenticación fuerte y única.</li>
+        <li>Habilitar autenticación multifactor.</li>
+        <li>Actualizar regularmente las credenciales.</li>
+        <li>Utilizar HTTPS para la transmisión de datos.</li>
+        <li>Implementar políticas de contraseñas seguras.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Analiza un sitio web</h2>
+    <p>Evaluación práctica del uso de autenticación en un sitio web:</p>
+    <ul>
+        <li>Identifica el tipo de autenticación utilizado.</li>
+        <li>Evalúa la seguridad de las credenciales.</li>
+        <li>Sugerir mejoras si es necesario.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Resumen: Acceso anónimo y autentificado en servidores web</h2>
+    <p>El acceso anónimo permite acceder sin identificación, mientras que la autenticación requiere credenciales.</p>
+    <ul>
+        <li>Existen varios tipos de autenticación como básica, digest, cookies y JWT.</li>
+        <li>Buenas prácticas incluyen contraseñas fuertes, autenticación multifactor y HTTPS.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección de datos en la nube</h2>
+    <p>Reglamentos como GDPR requieren proteger las credenciales y datos sensibles.</p>
+    <ul>
+        <li>Implementar políticas de seguridad robustas.</li>
+        <li>Realizar auditorías periódicas de seguridad.</li>
+        <li>Informar a los usuarios sobre la protección de sus datos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Preguntas y discusión</h2>
+    <p>¿Tienes preguntas o dudas sobre el acceso anónimo y autentificado en servidores web?</p>
+    <p>Comparte tus experiencias y mejores prácticas.</p>
+</section>
+
+<section class="slide">
+    <h2>Gracias por su atención</h2>
+    <p>Preguntas adicionales: [email]</p>
+    <p>Recursos adicionales: [enlace a documentación adicional]</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">Servicios en red.md · Gestión de servidores web → Acceso anónimo y autentificado</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 18:59:00</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

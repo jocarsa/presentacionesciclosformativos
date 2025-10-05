@@ -1,0 +1,3622 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Configuración de dispositivos de interconexión y seguridad básica — Instalación/configuración de los equipos de red — Redes locales.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="configuracion-de-dispositivos-de-interconexion-y-seguridad-basica">
+<h1>Configuración de dispositivos de interconexión y seguridad básica</h1>
+<p><strong>Unidad:</strong> Instalación/configuración de los equipos de red<br><strong>Documento:</strong> Redes locales.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Configuración de dispositivos de interconexión y seguridad básica</h1>
+    <p>Objetivo: Aprender las configuraciones básicas de dispositivos de red y cómo implementar medidas de seguridad.</p>
+</section>
+
+<section class="slide">
+    <h2>Introducción a los Dispositivos de Interconexión</h2>
+    <ul>
+        <li>Routers</li>
+        <li>Switches</li>
+        <li>Hubs</li>
+        <li>Firewalls</li>
+        <li>Modems</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración Básica de un Router</h2>
+    <p>Paso 1: Conectar el router a la red eléctrica.</p>
+    <p>Paso 2: Acceder al interfaz web del router (generalmente 192.168.0.1 o 192.168.1.1).</p>
+</section>
+
+<section class="slide">
+    <h2>Configuración de IP y Máscara de Subred</h2>
+    <ul>
+        <li>Ejemplo: Configurar una IP estática en un dispositivo.</li>
+        <li>Máscara de subred común: 255.255.255.0</li>
+        <li>Gateway por defecto: La IP del router</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Puertos y Servicios</h2>
+    <p>Ejemplo: Habilitar el servicio SSH en un router.</p>
+    <p>Paso 1: Ingresar a la configuración avanzada del router.</p>
+    <p>Paso 2: Buscar opciones de servicios o aplicaciones.</p>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Firewall Básica</h2>
+    <ul>
+        <li>Ejemplo: Habilitar el firewall en un router.</li>
+        <li>Paso 1: Acceder a la configuración de seguridad del router.</li>
+        <li>Paso 2: Activar el firewall y configurar reglas básicas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Seguridad contra DDoS</h2>
+    <p>Ejemplo: Implementar un sistema básico de protección contra DDoS.</p>
+    <p>Paso 1: Habilitar el filtrado de paquetes en el firewall.</p>
+    <p>Paso 2: Configurar límites de tráfico por IP.</p>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Encriptación WPA3</h2>
+    <ul>
+        <li>Ejemplo: Configurar una red Wi-Fi segura con WPA3.</li>
+        <li>Paso 1: Acceder a la configuración de red del router.</li>
+        <p>Paso 2: Seleccionar el protocolo de seguridad WPA3.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de VLANs</h2>
+    <p>Ejemplo: Crear una VLAN en un switch para segmentar la red.</p>
+    <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+    <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+</section>
+
+<section class="slide">
+    <h2>Configuración de DHCP Server</h2>
+    <ul>
+        <li>Ejemplo: Habilitar el servidor DHCP en un router.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del router.</p>
+        <p>Paso 2: Configurar las opciones del servidor DHCP.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de DNS</h2>
+    <ul>
+        <li>Ejemplo: Configurar el servidor DNS en un router.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del router.</p>
+        <p>Paso 2: Ingresar las direcciones IP de los servidores DNS.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de NTP</h2>
+    <ul>
+        <li>Ejemplo: Configurar el servidor NTP en un router.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del router.</p>
+        <p>Paso 2: Ingresar las direcciones IP de los servidores NTP.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de SSH para Seguridad Remota</h2>
+    <ul>
+        <li>Ejemplo: Habilitar el acceso SSH en un router.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del router.</p>
+        <p>Paso 2: Configurar las opciones de seguridad SSH.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de VLAN Trunking</h2>
+    <ul>
+        <li>Ejemplo: Habilitar el trunking en un switch para conectar redes.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces como trunks y asignar VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de QoS (Calidad de Servicio)</h2>
+    <ul>
+        <li>Ejemplo: Implementar QoS en un router para priorizar el tráfico.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del router.</p>
+        <p>Paso 2: Configurar las políticas de QoS.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <ul>
+        <li>Ejemplo: Crear una red virtual en un switch para segmentar la red.</li>
+        <p>Paso 1: Acceder a la configuración avanzada del switch.</p>
+        <p>Paso 2: Configurar las interfaces y asignarlas a VLANs.</p>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración de Redes Virtuales (VLANs)</h2>
+    <
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">Redes locales.md · Instalación/configuración de los equipos de red → Configuración de dispositivos de interconexión y seguridad básica</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 17:54:03</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Componentes de un servicio de resolución de nombres — Instalación de servicios de resolución de nombres — Servicios en red.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="componentes-de-un-servicio-de-resolucion-de-nombres">
+<h1>Componentes de un servicio de resolución de nombres</h1>
+<p><strong>Unidad:</strong> Instalación de servicios de resolución de nombres<br><strong>Documento:</strong> Servicios en red.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Instalación de servicios de resolución de nombres</h1>
+    <p><strong>Objetivo:</strong> Comprender los componentes básicos de un servicio de resolución de nombres y su configuración.</p>
+</section>
+
+<section class="slide">
+    <h2>Componentes de un servicio de resolución de nombres</h2>
+    <ul>
+        <li><strong>DNS (Domain Name System):</strong> Sistema que traduce nombres de dominio a direcciones IP.</li>
+        <li><strong>Servidor DNS:</strong> Equipo que almacena y proporciona esta información.</li>
+        <li><strong>Zona DNS:</strong> Conjunto de registros DNS que pertenecen a una misma zona o dominio.</li>
+        <li><strong>Registro A (Address):</strong> Asocia un nombre de dominio con una dirección IPv4.</li>
+        <li><strong>RegistroNAME (Canonical Name):</strong> Asocia un nombre de dominio con otro nombre de dominio.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo: Configuración básica de DNS</h2>
+    <p>Configurar un servidor DNS implica:</p>
+    <ol>
+        <li>Instalar el software del servidor DNS (ej. BIND, PowerDNS).</li>
+        <li>Crear zonas DNS para los dominios que se gestionarán.</li>
+        <li>Agregar registros A yNAME según sea necesario.</li>
+        <li>Configurar la red para que utilice el servidor DNS local.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Caso: Implementación de un servicio DNS en una pequeña empresa</h2>
+    <p>Una pequeña empresa puede utilizar un servidor DNS interno para:</p>
+    <ul>
+        <li>Gestionar fácilmente los nombres de dominio internos.</li>
+        <li>Reducir el uso de servicios externos como Google DNS.</li>
+        <li>Aumentar la seguridad y la confiabilidad de su red interna.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Proceso: Configuración paso a paso del servidor DNS</h2>
+    <ol>
+        <li>Instalar el software del servidor DNS (ej. BIND).</li>
+        <li>Configurar la interfaz de red para permitir conexiones entrantes.</li>
+        <li>Crear zonas DNS y agregar registros A yNAME.</li>
+        <li>Probar la configuración utilizando herramientas como nslookup o dig.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas en la configuración de servidores DNS</h2>
+    <ul>
+        <li><strong>Seguridad:</strong> Utilizar firewalls y autenticación para proteger contra ataques.</li>
+        <li><strong>Redundancia:</strong> Mantener múltiples servidores DNS para evitar downtime.</li>
+        <li><strong>Mantenimiento:</strong> Realizar actualizaciones periódicas y realizar copias de seguridad.</li>
+        <li><strong>Monitoreo:</strong> Utilizar herramientas para monitorear el rendimiento del servidor.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes en la configuración de servidores DNS</h2>
+    <ul>
+        <li>No tener suficientes registros A yNAME.</li>
+        <li>No configurar correctamente las zonas DNS.</li>
+        <li>No realizar pruebas adecuadas antes de implementar cambios.</li>
+        <li>No mantener actualizadas las direcciones IP.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: Servidores DNS internos vs. servicios externos</h2>
+    <table>
+        <tr>
+            <th>Servidor DNS Interno</th>
+            <th>Servicios Externos (ej. Google DNS)</th>
+        </tr>
+        <tr>
+            <td>Control total sobre los datos.</td>
+            <td>No control sobre los datos.</td>
+        </tr>
+        <tr>
+            <td>Puede ser más seguro.</td>
+            <td>Puede ser menos seguro debido a la dependencia de terceros.</td>
+        </tr>
+        <tr>
+            <td>Costo adicional si se necesita hardware y mantenimiento.</td>
+            <td>No requiere hardware, pero puede tener costos asociados con el uso del servicio.</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: Identificación de componentes DNS</h2>
+    <p>¿Cuáles de los siguientes son componentes de un servidor DNS?</p>
+    <ul>
+        <li>DNS (Domain Name System)</li>
+        <li>Servidor DNS</li>
+        <li>Zona DNS</li>
+        <li>Registro A</li>
+        <li>RegistroNAME</li>
+        <li>Firewall</li>
+        <li>Router</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Configuración de un servidor DNS</h2>
+    <ol>
+        <li>Instalar el software del servidor DNS.</li>
+        <li>Configurar la interfaz de red.</li>
+        <li>Crear zonas DNS.</li>
+        <li>Agregar registros A yNAME.</li>
+        <li>Probar la configuración.</li>
+        <li>Realizar copias de seguridad periódicas.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Crear una zona DNS para un dominio</h2>
+    <p>Crear una zona DNS para el dominio "ejemplo.com" con los siguientes registros:</p>
+    <ul>
+        <li>www.ejemplo.com -> 192.168.1.100</li>
+        <li>mail.ejemplo.com -> 192.168.1.101</li>
+        <li>CNAME: subdominio.ejemplo.com -> www.ejemplo.com</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <p>Los componentes básicos de un servicio de resolución de nombres son el DNS, los servidores DNS, las zonas DNS y los registros. La configuración correcta es crucial para garantizar la funcionalidad y seguridad del sistema.</p>
+</section>
+
+<section class="slide">
+    <h2>Normativa general</h2>
+    <ul>
+        <li><strong>Reglamento de Seguridad en el Trabajo (RSST):</strong> Requiere medidas para proteger la información sensible, incluyendo los datos de red.</li>
+        <li><strong>Política Interna de Red:</strong> Debe especificar las políticas y procedimientos relacionados con la gestión del servidor DNS.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Preguntas y discusión</h2>
+    <p>¿Tienes preguntas sobre la configuración de servidores DNS? ¿Hay algún aspecto que te gustaría explorar más a fondo?</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">Servicios en red.md · Instalación de servicios de resolución de nombres → Componentes de un servicio de resolución de nombres</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 18:40:13</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

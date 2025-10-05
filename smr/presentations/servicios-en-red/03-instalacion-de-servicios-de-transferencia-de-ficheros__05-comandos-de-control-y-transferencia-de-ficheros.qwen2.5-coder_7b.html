@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Comandos de control y transferencia de ficheros — Instalación de servicios de transferencia de ficheros — Servicios en red.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="comandos-de-control-y-transferencia-de-ficheros">
+<h1>Comandos de control y transferencia de ficheros</h1>
+<p><strong>Unidad:</strong> Instalación de servicios de transferencia de ficheros<br><strong>Documento:</strong> Servicios en red.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Instalación de servicios de transferencia de ficheros</h1>
+    <p>Objetivo: Aprender comandos de control y transferencia de ficheros.</p>
+</section>
+
+<section class="slide">
+    <h2>Introducción a los Comandos de Transferencia de Ficheros</h2>
+    <ul>
+        <li>Comprenden herramientas para enviar, recibir y gestionar archivos entre sistemas.</li>
+        <li>Ejemplos populares: SCP, SFTP, FTP, RSYNC.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>SCP (Secure Copy Protocol)</h2>
+    <p>Copia segura de ficheros entre sistemas Linux/Unix.</p>
+    <code>scp /ruta/local/archivo usuario@servidor:/ruta/remota/</code>
+</section>
+
+<section class="slide">
+    <h2>SFTP (SSH File Transfer Protocol)</h2>
+    <p>Transferencia de archivos a través de SSH, proporcionando seguridad.</p>
+    <code>sftp usuario@servidor</code>
+</section>
+
+<section class="slide">
+    <h2>FTP (File Transfer Protocol)</h2>
+    <p>Protocolo estándar para transferencias de ficheros en Internet.</p>
+    <code>ftp servidor</code>
+</section>
+
+<section class="slide">
+    <h2>RSYNC</h2>
+    <p>Sincronización bidireccional de archivos y directorios.</p>
+    <code>rsync -avz /ruta/local/ usuario@servidor:/ruta/remota/</code>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo Práctico: Transferencia de Ficheros con SCP</h2>
+    <ol>
+        <li>Conectarse al servidor remoto.</li>
+        <li>Copiar un archivo local a un directorio remoto.</li>
+        <li>Verificar la copia en el servidor.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas con SCP</h2>
+    <ul>
+        <li>Usar SSH para autenticación segura.</li>
+        <li>Especificar rutas absolutas para evitar problemas.</li>
+        <li>Comprimir datos con la opción -z.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes al Usar SCP</h2>
+    <ul>
+        <li>No especificar la ruta remota correctamente.</li>
+        <li>No tener permisos suficientes en el servidor.</li>
+        <li>Olvidar la opción de compresión (-z).</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa entre SCP y SFTP</h2>
+    <table>
+        <tr>
+            <th>SCP</th>
+            <th>SFTP</th>
+        </tr>
+        <tr>
+            <td>Copia segura de ficheros.</td>
+            <td>Transferencia de archivos a través de SSH.</td>
+        </tr>
+        <tr>
+            <td>No requiere servidor FTP.</td>
+            <td>Necesita un servidor SSH.</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Comandos de Transferencia de Ficheros</h2>
+    <p>¿Cuál comando se utiliza para transferir archivos entre sistemas Linux/Unix de manera segura?</p>
+    <ol>
+        <li>a) FTP</li>
+        <li>b) SCP</li>
+        <li>c) RSYNC</li>
+        <li>d) SFTP</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist de Transferencia de Ficheros</h2>
+    <ul>
+        <li>Verificar la ruta correcta.</li>
+        <li>Asegurarse de tener permisos suficientes.</li>
+        <li>Comprimir datos si es necesario.</li>
+        <li>Usar SSH para autenticación segura.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo Práctico: Transferencia de Ficheros con SFTP</h2>
+    <ol>
+        <li>Conectarse al servidor remoto usando SFTP.</li>
+        <li>Copiar un archivo local a un directorio remoto.</li>
+        <li>Verificar la copia en el servidor.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas con SFTP</h2>
+    <ul>
+        <li>Usar SSH para autenticación segura.</li>
+        <li>Especificar rutas absolutas para evitar problemas.</li>
+        <li>Comprimir datos si es necesario.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes al Usar SFTP</h2>
+    <ul>
+        <li>No especificar la ruta remota correctamente.</li>
+        <li>No tener permisos suficientes en el servidor.</li>
+        <li>Olvidar la opción de compresión (-z).</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Resumen: Comandos de Transferencia de Ficheros</h2>
+    <ul>
+        <li>SCP, SFTP y FTP son herramientas comunes para transferencias de ficheros.</li>
+        <li>Cada uno tiene sus ventajas y desventajas dependiendo del escenario.</li>
+        <li>Buenas prácticas incluyen seguridad, permisos y compresión.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa General sobre Transferencia de Ficheros</h2>
+    <p>Seguridad en transferencias de datos es crucial para proteger información confidencial.</p>
+    <ul>
+        <li>Usar protocolos seguros como SCP y SFTP.</li>
+        <li>Implementar autenticación fuerte.</li>
+        <li>Limitar los permisos de acceso a ficheros sensibles.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico: Transferencia Segura de Datos</h2>
+    <p>Una empresa necesita transferir datos confidenciales a un proveedor remoto.</p>
+    <ol>
+        <li>Usar SCP para copiar archivos.</li>
+        <li>Configurar SSH con claves públicas y privadas.</li>
+        <li>Comprimir los datos antes de la transferencia.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Transferencia de Ficheros</h2>
+    <p>Ejercicio práctico para aplicar lo aprendido:</p>
+    <ul>
+        <li>Copiar un archivo local a un servidor remoto usando SCP.</li>
+        <li>Verificar la copia en el servidor.</li>
+        <li>Comprimir los datos antes de la transferencia.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conclusión</h2>
+    <p>Los comandos de control y transferencia de ficheros son herramientas esenciales en el manejo de datos en redes.</p>
+    <p>Es crucial aplicar buenas prácticas para garantizar la seguridad y eficiencia en las transferencias.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">Servicios en red.md · Instalación de servicios de transferencia de ficheros → Comandos de control y transferencia de ficheros</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 18:50:45</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

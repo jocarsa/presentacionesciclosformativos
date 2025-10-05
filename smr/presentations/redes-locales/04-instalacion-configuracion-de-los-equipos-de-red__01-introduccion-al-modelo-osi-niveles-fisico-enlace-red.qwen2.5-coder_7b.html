@@ -1,0 +1,3802 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Introducción al modelo OSI: niveles físico, enlace, red — Instalación/configuración de los equipos de red — Redes locales.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="introduccion-al-modelo-osi-niveles-fisico-enlace-red">
+<h1>Introducción al modelo OSI: niveles físico, enlace, red</h1>
+<p><strong>Unidad:</strong> Instalación/configuración de los equipos de red<br><strong>Documento:</strong> Redes locales.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Instalación/configuración de los equipos de red</h1>
+    <h3>Introducción al modelo OSI: niveles físico, enlace y red</h3>
+    <p>Objetivo: Comprender la estructura del modelo OSI y sus primeros tres niveles.</p>
+</section>
+
+<section class="slide">
+    <h2>Modelo OSI</h2>
+    <img src="modelosi.png" alt="Modelo OSI">
+    <p>El Modelo OSI (Open Systems Interconnection) es una estructura conceptual que describe cómo se comunican los sistemas informáticos.</p>
+</section>
+
+<section class="slide">
+    <h2>Nivel Físico</h2>
+    <ul>
+        <li>Define la interfaz entre el hardware de red y el medio de transmisión.</li>
+        <li>Especifica las características físicas del cableado, señales y velocidades.</li>
+        <li>Ejemplos: Ethernet, Wi-Fi, Fibra óptica.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Nivel Enlace de Datos</h2>
+    <p>Se encarga de transferir datos entre dispositivos conectados a la misma red física.</p>
+    <ul>
+        <li>Detecta errores y corrige los paquetes dañados.</li>
+        <li>Gestiona el flujo de datos para evitar colisiones.</li>
+        <li>Ejemplos: Ethernet, PPP, Frame Relay.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Nivel Red</h2>
+    <p>Se ocupa de la ruta y el enrutamiento de los paquetes entre diferentes redes.</p>
+    <ul>
+        <li>Determina la mejor ruta para enviar un paquete a su destino.</li>
+        <li>Gestiona las tablas de enrutamiento y los protocolos de enrutamiento.</li>
+        <li>Ejemplos: IP, ICMP, OSPF.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Práctica: Identificar niveles del modelo OSI</h2>
+    <p>¿Cuál nivel corresponde a la configuración de direcciones IP?</p>
+    <ol>
+        <li>Nivel Físico</li>
+        <li>Nivel Enlace de Datos</li>
+        <li>Nivel Red</li>
+        <li>Nivel Transporte</li>
+        <li>Nivel Sesión</li>
+        <li>Nivel Presentación</li>
+        <li>Nivel Aplicación</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes en el nivel físico</h2>
+    <ul>
+        <li>Cableado incorrecto</li>
+        <li>Fallos de conectores</li>
+        <li>Velocidades incompatibles</li>
+        <li>Interferencias electromagnéticas</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas en el nivel físico</h2>
+    <ul>
+        <li>Cableado correcto y ordenado</li>
+        <li>Uso de conectores de alta calidad</li>
+        <li>Verificación de velocidades y protocolos</li>
+        <li>Evitar interferencias electromagnéticas</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Caso: Implementación de una red local</h2>
+    <p>Una empresa decide implementar una red local para mejorar la comunicación interna.</p>
+    <ul>
+        <li>Configuración del nivel físico con cableado Ethernet.</li>
+        <li>Configuración del nivel enlace de datos con protocolo PPP.</li>
+        <li>Configuración del nivel red con protocolo IP y asignación de direcciones.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: Niveles del modelo OSI</h2>
+    <p>¿Cuál es el nivel que se encarga de la ruta y el enrutamiento de los paquetes?</p>
+    <ol>
+        <li>Nivel Físico</li>
+        <li>Nivel Enlace de Datos</li>
+        <li>Nivel Red</li>
+        <li>Nivel Transporte</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Configuración del nivel físico</h2>
+    <ul>
+        <li>Verificar la compatibilidad de velocidades.</li>
+        <li>Instalar conectores correctamente.</li>
+        <li>Comprobar el cableado sin interferencias.</li>
+        <li>Configurar los dispositivos según las especificaciones físicas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Diseño de una red local</h2>
+    <p>Diseña una red local simple con 5 dispositivos y determina el nivel que se encarga de cada configuración.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen del nivel físico</h2>
+    <ul>
+        <li>Define la interfaz entre hardware y medio de transmisión.</li>
+        <li>Especifica características físicas del cableado.</li>
+        <li>Configuración de dispositivos según las especificaciones físicas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Resumen del nivel enlace de datos</h2>
+    <ul>
+        <li>Transmite datos entre dispositivos conectados a la misma red física.</li>
+        <li>Detecta y corrige errores en los paquetes.</li>
+        <li>Gestiona el flujo de datos para evitar colisiones.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Resumen del nivel red</h2>
+    <ul>
+        <li>Determina la ruta y enrutamiento de los paquetes entre redes.</li>
+        <li>Gestiona las tablas de enrutamiento y protocolos de enrutamiento.</li>
+        <li>Configuración de direcciones IP y asignación de subredes.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Seguridad física en redes</h2>
+    <p>La normativa establece requisitos para la seguridad física en redes, incluyendo:</p>
+    <ul>
+        <li>Protección contra interferencias electromagnéticas.</li>
+        <li>Seguridad de los cables y conectores.</li>
+        <li>Control de acceso a las instalaciones.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por denegación de servicio (DoS)</h2>
+    <p>La normativa establece medidas para proteger contra ataques DoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por inyección SQL</h2>
+    <p>La normativa establece medidas para proteger contra ataques SQL Injection, incluyendo:</p>
+    <ul>
+        <li>Validación de entradas del usuario.</li>
+        <li>Uso de parámetros preparados.</li>
+        <li>Actualizaciones regulares de software y parches.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por phishing</h2>
+    <p>La normativa establece medidas para proteger contra ataques de phishing, incluyendo:</p>
+    <ul>
+        <li>Educar a los usuarios sobre la seguridad en línea.</li>
+        <li>Implementación de políticas de correo electrónico seguras.</li>
+        <li>Verificación de fuentes y enlaces confiables.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por malware</h2>
+    <p>La normativa establece medidas para proteger contra ataques de malware, incluyendo:</p>
+    <ul>
+        <li>Instalación y mantenimiento de antivirus.</li>
+        <li>Actualizaciones regulares del sistema operativo y software.</li>
+        <li>Implementación de políticas de seguridad de la información.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por ransomware</h2>
+    <p>La normativa establece medidas para proteger contra ataques de ransomware, incluyendo:</p>
+    <ul>
+        <li>Copia de seguridad regular y almacenamiento seguro.</li>
+        <li>Implementación de políticas de seguridad de la información.</li>
+        <li>Educar a los usuarios sobre el reconocimiento y respuesta a ransomware.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de firewalls.</li>
+        <li>Configuración de límites de tráfico.</li>
+        <li>Monitoreo y detección de anomalías.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Protección contra el ataque por DDoS</h2>
+    <p>La normativa establece medidas para proteger contra ataques DDoS, incluyendo:</p>
+    <ul>
+        <li>Implementación de fire
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">Redes locales.md · Instalación/configuración de los equipos de red → Introducción al modelo OSI: niveles físico, enlace, red</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 17:12:21</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

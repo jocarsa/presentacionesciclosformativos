@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Sistemas RAID — Gestión de dispositivos de almacenamiento — Seguridad informática.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="sistemas-raid">
+<h1>Sistemas RAID</h1>
+<p><strong>Unidad:</strong> Gestión de dispositivos de almacenamiento<br><strong>Documento:</strong> Seguridad informática.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Sistemas RAID en Gestión de Dispositivos de Almacenamiento</h1>
+    <p>Objetivo: Comprender los sistemas RAID y su importancia en la gestión de dispositivos de almacenamiento.</p>
+</section>
+
+<section class="slide">
+    <h2>Definición de RAID</h2>
+    <p>RAID (Redundant Array of Independent Disks) es una tecnología que agrupa varios discos duros físicos en un solo volumen lógico.</p>
+</section>
+
+<section class="slide">
+    <h2>Tipos de RAID</h2>
+    <ul>
+        <li>RAID 0: Agrupa discos para aumentar la velocidad de lectura/escritura.</li>
+        <li>RAID 1:rea una copia exacta de los datos en dos o más discos, proporcionando redundancia.</li>
+        <li>RAID 5: Combina velocidad y redundancia, distribuyendo los datos entre varios discos con paridad.</li>
+        <li>RAID 6: Similar a RAID 5 pero con mayor redundancia y menor rendimiento.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ventajas de RAID</h2>
+    <ul>
+        <li>Aumento del rendimiento en lectura/escritura.</li>
+        <li>Mejora la seguridad al almacenar copias redundantes de los datos.</li>
+        <li>Reducción del costo por unidad de capacidad.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Desventajas de RAID</h2>
+    <ul>
+        <li>Puede ser costoso en términos de hardware y mantenimiento.</li>
+        <li>Riesgo de pérdida total del sistema si ocurre un fallo.</li>
+        <li>No es recomendado para discos con datos críticos sin respaldo.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Configuración RAID</h2>
+    <p>La configuración de RAID generalmente se realiza a través del software o BIOS del sistema.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Configuración RAID 1</h2>
+    <ul>
+        <li>Se utilizan dos discos duros.</li>
+        <li>Cada disco almacena una copia exacta de los datos.</li>
+        <li>No hay paridad, solo redundancia.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Configuración RAID 5</h2>
+    <ul>
+        <li>Se utilizan tres discos duros.</li>
+        <li>Dos discos almacenan los datos, el terero contiene la paridad.</li>
+        <li>Aumenta la velocidad y proporciona redundancia.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Uso en Servidores Web</h2>
+    <p>Los servidores web suelen utilizar RAID 1 o RAID 5 para almacenar los archivos del sitio web y las bases de datos.</p>
+</section>
+
+<section class="slide">
+    <h2>Uso en Servidores de Archivos</h2>
+    <p>Los servidores de archivos pueden usar RAID 0 para aumentar la velocidad de acceso a grandes cantidades de datos.</p>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas</h2>
+    <ul>
+        <li>No utilizar RAID sin respaldo adicional.</li>
+        <li>Monitorear regularmente el estado del array RAID.</li>
+        <li>Cambiar discos fallantes lo antes posible para evitar pérdida de datos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes</h2>
+    <ul>
+        <li>No realizar copias de seguridad periódicas.</li>
+        <li>No monitorizar el rendimiento del array RAID.</li>
+        <li>No cambiar discos fallantes inmediatamente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa con Otros Sistemas</h2>
+    <table>
+        <tr>
+            <th>Sistema</th>
+            <th>Rendimiento</th>
+            <th>Redundancia</th>
+            <th>Coste</th>
+        </tr>
+        <tr>
+            <td>RAID 0</td>
+            <td>Alto</td>
+            <td>Baja</td>
+            <td>Medio</td>
+        </tr>
+        <tr>
+            <td>RAID 1</td>
+            <td>Bajo</td>
+            <td>Alta</td>
+            <td>Alto</td>
+        </tr>
+        <tr>
+            <td>RAID 5</td>
+            <td>Moderado</td>
+            <td>Media</td>
+            <td>Medio-Alto</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz</h2>
+    <p>¿Cuál es el tipo de RAID que ofrece la mejor redundancia pero con menor rendimiento?</p>
+    <ol>
+        <li>RAID 0</li>
+        <li>RAID 1</li>
+        <li>RAID 5</li>
+        <li>RAID 6</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist de Configuración RAID</h2>
+    <ul>
+        <li>Verificar la compatibilidad del sistema con el tipo de RAID.</li>
+        <li>Realizar copias de seguridad de los datos importantes.</li>
+        <li>Monitorear regularmente el estado del array RAID.</li>
+        <li>Cambiar discos fallantes inmediatamente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Diseño de un Array RAID</h2>
+    <p>Diseña y describe cómo configurar un array RAID 5 con tres discos duros de 1TB cada uno.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>RAID es una tecnología que agrupa discos para aumentar rendimiento y redundancia.</li>
+        <li>Diferentes tipos de RAID ofrecen diferentes niveles de rendimiento y seguridad.</li>
+        <li>Buenas prácticas incluyen respaldo, monitoreo y cambio inmediato de discos fallantes.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa</h2>
+    <p>La normativa vigente establece requisitos mínimos para la seguridad en el almacenamiento de datos sensibles.</p>
+</section>
+
+<section class="slide">
+    <h2>Preguntas Finales</h2>
+    <ul>
+        <li>¿Qué tipo de RAID es más recomendado para servidores web?</li>
+        <li>¿Cuál es la principal diferencia entre RAID 5 y RAID 6?</li>
+        <li>¿Qué medidas tomarías si detectas un fallo en un disco del array RAID?</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Agradecimientos</h2>
+    <p>Muchas gracias por su atención. ¡Hasta la próxima!</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">Seguridad informática.md · Gestión de dispositivos de almacenamiento → Sistemas RAID</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 18:14:59</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

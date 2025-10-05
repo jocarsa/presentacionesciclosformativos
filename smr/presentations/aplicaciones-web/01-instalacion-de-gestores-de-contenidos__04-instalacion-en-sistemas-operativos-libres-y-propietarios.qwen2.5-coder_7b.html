@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Instalación en sistemas operativos libres y propietarios — Instalación de gestores de contenidos — Aplicaciones web.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="instalacion-en-sistemas-operativos-libres-y-propietarios">
+<h1>Instalación en sistemas operativos libres y propietarios</h1>
+<p><strong>Unidad:</strong> Instalación de gestores de contenidos<br><strong>Documento:</strong> Aplicaciones web.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Instalación de gestores de contenidos</h1>
+    <p>Objetivo: Aprender a instalar y configurar gestores de contenidos en sistemas operativos libres y propietarios.</p>
+</section>
+
+<section class="slide">
+    <h2>¿Qué son los gestores de contenidos?</h2>
+    <ul>
+        <li>Sistemas que permiten crear, gestionar y publicar contenido web.</li>
+        <li>Ejemplos: WordPress, Joomla, Drupal.</li>
+        <li>Facilitan el manejo de sitios web sin necesidad de conocimientos avanzados de programación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Sistemas operativos libres y propietarios</h2>
+    <ul>
+        <li>Libres: GNU/Linux (Ubuntu, Debian), macOS, etc.</li>
+        <li>Propietarios: Windows, macOS, iOS, Android.</li>
+        <li>Cada sistema tiene sus ventajas y desventajas en términos de instalación de gestores de contenidos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Instalación en sistemas operativos libres</h2>
+    <p>Ejemplo: Instalación de WordPress en Ubuntu.</p>
+</section>
+
+<section class="slide">
+    <h3>Paso 1: Actualizar el sistema</h3>
+    <pre><code>sudo apt update && sudo apt upgrade</code></pre>
+</section>
+
+<section class="slide">
+    <h3>Paso 2: Instalar Apache</h3>
+    <pre><code>sudo apt install apache2</code></pre>
+</section>
+
+<section class="slide">
+    <h3>Paso 3: Instalar MySQL/MariaDB</h3>
+    <pre><code>sudo apt install mysql-server</code></pre>
+</section>
+
+<section class="slide">
+    <h3>Paso 4: Instalar</h3>
+    <pre><code>sudo apt install libapache2-mod-php-mysql</code></pre>
+</section>
+
+<section class="slide">
+    <h3>Paso 5: Descargar y descomprimir WordPress</h3>
+    <pre><code>wget https://wordpress.org/latest.tar.gz
+tar -xzvf latest.tar.gz
+sudo mv wordpress /var/www/html/</code></pre>
+</section>
+
+<section class="slide">
+    <h3>Paso 6: Configurar permisos</h3>
+    <pre><code>sudo chown -R www-data:www-data /var/www/html/wordpress
+sudo chmod -R 755 /var/www/html/wordpress</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Instalación en sistemas operativos propietarios</h2>
+    <p>Ejemplo: Instalación de WordPress en Windows.</p>
+</section>
+
+<section class="slide">
+    <h3>Paso 1: Descargar y descomprimir WordPress</h3>
+    <pre><code>Descarga el archivo zip desde wordpress.org y descomprímelo en:\inetpub\wwwroot\wordpress</code></pre>
+</section>
+
+<section class="slide">
+    <h3>Paso 2: Instalar XAMPP o WAMP</h3>
+    <p>Ejemplos de servidores web para Windows.</p>
+</section>
+
+<section class="slide">
+    <h3>Paso 3: Configurar la base de datos</h3>
+    <p>UsaMyAdmin (incluido en XAMPP/WAMP) para crear una nueva base de datos y usuario.</p>
+</section>
+
+<section class="slide">
+    <h3>Paso 4: Configurar WordPress</h3>
+    <p>Edita el archivo wp-config.php con los detalles de la base de datos.</p>
+</section>
+
+<section class="slide">
+    <h2>Configuración adicional</h2>
+    <ul>
+        <li>Habilitar SSL para encriptar las conexiones.</li>
+        <li>Optimizar el rendimiento del sitio web.</li>
+        <li>Instalar plugins y temas adicionales según necesidad.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración SSL en Ubuntu</h2>
+    <pre><code>sudo apt install certbot3-certbot-apache
+sudo certbot --apache -d tu-sitio.com</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Caso práctico: Crear un sitio web con WordPress en Linux</h2>
+    <p>Guía paso a paso para crear un sitio web funcional.</p>
+</section>
+
+<section class="slide">
+    <h3>Paso 1: Instalar los requisitos básicos</h3>
+    <pre><code>sudo apt update && sudo apt upgrade
+sudo apt install apache2 mysql-server libapache2-mod-php-mysql</code></pre>
+</section>
+
+<section class="slide">
+    <h3>Paso 2: Configurar la base de datos</h3>
+    <p>Crea una nueva base de datos y usuario en MySQL.</p>
+</section>
+
+<section class="slide">
+    <h3>Paso 3: Instalar WordPress</h3>
+    <pre><code>wget https://wordpress.org/latest.tar.gz
+tar -xzvf latest.tar.gz
+sudo mv wordpress /var/www/html/wordpress</code></pre>
+</section>
+
+<section class="slide">
+    <h3>Paso 4: Configurar permisos</h3>
+    <pre><code>sudo chown -R www-data:www-data /var/www/html/wordpress
+sudo chmod -R 755 /var/www/html/wordpress</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes y soluciones</h2>
+    <ul>
+        <li>Error 403: Verifica los permisos del directorio.</li>
+        <li>Error 500: Revisa el archivo wp-config.php y los logs de Apache.</li>
+        <li>No se carga el sitio: Asegúrate de que todos los servicios estén funcionando.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz</h2>
+    <p>¿Cuál es el gestor de contenidos más popular para sistemas operativos libres?</p>
+    <ol>
+        <li>Drupal</li>
+        <li>Joomla</li>
+        <li>WordPress</li>
+        <li>Moodle</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist de instalación</h2>
+    <ul>
+        <li>Instalar Apache</li>
+        <li>Instalar MySQL/MariaDB</li>
+        <li>Instalar</li>
+        <li>Descargar y descomprimir WordPress</li>
+        <li>Configurar permisos</li>
+        <li>Configurar la base de datos en MySQL</li>
+        <li>Instalar SSL (opcional)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad práctica</h2>
+    <p>Instala WordPress en tu sistema operativo preferido y configura un sitio web básico.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Instalación de gestores de contenidos en sistemas operativos libres y propietarios.</li>
+        <li>Pasos básicos para la instalación de WordPress.</li>
+        <li>Errores comunes y soluciones.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa general</h2>
+    <p>No se aplican restricciones específicas en este contexto.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">Aplicaciones web.md · Instalación de gestores de contenidos → Instalación en sistemas operativos libres y propietarios</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 14:26:05</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

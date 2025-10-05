@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Selección y utilización de cortafuegos en sistemas y servidores — Aplicación de mecanismos de seguridad activa — Seguridad informática.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="seleccion-y-utilizacion-de-cortafuegos-en-sistemas-y-servidores">
+<h1>Selección y utilización de cortafuegos en sistemas y servidores</h1>
+<p><strong>Unidad:</strong> Aplicación de mecanismos de seguridad activa<br><strong>Documento:</strong> Seguridad informática.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Aplicación de mecanismos de seguridad activa</h1>
+    <h3>Selección y utilización de cortafuegos en sistemas y servidores</h3>
+    <p>Objetivo: Comprender cómo seleccionar y configurar efectivamente cortafuegos para proteger sistemas y servidores.</p>
+</section>
+
+<section class="slide">
+    <h2>Cortafuegos: Concepto Básico</h2>
+    <p>Un cortafuego es un sistema de seguridad que controla el tráfico de red entrante, saliente y entre redes.</p>
+    <ul>
+        <li>Filtros de paquetes</li>
+        <li>Firewall de aplicación</li>
+        <li>Firewall de estado</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Tipos de Cortafuegos</h2>
+    <ul>
+        <li>Cortafuegos basados en reglas: Definen qué paquetes se permiten o deniegan.</li>
+        <li>Cortafuegos basados en estado: Analizan el estado del tráfico para tomar decisiones de seguridad.</li>
+        <li>Cortafuegos de aplicación: Filtran el tráfico a nivel de las aplicaciones.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Consideraciones al Seleccionar un Cortafuego</h2>
+    <ul>
+        <li>Funcionalidad requerida (paquetes, aplicación, estado)</li>
+        <li>Rendimiento y escalabilidad</li>
+        <li>Compatibilidad con el sistema operativo</li>
+        <li>Costo y licencias</li>
+        <li>Soporte técnico</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Selección de Cortafuego</h2>
+    <p>Para un servidor web, un cortafuego basado en reglas con capacidad para filtrar paquetes y aplicaciones sería apropiado.</p>
+</section>
+
+<section class="slide">
+    <h2>Configuración Básica de un Cortafuego</h2>
+    <ul>
+        <li>Definir interfaces (LAN, WAN)</li>
+        <li>Crear reglas de entrada y salida</li>
+        <li>Configurar puertos abiertos/cerrados</li>
+        <li>Aplicar políticas por defecto (aceptar/denegar)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Reglas de Cortafuego</h2>
+    <ul>
+        <li>Aceptar tráfico SSH en el puerto 22</li>
+        <li>Deny all incoming traffic except HTTP (80) and HTTPS (443)</li>
+        <li>Allow outgoing traffic on all ports</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico: Implementación de Cortafuego en un Servidor Web</h2>
+    <p>Se implementó un cortafuego basado en reglas para proteger un servidor web contra ataques DDoS.</p>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas al Usar Cortafuegos</h2>
+    <ul>
+        <li>Mantenimiento regular y actualizaciones</li>
+        <li>Monitoreo continuo del tráfico</li>
+        <li>Pruebas de penetración periódicas</li>
+        <li>Documentación detallada</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes al Usar Cortafuegos</h2>
+    <ul>
+        <li>No definir políticas por defecto (aceptar/denegar)</li>
+        <li>Permitir tráfico innecesario</li>
+        <li>No monitorear el tráfico</li>
+        <li>No mantenerse actualizado</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa de Cortafuegos</h2>
+    <table>
+        <tr>
+            <th>Tipo</th>
+            <th>Cortafuego basado en reglas</th>
+            <th>Cortafuego basado en estado</th>
+            <th>Cortafuego de aplicación</th>
+        </tr>
+        <tr>
+            <td>Funcionalidad</td>
+            <td>Fácil de configurar, pero limitado</td>
+            <td>Más complejo, pero más flexible</td>
+            <td>Más seguro, pero menos eficiente</td>
+        </tr>
+        <tr>
+            <td>Rendimiento</td>
+            <td>Bajo a medio</td>
+            <td>Medio a alto</td>
+            <td>Bajo</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Tipos de Cortafuegos</h2>
+    <p>¿Qué tipo de cortafuego permite filtrar el tráfico a nivel de las aplicaciones?</p>
+    <ol>
+        <li>Cortafuego basado en reglas</li>
+        <li>Cortafuego basado en estado</li>
+        <li>Cortafuego de aplicación</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Configuración Básica de Cortafuegos</h2>
+    <ul>
+        <li>Definir interfaces (LAN, WAN)</li>
+        <li>Crear reglas de entrada y salida</li>
+        <li>Configurar puertos abiertos/cerrados</li>
+        <li>Aplicar políticas por defecto (aceptar/denegar)</li>
+        <li>Probar la configuración</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Configuración de Cortafuego</h2>
+    <p>Configurar un cortafuego basado en reglas para proteger un servidor web.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Cortafuegos son esenciales para la seguridad de sistemas y servidores.</li>
+        <li>Seleccionar y configurar adecuadamente un cortafuego es crucial.</li>
+        <li>Mantenerse actualizado y monitorear el tráfico es fundamental.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa Relacionada</h2>
+    <p>Normativas como la NIST (National Institute of Standards and Technology) proporcionan guías para la implementación segura de cortafuegos.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">Seguridad informática.md · Aplicación de mecanismos de seguridad activa → Selección y utilización de cortafuegos en sistemas y servidores</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 18:20:15</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

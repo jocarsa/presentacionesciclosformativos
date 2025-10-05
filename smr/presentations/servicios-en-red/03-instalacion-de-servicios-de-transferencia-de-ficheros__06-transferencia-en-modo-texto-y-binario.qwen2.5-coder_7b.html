@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Transferencia en modo texto y binario — Instalación de servicios de transferencia de ficheros — Servicios en red.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="transferencia-en-modo-texto-y-binario">
+<h1>Transferencia en modo texto y binario</h1>
+<p><strong>Unidad:</strong> Instalación de servicios de transferencia de ficheros<br><strong>Documento:</strong> Servicios en red.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Instalación de servicios de transferencia de ficheros</h1>
+    <p><strong>Objetivo:</strong> Comprender los conceptos básicos y procedimientos para la instalación de servicios de transferencia de ficheros en modo texto y binario.</p>
+</section>
+
+<section class="slide">
+    <h2>Transferencia en modo texto</h2>
+    <p>El modo texto se utiliza para transferir archivos que contienen solo caracteres imprimibles. Ejemplos: documentos, hojas deálculo, scripts de programación.</p>
+</section>
+
+<section class="slide">
+    <h2>Transferencia en modo binario</h2>
+    <p>El modo binario se utiliza para transferir archivos que contienen datos no imprimibles o complejos. Ejemplos: imágenes, videos, ejecutables.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de transferencia en modo texto</h2>
+    <ul>
+        <li>SCP (Secure Copy Protocol)</li>
+        <li>SFTP (SSH File Transfer Protocol)</li>
+        <li>FTPS (FTP over SSL/TLS)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de transferencia en modo binario</h2>
+    <ul>
+        <li>SCP</li>
+        <li>SFTP</li>
+        <li>FTPS</li>
+        <li>FTP (File Transfer Protocol)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Caso de estudio: Transferencia de imágenes</h2>
+    <p>Se requiere transferir una imagen JPEG de 5MB desde un servidor local a otro en la nube.</p>
+</section>
+
+<section class="slide">
+    <h2>Caso de estudio: Transferencia de scripts</h2>
+    <p>Se necesita transferir un script de 10KB desde un equipo local a un servidor remoto.</p>
+</section>
+
+<section class="slide">
+    <h2>Proceso de instalación de SCP</h2>
+    <ol>
+        <li>Instalar OpenSSH Server en el sistema local.</li>
+        <li>Instalar OpenSSH Client en el sistema remoto.</li>
+        <li>Configurar las claves SSH para autenticación sin contraseña.</li>
+        <li>Ejecutar el comando SCP desde la terminal.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas de transferencia en modo texto</h2>
+    <ul>
+        <li>Usar protocolos seguros (SCP, SFTP, FTPS).</li>
+        <li>Autenticarse con claves SSH para evitar contraseñas.</li>
+        <li>Comprimir archivos grandes antes de la transferencia.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas de transferencia en modo binario</h2>
+    <ul>
+        <li>Usar protocolos seguros (SCP, SFTP, FTPS).</li>
+        <li>Autenticarse con claves SSH para evitar contraseñas.</li>
+        <li>Comprimir archivos grandes antes de la transferencia.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes en transferencias de texto</h2>
+    <ul>
+        <li>Perdida de caracteres especiales.</li>
+        <li>Corrupción de archivos debido a codificación incorrecta.</li>
+        <li>Problemas con la autenticación si se usa contraseñas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes en transferencias binarias</h2>
+    <ul>
+        <li>Corrupción de archivos debido a problemas de codificación.</li>
+        <li>Problemas con la autenticación si se usa contraseñas.</li>
+        <li>Perdida de datos importantes durante la transferencia.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: SCP vs FTPS</h2>
+    <table>
+        <tr>
+            <th></th>
+            <th>SCP</th>
+            <th>FTPS</th>
+        </tr>
+        <tr>
+            <td>Seguridad</td>
+            <td>Alto (SSH)</td>
+            <td>Bajo (SSL/TLS)</td>
+        </tr>
+        <tr>
+            <td>Velocidad</td>
+            <td>Alta</td>
+            <td>Moderada</td>
+        </tr>
+        <tr>
+            <td>Simplicidad</td>
+            <td>Baja (requiere SSH)</td>
+            <td>Media (requiere FTP + SSL/TLS)</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: Transferencias de texto</h2>
+    <p>¿Cuál de los siguientes protocolos no es seguro para transferencias de texto?</p>
+    <ul>
+        <li>SCP</li>
+        <li>SFTP</li>
+        <li>FTPS</li>
+        <li>FTP</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: Transferencias binarias</h2>
+    <p>¿Cuál de los siguientes protocolos no es seguro para transferencias binarias?</p>
+    <ul>
+        <li>SCP</li>
+        <li>SFTP</li>
+        <li>FTPS</li>
+        <li>FTP</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Transferencia de texto</h2>
+    <ul>
+        <li>Instalar OpenSSH Server y Client.</li>
+        <li>Configurar claves SSH.</li>
+        <li>Ejecutar el comando SCP.</li>
+        <li>Comprimir archivos grandes si es necesario.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Transferencia de binario</h2>
+    <ul>
+        <li>Instalar OpenSSH Server y Client.</li>
+        <li>Configurar claves SSH.</li>
+        <li>Ejecutar el comando SCP o SFTP.</li>
+        <li>Comprimir archivos grandes si es necesario.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Transferencia de un archivo</h2>
+    <p>Transferir un archivo PDF de 1MB desde tu equipo local a un servidor remoto utilizando SCP.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Diferencias entre transferencias en modo texto y binario.</li>
+        <li>Ejemplos de protocolos utilizados para cada tipo.</li>
+        <li>Buenas prácticas y errores comunes a evitar.</li>
+        <li>Comparativa entre SCP, SFTP y FTPS.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa general</h2>
+    <p>Seguridad en transferencias de datos: Uso de protocolos seguros (SCP, SFTP, FTPS) para proteger la integridad y confidencialidad de los archivos.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">Servicios en red.md · Instalación de servicios de transferencia de ficheros → Transferencia en modo texto y binario</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 18:51:55</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="utf-8"><title>Mindmap de contenidos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root{
+  /* Light theme */
+  --bg:#f6f7fb;          /* page background */
+  --fg:#111827;          /* text color (near-black) */
+  --muted:#475569;       /* secondary text */
+  --accent:#2563eb;      /* blue accents */
+  --ok:#16a34a;          /* green outline for linked subunits */
+  --warn:#d97706;        /* amber outline for missing links */
+  --card:#ffffff;        /* node background */
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--bg);color:var(--fg);
+  font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Arial,sans-serif;
+  overflow:hidden;
+}
+.header{
+  display:flex;align-items:center;gap:1rem;
+  padding:.75rem 1rem;border-bottom:1px solid #e2e8f0;
+  background:rgba(255,255,255,.9);backdrop-filter:saturate(120%) blur(6px);
+}
+.header h1{font-size:1.1rem;margin:0;white-space:nowrap}
+.header .meta{color:var(--muted);font-size:.9rem}
+#crumbs{display:flex;gap:.5rem;align-items:center}
+#crumbs a{color:var(--accent);text-decoration:none;font-weight:600}
+#stage{position:fixed;inset:3rem 0 0 0}
+svg{width:100%;height:100%}
+.node rect{
+  fill:var(--card);
+  stroke:#cbd5e1; stroke-width:1; rx:10; ry:10;
+  filter: drop-shadow(0 2px 2px rgba(0,0,0,.05));
+}
+.label{font-size:.9rem; fill:var(--fg)}
+.badge{font-size:.8rem; fill:#0f172a}
+.badge-bg{fill:#e2e8f0; rx:8; ry:8}
+.node.subunit.haslink rect{stroke:var(--ok)}
+.node.subunit.missing rect{stroke:var(--warn)}
+.link{fill:none;stroke:#94a3b8;stroke-width:1.5}
+.controls{margin-left:auto;display:flex;gap:.4rem}
+.controls button{
+  appearance:none;background:#ffffff;color:var(--fg);
+  border:1px solid #cbd5e1;border-radius:8px;padding:.3rem .6rem;cursor:pointer
+}
+.controls button:hover{border-color:#94a3b8;background:#f8fafc}
+.legend{display:flex;align-items:center;gap:.75rem;margin-left:1rem}
+.legend .box{width:14px;height:14px;border-radius:4px}
+.legend .ok{border:2px solid var(--ok)} .legend .warn{border:2px solid var(--warn)}
+.tip{color:var(--muted);font-size:.9rem;margin-left:1rem}
+</style></head>
+<body>
+<div class="header">
+  <h1>Mindmap de contenidos</h1>
+  <div id="crumbs" class="meta"></div>
+  <div class="meta" id="stats"></div>
+  <div class="legend"><span class="box ok"></span><span>con presentación</span><span class="box warn"></span><span>sin presentación</span></div>
+  <div class="tip">clic etiqueta = entrar · clic +/− = expandir/plegar · clic subunidad con enlace = abrir</div>
+  <div class="controls"><button id="fit">Ajustar</button><button id="zoomOut">−</button><button id="zoomReset">100%</button><button id="zoomIn">+</button></div>
+</div>
+<div id="stage"><svg id="svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid meet"></svg></div>
+<script>
+const ROOT = {"title": "ROOT", "type": "root", "children": [{"title": ".git", "type": "cycle", "children": []}, {"title": "asir", "type": "cycle", "children": []}, {"title": "marketing y publicidad", "type": "cycle", "children": [{"title": "001-Materiales de marketing y comunicacion.md.qwen2.5-coder_7b.doc.md", "type": "subject", "doc_slug": "001-materiales-de-marketing-y-comunicacion.qwen2.5-coder_7b.doc", "children": [{"title": "Documentación generada · 001-Materiales de marketing y comunicacion.md", "type": "unit", "children": [{"title": "**Búsquedas orgánicas**: Optimizar el contenido web para que aparezca en los resultados de búsquedas relevantes, lo que aumenta la visibilidad del sitio.", "type": "subunit", "url": null}, {"title": "**Contraste de tono y escala**: Este elemento se refiere a las diferencias entre los niveles de brillo y el tamaño relativo de diferentes áreas dentro de una composición. Un buen contraste puede destacar elementos importantes, crear profundidad y aumentar la percepción estética del diseño.", "type": "subunit", "url": null}, {"title": "**Creaciones artísticas**: Proyectos que fomentan la expresión creativa mediante actividades como pintura, escultura, teatro o música.", "type": "subunit", "url": null}, {"title": "**Debates temáticos**: Sesiones en las que los estudiantes discuten y argumentan sobre temas relevantes, desarrollando habilidades de comunicación y argumentación.", "type": "subunit", "url": null}, {"title": "**Email marketing**: Crear campañas de correo electrónico personalizadas para mantener a los suscriptores actualizados sobre ofertas, noticias o eventos.", "type": "subunit", "url": null}, {"title": "**Equilibrio**: Implica la distribución balanceada de los elementos dentro de un diseño. El equilibrio visual puede ser simétrico (igual en ambos lados) o asimétrico (diferente en cada lado), y es crucial para mantener la atención del espectador.", "type": "subunit", "url": null}, {"title": "**Escala**: Se refiere a la relación entre los tamaños de diferentes elementos dentro de una composición. Una buena escala permite que los elementos sean perceptibles y relacionados entre sí, creando un sentido de unidad visual.", "type": "subunit", "url": null}, {"title": "**Experimentos científicos**: Actividades que permiten a los estudiantes diseñar y llevar a cabo experimentos para explorar conceptos científicos.", "type": "subunit", "url": null}, {"title": "**Medios digitales**: Internet y redes sociales tienen un alcance global, llegando a cualquier parte del mundo con conexión a internet. Sin embargo, su alcance demográfico depende de la audiencia activa en cada plataforma.", "type": "subunit", "url": null}, {"title": "**Medios impresos**: Diarios, revistas y periódicos tienen un alcance geográfico limitado pero pueden llegar a una audiencia demográfica específica. Por ejemplo, un diario local puede llegar a todos los residentes de una ciudad o región.", "type": "subunit", "url": null}, {"title": "**Medios tradicionales**: Radio y televisión tienen un alcance geográfico limitado pero pueden llegar a grandes audiencias demográficas. Por ejemplo, la radio local puede alcanzar a toda una ciudad o región, mientras que la televisión nacional puede llegar a millones de espectadores.", "type": "subunit", "url": null}, {"title": "**Proporción**: Es el tamaño relativo de dos o más objetos en una composición. La proporción correcta puede hacer que una obra sea atractiva y equilibrada, mientras que la proporción incorrecta puede crear desarmonía.", "type": "subunit", "url": null}, {"title": "**Proyectos basados en problemas**: Estudiantes trabajan en equipos para resolver un problema real o hipotético, aplicando conocimientos adquiridos.", "type": "subunit", "url": null}, {"title": "**Redes sociales**: Utilizar plataformas como Facebook, Instagram y Twitter para compartir contenido valioso y generar interacción con el público objetivo.", "type": "subunit", "url": null}, {"title": "Aplicación de técnicas de comunicación persuasivas:", "type": "subunit", "url": null}, {"title": "Catálogos de productos", "type": "subunit", "url": null}, {"title": "Confección de materiales publicitarios en diferentes soportes:", "type": "subunit", "url": null}, {"title": "Elaboración de materiales publicitarios e informativos:", "type": "subunit", "url": null}, {"title": "Informes de investigación científica", "type": "subunit", "url": null}, {"title": "Organización del plan de difusión de materiales publipromocionales e informativos:", "type": "subunit", "url": null}, {"title": "Preparación de los materiales de comunicación:", "type": "subunit", "url": null}, {"title": "Presentaciones de proyectos", "type": "subunit", "url": null}, {"title": "Videos explicativos de procesos industriales", "type": "subunit", "url": null}]}]}, {"title": "002-Politicas de marketing.md.qwen2.5-coder_7b.doc.md", "type": "subject", "doc_slug": "002-politicas-de-marketing.qwen2.5-coder_7b.doc", "children": [{"title": "Documentación generada · 002-Politicas de marketing.md", "type": "unit", "children": [{"title": "**Estrategizar la eliminación**: Identificar productos o servicios que ya no cumplen con las expectativas del cliente o que presentan un bajo margen de beneficio, permitiendo su eliminación para liberar recursos para otros proyectos más prometedores.", "type": "subunit", "url": null}, {"title": "**Identificar oportunidades**: Detectar nuevos productos o servicios que pueden complementar su oferta actual, aprovechar tendencias del mercado y capturar nuevas demandas.", "type": "subunit", "url": null}, {"title": "**Optimizar recursos**: Asignar los recursos disponibles de manera más eficiente entre diferentes productos o marcas, priorizando aquellos con mayor potencial de crecimiento y rentabilidad.", "type": "subunit", "url": null}, {"title": "Definición de la política de precios:", "type": "subunit", "url": null}, {"title": "Definición de la política de producto o servicio:", "type": "subunit", "url": null}, {"title": "Elaboración de briefings de productos, servicios o marcas:", "type": "subunit", "url": null}, {"title": "Elaboración del plan de marketing:", "type": "subunit", "url": null}, {"title": "Evaluación de las oportunidades de mercado de una empresa:", "type": "subunit", "url": null}, {"title": "Seguimiento y control de las políticas y acciones del plan de marketing:", "type": "subunit", "url": null}, {"title": "Selección de la forma y canal de distribución:", "type": "subunit", "url": null}, {"title": "Selección de las acciones de comunicación:", "type": "subunit", "url": null}]}]}, {"title": "003-Marketing digital.md.qwen2.5-coder_7b.doc.md", "type": "subject", "doc_slug": "003-marketing-digital.qwen2.5-coder_7b.doc", "children": [{"title": "Documentación generada · 003-Marketing digital.md", "type": "unit", "children": [{"title": "**Acceso a contenido:** Permite obtener música, películas, programas de televisión o software directamente desde Internet.", "type": "subunit", "url": null}, {"title": "**Almacenamiento local:** Facilita el almacenamiento de grandes cantidades de datos en dispositivos locales como computadoras y teléfonos móviles.", "type": "subunit", "url": null}, {"title": "**Antiespía**: Estas herramientas monitorizan y bloquean la instalación de software o el acceso a información sin el consentimiento del usuario, protegiendo así contra spyware (software espía) y adware. Ejemplos incluyen Spybot Search & Destroy y Malwarebytes.", "type": "subunit", "url": null}, {"title": "**Antivirus**: Este software escanea automáticamente los archivos de un ordenador para detectar malware (malware), virus, ransomware y otros tipos de software perjudicial. Ejemplos populares incluyen Avast, Bitdefender y Norton.", "type": "subunit", "url": null}, {"title": "**Buscadores temáticos**: Diseñados para buscar información dentro de un campo específico o categoría, como medicina, tecnología o cultura. Ejemplos incluyen PubMed (medicina), IEEE Xplore (tecnología) y JSTOR (cultura).", "type": "subunit", "url": null}, {"title": "**Búsqueda avanzada**: Limitar los resultados a imágenes de España usando `site:es`.", "type": "subunit", "url": null}, {"title": "**Calidad:** La calidad de los archivos descargados puede variar, desde versiones en baja definición hasta resolución 4K para videos.", "type": "subunit", "url": null}, {"title": "**Cortafuegos**: Funcionan como una barrera entre la red local y Internet, controlando el tráfico entrante y saliente para prevenir accesos no autorizados y ataques cibernéticos. Los cortafuegos más conocidos son Windows Defender, McAfee Firewall y ZoneAlarm.", "type": "subunit", "url": null}, {"title": "**Distribución digital:** Es una forma eficiente de distribuir contenido digital a gran escala.", "type": "subunit", "url": null}, {"title": "**Exactitud vs. relevancia**: Aprender a equilibrar la exactitud de las búsquedas con su relevancia.", "type": "subunit", "url": null}, {"title": "**Legalidad:** Es importante verificar la legalidad de las descargas, ya que ciertos contenidos pueden estar protegidos por derechos de autor.", "type": "subunit", "url": null}, {"title": "**Metabuscadores**: Son herramientas que utilizan algoritmos para buscar y recopilar información de otros buscadores, como Google, Bing o Yahoo. Ejemplos incluyen Dogpile y MetaGer.", "type": "subunit", "url": null}, {"title": "**Motores de búsqueda e índices**: Estos sistemas buscan contenido en Internet utilizando algoritmos para identificar y clasificar páginas web relevantes a una consulta específica. Ejemplos populares incluyen Google, Bing y Yahoo.", "type": "subunit", "url": null}, {"title": "**Multibuscadores**: Permiten realizar búsquedas simultáneas en varios motores de búsqueda para obtener una amplia gama de resultados. Google es un ejemplo de multibuscador.", "type": "subunit", "url": null}, {"title": "**Música:** Descargar canciones desde plataformas como Spotify, Apple Music o YouTube Music.", "type": "subunit", "url": null}, {"title": "**Operadores**: Buscar \"intext:\" para encontrar documentos que contengan una frase específica.", "type": "subunit", "url": null}, {"title": "**Personalización de los motores de búsqueda**: Ajustar preferencias y filtros para obtener resultados más personalizados.", "type": "subunit", "url": null}, {"title": "**Servicios adicionales**: Consultar Google Scholar para literatura académica sobre inteligencia artificial.", "type": "subunit", "url": null}, {"title": "**Sintaxis especiales**: Utilizar comillas para buscar exactamente la frase \"Google es el mejor motor de búsqueda\".", "type": "subunit", "url": null}, {"title": "**Software:** Instalar aplicaciones y programas directamente desde fuentes confiables como la tienda oficial del fabricante o plataformas como Google Play o Apple App Store.", "type": "subunit", "url": null}, {"title": "**Uso de operadores booleanos**: Comprender cómo usar AND, OR y NOT para combinar términos de búsqueda.", "type": "subunit", "url": null}, {"title": "**Vídeos:** Obtener películas y series de televisión en sitios como Netflix, Amazon Prime Video o YouTube.", "type": "subunit", "url": null}, {"title": "Administración de los accesos y conexiones a redes:", "type": "subunit", "url": null}, {"title": "Ampliar el conocimiento sobre la marca.", "type": "subunit", "url": null}, {"title": "Autenticación de usuarios en sistemas informáticos", "type": "subunit", "url": null}, {"title": "Autenticar la identidad de las partes en transacciones electrónicas.", "type": "subunit", "url": null}, {"title": "Clases en línea a distancia.", "type": "subunit", "url": null}, {"title": "Construcción de páginas web:", "type": "subunit", "url": null}, {"title": "Consultas médicas telemedicina.", "type": "subunit", "url": null}, {"title": "Contratos y acuerdos legales digitales", "type": "subunit", "url": null}, {"title": "Crear comunidades virtuales centradas en un tema específico.", "type": "subunit", "url": null}, {"title": "Definición de la política de comercio electrónico de una empresa:", "type": "subunit", "url": null}, {"title": "Determinación de la estrategia que se ha de seguir en las interrelaciones con otros usuarios de la red:", "type": "subunit", "url": null}, {"title": "Diferentes tipos de foros: públicos, privados, cerrados, etc.", "type": "subunit", "url": null}, {"title": "Diseño del plan de marketing digital:", "type": "subunit", "url": null}, {"title": "Ejemplos prácticos", "type": "subunit", "url": null}, {"title": "Facilitar la colaboración y el intercambio de información entre individuos geográficamente dispersos.", "type": "subunit", "url": null}, {"title": "Facilitar la resolución de dudas y problemas.", "type": "subunit", "url": null}, {"title": "Fomentar el intercambio de información y conocimiento.", "type": "subunit", "url": null}, {"title": "Foros de ocio y cultura, como Reddit, donde los usuarios comparten noticias y opiniones sobre diversos temas.", "type": "subunit", "url": null}, {"title": "Foros de tecnología, como Stack Overflow, donde los usuarios resuelven problemas técnicos.", "type": "subunit", "url": null}, {"title": "Foros educativos como el del Ministerio de Educación para discutir políticas educativas.", "type": "subunit", "url": null}, {"title": "Garantizar la integridad de los datos transmitidos para evitar modificaciones no autorizadas.", "type": "subunit", "url": null}, {"title": "Gestión de diversos servicios y protocolos de Internet:", "type": "subunit", "url": null}, {"title": "Herramientas de moderación para mantener el orden y la calidad del contenido.", "type": "subunit", "url": null}, {"title": "Incrementar la visibilidad en el mercado.", "type": "subunit", "url": null}, {"title": "Matices comunes", "type": "subunit", "url": null}, {"title": "Mejorar la eficiencia en procesos de trabajo y educación.", "type": "subunit", "url": null}, {"title": "Mejorar la retención de clientes existentes.", "type": "subunit", "url": null}, {"title": "Objetivos", "type": "subunit", "url": null}, {"title": "Orientaciones pedagógicas.", "type": "subunit", "url": null}, {"title": "Potenciar la adquisición de nuevos clientes.", "type": "subunit", "url": null}, {"title": "Prevenir el rechazo de documentos por parte del receptor debido a cambios o alteraciones.", "type": "subunit", "url": null}, {"title": "Promover la participación ciudadana en temas relevantes.", "type": "subunit", "url": null}, {"title": "Realización de la facturación electrónica y otras tareas administrativas de forma telemática:", "type": "subunit", "url": null}, {"title": "Reducir los costos asociados con viajes y reuniones presenciales.", "type": "subunit", "url": null}, {"title": "Reglas y políticas de uso que deben ser conocidas por los participantes.", "type": "subunit", "url": null}, {"title": "Reuniones virtuales de equipo para discutir proyectos.", "type": "subunit", "url": null}, {"title": "Transacciones comerciales electrónicas", "type": "subunit", "url": null}, {"title": "Videoconferencias con audio solo vs. videoconferencias completas (audio y video).", "type": "subunit", "url": null}, {"title": "Videoconferencias grupales vs. videoconferencias individuales.", "type": "subunit", "url": null}, {"title": "Videoconferencias sincrónicas vs. videoconferencias asincrónicas.", "type": "subunit", "url": null}]}]}, {"title": "004-Medios y soportes de comunicación.md.qwen2.5-coder_7b.doc.md", "type": "subject", "doc_slug": "004-medios-y-soportes-de-comunicacion.qwen2.5-coder_7b.doc", "children": [{"title": "Documentación generada · 004-Medios y soportes de comunicación.md", "type": "unit", "children": [{"title": "**Accesibilidad:** Con el avance tecnológico, la mayoría de los medios son accesibles desde cualquier lugar con conexión a internet.", "type": "subunit", "url": null}, {"title": "**Cumplimiento normativo**: En muchos sectores, como la salud o el medio ambiente, es obligatorio realizar seguimientos de información para garantizar el cumplimiento de regulaciones y leyes.", "type": "subunit", "url": null}, {"title": "**Dependencia:** La excesiva dependencia de los medios puede limitar las habilidades de comunicación y pensamiento crítico.", "type": "subunit", "url": null}, {"title": "**Desventajas:** La exposición a phishing, un tipo de fraude que utiliza el correo electrónico como medio para obtener información confidencial.", "type": "subunit", "url": null}, {"title": "**Eficiencia:** Los medios modernos permiten una comunicación rápida y amplia, facilitando el acceso a información en tiempo real.", "type": "subunit", "url": null}, {"title": "**Falso equilibrio:** Las redes sociales, por ejemplo, pueden crear un falso equilibrio entre el tiempo dedicado a actividades productivas y ocio.", "type": "subunit", "url": null}, {"title": "**Interactividad:** Muchos medios digitales ofrecen funcionalidades interactivas que permiten una participación más directa del usuario.", "type": "subunit", "url": null}, {"title": "**Medios digitales:** Internet, redes sociales, aplicaciones móviles.", "type": "subunit", "url": null}, {"title": "**Medios híbridos:** Combina elementos de medios tradicionales y digitales.", "type": "subunit", "url": null}, {"title": "**Medios tradicionales:** Impresión, radio, televisión.", "type": "subunit", "url": null}, {"title": "**Mejor control de calidad**: Los seguimientos de información ayudan a monitorear los procesos y productos, asegurando que cumplen con los estándares establecidos.", "type": "subunit", "url": null}, {"title": "**Mejora la toma de decisiones**: Al tener acceso a datos actualizados y precisos, las organizaciones pueden tomar acuerdos más informados y estratégicos.", "type": "subunit", "url": null}, {"title": "**Optimización de recursos**: Permite identificar áreas de eficiencia y desperdicio, lo que facilita el desarrollo de planes para su mejora continua.", "type": "subunit", "url": null}, {"title": "**Privacidad:** El uso intensivo de ciertos medios puede poner en riesgo la privacidad de los usuarios.", "type": "subunit", "url": null}, {"title": "**Ventajas:** El uso del correo electrónico para enviar informes y documentos electrónicamente.", "type": "subunit", "url": null}, {"title": "Aumenta la eficiencia en procesos de trabajo y administración.", "type": "subunit", "url": null}, {"title": "Colaboración en la obtención de información por medios propios o por empresas de press-clipping:", "type": "subunit", "url": null}, {"title": "Colaboración en la realización del plan de medios publicitarios:", "type": "subunit", "url": null}, {"title": "Descripción de los medios y soportes publicitarios:", "type": "subunit", "url": null}, {"title": "El Real Decreto Legislativo 17/2013, de 17 de diciembre, por el que se aprueba el Reglamento General de Protección de Datos (RGPD) establece un marco uniforme para la protección de los datos personales en toda la Unión Europea.", "type": "subunit", "url": null}, {"title": "Exposición a riesgos de seguridad informática, como malware o phishing.", "type": "subunit", "url": null}, {"title": "Facilita el acceso a información en tiempo real y desde cualquier lugar.", "type": "subunit", "url": null}, {"title": "La Ley Orgánica 15/1998, de 23 de octubre, sobre Protección de Datos Personales (LOPD) establece las normas básicas para la protección de los datos personales y el derecho a la privacidad.", "type": "subunit", "url": null}, {"title": "Permite una comunicación instantánea entre personas geográficamente dispersas.", "type": "subunit", "url": null}, {"title": "Posible pérdida de contacto personal debido a la comunicación virtual predominante.", "type": "subunit", "url": null}, {"title": "Puede generar dependencia excesiva de Internet.", "type": "subunit", "url": null}, {"title": "Realización de las acciones necesarias para controlar la ejecución del plan de medios:", "type": "subunit", "url": null}, {"title": "Recopilación de datos para diseñar un plan de medios publicitarios:", "type": "subunit", "url": null}]}]}, {"title": "005-Relaciones públicas y organización de eventos de marketing.md.qwen2.5-coder_7b.doc.md", "type": "subject", "doc_slug": "005-relaciones-publicas-y-organizacion-de-eventos-de-marketing.qwen2.5-coder_7b.doc", "children": [{"title": "Documentación generada · 005-Relaciones públicas y organización de eventos de marketing.md", "type": "unit", "children": [{"title": "**Actos Empresariales**: Estos son eventos organizados por empresas con el fin de promover su imagen corporativa, generar oportunidades de negocio o fomentar relaciones estratégicas. Ejemplos incluyen conferencias empresariales, seminarios, exposiciones y eventos de networking. La normativa española aplicable a estos eventos puede variar dependiendo del tipo específico, pero generalmente se refiere a la Ley Orgánica 15/1999, de 23 de octubre, sobre protección de datos personales.", "type": "subunit", "url": null}, {"title": "**Actos Sociales**: Estos eventos tienen como objetivo principal el entretenimiento y la formación social. Incluyen fiestas corporativas, cumpleaños, bodas, convenciones familiares y eventos temáticos. La normativa aplicable a estos eventos puede incluir la Ley Orgánica 15/1999, pero también puede variar según el tipo específico de evento y las regulaciones locales.", "type": "subunit", "url": null}, {"title": "Bodega industrial: Almacena productos manufacturados.", "type": "subunit", "url": null}, {"title": "Caracterización de la organización de eventos de marketing:", "type": "subunit", "url": null}, {"title": "Centro de distribución: Organiza y envía paquetes a diferentes destinos.", "type": "subunit", "url": null}, {"title": "Comunicar ideas y conceptos entre diferentes culturas.", "type": "subunit", "url": null}, {"title": "Convertir una conversación en francés a portugués para entender su significado.", "type": "subunit", "url": null}, {"title": "Coordinación y supervisión de los eventos de marketing:", "type": "subunit", "url": null}, {"title": "Deposito comercial: Guarda mercancía para su venta posterior.", "type": "subunit", "url": null}, {"title": "Determinación del plan de relaciones con proveedores, actores y agentes:", "type": "subunit", "url": null}, {"title": "Diferencia entre traducción literal y traducción libre.", "type": "subunit", "url": null}, {"title": "Elaboración de informes de control y evaluación de eventos:", "type": "subunit", "url": null}, {"title": "Facilitar el acceso al conocimiento internacional.", "type": "subunit", "url": null}, {"title": "Importancia del contexto en la traducción.", "type": "subunit", "url": null}, {"title": "Ley Orgánica 10/2007, de 18 de junio, sobre el idioma español como lengua oficial del Estado.", "type": "subunit", "url": null}, {"title": "Objetivos e instrumentos de las relaciones públicas (RRPP) de la empresa:", "type": "subunit", "url": null}, {"title": "Preservar la diversidad lingüística.", "type": "subunit", "url": null}, {"title": "Protocolo y ceremonial de actos y eventos de marketing y comunicación:", "type": "subunit", "url": null}, {"title": "Traducir un informe técnico de inglés a español para una audiencia hispanohablante.", "type": "subunit", "url": null}]}]}, {"title": "006-Investigación comercial.md.qwen2.5-coder_7b.doc.md", "type": "subject", "doc_slug": "006-investigacion-comercial.qwen2.5-coder_7b.doc", "children": [{"title": "Documentación generada · 006-Investigación comercial.md", "type": "unit", "children": [{"title": "**Análisis SWOT**: Identificar fortalezas, debilidades, oportunidades y amenazas del negocio.", "type": "subunit", "url": null}, {"title": "**Competitividad**: Analizar las estrategias y desempeño de los competidores para identificar ventajas competitivas.", "type": "subunit", "url": null}, {"title": "**Encuestas**: Consisten en preguntas formuladas con el fin de recolectar información sobre un fenómeno o situación específica. Las encuestas pueden ser realizadas a través de diversos medios como entrevistas telefónicas, presenciales, por correo electrónico o en línea.", "type": "subunit", "url": null}, {"title": "**Estudios de mercado**: Evaluar el tamaño y crecimiento potencial del mercado objetivo.", "type": "subunit", "url": null}, {"title": "**Estudios Descriptivos**: Su principal objetivo es describir las características de un fenómeno o grupo de personas. Estos estudios buscan proporcionar información sobre el estado actual de algo sin intentar cambiarlo. Un ejemplo clásico sería una encuesta demográfica que describe la población de un área.", "type": "subunit", "url": null}, {"title": "**Estudios Experimentales**: Son diseñados para probar una hipótesis o teoría mediante el control y manipulación de variables. Estos estudios suelen ser más rigurosos y controlados, con el objetivo de determinar si una variable causa un cambio en otra. Un ejemplo sería un experimento clínico que prueba la eficacia de un nuevo medicamento.", "type": "subunit", "url": null}, {"title": "**Estudios Exploratorios**: Su objetivo es generar ideas o hipótesis iniciales sobre un tema. Estos estudios suelen ser pequeños y exploratorios, con el fin de identificar problemas o áreas que requieren investigación más profunda. Por ejemplo, un estudio exploratorio podría ser una encuesta rápida para determinar si hay interés en un nuevo producto.", "type": "subunit", "url": null}, {"title": "**Experimentación**: Implica el diseño y ejecución de experimentos para probar hipótesis o teorías. Los experimentos cuantitativos suelen incluir un control experimental y un tratamiento experimental, con los resultados analizados estadísticamente.", "type": "subunit", "url": null}, {"title": "**Observación**: Consiste en la recopilación de datos mediante el registro directo de comportamientos, acciones o eventos. La observación puede ser estructurada (con guías predefinidas) o no estructurada (sin una guía específica).", "type": "subunit", "url": null}, {"title": "**Paneles**: Son grupos de individuos seleccionados que participan en múltiples ocasiones para proporcionar datos sobre un fenómeno específico. Los paneles permiten el seguimiento y análisis de cambios a lo largo del tiempo.", "type": "subunit", "url": null}, {"title": "**Segmentación de clientes**: Identificar grupos demográficos o psicográficos con necesidades similares.", "type": "subunit", "url": null}, {"title": "Análisis de las variables del mercado en el entorno de la empresa:", "type": "subunit", "url": null}, {"title": "Configuración de un sistema de información de marketing (SIM):", "type": "subunit", "url": null}, {"title": "Determinación de las características y tamaño de la muestra de la población:", "type": "subunit", "url": null}, {"title": "Elaboración del plan de la investigación comercial:", "type": "subunit", "url": null}, {"title": "Gestiona bases de datos relacionales:", "type": "subunit", "url": null}, {"title": "Obtención de información primaria:", "type": "subunit", "url": null}, {"title": "Organización de la información secundaria disponible:", "type": "subunit", "url": null}, {"title": "Tratamiento y análisis estadístico de los datos:", "type": "subunit", "url": null}]}]}, {"title": "007-Trabajo de campo en la investigación comercial.md.qwen2.5-coder_7b.doc.md", "type": "subject", "doc_slug": "007-trabajo-de-campo-en-la-investigacion-comercial.qwen2.5-coder_7b.doc", "children": [{"title": "Documentación generada · 007-Trabajo de campo en la investigación comercial.md", "type": "unit", "children": [{"title": "Comparar la situación actual con periodos pasados o con competidores.", "type": "subunit", "url": null}, {"title": "Definición de planes de formación, perfeccionamiento y reciclaje de un equipo de encuestadores:", "type": "subunit", "url": null}, {"title": "Determinación de las características del personal de campo y criterios de selección de los encuestadores:", "type": "subunit", "url": null}, {"title": "El uso de diferentes métodos de presentación, como porcentajes o valores absolutos.", "type": "subunit", "url": null}, {"title": "Facilitar la toma de decisiones estratégicas.", "type": "subunit", "url": null}, {"title": "Identificar áreas que requieren atención o intervención.", "type": "subunit", "url": null}, {"title": "Interpretación del cuestionario e instrucciones para la realización de la encuesta:", "type": "subunit", "url": null}, {"title": "La consideración de ajustes o correcciones en los datos financieros.", "type": "subunit", "url": null}, {"title": "La elección del período de tiempo para realizar las comparaciones.", "type": "subunit", "url": null}, {"title": "Monitorear el desempeño financiero y operativo.", "type": "subunit", "url": null}, {"title": "Planificación del trabajo de campo de una investigación comercial:", "type": "subunit", "url": null}, {"title": "Ratio de endeudamiento: Relaciona la deuda total del negocio con sus activos, indicando su capacidad para cubrir las obligaciones financieras.", "type": "subunit", "url": null}, {"title": "Ratio de flujo de efectivo: Evalúa el nivel de liquidez y solvencia del negocio, reflejando su capacidad para generar y mantener fondos suficientes.", "type": "subunit", "url": null}, {"title": "Ratio de rentabilidad: Muestra la eficiencia en la generación de ingresos a partir de los costos operativos.", "type": "subunit", "url": null}, {"title": "Sistema de evaluación del trabajo de campo y desempeño de los miembros del equipo de trabajo:", "type": "subunit", "url": null}, {"title": "Sistemas de motivación y remuneración del equipo de trabajo de campo:", "type": "subunit", "url": null}]}]}, {"title": "008-Lanzamiento de productos y servicios.md.qwen2.5-coder_7b.doc.md", "type": "subject", "doc_slug": "008-lanzamiento-de-productos-y-servicios.qwen2.5-coder_7b.doc", "children": [{"title": "Documentación generada · 008-Lanzamiento de productos y servicios.md", "type": "unit", "children": [{"title": "Definición de las acciones de marketing y promoción:", "type": "subunit", "url": null}, {"title": "Elaboración del argumentario de ventas y presentación del producto/servicio a la red de ventas:", "type": "subunit", "url": null}, {"title": "Medidas de seguimiento y control del lanzamiento de un producto o servicio:", "type": "subunit", "url": null}, {"title": "Programación del lanzamiento e implantación de un producto o servicio en el mercado:", "type": "subunit", "url": null}, {"title": "Ratio de activos corrientes sobre pasivos: Indica la capacidad de la empresa para financiar sus operaciones diarias utilizando sus activos más liquidos.", "type": "subunit", "url": null}, {"title": "Ratio de cobertura de intereses (RCI): Mide cuánto dinero disponible tiene una empresa para cubrir sus obligaciones hipotecarias y otras deuda con interés.", "type": "subunit", "url": null}, {"title": "Ratio de rentabilidad sobre el capital neto (ROE): Evalúa cuánta ganancia genera la empresa por cada euro invertido en su capital.", "type": "subunit", "url": null}, {"title": "Recopilación de la información necesaria para el lanzamiento de un producto o servicio:", "type": "subunit", "url": null}]}]}, {"title": "009-Atención al cliente, consumidor y usuario.md.qwen2.5-coder_7b.doc.md", "type": "subject", "doc_slug": "009-atencion-al-cliente-consumidor-y-usuario.qwen2.5-coder_7b.doc", "children": [{"title": "Documentación generada · 009-Atención al cliente, consumidor y usuario.md", "type": "unit", "children": [{"title": "**Estructura de red**: No tiene una estructura jerárquica clara, sino que se basa en la colaboración entre individuos y equipos para lograr los objetivos comunes.", "type": "subunit", "url": null}, {"title": "**Estructura lineal**: Esta es la estructura más básica, donde el poder fluye desde arriba hacia abajo en una línea directa. Cada nivel tiene un solo jefe.", "type": "subunit", "url": null}, {"title": "**Estructura lineal-horizontal**: Combina elementos de las estructuras lineal y horizontal. Permite que los empleados del mismo nivel interactúen entre sí, pero sigue la dirección jerárquica principal.", "type": "subunit", "url": null}, {"title": "**Estructura matriz**: Esta estructura combina diferentes departamentos o proyectos en una sola organización. Los empleados pueden reportar a múltiples jefes dependiendo de su rol y responsabilidades.", "type": "subunit", "url": null}, {"title": "Descripción de los procesos de mediación y arbitraje:", "type": "subunit", "url": null}, {"title": "Elaboración de un plan de calidad y de mejora del servicio de atención al cliente, consumidor o usuario:", "type": "subunit", "url": null}, {"title": "En caso de no resolver satisfactoriamente la reclamación, el consumidor tiene derecho a recibir una indemnización o compensación por los daños y perjuicios sufridos.", "type": "subunit", "url": null}, {"title": "Gestión de quejas y reclamaciones:", "type": "subunit", "url": null}, {"title": "Identificación de los distintos organismos e instituciones de protección al consumidor y usuario:", "type": "subunit", "url": null}, {"title": "Las empresas deben establecer un mecanismo claro y accesible para recibir reclamaciones y denuncias.", "type": "subunit", "url": null}, {"title": "Los consumidores tienen derecho a una respuesta escrita dentro de un plazo determinado, generalmente de 15 días hábiles desde la presentación de su solicitud.", "type": "subunit", "url": null}, {"title": "Organización de un sistema de información:", "type": "subunit", "url": null}, {"title": "Organización del departamento de atención al cliente:", "type": "subunit", "url": null}, {"title": "Utilización de técnicas de comunicación en situaciones de atención al cliente:", "type": "subunit", "url": null}]}]}, {"title": "100-Indice.md.qwen2.5-coder_7b.doc.md", "type": "subject", "doc_slug": "100-indice.qwen2.5-coder_7b.doc", "children": [{"title": "Documentación generada · 100-Indice.md", "type": "unit", "children": [{"title": "0930. Políticas de marketing.", "type": "subunit", "url": null}, {"title": "0931. Marketing digital.", "type": "subunit", "url": null}, {"title": "1007. Diseño y elaboración de material de comunicación.", "type": "subunit", "url": null}, {"title": "1008. Medios y soportes de comunicación.", "type": "subunit", "url": null}, {"title": "1009. Relaciones públicas y organización de eventos de marketing.", "type": "subunit", "url": null}, {"title": "1010. Investigación comercial.", "type": "subunit", "url": null}, {"title": "1011. Trabajo de campo en la investigación comercial.", "type": "subunit", "url": null}, {"title": "1109. Lanzamiento de productos y servicios.", "type": "subunit", "url": null}, {"title": "1110. Atención al cliente, consumidor y usuario.", "type": "subunit", "url": null}]}]}]}]};
+
+/* ---------- indexado & estado ---------- */
+let idCounter=0, index=new Map(), parentMap=new Map();
+function indexTree(n,p=null){
+  n._id=idCounter++; index.set(n._id,n);
+  if(p){ parentMap.set(n._id,p._id); }
+  if(Array.isArray(n.children)) n.children.forEach(c=>indexTree(c,n));
+}
+indexTree(ROOT);
+
+function pathToRoot(id){
+  const arr=[]; let cur=id;
+  while(cur!=null){
+    arr.push(cur);
+    cur = parentMap.has(cur) ? parentMap.get(cur) : null;
+  }
+  return arr.reverse();
+}
+
+// Conjunto de nodos expandidos (por defecto, solo el root y los ciclos directos opcionalmente)
+const expanded = new Set();
+expanded.add(ROOT._id); // root visible
+// currentRoot controla el SUB-árbol que se distribuye radialmente (estabilidad geométrica)
+let currentRoot = ROOT._id;
+
+/* ---------- helpers visibilidad ---------- */
+function childrenOf(id){
+  const n = index.get(id);
+  const kids = (n && n.children) ? [...n.children] : [];
+  // orden estable por título
+  kids.sort((a,b)=> (a.title||'').localeCompare(b.title||''));
+  return kids;
+}
+
+function isExpanded(id){ return expanded.has(id); }
+
+function visibleChildren(id){
+  return isExpanded(id) ? childrenOf(id) : [];
+}
+
+/* ---------- conteo hojas visibles ---------- */
+function countLeaves(id){
+  const kids = visibleChildren(id);
+  if(!kids.length) return 1;
+  return kids.map(k=>countLeaves(k._id)).reduce((a,b)=>a+b,0);
+}
+
+/* ---------- layout radial del SUB-árbol actual ---------- */
+function layoutFromRoot(rootId, radiusStep=140, angleSpan=2*Math.PI){
+  const nodes=[], links=[];
+  function L(id, depth, a0, a1, parent=null){
+    const n = index.get(id); if(!n) return;
+    const ang=(a0+a1)/2, r=depth*radiusStep, x=600+r*Math.cos(ang), y=400+r*Math.sin(ang);
+    nodes.push({
+      id, title:n.title||'(sin título)', type:n.type||'node', url:n.url||null,
+      depth, x, y, hasChildren: (n.children&&n.children.length)>0, expanded:isExpanded(id)
+    });
+    if(parent!=null) links.push({s:parent, t:id});
+    const kids = visibleChildren(id);
+    if(kids.length){
+      let acc=a0; const total=countLeaves(id);
+      for(const k of kids){
+        const w=countLeaves(k._id)/total*angleSpan;
+        L(k._id, depth+1, acc, acc+w, id);
+        acc+=w;
+      }
+    }
+  }
+  L(rootId, 0, -Math.PI/2, Math.PI*1.5, null);
+  return {nodes, links};
+}
+
+/* ---------- render ---------- */
+const svg=document.getElementById('svg'); let view={x:0,y:0,s:1};
+
+function setView(){const w=1200/view.s,h=800/view.s;svg.setAttribute('viewBox',`${view.x-(w-1200)/2} ${view.y-(h-800)/2} ${w} ${h}`);}
+function zoomTo(z){view.s=Math.max(.4,Math.min(2.5,z));setView();}
+function pan(dx,dy){view.x+=dx;view.y+=dy;setView();}
+
+function updateBreadcrumb(){
+  const crumbs=document.getElementById('crumbs'); crumbs.innerHTML='';
+  const path=pathToRoot(currentRoot).map(id=>index.get(id));
+  const home=document.createElement('a'); home.textContent='Home'; home.href='#';
+  home.onclick=(e)=>{e.preventDefault(); currentRoot=ROOT._id; render();};
+  crumbs.appendChild(home);
+  path.slice(1).forEach((n,i)=>{
+    const sep=document.createTextNode(' / ');
+    crumbs.appendChild(sep);
+    const a=document.createElement('a'); a.textContent=n.title; a.href='#';
+    a.onclick=(e)=>{e.preventDefault(); currentRoot=n._id; expanded.add(n._id); render();};
+    crumbs.appendChild(a);
+  });
+}
+
+function render(){
+  svg.innerHTML='';
+  updateBreadcrumb();
+  const {nodes,links}=layoutFromRoot(currentRoot);
+
+  // edges
+  for(const l of links){
+    const a=nodes.find(n=>n.id===l.s), b=nodes.find(n=>n.id===l.t);
+    const p=document.createElementNS('http://www.w3.org/2000/svg','path');
+    p.setAttribute('d',`M ${a.x} ${a.y} Q ${(a.x+b.x)/2} ${(a.y+b.y)/2} ${b.x} ${b.y}`);
+    p.setAttribute('class','link');
+    svg.appendChild(p);
+  }
+
+  // nodes
+  for(const n of nodes){
+    const g=document.createElementNS('http://www.w3.org/2000/svg','g');
+    g.setAttribute('class',`node ${n.type}${n.type==='subunit'?(n.url?' haslink':' missing'):''}`);
+    g.setAttribute('transform',`translate(${n.x},${n.y})`);
+
+    // base rect
+    const w=Math.min(42, n.title.length)*7+24, h=30;
+    const rect=document.createElementNS('http://www.w3.org/2000/svg','rect');
+    rect.setAttribute('x',-w/2); rect.setAttribute('y',-h/2);
+    rect.setAttribute('width',w); rect.setAttribute('height',h);
+    g.appendChild(rect);
+
+    // label (click = ENTER si no es subunit; si es subunit con url => open)
+    const t=document.createElementNS('http://www.w3.org/2000/svg','text');
+    t.setAttribute('text-anchor','middle'); t.setAttribute('dominant-baseline','central'); t.setAttribute('class','label');
+    t.textContent=n.title;
+    g.appendChild(t);
+
+    // +/− badge (solo nodos con hijos)
+    if(n.type!=='subunit' && n.hasChildren){
+      const pad=4, bx=w/2+8, by=-h/2+14;
+      const badgeBg=document.createElementNS('http://www.w3.org/2000/svg','rect');
+      badgeBg.setAttribute('x', bx-10); badgeBg.setAttribute('y', by-9);
+      badgeBg.setAttribute('width', 20); badgeBg.setAttribute('height', 18);
+      badgeBg.setAttribute('class','badge-bg');
+      const badge=document.createElementNS('http://www.w3.org/2000/svg','text');
+      badge.setAttribute('x', bx); badge.setAttribute('y', by);
+      badge.setAttribute('text-anchor','middle'); badge.setAttribute('dominant-baseline','central');
+      badge.setAttribute('class','badge');
+      badge.textContent = n.expanded ? '−' : '+';
+      // Toggle (NO cambia el root)
+      const toggle = (e)=>{ e.stopPropagation(); if(n.expanded) expanded.delete(n.id); else expanded.add(n.id); render(); };
+      badgeBg.addEventListener('click', toggle);
+      badge.addEventListener('click', toggle);
+      g.appendChild(badgeBg);
+      g.appendChild(badge);
+    }
+
+    // click en etiqueta
+    g.addEventListener('click', ()=>{
+      if(n.type==='subunit'){
+        if(n.url){ window.location.href = n.url; }
+      }else if(n.hasChildren){
+        // ENTER: ese nodo pasa a ser el root actual
+        currentRoot = n.id;
+        expanded.add(n.id);  // asegúrate de que muestre sus hijos
+        render();
+      }
+    });
+
+    svg.appendChild(g);
+  }
+
+  const stats=document.getElementById('stats');
+  const subs=nodes.filter(n=>n.type==='subunit').length;
+  const withLink=nodes.filter(n=>n.type==='subunit'&&n.url).length;
+  stats.textContent=`${nodes.length} nodos visibles · ${subs} subunidades visibles (${withLink} con presentación)`;
+}
+
+/* ---------- pan/zoom ---------- */
+let panActive=false,last={x:0,y:0};
+svg.addEventListener('mousedown',e=>{panActive=true;last={x:e.clientX,y:e.clientY};});
+window.addEventListener('mouseup',()=>{panActive=false;});
+window.addEventListener('mousemove',e=>{if(!panActive)return;pan((last.x-e.clientX)/1.2,(last.y-e.clientY)/1.2);last={x:e.clientX,y:e.clientY};});
+svg.addEventListener('wheel',e=>{e.preventDefault();zoomTo(view.s+(e.deltaY>0?-0.1:0.1));},{passive:false});
+document.getElementById('zoomIn').onclick=()=>zoomTo(view.s+0.1);
+document.getElementById('zoomOut').onclick=()=>zoomTo(view.s-0.1);
+document.getElementById('zoomReset').onclick=()=>zoomTo(1.0);
+document.getElementById('fit').onclick=()=>{view.x=0;view.y=0;zoomTo(1.0);};
+
+render(); setView();
+</script></body></html>

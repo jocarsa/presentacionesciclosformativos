@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Elementos de las bases de datos relacionales — Utilización de bases de datos ofimáticas — Aplicaciones ofimáticas.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="elementos-de-las-bases-de-datos-relacionales">
+<h1>Elementos de las bases de datos relacionales</h1>
+<p><strong>Unidad:</strong> Utilización de bases de datos ofimáticas<br><strong>Documento:</strong> Aplicaciones ofimáticas.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Utilización de bases de datos ofimáticas</h1>
+    <p>Objetivo: Comprender los elementos básicos de las bases de datos relacionales.</p>
+</section>
+
+<section class="slide">
+    <h2>Definición de Bases de Datos Relacionales</h2>
+    <p>Una base de datos relacional es una colección organizada de datos que se almacenan en tablas interrelacionadas.</p>
+</section>
+
+<section class="slide">
+    <h2>Estructura de una Base de Datos Relacional</h2>
+    <ul>
+        <li><strong>Tablas:</strong> Conjuntos de filas y columnas que representan datos relacionados.</li>
+        <li><strong>Columnas:</strong> Encabezados que definen los tipos de datos en cada fila.</li>
+        <li><strong>Filas:</strong> Registros individuales dentro de una tabla.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Claves Primarias y Foráneas</h2>
+    <p><strong>Clave Primaria:</strong> Identifica de manera única cada fila en una tabla.</p>
+    <p><strong>Clave Foránea:</strong> Se utiliza para establecer relaciones entre tablas.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Tabla Relacional</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID Empleado</th>
+                <th>Nombre</th>
+                <th>Puesto</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Juan Pérez</td>
+                <td>Vendedor</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Maria López</td>
+                <td>Gerente</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Tipos de Datos en Bases de Datos Relacionales</h2>
+    <ul>
+        <li><strong>Númericos:</strong> Enteros, decimales.</li>
+        <li><strong>Cadenas:</strong> Texto.</li>
+        <li><strong>Fecha y Hora:</strong> Información temporal.</li>
+        <li><strong>Lógicos:</strong> Verdadero/Falso.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Operaciones Básicas en Bases de Datos Relacionales</h2>
+    <ul>
+        <li><strong>SELECT:</strong> Consultar datos.</li>
+        <li><strong>INSERT:</strong> Añadir nuevos registros.</li>
+        <li><strong>UPDATE:</strong> Modificar registros existentes.</li>
+        <li><strong>DELETE:</strong> Eliminar registros.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Indices en Bases de Datos Relacionales</h2>
+    <p>Los índices aceleran la búsqueda y el acceso a los datos en una base de datos relacional.</p>
+</section>
+
+<section class="slide">
+    <h2>Normalización en Bases de Datos Relacionales</h2>
+    <p>El proceso de normalizar una base de datos para reducir la redundancia y mejorar su consistencia.</p>
+</section>
+
+<section class="slide">
+    <h2>Relaciones entre Tablas</h2>
+    <ul>
+        <li><strong>Uno a Uno:</strong> Una fila en una tabla está relacionada con una sola fila en otra tabla.</li>
+        <li><strong>Uno a Muchos:</strong> Una fila en una tabla está relacionada con varias filas en otra tabla.</li>
+        <li><strong>Muchos a Muchos:</strong> Varias filas en una tabla están relacionadas con varias filas en otra tabla.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de Relación Uno a Muchos</h2>
+    <p>Un cliente puede tener varios pedidos, pero un pedido pertenece a solo un cliente.</p>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas en Bases de Datos Relacionales</h2>
+    <ul>
+        <li>Usar nombres descriptivos para tablas y columnas.</li>
+        <li>Mantener la consistencia en los tipos de datos.</li>
+        <li>Evitar redundancia al normalizar.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en Bases de Datos Relacionales</h2>
+    <ul>
+        <li>No usar claves primarias o foráneas correctamente.</li>
+        <li>No normalizar adecuadamente la base de datos.</li>
+        <li>No realizar backups regulares.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Conceptos Básicos</h2>
+    <p>¿Cuál es el propósito principal de una clave primaria en una base de datos relacional?</p>
+    <ol>
+        <li>Acelerar la búsqueda de datos.</li>
+        <li>Identificar de manera única cada fila en una tabla.</li>
+        <li>Establecer relaciones entre tablas.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Verificación de Bases de Datos Relacionales</h2>
+    <ul>
+        <li>Todas las tablas tienen claves primarias.</li>
+        <li>Las relaciones entre tablas están correctamente estableidas.</li>
+        <li>No hay redundancia en la base de datos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Diseño de una Tabla Relacional</h2>
+    <p>Diseña una tabla relacional para almacenar información sobre libros, incluyendo autores y editoriales.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <p>Las bases de datos relacionales son fundamentales en la gestión de información. Comprenden tablas interrelacionadas con claves primarias y foráneas, tipos de datos específicos y operaciones básicas.</p>
+</section>
+
+<section class="slide">
+    <h2>Normativa y Seguridad</h2>
+    <p>Es importante seguir normativas como GDPR para proteger la privacidad de los datos. Implementar medidas de seguridad adecuadas es crucial para mantener la integridad y confidencialidad de las bases de datos.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">Aplicaciones ofimáticas.md · Utilización de bases de datos ofimáticas → Elementos de las bases de datos relacionales</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 13:21:54</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Programación de copias de seguridad — Gestión de dispositivos de almacenamiento — Seguridad informática.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="programacion-de-copias-de-seguridad">
+<h1>Programación de copias de seguridad</h1>
+<p><strong>Unidad:</strong> Gestión de dispositivos de almacenamiento<br><strong>Documento:</strong> Seguridad informática.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Gestión de dispositivos de almacenamiento</h1>
+    <p>Objetivo: Comprender y aplicar técnicas de programación de copias de seguridad para proteger los datos.</p>
+</section>
+
+<section class="slide">
+    <h2>Introducción a la programación de copias de seguridad</h2>
+    <ul>
+        <li>Definición de copia de seguridad</li>
+        <li>Importancia en la gestión de dispositivos de almacenamiento</li>
+        <li>Tipos de copias de seguridad (incrementales, diferenciales, completas)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Estrategia de copias de seguridad</h2>
+    <p>Desarrolla una estrategia que incluya:</p>
+    <ul>
+        <li>Frecuencia de las copias</li>
+        <li>Tipo de copia a realizar</li>
+        <li>Destino de la copia (local o remoto)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Herramientas para programación de copias de seguridad</h2>
+    <ul>
+        <li>Software de gestión de almacenamiento</li>
+        <li>Sistemas operativos (Windows, Linux, macOS)</li>
+        <li>Aplicaciones específicas para copias de seguridad</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Windows</h2>
+    <p>Paso a paso para configurar una copia de seguridad programada:</p>
+    <ol>
+        <li>Ir a "Configuración" > "Seguridad y privacidad" > "opia de seguridad"</li>
+        <li>Elegir la carpeta o dispositivo que deseas proteger</li>
+        <li>Establecer la frecuencia y el método de copia</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de configuración en Linux</h2>
+    <p>Paso a paso para configurar una copia de seguridad programada:</p>
+    <ol>
+        <li>Instalar herramientas como `rsync` o `tar`</li>
+        <li>Crear un script de copia de seguridad</li>
+        <li>Programar el script con `cron`</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas en programación de copias de seguridad</h2>
+    <ul>
+        <li>Prueba periódica de las copias</li>
+        <li>Seguridad del medio de almacenamiento (ifrado, acceso controlado)</li>
+        <li>Mantenimiento regular de los medios de copia</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes en programación de copias de seguridad</h2>
+    <ul>
+        <li>No realizar pruebas periódicas</li>
+        <li>Copiar a un medio no seguro o accesible</li>
+        <li>No mantener los medios de copia actualizados</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa entre diferentes métodos de copias de seguridad</h2>
+    <table>
+        <tr>
+            <th>Tipo de Copia</th>
+            <th>Ventajas</th>
+            <th>Inconvenientes</th>
+        </tr>
+        <tr>
+            <td>Incremental</td>
+            <td>Espacio eficiente, rápido</td>
+            <td>No completa la imagen del sistema</td>
+        </tr>
+        <tr>
+            <td>Diferencial</td>
+            <td>Rápido, espacio eficiente</td>
+            <td>No completa la imagen del sistema</td>
+        </tr>
+        <tr>
+            <td>Completa</td>
+            <td>Imagen completa del sistema</td>
+            <td>Espacio requerido mayor, tiempo de copia más largo</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: Métodos de copias de seguridad</h2>
+    <p>¿Cuál es la ventaja principal de una copia de seguridad incremental?</p>
+    <ul>
+        <li>Ahorro de espacio en el medio de almacenamiento</li>
+        <li>Rápidez en el proceso de copia</li>
+        <li>Completa la imagen del sistema</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist para programación de copias de seguridad</h2>
+    <ol>
+        <li>Identificar los datos a proteger</li>
+        <li>Elegir el método de copia adecuado</li>
+        <li>Configurar la estrategia de copias</li>
+        <li>Probar la configuración</li>
+        <li>Mantener actualizado el medio de almacenamiento</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Crear una estrategia de copias de seguridad</h2>
+    <p>Desarrolla una estrategia de copias de seguridad para un servidor con los siguientes datos:</p>
+    <ul>
+        <li>Sistema operativo Windows Server 2019</li>
+        <li>Base de datos SQL Server</li>
+        <li>Archivos importantes del negocio</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Resumen: Programación de copias de seguridad</h2>
+    <p>Los pasos clave para programar una copia de seguridad incluyen:</p>
+    <ul>
+        <li>Elegir el método y la frecuencia</li>
+        <li>Configurar las herramientas adecuadas</li>
+        <li>Mantener pruebas periódicas</li>
+        <li>Seguir buenas prácticas de seguridad</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa y regulaciones relacionadas</h2>
+    <p>Algunas normativas importantes en materia de copias de seguridad:</p>
+    <ul>
+        <li>GDPR (Reglamento General sobre Protección de Datos)</li>
+        <li>NIST (National Institute of Standards and Technology)</li>
+        <li>ISO 27035 (Seguridad de la información: Gestión de copias de seguridad y recuperación ante desastres)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Preguntas frecuentes sobre programación de copias de seguridad</h2>
+    <ol>
+        <li>¿Qué es una copia de seguridad?</li>
+        <li>¿Cuándo y cómo debo realizar las copias de seguridad?</li>
+        <li>¿Cómo puedo asegurar la seguridad de mis copias de seguridad?</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Contacto</h2>
+    <p>Si tienes preguntas o necesitas más información:</p>
+    <ul>
+        <li>Email: soporte@ejemplo.com</li>
+        <li>Teléfono: +34 123 456 789</li>
+        <li>Sitio web: www.ejemplo.com</li>
+    </ul>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">Seguridad informática.md · Gestión de dispositivos de almacenamiento → Programación de copias de seguridad</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 18:16:08</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

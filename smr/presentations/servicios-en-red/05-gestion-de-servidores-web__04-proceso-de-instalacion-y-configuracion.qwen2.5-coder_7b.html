@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Proceso de instalación y configuración — Gestión de servidores web — Servicios en red.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="proceso-de-instalacion-y-configuracion">
+<h1>Proceso de instalación y configuración</h1>
+<p><strong>Unidad:</strong> Gestión de servidores web<br><strong>Documento:</strong> Servicios en red.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Gestión de servidores web</h1>
+    <p>Objetivo: Aprender el proceso de instalación y configuración de servidores web.</p>
+</section>
+
+<section class="slide">
+    <h2>Introducción a la Gestión de Servidores Web</h2>
+    <p>Los servidores web son fundamentales para la distribución de contenido en Internet. Este slide proporciona una visión general del papel y las funciones de los servidores web.</p>
+</section>
+
+<section class="slide">
+    <h2>Software de Servidor Web</h2>
+    <ul>
+        <li>Apache HTTP Server</li>
+        <li>Nginx</li>
+        <li>Microsoft IIS</li>
+        <li>Lighttpd</li>
+        <li>LiteSpeed</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Requisitos del Servidor Web</h2>
+    <ul>
+        <li>Sistema operativo compatible (Linux, Windows)</li>
+        <li>Hardware adecuado (CPU, RAM, Disco Duro)</li>
+        <li>Conexión a Internet</li>
+        <li>Software de red y firewall configurados correctamente</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Proceso de Instalación</h2>
+    <ol>
+        <li>Descarga del software del servidor web desde su sitio oficial.</li>
+        <li>Ejecución del instalador y seguimiento de las instrucciones.</li>
+        <li>Configuración inicial del servidor (puerto, directorio raíz).</li>
+        <li>Prueba de la instalación accediendo al servidor web desde un navegador.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Configuración Básica</h2>
+    <ul>
+        <li>Edición del archivo de configuración principal (generalmente `httpd.conf` o `nginx.conf`).</li>
+        <li>Definición de los sitios web virtuales.</li>
+        <li>Configuración de permisos y acceso a los directorios.</li>
+        <li>Habilitación de módulos adicionales según las necesidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Seguridad en Servidores Web</h2>
+    <ul>
+        <li>Uso de HTTPS para cifrar la comunicación.</li>
+        <li>Configuración de firewalls y restricciones de acceso.</li>
+        <li>Actualización regular del software y parches de seguridad.</li>
+        <li>Monitoreo y análisis de logs.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo: Configuración de un Sitio Web Virtual</h2>
+    <p>Configurar un sitio web virtual implica crear una configuración específica para cada dominio en el archivo de configuración del servidor.</p>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico: Implementación de SSL/TLS</h2>
+    <p>La implementación de SSL/TLS es crucial para la seguridad de los sitios web. Este slide muestra cómo configurar SSL en un servidor Apache.</p>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas en Configuración</h2>
+    <ul>
+        <li>Organización clara del archivo de configuración.</li>
+        <li>Uso de comentarios para explicar las configuraciones.</li>
+        <li>Pruebas periódicas y documentación detallada.</li>
+        <li>Seguimiento de cambios y actualizaciones.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en la Configuración</h2>
+    <ul>
+        <li>Olvidar el puerto 80 o 443.</li>
+        <li>No configurar correctamente los permisos de acceso.</li>
+        <li>No habilitar módulos necesarios.</li>
+        <li>No implementar SSL/TLS adecuadamente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: Apache vs Nginx</h2>
+    <table>
+        <tr>
+            <th>Apache</th>
+            <th>Nginx</th>
+        </tr>
+        <tr>
+            <td>Más antiguo y estable.</td>
+            <td>Más ligero y eficiente.</td>
+        </tr>
+        <tr>
+            <td>Suporta más módulos.</td>
+            <td>Mejor para servidores de contenido estático.</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: ¿Cuál es el puerto predeterminado del servidor web Apache?</h2>
+    <ul>
+        <li>A) 80</li>
+        <li>B) 443</li>
+        <li>C) 8080</li>
+        <li>D) 5000</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist de Instalación y Configuración</h2>
+    <ol>
+        <li>Instalar el software del servidor web.</li>
+        <li>Configurar el puerto y directorio raíz.</li>
+        <li>Habilitar módulos necesarios.</li>
+        <li>Crear sitios web virtuales.</li>
+        <li>Implementar SSL/TLS si es necesario.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Configurar un Servidor Web Local</h2>
+    <p>Configura un servidor web local utilizando Apache o Nginx en tu máquina. Documenta los pasos y cualquier problema que surja.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Instalación de servidores web (Apache, Nginx).</li>
+        <li>Configuración básica y avanzada.</li>
+        <li>Seguridad en servidores web.</li>
+        <li>Buenas prácticas y errores comunes.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa y Reglamentos</h2>
+    <p>Es importante conocer las normativas y regulaciones que afectan la gestión de servidores web, como los estándares de seguridad informática y las leyes sobre privacidad.</p>
+</section>
+
+<section class="slide">
+    <h2>Preguntas Frecuentes (FAQ)</h2>
+    <ul>
+        <li>¿Qué es un servidor web?</li>
+        <li>¿Cuáles son los principales tipos de servidores web?</li>
+        <li>¿Cómo puedo mejorar la seguridad de mi servidor web?</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Recursos Adicionales</h2>
+    <ul>
+        <li><a href="https://httpd.apache.org/docs/current/">Documentación oficial de Apache</a></li>
+        <li><a href="https://nginx.org/en/docs/">Documentación oficial de Nginx</a></li>
+        <li><a href="https://www.sslshopper.com/ssl-checker.html">Verificador SSL/TLS</a></li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Gracias</h2>
+    <p>Preguntas o comentarios? ¡Estoy aquí para ayudar!</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">Servicios en red.md · Gestión de servidores web → Proceso de instalación y configuración</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 19:00:12</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

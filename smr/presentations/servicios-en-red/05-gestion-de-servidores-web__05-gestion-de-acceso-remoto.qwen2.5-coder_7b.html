@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Gestión de acceso remoto — Gestión de servidores web — Servicios en red.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="gestion-de-acceso-remoto">
+<h1>Gestión de acceso remoto</h1>
+<p><strong>Unidad:</strong> Gestión de servidores web<br><strong>Documento:</strong> Servicios en red.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Gestión de Acceso Remoto en Servidores Web</h1>
+    <p>Objetivo: Aprender las técnicas y mejores prácticas para gestionar el acceso remoto a servidores web.</p>
+</section>
+
+<section class="slide">
+    <h2>Definición del Acceso Remoto</h2>
+    <p>El acceso remoto a servidores web permite que los usuarios accedan a recursos y servicios de un servidor desde una ubicación geográfica diferente.</p>
+</section>
+
+<section class="slide">
+    <h2>Métodos de Acceso Remoto</h2>
+    <ul>
+        <li>SSH (Secure Shell)</li>
+        <li>VNC (Virtual Network Computing)</li>
+        <li>RDP (Remote Desktop Protocol)</li>
+        <li>FTP (File Transfer Protocol)</li>
+        <li>SFTP (Secure File Transfer Protocol)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>SSH: Seguridad y Autenticación</h2>
+    <p>SSH utiliza cifrado para proteger la comunicación entre el cliente y el servidor.</p>
+    <ul>
+        <li>Autenticación basada en claves SSH</li>
+        <li>Autenticación de usuarios</li>
+        <li>Cifrado de datos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>VNC: Ventajas y Desventajas</h2>
+    <p>VNC permite control remoto visual del escritorio de un servidor.</p>
+    <ul>
+        <li>Interfaz gráfica completa</li>
+        <li>Requiere software adicional en el cliente</li>
+        <li>Puede ser menos seguro que SSH</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>RDP: Uso y Configuración</h2>
+    <p>RDP es comúnmente usado para acceder a servidores Windows.</p>
+    <ul>
+        <li>Configuración del servidor RDP</li>
+        <li>Cifrado de la conexión</li>
+        <li>Autenticación de usuarios</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>FTP y SFTP: Transferencia de Archivos</h2>
+    <p>FTP permite transferir archivos entre el cliente y el servidor.</p>
+    <ul>
+        <li>SFTP es una versión segura de FTP que usa SSH para cifrar la comunicación</li>
+        <li>Autenticación de usuarios</li>
+        <li>Transferencia de archivos en modo binario o ASCII</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas</h2>
+    <ul>
+        <li>Usar autenticación basada en claves SSH</li>
+        <li>Configurar firewalls y grupos de seguridad</li>
+        <li>Limitar los permisos de acceso</li>
+        <li>Monitoreo y registro de accesos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes</h2>
+    <ul>
+        <li>No usar autenticación basada en claves SSH</li>
+        <li>No configurar firewalls y grupos de seguridad</li>
+        <li>No limitar los permisos de acceso</li>
+        <li>No monitorear ni registrar accesos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Seguridad en Acceso Remoto</h2>
+    <p>Es crucial implementar medidas de seguridad para proteger la información y los servicios del servidor.</p>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico: Seguridad SSH</h2>
+    <p>Ejemplo de configuración segura de SSH en un servidor Linux.</p>
+</section>
+
+<section class="slide">
+    <h2>Proceso de Configuración SSH</h2>
+    <ol>
+        <li>Generar claves SSH</li>
+        <li>Configurar el archivo /etc/ssh/sshd_config</li>
+        <li>Reiniciar el servicio SSH</li>
+        <li>Prueba de conexión SSH segura</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Chequeo de Seguridad SSH</h2>
+    <ul>
+        <li>Verificar la configuración del archivo /etc/ssh/sshd_config</li>
+        <li>Comprobar los registros de autenticación</li>
+        <li>Realizar pruebas de fuerza bruta</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Seguridad SSH</h2>
+    <p>Pregunta: ¿Qué tipo de autenticación es recomendada para SSH?</p>
+    <ol>
+        <li>Autenticación basada en contraseñas</li>
+        <li>Autenticación basada en claves SSH</li>
+        <li>Autenticación basada en tokens</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Configuración de RDP</h2>
+    <p>Tarea: Configurar el acceso remoto a un servidor Windows utilizando RDP.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Diferentes métodos de acceso remoto a servidores web</li>
+        <li>Buenas prácticas para la seguridad del acceso remoto</li>
+        <li>Errores comunes y cómo evitarlos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa y Reglamentos</h2>
+    <p>Es importante conocer las normativas y regulaciones que rigen el acceso remoto a servidores web.</p>
+</section>
+
+<section class="slide">
+    <h2>Recursos Adicionales</h2>
+    <ul>
+        <li>Documentación oficial de SSH: <a href="https://www.opens.com/" target="_blank">opens.com</a></li>
+        <li>Documentación oficial de RDP: <a href="https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/rdp-client" target="_blank">microsoft.com</a></li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Preguntas y Respuestas</h2>
+    <p>¿Tienes alguna pregunta sobre el acceso remoto a servidores web?</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">Servicios en red.md · Gestión de servidores web → Gestión de acceso remoto</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 19:01:13</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

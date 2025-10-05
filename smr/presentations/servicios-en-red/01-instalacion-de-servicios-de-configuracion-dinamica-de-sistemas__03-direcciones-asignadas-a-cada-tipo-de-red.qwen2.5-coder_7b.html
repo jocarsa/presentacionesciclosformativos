@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Direcciones asignadas a cada tipo de red — Instalación de servicios de configuración dinámica de sistemas — Servicios en red.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="direcciones-asignadas-a-cada-tipo-de-red">
+<h1>Direcciones asignadas a cada tipo de red</h1>
+<p><strong>Unidad:</strong> Instalación de servicios de configuración dinámica de sistemas<br><strong>Documento:</strong> Servicios en red.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Direcciones asignadas a cada tipo de red</h2>
+    <p>Las direcciones IP se asignan automáticamente a los dispositivos en una red mediante protocolos como DHCP. Esto facilita la gestión y el escalado de redes.</p>
+</section>
+
+<section class="slide">
+    <h3>Dirección IPv4 estándar</h3>
+    <ul>
+        <li>Formato: 4 octetos separados por puntos (ej: 192.168.1.1)</li>
+        <li>Cada octeto puede tener valores de 0 a 255</li>
+        <li>Direcciones reservadas para redes y enrutadores</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Clases de direcciones IPv4</h3>
+    <ul>
+        <li>A: 1.0.0.0 - 126.255.255.255 (127.0.0.0 reservada)</li>
+        <li>B: 128.0.0.0 - 191.255.255.255</li>
+        <li>C: 192.0.0.0 - 223.255.255.255</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Direcciones de red y broadcast</h3>
+    <p>Para cada dirección IP se asigna una dirección de red y una dirección de broadcast.</p>
+    <ul>
+        <li>Dirección de red: Todos los bits del host soneros</li>
+        <li>Dirección de broadcast: Todos los bits del host son unos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Subredes</h3>
+    <p>Las subredes se crean al dividir una red en segmentos más pequeños.</p>
+    <ul>
+        <li>Cálculo de la máscara de subred</li>
+        <li>Determinación del número de direcciones disponibles</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Tipos de redes</h3>
+    <ul>
+        <li>Red local (LAN): Red pequeña dentro de una organización</li>
+        <li>Red metropolitana (MAN): Red que cubre una ciudad o área urbana</li>
+        <li>Red nacional (WAN): Red que conecta diferentes redes a gran distancia</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Direcciones reservadas</h3>
+    <ul>
+        <li>10.0.0.0 - 10.255.255.255 (Clase A)</li>
+        <li>172.16.0.0 - 172.31.255.255 (Clase B)</li>
+        <li>192.168.0.0 - 192.168.255.255 (Clase)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Direcciones de enrutamiento</h3>
+    <p>Las direcciones IP se utilizan para enrutar paquetes entre diferentes redes.</p>
+    <ul>
+        <li>Dirección default (0.0.0.0)</li>
+        <li>Direcciones de red y broadcast dentro de la misma red</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Configuración dinámica con DHCP</h3>
+    <p>DHCP asigna automáticamente direcciones IP a los dispositivos en una red.</p>
+    <ul>
+        <li>Beneficios: Facilita la gestión y el escalado de redes</li>
+        <li>Potencial problemas: Asignación incorrecta o conflictos de IP</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Ejemplo de configuración DHCP</h3>
+    <p>Configuración básica en un servidor DHCP:</p>
+    <ul>
+        <li>Dirección IP del servidor DHCP</li>
+        <li>Máscara de subred</li>
+        <li>Rango de direcciones IP asignables</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Caso práctico: Implementación de DHCP</h3>
+    <p>Implementar DHCP en una red pequeña para gestionar las direcciones IP automáticamente.</p>
+    <ul>
+        <li>Pasos básicos: Configurar el servidor DHCP, asignar rango de IPs</li>
+        <li>Verificar la configuración y solucionar problemas comunes</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Buenas prácticas en DHCP</h3>
+    <ul>
+        <li>Configurar tiempos de renovación y reasignación adecuados</li>
+        <li>Monitorear el uso de las direcciones IP asignadas</li>
+        <li>Evitar conflictos de IP mediante la gestión correcta del rango</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Errores comunes en DHCP</h3>
+    <ul>
+        <li>Dirección IP asignada incorrectamente</li>
+        <li>Tiempo de renovación excesivo o insuficiente</li>
+        <li>Conflictos entre dispositivos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Comparativa: DHCP vs. Asignación estática</h3>
+    <table>
+        <tr>
+            <th>Dirección IP</th>
+            <th>DHCP</th>
+            <th>Asignación Estática</th>
+        </tr>
+        <tr>
+            <td>Automática</td>
+            <td>Sí</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td>Gestión</td>
+            <td>Fácil</td>
+            <td>Difícil</td>
+        </tr>
+        <tr>
+            <td>Escalabilidad</td>
+            <td>Buena</td>
+            <td>Mala</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h3>Mini-quiz: Direcciones IP</h3>
+    <p>¿Cuál es la dirección de broadcast para la red 192.168.1.0/24?</p>
+    <ul>
+        <li>A) 192.168.1.255</li>
+        <li>B) 192.168.1.0</li>
+        <li>C) 192.168.0.255</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Checklist: Configuración DHCP</h3>
+    <ol>
+        <li>Configurar el servidor DHCP</li>
+        <li>Definir el rango de direcciones IP asignables</li>
+        <li>Configurar la máscara de subred</li>
+        <li>Verificar la configuración</li>
+        <li>Solucionar problemas comunes</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h3>Actividad: Implementar DHCP en una red</h3>
+    <p>Implementar DHCP en una red pequeña y documentar el proceso.</p>
+    <ul>
+        <li>Configurar el servidor DHCP</li>
+        <li>Asignar rango de direcciones IP</li>
+        <li>Verificar la configuración</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Resumen: Direcciones asignadas a cada tipo de red</h3>
+    <p>Direcciones IP se asignan automáticamente en redes mediante DHCP. Se utilizan direcciones estándar, clases y subredes para gestionar la comunicación.</p>
+</section>
+
+<section class="slide">
+    <h1>Instalación de servicios de configuración dinámica de sistemas</h1>
+    <p>Objetivo: Comprender los conceptos básicos y aplicaciones del DHCP en redes.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">Servicios en red.md · Instalación de servicios de configuración dinámica de sistemas → Direcciones asignadas a cada tipo de red</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 18:36:59</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

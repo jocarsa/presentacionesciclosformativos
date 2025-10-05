@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Direcciones IP: IPv4, IPv6 — Instalación/configuración de los equipos de red — Redes locales.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="direcciones-ip-ipv4-ipv6">
+<h1>Direcciones IP: IPv4, IPv6</h1>
+<p><strong>Unidad:</strong> Instalación/configuración de los equipos de red<br><strong>Documento:</strong> Redes locales.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Direcciones IP: IPv4 y IPv6</h2>
+    <p>Las direcciones IP son identificadores únicos que asignan a cada dispositivo en una red.</p>
+</section>
+
+<section class="slide">
+    <h3>IPv4 (Internet Protocol Version 4)</h3>
+    <ul>
+        <li>Dirección de 32 bits (4 octetos)</li>
+        <li>Formato: AAA.BBB.CCC.DDD (donde A, B,, D son números entre 0 y 255)</li>
+        <li>Ejemplo: 192.168.1.1</li>
+        <li>Limitaciones: Direcciones limitadas y escasez de IPs</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>IPv6 (Internet Protocol Version 6)</h3>
+    <ul>
+        <li>Dirección de 128 bits (8 grupos de 4 hexadecimales)</li>
+        <li>Formato: AAAA.BBBB.CCCC.DDDD.EEEE.FFFF.GGGG.HHHH</li>
+        <li>Ejemplo: 2001:0db8:85a3:0000:0000:8a2e:0370:7334</li>
+        <li>Avantage: Direcciones infinitas y extensión de la red</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Ejemplo de Asignación IPv4</h3>
+    <p>Asignación estática:</p>
+    <pre><code>IP: 192.168.1.100
+Máscara de subred: 255.255.255.0
+Puerta de enlace: 192.168.1.1</code></pre>
+</section>
+
+<section class="slide">
+    <h3>Ejemplo de Asignación IPv6</h3>
+    <p>Asignación automática (DHCPv6):</p>
+    <pre><code>IP: 2001:db8::1
+Máscara de subred: /64
+Puerta de enlace: fe80::1</code></pre>
+</section>
+
+<section class="slide">
+    <h3>Caso Práctico: Configuración IPv4</h3>
+    <p>Configurar una máquina virtual con IP estática:</p>
+    <ol>
+        <li>Ir a la configuración de red</li>
+        <li>Elegir "IPv4"</li>
+        <li>Seleccionar "Usar el siguiente dirección IP"</li>
+        <li>Ingresar la dirección, máscara y puerta de enlace</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h3>Caso Práctico: Configuración IPv6</h3>
+    <p>Configurar una máquina virtual con IP automática (DHCPv6):</p>
+    <ol>
+        <li>Ir a la configuración de red</li>
+        <li>Elegir "IPv6"</li>
+        <li>Seleccionar "Obtener automáticamente el dirección IPv6"</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h3>Buenas Prácticas: IPv4</h3>
+    <ul>
+        <li>Usar DHCP para asignación dinámica de IPs</li>
+        <li>Configurar puertas de enlace y máscaras de subred correctamente</li>
+        <li>Mantener registros de IP asignadas</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Buenas Prácticas: IPv6</h3>
+    <ul>
+        <li>Configurar puertas de enlace y prefijos de subred correctamente</li>
+        <li>Mantener registros de IPs asignadas</li>
+        <li>Usar herramientas de diagnóstico para verificar conectividad</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Errores Comunes: IPv4</h3>
+    <ul>
+        <li>Máscara de subred incorrecta</li>
+        <li>Puerta de enlace no configurada correctamente</li>
+        <li>Dirección IP fuera del rango de la subred</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Errores Comunes: IPv6</h3>
+    <ul>
+        <li>Prefijo de subred incorrecto</li>
+        <li>No tener configurada una puerta de enlace</li>
+        <li>Dirección IP fuera del rango de la red</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Comparativa IPv4 vs IPv6</h3>
+    <table>
+        <tr>
+            <th></th>
+            <th>IPv4</th>
+            <th>IPv6</th>
+        </tr>
+        <tr>
+            <td>Dirección bits</td>
+            <td>32</td>
+            <td>128</td>
+        </tr>
+        <tr>
+            <td>Ejemplo dirección</td>
+            <td>192.168.1.1</td>
+            <td>2001:db8::1</td>
+        </tr>
+        <tr>
+            <td>Direcciones disponibles</td>
+            <td>4,3 billones</td>
+            <td>Más de 3.4 x 10^38</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h3>Mini-Quiz: Direcciones IP</h3>
+    <p>¿Cuál es la dirección IPv6 equivalente a la siguiente IPv4?</p>
+    <pre><code>192.168.1.1</code></pre>
+    <ol>
+        <li>A) 2001:db8::1</li>
+        <li>B) 2001:0db8:85a3:0000:0000:8a2e:0370:7334</li>
+        <li>C) 2001:db8:0:0:0:0:1</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h3>Checklist Configuración IPv4</h3>
+    <ul>
+        <li>Verificar dirección IP asignada</li>
+        <li>Comprobar máscara de subred</li>
+        <li>Asegurar puerta de enlace configurada</li>
+        <li>Validar conectividad con ping a una máquina conocida</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Checklist Configuración IPv6</h3>
+    <ul>
+        <li>Verificar dirección IP asignada</li>
+        <li>Comprobar prefijo de subred</li>
+        <li>Asegurar puerta de enlace configurada</li>
+        <li>Validar conectividad con ping a una máquina conocida</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Actividad: Configuración de Direcciones IP</h3>
+    <p>Configurar la dirección IP y máscara de subred en un dispositivo virtual.</p>
+    <ol>
+        <li>Ingresar a la configuración de red</li>
+        <li>Elegir IPv4 o IPv6 según corresponda</li>
+        <li>Asignar una dirección IP estática o solicitar una automática (DHCPv6)</li>
+        <li>Verificar la configuración con ping y tracert/traceroute</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h3>Resumen: Direcciones IP IPv4 y IPv6</h3>
+    <ul>
+        <li>Direcciones IP identifican dispositivos en una red</li>
+        <li>IPv4 usa 32 bits, IPv6 usa 128 bits</li>
+        <li>IPv6 ofrece más direcciones y extiende la capacidad de la red</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Normativa: Direcciones IP</h3>
+    <p>La normativa ISO/IE 25947 define los estándares para IPv4 y IPv6.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">Redes locales.md · Instalación/configuración de los equipos de red → Direcciones IP: IPv4, IPv6</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 17:15:49</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

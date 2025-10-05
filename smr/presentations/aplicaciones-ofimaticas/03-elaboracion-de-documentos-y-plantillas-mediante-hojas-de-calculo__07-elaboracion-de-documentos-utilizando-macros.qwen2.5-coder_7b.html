@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Elaboración de documentos utilizando macros — Elaboración de documentos y plantillas mediante hojas de cálculo — Aplicaciones ofimáticas.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="elaboracion-de-documentos-utilizando-macros">
+<h1>Elaboración de documentos utilizando macros</h1>
+<p><strong>Unidad:</strong> Elaboración de documentos y plantillas mediante hojas de cálculo<br><strong>Documento:</strong> Aplicaciones ofimáticas.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Elaboración de documentos y plantillas mediante hojas deálculo</h1>
+    <p><strong>Objetivo:</strong> Aprender a utilizar macros en hojas deálculo para automatizar tareas repetitivas.</p>
+</section>
+
+<section class="slide">
+    <h2>¿Qué son las macros?</h2>
+    <ul>
+        <li>Son secuencias de comandos predefinidos que realizan una tarea específica.</li>
+        <li>Aumentan la eficiencia al evitar tareas repetitivas.</li>
+        <li>Pueden ser creadas y ejecutadas en hojas deálculo como Excel.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Beneficios de usar macros</h2>
+    <ul>
+        <li>Ahorro de tiempo y esfuerzo.</li>
+        <li>Reducción de errores humanos.</li>
+        <li>Consistencia en el formato y contenido de los documentos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Cómo crear una macro en Excel</h2>
+    <ol>
+        <li>Abre la hoja deálculo.</li>
+        <li>Voy a "Desarrollador" > "Macros".</li>
+        <li>Escribe el código VBA (Visual Basic for Applications).</li>
+        <li>Guarda la macro en un archivo.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de macro simple</h2>
+    <pre><code>
+Sub SumarColumnas()
+    Dim i As Integer
+    For i = 1 To 10
+        Cells(i, 3).Value = Cells(i, 1).Value + Cells(i, 2).Value
+    Next i
+End Sub
+</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Tipos de macros</h2>
+    <ul>
+        <li>Macros personalizadas: creadas por el usuario.</li>
+        <li>Macros incorporadas: predefinidas en el software.</li>
+        <li>Macros add-ins: complementos adicionales que añaden nuevas funciones.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Cómo ejecutar una macro</h2>
+    <ol>
+        <li>Voy a "Desarrollador" > "Macros".</li>
+        <li>Selecciono la macro que quiero ejecutar.</li>
+        <li>Hago clic en "Ejecutar".</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes al crear macros</h2>
+    <ul>
+        <li>Sintaxis incorrecta del código VBA.</li>
+        <li>No guardar la macro después de crearla.</li>
+        <li>No tener permisos para ejecutar macros.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Compartir macros</h2>
+    <ul>
+        <li>Pueden compartirse a través de archivos .xlsm (hojas deálculo habilitadas para macros).</li>
+        <li>Se pueden compartir en formatos de texto plano si el código es sencillo.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas al crear macros</h2>
+    <ul>
+        <li>Comentar el código para facilitar su mantenimiento.</li>
+        <li>Probar el código antes de compartirlo.</li>
+        <li>No guardar macros en archivos que no sean .xlsm.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Caso práctico: Automatización de informes financieros</h2>
+    <p>Una empresa puede usar una macro para calcular automáticamente los ingresos y gastos mensuales, generando un informe financiero detallado.</p>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz</h2>
+    <ol>
+        <li>¿Qué es una macro en hojas deálculo?</li>
+        <li>Cómo se ejecuta una macro en Excel?</li>
+        <li>¿Cuáles son los beneficios de usar macros?</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist para crear macros</h2>
+    <ul>
+        <li>Escribir el código VBA correctamente.</li>
+        <li>Probar el código antes de guardarla.</li>
+        <li>Comentar el código para facilitar su mantenimiento.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad práctica</h2>
+    <p>Crea una macro que calcule la media de los valores en una columna específica y muestre el resultado en unaelda adyacente.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Las macros son secuencias de comandos que automatizan tareas repetitivas en hojas deálculo.</li>
+        <li>Son útiles para ahorrar tiempo, reducir errores y mantener la consistencia en los documentos.</li>
+        <li>Pueden ser creadas, ejecutadas y compartidas mediante el uso de macros personalizadas en Excel.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa sobre macros</h2>
+    <p>Es importante tener en cuenta la normativa de privacidad y seguridad al crear y compartir macros, especialmente si se utilizan para procesar datos personales.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">Aplicaciones ofimáticas.md · Elaboración de documentos y plantillas mediante hojas de cálculo → Elaboración de documentos utilizando macros</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 13:20:52</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

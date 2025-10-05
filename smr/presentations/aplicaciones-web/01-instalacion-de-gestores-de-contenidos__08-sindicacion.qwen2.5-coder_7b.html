@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Sindicación — Instalación de gestores de contenidos — Aplicaciones web.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="sindicacion">
+<h1>Sindicación</h1>
+<p><strong>Unidad:</strong> Instalación de gestores de contenidos<br><strong>Documento:</strong> Aplicaciones web.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Sindicación en Aplicaciones Web</h2>
+    <p>Objetivo: Comprender los conceptos básicos y aplicaciones de la sindicación en aplicaciones web.</p>
+</section>
+
+<section class="slide">
+    <h3>¿Qué es la Sindicación?</h3>
+    <ul>
+        <li>Es una técnica que permite compartir contenido entre diferentes sitios web.</li>
+        <li>Utiliza formatos estándar como RSS (Really Simple Syndication) y Atom.</li>
+        <li>Aumenta la visibilidad del contenido original sin reproducirlo.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Ventajas de la Sindicación</h3>
+    <ul>
+        <li>Propaga el contenido a una audiencia más amplia.</li>
+        <li>Ahorra tiempo y recursos al no necesitar publicar en múltiples sitios.</li>
+        <li>Promueve la colaboración entre diferentes plataformas web.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Ejemplos de Sindicación</h3>
+    <ul>
+        <li>Blog principal y blog secundario.</li>
+        <li>Noticias principales y noticias locales.</li>
+        <li>Foro central y foros regionales.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Cómo Funciona la Sindicación</h3>
+    <ol>
+        <li>El sitio principal genera un feed RSS o Atom.</li>
+        <li>Otros sitios suscriben a este feed.</li>
+        <li>Cuando el contenido del sitio principal se actualiza, los feeds notifican automáticamente a los subscriptores.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h3>Formatos de Feed</h3>
+    <ul>
+        <li>RSS 2.0: El más común y ampliamente soportado.</li>
+        <li>Atom 1.0: Más moderno, con mejor rendimiento y funcionalidades adicionales.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Configuración de un Feed RSS</h3>
+    <ol>
+        <li>El sitio debe generar un archivo que contenga los elementos del feed.</li>
+        <li>Se deben incluir metadatos como el título, la descripción y las entradas.</li>
+        <li>Cada entrada debe tener un título, una descripción y una URL.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h3>Ejemplo de Código RSS</h3>
+    <pre><code>&lt;rss version="2.0"&gt;
+&lt;channel&gt;
+    &lt;title&gt;Mi Blog&lt;/title&gt;
+    &lt;link&gt;http://miweb.com/blog&lt;/link&gt;
+    &lt;description&gt;Noticias y artículos sobre tecnología.&lt;/description&gt;
+    &lt;item&gt;
+        &lt;title&gt;Últimas novedades en5&lt;/title&gt;
+        &lt;link&gt;http://miweb.com/blog/ultimas-novedades-html5&lt;/link&gt;
+        &lt;description&gt;Descubre las últimas características de5.&lt;/description&gt;
+    &lt;/item&gt;
+&lt;/channel&gt;
+&lt;/rss&gt;</code></pre>
+</section>
+
+<section class="slide">
+    <h3>Subscribirse a un Feed RSS</h3>
+    <ol>
+        <li>En el navegador, ir al sitio que ofrece el feed.</li>
+        <li>Hacer clic en el ícono del feed (generalmente una hoja con unírculo rojo).</li>
+        <li>El navegador mostrará opciones para suscribirse a través de diferentes lectores RSS.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h3>Lectores RSS Populares</h3>
+    <ul>
+        <li>RSS Reader (navegador incorporado).</li>
+        <li>Feedly.</li>
+        <li>Inoreader.</li>
+        <li>Google News.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Casos de Uso Comunes</h3>
+    <ul>
+        <li>Noticias y periodismo.</li>
+        <li>Blogs y comunidades en línea.</li>
+        <li>E-commerce y marketing digital.</li>
+        <li>Foros y discusiones en línea.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Buenas Prácticas para la Sindicación</h3>
+    <ul>
+        <li>Mantener los feeds actualizados con regularidad.</li>
+        <li>Usar formatos estándar y bien definidos.</li>
+        <li>Incluir imágenes y multimedia cuando sea apropiado.</li>
+        <li>Evitar el uso de contenido protegido por derechos de autor sin permiso.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Errores Comunes en la Sindicación</h3>
+    <ul>
+        <li>No mantener los feeds actualizados.</li>
+        <li>Usar formatos obsoletos o mal definidos.</li>
+        <li>Incluir contenido protegido por derechos de autor sin permiso.</li>
+        <li>No incluir imágenes ni multimedia necesarios.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Comparativa: RSS vs. Atom</h3>
+    <table>
+        <tr>
+            <th>RSS 2.0</th>
+            <th>Atom 1.0</th>
+        </tr>
+        <tr>
+            <td>Más antiguo y ampliamente soportado.</td>
+            <td>Más moderno, con mejor rendimiento y funcionalidades adicionales.</td>
+        </tr>
+        <tr>
+            <td>Menos flexible en la estructura de los elementos.</td>
+            <td>Más flexible y permite una mayor personalización.</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h3>Mini-Quiz: ¿Qué es RSS?</h3>
+    <p>¿Cuál de las siguientes opciones describe mejor lo que es RSS?</p>
+    <ul>
+        <li>a) Una forma de enviar correos electrónicos.</li>
+        <li>b) Un formato para compartir contenido entre sitios web.</li>
+        <li>c) Una herramienta para crear páginas web dinámicas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Checklist: Configuración de un Feed RSS</h3>
+    <ol>
+        <li>Generar un archivo con el formato correcto.</li>
+        <li>Incluir metadatos como título, descripción y entradas.</li>
+        <li>Cada entrada debe tener un título, descripción y URL.</li>
+        <li>Probar la configuración en diferentes lectores RSS.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h3>Actividad: Crear un Feed RSS Simple</h3>
+    <p>Crea un feed RSS simple con al menos tres entradas y compártelo con tu equipo o profesor.</p>
+</section>
+
+<section class="slide">
+    <h3>Resumen</h3>
+    <ul>
+        <li>Sindicación es una técnica para compartir contenido entre sitios web.</li>
+        <li>Utiliza formatos estándar como RSS y Atom.</li>
+        <li>Aumenta la visibilidad del contenido original sin reproducirlo.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Normativa Relacionada</h3>
+    <ul>
+        <li>Derechos de Autor: El contenido debe ser compartido con permiso cuando sea necesario.</li>
+        <li>Privacidad y Seguridad: Proteger la información personal de los usuarios.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Preguntas Frecuentes</h3>
+    <ol>
+        <li><strong>¿Qué es RSS?</strong> Es un formato para compartir contenido entre sitios web.</li>
+        <li><strong>¿Cómo funciona la sindicación?</strong> El sitio principal genera un feed, y otros sites suscriben a este feed para recibir actualizaciones automáticas.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h3>Contacto</h3>
+    <p>Preguntas o dudas? No dudes en contactar con el equipo de soporte.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">Aplicaciones web.md · Instalación de gestores de contenidos → Sindicación</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 14:30:40</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

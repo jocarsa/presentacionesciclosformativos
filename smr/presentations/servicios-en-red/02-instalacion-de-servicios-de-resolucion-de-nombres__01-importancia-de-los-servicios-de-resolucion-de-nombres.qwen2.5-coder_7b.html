@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Importancia de los servicios de resolución de nombres — Instalación de servicios de resolución de nombres — Servicios en red.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="importancia-de-los-servicios-de-resolucion-de-nombres">
+<h1>Importancia de los servicios de resolución de nombres</h1>
+<p><strong>Unidad:</strong> Instalación de servicios de resolución de nombres<br><strong>Documento:</strong> Servicios en red.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Instalación de servicios de resolución de nombres</h1>
+    <p><strong>Objetivo:</strong> Comprender la importancia y funcionamiento de los servicios de resolución de nombres en una red.</p>
+</section>
+
+<section class="slide">
+    <h2>¿Qué son los servicios de resolución de nombres?</h2>
+    <ul>
+        <li>Servicios que permiten traducir nombres humanos (dominios) a direcciones IP numéricas.</li>
+        <li>Ejemplos: DNS, NIS, LDAP.</li>
+        <li>Permiten la localización y comunicación entre dispositivos en una red.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Importancia de los servicios de resolución de nombres</h2>
+    <p><strong>Razón 1:</strong> Facilitan la gestión y administración de redes.</p>
+    <p><strong>Razón 2:</strong> Mejoran la accesibilidad y facilidad de uso para los usuarios finales.</p>
+    <p><strong>Razón 3:</strong> Permiten la escalabilidad y expansión de las infraestructuras.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplos de servicios de resolución de nombres</h2>
+    <ul>
+        <li>DNS (Domain Name System): Traduce nombres de dominio a direcciones IP.</li>
+        <li>NIS (Network Information Service): Almacena y distribuye información de red.</li>
+        <li>LDAP (Lightweight Directory Access Protocol): Gestiona directorios jerárquicos de información.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Caso práctico: Implementación de DNS en una red pequeña</h2>
+    <p><strong>Objetivo:</strong> Configurar un servidor DNS para una red local.</p>
+    <p><strong>Pasos:</strong></p>
+    <ol>
+        <li>Instalar el software del servidor DNS (ej. Bind, PowerDNS).</li>
+        <li>Configurar las zonas de nombres y registros DNS.</li>
+        <li>Probar la configuración con herramientas como dig o nslookup.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas en el uso de servicios de resolución de nombres</h2>
+    <ul>
+        <li>Utilizar servidores DNS confiables y actualizados.</li>
+        <li>Implementar redundancia para mejorar la disponibilidad.</li>
+        <li>Mantener políticas de seguridad adecuadas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes en la configuración de servicios de resolución de nombres</h2>
+    <ul>
+        <li>No asignar direcciones IP correctas a los registros DNS.</li>
+        <li>No mantener las zonas de nombres actualizadas.</li>
+        <li>No implementar políticas de seguridad adecuadas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: Servicios de resolución de nombres vs. direcciones IP estáticas</h2>
+    <table>
+        <tr>
+            <th>Servicios de Resolución de Nombres</th>
+            <th>Direcciones IP Estáticas</th>
+        </tr>
+        <tr>
+            <td>Facilita la gestión y escalabilidad.</td>
+            <td>Requiere más administración manual.</td>
+        </tr>
+        <tr>
+            <td>Mejora la accesibilidad para los usuarios.</td>
+            <td>No mejora la facilidad de uso.</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: ¿Qué es el DNS?</h2>
+    <p><strong>Pregunta:</strong> ¿Qué servicio permite traducir nombres de dominio a direcciones IP numéricas?</p>
+    <ul>
+        <li>A) FTP</li>
+        <li>B) SMTP</li>
+        <li>C) DNS</li>
+        <li>D) DHCP</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Configuración de un servidor DNS básico</h2>
+    <ol>
+        <li>Instalar el software del servidor DNS.</li>
+        <li>Configurar las zonas de nombres y registros A.</li>
+        <li>Probar la configuración con herramientas como dig o nslookup.</li>
+        <li>Verificar la propagación de los cambios en los servidores DNS públicos.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Configurar un cliente DNS en una máquina virtual</h2>
+    <p><strong>Tarea:</strong> Configurar el cliente DNS en una máquina virtual para que utilice un servidor DNS local.</p>
+    <p><strong>Pasos:</strong></p>
+    <ol>
+        <li>Configurar la dirección IP del servidor DNS en el archivo /etc/resolv.conf.</li>
+        <li>Probar la configuración con herramientas como ping o curl.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Resumen: Importancia de los servicios de resolución de nombres</h2>
+    <ul>
+        <li>Servicios que facilitan la gestión y administración de redes.</li>
+        <li>Mejoran la accesibilidad y facilidad de uso para los usuarios finales.</li>
+        <li>Permiten la escalabilidad y expansión de las infraestructuras.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Seguridad en servicios de resolución de nombres</h2>
+    <p><strong>Reglamento:</strong> RFC 5381 (Simple Mail Transfer Protocol)</p>
+    <p><strong>Requisitos:</strong></p>
+    <ul>
+        <li>Uso de cifrado SSL/TLS para proteger las comunicaciones.</li>
+        <li>Implementación de autenticación y autorización segura.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Preguntas y discusión</h2>
+    <p><strong>Objetivo:</strong> Resolver dudas, compartir conocimientos y avanzar en el aprendizaje.</p>
+</section>
+
+<section class="slide">
+    <h2>Gracias por su atención</h2>
+    <p>¡Hasta la próxima!</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">Servicios en red.md · Instalación de servicios de resolución de nombres → Importancia de los servicios de resolución de nombres</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 18:39:04</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Almacenamiento redundante y distribuido — Gestión de dispositivos de almacenamiento — Seguridad informática.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="almacenamiento-redundante-y-distribuido">
+<h1>Almacenamiento redundante y distribuido</h1>
+<p><strong>Unidad:</strong> Gestión de dispositivos de almacenamiento<br><strong>Documento:</strong> Seguridad informática.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Gestión de dispositivos de almacenamiento</h1>
+    <p>Objetivo: Comprender los conceptos y técnicas de almacenamiento redundante y distribuido.</p>
+</section>
+
+<section class="slide">
+    <h2>Almacenamiento Redundante (RAID)</h2>
+    <ul>
+        <li>Definición: Conjunto de discos duros que trabajan juntos para proporcionar mayor capacidad, velocidad o redundancia.</li>
+        <li>Niveles RAID más comunes: RAID 0, RAID 1, RAID 5, RAID 6, RAID 10.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>RAID 0</h2>
+    <ul>
+        <li>Capacidad total = Suma de las capacidades individuales.</li>
+        <li>No redundancia: No hay copias de seguridad.</li>
+        <li>Rendimiento alto, pero baja tolerancia a fallos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>RAID 1</h2>
+    <ul>
+        <li>Copia exacta de los datos en dos discos.</li>
+        <li>No redundancia adicional, pero alta seguridad contra fallos.</li>
+        <li>Rendimiento moderado, capacidad reduida.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>RAID 5</h2>
+    <ul>
+        <li>Distribución de datos yódigos de paridad en múltiples discos.</li>
+        <li>Tolerancia a un fallo, pero no a dos.</li>
+        <li>Rendimiento moderado, capacidad reduida.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>RAID 6</h2>
+    <ul>
+        <li>Distribución de datos yódigos de paridad en múltiples discos.</li>
+        <li>Tolerancia a dos fallos, pero no a tres.</li>
+        <li>Rendimiento moderado, capacidad reduida.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>RAID 10 (RAID 0 + RAID 1)</h2>
+    <ul>
+        <li>Combinación de RAID 0 y RAID 1.</li>
+        <li>Tolerancia a dos fallos, alta velocidad.</li>
+        <li>Capacidad reduida.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo Práctico: Configuración de RAID 5</h3>
+    <p>Se instalan tres discos duros en un sistema. Los datos se distribuyen entre los discos y se calcula la paridad.</p>
+</section>
+
+<section class="slide">
+    <h2>Caso Real: Implementación de RAID 6</h2>
+    <p>Una empresa decide implementar RAID 6 para su servidor crítico, con cuatro discos duros para garantizar tolerancia a dos fallos.</p>
+</section>
+
+<section class="slide">
+    <h2>Proceso de Configuración RAID</h2>
+    <ol>
+        <li>Identificar los discos disponibles.</li>
+        <li>Seleccionar el nivel de RAID deseado.</li>
+        <li>Iniciar la configuración en el controlador del sistema o software RAID.</li>
+        <li>Formatizar el nuevo volumen RAID.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas para RAID</h3>
+    <ul>
+        <li>Usar discos de la misma capacidad y velocidad.</li>
+        <li>No sobrecargar el controlador del RAID.</li>
+        <li>Realizar copias de seguridad periódicas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en RAID</h2>
+    <ul>
+        <li>No realizar pruebas regulares de recuperación.</li>
+        <li>No tener una estrategia de copias de seguridad.</li>
+        <li>Sobrecargar el sistema con demasiados discos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: RAID 5 vs. RAID 6</h2>
+    <table>
+        <tr>
+            <th></th>
+            <th>RAID 5</th>
+            <th>RAID 6</th>
+        </tr>
+        <tr>
+            <td>Tolerancia a fallos</td>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>Rendimiento</td>
+            <td>Moderado</td>
+            <td>Moderado</td>
+        </tr>
+        <tr>
+            <td>Capacidad utilizada</td>
+            <td>n-1 discos</td>
+            <td>n-2 discos</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Niveles de RAID</h2>
+    <p>¿Cuál es el nivel de RAID que ofrece la máxima tolerancia a fallos?</p>
+    <ol type="A">
+        <li>RAID 0</li>
+        <li>RAID 1</li>
+        <li>RAID 5</li>
+        <li>RAID 6</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Configuración de RAID</h2>
+    <ul>
+        <li>Identificar discos disponibles.</li>
+        <li>Seleccionar nivel de RAID.</li>
+        <li>Iniciar configuración en controlador o software.</li>
+        <li>Formatizar nuevo volumen RAID.</li>
+        <li>Realizar pruebas de recuperación.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Diseño de un Plan de Almacenamiento</h2>
+    <p>Diseña un plan de almacenamiento utilizando RAID 5 para tres discos duros y otro para una copia de seguridad.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>RAID ofrece diferentes niveles de redundancia y rendimiento.</li>
+        <li>Cada nivel tiene sus propias ventajas y desventajas.</li>
+        <li>Buenas prácticas incluyen pruebas periódicas, copias de seguridad y evitar sobrecargas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Seguridad en Almacenamiento</h2>
+    <p>La normativa vigente establece requisitos para la protección de datos en almacenamiento digital, incluyendo RAID.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">Seguridad informática.md · Gestión de dispositivos de almacenamiento → Almacenamiento redundante y distribuido</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 18:09:52</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

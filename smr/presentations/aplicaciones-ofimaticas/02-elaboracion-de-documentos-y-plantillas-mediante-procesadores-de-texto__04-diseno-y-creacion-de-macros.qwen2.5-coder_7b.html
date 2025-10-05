@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Diseño y creación de macros — Elaboración de documentos y plantillas mediante procesadores de texto — Aplicaciones ofimáticas.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="diseno-y-creacion-de-macros">
+<h1>Diseño y creación de macros</h1>
+<p><strong>Unidad:</strong> Elaboración de documentos y plantillas mediante procesadores de texto<br><strong>Documento:</strong> Aplicaciones ofimáticas.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Diseño y creación de macros en procesadores de texto</h1>
+    <p>Objetivo: Aprender a crear macros para automatizar tareas repetitivas en documentos ofimáticos.</p>
+</section>
+
+<section class="slide">
+    <h2>¿Qué son las macros?</h2>
+    <ul>
+        <li>Son secuencias de comandos predefinidos que pueden ser ejecutados automáticamente.</li>
+        <li>Aumentan la eficiencia al realizar tareas repetitivas.</li>
+        <li>Pueden ser personalizadas según las necesidades específicas del usuario.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Beneficios de usar macros</h2>
+    <ul>
+        <li>Ahorro de tiempo y esfuerzo en tareas repetitivas.</li>
+        <li>Consistencia en el formato y estilo de los documentos.</li>
+        <li>Reducción de errores humanos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplos comunes de macros</h2>
+    <ul>
+        <li>Formato de encabezados y pies de página.</li>
+        <li>Generación automática de listas de contenido.</li>
+        <li>Insertar tablas estándar con formato predefinido.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Cómo crear una macro en Microsoft Word</h2>
+    <ol>
+        <li>Presiona Alt + F11 para abrir el Editor de VBA (Visual Basic for Applications).</li>
+        <li>Inserta un módulo haciendo clic en "Insertar" > "Módulo".</li>
+        <li>Escribe el código VBA que define la macro.</li>
+        <li>Cierre el Editor de VBA y prueba la macro presionando Alt + F8.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Principales lenguajes para macros en procesadores de texto</h2>
+    <ul>
+        <li>VBA (Visual Basic for Applications)</li>
+        <li>JScript</li>
+        <li></li>
+        <li></li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de macro en VBA para Word</h2>
+    <pre><code>
+Sub CrearTabla()
+    Selection.InsertTable(NumRows:=3, NumColumns:=2)
+    With ActiveDocument.Tables(1)
+        .Borders.Enable = True
+        .Cell(1, 1).Range.Text = "Encabezado 1"
+        .Cell(1, 2).Range.Text = "Encabezado 2"
+        .Cell(2, 1).Range.Text = "Dato 1"
+        .Cell(2, 2).Range.Text = "Dato 2"
+    End With
+End Sub
+</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes al crear macros</h2>
+    <ul>
+        <li>No guardar el documento como macro habilitado.</li>
+        <li>Escribir código incorrecto o mal estructurado.</li>
+        <li>No probar la macro antes de usarla en documentos importantes.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Compartiendo macros</h2>
+    <ul>
+        <li>Pueden compartirse a través de archivos .vba.</li>
+        <li>Se pueden importar y exportar desde el Editor de VBA.</li>
+        <li>Macros personalizadas pueden ser distribuidas en formatos compatibles.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas al crear macros</h2>
+    <ul>
+        <li>Comentar el código para facilitar su mantenimiento y comprensión.</li>
+        <li>Probar exhaustivamente antes de compartir la macro.</li>
+        <li>Asegurarse de que no interfiera con otras funciones del procesador de texto.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Caso práctico: Automatización de informes financieros</h2>
+    <p>Se creó una macro en Excel para generar automáticamente informes financieros mensuales con datos actualizados y formatos predefinidos.</p>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz</h2>
+    <ol>
+        <li>¿Qué es una macro? (a) Un programa de computadora (b) Una hoja deálculo () Una secuencia de comandos)
+        <li>¿Cuáles son los principales beneficios de usar macros en procesadores de texto? (seleccionar 3)
+            <ul>
+                <li>Ahorro de tiempo</li>
+                <li>Consistencia en el formato</li>
+                <li>Reducción de errores humanos</li>
+                <li>Generación automática de contenido</li>
+                <li>Formato estándar de documentos</li>
+            </ul>
+        </li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist para crear macros</h2>
+    <ul>
+        <li>Definir claramente el propósito de la macro.</li>
+        <li>Escribir código limpio y bien estructurado.</li>
+        <li>Probar exhaustivamente en diferentes escenarios.</li>
+        <li>Asegurarse de que no interfiera con otras funciones del procesador de texto.</li>
+        <li>Comentar el código para facilitar su mantenimiento.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad práctica</h2>
+    <p>Crea una macro en Excel que genere un informe semanal con datos de ventas actualizados y formatos predefinidos.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Las macros son secuencias de comandos que automatizan tareas repetitivas en procesadores de texto.</li>
+        <li>Pueden ser creadas y compartidas usando lenguajes como VBA, JScript, o.</li>
+        <li>Buenas prácticas incluyen probar exhaustivamente, comentar el código y asegurarse de que no interfiera con otras funciones.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa general sobre macros</h2>
+    <p>Es importante seguir las políticas de seguridad del procesador de texto al crear y compartir macros, evitando el uso de código malicioso.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">Aplicaciones ofimáticas.md · Elaboración de documentos y plantillas mediante procesadores de texto → Diseño y creación de macros</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 13:12:14</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

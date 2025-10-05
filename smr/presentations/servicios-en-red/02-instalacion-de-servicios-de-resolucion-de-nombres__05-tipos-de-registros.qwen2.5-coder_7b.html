@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Tipos de registros — Instalación de servicios de resolución de nombres — Servicios en red.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="tipos-de-registros">
+<h1>Tipos de registros</h1>
+<p><strong>Unidad:</strong> Instalación de servicios de resolución de nombres<br><strong>Documento:</strong> Servicios en red.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Instalación de servicios de resolución de nombres</h1>
+    <p><strong>Objetivo:</strong> Comprender los tipos de registros utilizados en el servicio de resolución de nombres.</p>
+</section>
+
+<section class="slide">
+    <h2>Tipos de registros DNS</h2>
+    <ul>
+        <li>A (Address): Asigna una dirección IP a un nombre de dominio.</li>
+        <li>CNAME (Canonical Name):rea un alias para otro nombre de dominio.</li>
+        <li>MX (Mail Exchange): Especifica los servidores de correo electrónico para un dominio.</li>
+        <li>NS (Name Server): Define los servidores de nombres autoritativos para un dominio.</li>
+        <li>SOA (Start of Authority): Contiene información general sobre el dominio y su configuración.</li>
+        <li>SRV (Service Record): Especifica la ubicación de servicios específicos en una red.</li>
+        <li>TXT (Text): Almacena texto arbitrario asociado con un nombre de dominio.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de registro A</h2>
+    <p>www.example.com.  IN  A   93.184.216.34</p>
+    <p><strong>Significado:</strong> El nombre www.example.com se resuelve a la dirección IP 93.184.216.34.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de registroNAME</h2>
+    <p>blog.example.com. IN NAME   www.example.com.</p>
+    <p><strong>Significado:</strong> El nombre blog.example.com es un alias para www.example.com.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de registro MX</h2>
+    <p>example.com.  IN  MX  10 mail.example.com.</p>
+    <p><strong>Significado:</strong> El correo electrónico para example.com se envía a mail.example.com con una prioridad de 10.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de registro NS</h2>
+    <p>example.com.  IN  NS  ns1.example.net.</p>
+    <p><strong>Significado:</strong> El servidor de nombres autoritativo para example.com es ns1.example.net.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de registro SOA</h2>
+    <p>example.com.  IN  SOA ns1.example.net. admin.example.net. (2023040101 7200 1800 604800 3600)</p>
+    <p><strong>Significado:</strong> Contiene información sobre el dominio example.com.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de registro SRV</h2>
+    <p>_sip._tcp.example.com. IN SRV 5060 sipserver.example.net.</p>
+    <p><strong>Significado:</strong> El servicio SIP se encuentra en el puerto 5060 en sipserver.example.net.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de registro TXT</h2>
+    <p>example.com. IN TXT "v=spf1 include:_spf.google.com ~all"</p>
+    <p><strong>Significado:</strong> Contiene información SPF para el dominio example.com.</p>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas en registros DNS</h2>
+    <ul>
+        <li>Usar nombres de dominios descriptivos y fáciles de recordar.</li>
+        <li>Asegurar la seguridad de los registros, especialmente los MX y TXT.</li>
+        <li>Mantener actualizados los registros para reflejar cambios en la infraestructura.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes en registros DNS</h2>
+    <ul>
+        <li>Error de ortografía en los nombres de dominio o servidores.</li>
+        <li>Asignación incorrecta de direcciones IP.</li>
+        <li>Omisión de registros necesarios para la funcionalidad del dominio.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa entre tipos de registros</h2>
+    <table>
+        <tr>
+            <th>Tipo</th>
+            <th>Propósito</th>
+        </tr>
+        <tr>
+            <td>A</td>
+            <td>Asigna una dirección IP a un nombre de dominio.</td>
+        </tr>
+        <tr>
+            <td>CNAME</td>
+            <td>Crea un alias para otro nombre de dominio.</td>
+        </tr>
+        <tr>
+            <td>MX</td>
+            <td>Especifica los servidores de correo electrónico para un dominio.</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: Identificación de registros DNS</h2>
+    <p>¿Cuál es el propósito del registro A?</p>
+    <ul>
+        <li>A) Asignar una dirección IP a un nombre de dominio.</li>
+        <li>B) Crear un alias para otro nombre de dominio.</li>
+        <li>C) Especificar los servidores de correo electrónico para un dominio.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: Identificación de registros DNS (Respuesta)</h2>
+    <p><strong>Pregunta:</strong> ¿Cuál es el propósito del registro A?</p>
+    <p><strong>Respuesta correcta:</strong> A) Asignar una dirección IP a un nombre de dominio.</p>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Configuración de registros DNS</h2>
+    <ul>
+        <li>Verificar la ortografía en los nombres de dominio y servidores.</li>
+        <li>Asegurar que las direcciones IP sean correctas.</li>
+        <li>Comprobar que todos los registros necesarios estén presentes.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Creación de un registro A</h2>
+    <p>Crea un registro A para el nombre www.nuevoexample.com con la dirección IP 192.168.1.1.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Tipos de registros DNS: A,NAME, MX, NS, SOA, SRV, TXT.</li>
+        <li>Buenas prácticas y errores comunes en la configuración de registros DNS.</li>
+        <li>Mini-quiz y checklist para asegurar la correcta configuración de registros DNS.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa general sobre DNS</h2>
+    <p><strong>ICANN:</strong> Organización encargada de la gestión global de los nombres de dominio y direcciones IP.</p>
+    <p><strong>RFCs (Request for Comments):</strong> Documentos que guían el desarrollo y uso de protocolos de Internet, incluyendo DNS.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">Servicios en red.md · Instalación de servicios de resolución de nombres → Tipos de registros</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 18:43:33</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

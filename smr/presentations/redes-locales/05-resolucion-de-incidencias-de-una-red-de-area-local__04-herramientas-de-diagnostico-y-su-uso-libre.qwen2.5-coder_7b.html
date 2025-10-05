@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Herramientas de diagnóstico y su uso libre — Resolución de incidencias de una red de área local — Redes locales.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="herramientas-de-diagnostico-y-su-uso-libre">
+<h1>Herramientas de diagnóstico y su uso libre</h1>
+<p><strong>Unidad:</strong> Resolución de incidencias de una red de área local<br><strong>Documento:</strong> Redes locales.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Resolución de incidencias de una red de área local</h1>
+    <p>Objetivo: Aprender a utilizar herramientas de diagnóstico para resolver problemas en redes locales.</p>
+</section>
+
+<section class="slide">
+    <h2>Herramientas de diagnóstico básicas</h2>
+    <ul>
+        <li>Ping</li>
+        <li>Traceroute</li>
+        <li>Netstat</li>
+        <li>Dig</li>
+        <li>Telnet</li>
+        <li>Nslookup</li>
+        <li>Mtr</li>
+        <li>Wireshark</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ping: Comprobación de conectividad</h2>
+    <p><code>ping www.example.com</code></p>
+    <p>Verifica si un host está respondiendo a los paquetes ICMP.</p>
+</section>
+
+<section class="slide">
+    <h2>Traceroute: Ruta del paquete</h2>
+    <p><code>traceroute www.example.com</code></p>
+    <p>Muestra la ruta que el paquete toma para llegar a un destino.</p>
+</section>
+
+<section class="slide">
+    <h2>Netstat: Información de red activa</h2>
+    <p><code>netstat -an</code></p>
+    <p>Muestra las conexiones, puertos y protocolos en uso.</p>
+</section>
+
+<section class="slide">
+    <h2>Dig: Consultas DNS</h2>
+    <p><code>dig example.com</code></p>
+    <p>Obtiene información detallada sobre un dominio DNS.</p>
+</section>
+
+<section class="slide">
+    <h2>Telnet: Prueba de conexión a servicios</h2>
+    <p><code>telnet www.example.com 80</code></p>
+    <p>Verifica la conectividad a un puerto específico en un servidor.</p>
+</section>
+
+<section class="slide">
+    <h2>Nslookup: Consultas DNS</h2>
+    <p><code>nslookup example.com</code></p>
+    <p>Muestra información sobre el dominio y su resolución DNS.</p>
+</section>
+
+<section class="slide">
+    <h2>Mtr: Combina ping y traceroute</h2>
+    <p><code>mtr www.example.com</code></p>
+    <p>Combina las funciones de ping y traceroute en un solo comando.</p>
+</section>
+
+<section class="slide">
+    <h2>Wireshark: Captura de tráfico</h2>
+    <p>Captura y analiza el tráfico de red para diagnóstico avanzado.</p>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas en diagnóstico</h2>
+    <ul>
+        <li>Reproduce los pasos del problema</li>
+        <li>Documenta todo el proceso</li>
+        <li>Utiliza herramientas adecuadas para cada caso</li>
+        <li>Comunica resultados claramente</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes en diagnóstico</h2>
+    <ul>
+        <li>No reproduce el problema</li>
+        <li>No documenta suficiente información</li>
+        <li>Usa herramientas incorrectas para el caso</li>
+        <li>No comunica resultados claramente</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de diagnóstico</h2>
+    <p><strong>Síntoma:</strong> No puedo acceder a www.example.com.</p>
+    <p><strong>Pasos:</strong></p>
+    <ol>
+        <li>Ping www.example.com</li>
+        <li>Traceroute www.example.com</li>
+        <li>Dig example.com</li>
+        <li>Telnet www.example.com 80</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Caso práctico: Problema de conectividad</h2>
+    <p><strong>Síntoma:</strong> Computadora no puede acceder a Internet.</p>
+    <p><strong>Pasos:</strong></p>
+    <ol>
+        <li>Comprueba la conexión física</li>
+        <li>Reinicia el router y el computador</li>
+        <li>Ping 8.8.8.8 (Google DNS)</li>
+        <li>Traceroute www.google.com</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: Herramientas de diagnóstico</h2>
+    <p>¿Cuál herramienta se usa para verificar la conectividad a un puerto específico?</p>
+    <ul>
+        <li>Ping</li>
+        <li>Traceroute</li>
+        <li>Telnet</li>
+        <li>Dig</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist de diagnóstico</h2>
+    <ul>
+        <li>Comprueba la conexión física</li>
+        <li>Reinicia el router y el computador</li>
+        <li>Ping a puertos conocidos (80, 443)</li>
+        <li>Traceroute al destino</li>
+        <li>Dig para verificar DNS</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Diagnóstico de problemas de red</h2>
+    <p>Resuelve el siguiente problema:</p>
+    <p><strong>Síntoma:</strong> No puedo acceder a correo electrónico.</p>
+    <p><strong>Pasos:</strong></p>
+    <ol>
+        <li>Comprueba la conexión física</li>
+        <li>Reinicia el router y el computador</li>
+        <li>Ping al servidor de correo (MX)</li>
+        <li>Traceroute al servidor de correo</li>
+        <li>Dig para verificar DNS del correo</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <p>Herramientas de diagnóstico esenciales:</p>
+    <ul>
+        <li>Ping</li>
+        <li>Traceroute</li>
+        <li>Telnet</li>
+        <li>Dig</li>
+        <li>Mtr</li>
+        <li>Wireshark</li>
+    </ul>
+    <p>Buenas prácticas y errores comunes en diagnóstico.</p>
+</section>
+
+<section class="slide">
+    <h2>Normativa general</h2>
+    <p>No se permite el uso de herramientas piratas o no autorizadas para diagnóstico.</p>
+    <p>Seguridad y privacidad durante el diagnóstico.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">Redes locales.md · Resolución de incidencias de una red de área local → Herramientas de diagnóstico y su uso libre</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 17:57:47</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

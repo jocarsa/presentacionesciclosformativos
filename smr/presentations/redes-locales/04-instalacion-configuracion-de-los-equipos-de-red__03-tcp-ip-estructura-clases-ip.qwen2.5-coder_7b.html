@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>TCP/IP: estructura, clases IP — Instalación/configuración de los equipos de red — Redes locales.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="tcp-ip-estructura-clases-ip">
+<h1>TCP/IP: estructura, clases IP</h1>
+<p><strong>Unidad:</strong> Instalación/configuración de los equipos de red<br><strong>Documento:</strong> Redes locales.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>TCP/IP: Estructura y Clases IP</h2>
+    <p>El protocolo TCP/IP es la base de las redes modernas. Se compone de dos capas principales: Transporte (TCP) e Internet (IP).</p>
+</section>
+
+<section class="slide">
+    <h3>Estructura de TCP/IP</h3>
+    <ul>
+        <li>Aplicación</li>
+        <li>Transporte (TCP)</li>
+        <li>Internet (IP)</li>
+        <li>Datos Link</li>
+        <li>Física</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Clases IP</h3>
+    <p>TCP/IP utiliza clases de direcciones IP para categorizar y gestionar los dispositivos en la red.</p>
+</section>
+
+<section class="slide">
+    <h4>Clase A</h4>
+    <ul>
+        <li>1.0.0.0 - 126.255.255.255</li>
+        <li>Usada para redes grandes (127 direcciones de red)</li>
+        <li>Formato: 1xxx.xxxx.xxxx.xxxx</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h4>Clase B</h4>
+    <ul>
+        <li>128.0.0.0 - 191.255.255.255</li>
+        <li>Usada para redes medias (65,534 direcciones de red)</li>
+        <li>Formato: 1xxx.xxx.xxxx.xxxx</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h4>Clase</h4>
+    <ul>
+        <li>192.0.0.0 - 223.255.255.255</li>
+        <li>Usada para redes pequeñas (2,097,150 direcciones de red)</li>
+        <li>Formato: 1xxx.xxx.xxx.xxxx</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h4>Clase D</h4>
+    <ul>
+        <li>224.0.0.0 - 239.255.255.255</li>
+        <li>Usada para multicast (no asignadas a dispositivos individuales)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h4>Clase E</h4>
+    <ul>
+        <li>240.0.0.0 - 255.255.255.255</li>
+        <li>Reservadas para futuras extensiones de la arquitectura IP</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Ejemplo: Asignación de direcciones IP</h3>
+    <p>Dado un dispositivo en una red B, asigna su dirección IP.</p>
+</section>
+
+<section class="slide">
+    <h4>Proceso de asignación</h4>
+    <ol>
+        <li>Identificar la clase del rango de direcciones disponibles.</li>
+        <li>Asignar la primera dirección disponible en el rango para el dispositivo.</li>
+        <li>Configurar la máscara de subred correspondiente.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h3>Caso: Problema de asignación IP</h3>
+    <p>Un dispositivo no puede conectarse a Internet. ¿Qué podría ser el problema?</p>
+</section>
+
+<section class="slide">
+    <h4>Potenciales problemas</h4>
+    <ul>
+        <li>Dirección IP incorrecta</li>
+        <li>Máscara de subred errónea</li>
+        <li>No asignación de puerta de enlace predeterminada</li>
+        <li>Problemas con el servidor DNS</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Buenas prácticas</h3>
+    <ul>
+        <li>Usar direcciones IP estáticas para dispositivos críticos.</li>
+        <li>Asignar rangos de direcciones IP reservados para redes internas.</li>
+        <li>Mantener actualizadas las máscaras de subred y puertas de enlace.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Errores comunes</h4>
+    <ul>
+        <li>Confusión entre clases A, B y.</li>
+        <li>No asignación correcta de la máscara de subred.</li>
+        <li>Uso incorrecto de direcciones de clase D y E.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Comparativa: Direcciones IP vs. MAC</h3>
+    <table>
+        <tr>
+            <th>Dirección IP</th>
+            <th>Dirección MAC</th>
+        </tr>
+        <tr>
+            <td>4 bytes (32 bits)</td>
+            <td>6 bytes (48 bits)</td>
+        </tr>
+        <tr>
+            <td>Usada en la capa de Internet</td>
+            <td>Usada en la capa de datos link</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h3>Mini-quiz: Identificación de clases IP</h3>
+    <p>¿Cuál es la clase de dirección IP para 192.168.1.1?</p>
+    <ol type="A">
+        <li>A</li>
+        <li>B</li>
+        <li>C</li>
+        <li>D</li>
+        <li>E</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h3>Checklist: Configuración de IP</h3>
+    <ul>
+        <li>Identificar la clase de dirección IP.</li>
+        <li>Asignar la dirección IP correcta.</li>
+        <li>Configurar la máscara de subred.</li>
+        <li>Establecer la puerta de enlace predeterminada.</li>
+        <li>Verificar la configuración con ping y tracert.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Actividad: Configuración práctica de IP</h3>
+    <p>Configura una máquina virtual o dispositivo físico con una dirección IP correcta en su red local.</p>
+</section>
+
+<section class="slide">
+    <h3>Resumen</h3>
+    <ul>
+        <li>TCP/IP es la base de las redes modernas.</li>
+        <li>Existen cuatro clases de direcciones IP (A, B,, D y E).</li>
+        <li>Cada clase tiene un rango específico y una máscara de subred predeterminada.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Normativa general</h3>
+    <p>La asignación y gestión de direcciones IP deben seguir las normativas estableidas por la IETF (Internet Engineering Task Force).</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">Redes locales.md · Instalación/configuración de los equipos de red → TCP/IP: estructura, clases IP</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 17:14:27</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>DHCP: rangos, exclusiones, concesiones y reservas — Instalación de servicios de configuración dinámica de sistemas — Servicios en red.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="dhcp-rangos-exclusiones-concesiones-y-reservas">
+<h1>DHCP: rangos, exclusiones, concesiones y reservas</h1>
+<p><strong>Unidad:</strong> Instalación de servicios de configuración dinámica de sistemas<br><strong>Documento:</strong> Servicios en red.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>DHCP: Rangos, Exclusiones, Concesiones y Reservas</h2>
+    <p>El Protocolo de Configuración Dinámica de Hosts (DHCP) asigna automáticamente direcciones IP a los dispositivos en una red.</p>
+</section>
+
+<section class="slide">
+    <h3>Rangos DHCP</h3>
+    <ul>
+        <li>Determinan el rango de IPs disponibles para asignación dinámica.</li>
+        <li>Evita conflictos entre direcciones IP estáticas y dinámicas.</li>
+        <li>Ejemplo: 192.168.1.10 - 192.168.1.100</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Exclusiones DHCP</h3>
+    <ul>
+        <li>Direcciones IP que no se asignan dinámicamente.</li>
+        <li>Usadas para dispositivos con configuración estática o reservas.</li>
+        <li>Ejemplo: 192.168.1.5, 192.168.1.10</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Concesiones DHCP</h3>
+    <ul>
+        <li>Direcciones IP asignadas a dispositivos por un tiempo determinado.</li>
+        <li>Permiten la renovación de direcciones IP si el dispositivo está en línea.</li>
+        <li>Ejemplo: 192.168.1.20, con duración de 24 horas</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Reservas DHCP</h3>
+    <ul>
+        <li>Direcciones IP asignadas permanentemente a dispositivos específicos.</li>
+        <li>Evita la pérdida de configuración si el dispositivo se reemplaza.</li>
+        <li>Ejemplo: Dirección 192.168.1.30 para un servidor web</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Caso Práctico</h3>
+    <p>Una empresa necesita asignar direcciones IP a sus empleados. El administrador configura DHCP con el rango 192.168.1.10-192.168.1.50, excluye las primeras 5 y últimas 5 IPs, y reserva la dirección 192.168.1.30 para el servidor web.</p>
+</section>
+
+<section class="slide">
+    <h3>Proceso de Configuración DHCP</h3>
+    <ol>
+        <li>Configurar el rango de direcciones IP disponibles.</li>
+        <li>Excluir las direcciones IP que no se usarán dinámicamente.</li>
+        <li>Reservar direcciones IP para dispositivos específicos.</li>
+        <li>Reiniciar el servicio DHCP para aplicar los cambios.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h3>Buenas Prácticas</h3>
+    <ul>
+        <li>Asignar rangos de IPs suficientemente grandes para evitar agotamiento.</li>
+        <li>Excluir las primeras y últimas direcciones del rango para gestión interna.</li>
+        <li>Reservar direcciones IP para dispositivos críticos como servidores.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Errores Comunes</h3>
+    <ul>
+        <li>No asignar suficientes direcciones IP en el rango.</li>
+        <li>Excluir todas las primeras y últimas direcciones, limitando la gestión interna.</li>
+        <li>No reservar direcciones IP para dispositivos críticos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Comparativa con DHCP Estático</h3>
+    <table>
+        <tr>
+            <th>Dinámico (DHCP)</th>
+            <th>Estatico</th>
+        </tr>
+        <tr>
+            <td>Asignación automática de direcciones IP.</td>
+            <td>Configuración manual de direcciones IP.</td>
+        </tr>
+        <tr>
+            <td>No requiere intervención continua del administrador.</td>
+            <td>Necesita intervención continua para asignar y mantener las direcciones IP.</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h3>Mini-Quiz</h3>
+    <p>¿Cuál de los siguientes no es un propósito del DHCP?</p>
+    <ul>
+        <li>a) Asignar direcciones IP a dispositivos.</li>
+        <li>b) Configurar automáticamente la configuración de red.</li>
+        <li>c) Mantener una lista blanca de dispositivos autorizados.</li>
+        <li>d) Renovar las direcciones IP asignadas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Checklist</h3>
+    <ul>
+        <li>Configurar el rango de direcciones IP disponibles.</li>
+        <li>Excluir las direcciones IP que no se usarán dinámicamente.</li>
+        <li>Reservar direcciones IP para dispositivos específicos.</li>
+        <li>Reiniciar el servicio DHCP para aplicar los cambios.</li>
+        <li>Verificar la asignación de direcciones IP en los dispositivos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Actividad</h3>
+    <p>Configurar el DHCP en un servidor con el siguiente rango: 192.168.1.10-192.168.1.50, excluir las primeras 5 y últimas 5 IPs, y reservar la dirección 192.168.1.30 para el servidor web.</p>
+</section>
+
+<section class="slide">
+    <h3>Resumen</h3>
+    <ul>
+        <li>DHCP asigna automáticamente direcciones IP a los dispositivos en una red.</li>
+        <li>Configurar rangos, exclusiones, concesiones y reservas es crucial para la gestión de la red.</li>
+        <li>Buenas prácticas y evitar errores comunes son fundamentales para un funcionamiento óptimo del DHCP.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Normativa General</h3>
+    <p>La normativa de seguridad informática establece requisitos para la gestión de la red, incluyendo el uso adecuado del DHCP.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">Servicios en red.md · Instalación de servicios de configuración dinámica de sistemas → DHCP: rangos, exclusiones, concesiones y reservas</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 18:38:03</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

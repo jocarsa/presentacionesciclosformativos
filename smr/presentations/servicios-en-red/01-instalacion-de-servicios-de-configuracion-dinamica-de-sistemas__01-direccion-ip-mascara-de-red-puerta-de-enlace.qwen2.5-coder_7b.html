@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Dirección IP, máscara de red, puerta de enlace — Instalación de servicios de configuración dinámica de sistemas — Servicios en red.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="direccion-ip-mascara-de-red-puerta-de-enlace">
+<h1>Dirección IP, máscara de red, puerta de enlace</h1>
+<p><strong>Unidad:</strong> Instalación de servicios de configuración dinámica de sistemas<br><strong>Documento:</strong> Servicios en red.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Dirección IP</h2>
+    <p>La dirección IP (Internet Protocol) es un identificador único asignado a cada dispositivo conectado a una red.</p>
+</section>
+
+<section class="slide">
+    <h2>Máscara de Red</h2>
+    <p>La máscara de red define la parte fija y variable de la dirección IP, separando la red de la interfaz de red.</p>
+</section>
+
+<section class="slide">
+    <h2>Puerta de Enlace</h2>
+    <p>La puerta de enlace es el punto de conexión entre dos redes diferentes, permitiendo la comunicación entre ellas.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo: Dirección IP y Máscara</h2>
+    <ul>
+        <li>Dirección IP: 192.168.1.100</li>
+        <li>Máscara de Red: 255.255.255.0</li>
+        <li>Red: 192.168.1.0</li>
+        <li>Interfaz: 192.168.1.100</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo: Puerta de Enlace</h2>
+    <p>Puerta de enlace predeterminada: 192.168.1.1</p>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico</h2>
+    <p>Configurar la dirección IP, máscara y puerta de enlace para una nueva computadora.</p>
+</section>
+
+<section class="slide">
+    <h2>Proceso: Configuración de Dirección IP</h2>
+    <ol>
+        <li>Ingresar a la configuración de red del sistema operativo.</li>
+        <li>Elegir la interfaz de red deseada.</li>
+        <li>Seleccionar el método de asignación automática (DHCP) o manual.</li>
+        <li>Si es manual, ingresar dirección IP, máscara y puerta de enlace.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas</h2>
+    <ul>
+        <li>No compartir la misma dirección IP con otros dispositivos.</li>
+        <li>Configurar una puerta de enlace correcta para acceso a Internet.</li>
+        <li>Mantener las máscaras de red consistentes entre dispositivos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes</h2>
+    <ul>
+        <li>Configurar la misma dirección IP en dos dispositivos.</li>
+        <li>No configurar una puerta de enlace correcta.</li>
+        <li>Mixtar máscaras de red incompatibles entre dispositivos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: DHCP vs. Asignación Manual</h2>
+    <table>
+        <tr>
+            <th>DHCP</th>
+            <th>Asignación Manual</th>
+        </tr>
+        <tr>
+            <td>Automático</td>
+            <td>Manual</td>
+        </tr>
+        <tr>
+            <td>No requiere intervención del administrador</td>
+            <td>Necesita configuración manual por parte del usuario</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Dirección IP</h2>
+    <p>¿Cuál es la dirección IP de un dispositivo que está en la misma red que 192.168.1.100 y tiene una máscara de red de 255.255.255.0?</p>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Máscara de Red</h2>
+    <p>¿Cuál es la máscara de red que se usa para una red con 16 dispositivos?</p>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Puerta de Enlace</h2>
+    <p>¿Qué dirección IP suele ser la puerta de enlace predeterminada en una red local?</p>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Configuración de Dirección IP</h2>
+    <ul>
+        <li>Verificar la dirección IP asignada.</li>
+        <li>Comprobar la máscara de red.</li>
+        <li>Asegurar la puerta de enlace correcta.</li>
+        <li>Revisar los ajustes de DNS si es necesario.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Configuración de Dirección IP</h2>
+    <p>Configurar la dirección IP, máscara y puerta de enlace para un dispositivo en una red local.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Dirección IP: Identificador único de dispositivos en una red.</li>
+        <li>Máscara de Red: Define la parte fija y variable de la dirección IP.</li>
+        <li>Puerta de Enlace: Punto de conexión entre redes diferentes.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa General</h2>
+    <p>Seguir las políticas de red estableidas por la organización para evitar conflictos y asegurar el funcionamiento adecuado de la red.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">Servicios en red.md · Instalación de servicios de configuración dinámica de sistemas → Dirección IP, máscara de red, puerta de enlace</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 18:34:33</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

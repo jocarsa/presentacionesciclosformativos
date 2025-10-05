@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Modos activo y pasivo — Instalación de servicios de transferencia de ficheros — Servicios en red.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="modos-activo-y-pasivo">
+<h1>Modos activo y pasivo</h1>
+<p><strong>Unidad:</strong> Instalación de servicios de transferencia de ficheros<br><strong>Documento:</strong> Servicios en red.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Instalación de servicios de transferencia de ficheros</h1>
+    <p><strong>Objetivo:</strong> Comprender los modos activo y pasivo en la instalación de servicios de transferencia de ficheros.</p>
+</section>
+
+<section class="slide">
+    <h2>Modos activo y pasivo en transferencia de ficheros</h2>
+    <ul>
+        <li><strong>Activo:</strong> El cliente inicia la conexión y el servidor responde.</li>
+        <li><strong>Pasivo:</strong> El servidor inicia la conexión y el cliente responde.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de modo activo</h2>
+    <p>El cliente establece una conexión TCP al puerto 21 del servidor FTP. El servidor acepta la conexión y comienza a transferir los datos.</p>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo de modo pasivo</h2>
+    <p>El cliente envía un comando PASV al servidor, que responde con una dirección IP y puerto. El cliente establece una nueva conexión TCP a esa dirección para transferir los datos.</p>
+</section>
+
+<section class="slide">
+    <h2>Caso práctico: Transferencia de archivos via FTP activo</h2>
+    <ol>
+        <li>El cliente se conecta al servidor FTP.</li>
+        <li>El cliente envía un comando LIST para obtener la lista de archivos.</li>
+        <li>El servidor responde con los datos del archivo.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Caso práctico: Transferencia de archivos via FTP pasivo</h2>
+    <ol>
+        <li>El cliente envía un comando PASV al servidor.</li>
+        <li>El servidor responde con una dirección IP y puerto.</li>
+        <li>El cliente establece una nueva conexión TCP a esa dirección para transferir los datos.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Proceso de instalación FTP activo</h2>
+    <ol>
+        <li>Instalar el servidor FTP (por ejemplo, vsftpd).</li>
+        <li>Configurar el archivo de configuración.</li>
+        <li>Iniciar el servicio del servidor FTP.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Proceso de instalación FTP pasivo</h2>
+    <ol>
+        <li>Instalar el servidor FTP (por ejemplo, vsftpd).</li>
+        <li>Configurar el archivo de configuración para modo pasivo.</li>
+        <li>Iniciar el servicio del servidor FTP.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas en modo activo</h2>
+    <ul>
+        <li>Usar firewalls adecuados para permitir la conexión TCP al puerto 21.</li>
+        <li>Configurar permisos de usuario y grupo correctamente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas en modo pasivo</h2>
+    <ul>
+        <li>Usar firewalls adecuados para permitir la conexión TCP al puerto especificado por el servidor.</li>
+        <li>Configurar permisos de usuario y grupo correctamente.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes en modo activo</h2>
+    <ul>
+        <li>Firewall bloqueando la conexión al puerto 21.</li>
+        <li>Configuración incorrecta de permisos de usuario.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes en modo pasivo</h2>
+    <ul>
+        <li>Firewall bloqueando la conexión al puerto especificado por el servidor.</li>
+        <li>Configuración incorrecta de permisos de usuario.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: Modo activo vs pasivo</h2>
+    <table>
+        <tr>
+            <th></th>
+            <th>Modo Activo</th>
+            <th>Modo Pasivo</th>
+        </tr>
+        <tr>
+            <td>Control de conexión</td>
+            <td>Cliente inicia la conexión.</td>
+            <td>Servidor inicia la conexión.</td>
+        </tr>
+        <tr>
+            <td>Firewall</td>
+            <td>Puede requerir abrir el puerto 21.</td>
+            <td>Puede requerir abrir un puerto específico.</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: Modos activo y pasivo</h2>
+    <p>¿Cuál es la diferencia principal entre el modo activo y el modo pasivo en FTP?</p>
+    <ol>
+        <li>El cliente inicia la conexión en ambos modos.</li>
+        <li>El servidor inicia la conexión en ambos modos.</li>
+        <li><strong>Correcto:</strong> El cliente inicia la conexión en el modo activo y el servidor en el modo pasivo.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Instalación FTP activo</h2>
+    <ul>
+        <li>Instalar el servidor FTP.</li>
+        <li>Configurar permisos de usuario y grupo.</li>
+        <li>Iniciar el servicio del servidor FTP.</li>
+        <li>Verificar la conexión desde un cliente FTP.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Instalación FTP pasivo</h2>
+    <ul>
+        <li>Instalar el servidor FTP.</li>
+        <li>Configurar modo pasivo en el archivo de configuración.</li>
+        <li>Iniciar el servicio del servidor FTP.</li>
+        <li>Verificar la conexión desde un cliente FTP.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Configuración FTP activo</h2>
+    <p>Configura un servidor FTP en modo activo y realiza una transferencia de archivos desde un cliente FTP.</p>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Configuración FTP pasivo</h2>
+    <p>Configura un servidor FTP en modo pasivo y realiza una transferencia de archivos desde un cliente FTP.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Diferencia entre modos activo y pasivo en FTP.</li>
+        <li>Buenas prácticas para cada modo.</li>
+        <li>Errores comunes a evitar.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa general</h2>
+    <p><strong>Reglamento de Seguridad en la Informática (RSI):</strong></p>
+    <ul>
+        <li>Artículo 15: Protección de los datos.</li>
+        <li>Artículo 16: Transmisión segura de datos.</li>
+    </ul>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">Servicios en red.md · Instalación de servicios de transferencia de ficheros → Modos activo y pasivo</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 18:45:49</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Usuarios y grupos. Acceso anónimo — Instalación de servicios de transferencia de ficheros — Servicios en red.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="usuarios-y-grupos.-acceso-anonimo">
+<h1>Usuarios y grupos. Acceso anónimo</h1>
+<p><strong>Unidad:</strong> Instalación de servicios de transferencia de ficheros<br><strong>Documento:</strong> Servicios en red.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Instalación de servicios de transferencia de ficheros</h1>
+    <p><strong>Objetivo:</strong> Comprender los conceptos básicos de usuarios y grupos, así como el acceso anónimo en servicios de transferencia de ficheros.</p>
+</section>
+
+<section class="slide">
+    <h2>Concepto: Usuarios y Grupos</h2>
+    <ul>
+        <li><strong>Usuario:</strong>uenta individual dentro del sistema operativo con sus propias credenciales.</li>
+        <li><strong>Grupo:</strong> Conjunto de usuarios que comparten permisos y recursos.</li>
+        <li><strong>Credenciales:</strong> Nombre de usuario y contraseña para autenticarse en el sistema.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Concepto: Acceso Anónimo</h2>
+    <p><strong>Acceso anónimo:</strong> Permite a los usuarios acceder al servicio sin necesidad de autenticarse con credenciales.</p>
+    <ul>
+        <li>No se requiere registro o inicio de sesión.</li>
+        <li>Limitado en funcionalidades comparado con acceso autenticado.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo: Servicio FTP Anónimo</h2>
+    <p><strong>Servicio FTP:</strong> Protocolo de transferencia de archivos.</p>
+    <ul>
+        <li><strong>Anónimo:</strong> Permite descargar archivos públicos sin necesidad de registro.</li>
+        <li>No permite subida o modificación de archivos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo: Servicio SFTP Anónimo</h2>
+    <p><strong>Servicio SFTP:</strong> Protocolo seguro de transferencia de archivos basado en SSH.</p>
+    <ul>
+        <li><strong>Anónimo:</strong> Permite descarga y subida de archivos públicos seguros.</li>
+        <li>No permite modificación de permisos o propietarios.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Caso: Implementación de FTP Anónimo</h2>
+    <p><strong>Escenario:</strong> Administrador de un servidor web necesita compartir archivos públicos sin autenticación.</p>
+    <ul>
+        <li>Configuración del servicio FTP para permitir acceso anónimo.</li>
+        <li>Configuración de permisos adecuados para los archivos y directorios.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Caso: Implementación de SFTP Anónimo</h2>
+    <p><strong>Escenario:</strong> Administrador de una empresa necesita compartir documentos sensibles seguros con clientes.</p>
+    <ul>
+        <li>Configuración del servicio SFTP para permitir acceso anónimo.</li>
+        <li>Configuración de permisos adecuados para los archivos y directorios.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Proceso: Crear Usuario en Servicio FTP</h2>
+    <ol>
+        <li>Crear usuario en el sistema operativo.</li>
+        <li>Configurar directorio de trabajo para el usuario.</li>
+        <li>Asignar permisos adecuados al directorio.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Proceso: Crear Grupo en Servicio FTP</h2>
+    <ol>
+        <li>Crear grupo en el sistema operativo.</li>
+        <li>Añadir usuarios al grupo.</li>
+        <li>Asignar permisos a los grupos para directorios compartidos.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas: Seguridad en Acceso Anónimo</h2>
+    <ul>
+        <li>No permitir acceso anónimo a servicios que manejen datos sensibles.</li>
+        <li>Limitar las funcionalidades del acceso anónimo según sea necesario.</li>
+        <li>Monitorear el uso del servicio para detectar actividad sospechosa.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas: Configuración de Permisos</h2>
+    <ul>
+        <li>Asignar permisos mínimos necesarios a los usuarios y grupos.</li>
+        <li>No compartir credenciales con terceros.</li>
+        <li>Actualizar regularmente las políticas de acceso.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes: Permisos Incorrectos</h2>
+    <ul>
+        <li>Dar permisos de escritura a usuarios no autorizados.</li>
+        <li>No asignar permisos adecuados a grupos compartidos.</li>
+        <li>No monitorear el uso del servicio para detectar actividad anormal.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes: Configuración Incorrecta</h2>
+    <ul>
+        <li>No configurar correctamente los directorios de trabajo para usuarios.</li>
+        <li>No asignar permisos adecuados a grupos compartidos.</li>
+        <li>No monitorear el uso del servicio para detectar actividad anormal.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: FTP vs SFTP</h2>
+    <table>
+        <tr>
+            <th></th>
+            <th>FTP</th>
+            <th>SFTP</th>
+        </tr>
+        <tr>
+            <td><strong>Cifrado:</strong></td>
+            <td>No</td>
+            <td>Sí</td>
+        </tr>
+        <tr>
+            <td><strong>Seguridad:</strong></td>
+            <td>Baja</td>
+            <td>Alta</td>
+        </tr>
+        <tr>
+            <td><strong>Funcionalidades:</strong></td>
+            <td>Límites en funcionalidades anónimas</td>
+            <td>Más funcionalidades disponibles</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Seguridad en Acceso Anónimo</h2>
+    <p><strong>Pregunta:</strong> ¿Qué tipo de servicio FTP permite la descarga y subida de archivos públicos seguros?</p>
+    <ul>
+        <li>a) FTP anónimo</li>
+        <li>b) SFTP anónimo</li>
+        <li>c) FTP autenticado</li>
+        <li>d) SFTP autenticado</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Seguridad en Acceso Anónimo (Respuesta)</h2>
+    <p><strong>Respuesta:</strong> b) SFTP anónimo</p>
+    <p>SFTP ofrece cifrado y permite más funcionalidades que FTP anónimo.</p>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Configuración de Servicio FTP Anónimo</h2>
+    <ul>
+        <li>Crear usuario en el sistema operativo.</li>
+        <li>Configurar directorio de trabajo para el usuario.</li>
+        <li>Asignar permisos adecuados al directorio.</li>
+        <li>Monitorear el uso del servicio para detectar actividad sospechosa.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Configuración de Servicio SFTP Anónimo</h2>
+    <ul>
+        <li>Crear usuario en el sistema operativo.</li>
+        <li>Configurar directorio de trabajo para el usuario.</li>
+        <li>Asignar permisos adecuados al directorio.</li>
+        <li>Monitorear el uso del servicio para detectar actividad sospechosa.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Configurar Servicio FTP Anónimo</h2>
+    <p><strong>Tarea:</strong> Configurar un servicio FTP anónimo en su servidor y compartir archivos públicos.</p>
+    <ul>
+        <li>Crear usuario anónimo.</li>
+        <li>Configurar directorio de trabajo.</li>
+        <li>Asignar permisos adecuados.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Configurar Servicio SFTP Anónimo</h2>
+    <p><strong>Tarea:</strong> Configurar un servicio SFTP anónimo en su servidor y compartir archivos públicos seguros.</p>
+    <ul>
+        <li>Crear usuario anónimo.</li>
+        <li>Configurar directorio de trabajo.</li>
+        <li>Asignar permisos adecuados.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Resumen: Usuarios y Grupos, Acceso Anónimo</h2>
+    <ul>
+        <li><strong>Usuarios:</strong>uentas individuales con credenciales.</li>
+        <li><strong>Grupos:</strong> Conjunto de usuarios compartiendo permisos.</li>
+        <li><strong>Acceso anónimo:</strong> Permite acceso sin autenticación, limitado en funcionalidades.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Seguridad en Servicios de Transferencia de Ficheros</h2>
+    <p><strong>Normativas aplicables:</strong></p>
+    <ul>
+        <li>NIST SP 800-53 (Seguridad en sistemas informáticos)</li>
+        <li>CIS Benchmarks (Bases deálculo para la seguridad del sistema operativo)</li>
+        <li>Políticas internas de la organización</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Seguridad en Servicios de Transferencia de Ficheros (Continuación)</h2>
+    <p><strong>Aspectos a considerar:</strong></p>
+    <ul>
+        <li>Cifrado de datos en tránsito y reposo.</li>
+        <li>Autenticación y autorización de usuarios.</li>
+        <li>Monitoreo y auditoría del uso del servicio.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Conclusión: Instalación de Servicios de Transferencia de Ficheros</h2>
+    <p><strong>Puntos clave:</strong></p>
+    <ul>
+        <li>Comprendiendo usuarios y grupos.</li>
+        <li>Configurando acceso anónimo en servicios FTP y SFTP.</li>
+        <li>Implementando mejores prácticas de seguridad.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Preguntas y Respuestas</h2>
+    <p><strong>Pregunta:</strong> ¿Qué tipo de servicio FTP permite la descarga y subida de archivos públicos seguros?</p>
+    <ul>
+        <li>a) FTP anónimo</li>
+        <li>b) SFTP anónimo</li>
+        <li>c) FTP autenticado</li>
+        <li>d) SFTP autenticado</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Preguntas y Respuestas (Respuesta)</h2>
+    <p><strong>Respuesta:</strong> b) SFTP anónimo</p>
+    <p>SFTP ofrece cifrado y permite más funcionalidades que FTP anónimo.</p>
+</section>
+
+<section class="slide">
+    <h2>Gracias</h2>
+    <p>Preguntas o comentarios?</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">Servicios en red.md · Instalación de servicios de transferencia de ficheros → Usuarios y grupos. Acceso anónimo</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 18:47:50</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

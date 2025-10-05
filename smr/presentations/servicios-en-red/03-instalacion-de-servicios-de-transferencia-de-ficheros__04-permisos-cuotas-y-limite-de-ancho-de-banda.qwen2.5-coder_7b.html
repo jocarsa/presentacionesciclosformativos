@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Permisos, cuotas y límite de ancho de banda — Instalación de servicios de transferencia de ficheros — Servicios en red.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="permisos-cuotas-y-limite-de-ancho-de-banda">
+<h1>Permisos, cuotas y límite de ancho de banda</h1>
+<p><strong>Unidad:</strong> Instalación de servicios de transferencia de ficheros<br><strong>Documento:</strong> Servicios en red.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Instalación de servicios de transferencia de ficheros</h1>
+    <p>Objetivo: Aprender a configurar permisos, cuotas y límites de ancho de banda en servicios de transferencia de ficheros.</p>
+</section>
+
+<section class="slide">
+    <h2>Concepto: Permisos en servicios de transferencia de ficheros</h2>
+    <ul>
+        <li>Determinan quién puede acceder y qué acciones pueden realizar.</li>
+        <li>Tipos comunes: lectura, escritura, ejecución.</li>
+        <li>Implementados mediante listas de control de acceso (ACL).</li>
+        <li>Ejemplo: Usuario "admin" con permisos de lectura y escritura en un directorio.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Concepto: Cuotas en servicios de transferencia de ficheros</h2>
+    <ul>
+        <li>Límites estableidos para el espacio de almacenamiento o la cantidad de datos que se pueden transferir.</li>
+        <li>Proporcionan control sobre el uso del recurso.</li>
+        <li>Ejemplo: Usuario "usuario1" con una cuota de 50GB de almacenamiento.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Concepto: Límites de ancho de banda en servicios de transferencia de ficheros</h2>
+    <ul>
+        <li>Controlan la velocidad a la que se pueden enviar o recibir datos.</li>
+        <li>Evita congestionar la red y garantiza un rendimiento equitativo.</li>
+        <li>Ejemplo: Servicio con límite de 10Mbps para transferencias entrantes.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas: Configuración segura de permisos</h2>
+    <ul>
+        <li>Minimizar privilegios innecesarios.</li>
+        <li>Usar grupos para asignar permisos a múltiples usuarios.</li>
+        <li>Implementar políticas de rotación periódica de contraseñas.</li>
+        <li>Ejemplo: Usar grupos "uploaders" y "downloaders" con permisos limitados.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas: Establecimiento de cuotas razonables</h2>
+    <ul>
+        <li>Considerar el uso previsto por los usuarios.</li>
+        <li>Implementar alertas cuando se acerque a la cuota máxima.</li>
+        <li>Ejemplo: Configurar una cuota de 100GB con advertencia a partir del 80%.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Buenas prácticas: Establecimiento de límites de ancho de banda</h2>
+    <ul>
+        <li>Evitar sobrecargar la red durante horas pico.</li>
+        <li>Implementar horarios de uso limitado para ciertos servicios.</li>
+        <li>Ejemplo: Limitar el ancho de banda a 5Mbps durante las horas nocturnas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Caso: Implementación de un servicio de transferencia de ficheros seguro</h2>
+    <p>Se implementa un sistema con permisos restrictivos, cuotas limitadas y límites de ancho de banda para garantizar la seguridad y eficiencia del servicio.</p>
+</section>
+
+<section class="slide">
+    <h2>Caso: Problema de congestionamiento en un servicio de transferencia de ficheros</h2>
+    <p>Se identifica que el servicio está experimentando problemas de congestión debido a una alta demanda. Se implementan límites de ancho de banda para equilibrar la carga.</p>
+</section>
+
+<section class="slide">
+    <h2>Caso: Exceso de uso de espacio en un servicio de transferencia de ficheros</h2>
+    <p>Un usuario excede su cuota de almacenamiento. Se comunica con el usuario y sugiere opciones para liberar espacio o aumentar la cuota.</p>
+</section>
+
+<section class="slide">
+    <h2>Proceso: Configuración de permisos en un servicio de transferencia de ficheros</h2>
+    <ol>
+        <li>Iniciar sesión en el sistema administrativo del servicio.</li>
+        <li>Navegar hasta la configuración de usuarios y grupos.</li>
+        <li>Asignar o modificar los permisos según sea necesario.</li>
+        <li>Guardar los cambios y verificar que se aplican correctamente.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Proceso: Configuración de cuotas en un servicio de transferencia de ficheros</h2>
+    <ol>
+        <li>Iniciar sesión en el sistema administrativo del servicio.</li>
+        <li>Navegar hasta la configuración de usuarios y grupos.</li>
+        <li>Especificar las cuotas de almacenamiento para cada usuario o grupo.</li>
+        <li>Guardar los cambios y verificar que se aplican correctamente.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Proceso: Configuración de límites de ancho de banda en un servicio de transferencia de ficheros</h2>
+    <ol>
+        <li>Iniciar sesión en el sistema administrativo del servicio.</li>
+        <li>Navegar hasta la configuración de usuarios y grupos.</li>
+        <li>Especificar los límites de ancho de banda para cada usuario o grupo.</li>
+        <li>Guardar los cambios y verificar que se aplican correctamente.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Mini-quiz: Comprendiendo permisos, cuotas y límites de ancho de banda</h2>
+    <p>¿Cuál es la diferencia entre permisos, cuotas y límites de ancho de banda en un servicio de transferencia de ficheros?</p>
+    <ol>
+        <li>Permiso: Define quién puede acceder y qué acciones pueden realizar.</li>
+        <li>Cuota: Límite establecido para el espacio de almacenamiento o la cantidad de datos que se pueden transferir.</li>
+        <li>Límite de ancho de banda: Controla la velocidad a la que se pueden enviar o recibir datos.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Verificación de configuración en servicios de transferencia de ficheros</h2>
+    <ul>
+        <li>Verificar los permisos asignados a cada usuario y grupo.</li>
+        <li>Comprobar que las cuotas de almacenamiento se cumplen correctamente.</li>
+        <li>Validar que los límites de ancho de banda no se sobrepasen.</li>
+        <li>Realizar pruebas para asegurar la correcta aplicación de las configuraciones.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Configuración práctica de permisos, cuotas y límites de ancho de banda</h2>
+    <p>Configurar los permisos, cuotas y límites de ancho de banda en un servicio de transferencia de ficheros simulado.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen: Configuración de servicios de transferencia de ficheros</h2>
+    <ul>
+        <li>Permisos controlan quién puede acceder y qué acciones pueden realizar.</li>
+        <li>Cuotas limitan el espacio de almacenamiento o la cantidad de datos que se pueden transferir.</li>
+        <li>Límites de ancho de banda controlan la velocidad a la que se pueden enviar o recibir datos.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa: Reglamento de uso de servicios de transferencia de ficheros</h2>
+    <p>Se establecen normativas y políticas para garantizar el correcto uso de los servicios de transferencia de ficheros, incluyendo la configuración de permisos, cuotas y límites de ancho de banda.</p>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes: Configuración incorrecta de permisos</h2>
+    <ul>
+        <li>Dar permisos de escritura a usuarios no autorizados.</li>
+        <li>No asignar suficientes permisos para realizar tareas necesarias.</li>
+        <li>No implementar políticas de rotación periódica de contraseñas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes: Configuración incorrecta de cuotas</h2>
+    <ul>
+        <li>No establecer cuotas limitadas para evitar el uso excesivo del espacio de almacenamiento.</li>
+        <li>No implementar alertas cuando se acerque a la cuota máxima.</li>
+        <li>No ajustar las cuotas según sea necesario.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores comunes: Configuración incorrecta de límites de ancho de banda</h2>
+    <ul>
+        <li>No establecer límites de ancho de banda para evitar la congestión de la red.</li>
+        <li>No implementar horarios de uso limitado para ciertos servicios.</li>
+        <li>No ajustar los límites de ancho de banda según sea necesario.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: Servicios de transferencia de ficheros vs. almacenamiento en la nube</h2>
+    <table>
+        <tr>
+            <th>Servicios de transferencia de ficheros</th>
+            <th>Almacenamiento en la nube</th>
+        </tr>
+        <tr>
+            <td>Control preciso sobre los permisos y accesos.</td>
+            <td>Acceso a cualquier lugar con conexión a internet.</td>
+        </tr>
+        <tr>
+            <td>Cuotas limitadas para controlar el uso de espacio.</td>
+            <td>Sin límites físicos, pero pueden aplicarse restricciones según la suscripción.</td>
+        </tr>
+        <tr>
+            <td>Límites de ancho de banda para evitar congestión.</td>
+            <td>Depende del plan de suscripción y configuración del proveedor.</td>
+        </tr>
+    </table>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">Servicios en red.md · Instalación de servicios de transferencia de ficheros → Permisos, cuotas y límite de ancho de banda</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 18:49:35</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

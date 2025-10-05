@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Cortafuegos en equipos y servidores — Aseguramiento de la privacidad — Seguridad informática.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="cortafuegos-en-equipos-y-servidores">
+<h1>Cortafuegos en equipos y servidores</h1>
+<p><strong>Unidad:</strong> Aseguramiento de la privacidad<br><strong>Documento:</strong> Seguridad informática.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Cortafuegos en equipos y servidores</h2>
+    <p>Objetivo: Comprender los conceptos básicos, configuración y uso de cortafuegos para proteger la privacidad en equipos y servidores.</p>
+</section>
+
+<section class="slide">
+    <h3>¿Qué es un cortafuego?</h3>
+    <ul>
+        <li>Filtro de paquetes de red que controlan el tráfico entrante y saliente.</li>
+        <li>Implementa políticas de seguridad para proteger la red interna.</li>
+        <li>Usa reglas de filtrado para decidir qué tráfico permitir o denegar.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Tipos de cortafuegos</h3>
+    <ul>
+        <li>Cortafuegos de software: ejecutados en el sistema operativo.</li>
+        <li>Cortafuegos de hardware: dispositivos físicos que controlan el tráfico de red.</li>
+        <li>Cortafuegos de aplicaciones: filtran tráfico específico basado en aplicaciones.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Funciones principales de un cortafuego</h3>
+    <ul>
+        <li>Filtración de paquetes: permite o deniega el paso de datos según las reglas estableidas.</li>
+        <li>NAT (Network Address Translation): traduce direcciones IP internas a direcciones públicas.</li>
+        <li>Firewall de aplicaciones: controla el tráfico basado en aplicaciones específicas.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Ejemplo práctico</h3>
+    <p>Configuración básica de un cortafuego de software (iptables) en Linux:</p>
+    <pre><code>sudo iptables -A INPUT -i eth0 -s 192.168.1.0/24 -j ACCEPT
+sudo iptables -A INPUT -i eth0 -j DROP</code></pre>
+</section>
+
+<section class="slide">
+    <h3>Caso real: Implementación de un cortafuego en una empresa</h3>
+    <p>Una empresa implementó un cortafuego para proteger sus servidores contra ataques externos. El cortafuego permitió el tráfico SSH y HTTP, mientras que denegó todo otro tipo de tráfico entrante.</p>
+</section>
+
+<section class="slide">
+    <h3>Proceso de configuración</h3>
+    <ol>
+        <li>Elegir el tipo de cortafuego (software o hardware).</li>
+        <li>Instalar y configurar el cortafuego según las necesidades.</li>
+        <li>Definir reglas de filtrado para permitir o denegar tráfico.</li>
+        <li>Probar la configuración para asegurar que funcione correctamente.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h3>Buenas prácticas</h3>
+    <ul>
+        <li>Mantener las reglas de filtrado actualizadas y revisadas regularmente.</li>
+        <li>Usar políticas de seguridad predeterminadas e implementar reglas personalizadas según sea necesario.</li>
+        <li>Monitorear el cortafuego para detectar anomalías y posibles ataques.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Errores comunes</h1>
+    <ul>
+        <li>No definir reglas de filtrado adecuadas, lo que puede dejar la red expuesta a amenazas.</li>
+        <li>No mantener las reglas actualizadas, permitiendo el paso de tráfico no seguro.</li>
+        <li>Configurar el cortafuego de manera incorrecta, causando problemas de conectividad interna.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Comparativa: Cortafuegos vs. firewalls de aplicaciones</h3>
+    <table>
+        <tr>
+            <th>Cortafuegos</th>
+            <th>Firewalls de aplicaciones</th>
+        </tr>
+        <tr>
+            <td>Filtran tráfico en nivel de red.</td>
+            <td>Filtran tráfico en nivel de aplicación.</td>
+        </tr>
+        <tr>
+            <td>Más general y flexible.</td>
+            <td>Específico para aplicaciones, pero menos flexibles.</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h3>Mini-quiz: ¿Qué es un cortafuego?</h3>
+    <p>¿Cuál de las siguientes opciones describe mejor lo que es un cortafuego?</p>
+    <ul>
+        <li>a) Un dispositivo que protege la red interna contra amenazas externas.</li>
+        <li>b) Una aplicación que controla el tráfico de correo electrónico.</li>
+        <li>c) Un software que cifra los datos en la red.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Checklist: Configuración básica de un cortafuego</h3>
+    <ol>
+        <li>Elegir el tipo de cortafuego (software o hardware).</li>
+        <li>Instalar y configurar el cortafuego.</li>
+        <li>Definir reglas de filtrado para permitir tráfico SSH y HTTP.</li>
+        <li>Denegar todo otro tipo de tráfico entrante.</li>
+        <li>Probar la configuración.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h3>Actividad: Configuración práctica</h3>
+    <p>Configurar un cortafuego de software (iptables) en un equipo virtual y permitir el tráfico SSH y HTTP mientras denegar todo otro tipo de tráfico entrante.</p>
+</section>
+
+<section class="slide">
+    <h3>Resumen</h3>
+    <ul>
+        <li>Cortafuegos son herramientas esenciales para proteger la privacidad en equipos y servidores.</li>
+        <li>Implementar un cortafuego requiere definir reglas de filtrado adecuadas y mantenerlas actualizadas.</li>
+        <li>Buenas prácticas incluyen monitoreo y revisión regular del cortafuego.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Normativa general</h3>
+    <p>La normativa como la Ley de Protección de Datos (LGPD) en España requiere a las empresas proteger la privacidad y seguridad de los datos de sus clientes. Los cortafuegos son una herramienta clave para cumplir con esta normativa.</p>
+</section>
+
+<section class="slide">
+    <h3>Conclusión</h3>
+    <p>La implementación adecuada de un cortafuego es crucial para proteger la privacidad en equipos y servidores. Siguiendo buenas prácticas y manteniéndose al día con las mejores prácticas del sector, se puede asegurar una red segura y confiable.</p>
+</section>
+
+<section class="slide">
+    <h3>Recursos adicionales</h3>
+    <ul>
+        <li><a href="https://www.cisco.com/c/es_mx/support/docs/security/asa/asa-5500-series-adaptive-security-appliances/configuring-a-basic-firewall-policy.html">Configuración básica de un cortafuego en Cisco ASA</a></li>
+        <li><a href="https://docs.microsoft.com/en-us/windows-server/networking/wfp/driver-model/fundamentals-of-the-windows-filtering-platform">Fundamentos del Windows Filtering Platform (WFP)</a></li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Preguntas y dudas</h3>
+    <p>¿Tienes alguna pregunta o duda sobre cortafuegos en equipos y servidores? ¡No dudes en preguntar!</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">Seguridad informática.md · Aseguramiento de la privacidad → Cortafuegos en equipos y servidores</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 18:31:21</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>
