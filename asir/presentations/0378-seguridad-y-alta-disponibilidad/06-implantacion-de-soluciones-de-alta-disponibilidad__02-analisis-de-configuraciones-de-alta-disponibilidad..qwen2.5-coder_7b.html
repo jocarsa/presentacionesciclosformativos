@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Análisis de configuraciones de alta disponibilidad. — Implantación de soluciones de alta disponibilidad: — 0378 Seguridad y alta disponibilidad.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="analisis-de-configuraciones-de-alta-disponibilidad.">
+<h1>Análisis de configuraciones de alta disponibilidad.</h1>
+<p><strong>Unidad:</strong> Implantación de soluciones de alta disponibilidad:<br><strong>Documento:</strong> 0378 Seguridad y alta disponibilidad.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+  <h2>Análisis de configuraciones de alta disponibilidad</h2>
+  <p>La alta disponibilidad es crucial para garantizar que los sistemas operativos y aplicaciones estén disponibles continuamente.</p>
+</section>
+
+<section class="slide">
+  <h3>Funcionamiento ininterrumpido</h3>
+  <ul>
+    <li>Minimiza el tiempo de inactividad (RTO)</li>
+    <li>Evita la pérdida de datos y servicios</li>
+    <li>Usa técnicas como redundancia, failover y copias de seguridad</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h3>Integridad de datos y recuperación de servicio</h3>
+  <p>La integridad de los datos es fundamental para la confiabilidad del sistema.</p>
+  <ul>
+    <li>Implementa transacciones atómicas</li>
+    <li>Usa sistemas de replicación de datos</li>
+    <li>Realiza pruebas periódicas de recuperación</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h3>Servidores redundantes</h3>
+  <p>Los servidores redundantes proporcionan una copia funcional del sistema principal.</p>
+  <ul>
+    <li>Failover automático en caso de fallo</li>
+    <li>Redundancia de componentes (CPU, memoria, almacenamiento)</li>
+    <li>Monitoreo y gestión automatizados</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h3>Sistemas de «clusters»</h3>
+  <p>Los sistemas de clusters agrupan servidores para aumentar la capacidad y la disponibilidad.</p>
+  <ul>
+    <li>Redundancia en hardware y software</li>
+    <li>Balanceo de carga entre nodos</li>
+    <li>Consistencia distribuida</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h3>Balanceadores de carga</h3>
+  <p>Los balanceadores de carga distribuyen la carga de trabajo entre servidores.</p>
+  <ul>
+    <li>Equilibran el tráfico para evitar sobrecargas</li>
+    <li>Proporcionan redundancia y escalabilidad</li>
+    <li>Monitorean la salud de los servidores</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h3>Ejemplo: Configuración de un cluster web</h3>
+  <p>Un cluster web típico incluye varios servidores web y un balanceador de carga.</p>
+  <img src="cluster_web.png" alt="Estructura de un cluster web">
+</section>
+
+<section class="slide">
+  <h3>Caso: Implementación de alta disponibilidad en una empresa financiera</h3>
+  <p>Una institución financiera implementó un sistema de alta disponibilidad para sus servidores bancarios.</p>
+  <ul>
+    <li>Redundancia de servidores web y bases de datos</li>
+    <li>Balanceador de carga distribuyendo tráfico entre servidores</li>
+    <li>Sistemas de replicación de datos en tiempo real</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h3>Proceso: Implementación de alta disponibilidad</h3>
+  <ol>
+    <li>Evaluación del sistema actual</li>
+    <li>Diseño de la arquitectura de alta disponibilidad</li>
+    <li>Implementación de servidores redundantes y clusters</li>
+    <li>Configuración de balanceadores de carga</li>
+    <li>Pruebas de recuperación y rendimiento</li>
+  </ol>
+</section>
+
+<section class="slide">
+  <h3>Buenas prácticas en alta disponibilidad</h3>
+  <ul>
+    <li>Monitoreo continuo del sistema</li>
+    <li>Mantenimiento preventivo regular</li>
+    <li>Pruebas periódicas de recuperación</li>
+    <li>Documentación detallada</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h3>Errores comunes en alta disponibilidad</h3>
+  <ul>
+    <li>Sobrecarga de servidores debido a falta de balanceo</li>
+    <li>Fallos en el failover automático</li>
+    <li>No actualización de software y parches</li>
+    <li>Ignorancia del monitoreo continuo</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h3>Comparativa: Servidores redundantes vs. Clusters</h3>
+  <table>
+    <tr>
+      <th>Servidores Redundantes</th>
+      <th>Clusters</th>
+    </tr>
+    <tr>
+      <td>Redundancia en hardware y software</td>
+      <td>Equilibrio de carga entre nodos</td>
+    </tr>
+    <tr>
+      <td>Simplicidad en la gestión</td>
+      <td>Complejidad en la configuración y mantenimiento</td>
+    </tr>
+  </table>
+</section>
+
+<section class="slide">
+  <h3>Mini-quiz: ¿Cuál es el objetivo principal de los sistemas de alta disponibilidad?</h3>
+  <ol>
+    <li>Minimizar el tiempo de inactividad (RTO)</li>
+    <li>Aumentar la capacidad del sistema</li>
+    <li>Mejorar la velocidad de respuesta</li>
+    <li>Reducir los costos operativos</li>
+  </ol>
+</section>
+
+<section class="slide">
+  <h3>Checklist: Implementación de alta disponibilidad</h3>
+  <ul>
+    <li>Evaluación del sistema actual</li>
+    <li>Diseño de la arquitectura de alta disponibilidad</li>
+    <li>Implementación de servidores redundantes y clusters</li>
+    <li>Configuración de balanceadores de carga</li>
+    <li>Pruebas de recuperación y rendimiento</li>
+    <li>Monitoreo continuo del sistema</li>
+    <li>Mantenimiento preventivo regular</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h3>Actividad: Diseño de un plan de alta disponibilidad para una pequeña empresa</h3>
+  <p>Elabora un plan que incluya:</p>
+  <ul>
+    <li>Evaluación del sistema actual</li>
+    <li>Diseño de la arquitectura de alta disponibilidad</li>
+    <li>Selección de servidores y balanceador de carga</li>
+    <li>Configuración y pruebas iniciales</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h3>Resumen: Análisis de configuraciones de alta disponibilidad</h3>
+  <p>La alta disponibilidad es crucial para garantizar la continuidad operativa.</p>
+  <ul>
+    <li>Funcionamiento ininterrumpido mediante servidores redundantes y clusters</li>
+    <li>Integridad de datos y recuperación de servicio mediante sistemas de replicación y pruebas periódicas</li>
+    <li>Balanceadores de carga para distribuir la carga de trabajo</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h3>Normativa: Reglamentos y estándares en alta disponibilidad</h3>
+  <p>Existen normativas y estándares que regulan los sistemas de alta disponibilidad.</p>
+  <ul>
+    <li>ISO/IE 27018 para la protección de datos en el clúster</li>
+    <li>NIST SP 800-53 para la gestión de riesgos en sistemas críticos</li>
+    <li>Reglamento General de Protección de Datos (GDPR) para la protección de datos personales</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h1>Implantación de soluciones de alta disponibilidad</h1>
+  <p>Objetivo: Analizar y configurar sistemas de alta disponibilidad para garantizar continuidad operativa.</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0378 Seguridad y alta disponibilidad.md · Implantación de soluciones de alta disponibilidad: → Análisis de configuraciones de alta disponibilidad.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 11:03:09</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Herramientas para la virtualización. — Implantación de soluciones de alta disponibilidad: — 0378 Seguridad y alta disponibilidad.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="herramientas-para-la-virtualizacion.">
+<h1>Herramientas para la virtualización.</h1>
+<p><strong>Unidad:</strong> Implantación de soluciones de alta disponibilidad:<br><strong>Documento:</strong> 0378 Seguridad y alta disponibilidad.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Herramientas para la virtualización</h2>
+    <p>Las herramientas de virtualización permiten crear y gestionar entornos virtuales en hardware físico, mejorando la eficiencia y escalabilidad.</p>
+</section>
+
+<section class="slide">
+    <h3>Concepto básico</h3>
+    <ul>
+        <li>Hypervisor: software que ejecuta máquinas virtuales (VMs)</li>
+        <li>Paravirtualización: optimización para el hipervisor directamente en el sistema operativo invitado</li>
+        <li>Fusión de máquinas virtuales: combinar múltiples VMs en una sola máquina física</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Ejemplos populares</h3>
+    <ul>
+        <li>VMware vSphere</li>
+        <li>Microsoft Hyper-V</li>
+        <li>KVM (Kernel-based Virtual Machine)</li>
+        <li>XenServer</li>
+        <li>Oracle VM VirtualBox</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Caso de estudio: Implementación en un centro de datos</h3>
+    <p>Un centro de datos implementó KVM para mejorar la eficiencia energética y reducir el costo operativo.</p>
+</section>
+
+<section class="slide">
+    <h3>Proceso de instalación</h3>
+    <ol>
+        <li>Instalar el hipervisor en el hardware físico</li>
+        <li>Configurar las VMs según los requisitos del negocio</li>
+        <li>Realizar pruebas de rendimiento y seguridad</li>
+        <li>Documentar la configuración y procedimientos</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h3>Buenas prácticas</h3>
+    <ul>
+        <li>Monitoreo continuo del desempeño de las VMs</li>
+        <li>Copia de seguridad regular y automatizada</li>
+        <li>Actualizaciones y parches regulares del hipervisor y software invitado</li>
+        <li>Seguridad contra ataquesibernéticos</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Errores comunes</h3>
+    <ul>
+        <li>No realizar pruebas adecuadas antes de la implementación</li>
+        <li>No tener políticas de seguridad robustas</li>
+        <li>No monitorear el desempeño de las VMs</li>
+        <li>Ignorar actualizaciones y parches importantes</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Comparativa: VMware vs. KVM</h3>
+    <table>
+        <tr>
+            <th>Herramienta</th>
+            <th>Ventajas</th>
+            <th>Inconvenientes</th>
+        </tr>
+        <tr>
+            <td>VMware vSphere</td>
+            <td>Interfaz gráfica intuitiva, soporte para múltiples sistemas operativos</td>
+            <td>Coste elevado, requerimientos de hardware más altos</td>
+        </tr>
+        <tr>
+            <td>KVM</td>
+            <td>Coste bajo, alto nivel de control y personalización</td>
+            <td>No interfaz gráfica, requiere conocimiento técnico</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h3>Mini-quiz: Herramientas de virtualización</h3>
+    <p>¿Cuál de las siguientes herramientas es una solución de paravirtualización?</p>
+    <ul>
+        <li>A) VMware vSphere</li>
+        <li>B) KVM</li>
+        <li>C) Microsoft Hyper-V</li>
+        <li>D) Oracle VM VirtualBox</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h3>Checklist: Implementación de virtualización</h3>
+    <ol>
+        <li>Elegir la herramienta adecuada según las necesidades del negocio</li>
+        <li>Realizar una evaluación técnica del hardware disponible</li>
+        <li>Diseñar el plan de implementación y documentarlo</li>
+        <li>Instalar y configurar el hipervisor</li>
+        <li>Crear y configurar las VMs</li>
+        <li>Probar la configuración y realizar ajustes según sea necesario</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h3>Actividad: Evaluación de herramientas de virtualización</h3>
+    <p>Evalué tres herramientas de virtualización (VMware vSphere, KVM, Hyper-V) y compare sus ventajas y desventajas.</p>
+</section>
+
+<section class="slide">
+    <h3>Resumen</h3>
+    <p>Herramientas de virtualización son fundamentales para la implantación de soluciones de alta disponibilidad. Seleccionar la herramienta adecuada, seguir buenas prácticas y monitorear el desempeño es crucial para un correcto funcionamiento.</p>
+</section>
+
+<section class="slide">
+    <h3>Normativa (general)</h3>
+    <p>La normativa vigente establece requisitos mínimos de seguridad y eficiencia en la implementación de soluciones de virtualización.</p>
+</section>
+
+<section class="slide" data-id="extra-conceptos-clave-ampliacion-0">
+<h2>Conceptos clave (ampliación)</h2>
+<p>Profundiza en los fundamentos de <strong>Herramientas para la virtualización.</strong> con definiciones operativas y límites de aplicación.</p><ul><li>Concepto A vs B</li><li>Variables implicadas</li><li>Supuestos habituales</li><li>Cuándo NO aplicar</li></ul>
+
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0378 Seguridad y alta disponibilidad.md · Implantación de soluciones de alta disponibilidad: → Herramientas para la virtualización.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 11:07:03</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>

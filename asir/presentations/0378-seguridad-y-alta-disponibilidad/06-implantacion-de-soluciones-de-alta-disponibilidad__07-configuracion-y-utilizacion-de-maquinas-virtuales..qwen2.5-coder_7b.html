@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Configuración y utilización de máquinas virtuales. — Implantación de soluciones de alta disponibilidad: — 0378 Seguridad y alta disponibilidad.md</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../present-assets/present.css" rel="stylesheet">
+</head>
+<body>
+  <main id="deck" tabindex="0" aria-live="polite">
+
+<section class="slide" data-id="configuracion-y-utilizacion-de-maquinas-virtuales.">
+<h1>Configuración y utilización de máquinas virtuales.</h1>
+<p><strong>Unidad:</strong> Implantación de soluciones de alta disponibilidad:<br><strong>Documento:</strong> 0378 Seguridad y alta disponibilidad.md</p>
+<p>Objetivos: comprender los conceptos clave y su aplicación práctica.</p>
+</section>
+
+<section class="slide">
+    <h2>Portada</h2>
+    <h1>Implantación de soluciones de alta disponibilidad</h1>
+    <p>Objetivo: Configuración y utilización de máquinas virtuales para mejorar la seguridad y disponibilidad.</p>
+</section>
+
+<section class="slide">
+    <h2>Definición de Alta Disponibilidad</h2>
+    <ul>
+        <li>Sistema operativo disponible 99,9% del tiempo</li>
+        <li>No interrupiones programadas ni no programadas</li>
+        <li>Redundancia y failover automático</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Máquinas Virtuales (VM)</h2>
+    <p>Software que emula un hardware virtual en un sistema operativo.</p>
+    <ul>
+        <li>Hypervisor: software que gestiona las VMs</li>
+        <li>VMM (Virtual Machine Monitor): controla la ejecución de las VMs</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Beneficios de las Máquinas Virtuales</h2>
+    <ul>
+        <li>Escalabilidad horizontal y vertical</li>
+        <li>Costo reducido al compartir hardware</li>
+        <li>Facilidad de migración y copia de seguridad</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ejemplo: Configuración de una VM</h2>
+    <ol>
+        <li>Instalar el software del hipervisor (Ej: VMware ESXi)</li>
+        <li>Crear un nuevo recurso virtual</li>
+        <li>Instalar el sistema operativo en la VM</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Caso Práctico: Implementación de una VM para una base de datos</h2>
+    <p>Configuración de un servidor SQL Server en una VM.</p>
+</section>
+
+<section class="slide">
+    <h2>Proceso de Configuración</h2>
+    <ol>
+        <li>Preparar el hardware y software del hipervisor</li>
+        <li>Crear la configuración virtual</li>
+        <li>Instalar el sistema operativo en la VM</li>
+        <li>Configurar el servicio de base de datos</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Buenas Prácticas para las VMs</h2>
+    <ul>
+        <li>Uso de discos virtuales separados para sistemas operativos y datos</li>
+        <li>Configuración de red dedicada para la VM</li>
+        <li>Monitoreo continuo del rendimiento y salud de las VMs</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Errores Comunes en la Configuración de VMs</h2>
+    <ul>
+        <li>No asignar suficiente memoria a la VM</li>
+        <li>No configurar correctamente el almacenamiento virtual</li>
+        <li>No realizar copias de seguridad regulares</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Comparativa: Máquinas Virtuales vs. Servidores Físicos</h2>
+    <table>
+        <tr>
+            <th>Máquinas Virtuales</th>
+            <th>Servidores Físicos</th>
+        </tr>
+        <tr>
+            <td>Economía de costos</td>
+            <td>Costo fijo por hardware</td>
+        </tr>
+        <tr>
+            <td>Facilidad de escalado</td>
+            <td>Requiere adquisición de nuevos equipos</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Mini-Quiz: Conceptos Básicos</h2>
+    <p>¿Qué es una máquina virtual?</p>
+    <ol type="A">
+        <li>Sistema operativo real ejecutándose directamente en el hardware</li>
+        <li>Software que emula un hardware virtual en un sistema operativo</li>
+        <li>Dispositivo de almacenamiento externo virtualizado</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Checklist: Configuración de una VM</h2>
+    <ul>
+        <li>Instalar el hipervisor</li>
+        <li>Crear la configuración virtual</li>
+        <li>Instalar sistema operativo</li>
+        <li>Configurar red y almacenamiento</li>
+        <li>Realizar pruebas de funcionamiento</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Actividad: Crear una VM para un servicio web</h2>
+    <p>Configura una VM con Apache HTTP Server.</p>
+</section>
+
+<section class="slide">
+    <h2>Resumen</h2>
+    <ul>
+        <li>Máquinas virtuales son herramientas clave para la alta disponibilidad</li>
+        <li>Ofrecen flexibilidad, escalabilidad y reducción de costos</li>
+        <li>Es importante seguir buenas prácticas y prevenir errores comunes</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Normativa y Reglamentos</h2>
+    <p>Seguridad en la nube y cumplimiento de regulaciones (GDPR, PCI-DSS)</p>
+    <ul>
+        <li>Cifrado de datos en reposo y tránsito</li>
+        <li>Autenticación y autorización segura</li>
+        <li>Política de gestión de acceso</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Preguntas Frecuentes</h2>
+    <ol type="A">
+        <li>¿Qué es un hipervisor?</li>
+        <li>¿Cuáles son los beneficios de usar VMs?</li>
+        <li>¿Cómo puedo monitorear la salud de mis VMs?</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Contacto</h2>
+    <p>Preguntas o dudas: [Nombre del Instructor]</p>
+    <p>Email: [Correo Electrónico]</p>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="meta">
+      <span class="where">0378 Seguridad y alta disponibilidad.md · Implantación de soluciones de alta disponibilidad: → Configuración y utilización de máquinas virtuales.</span>
+      <span> · </span>
+      <span>Modelo: qwen2.5-coder:7b</span>
+      <span> · </span>
+      <span>2025-10-05 11:08:02</span>
+    </div>
+    <div class="controls" aria-label="Controles de zoom">
+      <button id="zoomOut" title="Zoom - (tecla -)">−</button>
+      <button id="zoomReset" title="Zoom 100% (tecla 0)"><span id="zoomPct">100%</span></button>
+      <button id="zoomIn" title="Zoom + (tecla +)">+</button>
+    </div>
+    <div class="progress" aria-label="Progreso de la presentación" aria-live="off">
+      <div class="bar" id="progressBar" style="width:0%"></div>
+    </div>
+  </footer>
+  <script src="../present-assets/present.js"></script>
+</body>
+</html>
